@@ -63,6 +63,7 @@ PyTorch 2.14.0 공식 릴리스와 TorchAudio의 안정 ABI 호환 표를 확인
 - [데이터 계약 및 공개 자료 해석](docs/data_contract.md)
 - [연구 단계와 검증 기준](docs/research_roadmap.md)
 - [이 저장소에서 실제 수행한 검증](docs/validation.md)
+- [설치 성공 후 첫 공개 아카이브 확인](docs/first_archive.md)
 
 원본 녹음·영상·센서 파일은 서버의 `data/`에 보존합니다. 이 폴더와 모델 가중치·설치 캐시·실행 로그는 Git 추적 대상에서 제외했습니다. 코드와 문서 수정은 Git으로 공유하고, 연구 데이터 백업은 별도로 관리합니다.
 

@@ -1,6 +1,8 @@
 # Validation record
 
-Date: 2026-09-07. This records checks actually run during repository preparation, not experimental results.
+Date: 2026-09-07. This distinguishes local preparation checks from a subsequent user-provided Ubuntu server transcript. Neither is an experimental research result.
+
+## Local preparation checks
 
 | Check | Observed result | Scope |
 |---|---|---|
@@ -17,11 +19,23 @@ Synthetic PCM-24 WAV round-trip maximum absolute error was approximately `1.1882
 
 The TorchAudio transform emitted an upstream TorchScript deprecation warning. The tested resampling operation passed. This does not justify enabling compilation or changing the server environment without further checks.
 
-Not yet performed:
+## Ubuntu GPU run reported by the user
 
-- Actual Ubuntu installation and A5000 CUDA execution.
+The user subsequently supplied a terminal transcript showing successful installation, `SETUP PASS`, and a separate repeat doctor run with `CUDA execution verified: True`. This is evidence from the supplied transcript; the maintainer did not remotely execute these commands or independently inspect the saved server JSON files. Private account names, machine identifiers, paths and raw logs are not reproduced here.
+
+- Target: Linux x86_64, NVIDIA RTX A5000, driver 595.84.
+- Environment: Python 3.11.15, torch 2.14.0+cu126, torchvision 0.29.0+cu126, torchaudio 2.11.0+cu126, gpytorch 1.15.2; uv 0.12.6 installed the lock successfully.
+- Actual CUDA forward/backward and synchronization: PASS. TorchVision NMS on the CUDA device: PASS.
+- GPyTorch CPU covariance and TorchAudio CPU resampling: PASS. These checks do not establish GPU GP training performance.
+- Synthetic WAV, resampling, mel features, image/table IO, classifier fit and headless plotting: PASS.
+- Metadata catalog for Parts 1, 2 and 6: PASS. No raw archive was downloaded in the supplied transcript.
+
+The initial Ubuntu setup gate is therefore passed for this reported run. Preserve the original reports locally; the next step is [inspection of one archive](first_archive.md).
+
+## Still unverified
+
 - Archive extraction, schema/label verification, or dataset-specific parsing.
 - Sensor calibration, video tracking, synchronization or real violin acoustic-state validation.
 - Training, benchmark comparisons, uncertainty calibration, or claims of improvement.
 
-On the server, run `bash scripts/bootstrap_ubuntu.sh` and preserve its environment reports. `SETUP PASS` means only that its installation and smoke checks passed; it is not a research result.
+For a new server installation, run `bash scripts/bootstrap_ubuntu.sh` and preserve its environment reports. `SETUP PASS` means only that its installation and smoke checks passed; it is not a research result.
