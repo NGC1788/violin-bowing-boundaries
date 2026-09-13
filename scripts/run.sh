@@ -12,9 +12,13 @@ else
 fi
 export UV_CACHE_DIR="$TASK_ROOT/.cache/uv"
 export UV_PYTHON_INSTALL_DIR="$TASK_ROOT/.cache/python"
+if [[ -d "$TASK_ROOT/.local-tools/7zip-26.03" ]]; then
+  export PATH="$TASK_ROOT/.local-tools/7zip-26.03:$PATH"
+fi
 TASK_COMMAND="${1:-help}"
 if [[ $# -gt 0 ]]; then shift; fi
 case "$TASK_COMMAND" in
+  setup-tools) exec "$TASK_UV" run --locked python scripts/install_7zip.py "$@" ;;
   doctor) exec "$TASK_UV" run --locked python scripts/doctor.py --require-cuda "$@" ;;
   smoke) exec "$TASK_UV" run --locked python scripts/smoke_test.py "$@" ;;
   catalog) exec "$TASK_UV" run --locked python scripts/zenodo_catalog.py catalog "$@" ;;
@@ -23,5 +27,5 @@ case "$TASK_COMMAND" in
   prepare-first) exec "$TASK_UV" run --locked python scripts/prepare_first.py "$@" ;;
   jupyter) exec "$TASK_UV" run --locked jupyter lab --ip=127.0.0.1 --port=8888 --no-browser "$@" ;;
   python) exec "$TASK_UV" run --locked python "$@" ;;
-  *) echo 'Usage: bash scripts/run.sh {doctor|smoke|catalog|download|archive-audit|prepare-first|jupyter|python} [arguments]' ;;
+  *) echo 'Usage: bash scripts/run.sh {setup-tools|doctor|smoke|catalog|download|archive-audit|prepare-first|jupyter|python} [arguments]' ;;
 esac

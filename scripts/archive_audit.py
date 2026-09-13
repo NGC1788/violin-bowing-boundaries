@@ -290,7 +290,7 @@ def audit_archive(archive: Path, report_dir: Path | None = None, *, timeout: flo
             raise AuditError("Insufficient free disk space for bounded inventory reports")
         executable = shutil.which("7zz") or shutil.which("7z")
         if executable is None:
-            raise AuditError("Install 7zz or 7z before running an archive inventory")
+            raise AuditError("Run bash scripts/run.sh setup-tools first (no sudo required)")
         summary["executable_name"] = Path(executable).name
         summary.update(_capture_listing(executable, archive, listing, errors, timeout, max_listing_bytes))
         after = archive.stat()

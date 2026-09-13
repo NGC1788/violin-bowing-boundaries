@@ -1,6 +1,6 @@
 # 오늘 서버에서 할 일 — 첫 실제 데이터 준비
 
-2026-09-13. 이미 `SETUP PASS`와 GPU 실행 점검을 통과한 Ubuntu 서버용이다. RustDesk로 접속해 **서버의 터미널**에서 실행한다. 기존 환경을 다시 설치할 필요가 없다.
+2026-09-14 업데이트. 이미 `SETUP PASS`와 GPU 실행 점검을 통과한 Ubuntu 서버용이다. RustDesk로 접속해 **서버의 터미널**에서 실행한다. 기존 환경을 다시 설치할 필요가 없으며 **sudo와 tmux도 필요 없다.**
 
 오늘의 완료 기준은 **첫 압축파일 한 개 다운로드 → MD5 검증 → 압축 목록 검사 → 용량을 제한한 압축 해제 → CSV 일부 확인**이다. 이 단계는 실제 데이터 준비이며 모델 학습이나 연구 성능 검증은 아니다.
 
@@ -17,32 +17,16 @@ git log -1 --oneline
 
 `git status --short`가 비어 있으면 추적 파일 수정이 없는 상태다. `data/`, `.venv/`, `reports/`는 Git에서 제외되어 있으므로 다운로드가 있어도 빈 결과가 정상이다. `git pull`에서 오류가 나면 중단하고 오류를 보존한다. 강제 초기화나 재복제로 해결하지 않는다.
 
-## 2. 필요한 시스템 도구 확인
+## 2. 관리자 권한 없이 압축 도구 준비
 
 ```bash
-command -v 7zz || command -v 7z
-command -v tmux
+bash scripts/run.sh setup-tools
 df -h .
 ```
 
-`7zz` 또는 `7z` 경로가 하나 나오면 압축 도구가 있는 것이다. 둘 다 없을 때만 다음을 실행한다. 배포판이 제공하는 `7zip`을 우선하고, 제공되지 않으면 `p7zip-full`을 사용한다.
+`USER TOOL SETUP: PASS`가 나와야 한다. [공식 7-Zip 다운로드 페이지](https://www.7-zip.org/download.html)가 연결하는 Linux x86_64용 26.03 패키지 약 1.5 MiB를 받아 고정된 SHA256을 확인한다. 실행 파일도 크기·SHA256을 검사하고 직접 실행에 성공해야 설치를 완료한다. 위치는 프로젝트 안의 `.local-tools/7zip-26.03/7zz`다. `scripts/run.sh`가 이 경로를 자동으로 사용하므로 셸 설정이나 시스템 폴더를 수정하지 않는다. 이후 재실행은 설치된 파일을 검증해 재사용한다.
 
-```bash
-sudo apt-get update
-if apt-cache show 7zip >/dev/null 2>&1; then
-  sudo apt-get install --no-install-recommends 7zip
-else
-  sudo apt-get install --no-install-recommends p7zip-full
-fi
-```
-
-`tmux`가 없을 때만:
-
-```bash
-sudo apt-get install --no-install-recommends tmux
-```
-
-`sudo`가 학교 계정 정책상 허용되지 않으면 이 두 도구의 설치가 필요한 상태다. NVIDIA 드라이버·CUDA·Conda를 변경할 이유는 없다.
+설치가 실패하면 다음 단계로 넘어가지 않는다. 이 명령은 Ubuntu x86_64 서버용이며 Mac에서 실행하지 않는다. NVIDIA 드라이버·CUDA·Conda를 변경할 이유는 없다.
 
 공간 기준은 다음과 같다. `df`의 `Avail`을 본다. OS 표기의 `G`와 여기의 GiB는 표시 방식에 따라 약간 다를 수 있다.
 
@@ -63,28 +47,27 @@ bash scripts/run.sh python -m unittest discover -s tests -v
 
 마지막에 `OK`가 나와야 한다. 이 테스트는 작은 임시 파일과 모의 네트워크로 다운로드 재개·오류 처리·추출 보호를 검사한다. `7zz/7z`가 있으면 작은 실제 압축파일의 생성·검사·해제도 수행한다. 실제 연구 데이터나 기존 `.part`를 바꾸지 않는다. `FAILED`가 나오면 데이터 준비를 진행하기 전에 그 출력을 확인한다.
 
-## 4. 연결이 끊겨도 작업을 유지할 터미널 열기
+## 4. 백그라운드 실행 도구 확인
 
 ```bash
-tmux new -s violin-data
+command -v nohup
 ```
 
-같은 이름의 세션이 이미 있으면 새로 만들지 말고 다음으로 돌아간다.
-
-```bash
-tmux attach -t violin-data
-```
-
-이제 열린 tmux 안에서 다음 단계의 명령을 실행한다. RustDesk 연결이나 노트북을 닫아도 서버와 이 세션이 계속 켜져 있으면 작업이 유지된다. 서버 재부팅·전원 종료에는 유지되지 않는다.
+Ubuntu에 기본 제공되는 `nohup`을 사용한다. 경로가 나오면 다음으로 진행한다. tmux를 별도로 설치할 필요가 없다. 아래 방식은 터미널 연결 종료 신호에도 작업을 유지하지만, 서버 전원 종료·재부팅이나 학교의 세션 강제 종료 정책에는 유지되지 않는다.
 
 ## 5. 오늘의 본 작업 실행
 
 ```bash
 cd "$HOME/research/violin-bowing-boundaries"
-bash scripts/run.sh prepare-first --extract --max-unpacked-gib 80 --retries 8
+mkdir -p logs
+TASK_LOG="$(mktemp "$PWD/logs/prepare-first-XXXXXXXX.log")"
+nohup bash scripts/run.sh prepare-first --extract --max-unpacked-gib 80 --retries 8 > "$TASK_LOG" 2>&1 < /dev/null &
+TASK_PID=$!
+printf 'PID: %s\nLog: %s\n' "$TASK_PID" "$TASK_LOG"
+tail -f "$TASK_LOG"
 ```
 
-이 명령의 동작은 순서대로 다음과 같다.
+이 실행 블록은 **한 번만** 실행한다. 이미 같은 파일의 다운로드나 압축 해제가 실행 중이면 중복 실행하지 않는다. PID와 Log 경로를 메모한다. 로그가 바로 표시되며, `tail -f`는 작업이 끝나도 자동 종료되지 않는다. 이 명령의 데이터 처리 동작은 순서대로 다음과 같다.
 
 1. Part 1 버전 `17749111`의 `2024-03-25_TypeA_sample1.7z` **한 개만** 받는다. 기존 `.part`의 실제 길이에서 이어받는다. 일시적인 연결 끊김에는 최대 8번 추가 재시도한다. 재시도 간격은 10초부터 늘어나 최대 60초다. 메타데이터 요청도 제한된 재시도를 사용한다. 무한 재시도는 하지 않는다.
 2. 전체 파일의 게시된 MD5와 고정한 파일 크기를 확인한다. 크기·체크섬·재개 범위가 잘못되면 자동으로 넘어가지 않는다. 다운로드가 끝난 뒤 MD5 계산 동안 진행 표시가 잠시 멈출 수 있다.
@@ -94,17 +77,17 @@ bash scripts/run.sh prepare-first --extract --max-unpacked-gib 80 --retries 8
 
 추출 완료 위치는 `data/interim/typeA_sample1/`이며, 원본 압축파일은 `data/raw/zenodo/17749111/`에 유지한다. 실행별 보고서는 `reports/today/`에 남는다. 이 데이터는 자동으로 GitHub에 올라가지 않는다.
 
-작업을 두고 나오려면 **`Ctrl+B`를 눌렀다 놓고 `D`**를 누른다. `Ctrl+C`는 작업 중단이므로 구분한다. 다시 들어갈 때는 `tmux attach -t violin-data`를 사용한다. tmux 밖에서 `tmux ls`로 세션을 볼 수 있다.
+`tail -f` 화면에서 **`Ctrl+C`는 로그 보기만 종료**하며 백그라운드 준비 작업은 계속된다. 연결 후 다시 보고 싶으면 기록한 Log 경로에 `tail -f`를 사용한다. 로그 목록은 `ls -lt logs/prepare-first-*.log`로 확인할 수 있다. PID만 표시됐다고 성공한 것은 아니며, 아래 완료 문구를 확인해야 한다.
 
 ## 6. 완료 확인과 전달할 출력
 
-명령이 끝나고 아래 표시와 프롬프트가 돌아와야 한다.
+현재 실행의 로그에 아래 표시가 나와야 한다. 아직 다운로드·추출 중이거나 실패 표시가 있으면 완료가 아니다.
 
 ```text
 TODAY DATA PREPARATION: PASS
 ```
 
-그다음 실행한다.
+`tail -f` 화면에서 `Ctrl+C`로 로그 보기를 끝낸 뒤 다음을 실행한다.
 
 ```bash
 bash scripts/run.sh prepare-first --show
@@ -119,7 +102,7 @@ df -h .
 
 | 표시 / 상황 | 다음 행동 |
 |---|---|
-| 일시적 다운로드 실패 후 재시도도 소진 | 연결 상태를 확인한 뒤 5단계 명령을 다시 실행한다. `.part`는 유지한다. |
+| 일시적 다운로드 실패 후 재시도도 소진 | 해당 실행이 끝났는지 확인하고, 연결 상태를 확인한 뒤 5단계 명령을 다시 실행한다. `.part`는 유지한다. |
 | `Download lock exists` | 다른 다운로드가 실행 중인지 확인한다. 살아 있는 작업의 잠금파일을 삭제하지 않는다. 정상 `Ctrl+C` 중단은 잠금을 정리한다. 강제 종료 후 남은 잠금은 별도 확인이 필요하다. |
 | MD5 불일치 또는 정확한 Range 재개 실패 | 그대로 중단하고 오류를 전달한다. 검증을 끄거나 기존 파일을 정상 파일로 이름 바꾸지 않는다. |
 | 공간 부족 | 현재 공간과 보고서를 확인한다. 다른 연구 파일을 임의로 삭제하지 않는다. |
@@ -127,6 +110,8 @@ df -h .
 | CSV 확인 `incomplete` | 원본과 추출물은 유지되어 있다. 저장된 오류와 CSV 보고서를 기준으로 읽기 방식을 수정한다. |
 
 에러를 성공으로 바꾸기 위해 파일을 지우거나 통과 조건을 낮추지 않는다. 오류 시에도 `bash scripts/run.sh prepare-first --show`로 마지막 저장 결과를 확인할 수 있다.
+
+`--show`는 마지막으로 종료된 실행의 보고서를 읽는다. 현재 백그라운드 실행이 진행 중일 때는 예전 결과가 표시되거나 보고서가 아직 없을 수 있으므로, 현재 Log의 진행 상태를 먼저 확인한다.
 
 ## 오늘 다음으로 넘어가지 않을 단계
 

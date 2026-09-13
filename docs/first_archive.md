@@ -21,17 +21,18 @@ bash scripts/run.sh download \
 
 ## 2. 목록과 비압축 크기 확인
 
-`7z`가 있으면 아래 명령을 사용한다. `7zz`만 있는 환경에서는 `7z`를 `7zz`로 바꾼다. 둘 다 없으면 Ubuntu의 `p7zip-full` 패키지를 설치하거나 관리자에게 설치를 요청한다.
+`7z`가 있으면 아래 수동 목록 명령을 사용할 수 있다. sudo가 없거나 압축 도구가 없으면 [오늘 서버 실행 순서](today_server.md)의 `setup-tools`를 사용한다. 프로젝트에 설치된 `7zz`는 `run.sh`가 자동으로 찾아 사용한다.
 
 ```bash
 command -v 7z || command -v 7zz
 ```
 
-필요한 경우에만:
+관리자 권한 없는 설치와 목록 검사:
 
 ```bash
-sudo apt-get update
-sudo apt-get install --no-install-recommends p7zip-full
+bash scripts/run.sh setup-tools
+bash scripts/run.sh archive-audit \
+  --archive data/raw/zenodo/17749111/2024-03-25_TypeA_sample1.7z
 ```
 
 일반 목록과 상세 목록을 파일로 저장한다.

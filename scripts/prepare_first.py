@@ -261,7 +261,7 @@ def main(argv=None):
     exit_code = 1
     try:
         if not shutil.which("7zz") and not shutil.which("7z"):
-            raise ValueError("Install 7zz or 7z first (Ubuntu: p7zip-full or 7zip).")
+            raise ValueError("Run bash scripts/run.sh setup-tools first (no sudo required).")
         if not math.isfinite(args.max_unpacked_gib) or args.max_unpacked_gib <= 0:
             raise ValueError("--max-unpacked-gib must be positive and finite")
         command = [sys.executable, str(ROOT / "scripts/zenodo_catalog.py"), "download", "--record", RECORD,

@@ -50,3 +50,11 @@ The user reported an interrupted first-file download at 3,816,485,424 of 14,083,
 - The header-only inspection did not retrieve, decompress, or hash the 13.116 GiB payload and did not inspect any actual CSV values. The server preparation command must still perform full MD5 verification and extraction before its CSV reports are evidence of real file contents.
 
 `TODAY DATA PREPARATION: PASS` will mean the stages actually requested by that run completed. With `--extract`, those stages include successful 7z extraction, exact extracted file names/sizes, and readable nonempty prefixes of selected CSV files. It does not mean that all signal values, units, labels or research claims have been validated. Reusing an extraction checks names and sizes against its completion record; it does not freshly hash each extracted file. Preserve the raw archive for reproducible reconstruction.
+
+## Installation without sudo — 2026-09-14
+
+The school account does not have administrator privileges. `setup-tools` now installs official 7-Zip 26.03 for Linux x86_64 under the project's ignored `.local-tools/` directory. `run.sh` adds that directory to the child process PATH; no system package installation or shell-profile edit occurs. The guide uses Ubuntu's `nohup` instead of requiring tmux.
+
+The official Linux release asset is 1,575,072 bytes with SHA256 `dc99eff5008f1ab79bd7084c68513701547a808a89502bf4133683535ab3c695`, matching the GitHub release-asset metadata. The extracted regular `7zz` member is 2,882,120 bytes with SHA256 `3d52c92deb7e9f1bd059692eefc33f86a144cdc548acc4b6f4c809a4dd7bc369`. Both are pinned in the installer. The actual official package was downloaded and checked locally; its Linux executable was not run on macOS. Server setup must still pass its real executable/version check.
+
+The local regression suite passes 67 tests, including eight new installer tests for platform rejection before download, size/hash checks, duplicate/symlink rejection, installation/reuse, altered existing files, and failed execution preservation. Linux execution in those installer tests is mocked; the existing real macOS 7-Zip tiny-archive integration test also passes. Shell syntax for the revised `run.sh` passes.

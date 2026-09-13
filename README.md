@@ -10,6 +10,8 @@
 
 **이미 설치를 완료했다면 [오늘 서버에서 할 일](docs/today_server.md)부터 진행합니다.** 기존 다운로드를 이어받아 첫 데이터 파일을 준비하는 순서입니다.
 
+**sudo가 없는 학교 계정도 진행할 수 있습니다.** `bash scripts/run.sh setup-tools`로 공식 7-Zip을 프로젝트 안에 설치하고, 안내의 `nohup` 명령으로 작업을 유지합니다. tmux 설치는 필요하지 않습니다.
+
 RustDesk로 Ubuntu에 접속한 뒤 **Ubuntu의 터미널**에서 실행합니다. NVIDIA GPU가 있는 Linux x86_64용이며, Mac에서 이 환경을 설치하지 않습니다.
 
 먼저 기존 상태를 확인합니다.
@@ -57,6 +59,7 @@ bash scripts/run.sh catalog
 | `scripts/zenodo_catalog.py` | Zenodo 버전·용량·체크섬 보존, 파일 단위 다운로드·재개 |
 | `scripts/archive_audit.py` | 압축 해제 없이 멤버 목록·크기·경로·블록 검사 |
 | `scripts/prepare_first.py` | 첫 파일 준비, 용량을 제한한 추출, CSV 앞부분 확인과 보고서 출력 |
+| `scripts/install_7zip.py` | 관리자 권한 없이 공식 Linux 7-Zip 설치·SHA256 및 실행 검사 |
 | `scripts/run.sh` | 매번 환경 활성화 없이 프로젝트 명령 실행 |
 | `tests/` | 다운로드 및 환경 점검 도구의 회귀 검증 |
 
