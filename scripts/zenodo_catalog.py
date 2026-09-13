@@ -13,14 +13,19 @@ Nothing is extracted. No labels, train/test splits, or audio are inferred.
 
 import argparse
 import datetime as dt
+import errno
 import hashlib
+import http.client
 import json
 import math
 import os
 from pathlib import Path
 import re
 import shutil
+import ssl
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -34,6 +39,47 @@ GIB = 1024 ** 3
 CHUNK = 1024 ** 2
 MAX_METADATA_BYTES = 10 * CHUNK
 USER_AGENT = "violin-research-starter/1.0 (metadata-first; stdlib urllib)"
+
+
+class PrematureEOF(OSError):
+    """A validated response ended before all published bytes arrived."""
+
+
+def validate_retry_policy(retries, retry_delay):
+    if not isinstance(retries, int) or not 0 <= retries <= 20:
+        raise ValueError("--retries must be an integer from 0 to 20 (additional attempts)")
+    if not math.isfinite(retry_delay) or not 0 <= retry_delay <= 60:
+        raise ValueError("--retry-delay must be finite and between 0 and 60 seconds")
+
+
+def is_transient(error):
+    # HTTPError subclasses URLError: check its status before the general network case.
+    if isinstance(error, urllib.error.HTTPError):
+        return error.code in (408, 429) or 500 <= error.code <= 599
+    if isinstance(error, ssl.SSLCertVerificationError):
+        return False
+    if isinstance(error, urllib.error.URLError):
+        return not isinstance(error.reason, ssl.SSLCertVerificationError)
+    if isinstance(error, (PrematureEOF, http.client.IncompleteRead, TimeoutError, ConnectionError)):
+        return True
+    return isinstance(error, OSError) and error.errno in {
+        errno.ECONNRESET, errno.ECONNABORTED, errno.EHOSTUNREACH,
+        errno.ENETUNREACH, errno.EPIPE, errno.ETIMEDOUT,
+    }
+
+
+def with_retries(operation, retries, retry_delay, label):
+    """Retry only transient transport failures, never integrity or local-data errors."""
+    validate_retry_policy(retries, retry_delay)
+    for attempt in range(retries + 1):
+        try:
+            return operation()
+        except Exception as error:
+            if not is_transient(error) or attempt == retries:
+                raise
+            delay = min(60, retry_delay * (2 ** attempt))
+            print(f"{label}: {type(error).__name__}; retry {attempt + 1}/{retries} in {delay:g}s", flush=True)
+            time.sleep(delay)
 
 
 def safe_url(url):
@@ -63,11 +109,17 @@ def open_url(url, extra_headers=None):
     return response
 
 
-def fetch_record(record):
+def fetch_record(record, retries=3, retry_delay=10):
     if not str(record).isdigit():
         raise ValueError("Record ID must contain digits only")
-    with open_url("https://zenodo.org/api/records/" + str(record)) as response:
-        raw = response.read(MAX_METADATA_BYTES + 1)
+    def fetch():
+        with open_url("https://zenodo.org/api/records/" + str(record)) as response:
+            raw = response.read(MAX_METADATA_BYTES + 1)
+            length = response.headers.get("Content-Length")
+            if length is not None and len(raw) < min(int(length), MAX_METADATA_BYTES + 1):
+                raise PrematureEOF("Metadata response ended before its declared length")
+            return raw
+    raw = with_retries(fetch, retries, retry_delay, "Metadata")
     if len(raw) > MAX_METADATA_BYTES:
         raise ValueError("Metadata exceeded the 10 MiB safety bound")
     data = json.loads(raw)
@@ -154,23 +206,38 @@ def transfer_file(url, part, size, offset):
         mode = "ab" if offset else "xb"
         with part.open(mode) as handle:
             while True:
-                block = response.read(min(CHUNK, size - received + 1))
+                interrupted = None
+                try:
+                    block = response.read(min(CHUNK, size - received + 1))
+                except http.client.IncompleteRead as error:
+                    # Keep verified-position bytes delivered with the exception before resuming.
+                    block = error.partial
+                    interrupted = error
                 if not block:
+                    if interrupted is not None:
+                        raise interrupted
                     break
                 if received + len(block) > size:
                     raise ValueError("Response exceeded declared size; extra bytes were not saved")
                 handle.write(block)
                 received += len(block)
+                if interrupted is not None:
+                    handle.flush()
+                    os.fsync(handle.fileno())
+                    raise interrupted
                 if received >= next_progress:
                     print(f"  {received / GIB:.2f} / {size / GIB:.2f} GiB", flush=True)
                     next_progress = received + 256 * CHUNK
             handle.flush()
             os.fsync(handle.fileno())
         if received != size:
-            raise ValueError(f"Incomplete download ({received}/{size} bytes); rerun to resume")
+            raise PrematureEOF(f"Incomplete download ({received}/{size} bytes); .part retained for resume")
 
 
 def download(args, data):
+    retries = getattr(args, "retries", 3)
+    retry_delay = getattr(args, "retry_delay", 10)
+    validate_retry_policy(retries, retry_delay)
     size, checksum, url = file_spec(data, args.file)
     if not math.isfinite(args.max_gib) or args.max_gib <= 0:
         raise ValueError("--max-gib must be a positive finite number")
@@ -196,19 +263,23 @@ def download(args, data):
                 print("Already present and MD5 verified:", target)
                 return
             raise ValueError("Existing destination differs; it will not be overwritten: " + str(target))
-        offset = part.stat().st_size if part.exists() else 0
-        if offset > size:
-            raise ValueError("Existing .part exceeds published size; inspect or remove it manually")
-        if part.exists() and offset == 0:
-            part.unlink()  # Only an empty intermediate file created for this exact target.
-        remaining = size - offset
-        reserve = max(GIB, int(size * 0.05))
-        free = shutil.disk_usage(directory).free
-        if free < remaining + reserve:
-            raise ValueError(f"Insufficient free space: need {(remaining + reserve) / GIB:.2f} GiB including reserve")
-        print(f"Explicit download: {args.file}; {size / GIB:.3f} GiB compressed; resume at {offset / GIB:.3f} GiB", flush=True)
-        if remaining:
-            transfer_file(url, part, size, offset)
+        def attempt_transfer():
+            if part.is_symlink():
+                raise ValueError("Refusing symlink intermediate file")
+            offset = part.stat().st_size if part.exists() else 0
+            if offset > size:
+                raise ValueError("Existing .part exceeds published size; inspect or remove it manually")
+            if part.exists() and offset == 0:
+                part.unlink()  # Only the empty intermediate for this exact target.
+            remaining = size - offset
+            reserve = max(GIB, int(size * 0.05))
+            free = shutil.disk_usage(directory).free
+            if free < remaining + reserve:
+                raise ValueError(f"Insufficient free space: need {(remaining + reserve) / GIB:.2f} GiB including reserve")
+            print(f"Explicit download: {args.file}; {size / GIB:.3f} GiB compressed; resume at {offset / GIB:.3f} GiB", flush=True)
+            if remaining:
+                transfer_file(url, part, size, offset)
+        with_retries(attempt_transfer, retries, retry_delay, "Download")
         print("Checking MD5 (may take several minutes)...", flush=True)
         if part.stat().st_size != size or md5_file(part) != checksum:
             raise ValueError("MD5 mismatch. Untrusted .part retained for inspection; remove it manually before a fresh retry")
@@ -231,11 +302,14 @@ def main():
     get.add_argument("--file", required=True, help="Exact filename printed by catalog")
     get.add_argument("--max-gib", type=float, required=True, help="Maximum allowed compressed file size in GiB")
     get.add_argument("--data-dir", default="data")
+    for command in (catalog, get):
+        command.add_argument("--retries", type=int, default=3, help="Additional attempts for transient network failures (0-20; default: 3)")
+        command.add_argument("--retry-delay", type=float, default=10, help="Initial retry delay in seconds; doubles up to 60s (default: 10)")
     args = parser.parse_args()
     try:
         selected = (args.record or DEFAULT_RECORDS) if args.command == "catalog" else [args.record]
         for record in selected:
-            data = fetch_record(record)
+            data = fetch_record(record, args.retries, args.retry_delay)
             manifest = save_manifest(record, data, Path(args.data_dir) / "manifests")
             print_record(record, data, manifest)
             if args.command == "download":
@@ -246,7 +320,7 @@ def main():
     except KeyboardInterrupt:
         print("\nInterrupted. Any .part file is retained for a later explicit resume.", file=sys.stderr)
         return 130
-    except (OSError, ValueError, KeyError, TypeError) as exc:
+    except (OSError, ValueError, KeyError, TypeError, http.client.HTTPException) as exc:
         print("ERROR:", exc, file=sys.stderr)
         return 1
 

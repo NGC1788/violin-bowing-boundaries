@@ -1,13 +1,13 @@
 # Data contract
 
-This document separates published dataset facts from requirements proposed for this project. The starter has inspected official metadata; it has **not** verified the contents of the large archives or established any research result.
+This document separates published dataset facts from requirements proposed for this project. The starter has inspected official metadata and the first archive's member header; it has **not** verified the full signal contents of the large archives or established any research result.
 
 ## Keep the two sources separate
 
 | Source | Observations | Valid initial use |
 | --- | --- | --- |
 | Public bowed-cello-string dataset | Robotic monochord measurements of mechanical forces and bow velocity | Test mechanical-state analysis and boundary estimation, after verifying schema and reference labels |
-| Project violin recordings | Microphone recordings, separately calibrated bow-force measurements, and synchronized video | Test operationally defined acoustic stability and parameter estimation on real violins |
+| Project violin recordings (revised scope) | Final supplementary microphone recordings and available setup notes; no new force sensor | Describe acoustic observations under documented conditions; not quantitative force-boundary validation |
 
 The public dataset is not a collection of microphone recordings of complete violins. Mechanical force and microphone pressure have different observation models. Success on public mechanical signals does not validate a microphone classifier or establish the physical slip regime of a real violin. Do not pool these sources without an explicit domain model and separate evaluation.
 
@@ -27,6 +27,12 @@ None of these four columns is microphone audio, a time column, or a regime label
 The metadata also describes `betas.csv` for relative bow–bridge distance β and a timestamps file for the start/end of a classification window. **Window boundaries are not state labels.** Their units, indexing convention, CSV delimiter/header, alignment, and actual file structure must be established from archive contents and accompanying documentation before implementation. Folder numbers 1, 2, 3 are described as target bow speeds 0.1, 0.05, 0.2 m/s respectively; preserve measured velocity separately from targets.
 
 General collection metadata describes forces 0.1–4 N and β 0.02–0.2. [Part 7](https://zenodo.org/records/17822016) and [Part 8](https://zenodo.org/records/17822037) extend forces to 4–12 N with reduced β range. These are collection-level descriptions, not proof that every archive or trial contains every combination. Check actual coverage.
+
+### Observed first-archive header, 2026-09-13
+
+A bounded HTTP Range inspection of the official `2024-03-25_TypeA_sample1.7z` header transferred 253,329 bytes, then its member listing was checked with 7-Zip. This was **header inspection only**, not a full download, payload checksum test, or CSV read. It found 18,000 files and 4 directories, totaling 74,179,785,108 uncompressed bytes (69.085 GiB), in one solid block. Under the archive root, `2024-03-27_r_v1`, `2024-03-27_r_v2`, and `2024-03-27_r_v3` each contain 2,000 numbered `whole_N.csv` files with matching `beta_N.csv` and `timestamp_N.csv` files.
+
+These actual names differ from the generalized names in the metadata. The parser must support the observed names. Neither the dates nor `v1/v2/v3` establish measured speeds or independent repeat groups on their own. No separate regime-label file was apparent from names alone; this does not prove that no label information exists elsewhere. Use [the first-data preparation procedure](today_server.md) to verify the complete download and inspect actual CSV prefixes on the server.
 
 If regime labels are absent or their meaning cannot be established, mark them unavailable. Any new manual labels or rule-based labels must record their creator/procedure, version, evidence, uncertainty, and independence from the method being tested. A model's own output is not an independent reference label.
 

@@ -19,7 +19,9 @@ case "$TASK_COMMAND" in
   smoke) exec "$TASK_UV" run --locked python scripts/smoke_test.py "$@" ;;
   catalog) exec "$TASK_UV" run --locked python scripts/zenodo_catalog.py catalog "$@" ;;
   download) exec "$TASK_UV" run --locked python scripts/zenodo_catalog.py download "$@" ;;
+  archive-audit) exec "$TASK_UV" run --locked python scripts/archive_audit.py "$@" ;;
+  prepare-first) exec "$TASK_UV" run --locked python scripts/prepare_first.py "$@" ;;
   jupyter) exec "$TASK_UV" run --locked jupyter lab --ip=127.0.0.1 --port=8888 --no-browser "$@" ;;
   python) exec "$TASK_UV" run --locked python "$@" ;;
-  *) echo 'Usage: bash scripts/run.sh {doctor|smoke|catalog|download|jupyter|python} [arguments]' ;;
+  *) echo 'Usage: bash scripts/run.sh {doctor|smoke|catalog|download|archive-audit|prepare-first|jupyter|python} [arguments]' ;;
 esac

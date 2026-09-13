@@ -2,12 +2,15 @@
 
 import contextlib
 import hashlib
+import http.client
 import importlib.util
 import io
+import json
 from pathlib import Path
 import tempfile
 import types
 import unittest
+import urllib.error
 from unittest import mock
 
 SCRIPT = Path(__file__).resolve().parents[1] / 'scripts/zenodo_catalog.py'
@@ -118,6 +121,106 @@ class DownloadTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'resume range'):
                 m.download(self.args, DATA)
         self.assertEqual(self.part.read_bytes(), PAYLOAD[:9])
+
+    def test_premature_eof_automatically_resumes_exact_saved_offset(self):
+        self.args.retries = 2
+        self.args.retry_delay = 10
+        headers = {'Content-Range': f'bytes 9-{len(PAYLOAD)-1}/{len(PAYLOAD)}'}
+        responses = [Response(PAYLOAD[:9]), Response(PAYLOAD[9:], 206, headers)]
+        with mock.patch.object(m, 'open_url', side_effect=responses) as net:
+            with mock.patch.object(m.time, 'sleep') as sleep:
+                m.download(self.args, DATA)
+        self.assertEqual(net.call_args_list[1].args[1], {'Range': 'bytes=9-'})
+        sleep.assert_called_once_with(10)
+        self.assertEqual(self.target.read_bytes(), PAYLOAD)
+
+    def test_incomplete_read_preserves_exception_partial_bytes(self):
+        self.args.retries = 1
+        first = Response(b'')
+        first.read = mock.Mock(side_effect=http.client.IncompleteRead(PAYLOAD[:9], len(PAYLOAD)-9))
+        headers = {'Content-Range': f'bytes 9-{len(PAYLOAD)-1}/{len(PAYLOAD)}'}
+        with mock.patch.object(m, 'open_url', side_effect=[first, Response(PAYLOAD[9:], 206, headers)]) as net:
+            with mock.patch.object(m.time, 'sleep'):
+                m.download(self.args, DATA)
+        self.assertEqual(net.call_args_list[1].args[1], {'Range': 'bytes=9-'})
+        self.assertEqual(self.target.read_bytes(), PAYLOAD)
+
+    def test_transient_attempt_limit_and_exponential_cap(self):
+        self.args.retries = 4
+        self.args.retry_delay = 10
+        with mock.patch.object(m, 'open_url', side_effect=TimeoutError('network timeout')) as net:
+            with mock.patch.object(m.time, 'sleep') as sleep:
+                with self.assertRaises(TimeoutError):
+                    m.download(self.args, DATA)
+        self.assertEqual(net.call_count, 5)
+        self.assertEqual([call.args[0] for call in sleep.call_args_list], [10, 20, 40, 60])
+        self.assertFalse(self.target.exists())
+        self.assertFalse(self.target.with_name(FILENAME + '.download.lock').exists())
+
+    def test_zero_retries_retains_partial_and_returns_immediately(self):
+        self.args.retries = 0
+        with mock.patch.object(m, 'open_url', return_value=Response(PAYLOAD[:9])) as net:
+            with mock.patch.object(m.time, 'sleep') as sleep:
+                with self.assertRaises(m.PrematureEOF):
+                    m.download(self.args, DATA)
+        self.assertEqual(net.call_count, 1)
+        sleep.assert_not_called()
+        self.assertEqual(self.part.read_bytes(), PAYLOAD[:9])
+
+    def test_http_auth_and_missing_files_never_retry(self):
+        for status in (401, 403, 404):
+            error = urllib.error.HTTPError('https://zenodo.org/x', status, 'failure', {}, None)
+            with mock.patch.object(m, 'open_url', side_effect=error) as net:
+                with mock.patch.object(m.time, 'sleep') as sleep:
+                    with self.assertRaises(urllib.error.HTTPError):
+                        m.download(self.args, DATA)
+            self.assertEqual(net.call_count, 1)
+            sleep.assert_not_called()
+
+    def test_integrity_failure_not_retried_even_with_eight_retries(self):
+        self.args.retries = 8
+        with mock.patch.object(m, 'open_url', return_value=Response(b'x' * len(PAYLOAD))) as net:
+            with mock.patch.object(m.time, 'sleep') as sleep:
+                with self.assertRaisesRegex(ValueError, 'MD5 mismatch'):
+                    m.download(self.args, DATA)
+        self.assertEqual(net.call_count, 1)
+        sleep.assert_not_called()
+
+
+class MetadataRetryTests(unittest.TestCase):
+    def test_metadata_http_429_retries_then_parses(self):
+        error = urllib.error.HTTPError('https://zenodo.org/x', 429, 'rate limit', {}, None)
+        with mock.patch.object(m, 'open_url', side_effect=[error, Response(json.dumps(DATA).encode())]) as net:
+            with mock.patch.object(m.time, 'sleep') as sleep:
+                with contextlib.redirect_stdout(io.StringIO()):
+                    result = m.fetch_record('123', retries=1, retry_delay=5)
+        self.assertEqual(result, DATA)
+        self.assertEqual(net.call_count, 2)
+        sleep.assert_called_once_with(5)
+
+    def test_metadata_truncation_retries_but_invalid_json_does_not(self):
+        raw = json.dumps(DATA).encode()
+        first = Response(raw[:9], headers={'Content-Length': str(len(raw))})
+        with mock.patch.object(m, 'open_url', side_effect=[first, Response(raw)]) as net:
+            with mock.patch.object(m.time, 'sleep'):
+                with contextlib.redirect_stdout(io.StringIO()):
+                    self.assertEqual(m.fetch_record('123', retries=1), DATA)
+        self.assertEqual(net.call_count, 2)
+        with mock.patch.object(m, 'open_url', return_value=Response(b'not json')) as net:
+            with self.assertRaises(ValueError):
+                m.fetch_record('123', retries=3)
+        self.assertEqual(net.call_count, 1)
+
+    def test_retry_policy_only_accepts_transient_transport_errors(self):
+        for status in (408, 429, 500, 502, 503, 504):
+            self.assertTrue(m.is_transient(urllib.error.HTTPError('https://zenodo.org/x', status, '', {}, None)))
+        self.assertTrue(m.is_transient(urllib.error.URLError('temporary network failure')))
+        self.assertFalse(m.is_transient(OSError(m.errno.ENOSPC, 'disk full')))
+        self.assertFalse(m.is_transient(ValueError('wrong range or host')))
+        self.assertFalse(m.is_transient(urllib.error.URLError(m.ssl.SSLCertVerificationError('bad certificate'))))
+        for retries, delay in [(-1, 1), (21, 1), (1, -1), (1, float('inf')), (1, 61)]:
+            with self.assertRaises(ValueError):
+                m.validate_retry_policy(retries, delay)
 
 
 if __name__ == '__main__':
