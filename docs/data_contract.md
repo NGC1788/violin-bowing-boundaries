@@ -45,7 +45,9 @@ Initial selection is [Part 1](https://zenodo.org/records/17749110), [Part 2](htt
 
 ## Project-recording requirements
 
-Each trial needs stable, non-identifying `trial_id`, `session_id`, `instrument_id`, `player_id`, and `bow_id`; string identity, target conditions, measured conditions, sample rates, time origin/synchronization, calibration version, sensor orientation, and exclusion reason where relevant. Link force recordings to their independent calibration records. Keep failed or missing measurements identifiable rather than silently deleting them.
+The 2026-09-13 scope uses a final, limited recording session with existing equipment; new force-sensor construction and large-scale own-data collection are no longer required. See [the final violin check](final_violin_check.md). These recordings are supplementary and are not a force-boundary validation dataset.
+
+Each trial needs stable, non-identifying `trial_id`, `session_id`, `instrument_id`, `player_id`, and `bow_id`; string identity, target conditions, available measured conditions, sample rates, time origin/synchronization, microphone setup, and exclusion reason where relevant. Explicitly mark unmeasured force, velocity and β as unavailable rather than treating instructions as measurements. If calibrated sensor data are ever included, retain their orientation and independent calibration records. Keep failed or missing measurements identifiable rather than silently deleting them.
 
 Microphone amplitude is not calibrated pressure unless a pressure calibration was performed. Audio periodicity alone is not proof of Helmholtz motion. Define an acoustic state by a documented, reproducible rule and retain reference-label disagreement. Keep the mapping from participant codes to identities outside this public repository. Do not commit raw participant video/audio, private paths, credentials, or unpublished personal documents.
 

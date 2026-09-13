@@ -35,7 +35,7 @@ The initial Ubuntu setup gate is therefore passed for this reported run. Preserv
 ## Still unverified
 
 - Archive extraction, schema/label verification, or dataset-specific parsing.
-- Sensor calibration, video tracking, synchronization or real violin acoustic-state validation.
+- Video tracking, synchronization or real violin acoustic-state validation. New force-sensor construction/calibration is outside the revised 2026-09-13 scope; see the research roadmap.
 - Training, benchmark comparisons, uncertainty calibration, or claims of improvement.
 
 For a new server installation, run `bash scripts/bootstrap_ubuntu.sh` and preserve its environment reports. `SETUP PASS` means only that its installation and smoke checks passed; it is not a research result.
