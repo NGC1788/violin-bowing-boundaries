@@ -78,7 +78,10 @@ def with_retries(operation, retries, retry_delay, label):
             if not is_transient(error) or attempt == retries:
                 raise
             delay = min(60, retry_delay * (2 ** attempt))
-            print(f"{label}: {type(error).__name__}; retry {attempt + 1}/{retries} in {delay:g}s", flush=True)
+            reason = f"HTTP {error.code}" if isinstance(error, urllib.error.HTTPError) else type(error).__name__
+            if isinstance(error, urllib.error.HTTPError):
+                error.close()
+            print(f"{label}: {reason}; retry {attempt + 1}/{retries} in {delay:g}s", flush=True)
             time.sleep(delay)
 
 

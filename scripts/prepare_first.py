@@ -20,6 +20,7 @@ import shutil
 import subprocess
 import sys
 import time
+from types import SimpleNamespace
 import uuid
 
 from archive_audit import audit_archive
@@ -30,6 +31,49 @@ FILENAME = "2024-03-25_TypeA_sample1.7z"
 EXPECTED_SIZE = 14083546513
 EXPECTED_MD5 = "2709034cc10344f37f3488376ae3ebcd"
 GIB = 1024**3
+
+
+def pinned_record(record, catalog):
+    if not isinstance(record, dict) or not isinstance(record.get("files"), list) or any(
+        not isinstance(item, dict) for item in record.get("files", [])
+    ):
+        raise ValueError("Unexpected pinned record schema")
+    if str(record.get("id")) != RECORD or catalog.file_spec(record, FILENAME)[:2] != (EXPECTED_SIZE, EXPECTED_MD5):
+        raise ValueError("Metadata does not match the pinned first archive version, size and MD5")
+
+
+def resolve_metadata(catalog, retries):
+    """Reuse a validated snapshot of this fixed version; never resolve 'latest' from cache."""
+    manifest_dir = ROOT / "data/manifests"
+    source_url = "https://zenodo.org/api/records/" + RECORD
+    for path in sorted(manifest_dir.glob("zenodo_" + RECORD + "_*.json"), reverse=True):
+        try:
+            if path.is_symlink():
+                raise ValueError("symlink manifest")
+            with path.open("rb") as source:
+                raw = source.read(catalog.MAX_METADATA_BYTES + 1)
+            if len(raw) > catalog.MAX_METADATA_BYTES:
+                raise ValueError("manifest exceeds size bound")
+            envelope = json.loads(raw)
+            if not isinstance(envelope, dict) or any(str(envelope.get(key)) != RECORD for key in (
+                "requested_record_id", "resolved_record_id"
+            )) or envelope.get("source_url") != source_url:
+                raise ValueError("manifest record/source mismatch")
+            if not isinstance(envelope.get("fetched_at_utc"), str) or not envelope["fetched_at_utc"]:
+                raise ValueError("manifest has no original retrieval time")
+            record = envelope.get("record")
+            pinned_record(record, catalog)
+        except (OSError, ValueError, KeyError, TypeError) as error:
+            print(f"Skipping incompatible saved metadata {path.name}: {error}", flush=True)
+            continue
+        print("Using validated saved metadata:", path.relative_to(ROOT), flush=True)
+        return record, {"mode": "cached_manifest", "manifest": str(path.relative_to(ROOT)),
+            "original_fetched_at_utc": envelope["fetched_at_utc"], "source_url": source_url}
+    print("No matching saved metadata; requesting the pinned official record.", flush=True)
+    record = catalog.fetch_record(RECORD, retries, 10)
+    pinned_record(record, catalog)
+    manifest = catalog.save_manifest(RECORD, record, manifest_dir)
+    return record, {"mode": "live_api", "manifest": str(manifest.relative_to(ROOT)), "source_url": source_url}
 
 
 def write_json(path, payload):
@@ -264,19 +308,17 @@ def main(argv=None):
             raise ValueError("Run bash scripts/run.sh setup-tools first (no sudo required).")
         if not math.isfinite(args.max_unpacked_gib) or args.max_unpacked_gib <= 0:
             raise ValueError("--max-unpacked-gib must be positive and finite")
-        command = [sys.executable, str(ROOT / "scripts/zenodo_catalog.py"), "download", "--record", RECORD,
-            "--file", FILENAME, "--max-gib", "14", "--retries", str(args.retries), "--retry-delay", "10"]
         print("Stage 1/3: download/resume and verify the raw archive MD5.", flush=True)
-        subprocess.run(command, check=True)
+        import zenodo_catalog as catalog
+        catalog.validate_retry_policy(args.retries, 10)
+        record, provenance = resolve_metadata(catalog, args.retries)
+        summary["metadata"] = provenance
+        write_json(report_dir / "metadata_used.json", {"provenance": provenance, "record": record})
+        catalog.download(SimpleNamespace(file=FILENAME, max_gib=14, data_dir=str(ROOT / "data"),
+            retries=args.retries, retry_delay=10), record)
         archive = ROOT / "data/raw/zenodo" / RECORD / FILENAME
         if archive.stat().st_size != EXPECTED_SIZE:
             raise ValueError("First-archive size differs from the inspected version; review before extracting")
-        # The downloader checks the current published MD5. Also pin this preparation to
-        # the known first-archive checksum before relying on its reviewed extraction plan.
-        from zenodo_catalog import fetch_record, file_spec
-        record = fetch_record(RECORD, args.retries, 10)
-        if str(record["id"]) != RECORD or file_spec(record, FILENAME)[:2] != (EXPECTED_SIZE, EXPECTED_MD5):
-            raise ValueError("Published first-archive identity changed; review the new data before proceeding")
         summary["download_md5_verified"] = True
         print("Stage 2/3: inspect archive names, sizes, blocks, and extraction guards.", flush=True)
         audit = audit_archive(archive, report_dir / "inventory")

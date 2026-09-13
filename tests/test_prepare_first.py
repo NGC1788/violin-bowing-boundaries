@@ -284,11 +284,13 @@ class MainOrchestrationTests(unittest.TestCase):
         self.enterContext(mock.patch.object(prepare, "EXPECTED_SIZE", 4))
         self.enterContext(mock.patch.object(prepare.shutil, "which", return_value="7zz"))
         self.enterContext(mock.patch.object(prepare.shutil, "disk_usage", return_value=SimpleNamespace(free=100 * prepare.GIB)))
-        self.download = self.enterContext(mock.patch.object(prepare.subprocess, "run"))
         self.extractor = self.enterContext(mock.patch.object(prepare, "extract_checked"))
         self.inventory = self.enterContext(mock.patch.object(prepare, "audit_archive"))
-        self.catalog = SimpleNamespace(fetch_record=mock.Mock(return_value={"id": prepare.RECORD}),
-            file_spec=mock.Mock(return_value=(4, prepare.EXPECTED_MD5, "unused")))
+        self.catalog = SimpleNamespace(fetch_record=mock.Mock(return_value={"id": prepare.RECORD, "files": []}),
+            file_spec=mock.Mock(return_value=(4, prepare.EXPECTED_MD5, "unused")),
+            download=mock.Mock(), validate_retry_policy=mock.Mock(), MAX_METADATA_BYTES=10*1024**2,
+            save_manifest=mock.Mock(return_value=self.root / "data/manifests/fresh.json"))
+        self.download = self.catalog.download
         self.enterContext(mock.patch.dict(sys.modules, {"zenodo_catalog": self.catalog}))
         archive = self.root / "data/raw/zenodo" / prepare.RECORD / prepare.FILENAME
         archive.parent.mkdir(parents=True)
@@ -306,6 +308,7 @@ class MainOrchestrationTests(unittest.TestCase):
         code, output, errors = self.run_main([])
         self.assertEqual(code, 1)
         self.catalog.fetch_record.assert_called_once_with(prepare.RECORD, 8, 10)
+        self.download.assert_not_called()
         self.inventory.assert_not_called()
         self.extractor.assert_not_called()
         summary = json.loads(self.latest.read_text())
@@ -357,6 +360,15 @@ class MainOrchestrationTests(unittest.TestCase):
         self.assertEqual(summary["scout_status"], "incomplete")
         self.assertFalse(summary["research_training_performed"])
         self.assertEqual(json.loads((self.root / summary["csv_scout"]).read_text()), scout)
+
+    def test_successful_download_does_not_fetch_metadata_a_second_time(self):
+        self.inventory.return_value = {"status": "pass", "summary_path": str(self.root / "inventory.json"),
+            "total_uncompressed_bytes": 4, "total_files": 1, "solid": "+"}
+        code, _, _ = self.run_main([])
+        self.assertEqual(code, 0)
+        self.catalog.fetch_record.assert_called_once_with(prepare.RECORD, 8, 10)
+        self.download.assert_called_once()
+        self.assertEqual(json.loads(self.latest.read_text())["metadata"]["mode"], "live_api")
 
 
 @unittest.skipUnless(shutil.which("7zz") or shutil.which("7z"), "real 7-Zip executable not available on PATH")
