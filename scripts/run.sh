@@ -29,7 +29,8 @@ case "$TASK_COMMAND" in
   grid-summary) exec "$TASK_UV" run --locked python scripts/grid_summary.py "$@" ;;
   regime-map) exec "$TASK_UV" run --locked python scripts/regime_map.py "$@" ;;
   collection) exec "$TASK_UV" run --locked python scripts/collection.py "$@" ;;
+  simulate) exec "$TASK_UV" run --locked python scripts/simulate_grid.py "$@" ;;
   jupyter) exec "$TASK_UV" run --locked jupyter lab --ip=127.0.0.1 --port=8888 --no-browser "$@" ;;
   python) exec "$TASK_UV" run --locked python "$@" ;;
-  *) echo 'Usage: bash scripts/run.sh {setup-tools|doctor|smoke|catalog|download|archive-audit|prepare-first|trial-audit|grid-summary|regime-map|collection|jupyter|python} [arguments]' ;;
+  *) echo 'Usage: bash scripts/run.sh {setup-tools|doctor|smoke|catalog|download|archive-audit|prepare-first|trial-audit|grid-summary|regime-map|collection|simulate|jupyter|python} [arguments]' ;;
 esac

@@ -232,3 +232,27 @@ Zenodo limits throughput per connection. At the single-stream rate the ≈236 Gi
 | `python -m unittest discover -s tests` | PASS (1 skipped: no 7-Zip) | New tests (fake range server): fresh parallel download byte-exact, with map and `.part` removed; resume of a sequential `.part` without refetching covered chunks; resume from a chunk map; retry of a reset and of a short chunk; a server ignoring Range marks nothing complete; a mismatched map is refused before any request; stale versus live/unreadable locks |
 | Deliberate mutations: range check skipped; short chunk accepted; sequential `.part` ignored; map ignored; a partially covered chunk counted as done; per-chunk retry removed | 5 of 6 detected | Removing the per-chunk retry is caught by the outer transfer retry, which resumes from the map; the outcome is the same, so this is an equivalent mutation |
 
+### Stage-1 physics simulator — 2026-09-17, later
+
+**Rejected design.** The first version modelled a stiff string as modes up to Nyquist, integrated exactly, with a point bow. Its one-step bow admittance was 1/(2Y) = 2.0 kg/s at 50 kHz and 2.7 kg/s at 100 kHz, against Z = 0.946 kg/s. The cause is bending stiffness with a held force, and the value keeps drifting as the step shrinks. The simulation labelled a clear Schelleng case as multiple slip, with a flyback of half the theory.
+
+An instantaneous dashpot that made up the missing admittance removed so much energy that no oscillation survived. The design was dropped.
+
+**Adopted design.** `scripts/bowed_string.py` is a McIntyre–Schumacher–Woodhouse digital waveguide:
+
+- The bow presents exactly 2Z.
+- Round-trip delay lines are fractional.
+- Each reflection is inverted and passed through a one-pole low-pass (DC gain set by Q1, cut-off by corner rounding). Its group delay is subtracted from the delay line.
+- Friction follows the hyperbolic curve with a closed-form slip root, computed without cancellation, and hysteresis.
+- Numpy and torch backends are supported.
+
+`scripts/simulate_grid.py` (`run.sh simulate`) drives each measured stroke with its cached 1 kHz force and velocity profile. It adds observation noise equal to the measured no-contact median, writes cache-format windows with a copied audit table, runs `regime_map` unchanged, and compares labels cell by cell (agreement, Helmholtz IoU, confusion, slopes).
+
+| Check | Result | Scope |
+|---|---|---|
+| Force sweep at β 0.1, v 0.1 m/s | Multiple slip at 0.25 N. Helmholtz alternating with multiple slip at 2–3.5 N (patchy). Helmholtz at 4 N, flyback 1.92 against 2Zv/β = 1.89. Aperiodic at 10 N (Schelleng F_max = 5.8 N). f0 98.03–98.08 Hz after delay compensation (97.7 before). Halving v halved the flyback. | Default, uncalibrated literature friction |
+| 50 kHz vs 200 kHz (β 0.1 and 0.05) | Same labels; flyback 0.84 vs 0.77 (9%) | Two cases |
+| `python -m unittest discover -s tests` | PASS (1 skipped: no 7-Zip) | New tests: stick, slip root satisfying the curve and the load line, sign symmetry, hysteresis with a triple crossing, no contact; Schelleng order, pitch and flyback law; rate guard; batch bookkeeping; end-to-end simulation of a processed diagram, full and limited, with explicit versus default observation noise |
+
+A suspected operator-precedence bug in the noise default turned out to be correct Python (`A or B if C else D` parses as `(A or B) if C else D`). Parentheses were added only for clarity.
+

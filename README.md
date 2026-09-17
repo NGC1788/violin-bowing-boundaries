@@ -63,6 +63,7 @@ bash scripts/run.sh catalog
 | `scripts/grid_summary.py` | 감사 표에서 (β, 힘) 격자를 복원하고 문제 시행의 위치를 표·그림으로 표시 |
 | `scripts/regime_map.py` | 브리지 힘으로 잠정 상태를 판정하고 속도별 연주 가능 영역 지도와 경계 기울기 출력 |
 | `scripts/collection.py` | 공개 컬렉션 17개 압축 파일을 내려받아 폴더별로 풀고, 분석 창을 캐시한 뒤 격자마다 상태 지도 작성([안내](docs/collection.md)) |
+| `scripts/simulate_grid.py` | 측정 격자를 같은 로봇 구동 조건으로 도파관 물리 모델에서 시뮬레이션하고 같은 분류기로 칸별 비교([안내](docs/simulation.md)) |
 | `scripts/install_7zip.py` | 관리자 권한 없이 공식 Linux 7-Zip 설치·SHA256 및 실행 검사 |
 | `scripts/run.sh` | 매번 환경 활성화 없이 프로젝트 명령 실행 |
 | `tests/` | 다운로드 및 환경 점검 도구의 회귀 검증 |
