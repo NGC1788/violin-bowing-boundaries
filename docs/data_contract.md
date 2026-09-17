@@ -70,7 +70,13 @@ If regime labels are absent or their meaning cannot be established, mark them un
 
 ### Provisional rule-based labels, 2026-09-17
 
-No state-label file exists in the first archive. `scripts/regime_map.py` assigns **provisional** labels from column 3 inside each classification window only: periodicity (autocorrelation peak for 40–160 Hz) and grouped abrupt changes per period, with thresholds recorded in every report and documented in [the regime-map guide](regime_map.md). Created by this repository's code; version is the commit that produced the report. Uncertainty is kept as `ambiguous`, and boundary fits treat runs near the grid edge as censored. The labels never use column 1, column 2 or β, which later models take as inputs. They are not published reference labels and must be compared with the dataset authors' classification criterion before being used as a reference.
+No state-label file exists in the first archive. The dataset authors classify with the Woodhouse/Galluzzo detrended-staircase algorithm (van Walstijn et al., Acta Acustica 2026, Sect. 3.2.2, citing Lampis et al., ISMRA 2025). Their per-trial labels are not published. `scripts/regime_map.py` assigns **provisional** labels from the shape of column 3 inside each classification window:
+
+- Periodicity: the autocorrelation peak within 40–160 Hz.
+- Flybacks per period: counted on the mean cycle folded at that period.
+- Oscillation floor: 3 × the median window std of column-1 ≤ 0 windows. This single global constant is the only use of column 1.
+
+Thresholds are recorded in every report and documented in [the regime-map guide](regime_map.md). Created by this repository's code; version is the commit that produced the report. Uncertainty is kept as `ambiguous`, and boundary fits treat runs near the grid edge as censored. A label never uses its own trial's column 1, column 2 or β, which later models take as inputs. The flyback law check uses column 2 and β only after labelling. These are not published reference labels.
 
 ## Provenance and immutable originals
 

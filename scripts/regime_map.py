@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """Provisional bowing-regime labels from bridge force, and playable-region maps.
 
-Each trial's classification window of column 3 (published: bridge force) is reduced to
-two interpretable quantities: periodicity (autocorrelation at the dominant period) and
-slips per period (abrupt force changes, grouped). Helmholtz motion produces a sawtooth
-with one abrupt return per period. Thresholds are PROVISIONAL, stated in every report,
-and must be checked against the saved example waveforms. These rule-based labels are
-not published reference labels; they are derived only from column 3 and never from the
-bow force, bow velocity or beta that later models use as inputs.
+Each trial's classification window of column 3 (published: bridge force) is folded at its
+dominant period into one mean cycle. Helmholtz motion makes that cycle a sawtooth with a
+single abrupt return (flyback) per period; double and multiple slipping add flybacks of
+comparable size. The dataset authors classify with the detrended-staircase method of
+Woodhouse and Galluzzo, which compares each step with the theoretical Helmholtz flyback
+2 Z v_b / beta. Here flybacks are counted on the averaged cycle instead, so a label uses
+waveform shape only; the flyback law is then tested on the Helmholtz-labelled trials as an
+independent check. Thresholds are PROVISIONAL, stated in every report, and must be checked
+against the saved example waveforms. A label never uses its own trial's bow force, bow
+velocity or beta; column 1 only selects no-contact windows for one global noise floor.
 """
 
 from __future__ import annotations
@@ -34,6 +37,11 @@ DEFAULT_REPORTS = PROJECT_ROOT / "reports/regime_map"
 RATE_HZ = trial_audit.PUBLISHED_RATE_HZ
 F0_RANGE_HZ = (40.0, 160.0)
 CLASSES = ("helmholtz", "multiple_slip", "subharmonic", "aperiodic", "no_oscillation", "ambiguous")
+SENSITIVITY_FRACS = (0.3, 0.4, 0.5, 0.6, 0.7)
+# Comparison only: van Walstijn et al. (Acta Acustica 2026) Table 1 for a cello G2 string on the same
+# monochord, Z = sqrt(T * rho * pi * r^2) with T = 161 N, rho = 11503 kg/m^3, r = 0.487 mm. The string in
+# this archive may be a different type, so this value is never used for labelling.
+REFERENCE_IMPEDANCE = 1.175
 COLORS = {"helmholtz": "#2a9d8f", "multiple_slip": "#e9c46a", "subharmonic": "#f4a261",
           "aperiodic": "#e76f51", "no_oscillation": "#d9d9d9", "ambiguous": "#8d99ae"}
 
@@ -65,36 +73,93 @@ def dominant_period(x: np.ndarray, rate: float = RATE_HZ, f0_range=F0_RANGE_HZ) 
     return float(y1), float(rate / lag)
 
 
-def slips_per_period(x: np.ndarray, period: float, frac: float, merge_frac: float = 0.1) -> float:
-    """Abrupt changes per period: runs of |diff| above ``frac`` of the typical per-period maximum.
+def fold_cycle(x: np.ndarray, period: float) -> tuple[np.ndarray, float] | None:
+    """Mean of all whole periods resampled onto round(period) phases, and the standard error of that mean.
 
-    Runs closer than ``merge_frac`` of a period count once, so a smoothed return or
-    ringing right after it is one slip.
+    Periods are cut at fractional positions, so a non-integer period does not drift across the window.
     """
-    if not (period > 2) or not math.isfinite(period):
-        return math.nan
-    d = np.abs(np.diff(np.asarray(x, dtype=float)))
+    x = np.asarray(x, dtype=float)
+    if not (math.isfinite(period) and period > 8):
+        return None
+    count = int(x.size // period)
+    if count < 2:
+        return None
     m = int(round(period))
-    segments = d.size // m
-    if segments < 2:
-        return math.nan
-    typical = float(np.median(d[:segments * m].reshape(segments, m).max(axis=1)))
-    if typical <= 0:
-        return math.nan
-    mask = (d > frac * typical).astype(np.int8)
-    edges = np.flatnonzero(np.diff(np.concatenate(([0], mask, [0]))))
-    starts, stops = edges[0::2], edges[1::2]
-    if starts.size == 0:
-        return 0.0
-    events, last_stop = 1, stops[0]
-    for start, stop in zip(starts[1:], stops[1:]):
-        if start - last_stop > merge_frac * period:
-            events += 1
-        last_stop = stop
-    return events / (d.size / period)
+    positions = (np.arange(count)[:, None] + np.arange(m)[None, :] / m) * period
+    cycles = np.interp(positions.ravel(), np.arange(x.size), x).reshape(count, m)
+    mean = cycles.mean(axis=0)
+    return mean, float(math.sqrt(float(np.mean((cycles - mean) ** 2)) / count))
 
 
-def classify(amplitude: float, periodicity: float, f0: float, slips: float, reference_f0: float,
+def turning_points(y: np.ndarray, hysteresis: float) -> np.ndarray:
+    """Indices of alternating extrema, starting at y[0] (a maximum) and ending at the last sample.
+
+    A reversal becomes a new leg only once it exceeds ``hysteresis``.
+    """
+    pivots, extreme, falling = [0], 0, True
+    for i in range(1, y.size):
+        if falling:
+            if y[i] <= y[extreme]:
+                extreme = i
+            elif y[i] - y[extreme] > hysteresis:
+                pivots.append(extreme)
+                extreme, falling = i, False
+        else:
+            if y[i] >= y[extreme]:
+                extreme = i
+            elif y[extreme] - y[i] > hysteresis:
+                pivots.append(extreme)
+                extreme, falling = i, True
+    if pivots[-1] != y.size - 1:
+        pivots.append(y.size - 1)
+    return np.array(pivots)
+
+
+FLYBACK_KEYS = ("flybacks_per_period", "second_flyback_ratio", "flyback_height", "flyback_ms", "flyback_sign",
+                "fold_noise")
+
+
+def flyback_structure(x: np.ndarray, period: float, frac: float = 0.5, hysteresis_sigma: float = 3.0) -> dict:
+    """Flybacks in the mean cycle of ``x`` folded at ``period`` samples.
+
+    The cycle is split into legs between turning points; reversals under ``hysteresis_sigma``
+    standard errors of the mean cycle are noise. The flyback direction is that of the leg
+    that is both tallest and fastest (largest height^2 / duration). ``flybacks_per_period``
+    counts legs in that direction at least ``frac`` of the tallest; ``second_flyback_ratio``
+    is the second-tallest over the tallest, so a trial has one flyback exactly when that ratio
+    is below ``frac``.
+    """
+    result = {"flybacks_per_period": math.nan, "second_flyback_ratio": math.nan, "flyback_height": math.nan,
+              "flyback_ms": math.nan, "flyback_sign": 0, "fold_noise": math.nan, "cycle": None, "flyback_phases": []}
+    folded = fold_cycle(x, period)
+    if folded is None:
+        return result
+    mean, noise = folded
+    m = mean.size
+    start = int(np.argmax(mean))
+    loop = np.append(np.roll(mean, -start), mean[start])
+    pivots = turning_points(loop, hysteresis_sigma * noise)
+    legs, durations = np.diff(loop[pivots]), np.diff(pivots)
+    result.update(fold_noise=noise, cycle=mean)
+    if legs.size < 2 or not np.any(legs):
+        result["flybacks_per_period"] = 0
+        return result
+    sign = 1 if legs[int(np.argmax(legs**2 / durations))] > 0 else -1
+    along = sign * legs
+    chosen = np.flatnonzero(along > 0)
+    heights = along[chosen]
+    top = float(heights.max())
+    ordered = np.sort(heights)[::-1]
+    counted = chosen[heights >= frac * top]
+    tallest = chosen[int(np.argmax(heights))]
+    result.update(flybacks_per_period=int(counted.size),
+                  second_flyback_ratio=float(ordered[1] / top) if ordered.size > 1 else 0.0,
+                  flyback_height=top, flyback_ms=float(durations[tallest] * period / m / RATE_HZ * 1000),
+                  flyback_sign=sign, flyback_phases=[float((start + pivots[i]) % m / m) for i in counted])
+    return result
+
+
+def classify(amplitude: float, periodicity: float, f0: float, flybacks: float, reference_f0: float,
              thresholds: dict) -> str:
     if not (amplitude >= thresholds["min_amplitude"]):
         return "no_oscillation"
@@ -104,15 +169,15 @@ def classify(amplitude: float, periodicity: float, f0: float, slips: float, refe
         return "ambiguous"
     if math.isfinite(reference_f0) and math.isfinite(f0) and f0 < thresholds["subharmonic_ratio"] * reference_f0:
         return "subharmonic"
-    if math.isfinite(slips) and abs(slips - 1.0) <= thresholds["slip_tolerance"]:
+    if flybacks == 1:
         return "helmholtz"
-    if math.isfinite(slips) and slips > 1.0 + thresholds["slip_tolerance"]:
+    if flybacks >= 2:
         return "multiple_slip"
     return "ambiguous"
 
 
 def trial_features(task: tuple) -> dict:
-    condition, directory, number, start, end, slip_frac = task
+    condition, directory, number, start, end, frac, hysteresis_sigma = task
     row = {"condition": condition, "trial": number, "error": ""}
     try:
         base = Path(directory)
@@ -120,8 +185,9 @@ def trial_features(task: tuple) -> dict:
                                                                     trial_audit.MAX_WHOLE_BYTES))
         window = signal[start:end + 1, 2]
         periodicity, f0 = dominant_period(window)
+        shape = flyback_structure(window, RATE_HZ / f0 if math.isfinite(f0) else math.nan, frac, hysteresis_sigma)
         row.update({"amplitude_std": float(np.std(window)), "periodicity": periodicity, "f0_hz": f0,
-                    "slips_per_period": slips_per_period(window, RATE_HZ / f0, slip_frac) if math.isfinite(f0) else math.nan})
+                    **{key: shape[key] for key in FLYBACK_KEYS}})
     except (OSError, trial_audit.TrialAuditError, IndexError) as error:
         row["error"] = str(error) or error.__class__.__name__
     return row
@@ -186,6 +252,65 @@ def fit_boundaries(level_rank_class: list[tuple[int, int, str]], beta_centers: d
                       "points": [[round(b, 5), round(f, 5)] for b, f in upper]},
             "levels_with_helmholtz": len(by_level), "levels_total": len(beta_centers),
             "max_hole": max_hole, "non_helmholtz_cells_bridged": bridged}
+
+
+def noise_floor(amplitudes, column1_means, factor: float, fallback: float, min_controls: int = 10) -> dict:
+    """One global oscillation floor: ``factor`` x the median window std of no-contact windows (column-1 mean <= 0).
+
+    Falls back to ``fallback`` when there are too few such windows; ``fallback`` is also the lower bound.
+    """
+    controls = np.array([a for a, c in zip(amplitudes, column1_means) if c <= 0 and math.isfinite(a)], dtype=float)
+    info = {"controls": int(controls.size), "factor": factor, "fallback": fallback}
+    if controls.size < min_controls:
+        return {**info, "min_amplitude": fallback, "source": f"fallback (fewer than {min_controls} column-1<=0 windows)"}
+    median = float(np.median(controls))
+    return {**info, "control_median": round(median, 6), "control_p95": round(float(np.percentile(controls, 95)), 6),
+            "min_amplitude": max(fallback, factor * median), "source": "column-1<=0 windows"}
+
+
+def frac_sensitivity(trials: list[dict], beta_centers: dict[int, float], force_by_rank: list[float],
+                     fracs=SENSITIVITY_FRACS, max_hole: int = 2) -> list[dict]:
+    """Boundary slopes if the flyback fraction were each of ``fracs``, with every other gate unchanged."""
+    out = []
+    for frac in fracs:
+        cells = [(f["beta_level"], f["force_rank"],
+                  "helmholtz" if f["label"] in ("helmholtz", "multiple_slip") and f["second_flyback_ratio"] < frac
+                  else "other") for f in trials]
+        fit = fit_boundaries(cells, beta_centers, force_by_rank, max_hole)
+        out.append({"flyback_frac": frac, "helmholtz": sum(c[2] == "helmholtz" for c in cells),
+                    **{f"{side}_{key}": fit[side][key] for side in ("lower", "upper") for key in ("slope", "slope_se", "n")}})
+    return out
+
+
+def flyback_law(points) -> dict:
+    """Fit log H = c + a log v_b + b log beta; ideal Helmholtz motion gives a = 1, b = -1 and H = 2 Z v_b / beta.
+
+    ``points`` are (flyback height, bow speed, beta). The speed exponent is fitted only when speeds span
+    at least 1.5x; ``impedance_kg_s`` is the distribution of H beta / (2 v_b) with both exponents fixed.
+    """
+    rows = [(h, v, b) for h, v, b in points if all(math.isfinite(q) and q > 0 for q in (h, v, b))]
+    if len(rows) < 5:
+        return {"n": len(rows)}
+    height, speed, beta = (np.array(c, dtype=float) for c in zip(*rows))
+    names, columns = ["beta"], [np.ones(height.size), np.log(beta)]
+    if np.ptp(np.log(speed)) >= math.log(1.5):
+        names.insert(0, "speed")
+        columns.insert(1, np.log(speed))
+    design = np.column_stack(columns)
+    y = np.log(height)
+    coef, *_ = np.linalg.lstsq(design, y, rcond=None)
+    residual = y - design @ coef
+    dof = height.size - design.shape[1]
+    result = {"n": int(height.size), "theory": "flyback = 2 Z v_b / beta (speed exponent +1, beta exponent -1)",
+              "rms_log_residual": round(float(np.sqrt(np.mean(residual**2))), 4)}
+    covariance = residual @ residual / dof * np.linalg.inv(design.T @ design) if dof > 0 else None
+    for i, name in enumerate(names, 1):
+        result[f"exponent_{name}"] = round(float(coef[i]), 3)
+        result[f"exponent_{name}_se"] = None if covariance is None else round(float(math.sqrt(covariance[i, i])), 3)
+    z = height * beta / (2 * speed)
+    result["impedance_kg_s"] = {q: round(float(np.percentile(z, pct)), 4) for q, pct in (("p25", 25), ("median", 50), ("p75", 75))}
+    result["reference_impedance_kg_s"] = REFERENCE_IMPEDANCE
+    return result
 
 
 # ------------------------------------------------------------------ plotting
@@ -271,12 +396,90 @@ def plot_examples(examples: list[dict], destination: Path) -> None:
             e = chosen[col]
             t = np.arange(e["signal"].size) / RATE_HZ * 1000
             axis.plot(t, e["signal"], color=COLORS[label], linewidth=0.8)
+            cycle = e.get("cycle")
+            if cycle is not None and label not in ("no_oscillation", "aperiodic"):  # mean cycle and counted flybacks
+                m, period_ms = cycle.size, e["period"] / RATE_HZ * 1000
+                repeats = int(math.ceil(t[-1] / period_ms)) if t.size else 0
+                phase_t = (np.arange(repeats)[:, None] + np.arange(m)[None, :] / m) * period_ms
+                axis.plot(phase_t.ravel(), np.tile(cycle, repeats), color="black", linewidth=0.5, alpha=0.7)
+                for phase in e["phases"]:
+                    marks = (np.arange(repeats) + phase) * period_ms
+                    axis.scatter(marks, np.full(repeats, cycle[int(phase * m) % m]), s=10, color="red", zorder=3,
+                                 marker="v" if e["sign"] < 0 else "^")
+                axis.set_xlim(0, t[-1])
             axis.set_title(f"{label} | {e['condition'][-4:]} #{e['trial']} β{e['beta']:.3f} r{e['rank']}\n"
-                           f"per {e['periodicity']:.2f} slips {e['slips']:.2f} f0 {e['f0']:.1f}", fontsize=7)
+                           f"per {e['periodicity']:.2f} flybacks {e['flybacks']} r2 {e['r2']:.2f} f0 {e['f0']:.1f}",
+                           fontsize=7)
             axis.tick_params(labelsize=6)
             if row == len(labels) - 1:
                 axis.set_xlabel("ms from window start", fontsize=7)
     figure.savefig(destination, dpi=130)
+    plt.close(figure)
+
+
+def plot_features(table: list[dict], applied: dict, destination: Path) -> None:
+    """Distributions behind each provisional threshold, per condition."""
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    names = sorted({f["condition"] for f in table})
+    if not names:
+        return
+    figure, axes = plt.subplots(len(names), 3, figsize=(13, 2.8 * len(names)), squeeze=False, constrained_layout=True)
+    for row, name in enumerate(names):
+        rows = [f for f in table if f["condition"] == name]
+        amplitude = np.array([f["amplitude_std"] for f in rows], dtype=float)
+        axis = axes[row][0]
+        axis.hist(np.log10(amplitude[amplitude > 0]), bins=60, color="#8d99ae")
+        axis.axvline(math.log10(applied["min_amplitude"]), color="black", linestyle="--", linewidth=1)
+        axis.set_title(f"{name}: log10 window std of column 3 (dashed: floor)", fontsize=8)
+        periodic = [f["periodicity"] for f in rows if f["amplitude_std"] >= applied["min_amplitude"]
+                    and math.isfinite(f["periodicity"])]
+        axis = axes[row][1]
+        axis.hist(periodic, bins=50, range=(0, 1), color="#8d99ae")
+        for value in (applied["max_aperiodic"], applied["min_periodicity"]):
+            axis.axvline(value, color="black", linestyle="--", linewidth=1)
+        axis.set_title("periodicity above the floor (dashed: aperiodic / periodic gates)", fontsize=8)
+        ratios = [f["second_flyback_ratio"] for f in rows if f["label"] in ("helmholtz", "multiple_slip")
+                  and math.isfinite(f["second_flyback_ratio"])]
+        axis = axes[row][2]
+        axis.hist(ratios, bins=40, range=(0, 1), color="#2a9d8f")
+        axis.axvline(applied["flyback_frac"], color="black", linestyle="--", linewidth=1)
+        axis.set_title("second / largest flyback in periodic trials (dashed: flyback frac)", fontsize=8)
+        for axis in axes[row]:
+            axis.tick_params(labelsize=7)
+    figure.savefig(destination, dpi=130)
+    plt.close(figure)
+
+
+def plot_flyback_law(table: list[dict], law: dict, destination: Path) -> None:
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    figure, axis = plt.subplots(figsize=(6.4, 5.2), constrained_layout=True)
+    markers = "os^Dv"
+    for i, name in enumerate(sorted({f["condition"] for f in table})):
+        rows = [f for f in table if f["condition"] == name and f["label"] == "helmholtz"
+                and f["flyback_height"] > 0 and f["c2_window_mean"] > 0]
+        if rows:
+            x = [2 * f["c2_window_mean"] / f["beta"] for f in rows]
+            axis.scatter(x, [f["flyback_height"] for f in rows], s=9, marker=markers[i % len(markers)], alpha=0.6,
+                         label=f"{name} (n={len(rows)})")
+    z = law.get("impedance_kg_s", {}).get("median")
+    if z:
+        xs = np.geomspace(*axis.get_xlim(), 20)
+        axis.plot(xs, z * xs, color="black", linewidth=1, label=f"median Z = {z} kg/s")
+        axis.plot(xs, REFERENCE_IMPEDANCE * xs, color="grey", linestyle="--", linewidth=1,
+                  label=f"reference Z = {REFERENCE_IMPEDANCE} kg/s (other paper)")
+    axis.set_xscale("log"); axis.set_yscale("log")
+    axis.set_xlabel("2 v_b / β  (column 2 window mean / beta file, m/s)")
+    axis.set_ylabel("largest flyback of mean cycle (column 3)")
+    exponents = ", ".join(f"{k.split('_')[1]} {law[k]}±{law.get(k + '_se')}" for k in ("exponent_speed", "exponent_beta") if k in law)
+    axis.set_title(f"Helmholtz-labelled trials: flyback law check\nfitted exponents {exponents or 'n/a'} (theory +1, -1)", fontsize=9)
+    axis.legend(fontsize=7, frameon=False)
+    figure.savefig(destination, dpi=140)
     plt.close(figure)
 
 
@@ -289,11 +492,13 @@ def run(audit_reports: Path, reports_dir: Path, workers: int, thresholds: dict, 
     root = Path(audit_summary["root"])
     directories = {d.name: d for d in trial_audit.discover(root)}
     by_condition, _ = grid_summary.load_trials(trials_path)
-    windows = {}
+    windows, speeds = {}, {}
     with trials_path.open(newline="", encoding="utf-8") as handle:
         for raw in csv.DictReader(handle):
             if not raw["error"]:
-                windows[(raw["condition"], int(raw["trial"]))] = (int(raw["window_start"]), int(raw["window_end"]))
+                key = (raw["condition"], int(raw["trial"]))
+                windows[key] = (int(raw["window_start"]), int(raw["window_end"]))
+                speeds[key] = float(raw["c2_window_mean"])
 
     tasks, grids = [], {}
     for name in sorted(by_condition):
@@ -304,7 +509,8 @@ def run(audit_reports: Path, reports_dir: Path, workers: int, thresholds: dict, 
             raise RegimeError(f"{name}: grid is not uniform; boundary mapping needs a complete grid")
         grids[name] = {"summary": summary, "rows": {r["trial"]: r for r in rows}}
         chosen = sorted(r["trial"] for r in rows)[:limit] if limit else sorted(r["trial"] for r in rows)
-        tasks += [(name, str(directories[name]), n, *windows[(name, n)], thresholds["slip_frac"]) for n in chosen]
+        tasks += [(name, str(directories[name]), n, *windows[(name, n)], thresholds["flyback_frac"],
+                   thresholds["hysteresis_sigma"]) for n in chosen]
 
     progress(f"Classifying {len(tasks)} trial windows ({workers} workers). Thresholds are provisional.")
     features = []
@@ -319,20 +525,28 @@ def run(audit_reports: Path, reports_dir: Path, workers: int, thresholds: dict, 
         if executor:
             executor.shutdown()
 
+    good_all = [f for f in features if not f["error"]]
+    floor = noise_floor([f["amplitude_std"] for f in good_all],
+                        [grids[f["condition"]]["rows"][f["trial"]]["c1_window_mean"] for f in good_all],
+                        thresholds["noise_floor_factor"], thresholds["min_amplitude"])
+    applied = {**thresholds, "min_amplitude": floor["min_amplitude"]}
+
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     run_dir = reports_dir / f"{stamp}_{uuid.uuid4().hex[:8]}"
     run_dir.mkdir(parents=True, exist_ok=False)
     report = {"created_utc": stamp, "source_trials": str(trials_path), "thresholds_provisional": thresholds,
+              "noise_floor": floor, "thresholds_applied": applied,
               "limit_per_condition": limit, "f0_search_hz": list(F0_RANGE_HZ),
-              "label_scope": ("Rule-based, provisional, derived from column 3 only. Not published reference labels; "
-                              "verify with examples.png before interpreting boundaries."),
+              "label_scope": ("Rule-based, provisional, from the shape of column 3 (plus one global noise floor from "
+                              "column-1<=0 windows). Not published reference labels; verify with examples.png "
+                              "before interpreting boundaries."),
               "conditions": {}}
     plot_data, examples, table = {}, [], []
     for name in sorted(grids):
         rows = [f for f in features if f["condition"] == name]
         good = [f for f in rows if not f["error"]]
-        strong = [f["f0_hz"] for f in good if f["amplitude_std"] >= thresholds["min_amplitude"]
-                  and math.isfinite(f["periodicity"]) and f["periodicity"] >= thresholds["min_periodicity"]]
+        strong = [f["f0_hz"] for f in good if f["amplitude_std"] >= applied["min_amplitude"]
+                  and math.isfinite(f["periodicity"]) and f["periodicity"] >= applied["min_periodicity"]]
         reference_f0 = float(np.median(strong)) if strong else math.nan
         grid_rows, gsum = grids[name]["rows"], grids[name]["summary"]
         cells, counts = [], {c: 0 for c in CLASSES}
@@ -340,10 +554,11 @@ def run(audit_reports: Path, reports_dir: Path, workers: int, thresholds: dict, 
         low_total = {c: 0 for c in CLASSES}
         force_by_rank = gsum["force"]["force_by_rank"]
         for f in good:
-            label = classify(f["amplitude_std"], f["periodicity"], f["f0_hz"], f["slips_per_period"], reference_f0, thresholds)
+            label = classify(f["amplitude_std"], f["periodicity"], f["f0_hz"], f["flybacks_per_period"], reference_f0, applied)
             g = grid_rows[f["trial"]]
             f.update(label=label, beta=g["beta"], beta_level=g["beta_level"], force_rank=g["force_rank"],
-                     window_inside_plateau=g["window_inside_plateau"], c1_window_mean=g["c1_window_mean"])
+                     window_inside_plateau=g["window_inside_plateau"], c1_window_mean=g["c1_window_mean"],
+                     c2_window_mean=speeds[(name, f["trial"])])
             counts[label] += 1
             cells.append((g["beta_level"], g["force_rank"], label))
             if not g["window_inside_plateau"]:
@@ -355,6 +570,9 @@ def run(audit_reports: Path, reports_dir: Path, workers: int, thresholds: dict, 
         for g in grid_rows.values():
             centers[g["beta_level"]] = g["beta_level_center"]
         boundaries = fit_boundaries(cells, centers, force_by_rank, thresholds.get("max_hole", 2))
+        sensitivity = frac_sensitivity(good, centers, force_by_rank, SENSITIVITY_FRACS, thresholds.get("max_hole", 2))
+        helmholtz_z = [f["flyback_height"] * f["beta"] / (2 * f["c2_window_mean"]) for f in good
+                       if f["label"] == "helmholtz" and f["c2_window_mean"] > 0 and f["flyback_height"] > 0]
         f0s = [f["f0_hz"] for f in good if math.isfinite(f["f0_hz"])]
         report["conditions"][name] = {
             "trials_classified": len(good), "errors": len(rows) - len(good),
@@ -362,7 +580,8 @@ def run(audit_reports: Path, reports_dir: Path, workers: int, thresholds: dict, 
             "f0_hz": trial_audit._describe(f0s, 2), "classes": counts,
             "classes_among_off_plateau": {k: v for k, v in off_total.items() if v},
             "classes_among_nonpositive_force": {k: v for k, v in low_total.items() if v},
-            "boundaries": boundaries}
+            "boundaries": boundaries, "flyback_frac_sensitivity": sensitivity,
+            "helmholtz_impedance_kg_s": trial_audit._describe(helmholtz_z, 4) if helmholtz_z else {}}
         plot_data[name] = {"beta_centers": centers, "force_by_rank": force_by_rank, "cells": cells,
                            "c2_peak": gsum["c2_peak_levels"], "boundaries": boundaries,
                            "off_plateau_points": [(centers[g["beta_level"]], force_by_rank[g["force_rank"] - 1])
@@ -374,16 +593,19 @@ def run(audit_reports: Path, reports_dir: Path, workers: int, thresholds: dict, 
             members = sorted((f for f in good if f["label"] == label), key=lambda f: f["trial"])
             for f in [members[i] for i in np.linspace(0, len(members) - 1, min(3, len(members))).astype(int)] if members else []:
                 examples.append({"condition": name, "trial": f["trial"], "label": label, "beta": f["beta"],
-                                 "rank": f["force_rank"], "periodicity": f["periodicity"], "slips": f["slips_per_period"],
-                                 "f0": f["f0_hz"]})
+                                 "rank": f["force_rank"], "periodicity": f["periodicity"],
+                                 "flybacks": f["flybacks_per_period"], "r2": f["second_flyback_ratio"], "f0": f["f0_hz"]})
 
     fields = ["condition", "trial", "label", "beta", "beta_level", "force_rank", "c1_window_mean",
-              "window_inside_plateau", "amplitude_std", "periodicity", "f0_hz", "slips_per_period"]
+              "window_inside_plateau", "c2_window_mean", "amplitude_std", "periodicity", "f0_hz", *FLYBACK_KEYS]
     with (run_dir / "regimes.csv").open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields, extrasaction="ignore")
         writer.writeheader()
         for f in sorted(table, key=lambda f: (f["condition"], f["trial"])):
-            writer.writerow({k: (repr(float(v)) if isinstance(v, float) else v) for k, v in f.items() if k in fields})
+            writer.writerow({k: (repr(float(v)) if isinstance(v, (float, np.floating)) else v)
+                             for k, v in f.items() if k in fields})
+    report["flyback_law"] = flyback_law([(f["flyback_height"], f["c2_window_mean"], f["beta"])
+                                         for f in table if f["label"] == "helmholtz"])
     if plot:
         for e in examples:
             directory = directories[e["condition"]]
@@ -391,10 +613,16 @@ def run(audit_reports: Path, reports_dir: Path, workers: int, thresholds: dict, 
             signal = trial_audit.parse_signal(trial_audit._read_bounded(directory / f"whole_{e['trial']}.csv",
                                                                         trial_audit.MAX_WHOLE_BYTES))
             span = int(4 * RATE_HZ / e["f0"]) if math.isfinite(e["f0"]) and e["f0"] > 0 else 2000
+            end = windows[(e["condition"], e["trial"])][1]
             e["signal"] = signal[start:start + span, 2]
+            e["period"] = RATE_HZ / e["f0"] if math.isfinite(e["f0"]) and e["f0"] > 0 else math.nan
+            shape = flyback_structure(signal[start:end + 1, 2], e["period"], applied["flyback_frac"], applied["hysteresis_sigma"])
+            e.update(cycle=shape["cycle"], phases=shape["flyback_phases"], sign=shape["flyback_sign"])
         plot_maps(plot_data, run_dir / "regime_map.png")
         plot_examples(examples, run_dir / "examples.png")
-        report["plots"] = [str(run_dir / "regime_map.png"), str(run_dir / "examples.png")]
+        plot_features(table, applied, run_dir / "features.png")
+        plot_flyback_law(table, report["flyback_law"], run_dir / "flyback_law.png")
+        report["plots"] = [str(run_dir / name) for name in ("regime_map.png", "examples.png", "features.png", "flyback_law.png")]
     (run_dir / "summary.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     for line in format_report(report):
         progress(line)
@@ -404,6 +632,10 @@ def run(audit_reports: Path, reports_dir: Path, workers: int, thresholds: dict, 
 def format_report(report: dict) -> list[str]:
     t = report["thresholds_provisional"]
     lines = [f"REGIME MAP (provisional labels; thresholds {t})"]
+    floor = report["noise_floor"]
+    lines.append(f"noise floor: min_amplitude {floor['min_amplitude']:.4g} from {floor['source']} "
+                 f"(controls {floor['controls']}, median {floor.get('control_median')}, p95 {floor.get('control_p95')}, "
+                 f"factor {floor['factor']})")
     for name, c in report["conditions"].items():
         lines.append(f"[{name}] c2 peak {c['c2_peak']} | {c['trials_classified']} classified, errors {c['errors']} | "
                      f"reference f0 {c['reference_f0_hz']} Hz (f0 p25..p75 {c['f0_hz'].get('p25')}..{c['f0_hz'].get('p75')})")
@@ -416,6 +648,16 @@ def format_report(report: dict) -> list[str]:
                      f"{c['boundaries']['non_helmholtz_cells_bridged']} interior cells bridged")
         lines.append(f"  labels of off-plateau windows {c['classes_among_off_plateau']} | "
                      f"of column-1<=0 windows {c['classes_among_nonpositive_force']}")
+        lines.append("  flyback-frac sensitivity: " + " | ".join(
+            f"{s['flyback_frac']}: H {s['helmholtz']}, lower {s['lower_slope']}±{s['lower_slope_se']} (n {s['lower_n']}), "
+            f"upper {s['upper_slope']}±{s['upper_slope_se']} (n {s['upper_n']})" for s in c["flyback_frac_sensitivity"]))
+        z = c["helmholtz_impedance_kg_s"]
+        lines.append(f"  Helmholtz H*beta/(2 v_b): median {z.get('median')} (p25 {z.get('p25')}, p75 {z.get('p75')}) kg/s")
+    law = report.get("flyback_law", {})
+    lines.append(f"FLYBACK LAW (Helmholtz-labelled, all folders): n {law.get('n')} | speed exponent "
+                 f"{law.get('exponent_speed')}±{law.get('exponent_speed_se')} (theory +1) | beta exponent "
+                 f"{law.get('exponent_beta')}±{law.get('exponent_beta_se')} (theory -1) | rms log residual "
+                 f"{law.get('rms_log_residual')} | Z {law.get('impedance_kg_s')} kg/s (reference {REFERENCE_IMPEDANCE}, other paper)")
     for plot in report.get("plots", []):
         lines.append(f"Plot: {plot}")
     return lines
@@ -428,16 +670,20 @@ def main(argv=None) -> int:
     parser.add_argument("--workers", type=int, default=min(8, os.cpu_count() or 1))
     parser.add_argument("--limit", type=int, default=None, help="classify only the first N trials per folder")
     parser.add_argument("--no-plot", action="store_true")
-    parser.add_argument("--slip-frac", type=float, default=0.25)
-    parser.add_argument("--slip-tolerance", type=float, default=0.25)
-    parser.add_argument("--min-amplitude", type=float, default=0.02)
+    parser.add_argument("--flyback-frac", type=float, default=0.5,
+                        help="a flyback counts if at least this fraction of the largest in the mean cycle")
+    parser.add_argument("--hysteresis-sigma", type=float, default=3.0,
+                        help="reversals under this many standard errors of the mean cycle are noise")
+    parser.add_argument("--noise-floor-factor", type=float, default=3.0,
+                        help="oscillation floor = factor x median std of column-1<=0 windows")
+    parser.add_argument("--min-amplitude", type=float, default=0.02, help="floor fallback and lower bound")
     parser.add_argument("--min-periodicity", type=float, default=0.8)
     parser.add_argument("--max-aperiodic", type=float, default=0.5)
     parser.add_argument("--subharmonic-ratio", type=float, default=0.75)
     parser.add_argument("--max-hole", type=int, default=2, help="non-Helmholtz ranks bridged inside a region")
     args = parser.parse_args(argv)
-    thresholds = {"slip_frac": args.slip_frac, "slip_tolerance": args.slip_tolerance,
-                  "min_amplitude": args.min_amplitude, "min_periodicity": args.min_periodicity,
+    thresholds = {"flyback_frac": args.flyback_frac, "hysteresis_sigma": args.hysteresis_sigma,
+                  "noise_floor_factor": args.noise_floor_factor, "min_amplitude": args.min_amplitude, "min_periodicity": args.min_periodicity,
                   "max_aperiodic": args.max_aperiodic, "subharmonic_ratio": args.subharmonic_ratio,
                   "max_hole": args.max_hole}
     if args.workers <= 0 or (args.limit is not None and args.limit <= 0):

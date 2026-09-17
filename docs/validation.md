@@ -133,3 +133,25 @@ Defects found and fixed during development, each first reproduced by a failing t
 
 These checks show that the tool recovers known answers on synthetic signals and grids. They do not show that the provisional thresholds classify the real bridge-force signals correctly.
 
+### First real regime map failed; flyback counting replaces slip runs — 2026-09-17, later
+
+User transcript at `0afda0a`, run `20260917T104233Z_0e8ffc33`: f0 detection was correct (reference 98.05–98.11 Hz), but only 39 / 125 / 120 trials per folder were labelled Helmholtz and 1,473 / 1,344 / 1,276 ambiguous. Boundary slopes were not interpretable. Among periodic trials, slips per period were 0–0.1 in 3,203, 0.75–1.25 in only 284, and 2–4 in 1,035.
+
+**Evidence from the real waveforms (`examples.png`).** Unmistakable clean sawtooths, with one sharp return per 10.2 ms, scored 0.03, 0.61, 1.65, 1.84 and 2.83 slips per period. Low-force windows at the ±0.1 level were visibly noise without a sawtooth, but were labelled aperiodic or ambiguous because the 0.02 amplitude cut lies below that level.
+
+**Cause, reproduced synthetically.** A per-sample `|diff|` threshold at 25 % of the per-period maximum is crossed by sample noise along the ramp whenever the return is spread over many samples. Runs closer than a tenth of a period were chained, so one noisy window collapsed into a single event. On a sawtooth with a 1.5 return, 21-sample smoothing and noise 0.02, the old counter gives 0.03 for 5 of 5 seeds. That is the same value as the real clean sawtooths.
+
+**Published method.** The dataset authors assign regimes with an algorithm from Lampis, Chatziioannou and Scavone (ISMRA 2025), based on Galluzzo (PhD thesis, 2004). In their description, the bridge force is detrended into a step function and the spacing of histogram peaks is compared with the theoretical Helmholtz flyback (van Walstijn et al., Acta Acustica 2026, Sect. 3.2.2; Lampis et al., Acta Acustica 2024, Sect. 2.3). Their categories are Helmholtz, double slip, raucous, multiple slip, S-motion, multiple flyback and unclassified. No per-trial labels are in the archive.
+
+**Change.** Each window is folded at its dominant period into a mean cycle (fractional period cuts). The cycle is split into legs at turning points with hysteresis of 3 standard errors of the mean cycle. Flybacks are legs in the steepest tall direction; a flyback counts if it is at least half the largest. Helmholtz means exactly one flyback. The second-largest / largest ratio is saved, and boundary slopes are reported for flyback fractions 0.3–0.7. The oscillation floor is 3 × the median window std of column-1 ≤ 0 (no-contact) windows, with 0.02 as fallback and lower bound. Labels still use column 3 shape only. As an independent check that is not used for labelling, the Helmholtz flyback law ΔF = 2 Z v_b / β is fitted on Helmholtz-labelled trials. The ideal exponents are +1 for speed and −1 for β. The result is compared with Z = 1.175 kg/s derived from Table 1 of van Walstijn et al. (2026), which may describe a different string.
+
+| Check | Result | Scope |
+|---|---|---|
+| `python -m unittest discover -s tests` | PASS, 122 tests (1 skipped: no 7-Zip) | New: spread return under sample noise (the real failure); hysteresis under heavy noise, with a guard that the fixture splits without it; ripple and moderate ringing; rising returns; double and triple slipping with phases; the second ratio deciding the count at any fraction; fractional-period folding; noise floor from no-contact windows; flyback-law exponents and impedance; fraction sensitivity matching labels; pipeline with planted Helmholtz, aperiodic and no-contact trials |
+| Deliberate mutations: hysteresis removed; flyback sign flipped; legs counted in both directions; integer-period folding; floor factor ignored; floor not applied in classification; sensitivity restricted to Helmholtz labels; β sign flipped in the law fit; second ratio taken from the smallest leg | 9 of 9 detected | — |
+| Example panels rendered with the mean cycle and counted flybacks overlaid | Markers at each return for one, two and three flybacks, including a rising-return case | Synthetic signals only |
+
+Heavy ringing (0.35 of a 0.8 return) now counts as two flybacks. The earlier fixture was designed to break run grouping and is replaced by moderate ringing (0.15). Whether such ringing occurs in the real signals must be checked in the new `examples.png`.
+
+These checks show that the new feature recovers known answers on synthetic signals. Whether it classifies the real bridge force correctly must be judged from the next server run's `examples.png`, `features.png` and flyback-law check.
+
