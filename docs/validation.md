@@ -179,3 +179,33 @@ Defects seen in this run and corrected:
 
 Local: 126 tests pass (1 skipped). 4 of 4 new mutations detected: floor rule reverted; exclusion ignored in runs; exclusion ignored at the upper edge; speed regressor dropped.
 
+### Collection pipeline — 2026-09-17, later
+
+**Remote listing of all 17 archives.** HTTP Range reads of each 7z signature and last 4 MiB, listed with py7zr, no download. Every archive uses the same leaf layout (`whole_N`, `beta_N`, `timestamp_N` in speed folders):
+
+| Archive | Leaf layout | Uncompressed |
+|---|---|---|
+| Parts 1–4 (standard) | 3 × 2000 | ≈ 70 GiB each |
+| `coldwarm` | cold/v2 and warm/v2, 2000 each | 41.1 GiB |
+| `TypeB_T2_sample2` | v1–v4, 1600 each | 68.5 GiB |
+| `variability_setup` | rep_1 and rep_2 × v1–v3, 2000 each | 139.6 GiB |
+| `HighBowForceRange_1` and `_2` | two strings × v1–v3, 1500 each | ≈ 124 GiB each |
+
+The published speed mapping (folder 1 = 0.1 m/s) conflicts with the measured Part 1 A1 speeds (r_v1 = 0.05), so speeds continue to be taken from column 2.
+
+**New tool.** `scripts/collection.py` (`bash scripts/run.sh collection`) processes each archive:
+
+- Downloads with MD5 verification.
+- Extracts one speed folder at a time, with file names and sizes checked against the listing.
+- Runs `trial_audit` with a window cache: float32 `window_N.npy` of all four columns, plus `profile_N.npy` holding columns 1–2 of the whole stroke as 50-sample means.
+- Deletes the extracted CSVs.
+- Merges the per-folder audits into one diagram audit and runs `regime_map` in cache mode.
+- Keeps resumable state per archive and prefetches the next archive when disk allows.
+
+`regime_map` reads windows from the cache when the audit summary names one. `DEFAULT_THRESHOLDS` is now shared by the CLI and the pipeline.
+
+| Check | Result | Scope |
+|---|---|---|
+| `python -m unittest discover -s tests` | PASS (1 skipped: no 7-Zip) | New collection tests: 7-Zip `-slt` parsing and diagram grouping; leaf extraction verifying names and sizes, including a dropped file; two setup repeats processed end to end with labels as planted, a pooled no-contact floor (10 controls), float32 windows and profiles, CSVs removed, archive deleted after completion, and a no-op resume; cache-mode labels identical to direct CSV labels; a corrupt trial failing only its diagram and keeping the archive; an extraction error stopping the run before the next download; a pre-existing extraction read in place, unchanged, grouped as one diagram |
+| Deliberate mutations: archive deleted despite a failed diagram; extracted CSVs kept; extraction error swallowed; size verification skipped; existing extraction split per speed; regime map ignoring the cache; profiles not cached | 7 of 7 detected | 7-Zip itself is not run locally; `collection plan --list <archive> --probe` checks listing and wildcard extraction on the server before a full run |
+

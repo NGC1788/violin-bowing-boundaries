@@ -181,9 +181,41 @@ def analyse_trial(signal: np.ndarray, start: int, end: int, plateau_tol: float) 
     return result
 
 
+PROFILE_DECIMATION = 50  # whole-stroke columns 1-2 as 1 kHz block means at the published rate
+
+
+def cache_path(directory: Path, number: int, kind: str = "window") -> Path:
+    return Path(directory) / f"{kind}_{number}.npy"
+
+
+def _save_atomic(target: Path, array: np.ndarray) -> None:
+    target.parent.mkdir(parents=True, exist_ok=True)
+    temporary = target.with_name(f"{target.stem}.{os.getpid()}.tmp.npy")
+    np.save(temporary, np.ascontiguousarray(array, dtype=np.float32), allow_pickle=False)
+    os.replace(temporary, target)
+
+
+def write_window(directory: Path, number: int, window: np.ndarray, signal: np.ndarray | None = None) -> None:
+    """Save one classification window (all columns) as float32, atomically.
+
+    With ``signal``, also save the whole stroke's columns 1-2 (published: bow force, bow velocity) as
+    block means over PROFILE_DECIMATION samples, the drive history a simulation needs.
+    """
+    _save_atomic(cache_path(directory, number), window)
+    if signal is not None:
+        blocks = signal.shape[0] // PROFILE_DECIMATION
+        profile = signal[:blocks * PROFILE_DECIMATION, :2].reshape(blocks, PROFILE_DECIMATION, 2).mean(axis=1)
+        _save_atomic(cache_path(directory, number, "profile"), profile)
+
+
 def audit_one(task: tuple) -> dict:
-    """Audit one trial. Never raises; errors are returned in the row."""
-    condition, directory, number, plateau_tol, parser = task
+    """Audit one trial. Never raises; errors are returned in the row.
+
+    With a sixth task element (a cache directory) the window rows are also saved to
+    ``<cache>/<condition>/window_<trial>.npy`` so later analyses need not re-read the CSV.
+    """
+    condition, directory, number, plateau_tol, parser = task[:5]
+    cache_dir = task[5] if len(task) > 5 else None
     row: dict = {"condition": condition, "trial": number, "error": ""}
     try:
         base = Path(directory)
@@ -191,6 +223,8 @@ def audit_one(task: tuple) -> dict:
         row["beta"] = parse_beta(_read_bounded(base / f"beta_{number}.csv", MAX_SMALL_BYTES))
         start, end = parse_window(_read_bounded(base / f"timestamp_{number}.csv", MAX_SMALL_BYTES))
         row.update(analyse_trial(signal, start, end, plateau_tol))
+        if cache_dir:
+            write_window(Path(cache_dir) / condition, number, signal[start:end + 1], signal)
     except (OSError, TrialAuditError) as error:
         row["error"] = str(error) or error.__class__.__name__
     return row
@@ -263,7 +297,7 @@ def summarise_condition(condition: str, directory: Path, kinds: dict[str, set[in
 
 
 def run_audit(root: Path, reports_dir: Path, limit: int | None, workers: int,
-              plateau_tol: float, parser: str = "auto", progress=print) -> tuple[int, Path]:
+              plateau_tol: float, parser: str = "auto", progress=print, cache_dir: Path | None = None) -> tuple[int, Path]:
     if not root.is_dir():
         raise TrialAuditError(f"extraction root not found: {root}")
     conditions = discover(root)
@@ -273,7 +307,8 @@ def run_audit(root: Path, reports_dir: Path, limit: int | None, workers: int,
     for directory, kinds in conditions.items():
         numbers = sorted(kinds["whole"])[:limit] if limit else sorted(kinds["whole"])
         plan.append((directory, kinds, numbers))
-        tasks += [(directory.name, str(directory), n, plateau_tol, parser) for n in numbers]
+        tasks += [(directory.name, str(directory), n, plateau_tol, parser, str(cache_dir) if cache_dir else None)
+                  for n in numbers]
     progress(f"Auditing {len(tasks)} trials in {len(conditions)} condition folders "
              f"({'pyarrow' if parser != 'numpy' and pa_csv is not None else 'numpy'} parser, {workers} workers).")
     results: list[dict] = []
@@ -325,6 +360,7 @@ def run_audit(root: Path, reports_dir: Path, limit: int | None, workers: int,
         "status": status,
         "created_utc": stamp,
         "root": str(root),
+        "window_cache": str(cache_dir) if cache_dir else None,
         "limit_per_condition": limit,
         "plateau_tolerance": plateau_tol,
         "parser": "pyarrow" if parser != "numpy" and pa_csv is not None else "numpy",
@@ -393,6 +429,8 @@ def main(argv=None) -> int:
                         help="Relative tolerance below the trial's peak c2 that still counts as plateau")
     parser.add_argument("--parser", choices=("auto", "pyarrow", "numpy"), default="auto")
     parser.add_argument("--show", action="store_true", help="Print the latest saved audit; reads no trial data")
+    parser.add_argument("--cache-dir", type=Path, default=None,
+                        help="also save each classification window as float32 .npy under this directory")
     args = parser.parse_args(argv)
     if args.show:
         return show_latest(args.reports_dir)
@@ -404,7 +442,7 @@ def main(argv=None) -> int:
         parser.error("--plateau-tol must be between 0 and 1")
     try:
         code, _ = run_audit(args.root.resolve(), args.reports_dir, args.limit, args.workers,
-                            args.plateau_tol, args.parser)
+                            args.plateau_tol, args.parser, cache_dir=args.cache_dir)
         return code
     except TrialAuditError as error:
         print("TRIAL AUDIT: FAIL —", error, file=sys.stderr)

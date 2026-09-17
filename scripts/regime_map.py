@@ -38,6 +38,8 @@ RATE_HZ = trial_audit.PUBLISHED_RATE_HZ
 F0_RANGE_HZ = (40.0, 160.0)
 CLASSES = ("helmholtz", "multiple_slip", "subharmonic", "aperiodic", "no_oscillation", "ambiguous")
 SENSITIVITY_FRACS = (0.3, 0.4, 0.5, 0.6, 0.7)
+DEFAULT_THRESHOLDS = {"flyback_frac": 0.5, "hysteresis_sigma": 3.0, "noise_floor_factor": 3.0, "min_amplitude": 0.02,
+                      "min_periodicity": 0.8, "max_aperiodic": 0.5, "subharmonic_ratio": 0.75, "max_hole": 2}
 # Comparison only: van Walstijn et al. (Acta Acustica 2026) Table 1 for a cello G2 string on the same
 # monochord, Z = sqrt(T * rho * pi * r^2) with T = 161 N, rho = 11503 kg/m^3, r = 0.487 mm. The string in
 # this archive may be a different type, so this value is never used for labelling.
@@ -178,19 +180,29 @@ def classify(amplitude: float, periodicity: float, f0: float, flybacks: float, r
     return "ambiguous"
 
 
+def load_window(directory: Path, number: int, start: int, end: int, cached: bool) -> np.ndarray:
+    """Rows start..end (inclusive, all columns) from the CSV, or the same rows from the audit's window cache."""
+    if cached:
+        window = np.load(trial_audit.cache_path(Path(directory), number), allow_pickle=False)
+        if window.ndim != 2 or window.shape[0] != end - start + 1:
+            raise trial_audit.TrialAuditError(f"cached window {number} has shape {window.shape}; "
+                                              f"expected {end - start + 1} rows")
+        return window
+    signal = trial_audit.parse_signal(trial_audit._read_bounded(Path(directory) / f"whole_{number}.csv",
+                                                                trial_audit.MAX_WHOLE_BYTES))
+    return signal[start:end + 1]
+
+
 def trial_features(task: tuple) -> dict:
-    condition, directory, number, start, end, frac, hysteresis_sigma = task
+    condition, directory, number, start, end, frac, hysteresis_sigma, cached = task
     row = {"condition": condition, "trial": number, "error": ""}
     try:
-        base = Path(directory)
-        signal = trial_audit.parse_signal(trial_audit._read_bounded(base / f"whole_{number}.csv",
-                                                                    trial_audit.MAX_WHOLE_BYTES))
-        window = signal[start:end + 1, 2]
+        window = load_window(Path(directory), number, start, end, cached)[:, 2]
         periodicity, f0 = dominant_period(window)
         shape = flyback_structure(window, RATE_HZ / f0 if math.isfinite(f0) else math.nan, frac, hysteresis_sigma)
         row.update({"amplitude_std": float(np.std(window)), "periodicity": periodicity, "f0_hz": f0,
                     **{key: shape[key] for key in FLYBACK_KEYS}})
-    except (OSError, trial_audit.TrialAuditError, IndexError) as error:
+    except (OSError, ValueError, trial_audit.TrialAuditError, IndexError) as error:
         row["error"] = str(error) or error.__class__.__name__
     return row
 
@@ -517,9 +529,11 @@ def run(audit_reports: Path, reports_dir: Path, workers: int, thresholds: dict, 
         plot: bool, progress=print) -> tuple[int, Path]:
     trials_path = grid_summary.resolve_trials(None, audit_reports)
     audit_summary = json.loads((trials_path.parent / "summary.json").read_text(encoding="utf-8"))
-    root = Path(audit_summary["root"])
-    directories = {d.name: d for d in trial_audit.discover(root)}
     by_condition, _ = grid_summary.load_trials(trials_path)
+    cached = bool(audit_summary.get("window_cache"))
+    root = Path(audit_summary["window_cache"] if cached else audit_summary["root"])
+    directories = ({name: root / name for name in by_condition if (root / name).is_dir()} if cached
+                   else {d.name: d for d in trial_audit.discover(root)})
     windows, speeds = {}, {}
     with trials_path.open(newline="", encoding="utf-8") as handle:
         for raw in csv.DictReader(handle):
@@ -538,7 +552,7 @@ def run(audit_reports: Path, reports_dir: Path, workers: int, thresholds: dict, 
         grids[name] = {"summary": summary, "rows": {r["trial"]: r for r in rows}}
         chosen = sorted(r["trial"] for r in rows)[:limit] if limit else sorted(r["trial"] for r in rows)
         tasks += [(name, str(directories[name]), n, *windows[(name, n)], thresholds["flyback_frac"],
-                   thresholds["hysteresis_sigma"]) for n in chosen]
+                   thresholds["hysteresis_sigma"], cached) for n in chosen]
 
     progress(f"Classifying {len(tasks)} trial windows ({workers} workers). Thresholds are provisional.")
     features = []
@@ -562,7 +576,8 @@ def run(audit_reports: Path, reports_dir: Path, workers: int, thresholds: dict, 
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     run_dir = reports_dir / f"{stamp}_{uuid.uuid4().hex[:8]}"
     run_dir.mkdir(parents=True, exist_ok=False)
-    report = {"created_utc": stamp, "source_trials": str(trials_path), "thresholds_provisional": thresholds,
+    report = {"created_utc": stamp, "source_trials": str(trials_path), "window_source": "cache" if cached else "csv",
+              "thresholds_provisional": thresholds,
               "noise_floor": floor, "thresholds_applied": applied,
               "limit_per_condition": limit, "f0_search_hz": list(F0_RANGE_HZ),
               "label_scope": ("Rule-based, provisional, from the shape of column 3 (plus one global noise floor from "
@@ -643,15 +658,12 @@ def run(audit_reports: Path, reports_dir: Path, workers: int, thresholds: dict, 
                                          for f in table if f["label"] == "helmholtz"])
     if plot:
         for e in examples:
-            directory = directories[e["condition"]]
-            start, _ = windows[(e["condition"], e["trial"])]
-            signal = trial_audit.parse_signal(trial_audit._read_bounded(directory / f"whole_{e['trial']}.csv",
-                                                                        trial_audit.MAX_WHOLE_BYTES))
+            start, end = windows[(e["condition"], e["trial"])]
+            window = load_window(directories[e["condition"]], e["trial"], start, end, cached)[:, 2]
             span = int(4 * RATE_HZ / e["f0"]) if math.isfinite(e["f0"]) and e["f0"] > 0 else 2000
-            end = windows[(e["condition"], e["trial"])][1]
-            e["signal"] = signal[start:start + span, 2]
+            e["signal"] = window[:span]
             e["period"] = RATE_HZ / e["f0"] if math.isfinite(e["f0"]) and e["f0"] > 0 else math.nan
-            shape = flyback_structure(signal[start:end + 1, 2], e["period"], applied["flyback_frac"], applied["hysteresis_sigma"])
+            shape = flyback_structure(window, e["period"], applied["flyback_frac"], applied["hysteresis_sigma"])
             e.update(cycle=shape["cycle"], phases=shape["flyback_phases"], sign=shape["flyback_sign"])
         plot_maps(plot_data, run_dir / "regime_map.png")
         plot_examples(examples, run_dir / "examples.png")
@@ -711,17 +723,17 @@ def main(argv=None) -> int:
     parser.add_argument("--workers", type=int, default=min(8, os.cpu_count() or 1))
     parser.add_argument("--limit", type=int, default=None, help="classify only the first N trials per folder")
     parser.add_argument("--no-plot", action="store_true")
-    parser.add_argument("--flyback-frac", type=float, default=0.5,
+    parser.add_argument("--flyback-frac", type=float, default=DEFAULT_THRESHOLDS["flyback_frac"],
                         help="a flyback counts if at least this fraction of the largest in the mean cycle")
-    parser.add_argument("--hysteresis-sigma", type=float, default=3.0,
+    parser.add_argument("--hysteresis-sigma", type=float, default=DEFAULT_THRESHOLDS["hysteresis_sigma"],
                         help="reversals under this many standard errors of the mean cycle are noise")
-    parser.add_argument("--noise-floor-factor", type=float, default=3.0,
+    parser.add_argument("--noise-floor-factor", type=float, default=DEFAULT_THRESHOLDS["noise_floor_factor"],
                         help="oscillation floor = factor x median std of column-1<=0 windows")
-    parser.add_argument("--min-amplitude", type=float, default=0.02, help="floor fallback and lower bound")
-    parser.add_argument("--min-periodicity", type=float, default=0.8)
-    parser.add_argument("--max-aperiodic", type=float, default=0.5)
-    parser.add_argument("--subharmonic-ratio", type=float, default=0.75)
-    parser.add_argument("--max-hole", type=int, default=2, help="non-Helmholtz ranks bridged inside a region")
+    parser.add_argument("--min-amplitude", type=float, default=DEFAULT_THRESHOLDS["min_amplitude"], help="floor fallback and lower bound")
+    parser.add_argument("--min-periodicity", type=float, default=DEFAULT_THRESHOLDS["min_periodicity"])
+    parser.add_argument("--max-aperiodic", type=float, default=DEFAULT_THRESHOLDS["max_aperiodic"])
+    parser.add_argument("--subharmonic-ratio", type=float, default=DEFAULT_THRESHOLDS["subharmonic_ratio"])
+    parser.add_argument("--max-hole", type=int, default=DEFAULT_THRESHOLDS["max_hole"], help="non-Helmholtz ranks bridged inside a region")
     args = parser.parse_args(argv)
     thresholds = {"flyback_frac": args.flyback_frac, "hysteresis_sigma": args.hysteresis_sigma,
                   "noise_floor_factor": args.noise_floor_factor, "min_amplitude": args.min_amplitude, "min_periodicity": args.min_periodicity,
