@@ -225,3 +225,136 @@ class MetadataRetryTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
+
+
+class RangeServer:
+    """Serves byte ranges of a payload like Zenodo's content endpoint; can inject faults per call."""
+
+    def __init__(self, payload, faults=None, honor_range=True):
+        self.payload, self.faults, self.honor_range = payload, dict(faults or {}), honor_range
+        self.requests = []
+
+    def __call__(self, url, headers=None):
+        rng = (headers or {}).get('Range')
+        self.requests.append(rng)
+        fault = self.faults.pop(len(self.requests), None)
+        if fault == 'reset':
+            raise ConnectionResetError('reset by peer')
+        if not rng or not self.honor_range:
+            return Response(self.payload, 200, {'Content-Length': str(len(self.payload))})
+        start, end = (int(x) for x in rng.split('=')[1].split('-'))
+        body = self.payload[start:end + 1]
+        if fault == 'short':
+            body = body[:len(body) // 2]
+        return Response(body, 206, {'Content-Range': f'bytes {start}-{end}/{len(self.payload)}',
+                                    'Content-Length': str(end - start + 1)})
+
+
+class ParallelDownloadTests(unittest.TestCase):
+    PAYLOAD = bytes(range(256)) * 41 + b'tail'  # 10,500 bytes, 11 chunks of 1,000
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        checksum = hashlib.md5(self.PAYLOAD).hexdigest()
+        self.data = {'id': 123, 'files': [{'key': FILENAME, 'size': len(self.PAYLOAD), 'checksum': 'md5:' + checksum,
+                     'links': {'self': 'https://zenodo.org/api/records/123/files/example.7z/content'}}]}
+        self.args = types.SimpleNamespace(data_dir=str(self.root), file=FILENAME, max_gib=0.001, connections=4,
+                                          retries=2, retry_delay=0)
+        self.target = self.root / 'raw/zenodo/123' / FILENAME
+        self.part = self.target.with_name(FILENAME + '.part')
+        self.enterContext(mock.patch.object(m, 'PARALLEL_CHUNK', 1000))
+        self.enterContext(contextlib.redirect_stdout(io.StringIO()))
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_fresh_parallel_download_is_exact_and_cleans_up(self):
+        server = RangeServer(self.PAYLOAD)
+        with mock.patch.object(m, 'open_url', side_effect=server):
+            m.download(self.args, self.data)
+        self.assertEqual(self.target.read_bytes(), self.PAYLOAD)
+        self.assertFalse(self.part.exists())
+        self.assertFalse(m.chunk_map_path(self.part).exists())
+        self.assertEqual(len(server.requests), 11)
+        self.assertIn('bytes=10000-10499', server.requests)
+
+    def test_resumes_an_older_sequential_part_without_refetching_covered_chunks(self):
+        self.part.parent.mkdir(parents=True)
+        self.part.write_bytes(self.PAYLOAD[:3500])
+        server = RangeServer(self.PAYLOAD)
+        with mock.patch.object(m, 'open_url', side_effect=server):
+            m.download(self.args, self.data)
+        self.assertEqual(self.target.read_bytes(), self.PAYLOAD)
+        self.assertEqual(sorted(server.requests), sorted(f'bytes={i * 1000}-{min(i * 1000 + 999, 10499)}' for i in range(3, 11)))
+
+    def test_resumes_from_a_chunk_map(self):
+        self.part.parent.mkdir(parents=True)
+        partial = bytearray(len(self.PAYLOAD))
+        for i in (0, 5, 10):
+            partial[i * 1000:(i + 1) * 1000] = self.PAYLOAD[i * 1000:(i + 1) * 1000]
+        self.part.write_bytes(bytes(partial))
+        m.save_chunk_map(self.part, len(self.PAYLOAD), 1000, {0, 5, 10})
+        server = RangeServer(self.PAYLOAD)
+        with mock.patch.object(m, 'open_url', side_effect=server):
+            m.download(self.args, self.data)
+        self.assertEqual(self.target.read_bytes(), self.PAYLOAD)
+        self.assertEqual(len(server.requests), 8)
+
+    def test_transient_faults_are_retried_per_chunk(self):
+        server = RangeServer(self.PAYLOAD, faults={2: 'reset', 5: 'short'})
+        with mock.patch.object(m, 'open_url', side_effect=server):
+            m.download(self.args, self.data)
+        self.assertEqual(self.target.read_bytes(), self.PAYLOAD)
+        self.assertEqual(len(server.requests), 13)
+
+    def test_ignored_range_marks_nothing_complete(self):
+        server = RangeServer(self.PAYLOAD, honor_range=False)
+        with mock.patch.object(m, 'open_url', side_effect=server):
+            with self.assertRaisesRegex(ValueError, 'exact chunk range'):
+                m.download(self.args, self.data)
+        self.assertFalse(self.target.exists())
+        state = json.loads(m.chunk_map_path(self.part).read_text())
+        self.assertEqual(state['done'], [])
+
+    def test_mismatched_chunk_map_is_refused(self):
+        self.part.parent.mkdir(parents=True)
+        self.part.write_bytes(bytes(len(self.PAYLOAD)))
+        m.save_chunk_map(self.part, len(self.PAYLOAD) + 1, 1000, {0})
+        with mock.patch.object(m, 'open_url', side_effect=RangeServer(self.PAYLOAD)) as net:
+            with self.assertRaisesRegex(ValueError, 'does not match'):
+                m.download(self.args, self.data)
+        net.assert_not_called()
+
+
+class StaleLockTests(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        self.args = types.SimpleNamespace(data_dir=str(self.root), file=FILENAME, max_gib=0.001)
+        self.lock = self.root / 'raw/zenodo/123' / (FILENAME + '.download.lock')
+        self.lock.parent.mkdir(parents=True)
+        self.enterContext(contextlib.redirect_stdout(io.StringIO()))
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_lock_of_an_exited_process_is_replaced(self):
+        import subprocess, sys as _sys
+        finished = subprocess.run([_sys.executable, '-c', 'pass'])
+        dead = subprocess.Popen([_sys.executable, '-c', 'pass']); dead.wait()
+        self.lock.write_text(f'pid={dead.pid}\n', encoding='utf-8')
+        with mock.patch.object(m, 'open_url', return_value=Response(PAYLOAD)):
+            m.download(self.args, DATA)
+        self.assertEqual((self.root / 'raw/zenodo/123' / FILENAME).read_bytes(), PAYLOAD)
+        self.assertFalse(self.lock.exists())
+        self.assertEqual(finished.returncode, 0)
+
+    def test_lock_of_a_live_or_unknown_process_is_respected(self):
+        for text in (f'pid={__import__("os").getpid()}\n', 'garbage'):
+            with self.subTest(text=text):
+                self.lock.write_text(text, encoding='utf-8')
+                with mock.patch.object(m, 'open_url') as net:
+                    with self.assertRaisesRegex(ValueError, 'lock exists'):
+                        m.download(self.args, DATA)
+                net.assert_not_called()

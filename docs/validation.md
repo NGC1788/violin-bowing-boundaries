@@ -209,3 +209,26 @@ The published speed mapping (folder 1 = 0.1 m/s) conflicts with the measured Par
 | `python -m unittest discover -s tests` | PASS (1 skipped: no 7-Zip) | New collection tests: 7-Zip `-slt` parsing and diagram grouping; leaf extraction verifying names and sizes, including a dropped file; two setup repeats processed end to end with labels as planted, a pooled no-contact floor (10 controls), float32 windows and profiles, CSVs removed, archive deleted after completion, and a no-op resume; cache-mode labels identical to direct CSV labels; a corrupt trial failing only its diagram and keeping the archive; an extraction error stopping the run before the next download; a pre-existing extraction read in place, unchanged, grouped as one diagram |
 | Deliberate mutations: archive deleted despite a failed diagram; extracted CSVs kept; extraction error swallowed; size verification skipped; existing extraction split per speed; regime map ignoring the cache; profiles not cached | 7 of 7 detected | 7-Zip itself is not run locally; `collection plan --list <archive> --probe` checks listing and wildcard extraction on the server before a full run |
 
+### Parallel range downloads — 2026-09-17, later
+
+**Server measurement (user transcript).** While the pipeline downloaded B1:
+
+- Pipeline alone (single stream): 750 KiB/s.
+- With 8 extra range connections, measured for 30 s: those 8 gave 4.04 MiB/s and the pipeline 0.69 MiB/s, a total of 4.72 MiB/s.
+
+Zenodo limits throughput per connection. At the single-stream rate the ≈236 GiB still to download would take about 45 h of network time.
+
+**Change.**
+
+- `zenodo_catalog.download` accepts `connections`. With more than 1, `parallel_transfer` preallocates the `.part` and fetches 64 MiB chunks with `os.pwrite`.
+- Each chunk must return HTTP 206 with the exact `Content-Range` and length, is retried per chunk on transient errors, and is recorded in `.part.chunks.json` only after it is complete.
+- A `.part` left by the sequential downloader is resumed by counting its fully covered chunks.
+- The final whole-file MD5 check is unchanged.
+- `collection run --connections` defaults to 8.
+- A download lock whose recorded pid no longer exists is removed automatically. Live or unreadable locks are still refused.
+
+| Check | Result | Scope |
+|---|---|---|
+| `python -m unittest discover -s tests` | PASS (1 skipped: no 7-Zip) | New tests (fake range server): fresh parallel download byte-exact, with map and `.part` removed; resume of a sequential `.part` without refetching covered chunks; resume from a chunk map; retry of a reset and of a short chunk; a server ignoring Range marks nothing complete; a mismatched map is refused before any request; stale versus live/unreadable locks |
+| Deliberate mutations: range check skipped; short chunk accepted; sequential `.part` ignored; map ignored; a partially covered chunk counted as done; per-chunk retry removed | 5 of 6 detected | Removing the per-chunk retry is caught by the outer transfer retry, which resumes from the map; the outcome is the same, so this is an equivalent mutation |
+

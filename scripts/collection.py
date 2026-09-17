@@ -19,6 +19,7 @@ import argparse
 from concurrent.futures import ThreadPoolExecutor
 import csv
 from dataclasses import dataclass
+import functools
 from datetime import datetime, timezone
 import json
 import os
@@ -167,12 +168,17 @@ def diagram_id(diagram: str) -> str:
 
 # ------------------------------------------------------------------ steps
 
-def ensure_archive(layout: Layout, part: int, filename: str, retries: int, progress=print) -> Path:
+DOWNLOAD_CONNECTIONS = 8
+
+
+def ensure_archive(layout: Layout, part: int, filename: str, retries: int, progress=print,
+                   connections: int = DOWNLOAD_CONNECTIONS) -> Path:
     """Download (or re-verify) one archive with the MD5-checking downloader; returns its path."""
     metadata = zenodo_catalog.fetch_record(zenodo_catalog.RECORDS[part], retries=retries)
     size = zenodo_catalog.file_spec(metadata, filename)[0]
     args = SimpleNamespace(record=zenodo_catalog.RECORDS[part], file=filename, max_gib=size / GIB + 0.5,
-                           data_dir=str(layout.data), retries=retries, retry_delay=30)
+                           data_dir=str(layout.data), retries=retries, retry_delay=30,
+                           connections=connections)
     progress(f"[download] {filename} ({size / GIB:.1f} GiB)")
     zenodo_catalog.download(args, metadata)
     path = layout.raw / str(metadata["id"]) / filename
@@ -434,6 +440,8 @@ def main(argv=None) -> int:
     go.add_argument("--delete-archive", action="store_true", help="delete each downloaded archive after all its diagrams completed")
     go.add_argument("--no-prefetch", action="store_true", help="do not download the next archive while processing")
     go.add_argument("--retries", type=int, default=5)
+    go.add_argument("--connections", type=int, default=DOWNLOAD_CONNECTIONS,
+                    help="parallel range connections per download (Zenodo limits speed per connection)")
     sub.add_parser("status", help="compact results of processed diagrams")
     args = parser.parse_args(argv)
     layout = default_layout()
@@ -460,9 +468,10 @@ def main(argv=None) -> int:
         queue = QUEUE if not args.only else [(p, n) for p, n in QUEUE if n in set(args.only)]
         if args.only and len(queue) != len(set(args.only)):
             parser.error(f"unknown archive in --only; choose from: {', '.join(n for _, n in QUEUE)}")
-        if args.workers <= 0:
-            parser.error("--workers must be positive")
-        return run(layout, queue, args.workers, args.delete_archive, not args.no_prefetch, args.retries)
+        if args.workers <= 0 or not 1 <= args.connections <= 32:
+            parser.error("--workers must be positive and --connections 1-32")
+        fetch = functools.partial(ensure_archive, connections=args.connections)
+        return run(layout, queue, args.workers, args.delete_archive, not args.no_prefetch, args.retries, fetch=fetch)
     except CollectionError as error:
         print("COLLECTION: FAIL —", error, file=sys.stderr)
         return 1

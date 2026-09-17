@@ -12,6 +12,7 @@ Nothing is extracted. No labels, train/test splits, or audio are inferred.
 """
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor
 import datetime as dt
 import errno
 import hashlib
@@ -24,6 +25,7 @@ import re
 import shutil
 import ssl
 import sys
+import threading
 import time
 import urllib.error
 import urllib.parse
@@ -237,6 +239,139 @@ def transfer_file(url, part, size, offset):
             raise PrematureEOF(f"Incomplete download ({received}/{size} bytes); .part retained for resume")
 
 
+PARALLEL_CHUNK = 64 * CHUNK
+
+
+def chunk_map_path(part):
+    return part.with_name(part.name + ".chunks.json")
+
+
+def load_chunk_map(part, size, chunk):
+    """Completed chunk indices for a parallel .part; an older sequential .part counts its fully covered chunks."""
+    chunks = chunk_map_path(part)
+    if chunks.is_symlink() or part.is_symlink():
+        raise ValueError("Refusing symlink intermediate files")
+    count = -(-size // chunk)
+    if chunks.exists():
+        state = json.loads(chunks.read_text(encoding="utf-8"))
+        if state.get("size") != size or state.get("chunk") != chunk:
+            raise ValueError("Chunk map does not match the published size; inspect or remove the .part and map manually")
+        if not part.exists() or part.stat().st_size != size:
+            raise ValueError("Chunk map exists but the .part is missing or not preallocated; inspect it manually")
+        return {int(i) for i in state.get("done", []) if 0 <= int(i) < count}
+    if not part.exists():
+        return set()
+    covered = part.stat().st_size
+    if covered > size:
+        raise ValueError("Existing .part exceeds published size; inspect or remove it manually")
+    return {i for i in range(count) if min((i + 1) * chunk, size) <= covered}
+
+
+def save_chunk_map(part, size, chunk, done):
+    target = chunk_map_path(part)
+    temporary = target.with_name(target.name + ".tmp")
+    temporary.write_text(json.dumps({"size": size, "chunk": chunk, "done": sorted(done)}), encoding="utf-8")
+    os.replace(temporary, target)
+
+
+class TransferStopped(Exception):
+    """Another chunk failed or the user interrupted; not a transient network error."""
+
+
+def fetch_chunk(url, descriptor, start, end, size, stop=None):
+    """Write bytes start..end (inclusive) at their offsets; only an exact 206 range response is accepted."""
+    with open_url(url, {"Range": f"bytes={start}-{end}"}) as response:
+        encoding = response.headers.get("Content-Encoding", "identity").lower()
+        if encoding not in ("", "identity"):
+            raise ValueError("Unexpected encoded response; byte-range verification is unsafe")
+        if response.status != 206 or response.headers.get("Content-Range") != f"bytes {start}-{end}/{size}":
+            raise ValueError("Server did not honor the exact chunk range; no bytes were marked complete")
+        length = response.headers.get("Content-Length")
+        if length is not None and int(length) != end - start + 1:
+            raise ValueError("Chunk response size differs from the requested range")
+        position = start
+        while position <= end:
+            if stop is not None and stop.is_set():
+                raise TransferStopped(f"chunk {start}-{end} stopped at {position}")
+            try:
+                block = response.read(min(CHUNK, end + 1 - position))
+            except http.client.IncompleteRead as error:
+                raise PrematureEOF(f"chunk {start}-{end} interrupted at {position}") from error
+            if not block:
+                raise PrematureEOF(f"chunk {start}-{end} ended at {position}")
+            os.pwrite(descriptor, block, position)
+            position += len(block)
+        extra = response.read(1)
+        if extra:
+            raise ValueError("Chunk response exceeded the requested range")
+
+
+def parallel_transfer(url, part, size, connections, retries, retry_delay, chunk=None):
+    """Download missing chunks over several connections into a preallocated .part, resumable via a chunk map."""
+    chunk = chunk or PARALLEL_CHUNK
+    done = load_chunk_map(part, size, chunk)
+    count = -(-size // chunk)
+    if not part.exists():
+        with part.open("xb"):
+            pass
+    descriptor = os.open(part, os.O_RDWR)
+    lock = threading.Lock()
+    stop = threading.Event()
+    try:
+        os.ftruncate(descriptor, size)
+        save_chunk_map(part, size, chunk, done)
+        pending = [i for i in range(count) if i not in done]
+        print(f"  parallel: {len(pending)}/{count} chunks to fetch over {connections} connections", flush=True)
+        state = {"bytes": sum(min((i + 1) * chunk, size) - i * chunk for i in done), "next": 0}
+        state["next"] = state["bytes"] + 256 * CHUNK
+
+        def work(index):
+            start, end = index * chunk, min((index + 1) * chunk, size) - 1
+            if stop.is_set():
+                return
+            with_retries(lambda: fetch_chunk(url, descriptor, start, end, size, stop), retries, retry_delay, f"Chunk {index}")
+            os.fsync(descriptor)
+            with lock:
+                done.add(index)
+                save_chunk_map(part, size, chunk, done)
+                state["bytes"] += end - start + 1
+                if state["bytes"] >= state["next"] or len(done) == count:
+                    print(f"  {state['bytes'] / GIB:.2f} / {size / GIB:.2f} GiB", flush=True)
+                    state["next"] = state["bytes"] + 256 * CHUNK
+
+        with ThreadPoolExecutor(max_workers=connections) as pool:
+            futures = [pool.submit(work, i) for i in pending]
+            try:
+                for future in futures:
+                    future.result()
+            except BaseException:
+                stop.set()
+                for future in futures:
+                    future.cancel()
+                raise
+    finally:
+        os.close(descriptor)
+    if len(done) != count:
+        raise PrematureEOF(f"{count - len(done)} chunks missing; .part and chunk map retained for resume")
+
+
+def stale_lock(lock):
+    """True only when the lock names a pid on this host that no longer exists."""
+    try:
+        match = re.fullmatch(r"pid=(\d+)\s*", lock.read_text(encoding="utf-8"))
+    except OSError:
+        return False
+    if not match:
+        return False
+    try:
+        os.kill(int(match.group(1)), 0)
+    except ProcessLookupError:
+        return True
+    except (PermissionError, OverflowError):
+        return False
+    return False
+
+
 def download(args, data):
     retries = getattr(args, "retries", 3)
     retry_delay = getattr(args, "retry_delay", 10)
@@ -257,7 +392,11 @@ def download(args, data):
     try:
         lock_handle = lock.open("x", encoding="utf-8")
     except FileExistsError:
-        raise ValueError(f"Download lock exists: {lock}. Check for a running download before manually removing a stale lock.")
+        if not stale_lock(lock):
+            raise ValueError(f"Download lock exists: {lock}. Check for a running download before manually removing a stale lock.")
+        print(f"Removing stale download lock (its process has exited): {lock}", flush=True)
+        lock.unlink()
+        lock_handle = lock.open("x", encoding="utf-8")
     try:
         with lock_handle:
             lock_handle.write(f"pid={os.getpid()}\n")
@@ -272,6 +411,16 @@ def download(args, data):
             offset = part.stat().st_size if part.exists() else 0
             if offset > size:
                 raise ValueError("Existing .part exceeds published size; inspect or remove it manually")
+            connections = getattr(args, "connections", 1)
+            if connections > 1:
+                done = load_chunk_map(part, size, PARALLEL_CHUNK)
+                remaining = size - sum(min((i + 1) * PARALLEL_CHUNK, size) - i * PARALLEL_CHUNK for i in done)
+                free = shutil.disk_usage(directory).free
+                if free < remaining + max(GIB, int(size * 0.05)):
+                    raise ValueError(f"Insufficient free space: need {(remaining + max(GIB, int(size * 0.05))) / GIB:.2f} GiB including reserve")
+                print(f"Explicit download: {args.file}; {size / GIB:.3f} GiB compressed; {remaining / GIB:.3f} GiB to fetch", flush=True)
+                parallel_transfer(url, part, size, connections, retries, retry_delay)
+                return
             if part.exists() and offset == 0:
                 part.unlink()  # Only the empty intermediate for this exact target.
             remaining = size - offset
@@ -289,6 +438,7 @@ def download(args, data):
         # Hard-link publication is atomic and fails if target unexpectedly exists.
         os.link(part, target)
         part.unlink()
+        chunk_map_path(part).unlink(missing_ok=True)
         print("Downloaded and MD5 verified:", target)
     finally:
         lock.unlink(missing_ok=True)
@@ -305,6 +455,7 @@ def main():
     get.add_argument("--file", required=True, help="Exact filename printed by catalog")
     get.add_argument("--max-gib", type=float, required=True, help="Maximum allowed compressed file size in GiB")
     get.add_argument("--data-dir", default="data")
+    get.add_argument("--connections", type=int, default=1, help="parallel range connections (1 = sequential)")
     for command in (catalog, get):
         command.add_argument("--retries", type=int, default=3, help="Additional attempts for transient network failures (0-20; default: 3)")
         command.add_argument("--retry-delay", type=float, default=10, help="Initial retry delay in seconds; doubles up to 60s (default: 10)")
