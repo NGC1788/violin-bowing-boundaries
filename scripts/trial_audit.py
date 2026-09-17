@@ -210,13 +210,14 @@ def discover(root: Path) -> dict[Path, dict[str, set[int]]]:
     return {directory: found[directory] for directory in sorted(found) if found[directory]["whole"]}
 
 
-def _describe(values: list[float], digits: int = 6) -> dict:
+def _describe(values: list[float], digits: int | None = 6) -> dict:
+    """Quantiles of finite values. ``digits=None`` keeps full precision for tiny quantities."""
     finite = np.asarray([v for v in values if isinstance(v, (int, float)) and math.isfinite(v)], dtype=float)
     if finite.size == 0:
         return {"n": 0}
     quantiles = np.quantile(finite, [0.0, 0.25, 0.5, 0.75, 1.0])
-    return {"n": int(finite.size), **{key: round(float(q), digits)
-            for key, q in zip(("min", "p25", "median", "p75", "max"), quantiles)}}
+    keep = (lambda x: float(x)) if digits is None else (lambda x: round(float(x), digits))
+    return {"n": int(finite.size), **{key: keep(q) for key, q in zip(("min", "p25", "median", "p75", "max"), quantiles)}}
 
 
 def summarise_condition(condition: str, directory: Path, kinds: dict[str, set[int]],
@@ -228,6 +229,9 @@ def summarise_condition(condition: str, directory: Path, kinds: dict[str, set[in
     for r in good:
         width_counts[str(r["window_width"])] = width_counts.get(str(r["window_width"]), 0) + 1
     betas = sorted({round(r["beta"], 3) for r in good})
+    per_level: dict[float, int] = {}
+    for r in good:
+        per_level[round(r["beta"], 3)] = per_level.get(round(r["beta"], 3), 0) + 1
     speed_peaks = [r["c2_max"] for r in good]
     return {
         "directory": str(directory.relative_to(root)) if directory.is_relative_to(root) else str(directory),
@@ -240,7 +244,8 @@ def summarise_condition(condition: str, directory: Path, kinds: dict[str, set[in
         "rows": _describe([r["rows"] for r in good], 0),
         "duration_s_if_published_rate": _describe([(r["rows"] - 1) / PUBLISHED_RATE_HZ for r in good], 4),
         "beta": {**_describe([r["beta"] for r in good], 4), "distinct_at_1e-3": len(betas),
-                 "distinct_values_at_1e-3": betas},
+                 "distinct_values_at_1e-3": betas,
+                 "trials_per_level_at_1e-3": _describe(list(per_level.values()), 0)},
         "window": {"width_counts": dict(sorted(width_counts.items())),
                    "start": _describe([r["window_start"] for r in good], 0),
                    "inside_c2_plateau": sum(bool(r["window_inside_plateau"]) for r in good),
@@ -252,7 +257,7 @@ def summarise_condition(condition: str, directory: Path, kinds: dict[str, set[in
                            "distinct_at_0.05": len({round(r["c1_window_mean"] / 0.05) for r in good})},
         "c1_window_std": _describe([r["c1_window_std"] for r in good], 4),
         "c3_window_std": _describe([r["c3_window_std"] for r in good], 4),
-        "c4_window_min_step": _describe([r["c4_window_min_step"] for r in good], 7),
+        "c4_window_min_step": _describe([r["c4_window_min_step"] for r in good], None),
         "c4_window_unique": _describe([r["c4_window_unique"] for r in good], 0),
     }
 
@@ -361,7 +366,9 @@ def show_latest(reports_dir: Path) -> int:
         if r.get("n"):
             d = c["duration_s_if_published_rate"]
             print(f"  rows {r['min']:.0f}..{r['max']:.0f} (={d['min']}..{d['max']} s at published rate)")
-            print(f"  beta {b['min']}..{b['max']}, distinct(1e-3) {b['distinct_at_1e-3']}")
+            t = b["trials_per_level_at_1e-3"]
+            print(f"  beta {b['min']}..{b['max']}, distinct(1e-3) {b['distinct_at_1e-3']},"
+                  f" trials per level {t['min']:.0f}..{t['max']:.0f} (median {t['median']:.0f})")
             print(f"  window widths {w['width_counts']} | start {w['start']['min']:.0f}..{w['start']['max']:.0f}"
                   f" | inside c2 plateau {w['inside_c2_plateau']} | steady fraction min {w['c2_steady_fraction']['min']}")
             print(f"  c2 peak levels {c['c2_peak_levels_at_1e-3']} | window mean {c['c2_window_mean']['min']}"
@@ -369,8 +376,8 @@ def show_latest(reports_dir: Path) -> int:
             m = c["c1_window_mean"]
             print(f"  c1 window mean {m['min']}..{m['max']} (median {m['median']}), distinct(0.05) {m['distinct_at_0.05']}"
                   f" | c1 window std median {c['c1_window_std']['median']}")
-            print(f"  c3 window std median {c['c3_window_std']['median']} | c4 min step median "
-                  f"{c['c4_window_min_step']['median']}, unique median {c['c4_window_unique']['median']:.0f}")
+            print(f"  c3 window std median {c['c3_window_std']['median']} | c4 distinct values per window median "
+                  f"{c['c4_window_unique']['median']:.0f} (smallest gap median {c['c4_window_min_step']['median']:.3g})")
     for warning in report["warnings"]:
         print("WARNING:", warning)
     return 0 if report["status"] == "PASS" else 1

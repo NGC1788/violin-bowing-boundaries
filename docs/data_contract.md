@@ -44,7 +44,16 @@ Source: a user-supplied server transcript. `prepare-first` at commit `4102225` r
 - Column 2 (published: bow velocity) in trial 1 starts at exactly `0` and peaks at **0.0500 / 0.1000 / 0.2000** in `r_v1` / `r_v2` / `r_v3`. Its mean inside the classification window is 0.0500 / 0.1000 / **0.1879**.
 - **Conflict with the metadata mapping.** The metadata states folders 1, 2, 3 correspond to 0.1, 0.05, 0.2 m/s. Measured column 2 instead orders `r_v1` < `r_v2` < `r_v3` as 0.05 < 0.1 < 0.2, and trial durations are ordered consistently with the measured values. Use measured column 2, never the folder name or the published mapping, as the velocity condition. This rests on trial 1 per folder until the full audit confirms it for all trials.
 - In `r_v3` trial 1 the window-mean velocity is below the peak, so **a classification window is not guaranteed to lie on a constant-velocity plateau.** Check this per trial before treating window statistics as steady-state conditions.
-- Column 1 (published: bow force) in trial 1 ranges about 3.9–5.1 and is exceptionally smooth; adjacent samples can differ by ~1e-12, which suggests a filtered or derived signal rather than raw sensor samples. Column 4 (published: nut force) takes values on steps of ≈0.0011456, consistent with ADC quantization that can dominate small nut forces. Column 3 (published: bridge force) shows ≈0.0032 steps plus a slow continuous component. These are observations from the first rows, not calibrations.
+- Column 1 (published: bow force) in trial 1 ranges about 3.9–5.1 and is exceptionally smooth; adjacent samples can differ by ~1e-12, which suggests a filtered or derived signal rather than raw sensor samples. The first rows of columns 3 and 4 looked stepped (differences near multiples of ≈0.0032 and ≈0.0011456). **This does not establish quantization:** the audit below found thousands of distinct column-4 values per window, so a continuous component is present. An earlier version of this section overstated quantization.
+
+#### First 20 trials per folder (`trial-audit --limit 20`)
+
+- 60 of 60 trials readable, no orphan companion files, every window within its trial.
+- Trial length varies within a folder by 18,000 rows: r_v1 240,001–258,001; r_v2 140,001–158,001; r_v3 90,001–108,001.
+- The column-2 peak is exactly 0.05 / 0.1 / 0.2 in all 20 trials of r_v1 / r_v2 / r_v3, consistent with the measured mapping above.
+- β is 0.2001 (0.2000–0.2001 in r_v3) in all of these trials while the column-1 window mean takes 20 distinct levels (about 0.60–4.15 in the published unit N). Trials therefore appear to sweep force within a β level. The complete (β, force) grid is not yet established.
+- Median distinct column-4 values in a ≈20,000-sample window: 2,424 / 5,227 / 8,252.
+- **Windows off the velocity plateau.** All 20 windows lie inside the column-2 plateau (1% tolerance) in r_v1 and r_v2, but only 9 of 20 in r_v3, where the smallest steady fraction is 0.4984 and the window-mean column 2 falls to 0.1789. At 0.2 m/s, window statistics must not be treated as constant-velocity conditions without per-trial selection.
 
 If regime labels are absent or their meaning cannot be established, mark them unavailable. Any new manual labels or rule-based labels must record their creator/procedure, version, evidence, uncertainty, and independence from the method being tested. A model's own output is not an independent reference label.
 

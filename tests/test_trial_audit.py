@@ -97,6 +97,13 @@ class StatisticTests(unittest.TestCase):
         self.assertEqual(audit.min_positive_step(np.array([0.375, -0.125, 0.25, 0.25])), 0.125)
         self.assertTrue(np.isnan(audit.min_positive_step(np.array([1.0, 1.0]))))
 
+    def test_tiny_quantities_are_not_rounded_away(self):
+        values = [3e-8, 5e-8, 4e-8]
+        self.assertEqual(audit._describe(values, None)["min"], 3e-8)
+        self.assertEqual(audit._describe(values, 7)["min"], 0.0)  # why full precision is needed
+        gap = audit.min_positive_step(np.array([1.0, 1.0 + 3e-8, 1.0 + 7e-8]))
+        self.assertAlmostEqual(gap / 3e-8, 1.0, places=6)  # 1.0 + 3e-8 is not exactly representable
+
     def test_exact_window_statistics(self):
         result = audit.analyse_trial(make_signal(0.25), 300, 500, 0.01)
         self.assertEqual((result["c2_plateau_start"], result["c2_plateau_end"]), PLATEAU)
@@ -158,6 +165,7 @@ class AuditRunTests(unittest.TestCase):
                 self.assertEqual(slow["c2_peak_levels_at_1e-3"], [0.125])
                 self.assertEqual(fast["c2_peak_levels_at_1e-3"], [0.25])
                 self.assertEqual(slow["beta"]["distinct_values_at_1e-3"], [0.02, 0.11, 0.2])
+                self.assertEqual(slow["beta"]["trials_per_level_at_1e-3"]["max"], 1)
                 self.assertEqual(slow["window"]["width_counts"], {"200": 3})
                 self.assertEqual(slow["window"]["inside_c2_plateau"], 3)
                 self.assertEqual(fast["c1_window_mean"]["median"], 1.0)
@@ -183,6 +191,12 @@ class AuditRunTests(unittest.TestCase):
         _, run_dir = self.run_audit(limit=2)
         rows = (run_dir / "trials.csv").read_text(encoding="utf-8").splitlines()[1:]
         self.assertEqual(sorted({line.split(",")[1] for line in rows}), ["1", "2"])
+
+    def test_trials_per_beta_level_counts_repeats(self):
+        write_trial(self.slow, 11, make_signal(0.125), 0.20004, (300, 500))  # rounds to the 0.2 level
+        _, run_dir = self.run_audit()
+        per_level = self.summary(run_dir)["conditions"][0]["beta"]["trials_per_level_at_1e-3"]
+        self.assertEqual((per_level["min"], per_level["max"]), (1, 2))
 
     def test_ramp_window_is_a_warning_not_a_failure(self):
         write_trial(self.fast, 2, make_signal(0.25, force=1.0), 0.02, (100, 299))

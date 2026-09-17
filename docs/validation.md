@@ -86,3 +86,14 @@ Local regression suite after this change: PASS, 75 tests. New checks cover zero 
 | `bash -n scripts/run.sh` | PASS | Shell syntax after adding `trial-audit` |
 
 These checks establish that the audit code computes the intended quantities on known inputs. They do not establish anything about the real dataset until the server run is reported.
+
+### Server results and a correction — 2026-09-17, later
+
+User transcript at `5f12fec`: fast-forward pull; **91 tests OK** in the server's locked environment; `trial-audit --limit 20` **PASS** for 60/60 trials with the pyarrow parser and 8 workers. Its observations are recorded in the [data contract](data_contract.md).
+
+The same output exposed two defects, both fixed:
+
+- **Reporting.** The column-4 smallest-gap median was stored with 7-decimal rounding and displayed as `0.0`. Summary quantities of this size now keep full precision and the display uses significant figures. The per-trial `trials.csv` was already unrounded.
+- **Documentation.** This repository had stated that column 4 is quantized in ≈0.0011456 steps, based on a few rows. Thousands of distinct values per window contradict that; the statement is corrected.
+
+A per-β-level trial count was added to check grid coverage. Local suite: **PASS, 93 tests** (1 skipped without 7-Zip). Two new deliberate mutations (forcing the old rounding; counting each β level once) were each detected by the tests.
