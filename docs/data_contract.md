@@ -68,6 +68,10 @@ Source: a user-supplied server transcript. `prepare-first` at commit `4102225` r
 
 If regime labels are absent or their meaning cannot be established, mark them unavailable. Any new manual labels or rule-based labels must record their creator/procedure, version, evidence, uncertainty, and independence from the method being tested. A model's own output is not an independent reference label.
 
+### Provisional rule-based labels, 2026-09-17
+
+No state-label file exists in the first archive. `scripts/regime_map.py` assigns **provisional** labels from column 3 inside each classification window only: periodicity (autocorrelation peak for 40–160 Hz) and grouped abrupt changes per period, with thresholds recorded in every report and documented in [the regime-map guide](regime_map.md). Created by this repository's code; version is the commit that produced the report. Uncertainty is kept as `ambiguous`, and boundary fits treat runs near the grid edge as censored. The labels never use column 1, column 2 or β, which later models take as inputs. They are not published reference labels and must be compared with the dataset authors' classification criterion before being used as a reference.
+
 ## Provenance and immutable originals
 
 For each download retain:

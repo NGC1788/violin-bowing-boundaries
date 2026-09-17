@@ -112,3 +112,24 @@ User transcript at `c69ae53`: `trial-audit` **PASS for 6,000/6,000 trials**. Obs
 
 A defect was caught during development: with numpy 2, `repr(np.float64(x))` is `np.float64(x)`, which would have written unparseable text into `grid.csv`. Values are now converted to Python scalars and the tests parse every numeric field. `trial_audit.py` already wrote Python scalars; the pipeline test confirms its table is readable.
 
+### Provisional regime labels and boundary maps — 2026-09-17, later
+
+User transcript at `7843620`: `grid-summary` reconstructed **40 β levels × 50 trials per level in each of the three speed folders** (break ratios 49, 48, 79), β swept in descending order by trial number with contiguous trial numbers in every level, and force descending within every β level. Off-plateau windows cluster at high force and intermediate β; non-positive column-1 windows cluster at the lowest force ranks. Details are in the [data contract](data_contract.md).
+
+**New tool.** `scripts/regime_map.py` (`bash scripts/run.sh regime-map`) assigns provisional labels from column 3 and maps them over the reconstructed grid, fits lower and upper Helmholtz boundaries on log–log axes with standard errors, and saves `regimes.csv`, `summary.json`, `regime_map.png` and `examples.png`. See the [guide](regime_map.md).
+
+| Check | Result | Scope |
+|---|---|---|
+| `python -m unittest discover -s tests` | PASS, 114 tests (1 skipped: no 7-Zip) | 12 regime-map tests: sawtooth period and periodicity; one slip per period under smoothing, noise and ringing; two slips per period; five planted regimes; Schelleng grids with known slopes and boundary positions; interior misclassifications; misclassified edge cells; censoring; slope standard error; an audit → grid → regime pipeline with planted labels |
+| Deliberate mutations: slip grouping disabled; subharmonic rule disabled; amplitude floor disabled; censoring disabled; boundary placed one rank off; Helmholtz slip band widened; interior bridging disabled | Each detected | The slip-grouping mutation initially passed because the ringing fixture never split into separate runs; the fixture was strengthened and a guard asserts that it splits without grouping |
+| Synthetic 3 × 40 × 50 map with planted slopes and 3% interior misclassification | Recovered −1.99±0.02, −2.00±0.01, −2.01±0.01 (lower) and −1.00±0.01, −1.01±0.03, −1.02±0.20 (upper); the last uses only 5 uncensored levels | Synthetic data only |
+
+Defects found and fixed during development, each first reproduced by a failing test:
+
+- **Split runs.** Using the longest strictly contiguous Helmholtz run let one misclassified interior cell move a boundary; slopes on the synthetic map came out near −1.1 instead of −2. Gaps of up to two ranks are now bridged.
+- **Edge holes.** A misclassified cell at the highest force rank made a boundary lying above the sampled range look uncensored, giving an upper slope of −0.36. Runs ending within the bridging distance of a grid edge are now censored.
+- **Plot claims.** Fitted lines were drawn across the full β range, beyond the fitted data, and the legend covered the low-force, large-β corner. Lines are now drawn only across the fitted β range and legends sit below the axes.
+- A wrong module reference in the summary code was caught by the pipeline test before any server run.
+
+These checks show that the tool recovers known answers on synthetic signals and grids. They do not show that the provisional thresholds classify the real bridge-force signals correctly.
+
