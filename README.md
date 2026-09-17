@@ -60,6 +60,7 @@ bash scripts/run.sh catalog
 | `scripts/archive_audit.py` | 압축 해제 없이 멤버 목록·크기·경로·블록 검사 |
 | `scripts/prepare_first.py` | 첫 파일 준비, 용량을 제한한 추출, CSV 앞부분 확인과 보고서 출력 |
 | `scripts/trial_audit.py` | 추출된 전체 시행의 파일 짝·열 수·유한값·분석 창 범위·채널 범위·속도 평탄구간 감사 |
+| `scripts/grid_summary.py` | 감사 표에서 (β, 힘) 격자를 복원하고 문제 시행의 위치를 표·그림으로 표시 |
 | `scripts/install_7zip.py` | 관리자 권한 없이 공식 Linux 7-Zip 설치·SHA256 및 실행 검사 |
 | `scripts/run.sh` | 매번 환경 활성화 없이 프로젝트 명령 실행 |
 | `tests/` | 다운로드 및 환경 점검 도구의 회귀 검증 |

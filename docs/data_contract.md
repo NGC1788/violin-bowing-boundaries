@@ -55,6 +55,17 @@ Source: a user-supplied server transcript. `prepare-first` at commit `4102225` r
 - Median distinct column-4 values in a ≈20,000-sample window: 2,424 / 5,227 / 8,252.
 - **Windows off the velocity plateau.** All 20 windows lie inside the column-2 plateau (1% tolerance) in r_v1 and r_v2, but only 9 of 20 in r_v3, where the smallest steady fraction is 0.4984 and the window-mean column 2 falls to 0.1789. At 0.2 m/s, window statistics must not be treated as constant-velocity conditions without per-trial selection.
 
+#### All 6,000 trials (`trial-audit`)
+
+- PASS: 6,000 of 6,000 trials readable, no orphan companion files, every window within its trial.
+- The column-2 peak is exactly 0.05 in all 2,000 `r_v1` trials, 0.1 in all `r_v2` trials and 0.2 in all `r_v3` trials. **The measured folder-to-speed mapping holds for every trial; the published mapping does not.**
+- Trial length: `r_v1` 236,001–352,001 rows; `r_v2` 138,001–202,001; `r_v3` 90,001–128,001.
+- β rounded to three decimals gives 45 / 41 / 45 bins with a median of 50 trials per bin and minima of 2 / 3 / 1. That is the pattern 40 levels × 50 trials would produce if a few levels straddle rounding boundaries, but rounding cannot establish it. `grid-summary` separates levels at the natural break between jitter and level spacing instead.
+- Column-1 window means range from −0.065 to 4.21 with medians of 0.32–0.38. **Some are negative.** A pressing bow force cannot be negative, so at the lowest levels the recorded value carries an offset, drift or loss of contact comparable to the intended force. Do not use absolute column-1 values there without checking.
+- Windows not fully on the column-2 plateau (1% tolerance): 22 / 135 / 364 of 2,000 (1.1% / 6.8% / 18.2%); minimum steady fraction 0.82 / 0.19 / 0.49; minimum window-mean speed 0.0497 / 0.086 / 0.178. If these trials cluster in one part of the (β, force) plane, excluding them biases boundary estimates there. `grid-summary` maps them.
+- The smallest gap between distinct column-4 window values has a median of 3.31e-09 in every folder, consistent with the text precision of stored values rather than a sensor resolution.
+- The median column-3 window standard deviation rises with speed: 0.236 / 0.394 / 0.484. This is directionally consistent with column 3 being a string force whose oscillation grows with bow speed. It pools all states and does not validate units or scale.
+
 If regime labels are absent or their meaning cannot be established, mark them unavailable. Any new manual labels or rule-based labels must record their creator/procedure, version, evidence, uncertainty, and independence from the method being tested. A model's own output is not an independent reference label.
 
 ## Provenance and immutable originals

@@ -97,3 +97,18 @@ The same output exposed two defects, both fixed:
 - **Documentation.** This repository had stated that column 4 is quantized in ≈0.0011456 steps, based on a few rows. Thousands of distinct values per window contradict that; the statement is corrected.
 
 A per-β-level trial count was added to check grid coverage. Local suite: **PASS, 93 tests** (1 skipped without 7-Zip). Two new deliberate mutations (forcing the old rounding; counting each β level once) were each detected by the tests.
+
+### Full trial audit and grid reconstruction — 2026-09-17, later
+
+User transcript at `c69ae53`: `trial-audit` **PASS for 6,000/6,000 trials**. Observations are recorded in the [data contract](data_contract.md).
+
+**New tool.** `scripts/grid_summary.py` (`bash scripts/run.sh grid-summary`) reads only `trials.csv` from the latest PASS audit and opens no signal file. It separates β levels at the natural break between within-level jitter and between-level spacing, ranks measured column-1 window means within each level, checks whether trial numbers sweep β and force in order, and maps off-plateau and non-positive-force windows onto the reconstructed grid. It writes `grid.csv`, `summary.json` and `grid.png`. The reconstruction is inferred from measured values, not taken from a published design.
+
+| Check | Result | Scope |
+|---|---|---|
+| `python -m unittest discover -s tests` | PASS, 102 tests (1 skipped: no 7-Zip) | 9 new tests: a planted 4 × 5 grid including a β level that straddles a three-decimal rounding boundary, known sweep order and problem cells; command-line report and table; plot output; a pipeline test feeding real `trial_audit.py` output into `grid_summary.py` |
+| Deliberate mutations: break detection disabled; force ranks reversed; contiguity check off by one; three-decimal rounding in place of the natural break; numpy scalars written unconverted | Each detected by the tests | Shows detection of these errors only |
+| Plot of a synthetic 3 × 40 × 50 grid with a planted problem region | Inspected visually; region and markers rendered as planted; overlapping labels fixed | Synthetic data only |
+
+A defect was caught during development: with numpy 2, `repr(np.float64(x))` is `np.float64(x)`, which would have written unparseable text into `grid.csv`. Values are now converted to Python scalars and the tests parse every numeric field. `trial_audit.py` already wrote Python scalars; the pipeline test confirms its table is readable.
+
