@@ -154,6 +154,23 @@ class ClassificationTests(unittest.TestCase):
             with self.subTest(expected=expected):
                 self.assertEqual(label_of(signal), expected)
 
+    def test_small_but_periodic_is_not_no_oscillation(self):
+        # Server run 20260917T114433Z: a fixed floor labelled regular sawtooths at large beta and low speed as no_oscillation.
+        small = sawtooth(98.0, amp=0.05, smooth=5)  # std 0.014, below the 0.02 floor
+        self.assertLess(float(np.std(small)), THRESHOLDS["min_amplitude"])
+        self.assertEqual(label_of(small), "helmholtz")
+        self.assertEqual(regime.classify(0.01, 0.3, 98.0, 1, 98.0, THRESHOLDS), "no_oscillation")
+        self.assertEqual(regime.classify(0.01, float("nan"), float("nan"), float("nan"), 98.0, THRESHOLDS), "no_oscillation")
+
+    def test_schelleng_law_recovers_pooled_exponents(self):
+        rng = np.random.default_rng(4)
+        points = [(float(b), 0.002 * v * b**-2 * float(np.exp(rng.normal(0, 0.03))), v)
+                  for v in (0.05, 0.1, 0.2) for b in np.geomspace(0.02, 0.2, 12)]
+        law = regime.schelleng_law(points)
+        self.assertAlmostEqual(law["exponent_speed"], 1.0, delta=0.05)
+        self.assertAlmostEqual(law["exponent_beta"], -2.0, delta=0.05)
+        self.assertEqual(regime.schelleng_law(points[:4]), {"n": 4})
+
     def test_subharmonic_needs_a_reference(self):
         self.assertNotEqual(label_of(sawtooth(49.0), reference_f0=float("nan")), "subharmonic")
 
@@ -231,6 +248,23 @@ class BoundaryTests(unittest.TestCase):
         cells = [(L, k, "ambiguous" if k == top and L % 2 == 0 else lab) for L, k, lab in cells]
         fit = regime.fit_boundaries(cells, self.centers, self.forces)
         self.assertEqual((fit["upper"]["n"], fit["upper"]["censored_levels"]), (0, 12))
+
+    def test_boundary_next_to_an_off_plateau_cell_is_censored(self):
+        cells = schelleng_grid(0.0008, 0.12, self.betas, self.forces)
+        plain = regime.fit_boundaries(cells, self.centers, self.forces)
+        upper_next = {}
+        for level, beta in enumerate(self.betas):
+            ranks = [k for L, k, lab in cells if L == level and lab == "helmholtz"]
+            if level % 2 == 0:
+                upper_next[level] = max(ranks) + 1
+        excluded = frozenset(upper_next.items())
+        fit = regime.fit_boundaries(cells, self.centers, self.forces, excluded=excluded)
+        self.assertEqual(fit["censored_next_to_excluded"], {"lower": 0, "upper": len(excluded)})
+        self.assertEqual(fit["upper"]["n"], plain["upper"]["n"] - len(excluded))
+        self.assertEqual(fit["lower"]["points"], plain["lower"]["points"])
+        # An excluded cell inside the region never counts as Helmholtz: excluding a whole level removes it.
+        whole = frozenset((0, k) for k in range(1, len(self.forces) + 1))
+        self.assertEqual(regime.fit_boundaries(cells, self.centers, self.forces, excluded=whole)["levels_with_helmholtz"], 11)
 
     def test_slope_standard_error_is_reported(self):
         fit = regime.fit_boundaries(schelleng_grid(0.0008, 0.12, self.betas, self.forces), self.centers, self.forces)

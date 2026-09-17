@@ -161,7 +161,9 @@ def flyback_structure(x: np.ndarray, period: float, frac: float = 0.5, hysteresi
 
 def classify(amplitude: float, periodicity: float, f0: float, flybacks: float, reference_f0: float,
              thresholds: dict) -> str:
-    if not (amplitude >= thresholds["min_amplitude"]):
+    # A clearly periodic window is string motion however small: Helmholtz amplitude scales with v_b / beta,
+    # so a fixed floor alone would erase weak but regular oscillation at large beta and low speed.
+    if not (amplitude >= thresholds["min_amplitude"]) and not (periodicity >= thresholds["min_periodicity"]):
         return "no_oscillation"
     if not math.isfinite(periodicity) or periodicity < thresholds["max_aperiodic"]:
         return "aperiodic"
@@ -196,22 +198,23 @@ def trial_features(task: tuple) -> dict:
 # ------------------------------------------------------------------ boundaries
 
 def fit_boundaries(level_rank_class: list[tuple[int, int, str]], beta_centers: dict[int, float],
-                   force_by_rank: list[float], max_hole: int = 2) -> dict:
+                   force_by_rank: list[float], max_hole: int = 2, excluded=frozenset()) -> dict:
     """Lower/upper Helmholtz boundary per beta level, then log-log slopes over uncensored levels.
 
     Helmholtz ranks separated by at most ``max_hole`` other ranks are bridged, so isolated
     misclassifications inside the region do not split it; the widest bridged run is used.
     Each boundary is the geometric mean of the forces either side of that run. A run
     touching the first or last force rank is censored (the boundary lies outside the
-    sampled range) and excluded from the fit.
+    sampled range) and excluded from the fit. ``excluded`` (level, rank) cells, such as windows off the
+    velocity plateau, never count as Helmholtz, and a boundary next to one is censored as undetermined.
     """
     n_ranks = len(force_by_rank)
     by_level: dict[int, list[int]] = {}
     for level, rank, label in level_rank_class:
-        if label == "helmholtz":
+        if label == "helmholtz" and (level, rank) not in excluded:
             by_level.setdefault(level, []).append(rank)
     lower, upper = [], []
-    censored_lower = censored_upper = bridged = 0
+    censored_lower = censored_upper = bridged = excluded_lower = excluded_upper = 0
     for level in sorted(beta_centers):
         ranks = sorted(set(by_level.get(level, [])))
         if not ranks:
@@ -223,12 +226,18 @@ def fit_boundaries(level_rank_class: list[tuple[int, int, str]], beta_centers: d
         beta = beta_centers[level]
         if first <= 1 + max_hole:  # an edge hole of <= max_hole ranks is indistinguishable from censoring
             censored_lower += 1
+        elif (level, first - 1) in excluded:
+            censored_lower += 1
+            excluded_lower += 1
         else:
             pair = (force_by_rank[first - 2], force_by_rank[first - 1])
             if min(pair) > 0:
                 lower.append((beta, math.sqrt(pair[0] * pair[1])))
         if last >= n_ranks - max_hole:
             censored_upper += 1
+        elif (level, last + 1) in excluded:
+            censored_upper += 1
+            excluded_upper += 1
         else:
             pair = (force_by_rank[last - 1], force_by_rank[last])
             if min(pair) > 0:
@@ -251,7 +260,8 @@ def fit_boundaries(level_rank_class: list[tuple[int, int, str]], beta_centers: d
             "upper": {**slope(upper), "theory_slope": -1, "censored_levels": censored_upper,
                       "points": [[round(b, 5), round(f, 5)] for b, f in upper]},
             "levels_with_helmholtz": len(by_level), "levels_total": len(beta_centers),
-            "max_hole": max_hole, "non_helmholtz_cells_bridged": bridged}
+            "max_hole": max_hole, "non_helmholtz_cells_bridged": bridged,
+            "censored_next_to_excluded": {"lower": excluded_lower, "upper": excluded_upper}}
 
 
 def noise_floor(amplitudes, column1_means, factor: float, fallback: float, min_controls: int = 10) -> dict:
@@ -269,17 +279,34 @@ def noise_floor(amplitudes, column1_means, factor: float, fallback: float, min_c
 
 
 def frac_sensitivity(trials: list[dict], beta_centers: dict[int, float], force_by_rank: list[float],
-                     fracs=SENSITIVITY_FRACS, max_hole: int = 2) -> list[dict]:
+                     fracs=SENSITIVITY_FRACS, max_hole: int = 2, excluded=frozenset()) -> list[dict]:
     """Boundary slopes if the flyback fraction were each of ``fracs``, with every other gate unchanged."""
     out = []
     for frac in fracs:
         cells = [(f["beta_level"], f["force_rank"],
                   "helmholtz" if f["label"] in ("helmholtz", "multiple_slip") and f["second_flyback_ratio"] < frac
                   else "other") for f in trials]
-        fit = fit_boundaries(cells, beta_centers, force_by_rank, max_hole)
+        fit = fit_boundaries(cells, beta_centers, force_by_rank, max_hole, excluded)
         out.append({"flyback_frac": frac, "helmholtz": sum(c[2] == "helmholtz" for c in cells),
                     **{f"{side}_{key}": fit[side][key] for side in ("lower", "upper") for key in ("slope", "slope_se", "n")}})
     return out
+
+
+def log_linear_fit(y, regressors: dict) -> dict:
+    """Least squares log y = c + sum_k e_k log x_k with standard errors; a regressor spanning < 1.5x is dropped."""
+    y = np.log(np.asarray(y, dtype=float))
+    names = [k for k, x in regressors.items() if np.ptp(np.log(np.asarray(x, dtype=float))) >= math.log(1.5)]
+    design = np.column_stack([np.ones(y.size)] + [np.log(np.asarray(regressors[k], dtype=float)) for k in names])
+    coef, *_ = np.linalg.lstsq(design, y, rcond=None)
+    residual = y - design @ coef
+    dof = y.size - design.shape[1]
+    covariance = residual @ residual / dof * np.linalg.inv(design.T @ design) if dof > 0 else None
+    result = {"n": int(y.size), "intercept": round(float(coef[0]), 4),
+              "rms_log_residual": round(float(np.sqrt(np.mean(residual**2))), 4)}
+    for i, name in enumerate(names, 1):
+        result[f"exponent_{name}"] = round(float(coef[i]), 3)
+        result[f"exponent_{name}_se"] = None if covariance is None else round(float(math.sqrt(covariance[i, i])), 3)
+    return result
 
 
 def flyback_law(points) -> dict:
@@ -292,25 +319,24 @@ def flyback_law(points) -> dict:
     if len(rows) < 5:
         return {"n": len(rows)}
     height, speed, beta = (np.array(c, dtype=float) for c in zip(*rows))
-    names, columns = ["beta"], [np.ones(height.size), np.log(beta)]
-    if np.ptp(np.log(speed)) >= math.log(1.5):
-        names.insert(0, "speed")
-        columns.insert(1, np.log(speed))
-    design = np.column_stack(columns)
-    y = np.log(height)
-    coef, *_ = np.linalg.lstsq(design, y, rcond=None)
-    residual = y - design @ coef
-    dof = height.size - design.shape[1]
-    result = {"n": int(height.size), "theory": "flyback = 2 Z v_b / beta (speed exponent +1, beta exponent -1)",
-              "rms_log_residual": round(float(np.sqrt(np.mean(residual**2))), 4)}
-    covariance = residual @ residual / dof * np.linalg.inv(design.T @ design) if dof > 0 else None
-    for i, name in enumerate(names, 1):
-        result[f"exponent_{name}"] = round(float(coef[i]), 3)
-        result[f"exponent_{name}_se"] = None if covariance is None else round(float(math.sqrt(covariance[i, i])), 3)
+    result = {**log_linear_fit(height, {"speed": speed, "beta": beta}),
+              "theory": "flyback = 2 Z v_b / beta (speed exponent +1, beta exponent -1)"}
     z = height * beta / (2 * speed)
     result["impedance_kg_s"] = {q: round(float(np.percentile(z, pct)), 4) for q, pct in (("p25", 25), ("median", 50), ("p75", 75))}
     result["reference_impedance_kg_s"] = REFERENCE_IMPEDANCE
     return result
+
+
+def schelleng_law(points) -> dict:
+    """Pooled boundary fit log F = c + a log v_b + b log beta over (beta, force, speed) points from all folders.
+
+    Schelleng: minimum force a = 1, b = -2; maximum force a = 1, b = -1.
+    """
+    rows = [(b, f, v) for b, f, v in points if all(math.isfinite(q) and q > 0 for q in (b, f, v))]
+    if len(rows) < 5:
+        return {"n": len(rows)}
+    beta, force, speed = (np.array(c, dtype=float) for c in zip(*rows))
+    return log_linear_fit(force, {"speed": speed, "beta": beta})
 
 
 # ------------------------------------------------------------------ plotting
@@ -460,16 +486,18 @@ def plot_flyback_law(table: list[dict], law: dict, destination: Path) -> None:
 
     figure, axis = plt.subplots(figsize=(6.4, 5.2), constrained_layout=True)
     markers = "os^Dv"
+    plotted = []
     for i, name in enumerate(sorted({f["condition"] for f in table})):
         rows = [f for f in table if f["condition"] == name and f["label"] == "helmholtz"
                 and f["flyback_height"] > 0 and f["c2_window_mean"] > 0]
         if rows:
             x = [2 * f["c2_window_mean"] / f["beta"] for f in rows]
+            plotted += x
             axis.scatter(x, [f["flyback_height"] for f in rows], s=9, marker=markers[i % len(markers)], alpha=0.6,
                          label=f"{name} (n={len(rows)})")
     z = law.get("impedance_kg_s", {}).get("median")
-    if z:
-        xs = np.geomspace(*axis.get_xlim(), 20)
+    if z and plotted:  # from the data range: linear autoscale limits can be negative before the log scale is set
+        xs = np.geomspace(min(plotted), max(plotted), 20)
         axis.plot(xs, z * xs, color="black", linewidth=1, label=f"median Z = {z} kg/s")
         axis.plot(xs, REFERENCE_IMPEDANCE * xs, color="grey", linestyle="--", linewidth=1,
                   label=f"reference Z = {REFERENCE_IMPEDANCE} kg/s (other paper)")
@@ -542,6 +570,7 @@ def run(audit_reports: Path, reports_dir: Path, workers: int, thresholds: dict, 
                               "before interpreting boundaries."),
               "conditions": {}}
     plot_data, examples, table = {}, [], []
+    boundary_points = {"lower": [], "upper": []}
     for name in sorted(grids):
         rows = [f for f in features if f["condition"] == name]
         good = [f for f in rows if not f["error"]]
@@ -569,8 +598,12 @@ def run(audit_reports: Path, reports_dir: Path, workers: int, thresholds: dict, 
         centers = {}
         for g in grid_rows.values():
             centers[g["beta_level"]] = g["beta_level_center"]
-        boundaries = fit_boundaries(cells, centers, force_by_rank, thresholds.get("max_hole", 2))
-        sensitivity = frac_sensitivity(good, centers, force_by_rank, SENSITIVITY_FRACS, thresholds.get("max_hole", 2))
+        off_plateau = frozenset((g["beta_level"], g["force_rank"]) for g in grid_rows.values() if not g["window_inside_plateau"])
+        boundaries = fit_boundaries(cells, centers, force_by_rank, thresholds.get("max_hole", 2), off_plateau)
+        sensitivity = frac_sensitivity(good, centers, force_by_rank, SENSITIVITY_FRACS, thresholds.get("max_hole", 2), off_plateau)
+        speed = float(np.median([f["c2_window_mean"] for f in good])) if good else math.nan
+        for side in ("lower", "upper"):
+            boundary_points[side] += [(b_, f_, speed) for b_, f_ in boundaries[side]["points"]]
         helmholtz_z = [f["flyback_height"] * f["beta"] / (2 * f["c2_window_mean"]) for f in good
                        if f["label"] == "helmholtz" and f["c2_window_mean"] > 0 and f["flyback_height"] > 0]
         f0s = [f["f0_hz"] for f in good if math.isfinite(f["f0_hz"])]
@@ -604,6 +637,8 @@ def run(audit_reports: Path, reports_dir: Path, workers: int, thresholds: dict, 
         for f in sorted(table, key=lambda f: (f["condition"], f["trial"])):
             writer.writerow({k: (repr(float(v)) if isinstance(v, (float, np.floating)) else v)
                              for k, v in f.items() if k in fields})
+    report["schelleng_law"] = {side: {**schelleng_law(boundary_points[side]), "theory_speed": 1,
+                                      "theory_beta": -2 if side == "lower" else -1} for side in ("lower", "upper")}
     report["flyback_law"] = flyback_law([(f["flyback_height"], f["c2_window_mean"], f["beta"])
                                          for f in table if f["label"] == "helmholtz"])
     if plot:
@@ -645,7 +680,8 @@ def format_report(report: dict) -> list[str]:
                      f"censored {lo['censored_levels']}) | upper slope {up['slope']}±{up['slope_se']} (theory -1, n={up['n']}, "
                      f"beta span x{up['beta_span']}, censored {up['censored_levels']}) | "
                      f"Helmholtz in {c['boundaries']['levels_with_helmholtz']}/{c['boundaries']['levels_total']} beta levels, "
-                     f"{c['boundaries']['non_helmholtz_cells_bridged']} interior cells bridged")
+                     f"{c['boundaries']['non_helmholtz_cells_bridged']} interior cells bridged, censored next to off-plateau "
+                     f"{c['boundaries']['censored_next_to_excluded']}")
         lines.append(f"  labels of off-plateau windows {c['classes_among_off_plateau']} | "
                      f"of column-1<=0 windows {c['classes_among_nonpositive_force']}")
         lines.append("  flyback-frac sensitivity: " + " | ".join(
@@ -653,6 +689,11 @@ def format_report(report: dict) -> list[str]:
             f"upper {s['upper_slope']}±{s['upper_slope_se']} (n {s['upper_n']})" for s in c["flyback_frac_sensitivity"]))
         z = c["helmholtz_impedance_kg_s"]
         lines.append(f"  Helmholtz H*beta/(2 v_b): median {z.get('median')} (p25 {z.get('p25')}, p75 {z.get('p75')}) kg/s")
+    for side, fit in report.get("schelleng_law", {}).items():
+        lines.append(f"SCHELLENG LAW {side} boundary (uncensored levels pooled over folders): n {fit.get('n')} | speed exponent "
+                     f"{fit.get('exponent_speed')}±{fit.get('exponent_speed_se')} (theory +1) | beta exponent "
+                     f"{fit.get('exponent_beta')}±{fit.get('exponent_beta_se')} (theory {fit['theory_beta']}) | "
+                     f"rms log residual {fit.get('rms_log_residual')}")
     law = report.get("flyback_law", {})
     lines.append(f"FLYBACK LAW (Helmholtz-labelled, all folders): n {law.get('n')} | speed exponent "
                  f"{law.get('exponent_speed')}±{law.get('exponent_speed_se')} (theory +1) | beta exponent "

@@ -155,3 +155,27 @@ Heavy ringing (0.35 of a 0.8 return) now counts as two flybacks. The earlier fix
 
 These checks show that the new feature recovers known answers on synthetic signals. Whether it classifies the real bridge force correctly must be judged from the next server run's `examples.png`, `features.png` and flyback-law check.
 
+### Flyback labels on the real data; floor and off-plateau corrections — 2026-09-17, later
+
+User transcript at `9e468ea`, run `20260917T114433Z_4944e79b`:
+
+| Folder | helmholtz | multiple_slip | subharmonic | aperiodic | no_oscillation | ambiguous | lower slope | upper slope |
+|---|---|---|---|---|---|---|---|---|
+| r_v1 (0.05 m/s) | 705 | 217 | 13 | 121 | 895 | 49 | −0.873±0.13 (n 34) | −1.22±0.073 (n 16, 18 censored) |
+| r_v2 (0.10 m/s) | 821 | 713 | 5 | 23 | 423 | 15 | −1.729±0.053 (n 38) | −1.303±0.216 (n 14, 26 censored) |
+| r_v3 (0.20 m/s) | 464 | 1,010 | 1 | 0 | 520 | 5 | −1.449±0.065 (n 34) | −0.339±0.156 (n 11, 23 censored) |
+
+- **Ambiguous windows fell from about 1,300 to 5–49 per folder.** Example panels showed one marker per return on clean sawtooths.
+- **The second/largest flyback ratio is bimodal in every folder.** The antimode lies at about 0.2–0.5, so the 0.5 fraction sits in the valley.
+- **Sensitivity.** Lower slopes change little for fractions 0.3–0.6 (r_v2 −1.59 to −1.74, r_v3 −1.40 to −1.47, r_v1 −0.80 to −0.97). At 0.7 the fraction enters the second mode and the fits break, as expected.
+- **Flyback law on 1,990 Helmholtz-labelled trials.** Speed exponent 1.013±0.008 (theory +1), β exponent −0.959±0.007 (theory −1), rms log residual 0.171. Z median 0.951 kg/s (p25 0.888, p75 0.997); the other paper's string gives 1.175. The labels were made from shape alone, so this is independent physical support that they are Helmholtz motion.
+
+Defects seen in this run and corrected:
+
+- **Fixed floor erased weak periodic motion.** The floor was 3 × 0.068 = 0.204, taken from 154 column-1 ≤ 0 windows (p95 0.246). Six of nine `no_oscillation` examples were regular oscillations with periodicity 0.94–0.96; real noise windows had 0.22–0.61. The r_v1 map showed a grey wedge at large β up to about 1 N. Helmholtz amplitude scales with v_b/β: 2 × 0.95 × 0.05 / 0.2 gives a sawtooth std of about 0.14, below the floor. Now a window is `no_oscillation` only if it is below the floor **and** not periodic (periodicity < 0.8). Failing test first; reverting the rule is detected.
+- **Off-plateau windows inside boundary fits.** Windows off the velocity plateau (22 / 135 / 364) are not at the folder's speed, and in r_v3 they reach the lower boundary. They no longer count as Helmholtz, and a boundary next to one is censored. The count is reported per folder.
+- **Missing reference lines on `flyback_law.png`.** The lines were computed from axis limits before the log scale was set, which triggered a log10 RuntimeWarning. They are now computed from the data range.
+- **Added pooled Schelleng-law fit.** log F = c + a log v_b + b log β over uncensored boundary points from all folders; theory a = 1, and b = −2 lower, −1 upper.
+
+Local: 126 tests pass (1 skipped). 4 of 4 new mutations detected: floor rule reverted; exclusion ignored in runs; exclusion ignored at the upper edge; speed regressor dropped.
+
