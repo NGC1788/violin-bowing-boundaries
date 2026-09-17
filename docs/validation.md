@@ -34,7 +34,7 @@ The initial Ubuntu setup gate is therefore passed for this reported run. Preserv
 
 ## Still unverified
 
-- Full published-archive download/extraction on the server, schema/label verification, or whole-signal dataset-specific parsing. A small fixture extraction and real archive header inspection are described below.
+- Whole-signal audit results, units, sign conventions, reference labels and trial grouping. The first archive's download, MD5 check and extraction were reported PASS on 2026-09-17 (below); a whole-trial structural audit tool exists but its server results are pending.
 - Video tracking, synchronization or real violin acoustic-state validation. New force-sensor construction/calibration is outside the revised 2026-09-13 scope; see the research roadmap.
 - Training, benchmark comparisons, uncertainty calibration, or claims of improvement.
 
@@ -68,3 +68,21 @@ The same transcript shows the full-data preparation failed before payload downlo
 `prepare-first` now reuses a previously saved official snapshot only after checking its fixed requested/resolved version, record ID, source URL, schema, filename, size and MD5. It retains the original retrieval time, records the metadata used, and invokes the existing downloader with that same validated object. It no longer makes a second metadata request after download. The generic catalog/download CLI still queries live metadata. Raw-file MD5, resume-range, size and extraction checks remain required.
 
 Local regression suite after this change: PASS, 75 tests. New checks cover zero metadata requests with a valid cache, malformed/oversized/mismatched snapshots, live fallback and pin validation, removal of the second API request, and an end-to-end orchestration check that accepts a checksum-matching existing tiny file without any network but rejects changed contents of the same byte count. Full-data preparation still awaits a successful server run.
+
+## First real data and trial audit — 2026-09-17
+
+**Server transcript (user-supplied, commit `4102225`).** `prepare-first --extract` reported `Using validated saved metadata`, `Already present and MD5 verified` for the 14,083,546,513-byte archive, `Inventory PASS: 18000 files; 69.085 GiB uncompressed; Solid=+`, reuse of an existing completed extraction, and `TODAY DATA PREPARATION: PASS`. The filesystem then reported 93 GB available (90% used). Follow-up read-only shell inspection produced the CSV observations recorded in the [data contract](data_contract.md), including a conflict between measured column-2 speeds and the published folder-to-speed mapping. The maintainer did not independently access the server.
+
+**New tool.** `scripts/trial_audit.py` (`bash scripts/run.sh trial-audit`) reads every `whole_N.csv` once and writes `reports/trial_audit/<run>/trials.csv` (one row per trial) and `summary.json`. It fails on missing or orphan companion files, unreadable or non-four-column signals, non-finite values and out-of-bounds windows. A window that is not fully inside the column-2 velocity plateau is reported as a warning, not a failure. It writes only small reports and never copies signal data.
+
+**Local checks (macOS, Python 3.11.15, numpy 2.4.6, pyarrow 25.0.1 test environment).**
+
+| Check | Result | Scope |
+|---|---|---|
+| `python -m unittest discover -s tests` | PASS, 91 tests (1 skipped: no 7-Zip) | 75 existing + 16 new trial-audit tests on synthetic trials with exactly known plateau, window, force, quantization step and file structure |
+| Deliberate code mutations: plateau flag forced true, orphan files ignored, off-by-one window bound, lexicographic trial order, non-finite check removed | Each made the new tests FAIL; original restored and re-verified | Shows the tests detect these errors; not proof of absence of others |
+| pyarrow vs numpy parser on a 258,001-row CRLF signal | Bit-identical arrays | Parser agreement on synthetic decimal text |
+| Parse + per-trial analysis, 14.9 MB synthetic trial | 74 ms (pyarrow), 269 ms (numpy) single-threaded | Mac M2 timing only; not server throughput |
+| `bash -n scripts/run.sh` | PASS | Shell syntax after adding `trial-audit` |
+
+These checks establish that the audit code computes the intended quantities on known inputs. They do not establish anything about the real dataset until the server run is reported.
