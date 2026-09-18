@@ -180,6 +180,8 @@ def simulate(backend: Backend, string: StringParams, friction: FrictionParams, b
     state_b, state_n = xp.zeros((batch,)), xp.zeros((batch,))
     d_b, d_n, d_half = (xp.asarray(d) for d in (delay_bridge, delay_nut, (delay_bridge + lag) / 2))
     sticking = xp.ones_bool(batch)
+    # Per-stroke friction values must live on the backend too, or a numpy array meets a device tensor.
+    friction = FrictionParams(*(xp.asarray(spread(value)) for value in (friction.mu_s, friction.mu_d, friction.v0)))
     velocity = xp.asarray(profile_velocity)
     force_profile = xp.asarray(profile_force)
     profile_len = int(profile_velocity.shape[0])

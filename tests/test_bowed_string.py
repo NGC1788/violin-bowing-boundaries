@@ -125,17 +125,29 @@ class PerStrokeParameterTests(unittest.TestCase):
             for column in range(len(betas)):
                 np.testing.assert_allclose(together[:, index * len(betas) + column], one[:, column], atol=1e-9)
 
+    def test_torch_backend_matches_numpy_including_per_stroke_parameters(self):
+        try:
+            import torch  # noqa: F401
+        except ImportError:
+            self.skipTest("torch not installed")
+        string = bs.StringParams(q1=np.array([2000.0, 600.0]), corner_hz=np.array([6000.0, 12000.0]))
+        friction = bs.FrictionParams(np.array([0.6725, 0.9]), np.array([0.346, 0.25]), np.array([0.06, 0.15]))
+        betas, speeds, forces = [0.1, 0.05], [0.1, 0.1], [3.0, 2.0]
+        on_numpy = stroke_with(betas, speeds, forces, string, friction)
+        on_torch = stroke_with(betas, speeds, forces, string, friction, backend=bs.Backend("torch", "cpu", "float64"))
+        np.testing.assert_allclose(on_torch, on_numpy, atol=1e-9)
+
     def test_scalar_parameters_are_unchanged(self):
         plain = stroke_with([0.1], [0.1], [4.0], bs.StringParams(), bs.FrictionParams())
         arrayed = stroke_with([0.1], [0.1], [4.0], bs.StringParams(q1=np.array([2000.0])), bs.FrictionParams())
         np.testing.assert_allclose(plain, arrayed, atol=1e-12)
 
 
-def stroke_with(betas, speeds, forces, string, friction, seconds=0.4, rate=RATE):
+def stroke_with(betas, speeds, forces, string, friction, seconds=0.4, rate=RATE, backend=None):
     points = int(seconds * 1000) + 2
     t = (np.arange(points) + 0.5) / 1000
     velocity = np.minimum(t[:, None] / 0.1, 1.0) * np.asarray(speeds, float)[None, :]
     force = np.broadcast_to(np.asarray(forces, float), (points, len(betas))).copy()
     steps = int(seconds * rate)
-    return bs.simulate(bs.Backend(), string, friction, betas, velocity, force, 1000, rate, 0.0, steps, 1,
+    return bs.simulate(backend or bs.Backend(), string, friction, betas, velocity, force, 1000, rate, 0.0, steps, 1,
                        record_from=steps - 10_000)
