@@ -30,7 +30,8 @@ case "$TASK_COMMAND" in
   regime-map) exec "$TASK_UV" run --locked python scripts/regime_map.py "$@" ;;
   collection) exec "$TASK_UV" run --locked python scripts/collection.py "$@" ;;
   simulate) exec "$TASK_UV" run --locked python scripts/simulate_grid.py "$@" ;;
+  calibrate) exec "$TASK_UV" run --locked python scripts/calibrate.py "$@" ;;
   jupyter) exec "$TASK_UV" run --locked jupyter lab --ip=127.0.0.1 --port=8888 --no-browser "$@" ;;
   python) exec "$TASK_UV" run --locked python "$@" ;;
-  *) echo 'Usage: bash scripts/run.sh {setup-tools|doctor|smoke|catalog|download|archive-audit|prepare-first|trial-audit|grid-summary|regime-map|collection|simulate|jupyter|python} [arguments]' ;;
+  *) echo 'Usage: bash scripts/run.sh {setup-tools|doctor|smoke|catalog|download|archive-audit|prepare-first|trial-audit|grid-summary|regime-map|collection|simulate|calibrate|jupyter|python} [arguments]' ;;
 esac

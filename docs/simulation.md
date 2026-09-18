@@ -62,3 +62,22 @@ nohup bash scripts/run.sh simulate --diagram 2024-03-25_TypeA_sample1 > logs/sim
 - 점 활, 한 편광, 비틀림 없음, 활털 순응성 없음, 열 마찰 아님.
 - 반사 필터는 단순 1차라 모드별 Q를 정밀하게 재현하지 않는다.
 - 판정은 측정과 같은 잠정 기준이다.
+
+## 마찰 파라미터 보정 (`run.sh calibrate`)
+
+마찰 곡선과 손실은 측정값이 아니라 문헌값이므로, 측정 지도에 맞춰 찾는다. `scripts/calibrate.py`는 무작위 탐색으로 다섯 값을 바꿔 가며 평가한다: `mu_s`, `mu_d`, `v0`, `q1`, `corner_hz`.
+
+- 평가마다 **파일을 만들지 않는다.** 메모리에서 시뮬레이션하고, 측정과 같은 관측 잡음을 더하고, 같은 분류기로 판정한다.
+- 점수는 표본 칸에서의 **헬름홀츠 영역 IoU**이고 라벨 일치율도 함께 기록한다.
+- 표본은 β 수준 몇 개를 골라 그 힘 열 전체를 쓴다. 경계가 어디 있는지 보이게 하기 위해서다.
+- 모든 평가는 `reports/calibration/<격자>_rate<속도>.jsonl`에 한 줄씩 append된다. 중단해도 같은 명령으로 이어서 하고, 같은 seed면 같은 순서로 탐색한다.
+- 첫 평가(index 0)는 항상 문헌값이다. 보정이 문헌값보다 나아졌는지 바로 비교할 수 있다.
+
+```bash
+# 한 속도로 보정하고 나머지 속도로 시험
+nohup bash scripts/run.sh calibrate --diagram 2024-03-25_TypeA_sample1   --conditions 2024-03-27_r_v2 --hold-out --iterations 400   >> logs/calibrate.log 2>&1 < /dev/null &
+tail -f logs/calibrate.log
+```
+
+**보정한 속도에서 좋아진 것은 결과가 아니다.** 시험용으로 남겨 둔 속도(`hold-out`)에서의 점수가 물리 모델의 예측력이다.
+

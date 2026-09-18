@@ -256,3 +256,11 @@ An instantaneous dashpot that made up the missing admittance removed so much ene
 
 A suspected operator-precedence bug in the noise default turned out to be correct Python (`A or B if C else D` parses as `(A or B) if C else D`). Parentheses were added only for clarity.
 
+### Friction calibration search — 2026-09-19
+
+`scripts/calibrate.py` (`run.sh calibrate`) searches mu_s, mu_d, v0, q1 and corner_hz against a measured diagram. Each candidate is simulated in memory (no per-stroke files), given the measured observation noise, labelled with the unchanged classifier and scored by Helmholtz IoU over sampled cells; whole force columns at evenly spaced beta levels are sampled so a boundary is visible. Evaluation 0 is always the literature parameter set, so any gain over it is explicit. Every evaluation is appended to JSONL, making the run resumable and auditable, and `--conditions` with `--hold-out` keeps untrained bow speeds for testing.
+
+| Check | Result | Scope |
+|---|---|---|
+| `python -m unittest discover -s tests` | PASS (1 skipped: no 7-Zip) | New: column sampling covers whole force columns at spaced levels; IoU and agreement counted correctly; drawn parameters keep mu_d < mu_s and stay in range; a two-evaluation search on a planted diagram writes JSONL with the literature set first, then resumes and appends only the third evaluation with the same parameter sequence for the same seed |
+
