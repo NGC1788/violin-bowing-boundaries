@@ -79,6 +79,15 @@ class CalibrateTests(unittest.TestCase):
             second = [json.loads(line)["params"] for line in out.read_text().splitlines()]
             self.assertEqual(second[1], saved[1]["params"])
 
+            # batching parameter sets changes only the wall clock, not the evaluations
+            batched = base / "calib_batched.jsonl"
+            self.calibrate.run("old", layout.reports, layout.cache, batched, bs.Backend(), 50_000, 5, 4, 3, 0,
+                               None, False, progress=lambda *_: None, batch_params=3)
+            one_by_one = [json.loads(line) for line in out.read_text().splitlines()]
+            together = [json.loads(line) for line in batched.read_text().splitlines()]
+            self.assertEqual([r["params"] for r in together], [r["params"] for r in one_by_one])
+            self.assertEqual([r["helmholtz_iou"] for r in together], [r["helmholtz_iou"] for r in one_by_one])
+
 
 if __name__ == "__main__":
     unittest.main()

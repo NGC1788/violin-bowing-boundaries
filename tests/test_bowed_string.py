@@ -100,3 +100,42 @@ class WaveguideTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+@unittest.skipIf(np is None, "numpy not installed")
+class PerStrokeParameterTests(unittest.TestCase):
+    """Arrays of string and friction values let several parameter sets share one batch."""
+
+    def test_batched_parameters_match_separate_runs(self):
+        settings = [dict(q1=2000.0, corner_hz=6000.0, mu_s=0.6725, mu_d=0.346, v0=0.06),
+                    dict(q1=600.0, corner_hz=12000.0, mu_s=0.9, mu_d=0.25, v0=0.15)]
+        betas, speeds, forces = [0.1, 0.05], [0.1, 0.1], [3.0, 2.0]
+        separate = []
+        for setting in settings:
+            string = bs.StringParams(q1=setting["q1"], corner_hz=setting["corner_hz"])
+            friction = bs.FrictionParams(setting["mu_s"], setting["mu_d"], setting["v0"])
+            separate.append(stroke_with(betas, speeds, forces, string, friction))
+        tiled = bs.StringParams(q1=np.array([s["q1"] for s in settings for _ in betas]),
+                                corner_hz=np.array([s["corner_hz"] for s in settings for _ in betas]))
+        friction = bs.FrictionParams(np.array([s["mu_s"] for s in settings for _ in betas]),
+                                     np.array([s["mu_d"] for s in settings for _ in betas]),
+                                     np.array([s["v0"] for s in settings for _ in betas]))
+        together = stroke_with(betas * 2, speeds * 2, forces * 2, tiled, friction)
+        for index, one in enumerate(separate):
+            for column in range(len(betas)):
+                np.testing.assert_allclose(together[:, index * len(betas) + column], one[:, column], atol=1e-9)
+
+    def test_scalar_parameters_are_unchanged(self):
+        plain = stroke_with([0.1], [0.1], [4.0], bs.StringParams(), bs.FrictionParams())
+        arrayed = stroke_with([0.1], [0.1], [4.0], bs.StringParams(q1=np.array([2000.0])), bs.FrictionParams())
+        np.testing.assert_allclose(plain, arrayed, atol=1e-12)
+
+
+def stroke_with(betas, speeds, forces, string, friction, seconds=0.4, rate=RATE):
+    points = int(seconds * 1000) + 2
+    t = (np.arange(points) + 0.5) / 1000
+    velocity = np.minimum(t[:, None] / 0.1, 1.0) * np.asarray(speeds, float)[None, :]
+    force = np.broadcast_to(np.asarray(forces, float), (points, len(betas))).copy()
+    steps = int(seconds * rate)
+    return bs.simulate(bs.Backend(), string, friction, betas, velocity, force, 1000, rate, 0.0, steps, 1,
+                       record_from=steps - 10_000)

@@ -95,19 +95,25 @@ def grid_positions(reports: Path, diagram: str) -> dict:
     return positions
 
 
-def simulate_labels(backend, string_kwargs, friction, cells, profiles, settings, rate, seed, batch_size=512):
-    """Labels for the sampled cells under one parameter set; no files are written."""
-    labels = {}
+def simulate_labels(backend, params_list, cells, profiles, settings, rate, seed, batch_size=256):
+    """Labels for the sampled cells, for every parameter set at once; no files are written.
+
+    Each candidate is another stroke in the same batch, because the per-step cost is dominated
+    by launch overhead: evaluating 16 parameter sets together costs about the same as one.
+    """
+    sets = len(params_list)
+    labels: list[dict] = [dict() for _ in params_list]
+    thresholds = {**regime_map.DEFAULT_THRESHOLDS, "min_amplitude": settings["floor"]}
     for name, group in cells.items():
-        string = bs.StringParams(f0=settings["reference_f0"][name], impedance=settings["impedance"], **string_kwargs)
-        thresholds = {**regime_map.DEFAULT_THRESHOLDS, "min_amplitude": settings["floor"]}
         group = sorted(group, key=lambda r: int(r["window_start"]))
         for offset in range(0, len(group), batch_size):
             batch = group[offset:offset + batch_size]
+            width = len(batch)
             numbers = [int(r["trial"]) for r in batch]
             stack = [profiles[(name, n)] for n in numbers]
             length = max(p.shape[0] for p in stack)
             padded = np.stack([np.concatenate([p, np.repeat(p[-1:], length - p.shape[0], axis=0)]) for p in stack], axis=1)
+            padded = np.tile(padded, (1, sets, 1))
             onsets = []
             for p in stack:
                 moving = np.flatnonzero(p[:, 1] > simulate_grid.ONSET_SPEED)
@@ -115,17 +121,22 @@ def simulate_labels(backend, string_kwargs, friction, cells, profiles, settings,
             starts = [int(r["window_start"]) for r in batch]
             ends = [int(r["window_end"]) for r in batch]
             plan = simulate_grid.batch_window(starts, ends, onsets, rate)
-            bridge = bs.simulate(backend, string, friction, [float(r["beta"]) for r in batch], padded[:, :, 1],
-                                 padded[:, :, 0], RATE / trial_audit.PROFILE_DECIMATION, rate,
+            per_stroke = lambda key: np.repeat([p[key] for p in params_list], width)  # noqa: E731
+            string = bs.StringParams(f0=settings["reference_f0"][name], impedance=settings["impedance"],
+                                     q1=per_stroke("q1"), corner_hz=per_stroke("corner_hz"))
+            friction = bs.FrictionParams(per_stroke("mu_s"), per_stroke("mu_d"), per_stroke("v0"))
+            bridge = bs.simulate(backend, string, friction, np.tile([float(r["beta"]) for r in batch], sets),
+                                 padded[:, :, 1], padded[:, :, 0], RATE / trial_audit.PROFILE_DECIMATION, rate,
                                  plan["first_sample"] / RATE, plan["steps"], plan["every"], plan["record_from"])
-            for i, (n, start, end) in enumerate(zip(numbers, starts, ends)):
-                window = bridge[start - plan["record_start"]:end + 1 - plan["record_start"], i].astype(float)
-                window = window + np.random.default_rng(seed + n).normal(0.0, settings["noise"], window.size)
-                periodicity, f0 = regime_map.dominant_period(window)
-                shape = regime_map.flyback_structure(window, RATE / f0 if math.isfinite(f0) else math.nan)
-                labels[(name, n)] = regime_map.classify(float(np.std(window)), periodicity, f0,
-                                                        shape["flybacks_per_period"],
-                                                        settings["reference_f0"][name], thresholds)
+            for k in range(sets):
+                for i, (n, start, end) in enumerate(zip(numbers, starts, ends)):
+                    window = bridge[start - plan["record_start"]:end + 1 - plan["record_start"], k * width + i].astype(float)
+                    window = window + np.random.default_rng(seed + n).normal(0.0, settings["noise"], window.size)
+                    periodicity, f0 = regime_map.dominant_period(window)
+                    shape = regime_map.flyback_structure(window, RATE / f0 if math.isfinite(f0) else math.nan)
+                    labels[k][(name, n)] = regime_map.classify(float(np.std(window)), periodicity, f0,
+                                                               shape["flybacks_per_period"],
+                                                               settings["reference_f0"][name], thresholds)
     return labels
 
 
@@ -157,22 +168,23 @@ def draw(rng, space=SPACE) -> dict:
     return values
 
 
-def evaluate(backend, params, cells, profiles, settings, rate, seed) -> dict:
-    friction = bs.FrictionParams(params["mu_s"], params["mu_d"], params["v0"])
-    string_kwargs = {"q1": params["q1"], "corner_hz": params["corner_hz"]}
+def evaluate(backend, params_list, cells, profiles, settings, rate, seed) -> list[dict]:
     began = time.monotonic()
-    simulated = simulate_labels(backend, string_kwargs, friction, cells, profiles, settings, rate, seed)
-    result = {"params": {k: round(v, 5) for k, v in params.items()}, **score(cells, simulated),
-              "seconds": round(time.monotonic() - began, 1)}
-    counts: dict[str, int] = {}
-    for label in simulated.values():
-        counts[label] = counts.get(label, 0) + 1
-    result["simulated_classes"] = counts
-    return result
+    simulated = simulate_labels(backend, params_list, cells, profiles, settings, rate, seed)
+    elapsed = round((time.monotonic() - began) / max(1, len(params_list)), 1)
+    results = []
+    for params, labels in zip(params_list, simulated):
+        counts: dict[str, int] = {}
+        for label in labels.values():
+            counts[label] = counts.get(label, 0) + 1
+        results.append({"params": {k: round(v, 5) for k, v in params.items()}, **score(cells, labels),
+                        "seconds": elapsed, "simulated_classes": counts})
+    return results
 
 
 def run(diagram: str, reports: Path, cache_root: Path, out_path: Path, backend, rate: int, levels: int, ranks: int,
-        iterations: int, seed: int, conditions: list[str] | None, hold_out: bool, progress=print) -> dict:
+        iterations: int, seed: int, conditions: list[str] | None, hold_out: bool, progress=print,
+        batch_params: int = 16) -> dict:
     cells, profiles, settings = load_cells(reports, cache_root, diagram, levels, ranks)
     all_conditions = sorted(cells)
     train = [c for c in all_conditions if not conditions or c in conditions]
@@ -194,27 +206,31 @@ def run(diagram: str, reports: Path, cache_root: Path, out_path: Path, backend, 
         draw(rng)  # keep the sequence aligned with the saved evaluations
     literature = {"mu_s": bs.FrictionParams.mu_s, "mu_d": bs.FrictionParams.mu_d, "v0": bs.FrictionParams.v0,
                   "q1": bs.StringParams.q1, "corner_hz": bs.StringParams.corner_hz}
-    for index in range(len(done), iterations):
-        params = literature if index == 0 else draw(rng)
-        result = evaluate(backend, params, train_cells, profiles, settings, rate, seed)
-        result.update(index=index, kind="literature" if index == 0 else "random",
-                      utc=datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ"))
-        if best is None or result["helmholtz_iou"] > best["helmholtz_iou"]:
-            best = result
-            if test_cells:
-                best["hold_out"] = score(test_cells, simulate_labels(
-                    backend, {"q1": params["q1"], "corner_hz": params["corner_hz"]},
-                    bs.FrictionParams(params["mu_s"], params["mu_d"], params["v0"]),
-                    test_cells, profiles, settings, rate, seed))
-            result["best_so_far"] = True
-        with out_path.open("a", encoding="utf-8") as handle:
-            handle.write(json.dumps(result, ensure_ascii=False) + "\n")
-        mark = "  <= best" if result.get("best_so_far") else ""
-        progress(f"  [{index}] IoU {result['helmholtz_iou']:.3f} agree {result['agreement']:.3f} "
-                 f"({result['seconds']:.0f}s) {result['params']}{mark}")
-        if result.get("best_so_far") and "hold_out" in best:
-            progress(f"        hold-out {test}: IoU {best['hold_out']['helmholtz_iou']:.3f} "
-                     f"agree {best['hold_out']['agreement']:.3f}")
+    index = len(done)
+    while index < iterations:
+        # index 0 uses the literature set but still draws, so resuming stays aligned with the sequence
+        group = [literature if index + k == 0 else candidate
+                 for k, candidate in enumerate(draw(rng) for _ in range(min(batch_params, iterations - index)))]
+        results = evaluate(backend, group, train_cells, profiles, settings, rate, seed)
+        for k, result in enumerate(results):
+            result.update(index=index + k, kind="literature" if index + k == 0 else "random",
+                          utc=datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ"))
+            if best is None or result["helmholtz_iou"] > best["helmholtz_iou"]:
+                best = result
+                result["best_so_far"] = True
+                if test_cells:
+                    held = simulate_labels(backend, [result["params"]], test_cells, profiles, settings, rate, seed)
+                    best["hold_out"] = score(test_cells, held[0])
+                    result["hold_out"] = best["hold_out"]
+            with out_path.open("a", encoding="utf-8") as handle:
+                handle.write(json.dumps(result, ensure_ascii=False) + "\n")
+            mark = "  <= best" if result.get("best_so_far") else ""
+            progress(f"  [{result['index']}] IoU {result['helmholtz_iou']:.3f} agree {result['agreement']:.3f} "
+                     f"({result['seconds']:.0f}s/set) {result['params']}{mark}")
+            if result.get("hold_out"):
+                progress(f"        hold-out {test}: IoU {result['hold_out']['helmholtz_iou']:.3f} "
+                         f"agree {result['hold_out']['agreement']:.3f}")
+        index += len(group)
     progress(f"BEST: IoU {best['helmholtz_iou']:.3f} agree {best['agreement']:.3f} params {best['params']}"
              if best else "no evaluations")
     return best or {}
@@ -233,6 +249,8 @@ def main(argv=None) -> int:
     parser.add_argument("--device", default="cuda")
     parser.add_argument("--dtype", default="float64")
     parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--batch-params", type=int, default=16,
+                        help="parameter sets simulated in one batch (nearly free: the step cost is launch-bound)")
     parser.add_argument("--out", type=Path, default=None)
     args = parser.parse_args(argv)
     backend = simulate_grid.pick_backend(args.backend, args.device, args.dtype)
@@ -240,7 +258,7 @@ def main(argv=None) -> int:
     try:
         run(args.diagram, PROJECT_ROOT / "reports" / "collection", PROJECT_ROOT / "data" / "cache", out, backend,
             args.rate, args.levels, args.ranks, args.iterations, args.seed, args.conditions, args.hold_out,
-            lambda line: print(line, flush=True))
+            lambda line: print(line, flush=True), args.batch_params)
         return 0
     except (FileNotFoundError, KeyError, ValueError, regime_map.RegimeError) as error:
         print("CALIBRATE: FAIL —", error, file=sys.stderr)

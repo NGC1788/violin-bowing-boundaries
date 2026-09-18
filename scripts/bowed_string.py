@@ -14,8 +14,10 @@ A modal stiff-string version was tried first and rejected: with a point bow its 
 bow admittance depends on the time step (bending stiffness), so the friction solution does
 not converge as the step shrinks.
 
-Every stroke in a batch shares one string and has its own beta, bow-velocity and bow-force
-histories. Array code runs on numpy or torch through a small backend shim; the per-step cost
+Every stroke in a batch has its own beta, bow-velocity and bow-force histories. String and
+friction values may be scalars (one string for the batch) or arrays with one value per
+stroke, which lets many parameter sets run in the same batch: the per-step cost is dominated
+by launch overhead, not by the batch size. Array code runs on numpy or torch through a small backend shim; the per-step cost
 is independent of the number of string modes.
 """
 
@@ -133,12 +135,15 @@ def friction_step(backend: Backend, free_slip, admittance, normal_force, stickin
     return force, stick, slip
 
 
-def reflection_coefficients(string: StringParams, rate: float) -> tuple[float, float]:
-    """(gain, pole) of y[n] = gain ((1 - pole) x[n] + pole y[n-1]); two reflections per period give Q1."""
-    pole = math.exp(-2 * math.pi * string.corner_hz / rate)
-    omega = 2 * math.pi * string.f0 / rate
-    lowpass = abs((1 - pole) / (1 - pole * complex(math.cos(omega), -math.sin(omega))))
-    gain = math.exp(-math.pi / (2 * string.q1)) / lowpass
+def reflection_coefficients(string: StringParams, rate: float):
+    """(gain, pole) of y[n] = gain ((1 - pole) x[n] + pole y[n-1]); two reflections per period give Q1.
+
+    Scalars or per-stroke arrays.
+    """
+    pole = np.exp(-2 * np.pi * np.asarray(string.corner_hz, dtype=float) / rate)
+    omega = 2 * np.pi * np.asarray(string.f0, dtype=float) / rate
+    lowpass = np.abs((1 - pole) / (1 - pole * np.exp(-1j * omega)))
+    gain = np.exp(-np.pi / (2 * np.asarray(string.q1, dtype=float))) / lowpass
     return gain, pole
 
 
@@ -156,15 +161,20 @@ def simulate(backend: Backend, string: StringParams, friction: FrictionParams, b
     xp = backend
     betas = np.asarray(betas, dtype=float)
     batch = betas.size
-    c = string.wave_speed
+    spread = lambda value: np.broadcast_to(np.asarray(value, dtype=float), (batch,)).astype(float)  # noqa: E731
+    c = spread(string.wave_speed)
     gain, pole = reflection_coefficients(string, rate)
+    gain, pole = spread(gain), spread(pole)
     lag = pole / (1 - pole)  # low-frequency group delay of each reflection filter, removed from its line
     delay_bridge = 2 * betas * string.length * rate / c - lag     # round trip bow -> bridge -> bow, samples
     delay_nut = 2 * (1 - betas) * string.length * rate / c - lag
     if np.any(delay_bridge < 2):
         raise ValueError("beta too small for this rate: raise the rate so the bridge round trip is >= 2 samples")
     size = int(math.ceil(delay_nut.max())) + 3
-    admittance = 1 / (2 * string.impedance)
+    impedance = spread(string.impedance)
+    admittance = 1 / (2 * impedance)
+    gain, pole = xp.asarray(gain), xp.asarray(pole)
+    impedance_t, admittance_t = xp.asarray(impedance), xp.asarray(admittance)
     rows = xp.index(np.arange(batch))
     buffer_b, buffer_n = xp.zeros((batch, size)), xp.zeros((batch, size))
     state_b, state_n = xp.zeros((batch,)), xp.zeros((batch,))
@@ -192,12 +202,12 @@ def simulate(backend: Backend, string: StringParams, friction: FrictionParams, b
         fn = force_profile[j] * (1 - frac) + force_profile[j + 1] * frac
         state_b = gain * ((1 - pole) * read(buffer_b, d_b, n) + pole * state_b)
         state_n = gain * ((1 - pole) * read(buffer_n, d_n, n) + pole * state_n)
-        force, sticking, _ = friction_step(xp, vb + state_b + state_n, admittance, fn, sticking, friction)
+        force, sticking, _ = friction_step(xp, vb + state_b + state_n, admittance_t, fn, sticking, friction)
         column = n % size
-        buffer_b[:, column] = -state_n + admittance * force   # toward the bridge: from the nut side plus the bow
-        buffer_n[:, column] = -state_b + admittance * force
+        buffer_b[:, column] = -state_n + admittance_t * force  # toward the bridge: from the nut side plus the bow
+        buffer_n[:, column] = -state_b + admittance_t * force
         if n >= record_from:
-            accumulator = accumulator + 2 * string.impedance * read(buffer_b, d_half, n)
+            accumulator = accumulator + 2 * impedance_t * read(buffer_b, d_half, n)
             if (n - record_from + 1) % output_every == 0:
                 chunk.append(accumulator / output_every)
                 accumulator = accumulator * 0

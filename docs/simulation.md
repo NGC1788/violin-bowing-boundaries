@@ -72,6 +72,7 @@ nohup bash scripts/run.sh simulate --diagram 2024-03-25_TypeA_sample1 > logs/sim
 - 표본은 β 수준 몇 개를 골라 그 힘 열 전체를 쓴다. 경계가 어디 있는지 보이게 하기 위해서다.
 - 모든 평가는 `reports/calibration/<격자>_rate<속도>.jsonl`에 한 줄씩 append된다. 중단해도 같은 명령으로 이어서 하고, 같은 seed면 같은 순서로 탐색한다.
 - 첫 평가(index 0)는 항상 문헌값이다. 보정이 문헌값보다 나아졌는지 바로 비교할 수 있다.
+- **파라미터 조합 여러 개를 한 배치로 동시에 계산한다**(`--batch-params`, 기본 16). 한 시간 단계의 비용이 GPU 명령 대기 시간에 지배되므로, 16개를 같이 돌려도 1개와 시간이 거의 같다. 결과는 하나씩 돌린 것과 동일하다(테스트로 확인).
 
 ```bash
 # 한 속도로 보정하고 나머지 속도로 시험
@@ -80,4 +81,15 @@ tail -f logs/calibrate.log
 ```
 
 **보정한 속도에서 좋아진 것은 결과가 아니다.** 시험용으로 남겨 둔 속도(`hold-out`)에서의 점수가 물리 모델의 예측력이다.
+
+## 밤새 돌리기 (`scripts/overnight.sh`)
+
+보정 → 보정값으로 전체 격자 시뮬레이션(가진 격자 전부) → 문헌값 기준선 순서로 이어서 실행한다.
+
+```bash
+nohup bash scripts/overnight.sh >> logs/overnight.log 2>&1 < /dev/null &
+tail -f logs/overnight.log
+```
+
+환경변수로 조정한다: `DIAGRAM`, `TRAIN`(보정에 쓸 속도 폴더), `ITER`, `RATE`(탐색용, 기본 50 kHz), `FINAL_RATE`(최종 확인용, 기본 100 kHz), `LEVELS`, `RANKS`, `SETS`.
 
