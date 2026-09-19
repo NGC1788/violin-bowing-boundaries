@@ -135,6 +135,36 @@ def export_run(grid: str, run: Path, out: Path) -> dict:
     return {"grid": grid, "run": str(run), "trials": len(rows), "examples": saved}
 
 
+def export_comparisons(reports: Path, out: Path) -> int:
+    """Simulation-versus-measurement reports: agreement, Helmholtz IoU, confusion, slopes."""
+    destination = out / "comparison"
+    found = 0
+    for path in sorted(reports.rglob("comparison.json")):
+        destination.mkdir(parents=True, exist_ok=True)
+        # .../simulation/<diagram>/<run>/comparison.json
+        name = f"{path.parent.parent.name}__{path.parent.name}.json"
+        shutil.copy2(path, destination / name)
+        found += 1
+    progress(f"- comparison reports {found}")
+    return found
+
+
+def export_calibration(reports: Path, out: Path) -> int:
+    """The calibration search trace, one evaluation per line."""
+    source = reports / "calibration"
+    if not source.is_dir():
+        progress("- calibration trace not found")
+        return 0
+    destination = out / "calibration"
+    destination.mkdir(parents=True, exist_ok=True)
+    lines = 0
+    for path in sorted(source.glob("*.jsonl")):
+        shutil.copy2(path, destination / path.name)
+        lines += sum(1 for line in path.read_text(encoding="utf-8").splitlines() if line.strip())
+    progress(f"- calibration evaluations {lines}")
+    return lines
+
+
 def directory_size(path: Path) -> int:
     return sum(item.stat().st_size for item in path.rglob("*") if item.is_file())
 
@@ -156,7 +186,11 @@ def main(argv: list[str] | None = None) -> int:
 
     options.out.mkdir(parents=True, exist_ok=True)
     manifest = [export_run(grid, run, options.out) for grid, run in sorted(runs.items())]
-    (options.out / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+    comparisons = export_comparisons(options.reports, options.out)
+    calibration = export_calibration(options.reports, options.out)
+    (options.out / "manifest.json").write_text(
+        json.dumps({"grids": manifest, "comparison_reports": comparisons, "calibration_evaluations": calibration},
+                   ensure_ascii=False, indent=2), encoding="utf-8")
 
     if options.archive:
         archive = options.out.with_suffix(".tar.gz")
