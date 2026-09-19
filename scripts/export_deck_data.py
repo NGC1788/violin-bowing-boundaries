@@ -23,8 +23,6 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_REPORTS = PROJECT_ROOT / "reports"
 DEFAULT_OUT = Path.home() / "deck_export"
 PLOTS = ("regime_map.png", "examples.png", "features.png", "flyback_law.png")
-# One window is 0.4 s at 50 kHz; a few periods are enough to show the shape.
-EXAMPLE_PERIODS = 6
 EXAMPLES_PER_LABEL = 2
 
 
@@ -102,10 +100,15 @@ def export_examples(summary: dict, rows: list[dict], destination: Path) -> int:
             continue
         f0 = float(row.get("f0_hz") or "nan")
         rate = float(summary.get("rate_hz") or 50000.0)
-        span = int(EXAMPLE_PERIODS * rate / f0) if np.isfinite(f0) and f0 > 0 else 2000
         name = f"{condition}__{trial}"
-        arrays[name] = np.asarray(window[:span, 2], dtype=np.float32)
+        # The whole analysis window, because the classifier folds every period it has;
+        # a short excerpt does not average the ripple down and would count differently.
+        arrays[name] = np.asarray(window[:, 2], dtype=np.float32)
+        profile = root / condition / f"profile_{trial}.npy"
+        if profile.is_file():
+            arrays[f"{name}__profile"] = np.asarray(np.load(profile, allow_pickle=False), dtype=np.float32)
         meta.append({"name": name, "condition": condition, "trial": trial, "label": row["label"],
+                     "window_start": start, "window_end": end,
                      "beta": row.get("beta"), "force_rank": row.get("force_rank"),
                      "c1_window_mean": row.get("c1_window_mean"), "c2_window_mean": row.get("c2_window_mean"),
                      "f0_hz": row.get("f0_hz"), "periodicity": row.get("periodicity"),
