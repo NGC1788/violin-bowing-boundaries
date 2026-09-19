@@ -91,3 +91,41 @@ class CalibrateTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+@unittest.skipIf(np is None, "numpy not installed")
+class SearchBoxTests(unittest.TestCase):
+    def setUp(self):
+        sys.path[:0] = [str(SCRIPTS), str(TESTS)]
+        import calibrate
+        self.calibrate = calibrate
+
+    def test_space_override_is_used(self):
+        space = self.calibrate.parse_space(["corner_hz=300:900", "mu_s=0.8:0.9"])
+        rng = np.random.default_rng(1)
+        for _ in range(50):
+            params = self.calibrate.draw(rng, space)
+            self.assertTrue(300 <= params["corner_hz"] <= 900)
+            self.assertTrue(0.8 <= params["mu_s"] <= 0.9)
+            self.assertTrue(0.01 <= params["v0"] <= 0.4)  # untouched entries keep their bounds
+        for bad in ("nope=1:2", "mu_s=2", "mu_s=3:1", "mu_s=0:2"):
+            with self.assertRaises(ValueError):
+                self.calibrate.parse_space([bad])
+
+    def test_refinement_stays_near_the_centre(self):
+        centre = {"mu_s": 0.9, "mu_d": 0.26, "v0": 0.06, "q1": 3700.0, "corner_hz": 1900.0}
+        rng = np.random.default_rng(2)
+        for _ in range(100):
+            params = self.calibrate.draw(rng, self.calibrate.SPACE, centre, 1.5)
+            for name, value in centre.items():
+                low, high, _ = self.calibrate.SPACE[name]
+                self.assertGreaterEqual(params[name], max(low, value / 1.5) - 1e-9)
+                self.assertLessEqual(params[name], min(high, value * 1.5) + 1e-9)
+
+    def test_best_of_picks_the_highest_iou(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "a.jsonl"
+            path.write_text("\n".join(json.dumps({"helmholtz_iou": iou, "params": {"mu_s": iou}})
+                                      for iou in (0.2, 0.7, 0.5)) + "\n")
+            self.assertEqual(self.calibrate.best_of([path])["params"], {"mu_s": 0.7})
+            self.assertIsNone(self.calibrate.best_of([Path(tmp) / "missing.jsonl"]))

@@ -265,3 +265,16 @@ A suspected operator-precedence bug in the noise default turned out to be correc
 | `python -m unittest discover -s tests` | PASS (1 skipped: no 7-Zip) | New: column sampling covers whole force columns at spaced levels; IoU and agreement counted correctly; drawn parameters keep mu_d < mu_s and stay in range; a two-evaluation search on a planted diagram writes JSONL with the literature set first, then resumes and appends only the third evaluation with the same parameter sequence for the same seed |
 
 **Batched parameter sets — 2026-09-19.** A `--limit 10` run on the server took 1,156 s for 30 strokes: 1.7 ms per step for a batch of 10, so the cost is launch overhead, not arithmetic. `bowed_string.simulate` now accepts per-stroke string and friction values, and `calibrate` evaluates `--batch-params` candidates in one batch. A test simulates two parameter sets separately and together and requires identical bridge force; another runs the search with `--batch-params 3` and requires the same parameter sequence and scores as one-by-one. A resume-alignment defect was found by that test (evaluation 0 used the literature set without drawing, so a resumed run diverged) and fixed by always drawing.
+
+### First calibration run — 2026-09-19
+
+Server run (`overnight.sh`, diagram `2024-03-25_TypeA_sample1`, trained on `2024-03-27_r_v2` only, 50 kHz, 500 cells, 1,424 of 1,500 sets, 29 s per set):
+
+| | Helmholtz IoU | label agreement |
+|---|---|---|
+| literature parameters | 0.352 | 0.594 |
+| best found | 0.738 | 0.710 |
+| best, held-out bow speeds (1,000 cells) | 0.661 | 0.703 |
+
+The held-out speeds were never used in the search, so the gain is not fitting noise. The top five sets all sit at `corner_hz` 1,538–1,983 against a search floor of 1,500, and `mu_s` clusters near its ceiling: the optimum is outside the box. `calibrate` now takes `--space name=low:high` and `--around-best FACTOR` (with `--seed-from`) so the box can be widened and the neighbourhood refined; tests cover box overrides, refinement bounds and picking the best row.
+

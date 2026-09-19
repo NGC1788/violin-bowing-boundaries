@@ -157,9 +157,28 @@ def score(cells, simulated) -> dict:
             "agreement": round(agree / total, 4) if total else 0.0}
 
 
-def draw(rng, space=SPACE) -> dict:
+def parse_space(overrides, space=SPACE) -> dict:
+    """``name=low:high`` strings override the search box; the scale of the original entry is kept."""
+    updated = dict(space)
+    for item in overrides or []:
+        name, _, bounds = item.partition("=")
+        if name not in space or bounds.count(":") != 1:
+            raise ValueError(f"--space expects name=low:high with name in {sorted(space)}: {item!r}")
+        low, high = (float(v) for v in bounds.split(":"))
+        if not 0 < low < high:
+            raise ValueError(f"--space needs 0 < low < high: {item!r}")
+        updated[name] = (low, high, space[name][2])
+    return updated
+
+
+def draw(rng, space=SPACE, center: dict | None = None, factor: float = 1.6) -> dict:
+    """A random set inside the box; with ``center``, inside a factor of that set (refinement)."""
     values = {}
     for name, (low, high, log) in space.items():
+        if center and name in center:
+            low, high, log = max(low, center[name] / factor), min(high, center[name] * factor), True
+            if not low < high:
+                low, high, log = space[name][0], space[name][1], space[name][2]
         u = rng.random()
         values[name] = float(math.exp(math.log(low) + u * (math.log(high) - math.log(low))) if log
                              else low + u * (high - low))
@@ -182,9 +201,16 @@ def evaluate(backend, params_list, cells, profiles, settings, rate, seed) -> lis
     return results
 
 
+def best_of(paths) -> dict | None:
+    rows = [json.loads(line) for path in paths if Path(path).exists()
+            for line in Path(path).read_text(encoding="utf-8").splitlines() if line.strip()]
+    return max(rows, key=lambda r: r["helmholtz_iou"], default=None)
+
+
 def run(diagram: str, reports: Path, cache_root: Path, out_path: Path, backend, rate: int, levels: int, ranks: int,
         iterations: int, seed: int, conditions: list[str] | None, hold_out: bool, progress=print,
-        batch_params: int = 16) -> dict:
+        batch_params: int = 16, space: dict | None = None, around: float | None = None,
+        seed_from: list | None = None) -> dict:
     cells, profiles, settings = load_cells(reports, cache_root, diagram, levels, ranks)
     all_conditions = sorted(cells)
     train = [c for c in all_conditions if not conditions or c in conditions]
@@ -201,16 +227,24 @@ def run(diagram: str, reports: Path, cache_root: Path, out_path: Path, backend, 
         done = [json.loads(line) for line in out_path.read_text(encoding="utf-8").splitlines() if line.strip()]
         progress(f"  resuming after {len(done)} evaluations")
     best = max(done, key=lambda r: r["helmholtz_iou"], default=None)
+    space = space or SPACE
+    center = None
+    if around:
+        source = best_of(list(seed_from or []) + [out_path])
+        if not source:
+            raise ValueError("--around-best needs earlier evaluations; pass --seed-from with a calibration file")
+        center = source["params"]
+        progress(f"  refining within a factor of {around} around IoU {source['helmholtz_iou']}: {center}")
     rng = np.random.default_rng(seed)
     for _ in range(len(done)):
-        draw(rng)  # keep the sequence aligned with the saved evaluations
+        draw(rng, space, center, around or 1.6)  # keep the sequence aligned with the saved evaluations
     literature = {"mu_s": bs.FrictionParams.mu_s, "mu_d": bs.FrictionParams.mu_d, "v0": bs.FrictionParams.v0,
                   "q1": bs.StringParams.q1, "corner_hz": bs.StringParams.corner_hz}
     index = len(done)
     while index < iterations:
         # index 0 uses the literature set but still draws, so resuming stays aligned with the sequence
-        group = [literature if index + k == 0 else candidate
-                 for k, candidate in enumerate(draw(rng) for _ in range(min(batch_params, iterations - index)))]
+        drawn = [draw(rng, space, center, around or 1.6) for _ in range(min(batch_params, iterations - index))]
+        group = [literature if index + k == 0 and not center else candidate for k, candidate in enumerate(drawn)]
         results = evaluate(backend, group, train_cells, profiles, settings, rate, seed)
         for k, result in enumerate(results):
             result.update(index=index + k, kind="literature" if index + k == 0 else "random",
@@ -249,6 +283,12 @@ def main(argv=None) -> int:
     parser.add_argument("--device", default="cuda")
     parser.add_argument("--dtype", default="float64")
     parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--space", action="append",
+                        help="widen or narrow the search box: name=low:high (repeatable)")
+    parser.add_argument("--around-best", type=float, default=None, metavar="FACTOR",
+                        help="refine: sample within this factor of the best set found so far")
+    parser.add_argument("--seed-from", action="append", type=Path,
+                        help="calibration files to take the refinement centre from (repeatable)")
     parser.add_argument("--batch-params", type=int, default=16,
                         help="parameter sets simulated in one batch (nearly free: the step cost is launch-bound)")
     parser.add_argument("--out", type=Path, default=None)
@@ -258,7 +298,8 @@ def main(argv=None) -> int:
     try:
         run(args.diagram, PROJECT_ROOT / "reports" / "collection", PROJECT_ROOT / "data" / "cache", out, backend,
             args.rate, args.levels, args.ranks, args.iterations, args.seed, args.conditions, args.hold_out,
-            lambda line: print(line, flush=True), args.batch_params)
+            lambda line: print(line, flush=True), args.batch_params, parse_space(args.space),
+            args.around_best, args.seed_from)
         return 0
     except (FileNotFoundError, KeyError, ValueError, regime_map.RegimeError) as error:
         print("CALIBRATE: FAIL —", error, file=sys.stderr)
