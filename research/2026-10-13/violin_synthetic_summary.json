@@ -1,0 +1,62 @@
+{
+  "scope": "synthetic generic strings at violin frequencies, no experimental validation",
+  "parameter_assumptions": {
+    "Z_kg_s": 1.0,
+    "length_m": 0.328,
+    "requested_Q1": 200.0,
+    "corner_hz": 6000.0,
+    "friction": {
+      "mu_s": 0.6725,
+      "mu_d": 0.346,
+      "v0": 0.06
+    },
+    "equal_tempered_A4_hz": 440.0,
+    "frequencies": {
+      "G3": 195.99771799087463,
+      "D4": 293.6647679174076,
+      "A4": 440.0,
+      "E5": 659.2551138257398
+    }
+  },
+  "protocol": {
+    "duration_s": 0.6,
+    "record_from_s": 0.2,
+    "ramp_s": 0.1,
+    "output_rate_hz": 50000,
+    "main_simulation_rate": 100000,
+    "observation_noise": 0.0,
+    "batch": 64,
+    "threads": 2,
+    "frequency_search_relative_to_reference": [
+      0.4,
+      3.5
+    ],
+    "rate_subset_selection": "force ranks 6 and 16 of 20, for every pitch/beta/speed"
+  },
+  "main_cases": 960,
+  "multirate_cases": 96,
+  "total_simulated_strokes": 1146,
+  "rate50k_rejected": 6,
+  "rate200k_rejected": 0,
+  "main_shape_label_counts": {
+    "multiple_slip": 374,
+    "ambiguous": 64,
+    "helmholtz": 306,
+    "aperiodic": 76,
+    "subharmonic": 140
+  },
+  "rate_50k_100k_label_comparisons": 90,
+  "rate_100k_200k_label_comparisons": 96,
+  "rate_50k_100k_label_disagreements": 21,
+  "rate_100k_200k_label_disagreements": 19,
+  "rate_all_three_agree": 65,
+  "max_contact_residual": 3.552713678800501e-15,
+  "min_friction_dissipation": 0.0,
+  "elapsed_seconds": 2.145920375129208,
+  "caveats": [
+    "Shape labels use the historical classifier, known to accept pure sine and triangle signals.",
+    "Internal stick fraction and slip onsets are simulated states, not empirical truth.",
+    "No body, stiffness, torsion, finite bow width, thermal friction or real string calibration.",
+    "Rate disagreement prevents a convergence claim from this experiment alone."
+  ]
+}

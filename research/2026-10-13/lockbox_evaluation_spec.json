@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-10-13T07:42:27.887597+00:00",
+  "frozen_model_fingerprint": "6191519763c552ef57f22062933714b0ad71403c159e479171d210c659544913",
+  "evaluator_sha256": "2dd03e4cdb8205a81f7e3e67fdd88cde5dcde2e455f47aa895d0cfd1c3b00264",
+  "feature_pipeline_sha256": {
+    "regime_map.py": "63afbfa6f479e30310eaab723d530cb043daf5ac7b84daefcb0d3b52ef75e1ce",
+    "trial_audit.py": "aa699b02375c0f27e1ca97ce3d3aa1c2bace4b2793436f9adcc7fc743e68c24b",
+    "grid_summary.py": "205fc47103c3d5f2d260e02ec5e67d9e8566b48f6b90e027c5a6d437e482933a"
+  },
+  "feature_settings": {
+    "flyback_frac": 0.5,
+    "hysteresis_sigma": 3.0,
+    "f0_search_hz": [
+      40.0,
+      160.0
+    ]
+  },
+  "sample_rate_hz": 50000,
+  "expected_raw_rows": 6000,
+  "expected_speed_panels": 3,
+  "target_outputs_used_only_for_labels": true,
+  "predictor_inputs": [
+    "beta",
+    "force_N",
+    "velocity_m_s"
+  ],
+  "original_target_label_ignored": true,
+  "notes": "The fold-cycle noise estimate is per waveform and enters the fixed hysteresis procedure; it is not the diagram-level no-contact floor. Target diagram f0/noise fitting is ignored in the final observation family.",
+  "spec_sha256": "98abb7aec35054ae8516f9c5c3f9ed8985a31bac9cc3d75a9800056d525822ad"
+}

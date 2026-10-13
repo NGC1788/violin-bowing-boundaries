@@ -1,0 +1,100 @@
+{
+  "created_utc": "2026-10-13T08:08:58.451843+00:00",
+  "scope": "Retrospective external published-author-classification comparison; not preregistered or blinded",
+  "source_doi": "10.3813/AAA.918070",
+  "source_figure": 4,
+  "physical_scope": "One real violin D4 string on rigid monochord; not assembled violin",
+  "primary_source_speed": 0.1,
+  "sensitivity_source_speeds": [
+    0.1,
+    0.05,
+    0.15,
+    0.2
+  ],
+  "target_speeds": "All other D4 speeds for each source; no source scores in target summary",
+  "strict_filter": "D4 and strict_systematically_analyzed True; unknown/gray omitted, never negatives",
+  "E_exclusion": "Published systematically analyzed cells concentrate at exterior/boundaries; gray interior deliberately unanalyzed",
+  "class_semantics": "author Helmholtz versus all other strictly analyzed published classes",
+  "observer_family": "none: exactly one author classification per cell",
+  "models": [
+    {
+      "name": "quadratic_static",
+      "learner": "quadratic_logistic",
+      "exponent": 0.0
+    },
+    {
+      "name": "quadratic_uniform",
+      "learner": "quadratic_logistic",
+      "exponent": 1.0
+    },
+    {
+      "name": "quadratic_raw3d",
+      "learner": "quadratic_logistic",
+      "exponent": null
+    },
+    {
+      "name": "rbf_static",
+      "learner": "rbf_svm",
+      "exponent": 0.0
+    },
+    {
+      "name": "rbf_uniform",
+      "learner": "rbf_svm",
+      "exponent": 1.0
+    },
+    {
+      "name": "boundary_uniform",
+      "exponents": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "boundary_static",
+      "exponents": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "boundary_asymmetric",
+      "exponents": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "boundary_reverse_falsification",
+      "exponents": [
+        1.0,
+        0.0
+      ]
+    }
+  ],
+  "C_grid": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "boundary_regularization_grid": [
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "source_selection": "Five source-only contiguous beta-column folds; pooled source OOF IoU at 0.5; first grid tie wins",
+  "boundary_prior_fairness": "One concave source fit and same selected regularization shared by all four fixed priors",
+  "source_normalization": "log(beta/.1),log(force/1N),log(speed/source_speed); static/uniform identical source coordinates",
+  "threshold": 0.5,
+  "primary_metric": "equal mean of target-speed IoUs",
+  "uncertainty": "No independent-instrument CI; one string, spatially dependent conditions, approximate reported beta",
+  "novelty": "Fixed known physics priors and standard classifiers; no new law or method claimed",
+  "plan_written_before_target_prediction": true,
+  "hashes": {
+    "research/2026-10-13/schoonderwaldt2008/benchmark_published.py": "7b806b6876e4d2e2b19491dc6530f311c85638d21e9a76b2ca8575893ca09e86",
+    "research/2026-10-13/schoonderwaldt2008/published_cells.csv": "71dec0ad57f8e4fad6f096e72225624856cb58b9ca3e4f82e070bf177557a3b9",
+    "scripts/boundary_transport.py": "9d27a339ce3b9e9a92633778de6a09cbd1960ff6f054831ce74379be22d54617",
+    "scripts/speed_prior_audit.py": "effa8704f27e8167ac5da8c51bee96fdd26107e518bf319e7a5fb25e23a63fc2",
+    "scripts/benchmark_sets.py": "a81c76dd23279104d6153abdd180064d20718a511fcd5a138e903fb626898a3f"
+  }
+}

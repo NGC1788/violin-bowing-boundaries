@@ -1,0 +1,5 @@
+source_doi,pdf_page_1based,journal_page,table,instrument,string,bow_speed_nominal_m_s,R_kg_per_s,c_upper_mN,c_upper_SE_mN,delta_mu,c_lower_mN,c_lower_SE_mN,c_lower_Schelleng_mN,fit_scope
+10.3813/AAA.918070,16,619,VII,monochord,D,0.1,76,86,8,0.58,0.47,0.04,0.070,aggregate_boundary_coefficients_not_independent_cell_labels
+10.3813/AAA.918070,16,619,VII,violin,D_open,0.1,65,91,8,0.55,0.69,0.04,0.088,aggregate_boundary_coefficients_not_independent_cell_labels
+10.3813/AAA.918070,16,619,VII,violin,D_stopped,0.1,45,103,2.4,0.49,1.56,0.13,0.143,aggregate_boundary_coefficients_not_independent_cell_labels
+10.3813/AAA.918070,16,619,VII,monochord,E,0.1,108,70,2.3,0.52,0.17,0.02,0.029,aggregate_boundary_coefficients_not_independent_cell_labels

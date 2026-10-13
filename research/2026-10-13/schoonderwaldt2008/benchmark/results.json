@@ -1,0 +1,4077 @@
+{
+  "elapsed_seconds": 0.7531649998854846,
+  "results": [
+    {
+      "source_speed": 0.1,
+      "model": "quadratic_static",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.7374301675977654,
+            "brier": 0.14571985971180965,
+            "error_rate": 0.17803030303030304,
+            "tp": 132,
+            "fp": 28,
+            "fn": 19,
+            "tn": 85
+          },
+          {
+            "C": 1.0,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8734939759036144,
+            "brier": 0.07166724714155538,
+            "error_rate": 0.07954545454545454,
+            "tp": 145,
+            "fp": 15,
+            "fn": 6,
+            "tn": 98
+          },
+          {
+            "C": 10.0,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8703703703703703,
+            "brier": 0.057726299704808366,
+            "error_rate": 0.07954545454545454,
+            "tp": 141,
+            "fp": 11,
+            "fn": 10,
+            "tn": 102
+          }
+        ],
+        "selected_index": 1
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.8181818181818182,
+          "brier": 0.08069455479759989,
+          "error_rate": 0.11363636363636363,
+          "tp": 135,
+          "fp": 26,
+          "fn": 4,
+          "tn": 99
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.8681318681318682,
+          "brier": 0.07204059672800381,
+          "error_rate": 0.09090909090909091,
+          "tp": 158,
+          "fp": 3,
+          "fn": 21,
+          "tn": 82
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.8071065989847716,
+          "brier": 0.11415317735563495,
+          "error_rate": 0.15261044176706828,
+          "tp": 159,
+          "fp": 2,
+          "fn": 36,
+          "tn": 52
+        }
+      },
+      "macro_target_iou": 0.831140095099486,
+      "macro_target_brier": 0.08896277629374622,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 513,
+        "iou": 0.8308823529411765,
+        "brier": 0.08847647511494527,
+        "error_rate": 0.11840411840411841,
+        "tp": 452,
+        "fp": 31,
+        "fn": 61,
+        "tn": 233
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": null,
+        "source_coordinates_dimensions": 2
+      }
+    },
+    {
+      "source_speed": 0.1,
+      "model": "quadratic_uniform",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.7374301675977654,
+            "brier": 0.14571985971180965,
+            "error_rate": 0.17803030303030304,
+            "tp": 132,
+            "fp": 28,
+            "fn": 19,
+            "tn": 85
+          },
+          {
+            "C": 1.0,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8734939759036144,
+            "brier": 0.07166724714155538,
+            "error_rate": 0.07954545454545454,
+            "tp": 145,
+            "fp": 15,
+            "fn": 6,
+            "tn": 98
+          },
+          {
+            "C": 10.0,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8703703703703703,
+            "brier": 0.057726299704808366,
+            "error_rate": 0.07954545454545454,
+            "tp": 141,
+            "fp": 11,
+            "fn": 10,
+            "tn": 102
+          }
+        ],
+        "selected_index": 1
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.7239263803680982,
+          "brier": 0.10734918201853229,
+          "error_rate": 0.17045454545454544,
+          "tp": 118,
+          "fp": 24,
+          "fn": 21,
+          "tn": 101
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.8272251308900523,
+          "brier": 0.09785751526633064,
+          "error_rate": 0.125,
+          "tp": 158,
+          "fp": 12,
+          "fn": 21,
+          "tn": 73
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.7729468599033816,
+          "brier": 0.1393898945023511,
+          "error_rate": 0.18875502008032127,
+          "tp": 160,
+          "fp": 12,
+          "fn": 35,
+          "tn": 42
+        }
+      },
+      "macro_target_iou": 0.774699457053844,
+      "macro_target_brier": 0.11486553059573801,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 513,
+        "iou": 0.7771836007130125,
+        "brier": 0.11439208727707752,
+        "error_rate": 0.16087516087516088,
+        "tp": 436,
+        "fp": 48,
+        "fn": 77,
+        "tn": 216
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": null,
+        "source_coordinates_dimensions": 2
+      }
+    },
+    {
+      "source_speed": 0.1,
+      "model": "quadratic_raw3d",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.7374301675977654,
+            "brier": 0.14571985971180965,
+            "error_rate": 0.17803030303030304,
+            "tp": 132,
+            "fp": 28,
+            "fn": 19,
+            "tn": 85
+          },
+          {
+            "C": 1.0,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8734939759036144,
+            "brier": 0.07166724714155538,
+            "error_rate": 0.07954545454545454,
+            "tp": 145,
+            "fp": 15,
+            "fn": 6,
+            "tn": 98
+          },
+          {
+            "C": 10.0,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8703703703703703,
+            "brier": 0.0577262997048084,
+            "error_rate": 0.07954545454545454,
+            "tp": 141,
+            "fp": 11,
+            "fn": 10,
+            "tn": 102
+          }
+        ],
+        "selected_index": 1
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.8181818181818182,
+          "brier": 0.08069455479759985,
+          "error_rate": 0.11363636363636363,
+          "tp": 135,
+          "fp": 26,
+          "fn": 4,
+          "tn": 99
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.8681318681318682,
+          "brier": 0.07204059672800385,
+          "error_rate": 0.09090909090909091,
+          "tp": 158,
+          "fp": 3,
+          "fn": 21,
+          "tn": 82
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.8071065989847716,
+          "brier": 0.114153177355635,
+          "error_rate": 0.15261044176706828,
+          "tp": 159,
+          "fp": 2,
+          "fn": 36,
+          "tn": 52
+        }
+      },
+      "macro_target_iou": 0.831140095099486,
+      "macro_target_brier": 0.08896277629374623,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 513,
+        "iou": 0.8308823529411765,
+        "brier": 0.0884764751149453,
+        "error_rate": 0.11840411840411841,
+        "tp": 452,
+        "fp": 31,
+        "fn": 61,
+        "tn": 233
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": 0.0,
+        "source_coordinates_dimensions": 3
+      }
+    },
+    {
+      "source_speed": 0.1,
+      "model": "rbf_static",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.7894736842105263,
+            "brier": 0.09282638919192497,
+            "error_rate": 0.13636363636363635,
+            "tp": 135,
+            "fp": 20,
+            "fn": 16,
+            "tn": 93
+          },
+          {
+            "C": 1.0,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8271604938271605,
+            "brier": 0.06606805916789069,
+            "error_rate": 0.10606060606060606,
+            "tp": 134,
+            "fp": 11,
+            "fn": 17,
+            "tn": 102
+          },
+          {
+            "C": 10.0,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8742138364779874,
+            "brier": 0.05420090964999708,
+            "error_rate": 0.07575757575757576,
+            "tp": 139,
+            "fp": 8,
+            "fn": 12,
+            "tn": 105
+          }
+        ],
+        "selected_index": 2
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.8535031847133758,
+          "brier": 0.0633941738110162,
+          "error_rate": 0.08712121212121213,
+          "tp": 134,
+          "fp": 18,
+          "fn": 5,
+          "tn": 107
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.8491620111731844,
+          "brier": 0.08389919027699093,
+          "error_rate": 0.10227272727272728,
+          "tp": 152,
+          "fp": 0,
+          "fn": 27,
+          "tn": 85
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.7704081632653061,
+          "brier": 0.15676239594453195,
+          "error_rate": 0.18072289156626506,
+          "tp": 151,
+          "fp": 1,
+          "fn": 44,
+          "tn": 53
+        }
+      },
+      "macro_target_iou": 0.8243577863839554,
+      "macro_target_brier": 0.10135192001084636,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 513,
+        "iou": 0.8214285714285714,
+        "brier": 0.10028221970324624,
+        "error_rate": 0.12226512226512226,
+        "tp": 437,
+        "fp": 19,
+        "fn": 76,
+        "tn": 245
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": null,
+        "source_coordinates_dimensions": 2
+      }
+    },
+    {
+      "source_speed": 0.1,
+      "model": "rbf_uniform",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.7894736842105263,
+            "brier": 0.09282638919192497,
+            "error_rate": 0.13636363636363635,
+            "tp": 135,
+            "fp": 20,
+            "fn": 16,
+            "tn": 93
+          },
+          {
+            "C": 1.0,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8271604938271605,
+            "brier": 0.06606805916789069,
+            "error_rate": 0.10606060606060606,
+            "tp": 134,
+            "fp": 11,
+            "fn": 17,
+            "tn": 102
+          },
+          {
+            "C": 10.0,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8742138364779874,
+            "brier": 0.05420090964999708,
+            "error_rate": 0.07575757575757576,
+            "tp": 139,
+            "fp": 8,
+            "fn": 12,
+            "tn": 105
+          }
+        ],
+        "selected_index": 2
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.6981132075471698,
+          "brier": 0.1469862529957971,
+          "error_rate": 0.18181818181818182,
+          "tp": 111,
+          "fp": 20,
+          "fn": 28,
+          "tn": 105
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.7967914438502673,
+          "brier": 0.10781268131442769,
+          "error_rate": 0.14393939393939395,
+          "tp": 149,
+          "fp": 8,
+          "fn": 30,
+          "tn": 77
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.7241379310344828,
+          "brier": 0.17485892363492428,
+          "error_rate": 0.2248995983935743,
+          "tp": 147,
+          "fp": 8,
+          "fn": 48,
+          "tn": 46
+        }
+      },
+      "macro_target_iou": 0.73968086081064,
+      "macro_target_brier": 0.14321928598171635,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 513,
+        "iou": 0.7413479052823315,
+        "brier": 0.14260848216601738,
+        "error_rate": 0.18275418275418276,
+        "tp": 407,
+        "fp": 36,
+        "fn": 106,
+        "tn": 228
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": null,
+        "source_coordinates_dimensions": 2
+      }
+    },
+    {
+      "source_speed": 0.1,
+      "model": "boundary_uniform",
+      "source_selection": {
+        "candidates": [
+          {
+            "regularization": 0.001,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8571428571428571,
+            "brier": 0.06390523954156772,
+            "error_rate": 0.08712121212121213,
+            "tp": 138,
+            "fp": 10,
+            "fn": 13,
+            "tn": 103
+          },
+          {
+            "regularization": 0.01,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8597560975609756,
+            "brier": 0.06419511663489996,
+            "error_rate": 0.08712121212121213,
+            "tp": 141,
+            "fp": 13,
+            "fn": 10,
+            "tn": 100
+          },
+          {
+            "regularization": 0.1,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8538011695906432,
+            "brier": 0.09132518455090034,
+            "error_rate": 0.0946969696969697,
+            "tp": 146,
+            "fp": 20,
+            "fn": 5,
+            "tn": 93
+          },
+          {
+            "regularization": 1.0,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.7281553398058253,
+            "brier": 0.18102410239842978,
+            "error_rate": 0.21212121212121213,
+            "tp": 150,
+            "fp": 55,
+            "fn": 1,
+            "tn": 58
+          }
+        ],
+        "selected_index": 1,
+        "shared_across_four_priors": true
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.696969696969697,
+          "brier": 0.12747387776973068,
+          "error_rate": 0.1893939393939394,
+          "tp": 115,
+          "fp": 26,
+          "fn": 24,
+          "tn": 99
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.8297872340425532,
+          "brier": 0.09570535359914012,
+          "error_rate": 0.12121212121212122,
+          "tp": 156,
+          "fp": 9,
+          "fn": 23,
+          "tn": 76
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.7647058823529411,
+          "brier": 0.15129455708170214,
+          "error_rate": 0.1927710843373494,
+          "tp": 156,
+          "fp": 9,
+          "fn": 39,
+          "tn": 45
+        }
+      },
+      "macro_target_iou": 0.7638209377883971,
+      "macro_target_brier": 0.12482459615019098,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 513,
+        "iou": 0.7666068222621185,
+        "brier": 0.12431359304340504,
+        "error_rate": 0.16731016731016732,
+        "tp": 427,
+        "fp": 44,
+        "fn": 86,
+        "tn": 220
+      },
+      "fit_diagnostic": {
+        "coefficient": [
+          3.6759908232432474,
+          1.0813642393937835,
+          -0.6075654379750755,
+          -0.895140019599771,
+          -2.1101040318869533,
+          -1.9512641811594011
+        ],
+        "optimization": {
+          "success": true,
+          "iterations": 15,
+          "objective": 0.22715289433361485,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+        },
+        "target_no_fitted_band_count": 0,
+        "target_crossed_root_count": 0,
+        "source_lower_extrapolated_beta_columns": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "source_upper_extrapolated_beta_columns": []
+      }
+    },
+    {
+      "source_speed": 0.1,
+      "model": "boundary_static",
+      "source_selection": {
+        "candidates": [
+          {
+            "regularization": 0.001,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8571428571428571,
+            "brier": 0.06390523954156772,
+            "error_rate": 0.08712121212121213,
+            "tp": 138,
+            "fp": 10,
+            "fn": 13,
+            "tn": 103
+          },
+          {
+            "regularization": 0.01,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8597560975609756,
+            "brier": 0.06419511663489996,
+            "error_rate": 0.08712121212121213,
+            "tp": 141,
+            "fp": 13,
+            "fn": 10,
+            "tn": 100
+          },
+          {
+            "regularization": 0.1,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8538011695906432,
+            "brier": 0.09132518455090034,
+            "error_rate": 0.0946969696969697,
+            "tp": 146,
+            "fp": 20,
+            "fn": 5,
+            "tn": 93
+          },
+          {
+            "regularization": 1.0,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.7281553398058253,
+            "brier": 0.18102410239842978,
+            "error_rate": 0.21212121212121213,
+            "tp": 150,
+            "fp": 55,
+            "fn": 1,
+            "tn": 58
+          }
+        ],
+        "selected_index": 1,
+        "shared_across_four_priors": true
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.8395061728395061,
+          "brier": 0.06682939843877067,
+          "error_rate": 0.09848484848484848,
+          "tp": 136,
+          "fp": 23,
+          "fn": 3,
+          "tn": 102
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.8571428571428571,
+          "brier": 0.07279210440681254,
+          "error_rate": 0.09848484848484848,
+          "tp": 156,
+          "fp": 3,
+          "fn": 23,
+          "tn": 82
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.7788944723618091,
+          "brier": 0.1313260233608401,
+          "error_rate": 0.17670682730923695,
+          "tp": 155,
+          "fp": 4,
+          "fn": 40,
+          "tn": 50
+        }
+      },
+      "macro_target_iou": 0.8251811674480574,
+      "macro_target_brier": 0.09031584206880777,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 513,
+        "iou": 0.8232044198895028,
+        "brier": 0.08952413972726275,
+        "error_rate": 0.12355212355212356,
+        "tp": 447,
+        "fp": 30,
+        "fn": 66,
+        "tn": 234
+      },
+      "fit_diagnostic": {
+        "coefficient": [
+          3.6759908232432474,
+          1.0813642393937835,
+          -0.6075654379750755,
+          -0.895140019599771,
+          -2.1101040318869533,
+          -1.9512641811594011
+        ],
+        "optimization": {
+          "success": true,
+          "iterations": 15,
+          "objective": 0.22715289433361485,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+        },
+        "target_no_fitted_band_count": 0,
+        "target_crossed_root_count": 0,
+        "source_lower_extrapolated_beta_columns": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "source_upper_extrapolated_beta_columns": []
+      }
+    },
+    {
+      "source_speed": 0.1,
+      "model": "boundary_asymmetric",
+      "source_selection": {
+        "candidates": [
+          {
+            "regularization": 0.001,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8571428571428571,
+            "brier": 0.06390523954156772,
+            "error_rate": 0.08712121212121213,
+            "tp": 138,
+            "fp": 10,
+            "fn": 13,
+            "tn": 103
+          },
+          {
+            "regularization": 0.01,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8597560975609756,
+            "brier": 0.06419511663489996,
+            "error_rate": 0.08712121212121213,
+            "tp": 141,
+            "fp": 13,
+            "fn": 10,
+            "tn": 100
+          },
+          {
+            "regularization": 0.1,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8538011695906432,
+            "brier": 0.09132518455090034,
+            "error_rate": 0.0946969696969697,
+            "tp": 146,
+            "fp": 20,
+            "fn": 5,
+            "tn": 93
+          },
+          {
+            "regularization": 1.0,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.7281553398058253,
+            "brier": 0.18102410239842978,
+            "error_rate": 0.21212121212121213,
+            "tp": 150,
+            "fp": 55,
+            "fn": 1,
+            "tn": 58
+          }
+        ],
+        "selected_index": 1,
+        "shared_across_four_priors": true
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.7777777777777778,
+          "brier": 0.09036093672894574,
+          "error_rate": 0.12121212121212122,
+          "tp": 112,
+          "fp": 5,
+          "fn": 27,
+          "tn": 120
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.900523560209424,
+          "brier": 0.05470173965928781,
+          "error_rate": 0.07196969696969698,
+          "tp": 172,
+          "fp": 12,
+          "fn": 7,
+          "tn": 73
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.9038461538461539,
+          "brier": 0.05821489877657408,
+          "error_rate": 0.08032128514056225,
+          "tp": 188,
+          "fp": 13,
+          "fn": 7,
+          "tn": 41
+        }
+      },
+      "macro_target_iou": 0.8607158306111186,
+      "macro_target_brier": 0.06775919172160254,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 513,
+        "iou": 0.8692449355432781,
+        "brier": 0.06794344448115908,
+        "error_rate": 0.09137709137709138,
+        "tp": 472,
+        "fp": 30,
+        "fn": 41,
+        "tn": 234
+      },
+      "fit_diagnostic": {
+        "coefficient": [
+          3.6759908232432474,
+          1.0813642393937835,
+          -0.6075654379750755,
+          -0.895140019599771,
+          -2.1101040318869533,
+          -1.9512641811594011
+        ],
+        "optimization": {
+          "success": true,
+          "iterations": 15,
+          "objective": 0.22715289433361485,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+        },
+        "target_no_fitted_band_count": 0,
+        "target_crossed_root_count": 0,
+        "source_lower_extrapolated_beta_columns": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "source_upper_extrapolated_beta_columns": []
+      }
+    },
+    {
+      "source_speed": 0.1,
+      "model": "boundary_reverse_falsification",
+      "source_selection": {
+        "candidates": [
+          {
+            "regularization": 0.001,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8571428571428571,
+            "brier": 0.06390523954156772,
+            "error_rate": 0.08712121212121213,
+            "tp": 138,
+            "fp": 10,
+            "fn": 13,
+            "tn": 103
+          },
+          {
+            "regularization": 0.01,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8597560975609756,
+            "brier": 0.06419511663489996,
+            "error_rate": 0.08712121212121213,
+            "tp": 141,
+            "fp": 13,
+            "fn": 10,
+            "tn": 100
+          },
+          {
+            "regularization": 0.1,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.8538011695906432,
+            "brier": 0.09132518455090034,
+            "error_rate": 0.0946969696969697,
+            "tp": 146,
+            "fp": 20,
+            "fn": 5,
+            "tn": 93
+          },
+          {
+            "regularization": 1.0,
+            "n": 264,
+            "positive": 151,
+            "iou": 0.7281553398058253,
+            "brier": 0.18102410239842978,
+            "error_rate": 0.21212121212121213,
+            "tp": 150,
+            "fp": 55,
+            "fn": 1,
+            "tn": 58
+          }
+        ],
+        "selected_index": 1,
+        "shared_across_four_priors": true
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.7595628415300546,
+          "brier": 0.11404203972067356,
+          "error_rate": 0.16666666666666666,
+          "tp": 139,
+          "fp": 44,
+          "fn": 0,
+          "tn": 81
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.7821229050279329,
+          "brier": 0.11113147186542911,
+          "error_rate": 0.14772727272727273,
+          "tp": 140,
+          "fp": 0,
+          "fn": 39,
+          "tn": 85
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.6307692307692307,
+          "brier": 0.21186533289137108,
+          "error_rate": 0.2891566265060241,
+          "tp": 123,
+          "fp": 0,
+          "fn": 72,
+          "tn": 54
+        }
+      },
+      "macro_target_iou": 0.7241516591090728,
+      "macro_target_brier": 0.1456796148258246,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 513,
+        "iou": 0.7217235188509874,
+        "brier": 0.14440189826085265,
+        "error_rate": 0.1994851994851995,
+        "tp": 402,
+        "fp": 44,
+        "fn": 111,
+        "tn": 220
+      },
+      "fit_diagnostic": {
+        "coefficient": [
+          3.6759908232432474,
+          1.0813642393937835,
+          -0.6075654379750755,
+          -0.895140019599771,
+          -2.1101040318869533,
+          -1.9512641811594011
+        ],
+        "optimization": {
+          "success": true,
+          "iterations": 15,
+          "objective": 0.22715289433361485,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+        },
+        "target_no_fitted_band_count": 0,
+        "target_crossed_root_count": 0,
+        "source_lower_extrapolated_beta_columns": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "source_upper_extrapolated_beta_columns": []
+      }
+    },
+    {
+      "source_speed": 0.05,
+      "model": "quadratic_static",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.6686746987951807,
+            "brier": 0.15815852904616481,
+            "error_rate": 0.20833333333333334,
+            "tp": 111,
+            "fp": 27,
+            "fn": 28,
+            "tn": 98
+          },
+          {
+            "C": 1.0,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8157894736842105,
+            "brier": 0.08681902067602396,
+            "error_rate": 0.10606060606060606,
+            "tp": 124,
+            "fp": 13,
+            "fn": 15,
+            "tn": 112
+          },
+          {
+            "C": 10.0,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8543046357615894,
+            "brier": 0.05774844679875096,
+            "error_rate": 0.08333333333333333,
+            "tp": 129,
+            "fp": 12,
+            "fn": 10,
+            "tn": 113
+          }
+        ],
+        "selected_index": 2
+      },
+      "target_panels": {
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.84375,
+          "brier": 0.061521853229293606,
+          "error_rate": 0.0946969696969697,
+          "tp": 135,
+          "fp": 9,
+          "fn": 16,
+          "tn": 104
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.7747252747252747,
+          "brier": 0.11652737416587954,
+          "error_rate": 0.1553030303030303,
+          "tp": 141,
+          "fp": 3,
+          "fn": 38,
+          "tn": 82
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.7035175879396985,
+          "brier": 0.19169083628538405,
+          "error_rate": 0.23694779116465864,
+          "tp": 140,
+          "fp": 4,
+          "fn": 55,
+          "tn": 50
+        }
+      },
+      "macro_target_iou": 0.7739976208883244,
+      "macro_target_brier": 0.12324668789351907,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 525,
+        "iou": 0.7689463955637708,
+        "brier": 0.1219253722874985,
+        "error_rate": 0.16087516087516088,
+        "tp": 416,
+        "fp": 16,
+        "fn": 109,
+        "tn": 236
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": null,
+        "source_coordinates_dimensions": 2
+      }
+    },
+    {
+      "source_speed": 0.05,
+      "model": "quadratic_uniform",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.6686746987951807,
+            "brier": 0.15815852904616481,
+            "error_rate": 0.20833333333333334,
+            "tp": 111,
+            "fp": 27,
+            "fn": 28,
+            "tn": 98
+          },
+          {
+            "C": 1.0,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8157894736842105,
+            "brier": 0.08681902067602396,
+            "error_rate": 0.10606060606060606,
+            "tp": 124,
+            "fp": 13,
+            "fn": 15,
+            "tn": 112
+          },
+          {
+            "C": 10.0,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8543046357615894,
+            "brier": 0.05774844679875096,
+            "error_rate": 0.08333333333333333,
+            "tp": 129,
+            "fp": 12,
+            "fn": 10,
+            "tn": 113
+          }
+        ],
+        "selected_index": 2
+      },
+      "target_panels": {
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.6983240223463687,
+          "brier": 0.1454560829334273,
+          "error_rate": 0.20454545454545456,
+          "tp": 125,
+          "fp": 28,
+          "fn": 26,
+          "tn": 85
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.5801886792452831,
+          "brier": 0.27144845582267313,
+          "error_rate": 0.3371212121212121,
+          "tp": 123,
+          "fp": 33,
+          "fn": 56,
+          "tn": 52
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.5794392523364486,
+          "brier": 0.32663305100843487,
+          "error_rate": 0.3614457831325301,
+          "tp": 124,
+          "fp": 19,
+          "fn": 71,
+          "tn": 35
+        }
+      },
+      "macro_target_iou": 0.6193173179760335,
+      "macro_target_brier": 0.24784586325484512,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 525,
+        "iou": 0.6148760330578512,
+        "brier": 0.2463248750742739,
+        "error_rate": 0.29987129987129985,
+        "tp": 372,
+        "fp": 80,
+        "fn": 153,
+        "tn": 172
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": null,
+        "source_coordinates_dimensions": 2
+      }
+    },
+    {
+      "source_speed": 0.05,
+      "model": "quadratic_raw3d",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.6686746987951807,
+            "brier": 0.1581585290461648,
+            "error_rate": 0.20833333333333334,
+            "tp": 111,
+            "fp": 27,
+            "fn": 28,
+            "tn": 98
+          },
+          {
+            "C": 1.0,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8157894736842105,
+            "brier": 0.08681902067601995,
+            "error_rate": 0.10606060606060606,
+            "tp": 124,
+            "fp": 13,
+            "fn": 15,
+            "tn": 112
+          },
+          {
+            "C": 10.0,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8543046357615894,
+            "brier": 0.057748446798750935,
+            "error_rate": 0.08333333333333333,
+            "tp": 129,
+            "fp": 12,
+            "fn": 10,
+            "tn": 113
+          }
+        ],
+        "selected_index": 2
+      },
+      "target_panels": {
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.84375,
+          "brier": 0.06152185322929362,
+          "error_rate": 0.0946969696969697,
+          "tp": 135,
+          "fp": 9,
+          "fn": 16,
+          "tn": 104
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.7747252747252747,
+          "brier": 0.11652737416587954,
+          "error_rate": 0.1553030303030303,
+          "tp": 141,
+          "fp": 3,
+          "fn": 38,
+          "tn": 82
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.7035175879396985,
+          "brier": 0.19169083628538408,
+          "error_rate": 0.23694779116465864,
+          "tp": 140,
+          "fp": 4,
+          "fn": 55,
+          "tn": 50
+        }
+      },
+      "macro_target_iou": 0.7739976208883244,
+      "macro_target_brier": 0.12324668789351907,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 525,
+        "iou": 0.7689463955637708,
+        "brier": 0.12192537228749853,
+        "error_rate": 0.16087516087516088,
+        "tp": 416,
+        "fp": 16,
+        "fn": 109,
+        "tn": 236
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": 0.0,
+        "source_coordinates_dimensions": 3
+      }
+    },
+    {
+      "source_speed": 0.05,
+      "model": "rbf_static",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8421052631578947,
+            "brier": 0.06820438820401176,
+            "error_rate": 0.09090909090909091,
+            "tp": 128,
+            "fp": 13,
+            "fn": 11,
+            "tn": 112
+          },
+          {
+            "C": 1.0,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8263888888888888,
+            "brier": 0.06349700266704739,
+            "error_rate": 0.0946969696969697,
+            "tp": 119,
+            "fp": 5,
+            "fn": 20,
+            "tn": 120
+          },
+          {
+            "C": 10.0,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.777027027027027,
+            "brier": 0.08798981927653264,
+            "error_rate": 0.125,
+            "tp": 115,
+            "fp": 9,
+            "fn": 24,
+            "tn": 116
+          }
+        ],
+        "selected_index": 0
+      },
+      "target_panels": {
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.808641975308642,
+          "brier": 0.08236234831420083,
+          "error_rate": 0.11742424242424243,
+          "tp": 131,
+          "fp": 11,
+          "fn": 20,
+          "tn": 102
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.7445652173913043,
+          "brier": 0.13889158227053058,
+          "error_rate": 0.17803030303030304,
+          "tp": 137,
+          "fp": 5,
+          "fn": 42,
+          "tn": 80
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.6766169154228856,
+          "brier": 0.21716319026896302,
+          "error_rate": 0.26104417670682734,
+          "tp": 136,
+          "fp": 6,
+          "fn": 59,
+          "tn": 48
+        }
+      },
+      "macro_target_iou": 0.7432747027076106,
+      "macro_target_brier": 0.14613904028456481,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 525,
+        "iou": 0.7385740402193784,
+        "brier": 0.1447679176979934,
+        "error_rate": 0.18404118404118405,
+        "tp": 404,
+        "fp": 22,
+        "fn": 121,
+        "tn": 230
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": null,
+        "source_coordinates_dimensions": 2
+      }
+    },
+    {
+      "source_speed": 0.05,
+      "model": "rbf_uniform",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8421052631578947,
+            "brier": 0.06820438820401176,
+            "error_rate": 0.09090909090909091,
+            "tp": 128,
+            "fp": 13,
+            "fn": 11,
+            "tn": 112
+          },
+          {
+            "C": 1.0,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8263888888888888,
+            "brier": 0.06349700266704739,
+            "error_rate": 0.0946969696969697,
+            "tp": 119,
+            "fp": 5,
+            "fn": 20,
+            "tn": 120
+          },
+          {
+            "C": 10.0,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.777027027027027,
+            "brier": 0.08798981927653264,
+            "error_rate": 0.125,
+            "tp": 115,
+            "fp": 9,
+            "fn": 24,
+            "tn": 116
+          }
+        ],
+        "selected_index": 0
+      },
+      "target_panels": {
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.7584269662921348,
+          "brier": 0.11112916173579147,
+          "error_rate": 0.16287878787878787,
+          "tp": 135,
+          "fp": 27,
+          "fn": 16,
+          "tn": 86
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.6794258373205742,
+          "brier": 0.19652401720201426,
+          "error_rate": 0.2537878787878788,
+          "tp": 142,
+          "fp": 30,
+          "fn": 37,
+          "tn": 55
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.6869158878504673,
+          "brier": 0.2290022451857129,
+          "error_rate": 0.26907630522088355,
+          "tp": 147,
+          "fp": 19,
+          "fn": 48,
+          "tn": 35
+        }
+      },
+      "macro_target_iou": 0.7082562304877253,
+      "macro_target_brier": 0.1788851413745062,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 525,
+        "iou": 0.7054908485856906,
+        "brier": 0.17791762971791922,
+        "error_rate": 0.2277992277992278,
+        "tp": 424,
+        "fp": 76,
+        "fn": 101,
+        "tn": 176
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": null,
+        "source_coordinates_dimensions": 2
+      }
+    },
+    {
+      "source_speed": 0.05,
+      "model": "boundary_uniform",
+      "source_selection": {
+        "candidates": [
+          {
+            "regularization": 0.001,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8775510204081632,
+            "brier": 0.054386622220129396,
+            "error_rate": 0.06818181818181818,
+            "tp": 129,
+            "fp": 8,
+            "fn": 10,
+            "tn": 117
+          },
+          {
+            "regularization": 0.01,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8445945945945946,
+            "brier": 0.05916384205836354,
+            "error_rate": 0.08712121212121213,
+            "tp": 125,
+            "fp": 9,
+            "fn": 14,
+            "tn": 116
+          },
+          {
+            "regularization": 0.1,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8627450980392157,
+            "brier": 0.09217116173772343,
+            "error_rate": 0.07954545454545454,
+            "tp": 132,
+            "fp": 14,
+            "fn": 7,
+            "tn": 111
+          },
+          {
+            "regularization": 1.0,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.7458563535911602,
+            "brier": 0.1828488150611084,
+            "error_rate": 0.17424242424242425,
+            "tp": 135,
+            "fp": 42,
+            "fn": 4,
+            "tn": 83
+          }
+        ],
+        "selected_index": 0,
+        "shared_across_four_priors": true
+      },
+      "target_panels": {
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.6966292134831461,
+          "brier": 0.15706750873556238,
+          "error_rate": 0.20454545454545456,
+          "tp": 124,
+          "fp": 27,
+          "fn": 27,
+          "tn": 86
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.5687203791469194,
+          "brier": 0.2882992341150861,
+          "error_rate": 0.3446969696969697,
+          "tp": 120,
+          "fp": 32,
+          "fn": 59,
+          "tn": 53
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.5607476635514018,
+          "brier": 0.34461957737056814,
+          "error_rate": 0.37751004016064255,
+          "tp": 120,
+          "fp": 19,
+          "fn": 75,
+          "tn": 35
+        }
+      },
+      "macro_target_iou": 0.6086990853938224,
+      "macro_target_brier": 0.2633287734070722,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 525,
+        "iou": 0.603648424543947,
+        "brier": 0.2617594528672364,
+        "error_rate": 0.3075933075933076,
+        "tp": 364,
+        "fp": 78,
+        "fn": 161,
+        "tn": 174
+      },
+      "fit_diagnostic": {
+        "coefficient": [
+          5.278521599689352,
+          1.245865519405187,
+          -1.1438009076054219,
+          -2.8202885642882594,
+          -4.191235897861038,
+          -3.529928065952029
+        ],
+        "optimization": {
+          "success": true,
+          "iterations": 19,
+          "objective": 0.15121382572894676,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+        },
+        "target_no_fitted_band_count": 0,
+        "target_crossed_root_count": 0,
+        "source_lower_extrapolated_beta_columns": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "source_upper_extrapolated_beta_columns": []
+      }
+    },
+    {
+      "source_speed": 0.05,
+      "model": "boundary_static",
+      "source_selection": {
+        "candidates": [
+          {
+            "regularization": 0.001,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8775510204081632,
+            "brier": 0.054386622220129396,
+            "error_rate": 0.06818181818181818,
+            "tp": 129,
+            "fp": 8,
+            "fn": 10,
+            "tn": 117
+          },
+          {
+            "regularization": 0.01,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8445945945945946,
+            "brier": 0.05916384205836354,
+            "error_rate": 0.08712121212121213,
+            "tp": 125,
+            "fp": 9,
+            "fn": 14,
+            "tn": 116
+          },
+          {
+            "regularization": 0.1,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8627450980392157,
+            "brier": 0.09217116173772343,
+            "error_rate": 0.07954545454545454,
+            "tp": 132,
+            "fp": 14,
+            "fn": 7,
+            "tn": 111
+          },
+          {
+            "regularization": 1.0,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.7458563535911602,
+            "brier": 0.1828488150611084,
+            "error_rate": 0.17424242424242425,
+            "tp": 135,
+            "fp": 42,
+            "fn": 4,
+            "tn": 83
+          }
+        ],
+        "selected_index": 0,
+        "shared_across_four_priors": true
+      },
+      "target_panels": {
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.825,
+          "brier": 0.06493604211428279,
+          "error_rate": 0.10606060606060606,
+          "tp": 132,
+          "fp": 9,
+          "fn": 19,
+          "tn": 104
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.7582417582417582,
+          "brier": 0.12676507258174935,
+          "error_rate": 0.16666666666666666,
+          "tp": 138,
+          "fp": 3,
+          "fn": 41,
+          "tn": 82
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.6884422110552764,
+          "brier": 0.20334493130090545,
+          "error_rate": 0.24899598393574296,
+          "tp": 137,
+          "fp": 4,
+          "fn": 58,
+          "tn": 50
+        }
+      },
+      "macro_target_iou": 0.7572279897656782,
+      "macro_target_brier": 0.13168201533231252,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 525,
+        "iou": 0.7523105360443623,
+        "brier": 0.13029856135608486,
+        "error_rate": 0.17245817245817247,
+        "tp": 407,
+        "fp": 16,
+        "fn": 118,
+        "tn": 236
+      },
+      "fit_diagnostic": {
+        "coefficient": [
+          5.278521599689352,
+          1.245865519405187,
+          -1.1438009076054219,
+          -2.8202885642882594,
+          -4.191235897861038,
+          -3.529928065952029
+        ],
+        "optimization": {
+          "success": true,
+          "iterations": 19,
+          "objective": 0.15121382572894676,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+        },
+        "target_no_fitted_band_count": 0,
+        "target_crossed_root_count": 0,
+        "source_lower_extrapolated_beta_columns": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "source_upper_extrapolated_beta_columns": []
+      }
+    },
+    {
+      "source_speed": 0.05,
+      "model": "boundary_asymmetric",
+      "source_selection": {
+        "candidates": [
+          {
+            "regularization": 0.001,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8775510204081632,
+            "brier": 0.054386622220129396,
+            "error_rate": 0.06818181818181818,
+            "tp": 129,
+            "fp": 8,
+            "fn": 10,
+            "tn": 117
+          },
+          {
+            "regularization": 0.01,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8445945945945946,
+            "brier": 0.05916384205836354,
+            "error_rate": 0.08712121212121213,
+            "tp": 125,
+            "fp": 9,
+            "fn": 14,
+            "tn": 116
+          },
+          {
+            "regularization": 0.1,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8627450980392157,
+            "brier": 0.09217116173772343,
+            "error_rate": 0.07954545454545454,
+            "tp": 132,
+            "fp": 14,
+            "fn": 7,
+            "tn": 111
+          },
+          {
+            "regularization": 1.0,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.7458563535911602,
+            "brier": 0.1828488150611084,
+            "error_rate": 0.17424242424242425,
+            "tp": 135,
+            "fp": 42,
+            "fn": 4,
+            "tn": 83
+          }
+        ],
+        "selected_index": 0,
+        "shared_across_four_priors": true
+      },
+      "target_panels": {
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.7914438502673797,
+          "brier": 0.11193142716167759,
+          "error_rate": 0.14772727272727273,
+          "tp": 148,
+          "fp": 36,
+          "fn": 3,
+          "tn": 77
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.8130841121495327,
+          "brier": 0.1208973886199005,
+          "error_rate": 0.15151515151515152,
+          "tp": 174,
+          "fp": 35,
+          "fn": 5,
+          "tn": 50
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.8715596330275229,
+          "brier": 0.0961998614655907,
+          "error_rate": 0.11244979919678715,
+          "tp": 190,
+          "fp": 23,
+          "fn": 5,
+          "tn": 31
+        }
+      },
+      "macro_target_iou": 0.8253625318148118,
+      "macro_target_brier": 0.10967622574905626,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 525,
+        "iou": 0.827140549273021,
+        "brier": 0.10993638722171005,
+        "error_rate": 0.1377091377091377,
+        "tp": 512,
+        "fp": 94,
+        "fn": 13,
+        "tn": 158
+      },
+      "fit_diagnostic": {
+        "coefficient": [
+          5.278521599689352,
+          1.245865519405187,
+          -1.1438009076054219,
+          -2.8202885642882594,
+          -4.191235897861038,
+          -3.529928065952029
+        ],
+        "optimization": {
+          "success": true,
+          "iterations": 19,
+          "objective": 0.15121382572894676,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+        },
+        "target_no_fitted_band_count": 0,
+        "target_crossed_root_count": 0,
+        "source_lower_extrapolated_beta_columns": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "source_upper_extrapolated_beta_columns": []
+      }
+    },
+    {
+      "source_speed": 0.05,
+      "model": "boundary_reverse_falsification",
+      "source_selection": {
+        "candidates": [
+          {
+            "regularization": 0.001,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8775510204081632,
+            "brier": 0.054386622220129396,
+            "error_rate": 0.06818181818181818,
+            "tp": 129,
+            "fp": 8,
+            "fn": 10,
+            "tn": 117
+          },
+          {
+            "regularization": 0.01,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8445945945945946,
+            "brier": 0.05916384205836354,
+            "error_rate": 0.08712121212121213,
+            "tp": 125,
+            "fp": 9,
+            "fn": 14,
+            "tn": 116
+          },
+          {
+            "regularization": 0.1,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.8627450980392157,
+            "brier": 0.09217116173772343,
+            "error_rate": 0.07954545454545454,
+            "tp": 132,
+            "fp": 14,
+            "fn": 7,
+            "tn": 111
+          },
+          {
+            "regularization": 1.0,
+            "n": 264,
+            "positive": 139,
+            "iou": 0.7458563535911602,
+            "brier": 0.1828488150611084,
+            "error_rate": 0.17424242424242425,
+            "tp": 135,
+            "fp": 42,
+            "fn": 4,
+            "tn": 83
+          }
+        ],
+        "selected_index": 0,
+        "shared_across_four_priors": true
+      },
+      "target_panels": {
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.7152317880794702,
+          "brier": 0.11361672505821838,
+          "error_rate": 0.16287878787878787,
+          "tp": 108,
+          "fp": 0,
+          "fn": 43,
+          "tn": 113
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.4692737430167598,
+          "brier": 0.2750954119613244,
+          "error_rate": 0.35984848484848486,
+          "tp": 84,
+          "fp": 0,
+          "fn": 95,
+          "tn": 85
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.3435897435897436,
+          "brier": 0.4048632114445448,
+          "error_rate": 0.5140562248995983,
+          "tp": 67,
+          "fp": 0,
+          "fn": 128,
+          "tn": 54
+        }
+      },
+      "macro_target_iou": 0.5093650915619912,
+      "macro_target_brier": 0.2645251161546958,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 525,
+        "iou": 0.49333333333333335,
+        "brier": 0.26181588651589566,
+        "error_rate": 0.34234234234234234,
+        "tp": 259,
+        "fp": 0,
+        "fn": 266,
+        "tn": 252
+      },
+      "fit_diagnostic": {
+        "coefficient": [
+          5.278521599689352,
+          1.245865519405187,
+          -1.1438009076054219,
+          -2.8202885642882594,
+          -4.191235897861038,
+          -3.529928065952029
+        ],
+        "optimization": {
+          "success": true,
+          "iterations": 19,
+          "objective": 0.15121382572894676,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+        },
+        "target_no_fitted_band_count": 23,
+        "target_crossed_root_count": 23,
+        "source_lower_extrapolated_beta_columns": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "source_upper_extrapolated_beta_columns": []
+      }
+    },
+    {
+      "source_speed": 0.15,
+      "model": "quadratic_static",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.7521008403361344,
+            "brier": 0.14166602426961672,
+            "error_rate": 0.22348484848484848,
+            "tp": 179,
+            "fp": 59,
+            "fn": 0,
+            "tn": 26
+          },
+          {
+            "C": 1.0,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.8676470588235294,
+            "brier": 0.08132412335062379,
+            "error_rate": 0.10227272727272728,
+            "tp": 177,
+            "fp": 25,
+            "fn": 2,
+            "tn": 60
+          },
+          {
+            "C": 10.0,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.8557213930348259,
+            "brier": 0.08099022343735829,
+            "error_rate": 0.10984848484848485,
+            "tp": 172,
+            "fp": 22,
+            "fn": 7,
+            "tn": 63
+          }
+        ],
+        "selected_index": 1
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.7150259067357513,
+          "brier": 0.13373107276759366,
+          "error_rate": 0.20833333333333334,
+          "tp": 138,
+          "fp": 54,
+          "fn": 1,
+          "tn": 71
+        },
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.7864583333333334,
+          "brier": 0.09803629538223121,
+          "error_rate": 0.1553030303030303,
+          "tp": 151,
+          "fp": 41,
+          "fn": 0,
+          "tn": 72
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.935,
+          "brier": 0.052480279346928435,
+          "error_rate": 0.05220883534136546,
+          "tp": 187,
+          "fp": 5,
+          "fn": 8,
+          "tn": 49
+        }
+      },
+      "macro_target_iou": 0.8121614133563616,
+      "macro_target_brier": 0.0947492158322511,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 485,
+        "iou": 0.8136752136752137,
+        "brier": 0.09556521846710288,
+        "error_rate": 0.1402831402831403,
+        "tp": 476,
+        "fp": 100,
+        "fn": 9,
+        "tn": 192
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": null,
+        "source_coordinates_dimensions": 2
+      }
+    },
+    {
+      "source_speed": 0.15,
+      "model": "quadratic_uniform",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.7521008403361344,
+            "brier": 0.14166602426961672,
+            "error_rate": 0.22348484848484848,
+            "tp": 179,
+            "fp": 59,
+            "fn": 0,
+            "tn": 26
+          },
+          {
+            "C": 1.0,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.8676470588235294,
+            "brier": 0.08132412335062379,
+            "error_rate": 0.10227272727272728,
+            "tp": 177,
+            "fp": 25,
+            "fn": 2,
+            "tn": 60
+          },
+          {
+            "C": 10.0,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.8557213930348259,
+            "brier": 0.08099022343735829,
+            "error_rate": 0.10984848484848485,
+            "tp": 172,
+            "fp": 22,
+            "fn": 7,
+            "tn": 63
+          }
+        ],
+        "selected_index": 1
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.6685714285714286,
+          "brier": 0.15912075670326642,
+          "error_rate": 0.2196969696969697,
+          "tp": 117,
+          "fp": 36,
+          "fn": 22,
+          "tn": 89
+        },
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.8087431693989071,
+          "brier": 0.09391135898073462,
+          "error_rate": 0.13257575757575757,
+          "tp": 148,
+          "fp": 32,
+          "fn": 3,
+          "tn": 81
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.9207920792079208,
+          "brier": 0.050396161568612416,
+          "error_rate": 0.0642570281124498,
+          "tp": 186,
+          "fp": 7,
+          "fn": 9,
+          "tn": 47
+        }
+      },
+      "macro_target_iou": 0.7993688923927521,
+      "macro_target_brier": 0.10114275908420449,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 485,
+        "iou": 0.8053571428571429,
+        "brier": 0.10212242312890706,
+        "error_rate": 0.1402831402831403,
+        "tp": 451,
+        "fp": 75,
+        "fn": 34,
+        "tn": 217
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": null,
+        "source_coordinates_dimensions": 2
+      }
+    },
+    {
+      "source_speed": 0.15,
+      "model": "quadratic_raw3d",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.7521008403361344,
+            "brier": 0.14166602426961672,
+            "error_rate": 0.22348484848484848,
+            "tp": 179,
+            "fp": 59,
+            "fn": 0,
+            "tn": 26
+          },
+          {
+            "C": 1.0,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.8676470588235294,
+            "brier": 0.08132412335062376,
+            "error_rate": 0.10227272727272728,
+            "tp": 177,
+            "fp": 25,
+            "fn": 2,
+            "tn": 60
+          },
+          {
+            "C": 10.0,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.8557213930348259,
+            "brier": 0.08099022343735826,
+            "error_rate": 0.10984848484848485,
+            "tp": 172,
+            "fp": 22,
+            "fn": 7,
+            "tn": 63
+          }
+        ],
+        "selected_index": 1
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.7150259067357513,
+          "brier": 0.13373107276759366,
+          "error_rate": 0.20833333333333334,
+          "tp": 138,
+          "fp": 54,
+          "fn": 1,
+          "tn": 71
+        },
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.7864583333333334,
+          "brier": 0.09803629538223121,
+          "error_rate": 0.1553030303030303,
+          "tp": 151,
+          "fp": 41,
+          "fn": 0,
+          "tn": 72
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.935,
+          "brier": 0.052480279346928435,
+          "error_rate": 0.05220883534136546,
+          "tp": 187,
+          "fp": 5,
+          "fn": 8,
+          "tn": 49
+        }
+      },
+      "macro_target_iou": 0.8121614133563616,
+      "macro_target_brier": 0.0947492158322511,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 485,
+        "iou": 0.8136752136752137,
+        "brier": 0.09556521846710288,
+        "error_rate": 0.1402831402831403,
+        "tp": 476,
+        "fp": 100,
+        "fn": 9,
+        "tn": 192
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": 0.0,
+        "source_coordinates_dimensions": 3
+      }
+    },
+    {
+      "source_speed": 0.15,
+      "model": "rbf_static",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.7990430622009569,
+            "brier": 0.10060343532240941,
+            "error_rate": 0.1590909090909091,
+            "tp": 167,
+            "fp": 30,
+            "fn": 12,
+            "tn": 55
+          },
+          {
+            "C": 1.0,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.8507462686567164,
+            "brier": 0.08070861534168287,
+            "error_rate": 0.11363636363636363,
+            "tp": 171,
+            "fp": 22,
+            "fn": 8,
+            "tn": 63
+          },
+          {
+            "C": 10.0,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.845,
+            "brier": 0.08708685496749762,
+            "error_rate": 0.11742424242424243,
+            "tp": 169,
+            "fp": 21,
+            "fn": 10,
+            "tn": 64
+          }
+        ],
+        "selected_index": 1
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.7405405405405405,
+          "brier": 0.1439868180419076,
+          "error_rate": 0.18181818181818182,
+          "tp": 137,
+          "fp": 46,
+          "fn": 2,
+          "tn": 79
+        },
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.825136612021858,
+          "brier": 0.09079857972325706,
+          "error_rate": 0.12121212121212122,
+          "tp": 151,
+          "fp": 32,
+          "fn": 0,
+          "tn": 81
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.8994974874371859,
+          "brier": 0.06131450511574616,
+          "error_rate": 0.08032128514056225,
+          "tp": 179,
+          "fp": 4,
+          "fn": 16,
+          "tn": 50
+        }
+      },
+      "macro_target_iou": 0.8217248799998614,
+      "macro_target_brier": 0.09869996762697027,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 485,
+        "iou": 0.8236331569664903,
+        "brier": 0.09942169470247654,
+        "error_rate": 0.1287001287001287,
+        "tp": 467,
+        "fp": 82,
+        "fn": 18,
+        "tn": 210
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": null,
+        "source_coordinates_dimensions": 2
+      }
+    },
+    {
+      "source_speed": 0.15,
+      "model": "rbf_uniform",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.7990430622009569,
+            "brier": 0.10060343532240941,
+            "error_rate": 0.1590909090909091,
+            "tp": 167,
+            "fp": 30,
+            "fn": 12,
+            "tn": 55
+          },
+          {
+            "C": 1.0,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.8507462686567164,
+            "brier": 0.08070861534168287,
+            "error_rate": 0.11363636363636363,
+            "tp": 171,
+            "fp": 22,
+            "fn": 8,
+            "tn": 63
+          },
+          {
+            "C": 10.0,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.845,
+            "brier": 0.08708685496749762,
+            "error_rate": 0.11742424242424243,
+            "tp": 169,
+            "fp": 21,
+            "fn": 10,
+            "tn": 64
+          }
+        ],
+        "selected_index": 1
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.6511627906976745,
+          "brier": 0.20820155443111504,
+          "error_rate": 0.22727272727272727,
+          "tp": 112,
+          "fp": 33,
+          "fn": 27,
+          "tn": 92
+        },
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.8181818181818182,
+          "brier": 0.09439461074083479,
+          "error_rate": 0.12121212121212122,
+          "tp": 144,
+          "fp": 25,
+          "fn": 7,
+          "tn": 88
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.9292929292929293,
+          "brier": 0.0376088566388787,
+          "error_rate": 0.05622489959839357,
+          "tp": 184,
+          "fp": 3,
+          "fn": 11,
+          "tn": 51
+        }
+      },
+      "macro_target_iou": 0.799545846057474,
+      "macro_target_brier": 0.11340167393694284,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 485,
+        "iou": 0.8058608058608059,
+        "brier": 0.11486485573806376,
+        "error_rate": 0.1364221364221364,
+        "tp": 440,
+        "fp": 61,
+        "fn": 45,
+        "tn": 231
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": null,
+        "source_coordinates_dimensions": 2
+      }
+    },
+    {
+      "source_speed": 0.15,
+      "model": "boundary_uniform",
+      "source_selection": {
+        "candidates": [
+          {
+            "regularization": 0.001,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.8507462686567164,
+            "brier": 0.08991996192912806,
+            "error_rate": 0.11363636363636363,
+            "tp": 171,
+            "fp": 22,
+            "fn": 8,
+            "tn": 63
+          },
+          {
+            "regularization": 0.01,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.8613861386138614,
+            "brier": 0.08243327585057814,
+            "error_rate": 0.10606060606060606,
+            "tp": 174,
+            "fp": 23,
+            "fn": 5,
+            "tn": 62
+          },
+          {
+            "regularization": 0.1,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.855072463768116,
+            "brier": 0.0973500841356212,
+            "error_rate": 0.11363636363636363,
+            "tp": 177,
+            "fp": 28,
+            "fn": 2,
+            "tn": 57
+          },
+          {
+            "regularization": 1.0,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.7246963562753036,
+            "brier": 0.16709868199409753,
+            "error_rate": 0.25757575757575757,
+            "tp": 179,
+            "fp": 68,
+            "fn": 0,
+            "tn": 17
+          }
+        ],
+        "selected_index": 1,
+        "shared_across_four_priors": true
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.625,
+          "brier": 0.1916919174687031,
+          "error_rate": 0.25,
+          "tp": 110,
+          "fp": 37,
+          "fn": 29,
+          "tn": 88
+        },
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.8100558659217877,
+          "brier": 0.09496140289043803,
+          "error_rate": 0.12878787878787878,
+          "tp": 145,
+          "fp": 28,
+          "fn": 6,
+          "tn": 85
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.925,
+          "brier": 0.04450832027530318,
+          "error_rate": 0.060240963855421686,
+          "tp": 185,
+          "fp": 5,
+          "fn": 10,
+          "tn": 49
+        }
+      },
+      "macro_target_iou": 0.7866852886405958,
+      "macro_target_brier": 0.11038721354481477,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 485,
+        "iou": 0.7927927927927928,
+        "brier": 0.11165900685117598,
+        "error_rate": 0.148005148005148,
+        "tp": 440,
+        "fp": 70,
+        "fn": 45,
+        "tn": 222
+      },
+      "fit_diagnostic": {
+        "coefficient": [
+          4.603322388142824,
+          1.0409989496165044,
+          -0.8075556473692044,
+          -0.5948501972492147,
+          -2.277595421420034,
+          -1.660612064931422
+        ],
+        "optimization": {
+          "success": true,
+          "iterations": 16,
+          "objective": 0.19711144908801703,
+          "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        },
+        "target_no_fitted_band_count": 0,
+        "target_crossed_root_count": 0,
+        "source_lower_extrapolated_beta_columns": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "source_upper_extrapolated_beta_columns": [
+          0
+        ]
+      }
+    },
+    {
+      "source_speed": 0.15,
+      "model": "boundary_static",
+      "source_selection": {
+        "candidates": [
+          {
+            "regularization": 0.001,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.8507462686567164,
+            "brier": 0.08991996192912806,
+            "error_rate": 0.11363636363636363,
+            "tp": 171,
+            "fp": 22,
+            "fn": 8,
+            "tn": 63
+          },
+          {
+            "regularization": 0.01,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.8613861386138614,
+            "brier": 0.08243327585057814,
+            "error_rate": 0.10606060606060606,
+            "tp": 174,
+            "fp": 23,
+            "fn": 5,
+            "tn": 62
+          },
+          {
+            "regularization": 0.1,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.855072463768116,
+            "brier": 0.0973500841356212,
+            "error_rate": 0.11363636363636363,
+            "tp": 177,
+            "fp": 28,
+            "fn": 2,
+            "tn": 57
+          },
+          {
+            "regularization": 1.0,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.7246963562753036,
+            "brier": 0.16709868199409753,
+            "error_rate": 0.25757575757575757,
+            "tp": 179,
+            "fp": 68,
+            "fn": 0,
+            "tn": 17
+          }
+        ],
+        "selected_index": 1,
+        "shared_across_four_priors": true
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.7340425531914894,
+          "brier": 0.12632102001422163,
+          "error_rate": 0.1893939393939394,
+          "tp": 138,
+          "fp": 49,
+          "fn": 1,
+          "tn": 76
+        },
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.7978723404255319,
+          "brier": 0.08883694845765695,
+          "error_rate": 0.14393939393939395,
+          "tp": 150,
+          "fp": 37,
+          "fn": 1,
+          "tn": 76
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.900497512437811,
+          "brier": 0.05788174982870221,
+          "error_rate": 0.08032128514056225,
+          "tp": 181,
+          "fp": 6,
+          "fn": 14,
+          "tn": 48
+        }
+      },
+      "macro_target_iou": 0.8108041353516108,
+      "macro_target_brier": 0.09101323943352692,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 485,
+        "iou": 0.8128249566724437,
+        "brier": 0.09165284347995212,
+        "error_rate": 0.138996138996139,
+        "tp": 469,
+        "fp": 92,
+        "fn": 16,
+        "tn": 200
+      },
+      "fit_diagnostic": {
+        "coefficient": [
+          4.603322388142824,
+          1.0409989496165044,
+          -0.8075556473692044,
+          -0.5948501972492147,
+          -2.277595421420034,
+          -1.660612064931422
+        ],
+        "optimization": {
+          "success": true,
+          "iterations": 16,
+          "objective": 0.19711144908801703,
+          "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        },
+        "target_no_fitted_band_count": 0,
+        "target_crossed_root_count": 0,
+        "source_lower_extrapolated_beta_columns": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "source_upper_extrapolated_beta_columns": [
+          0
+        ]
+      }
+    },
+    {
+      "source_speed": 0.15,
+      "model": "boundary_asymmetric",
+      "source_selection": {
+        "candidates": [
+          {
+            "regularization": 0.001,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.8507462686567164,
+            "brier": 0.08991996192912806,
+            "error_rate": 0.11363636363636363,
+            "tp": 171,
+            "fp": 22,
+            "fn": 8,
+            "tn": 63
+          },
+          {
+            "regularization": 0.01,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.8613861386138614,
+            "brier": 0.08243327585057814,
+            "error_rate": 0.10606060606060606,
+            "tp": 174,
+            "fp": 23,
+            "fn": 5,
+            "tn": 62
+          },
+          {
+            "regularization": 0.1,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.855072463768116,
+            "brier": 0.0973500841356212,
+            "error_rate": 0.11363636363636363,
+            "tp": 177,
+            "fp": 28,
+            "fn": 2,
+            "tn": 57
+          },
+          {
+            "regularization": 1.0,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.7246963562753036,
+            "brier": 0.16709868199409753,
+            "error_rate": 0.25757575757575757,
+            "tp": 179,
+            "fp": 68,
+            "fn": 0,
+            "tn": 17
+          }
+        ],
+        "selected_index": 1,
+        "shared_across_four_priors": true
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.7364864864864865,
+          "brier": 0.10773398128425825,
+          "error_rate": 0.14772727272727273,
+          "tp": 109,
+          "fp": 9,
+          "fn": 30,
+          "tn": 116
+        },
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.8622754491017964,
+          "brier": 0.06321215160858445,
+          "error_rate": 0.08712121212121213,
+          "tp": 144,
+          "fp": 16,
+          "fn": 7,
+          "tn": 97
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.946078431372549,
+          "brier": 0.03667802873302383,
+          "error_rate": 0.04417670682730924,
+          "tp": 193,
+          "fp": 9,
+          "fn": 2,
+          "tn": 45
+        }
+      },
+      "macro_target_iou": 0.8482801223202774,
+      "macro_target_brier": 0.06920805387528885,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 485,
+        "iou": 0.859344894026975,
+        "brier": 0.06983604663865303,
+        "error_rate": 0.09395109395109395,
+        "tp": 446,
+        "fp": 34,
+        "fn": 39,
+        "tn": 258
+      },
+      "fit_diagnostic": {
+        "coefficient": [
+          4.603322388142824,
+          1.0409989496165044,
+          -0.8075556473692044,
+          -0.5948501972492147,
+          -2.277595421420034,
+          -1.660612064931422
+        ],
+        "optimization": {
+          "success": true,
+          "iterations": 16,
+          "objective": 0.19711144908801703,
+          "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        },
+        "target_no_fitted_band_count": 0,
+        "target_crossed_root_count": 0,
+        "source_lower_extrapolated_beta_columns": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "source_upper_extrapolated_beta_columns": [
+          0
+        ]
+      }
+    },
+    {
+      "source_speed": 0.15,
+      "model": "boundary_reverse_falsification",
+      "source_selection": {
+        "candidates": [
+          {
+            "regularization": 0.001,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.8507462686567164,
+            "brier": 0.08991996192912806,
+            "error_rate": 0.11363636363636363,
+            "tp": 171,
+            "fp": 22,
+            "fn": 8,
+            "tn": 63
+          },
+          {
+            "regularization": 0.01,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.8613861386138614,
+            "brier": 0.08243327585057814,
+            "error_rate": 0.10606060606060606,
+            "tp": 174,
+            "fp": 23,
+            "fn": 5,
+            "tn": 62
+          },
+          {
+            "regularization": 0.1,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.855072463768116,
+            "brier": 0.0973500841356212,
+            "error_rate": 0.11363636363636363,
+            "tp": 177,
+            "fp": 28,
+            "fn": 2,
+            "tn": 57
+          },
+          {
+            "regularization": 1.0,
+            "n": 264,
+            "positive": 179,
+            "iou": 0.7246963562753036,
+            "brier": 0.16709868199409753,
+            "error_rate": 0.25757575757575757,
+            "tp": 179,
+            "fp": 68,
+            "fn": 0,
+            "tn": 17
+          }
+        ],
+        "selected_index": 1,
+        "shared_across_four_priors": true
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.6435185185185185,
+          "brier": 0.23731052443546627,
+          "error_rate": 0.2916666666666667,
+          "tp": 139,
+          "fp": 77,
+          "fn": 0,
+          "tn": 48
+        },
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.755,
+          "brier": 0.1279538664772374,
+          "error_rate": 0.1856060606060606,
+          "tp": 151,
+          "fp": 49,
+          "fn": 0,
+          "tn": 64
+        },
+        "0.2": {
+          "n": 249,
+          "positive": 195,
+          "iou": 0.8781725888324873,
+          "brier": 0.06554826805293663,
+          "error_rate": 0.0963855421686747,
+          "tp": 173,
+          "fp": 2,
+          "fn": 22,
+          "tn": 52
+        }
+      },
+      "macro_target_iou": 0.7588970357836686,
+      "macro_target_brier": 0.14360421965521344,
+      "pooled_targets": {
+        "n": 777,
+        "positive": 485,
+        "iou": 0.7553017944535073,
+        "brier": 0.14511109130776706,
+        "error_rate": 0.19305019305019305,
+        "tp": 463,
+        "fp": 128,
+        "fn": 22,
+        "tn": 164
+      },
+      "fit_diagnostic": {
+        "coefficient": [
+          4.603322388142824,
+          1.0409989496165044,
+          -0.8075556473692044,
+          -0.5948501972492147,
+          -2.277595421420034,
+          -1.660612064931422
+        ],
+        "optimization": {
+          "success": true,
+          "iterations": 16,
+          "objective": 0.19711144908801703,
+          "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        },
+        "target_no_fitted_band_count": 0,
+        "target_crossed_root_count": 0,
+        "source_lower_extrapolated_beta_columns": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "source_upper_extrapolated_beta_columns": [
+          0
+        ]
+      }
+    },
+    {
+      "source_speed": 0.2,
+      "model": "quadratic_static",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.819327731092437,
+            "brier": 0.12087742675856449,
+            "error_rate": 0.17269076305220885,
+            "tp": 195,
+            "fp": 43,
+            "fn": 0,
+            "tn": 11
+          },
+          {
+            "C": 1.0,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.8986175115207373,
+            "brier": 0.06762915793033931,
+            "error_rate": 0.08835341365461848,
+            "tp": 195,
+            "fp": 22,
+            "fn": 0,
+            "tn": 32
+          },
+          {
+            "C": 10.0,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.9138755980861244,
+            "brier": 0.05593468835221702,
+            "error_rate": 0.07228915662650602,
+            "tp": 191,
+            "fp": 14,
+            "fn": 4,
+            "tn": 40
+          }
+        ],
+        "selected_index": 2
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.6884422110552764,
+          "brier": 0.20427829320049556,
+          "error_rate": 0.23484848484848486,
+          "tp": 137,
+          "fp": 60,
+          "fn": 2,
+          "tn": 65
+        },
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.766497461928934,
+          "brier": 0.15010378926215184,
+          "error_rate": 0.17424242424242425,
+          "tp": 151,
+          "fp": 46,
+          "fn": 0,
+          "tn": 67
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.8894472361809045,
+          "brier": 0.0659629431423335,
+          "error_rate": 0.08333333333333333,
+          "tp": 177,
+          "fp": 20,
+          "fn": 2,
+          "tn": 65
+        }
+      },
+      "macro_target_iou": 0.7814623030550383,
+      "macro_target_brier": 0.14011500853499362,
+      "pooled_targets": {
+        "n": 792,
+        "positive": 469,
+        "iou": 0.7815126050420168,
+        "brier": 0.14011500853499365,
+        "error_rate": 0.16414141414141414,
+        "tp": 465,
+        "fp": 126,
+        "fn": 4,
+        "tn": 197
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": null,
+        "source_coordinates_dimensions": 2
+      }
+    },
+    {
+      "source_speed": 0.2,
+      "model": "quadratic_uniform",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.819327731092437,
+            "brier": 0.12087742675856449,
+            "error_rate": 0.17269076305220885,
+            "tp": 195,
+            "fp": 43,
+            "fn": 0,
+            "tn": 11
+          },
+          {
+            "C": 1.0,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.8986175115207373,
+            "brier": 0.06762915793033931,
+            "error_rate": 0.08835341365461848,
+            "tp": 195,
+            "fp": 22,
+            "fn": 0,
+            "tn": 32
+          },
+          {
+            "C": 10.0,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.9138755980861244,
+            "brier": 0.05593468835221702,
+            "error_rate": 0.07228915662650602,
+            "tp": 191,
+            "fp": 14,
+            "fn": 4,
+            "tn": 40
+          }
+        ],
+        "selected_index": 2
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.6353591160220995,
+          "brier": 0.21465852452954406,
+          "error_rate": 0.25,
+          "tp": 115,
+          "fp": 42,
+          "fn": 24,
+          "tn": 83
+        },
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.7395833333333334,
+          "brier": 0.14231348926827533,
+          "error_rate": 0.1893939393939394,
+          "tp": 142,
+          "fp": 41,
+          "fn": 9,
+          "tn": 72
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.8944723618090452,
+          "brier": 0.0539925522712477,
+          "error_rate": 0.07954545454545454,
+          "tp": 178,
+          "fp": 20,
+          "fn": 1,
+          "tn": 65
+        }
+      },
+      "macro_target_iou": 0.7564716037214927,
+      "macro_target_brier": 0.13698818868968904,
+      "pooled_targets": {
+        "n": 792,
+        "positive": 469,
+        "iou": 0.7604895104895105,
+        "brier": 0.13698818868968904,
+        "error_rate": 0.17297979797979798,
+        "tp": 435,
+        "fp": 103,
+        "fn": 34,
+        "tn": 220
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": null,
+        "source_coordinates_dimensions": 2
+      }
+    },
+    {
+      "source_speed": 0.2,
+      "model": "quadratic_raw3d",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.819327731092437,
+            "brier": 0.12087742675856447,
+            "error_rate": 0.17269076305220885,
+            "tp": 195,
+            "fp": 43,
+            "fn": 0,
+            "tn": 11
+          },
+          {
+            "C": 1.0,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.8986175115207373,
+            "brier": 0.06762915793033934,
+            "error_rate": 0.08835341365461848,
+            "tp": 195,
+            "fp": 22,
+            "fn": 0,
+            "tn": 32
+          },
+          {
+            "C": 10.0,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.9138755980861244,
+            "brier": 0.055934688352217016,
+            "error_rate": 0.07228915662650602,
+            "tp": 191,
+            "fp": 14,
+            "fn": 4,
+            "tn": 40
+          }
+        ],
+        "selected_index": 2
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.6884422110552764,
+          "brier": 0.2042782932004955,
+          "error_rate": 0.23484848484848486,
+          "tp": 137,
+          "fp": 60,
+          "fn": 2,
+          "tn": 65
+        },
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.766497461928934,
+          "brier": 0.15010378926215187,
+          "error_rate": 0.17424242424242425,
+          "tp": 151,
+          "fp": 46,
+          "fn": 0,
+          "tn": 67
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.8894472361809045,
+          "brier": 0.06596294314233352,
+          "error_rate": 0.08333333333333333,
+          "tp": 177,
+          "fp": 20,
+          "fn": 2,
+          "tn": 65
+        }
+      },
+      "macro_target_iou": 0.7814623030550383,
+      "macro_target_brier": 0.14011500853499362,
+      "pooled_targets": {
+        "n": 792,
+        "positive": 469,
+        "iou": 0.7815126050420168,
+        "brier": 0.14011500853499365,
+        "error_rate": 0.16414141414141414,
+        "tp": 465,
+        "fp": 126,
+        "fn": 4,
+        "tn": 197
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": 0.0,
+        "source_coordinates_dimensions": 3
+      }
+    },
+    {
+      "source_speed": 0.2,
+      "model": "rbf_static",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.8061674008810573,
+            "brier": 0.10719940479585084,
+            "error_rate": 0.17670682730923695,
+            "tp": 183,
+            "fp": 32,
+            "fn": 12,
+            "tn": 22
+          },
+          {
+            "C": 1.0,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.9056603773584906,
+            "brier": 0.054594986484290176,
+            "error_rate": 0.08032128514056225,
+            "tp": 192,
+            "fp": 17,
+            "fn": 3,
+            "tn": 37
+          },
+          {
+            "C": 10.0,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.9150943396226415,
+            "brier": 0.05072728417537708,
+            "error_rate": 0.07228915662650602,
+            "tp": 194,
+            "fp": 17,
+            "fn": 1,
+            "tn": 37
+          }
+        ],
+        "selected_index": 2
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.6834170854271356,
+          "brier": 0.21474876316905647,
+          "error_rate": 0.23863636363636365,
+          "tp": 136,
+          "fp": 60,
+          "fn": 3,
+          "tn": 65
+        },
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.7614213197969543,
+          "brier": 0.15327281216573738,
+          "error_rate": 0.17803030303030304,
+          "tp": 150,
+          "fp": 46,
+          "fn": 1,
+          "tn": 67
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.8939393939393939,
+          "brier": 0.06254572191424392,
+          "error_rate": 0.07954545454545454,
+          "tp": 177,
+          "fp": 19,
+          "fn": 2,
+          "tn": 66
+        }
+      },
+      "macro_target_iou": 0.7795925997211612,
+      "macro_target_brier": 0.1435224324163459,
+      "pooled_targets": {
+        "n": 792,
+        "positive": 469,
+        "iou": 0.7794612794612794,
+        "brier": 0.1435224324163459,
+        "error_rate": 0.16540404040404041,
+        "tp": 463,
+        "fp": 125,
+        "fn": 6,
+        "tn": 198
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": null,
+        "source_coordinates_dimensions": 2
+      }
+    },
+    {
+      "source_speed": 0.2,
+      "model": "rbf_uniform",
+      "source_selection": {
+        "candidates": [
+          {
+            "C": 0.1,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.8061674008810573,
+            "brier": 0.10719940479585084,
+            "error_rate": 0.17670682730923695,
+            "tp": 183,
+            "fp": 32,
+            "fn": 12,
+            "tn": 22
+          },
+          {
+            "C": 1.0,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.9056603773584906,
+            "brier": 0.054594986484290176,
+            "error_rate": 0.08032128514056225,
+            "tp": 192,
+            "fp": 17,
+            "fn": 3,
+            "tn": 37
+          },
+          {
+            "C": 10.0,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.9150943396226415,
+            "brier": 0.05072728417537708,
+            "error_rate": 0.07228915662650602,
+            "tp": 194,
+            "fp": 17,
+            "fn": 1,
+            "tn": 37
+          }
+        ],
+        "selected_index": 2
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.6020942408376964,
+          "brier": 0.25192389255419856,
+          "error_rate": 0.2878787878787879,
+          "tp": 115,
+          "fp": 52,
+          "fn": 24,
+          "tn": 73
+        },
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.7384615384615385,
+          "brier": 0.167496953079124,
+          "error_rate": 0.19318181818181818,
+          "tp": 144,
+          "fp": 44,
+          "fn": 7,
+          "tn": 69
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.8984771573604061,
+          "brier": 0.057181202726890916,
+          "error_rate": 0.07575757575757576,
+          "tp": 177,
+          "fp": 18,
+          "fn": 2,
+          "tn": 67
+        }
+      },
+      "macro_target_iou": 0.7463443122198803,
+      "macro_target_brier": 0.1588673494534045,
+      "pooled_targets": {
+        "n": 792,
+        "positive": 469,
+        "iou": 0.7478559176672385,
+        "brier": 0.1588673494534045,
+        "error_rate": 0.1856060606060606,
+        "tp": 436,
+        "fp": 114,
+        "fn": 33,
+        "tn": 209
+      },
+      "fit_diagnostic": {
+        "training_speed_variance": null,
+        "source_coordinates_dimensions": 2
+      }
+    },
+    {
+      "source_speed": 0.2,
+      "model": "boundary_uniform",
+      "source_selection": {
+        "candidates": [
+          {
+            "regularization": 0.001,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.9134615384615384,
+            "brier": 0.061592278950232796,
+            "error_rate": 0.07228915662650602,
+            "tp": 190,
+            "fp": 13,
+            "fn": 5,
+            "tn": 41
+          },
+          {
+            "regularization": 0.01,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.8925233644859814,
+            "brier": 0.068217516461074,
+            "error_rate": 0.09236947791164658,
+            "tp": 191,
+            "fp": 19,
+            "fn": 4,
+            "tn": 35
+          },
+          {
+            "regularization": 0.1,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.8546255506607929,
+            "brier": 0.0936771080846632,
+            "error_rate": 0.13253012048192772,
+            "tp": 194,
+            "fp": 32,
+            "fn": 1,
+            "tn": 22
+          },
+          {
+            "regularization": 1.0,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.7831325301204819,
+            "brier": 0.15618839536971962,
+            "error_rate": 0.21686746987951808,
+            "tp": 195,
+            "fp": 54,
+            "fn": 0,
+            "tn": 0
+          }
+        ],
+        "selected_index": 0,
+        "shared_across_four_priors": true
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.6179775280898876,
+          "brier": 0.2197487961102208,
+          "error_rate": 0.25757575757575757,
+          "tp": 110,
+          "fp": 39,
+          "fn": 29,
+          "tn": 86
+        },
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.7593582887700535,
+          "brier": 0.13963656339722472,
+          "error_rate": 0.17045454545454544,
+          "tp": 142,
+          "fp": 36,
+          "fn": 9,
+          "tn": 77
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.8979591836734694,
+          "brier": 0.05267792033944507,
+          "error_rate": 0.07575757575757576,
+          "tp": 176,
+          "fp": 17,
+          "fn": 3,
+          "tn": 68
+        }
+      },
+      "macro_target_iou": 0.7584316668444702,
+      "macro_target_brier": 0.13735442661563022,
+      "pooled_targets": {
+        "n": 792,
+        "positive": 469,
+        "iou": 0.7629233511586453,
+        "brier": 0.1373544266156302,
+        "error_rate": 0.16792929292929293,
+        "tp": 428,
+        "fp": 92,
+        "fn": 41,
+        "tn": 231
+      },
+      "fit_diagnostic": {
+        "coefficient": [
+          8.349376566282698,
+          3.0632688648734367,
+          -1.617285805598582,
+          0.26907859615455776,
+          -4.237651204641993,
+          -2.4122503032955143
+        ],
+        "optimization": {
+          "success": true,
+          "iterations": 20,
+          "objective": 0.10588097252228981,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+        },
+        "target_no_fitted_band_count": 0,
+        "target_crossed_root_count": 0,
+        "source_lower_extrapolated_beta_columns": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "source_upper_extrapolated_beta_columns": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "source_speed": 0.2,
+      "model": "boundary_static",
+      "source_selection": {
+        "candidates": [
+          {
+            "regularization": 0.001,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.9134615384615384,
+            "brier": 0.061592278950232796,
+            "error_rate": 0.07228915662650602,
+            "tp": 190,
+            "fp": 13,
+            "fn": 5,
+            "tn": 41
+          },
+          {
+            "regularization": 0.01,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.8925233644859814,
+            "brier": 0.068217516461074,
+            "error_rate": 0.09236947791164658,
+            "tp": 191,
+            "fp": 19,
+            "fn": 4,
+            "tn": 35
+          },
+          {
+            "regularization": 0.1,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.8546255506607929,
+            "brier": 0.0936771080846632,
+            "error_rate": 0.13253012048192772,
+            "tp": 194,
+            "fp": 32,
+            "fn": 1,
+            "tn": 22
+          },
+          {
+            "regularization": 1.0,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.7831325301204819,
+            "brier": 0.15618839536971962,
+            "error_rate": 0.21686746987951808,
+            "tp": 195,
+            "fp": 54,
+            "fn": 0,
+            "tn": 0
+          }
+        ],
+        "selected_index": 0,
+        "shared_across_four_priors": true
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.6919191919191919,
+          "brier": 0.20474758952993422,
+          "error_rate": 0.23106060606060605,
+          "tp": 137,
+          "fp": 59,
+          "fn": 2,
+          "tn": 66
+        },
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.7614213197969543,
+          "brier": 0.15091437609047814,
+          "error_rate": 0.17803030303030304,
+          "tp": 150,
+          "fp": 46,
+          "fn": 1,
+          "tn": 67
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.8939393939393939,
+          "brier": 0.06419593047510432,
+          "error_rate": 0.07954545454545454,
+          "tp": 177,
+          "fp": 19,
+          "fn": 2,
+          "tn": 66
+        }
+      },
+      "macro_target_iou": 0.7824266352185134,
+      "macro_target_brier": 0.13995263203183889,
+      "pooled_targets": {
+        "n": 792,
+        "positive": 469,
+        "iou": 0.7824620573355818,
+        "brier": 0.13995263203183889,
+        "error_rate": 0.16287878787878787,
+        "tp": 464,
+        "fp": 124,
+        "fn": 5,
+        "tn": 199
+      },
+      "fit_diagnostic": {
+        "coefficient": [
+          8.349376566282698,
+          3.0632688648734367,
+          -1.617285805598582,
+          0.26907859615455776,
+          -4.237651204641993,
+          -2.4122503032955143
+        ],
+        "optimization": {
+          "success": true,
+          "iterations": 20,
+          "objective": 0.10588097252228981,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+        },
+        "target_no_fitted_band_count": 0,
+        "target_crossed_root_count": 0,
+        "source_lower_extrapolated_beta_columns": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "source_upper_extrapolated_beta_columns": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "source_speed": 0.2,
+      "model": "boundary_asymmetric",
+      "source_selection": {
+        "candidates": [
+          {
+            "regularization": 0.001,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.9134615384615384,
+            "brier": 0.061592278950232796,
+            "error_rate": 0.07228915662650602,
+            "tp": 190,
+            "fp": 13,
+            "fn": 5,
+            "tn": 41
+          },
+          {
+            "regularization": 0.01,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.8925233644859814,
+            "brier": 0.068217516461074,
+            "error_rate": 0.09236947791164658,
+            "tp": 191,
+            "fp": 19,
+            "fn": 4,
+            "tn": 35
+          },
+          {
+            "regularization": 0.1,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.8546255506607929,
+            "brier": 0.0936771080846632,
+            "error_rate": 0.13253012048192772,
+            "tp": 194,
+            "fp": 32,
+            "fn": 1,
+            "tn": 22
+          },
+          {
+            "regularization": 1.0,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.7831325301204819,
+            "brier": 0.15618839536971962,
+            "error_rate": 0.21686746987951808,
+            "tp": 195,
+            "fp": 54,
+            "fn": 0,
+            "tn": 0
+          }
+        ],
+        "selected_index": 0,
+        "shared_across_four_priors": true
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.7397260273972602,
+          "brier": 0.10971570990928224,
+          "error_rate": 0.14393939393939395,
+          "tp": 108,
+          "fp": 7,
+          "fn": 31,
+          "tn": 118
+        },
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.8392857142857143,
+          "brier": 0.07236219697655004,
+          "error_rate": 0.10227272727272728,
+          "tp": 141,
+          "fp": 17,
+          "fn": 10,
+          "tn": 96
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.925531914893617,
+          "brier": 0.03897579939293394,
+          "error_rate": 0.05303030303030303,
+          "tp": 174,
+          "fp": 9,
+          "fn": 5,
+          "tn": 76
+        }
+      },
+      "macro_target_iou": 0.8348478855255305,
+      "macro_target_brier": 0.07368456875958874,
+      "pooled_targets": {
+        "n": 792,
+        "positive": 469,
+        "iou": 0.8426294820717132,
+        "brier": 0.07368456875958873,
+        "error_rate": 0.09974747474747475,
+        "tp": 423,
+        "fp": 33,
+        "fn": 46,
+        "tn": 290
+      },
+      "fit_diagnostic": {
+        "coefficient": [
+          8.349376566282698,
+          3.0632688648734367,
+          -1.617285805598582,
+          0.26907859615455776,
+          -4.237651204641993,
+          -2.4122503032955143
+        ],
+        "optimization": {
+          "success": true,
+          "iterations": 20,
+          "objective": 0.10588097252228981,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+        },
+        "target_no_fitted_band_count": 0,
+        "target_crossed_root_count": 0,
+        "source_lower_extrapolated_beta_columns": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "source_upper_extrapolated_beta_columns": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "source_speed": 0.2,
+      "model": "boundary_reverse_falsification",
+      "source_selection": {
+        "candidates": [
+          {
+            "regularization": 0.001,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.9134615384615384,
+            "brier": 0.061592278950232796,
+            "error_rate": 0.07228915662650602,
+            "tp": 190,
+            "fp": 13,
+            "fn": 5,
+            "tn": 41
+          },
+          {
+            "regularization": 0.01,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.8925233644859814,
+            "brier": 0.068217516461074,
+            "error_rate": 0.09236947791164658,
+            "tp": 191,
+            "fp": 19,
+            "fn": 4,
+            "tn": 35
+          },
+          {
+            "regularization": 0.1,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.8546255506607929,
+            "brier": 0.0936771080846632,
+            "error_rate": 0.13253012048192772,
+            "tp": 194,
+            "fp": 32,
+            "fn": 1,
+            "tn": 22
+          },
+          {
+            "regularization": 1.0,
+            "n": 249,
+            "positive": 195,
+            "iou": 0.7831325301204819,
+            "brier": 0.15618839536971962,
+            "error_rate": 0.21686746987951808,
+            "tp": 195,
+            "fp": 54,
+            "fn": 0,
+            "tn": 0
+          }
+        ],
+        "selected_index": 0,
+        "shared_across_four_priors": true
+      },
+      "target_panels": {
+        "0.05": {
+          "n": 264,
+          "positive": 139,
+          "iou": 0.6043478260869565,
+          "brier": 0.32650588433985106,
+          "error_rate": 0.3446969696969697,
+          "tp": 139,
+          "fp": 91,
+          "fn": 0,
+          "tn": 34
+        },
+        "0.1": {
+          "n": 264,
+          "positive": 151,
+          "iou": 0.6990740740740741,
+          "brier": 0.22402627730479832,
+          "error_rate": 0.24621212121212122,
+          "tp": 151,
+          "fp": 65,
+          "fn": 0,
+          "tn": 48
+        },
+        "0.15": {
+          "n": 264,
+          "positive": 179,
+          "iou": 0.8689320388349514,
+          "brier": 0.07945869527644571,
+          "error_rate": 0.10227272727272728,
+          "tp": 179,
+          "fp": 27,
+          "fn": 0,
+          "tn": 58
+        }
+      },
+      "macro_target_iou": 0.7241179796653273,
+      "macro_target_brier": 0.20999695230703166,
+      "pooled_targets": {
+        "n": 792,
+        "positive": 469,
+        "iou": 0.7193251533742331,
+        "brier": 0.20999695230703166,
+        "error_rate": 0.23106060606060605,
+        "tp": 469,
+        "fp": 183,
+        "fn": 0,
+        "tn": 140
+      },
+      "fit_diagnostic": {
+        "coefficient": [
+          8.349376566282698,
+          3.0632688648734367,
+          -1.617285805598582,
+          0.26907859615455776,
+          -4.237651204641993,
+          -2.4122503032955143
+        ],
+        "optimization": {
+          "success": true,
+          "iterations": 20,
+          "objective": 0.10588097252228981,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+        },
+        "target_no_fitted_band_count": 0,
+        "target_crossed_root_count": 0,
+        "source_lower_extrapolated_beta_columns": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "source_upper_extrapolated_beta_columns": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    }
+  ]
+}

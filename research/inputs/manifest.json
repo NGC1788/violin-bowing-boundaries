@@ -1,0 +1,93 @@
+{
+  "title": "Derived provisional bowed-string regime tables and historical simulation diagnostics",
+  "files": [
+    {
+      "path": "research/inputs/A_measured_regimes.csv.gz",
+      "role": "measured",
+      "string": "A",
+      "original_relative_path": "reports/collection/2024-03-25_TypeA_sample1/regime_map/20260917T135154Z_3982fcc7/regimes.csv",
+      "rows": 6000,
+      "decompressed_bytes": 1445724,
+      "compressed_bytes": 535181,
+      "decompressed_sha256": "53afd784fdd8bbb010c69f0b4779f3a18b4eb3ddace9514f02d51748ef64da61",
+      "compressed_sha256": "dad903857bdcaec11c497b122691a53007b9b43eb1e1859db0d88eef47239cab"
+    },
+    {
+      "path": "research/inputs/A_simulated_regimes.csv.gz",
+      "role": "simulated",
+      "string": "A",
+      "original_relative_path": "reports/simulation/2024-03-25_TypeA_sample1/20260919T060704Z_47169eda/regime_map/20260919T062942Z_f02993f1/regimes.csv",
+      "rows": 6000,
+      "decompressed_bytes": 1405775,
+      "compressed_bytes": 519003,
+      "decompressed_sha256": "e814094b64a41be776b2a889e26d5eeef8f69596c62d81d93685926d4fb04dc7",
+      "compressed_sha256": "ff02dfe3ff0dfe7b66fdbc440b6775e691298d26fd414ea9a3dfd5e323c32bac"
+    },
+    {
+      "path": "research/inputs/B_measured_regimes.csv.gz",
+      "role": "measured",
+      "string": "B",
+      "original_relative_path": "reports/collection/2024-04-10_TypeB_sample1__2024-04-10/regime_map/20260917T154209Z_aa60a05c/regimes.csv",
+      "rows": 6000,
+      "decompressed_bytes": 1357130,
+      "compressed_bytes": 523102,
+      "decompressed_sha256": "0e002bde53b9e12951a4fcfef95c1ee43e7c4f433ea23e996f4a3badd537416f",
+      "compressed_sha256": "6b792ae74ed074be95e938c8a6894ec6b7f2188c0b3b21cda981f82c391c47e1"
+    },
+    {
+      "path": "research/inputs/B_simulated_regimes.csv.gz",
+      "role": "simulated",
+      "string": "B",
+      "original_relative_path": "reports/simulation/2024-04-10_TypeB_sample1__2024-04-10/20260919T070011Z_8ccdc396/regime_map/20260919T072355Z_5df18cf0/regimes.csv",
+      "rows": 6000,
+      "decompressed_bytes": 1314671,
+      "compressed_bytes": 505381,
+      "decompressed_sha256": "cce26b42dab8c82b481c013f930d29e91ca0824de616c4a5cc4163609208b6f7",
+      "compressed_sha256": "b1ee0950ff939dba5f54634aa32e3272e8cd954a92a9bb00b9812885455f3513"
+    },
+    {
+      "path": "research/inputs/C_measured_regimes.csv.gz",
+      "role": "measured",
+      "string": "C",
+      "original_relative_path": "reports/collection/2024-04-12_TypeC_sample1__2024-04-15/regime_map/20260917T163822Z_54d11e71/regimes.csv",
+      "rows": 6000,
+      "decompressed_bytes": 1358008,
+      "compressed_bytes": 523735,
+      "decompressed_sha256": "386c10e4faae2a400bd6bc4153e8d0042d2390e52c783acd355bc93d2d22225e",
+      "compressed_sha256": "7fc4644560804997614f039a6383032898781832beb7b9d31545d1728074ba6f"
+    },
+    {
+      "path": "research/inputs/C_simulated_regimes.csv.gz",
+      "role": "simulated",
+      "string": "C",
+      "original_relative_path": "reports/simulation/2024-04-12_TypeC_sample1__2024-04-15/20260919T072408Z_8306725d/regime_map/20260919T074703Z_c841637f/regimes.csv",
+      "rows": 6000,
+      "decompressed_bytes": 1309863,
+      "compressed_bytes": 500462,
+      "decompressed_sha256": "fcc15fb8ea5742f478d50c08e8e0d3bd8b7587b5690dbb2f0fa7e10fff39a41c",
+      "compressed_sha256": "0a4e36c520c96d6530ac88005b15d65b874df7625c420d9b921b9068c5a3e427"
+    },
+    {
+      "path": "research/inputs/D_measured_regimes.csv.gz",
+      "role": "measured",
+      "string": "D",
+      "original_relative_path": "reports/collection/2024-04-15_TypeD_sample1__2024-04-17/regime_map/20260917T172527Z_6dbcf479/regimes.csv",
+      "rows": 6000,
+      "decompressed_bytes": 1355397,
+      "compressed_bytes": 522311,
+      "decompressed_sha256": "398eb11e129935edb57c0e15cd6f4a7f40fde5ecc1b37f390de341d9924ec4b7",
+      "compressed_sha256": "343626aac3f8e6b258e3a60d27f4fc35800a338ed8f0c9d1babf942f0f32eca3"
+    },
+    {
+      "path": "research/inputs/D_simulated_regimes.csv.gz",
+      "role": "simulated",
+      "string": "D",
+      "original_relative_path": "reports/simulation/2024-04-15_TypeD_sample1__2024-04-17/20260919T074717Z_f3212a15/regime_map/20260919T081004Z_2ab933f2/regimes.csv",
+      "rows": 6000,
+      "decompressed_bytes": 1309894,
+      "compressed_bytes": 500664,
+      "decompressed_sha256": "43912c440a96e9a50a13139c9d6297cdc7433cbf6d47755a02f2e83b9c838c57",
+      "compressed_sha256": "d9d26be9e15d4d61d4c012a37285a2addd4c368cc02092b29ca0251dc9d2bd4c"
+    }
+  ]
+}

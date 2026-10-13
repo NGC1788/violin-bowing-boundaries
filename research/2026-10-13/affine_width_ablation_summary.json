@@ -1,0 +1,235 @@
+{
+  "scope": "POST-HOC matched width ablation, not new candidate search",
+  "aggregate": {
+    "cello": {
+      "tasks": 12,
+      "methods": {
+        "full_flow": {
+          "combined": {
+            "macro_panels": {
+              "nominal_iou": 0.7478845589956418,
+              "family_min_iou": 0.6947942448043762
+            },
+            "global_same_rule": {
+              "nominal_iou": 0.7625102675600086,
+              "family_min_iou": 0.7211949916540847
+            }
+          },
+          "source_heldout_speed": {
+            "macro_panels": {
+              "nominal_iou": 0.7604016113808857,
+              "family_min_iou": 0.71356475362717
+            },
+            "global_same_rule": {
+              "nominal_iou": 0.7604016113808857,
+              "family_min_iou": 0.71356475362717
+            }
+          },
+          "other_specimens": {
+            "macro_panels": {
+              "nominal_iou": 0.7464937753972815,
+              "family_min_iou": 0.6927086327129547
+            },
+            "global_same_rule": {
+              "nominal_iou": 0.7607669879546832,
+              "family_min_iou": 0.7175214798692887
+            }
+          }
+        },
+        "translation_k0": {
+          "combined": {
+            "macro_panels": {
+              "nominal_iou": 0.7471125950772489,
+              "family_min_iou": 0.6935022384440498
+            },
+            "global_same_rule": {
+              "nominal_iou": 0.7630789027091355,
+              "family_min_iou": 0.7191617969923727
+            }
+          },
+          "source_heldout_speed": {
+            "macro_panels": {
+              "nominal_iou": 0.7673777119382684,
+              "family_min_iou": 0.7193251636918035
+            },
+            "global_same_rule": {
+              "nominal_iou": 0.7673777119382684,
+              "family_min_iou": 0.7193251636918035
+            }
+          },
+          "other_specimens": {
+            "macro_panels": {
+              "nominal_iou": 0.7448609154260245,
+              "family_min_iou": 0.6906330245276328
+            },
+            "global_same_rule": {
+              "nominal_iou": 0.7606341737478899,
+              "family_min_iou": 0.7156763746171185
+            }
+          }
+        }
+      },
+      "full_minus_k0": {
+        "mean": 0.0012920063603264198,
+        "wins": 8,
+        "losses": 4
+      }
+    },
+    "published": {
+      "tasks": 6,
+      "methods": {
+        "full_flow": {
+          "combined": {
+            "macro_panels": {
+              "nominal_iou": 0.8612645058677045,
+              "family_min_iou": 0.8612645058677045
+            },
+            "global_same_rule": {
+              "nominal_iou": 0.8658163192664899,
+              "family_min_iou": 0.8658163192664899
+            }
+          },
+          "source_heldout_speed": {
+            "macro_panels": {
+              "nominal_iou": 0.8612645058677045,
+              "family_min_iou": 0.8612645058677045
+            },
+            "global_same_rule": {
+              "nominal_iou": 0.8658163192664899,
+              "family_min_iou": 0.8658163192664899
+            }
+          },
+          "other_specimens": {
+            "macro_panels": {
+              "nominal_iou": 0.4300826448609844,
+              "family_min_iou": 0.4300826448609844
+            },
+            "global_same_rule": {
+              "nominal_iou": 0.4324892305484094,
+              "family_min_iou": 0.4324892305484094
+            }
+          }
+        },
+        "translation_k0": {
+          "combined": {
+            "macro_panels": {
+              "nominal_iou": 0.8404638535456078,
+              "family_min_iou": 0.8404638535456078
+            },
+            "global_same_rule": {
+              "nominal_iou": 0.8417105106882353,
+              "family_min_iou": 0.8417105106882353
+            }
+          },
+          "source_heldout_speed": {
+            "macro_panels": {
+              "nominal_iou": 0.8404638535456078,
+              "family_min_iou": 0.8404638535456078
+            },
+            "global_same_rule": {
+              "nominal_iou": 0.8417105106882353,
+              "family_min_iou": 0.8417105106882353
+            }
+          },
+          "other_specimens": {
+            "macro_panels": {
+              "nominal_iou": 0.43836760742705166,
+              "family_min_iou": 0.43836760742705166
+            },
+            "global_same_rule": {
+              "nominal_iou": 0.4418156918442469,
+              "family_min_iou": 0.4418156918442469
+            }
+          }
+        }
+      },
+      "full_minus_k0": {
+        "mean": 0.02080065232209677,
+        "wins": 5,
+        "losses": 1
+      }
+    }
+  },
+  "full_flow_multistart_audit": {
+    "cv_fits": 810,
+    "maximum_objective_gain_from_other_start": 0.01624788126604798,
+    "fits_other_start_improves_objective_over_1e_6": 1,
+    "caveat": "full flow uses three distinct k starts; k=0 has one unique initialization (repeating it would be duplicate work)"
+  },
+  "all_tasks": {
+    "cello__A__0.05_0.1": {
+      "full_flow": 0.6890223069634732,
+      "translation_k0": 0.6903155466374267
+    },
+    "cello__A__0.05_0.2": {
+      "full_flow": 0.7032187221247845,
+      "translation_k0": 0.6904263463251706
+    },
+    "cello__A__0.1_0.2": {
+      "full_flow": 0.648143719785,
+      "translation_k0": 0.6425325576031022
+    },
+    "cello__B__0.05_0.1": {
+      "full_flow": 0.7133241224379427,
+      "translation_k0": 0.6815568127506362
+    },
+    "cello__B__0.05_0.2": {
+      "full_flow": 0.7120103590554219,
+      "translation_k0": 0.6976986874139166
+    },
+    "cello__B__0.1_0.2": {
+      "full_flow": 0.6530292779495905,
+      "translation_k0": 0.704580956377832
+    },
+    "cello__C__0.05_0.1": {
+      "full_flow": 0.6900943917772456,
+      "translation_k0": 0.6788955683799516
+    },
+    "cello__C__0.05_0.2": {
+      "full_flow": 0.7060081476719355,
+      "translation_k0": 0.7116992820909334
+    },
+    "cello__C__0.1_0.2": {
+      "full_flow": 0.6970814944681835,
+      "translation_k0": 0.7048213556120196
+    },
+    "cello__D__0.05_0.1": {
+      "full_flow": 0.710878158106242,
+      "translation_k0": 0.7094501552158585
+    },
+    "cello__D__0.05_0.2": {
+      "full_flow": 0.7112043779445963,
+      "translation_k0": 0.7105967635013333
+    },
+    "cello__D__0.1_0.2": {
+      "full_flow": 0.7035158593680992,
+      "translation_k0": 0.6994528294204173
+    },
+    "published__D4__0.05_0.1": {
+      "full_flow": 0.8911486486486486,
+      "translation_k0": 0.8187242109958738
+    },
+    "published__D4__0.05_0.15": {
+      "full_flow": 0.9102485380116958,
+      "translation_k0": 0.8827645902408967
+    },
+    "published__D4__0.05_0.2": {
+      "full_flow": 0.8833512931034483,
+      "translation_k0": 0.8824074074074074
+    },
+    "published__D4__0.1_0.15": {
+      "full_flow": 0.873633596236336,
+      "translation_k0": 0.8521615746890472
+    },
+    "published__D4__0.1_0.2": {
+      "full_flow": 0.854458736811678,
+      "translation_k0": 0.8576539201539202
+    },
+    "published__D4__0.15_0.2": {
+      "full_flow": 0.7547462223944208,
+      "translation_k0": 0.7490714177865017
+    }
+  },
+  "seconds": 6.761888333130628,
+  "overlap_warning": "source/pair tasks are not independent replicates"
+}

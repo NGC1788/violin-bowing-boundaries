@@ -10,9 +10,9 @@ Friction follows mu(w) = mu_d + (mu_s - mu_d) v0 / (v0 + |w|); a sticking stroke
 while it can and a slipping stroke keeps slipping while a slip solution exists (hysteresis).
 The bridge force is 2Z times the velocity wave arriving at the bridge.
 
-A modal stiff-string version was tried first and rejected: with a point bow its one-step
-bow admittance depends on the time step (bending stiffness), so the friction solution does
-not converge as the step shrinks.
+A previous modal stiff-string implementation failed its time-step/admittance checks and
+was rejected. That implementation failure is not a claim that modal string formulations
+cannot converge; independent energy-consistent modal formulations remain valid comparators.
 
 Every stroke in a batch has its own beta, bow-velocity and bow-force histories. String and
 friction values may be scalars (one string for the batch) or arrays with one value per
@@ -135,16 +135,115 @@ def friction_step(backend: Backend, free_slip, admittance, normal_force, stickin
     return force, stick, slip
 
 
-def reflection_coefficients(string: StringParams, rate: float):
-    """(gain, pole) of y[n] = gain ((1 - pole) x[n] + pole y[n-1]); two reflections per period give Q1.
+def reflection_design(string: StringParams, rate: float):
+    """Unconstrained coefficients for H(z)=g(1-p)/(1-p z^-1).
 
-    Scalars or per-stroke arrays.
+    Q1 is the fundamental decay target *before* fractional-delay interpolation losses.
+    A first-order low-pass cannot realize every Q1/corner pair passively. Inspect the
+    gain before simulation; changing the recurrence or clipping the gain silently
+    would change the meaning of these physical parameters.
     """
+    values = np.broadcast_arrays(np.asarray(string.f0, float), np.asarray(string.q1, float),
+                                 np.asarray(string.corner_hz, float))
+    if not (math.isfinite(rate) and rate > 0):
+        raise ValueError("rate must be finite and positive")
+    if any(np.any(~np.isfinite(v)) or np.any(v <= 0) for v in values):
+        raise ValueError("f0, q1 and corner_hz must be finite and positive")
+    if np.any(values[0] >= rate / 2):
+        raise ValueError("f0 must lie below the sampling Nyquist frequency")
     pole = np.exp(-2 * np.pi * np.asarray(string.corner_hz, dtype=float) / rate)
     omega = 2 * np.pi * np.asarray(string.f0, dtype=float) / rate
     lowpass = np.abs((1 - pole) / (1 - pole * np.exp(-1j * omega)))
     gain = np.exp(-np.pi / (2 * np.asarray(string.q1, dtype=float))) / lowpass
     return gain, pole
+
+
+def reflection_is_passive(string: StringParams, rate: float):
+    """Boolean scalar/array: whether the requested loss filter has gain <= 1 at DC."""
+    gain, _ = reflection_design(string, rate)
+    return gain <= 1.0
+
+
+def reflection_coefficients(string: StringParams, rate: float):
+    """Passive (gain, pole), for y[n]=gain*(1-pole)*x[n]+pole*y[n-1].
+
+    Two reflections per fundamental period provide the specified Q1 in the absence
+    of interpolation loss. A requested nonpassive pair is rejected, never clipped.
+    """
+    gain, pole = reflection_design(string, rate)
+    if np.any(gain > 1.0):
+        raise ValueError("nonpassive reflection: requested q1/corner_hz needs DC gain > 1; "
+                         "reduce q1 or increase corner_hz, then recalibrate")
+    return gain, pole
+
+
+def prepare_waveguide(string: StringParams, betas, rate: float):
+    """Shared numpy geometry and passive filter design for reference and CPU solvers."""
+    betas = np.asarray(betas, dtype=float)
+    if betas.ndim != 1 or not betas.size or np.any(~np.isfinite(betas)) or np.any((betas <= 0) | (betas >= 1)):
+        raise ValueError("betas must be a nonempty vector strictly between 0 and 1")
+    batch = betas.size
+    spread = lambda value: np.broadcast_to(np.asarray(value, dtype=float), (batch,)).copy()
+    impedance = spread(string.impedance)
+    lengths = spread(string.length)
+    if np.any(~np.isfinite(impedance)) or np.any(impedance <= 0) or np.any(~np.isfinite(lengths)) or np.any(lengths <= 0):
+        raise ValueError("string impedance and length must be finite and positive")
+    gain, pole = reflection_coefficients(string, rate)
+    gain, pole = spread(gain), spread(pole)
+    lag = pole / (1 - pole)
+    f0 = spread(string.f0)
+    delay_bridge = betas * rate / f0 - lag
+    delay_nut = (1 - betas) * rate / f0 - lag
+    if np.any(delay_bridge < 2) or np.any(delay_nut < 2):
+        raise ValueError("beta too small for this rate/filter: each termination round trip must be >= 2 samples")
+    size = int(math.ceil(max(delay_bridge.max(), delay_nut.max()))) + 3
+    return {"gain": gain, "pole": pole, "delay_bridge": delay_bridge, "delay_nut": delay_nut,
+            "delay_half": betas * rate / f0 / 2, "size": size, "impedance": impedance,
+            "admittance": 1 / (2 * impedance)}
+
+
+def linear_decay_diagnostics(string: StringParams, betas, rate: float):
+    """Nominal-f0 loop attenuation including linear-interpolation losses.
+
+    These are frequency-response diagnostics, not a fitted free-decay measurement.
+    ``effective_q_at_nominal_f0`` can be below requested Q1 and depend on beta/rate.
+    Phase error is relative to one full fundamental-period round trip.
+    """
+    config = prepare_waveguide(string, betas, rate)
+    omega = 2 * np.pi * np.asarray(string.f0) / rate
+    response = config["gain"] * (1 - config["pole"]) / (1 - config["pole"] * np.exp(-1j * omega))
+    loop = response ** 2
+    for key in ("delay_bridge", "delay_nut"):
+        delay = config[key]
+        base = np.floor(delay)
+        frac = delay - base
+        loop = loop * np.exp(-1j * omega * base) * ((1 - frac) + frac * np.exp(-1j * omega))
+    return {"reflection_dc_gain": config["gain"], "reflection_pole": config["pole"],
+            "loop_magnitude_at_nominal_f0": np.abs(loop),
+            "effective_q_at_nominal_f0": -np.pi / np.log(np.abs(loop)),
+            "loop_phase_error_radians_at_nominal_f0": np.angle(loop)}
+
+
+def validate_simulation_inputs(betas, velocity, force, profile_rate, rate, start_time, steps, output_every, record_from,
+                               friction: FrictionParams):
+    """Fail before allocating state for malformed profiles and undefined friction."""
+    batch = np.asarray(betas).size
+    velocity, force = np.asarray(velocity, float), np.asarray(force, float)
+    if velocity.ndim != 2 or velocity.shape != force.shape or velocity.shape[1] != batch or velocity.shape[0] < 2:
+        raise ValueError("velocity/force profiles must have matching (at least 2 samples, batch) shapes")
+    if np.any(~np.isfinite(velocity)) or np.any(~np.isfinite(force)):
+        raise ValueError("profiles must contain finite values")
+    if not (math.isfinite(profile_rate) and profile_rate > 0 and math.isfinite(start_time)):
+        raise ValueError("profile_rate must be positive and start_time finite")
+    if any(not isinstance(n, (int, np.integer)) for n in (steps, output_every, record_from)):
+        raise ValueError("steps, output_every and record_from must be integers")
+    if steps < 0 or output_every < 1 or not 0 <= record_from <= steps:
+        raise ValueError("require steps >= record_from >= 0 and output_every >= 1")
+    mu_s, mu_d, v0 = np.broadcast_arrays(np.asarray(friction.mu_s, float), np.asarray(friction.mu_d, float),
+                                        np.asarray(friction.v0, float))
+    if any(np.any(~np.isfinite(v)) for v in (mu_s, mu_d, v0)) or np.any(mu_s < mu_d) or np.any(mu_d < 0) or np.any(v0 <= 0):
+        raise ValueError("friction requires finite mu_s >= mu_d >= 0 and v0 > 0")
+    return velocity, force
 
 
 def simulate(backend: Backend, string: StringParams, friction: FrictionParams, betas, profile_velocity,
@@ -161,24 +260,18 @@ def simulate(backend: Backend, string: StringParams, friction: FrictionParams, b
     xp = backend
     betas = np.asarray(betas, dtype=float)
     batch = betas.size
+    profile_velocity, profile_force = validate_simulation_inputs(
+        betas, profile_velocity, profile_force, profile_rate, rate, start_time, steps, output_every, record_from, friction)
     spread = lambda value: np.broadcast_to(np.asarray(value, dtype=float), (batch,)).astype(float)  # noqa: E731
-    c = spread(string.wave_speed)
-    gain, pole = reflection_coefficients(string, rate)
-    gain, pole = spread(gain), spread(pole)
-    lag = pole / (1 - pole)  # low-frequency group delay of each reflection filter, removed from its line
-    delay_bridge = 2 * betas * string.length * rate / c - lag     # round trip bow -> bridge -> bow, samples
-    delay_nut = 2 * (1 - betas) * string.length * rate / c - lag
-    if np.any(delay_bridge < 2):
-        raise ValueError("beta too small for this rate: raise the rate so the bridge round trip is >= 2 samples")
-    size = int(math.ceil(delay_nut.max())) + 3
-    impedance = spread(string.impedance)
-    admittance = 1 / (2 * impedance)
+    config = prepare_waveguide(string, betas, rate)
+    gain, pole, size = config["gain"], config["pole"], config["size"]
+    impedance, admittance = config["impedance"], config["admittance"]
     gain, pole = xp.asarray(gain), xp.asarray(pole)
     impedance_t, admittance_t = xp.asarray(impedance), xp.asarray(admittance)
     rows = xp.index(np.arange(batch))
     buffer_b, buffer_n = xp.zeros((batch, size)), xp.zeros((batch, size))
     state_b, state_n = xp.zeros((batch,)), xp.zeros((batch,))
-    d_b, d_n, d_half = (xp.asarray(d) for d in (delay_bridge, delay_nut, (delay_bridge + lag) / 2))
+    d_b, d_n, d_half = (xp.asarray(config[key]) for key in ("delay_bridge", "delay_nut", "delay_half"))
     sticking = xp.ones_bool(batch)
     # Per-stroke friction values must live on the backend too, or a numpy array meets a device tensor.
     friction = FrictionParams(*(xp.asarray(spread(value)) for value in (friction.mu_s, friction.mu_d, friction.v0)))
@@ -202,8 +295,8 @@ def simulate(backend: Backend, string: StringParams, friction: FrictionParams, b
         frac = min(max(position - j, 0.0), 1.0)
         vb = velocity[j] * (1 - frac) + velocity[j + 1] * frac
         fn = force_profile[j] * (1 - frac) + force_profile[j + 1] * frac
-        state_b = gain * ((1 - pole) * read(buffer_b, d_b, n) + pole * state_b)
-        state_n = gain * ((1 - pole) * read(buffer_n, d_n, n) + pole * state_n)
+        state_b = gain * (1 - pole) * read(buffer_b, d_b, n) + pole * state_b
+        state_n = gain * (1 - pole) * read(buffer_n, d_n, n) + pole * state_n
         force, sticking, _ = friction_step(xp, vb + state_b + state_n, admittance_t, fn, sticking, friction)
         column = n % size
         buffer_b[:, column] = -state_n + admittance_t * force  # toward the bridge: from the nut side plus the bow

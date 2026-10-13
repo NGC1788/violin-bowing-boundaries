@@ -1,0 +1,5 @@
+source_doi,pdf_page_1based,journal_page,table,instrument,string,Z0_kg_per_s,tau1_s,tau1_SD_s,Q1,Q1_error,R_kg_per_s,R_error_kg_per_s,error_scope
+10.3813/AAA.918070,15,618,VI,monochord,D,0.25,0.521,0.016,480,14,76,2.3,errors_based_on_tau1_standard_deviation
+10.3813/AAA.918070,15,618,VI,violin,D_open,0.25,0.448,0.017,410,15,65,2.5,errors_based_on_tau1_standard_deviation
+10.3813/AAA.918070,15,618,VI,violin,D_stopped,0.25,0.296,,281,,45,,unreported_single_pluck
+10.3813/AAA.918070,15,618,VI,monochord,E,0.18,0.457,0.004,945,8,108,1.0,errors_based_on_tau1_standard_deviation

@@ -80,10 +80,48 @@ class FrictionTests(unittest.TestCase):
 
 
 @unittest.skipIf(np is None, "numpy not installed")
+class ReflectionPhysicsTests(unittest.TestCase):
+    def test_requested_q_matches_filter_transfer_at_fundamental(self):
+        for rate in (50_000, 100_000, 200_000):
+            string = bs.StringParams()
+            gain, pole = bs.reflection_coefficients(string, rate)
+            w = 2 * np.pi * string.f0 / rate
+            response = gain * (1 - pole) / (1 - pole * np.exp(-1j * w))
+            self.assertAlmostEqual(abs(response) ** 2, np.exp(-np.pi / string.q1), places=13)
+            self.assertLessEqual(gain, 1)
+
+    def test_historical_best_requires_nonpassive_filter(self):
+        string = bs.StringParams(q1=3726.62, corner_hz=1896.41)
+        self.assertFalse(bs.reflection_is_passive(string, 50_000))
+        with self.assertRaisesRegex(ValueError, "nonpassive"):
+            bs.reflection_coefficients(string, 50_000)
+
+    def test_invalid_physical_values_are_refused(self):
+        for kwargs in ({"q1": 0}, {"corner_hz": float("nan")}, {"f0": -1}):
+            with self.assertRaises(ValueError):
+                bs.reflection_coefficients(bs.StringParams(**kwargs), 50_000)
+        for beta in (0, 1, float("nan")):
+            with self.assertRaises(ValueError):
+                bs.prepare_waveguide(bs.StringParams(), [beta], 50_000)
+
+    def test_both_delay_lines_fit_the_buffer_even_near_nut(self):
+        for beta in (0.1, 0.9):
+            config = bs.prepare_waveguide(bs.StringParams(), [beta], 50_000)
+            self.assertGreater(config["size"], max(config["delay_bridge"][0], config["delay_nut"][0]) + 1)
+
+    def test_fractional_delay_loss_is_disclosed_in_effective_q(self):
+        measured = bs.linear_decay_diagnostics(bs.StringParams(), [0.03, 0.1, 0.2], 50_000)
+        self.assertTrue(np.all(measured["effective_q_at_nominal_f0"] <= 2000.00001))
+        self.assertTrue(np.all(measured["loop_magnitude_at_nominal_f0"] < 1))
+
+
+@unittest.skipIf(np is None, "numpy not installed")
 class WaveguideTests(unittest.TestCase):
     def test_schelleng_order_pitch_and_flyback_law(self):
         # beta 0.1, v 0.1: Schelleng F_max = 2 Z v / (beta (mu_s - mu_d)) = 5.8 N.
-        out = stroke([0.1] * 4, [0.1, 0.1, 0.1, 0.05], [0.25, 4.0, 10.0, 1.5])
+        # F=1.5 at the slower speed was a legacy, recurrence-dependent patchy case;
+        # use the scaled F=2 case for the analytic flyback-amplitude check.
+        out = stroke([0.1] * 4, [0.1, 0.1, 0.1, 0.05], [0.25, 4.0, 10.0, 2.0])
         low, helm, high, slow = (describe(out[:, j]) for j in range(4))
         self.assertEqual(low[0], "multiple_slip")
         self.assertEqual(high[0], "aperiodic")
@@ -95,7 +133,7 @@ class WaveguideTests(unittest.TestCase):
 
     def test_small_beta_needs_a_finer_rate(self):
         with self.assertRaisesRegex(ValueError, "beta too small"):
-            stroke([0.0005], [0.1], [1.0], seconds=0.05)
+            stroke([0.0005], [0.1], [1.0], seconds=0.4)
 
 
 if __name__ == "__main__":

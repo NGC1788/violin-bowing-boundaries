@@ -1,0 +1,70 @@
+{
+  "status": "post-hoc known-prior comparator",
+  "source_tasks": 6,
+  "scope": "other two D-monochord speeds only; no E generalization score",
+  "overlap_warning": "six speed pairs are not independent repetitions",
+  "mean_macro_nominal_iou": {
+    "static_ensemble": 0.8169405940201685,
+    "uniform_ensemble": 0.761346457517409,
+    "asymmetric_ensemble": 0.8445121481511775,
+    "affine_flow": 0.8612645058677045,
+    "learned_alpha": 0.842084724507204,
+    "raw_3d": 0.813397704247795
+  },
+  "all_tasks": {
+    "published__D4__0.05_0.1": {
+      "static_ensemble": 0.7738732927615897,
+      "uniform_ensemble": 0.6816060547441725,
+      "asymmetric_ensemble": 0.8764252336448598,
+      "affine_flow": 0.8911486486486486,
+      "learned_alpha": 0.8235871271585558,
+      "raw_3d": 0.7148259561667383
+    },
+    "published__D4__0.05_0.15": {
+      "static_ensemble": 0.839756008960465,
+      "uniform_ensemble": 0.8125870602531046,
+      "asymmetric_ensemble": 0.8697411641045855,
+      "affine_flow": 0.9102485380116958,
+      "learned_alpha": 0.8667014998770592,
+      "raw_3d": 0.7939630166787527
+    },
+    "published__D4__0.05_0.2": {
+      "static_ensemble": 0.8853916152096197,
+      "uniform_ensemble": 0.8197577276524645,
+      "asymmetric_ensemble": 0.834502954833263,
+      "affine_flow": 0.8833512931034483,
+      "learned_alpha": 0.879682446339312,
+      "raw_3d": 0.8866517857142857
+    },
+    "published__D4__0.1_0.15": {
+      "static_ensemble": 0.814327485380117,
+      "uniform_ensemble": 0.7573353293413174,
+      "asymmetric_ensemble": 0.8368799042425854,
+      "affine_flow": 0.873633596236336,
+      "learned_alpha": 0.8631322094055014,
+      "raw_3d": 0.8490772219524041
+    },
+    "published__D4__0.1_0.2": {
+      "static_ensemble": 0.8498336233476814,
+      "uniform_ensemble": 0.7881205673758864,
+      "asymmetric_ensemble": 0.8457838457838458,
+      "affine_flow": 0.854458736811678,
+      "learned_alpha": 0.8479814564419548,
+      "raw_3d": 0.8636906257853731
+    },
+    "published__D4__0.15_0.2": {
+      "static_ensemble": 0.7384615384615385,
+      "uniform_ensemble": 0.708672005737509,
+      "asymmetric_ensemble": 0.8037397862979259,
+      "affine_flow": 0.7547462223944208,
+      "learned_alpha": 0.7714236078208409,
+      "raw_3d": 0.772177619189216
+    }
+  },
+  "seconds": 0.2591522498987615,
+  "flow_minus_known_asymmetric": {
+    "mean": 0.016752357716527038,
+    "wins": 5,
+    "losses": 1
+  }
+}

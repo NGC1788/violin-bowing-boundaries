@@ -1,0 +1,109 @@
+{
+  "source_doi": "10.3813/AAA.918070",
+  "source_url": "https://www.knutsacoustics.com/files/schoonderwaldt-et-al.-empirical-schelleng.pdf",
+  "source_pdf_sha256": "9e7f018421ae5512a7fb3c4a54e2c53c9146393167721a3fe7c169eb6358387a",
+  "source_pdf_bytes": 803255,
+  "extractor_sha256": "91e971096cd1192453f9d2db6a6ed33cf237ec391d48cd1175f7a2a28a4dc628",
+  "pdfplumber_version": "0.11.9",
+  "axes_units": "PDF points, top-down y",
+  "label_scope": "published author classifications, not raw waveforms or independent mechanical ground truth",
+  "missing_policy": "absence of a marker is unknown, never negative",
+  "gray_square_policy": "separate non-systematically-analyzed category, excluded by strict flag",
+  "beta_policy": "ordered reported rounded distances divided by reported 325 mm length; not exact measured beta",
+  "position_accuracy_reported_mm": 0.5,
+  "repetitions": "paper reports three repeated strokes; figure exposes only final author-selected category, not individual replicate labels",
+  "panels": [
+    {
+      "figure": 4,
+      "panel": "a",
+      "grid_cells": 264,
+      "axis_tick_max_fit_residual_pt": 0.040571847619133905,
+      "category_counts": {
+        "multiple_slipping": 44,
+        "helmholtz": 139,
+        "raucous": 74,
+        "anomalous_low_frequency": 7
+      },
+      "off_grid_marker_primitives": [],
+      "maximum_marker_residual_pt": 0.08229318333337687
+    },
+    {
+      "figure": 4,
+      "panel": "b",
+      "grid_cells": 264,
+      "axis_tick_max_fit_residual_pt": 0.040553199999862954,
+      "category_counts": {
+        "constant_slipping": 12,
+        "multiple_slipping": 36,
+        "helmholtz": 151,
+        "raucous": 40,
+        "anomalous_low_frequency": 25
+      },
+      "off_grid_marker_primitives": [],
+      "maximum_marker_residual_pt": 0.08229318333337687
+    },
+    {
+      "figure": 4,
+      "panel": "c",
+      "grid_cells": 264,
+      "axis_tick_max_fit_residual_pt": 0.040571847619133905,
+      "category_counts": {
+        "constant_slipping": 9,
+        "multiple_slipping": 31,
+        "helmholtz": 179,
+        "raucous": 32,
+        "anomalous_low_frequency": 13
+      },
+      "off_grid_marker_primitives": [],
+      "maximum_marker_residual_pt": 0.05965286428562422
+    },
+    {
+      "figure": 4,
+      "panel": "d",
+      "grid_cells": 264,
+      "axis_tick_max_fit_residual_pt": 0.040553199999862954,
+      "category_counts": {
+        "unplotted_unknown": 15,
+        "multiple_slipping": 35,
+        "helmholtz": 195,
+        "raucous": 14,
+        "s_motion": 3,
+        "anomalous_low_frequency": 2
+      },
+      "off_grid_marker_primitives": [],
+      "maximum_marker_residual_pt": 0.05965286428562422
+    },
+    {
+      "figure": 7,
+      "panel": "a",
+      "grid_cells": 264,
+      "axis_tick_max_fit_residual_pt": 0.015591295238095881,
+      "category_counts": {
+        "unplotted_unknown": 77,
+        "multiple_slipping": 8,
+        "helmholtz": 43,
+        "helmholtz_not_systematically_analyzed": 116,
+        "anomalous_low_frequency": 4,
+        "raucous": 16
+      },
+      "off_grid_marker_primitives": [],
+      "maximum_marker_residual_pt": 0.0518578166665975
+    },
+    {
+      "figure": 7,
+      "panel": "b",
+      "grid_cells": 264,
+      "axis_tick_max_fit_residual_pt": 0.0155203428570303,
+      "category_counts": {
+        "unplotted_unknown": 60,
+        "multiple_slipping": 6,
+        "helmholtz": 39,
+        "helmholtz_not_systematically_analyzed": 145,
+        "anomalous_low_frequency": 7,
+        "raucous": 7
+      },
+      "off_grid_marker_primitives": [],
+      "maximum_marker_residual_pt": 0.03966244761932103
+    }
+  ]
+}

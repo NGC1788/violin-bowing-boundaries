@@ -1,0 +1,684 @@
+{
+  "scope": "numerical audit of assumed generic strings, no experimental violin validation",
+  "rates": [
+    50000,
+    100000,
+    200000,
+    400000,
+    800000
+  ],
+  "durations": [
+    0.6,
+    1.2
+  ],
+  "selected_cases": 96,
+  "total_simulated_strokes": 948,
+  "selection": "same force ranks 6 and 16 chosen before the earlier main-grid results",
+  "observation": "final .4s, common50kHz output, no added noise; fixed nominal-frequency spectrum bands",
+  "comparisons": [
+    {
+      "comparison": "rate",
+      "duration": 0.6,
+      "first": 50000,
+      "second": 100000,
+      "n": 90,
+      "changed_labels": 21,
+      "binary_h": {
+        "changed": 13,
+        "first_positive": 29,
+        "second_positive": 22,
+        "intersection": 19,
+        "union": 32,
+        "iou": 0.59375
+      },
+      "binary_gated_h": {
+        "changed": 11,
+        "first_positive": 26,
+        "second_positive": 21,
+        "intersection": 18,
+        "union": 29,
+        "iou": 0.6206896551724138
+      },
+      "stick_fraction_abs_change": {
+        "median": 0.00208750000000002,
+        "p90": 0.014634999999999957,
+        "max": 0.0598749999999999
+      },
+      "periodicity_abs_change": {
+        "median": 0.0016650196022889308,
+        "p90": 0.16858291158294786,
+        "max": 0.6220889930732378
+      },
+      "relative_frequency_abs_change": {
+        "median": 0.00035272647520719264,
+        "p90": 0.49586139006425844,
+        "max": 1.0010947487198434
+      },
+      "relative_amplitude_abs_change": {
+        "median": 0.016062034462809044,
+        "p90": 0.08405323811409293,
+        "max": 0.295512586671306
+      },
+      "spectral_total_variation": {
+        "median": 0.06110008466453419,
+        "p90": 0.36597687540438906,
+        "max": 0.7584730596989725
+      },
+      "stick_change_gt_0_02": 6,
+      "spectral_tv_gt_0_10": 35
+    },
+    {
+      "comparison": "rate",
+      "duration": 0.6,
+      "first": 100000,
+      "second": 200000,
+      "n": 96,
+      "changed_labels": 19,
+      "binary_h": {
+        "changed": 9,
+        "first_positive": 23,
+        "second_positive": 26,
+        "intersection": 20,
+        "union": 29,
+        "iou": 0.6896551724137931
+      },
+      "binary_gated_h": {
+        "changed": 8,
+        "first_positive": 22,
+        "second_positive": 24,
+        "intersection": 19,
+        "union": 27,
+        "iou": 0.7037037037037037
+      },
+      "stick_fraction_abs_change": {
+        "median": 0.0009000000000000119,
+        "p90": 0.01582500000000009,
+        "max": 0.05964999999999998
+      },
+      "periodicity_abs_change": {
+        "median": 0.0022366128423877973,
+        "p90": 0.1059293784296082,
+        "max": 0.42077938503010653
+      },
+      "relative_frequency_abs_change": {
+        "median": 0.00019885081850438925,
+        "p90": 0.08422392169260116,
+        "max": 1.001018588259242
+      },
+      "relative_amplitude_abs_change": {
+        "median": 0.009697793435348372,
+        "p90": 0.13081242356775058,
+        "max": 0.296012163544388
+      },
+      "spectral_total_variation": {
+        "median": 0.0638755518558029,
+        "p90": 0.3613530936502932,
+        "max": 0.7544506663280751
+      },
+      "stick_change_gt_0_02": 8,
+      "spectral_tv_gt_0_10": 37
+    },
+    {
+      "comparison": "rate",
+      "duration": 0.6,
+      "first": 200000,
+      "second": 400000,
+      "n": 96,
+      "changed_labels": 13,
+      "binary_h": {
+        "changed": 7,
+        "first_positive": 26,
+        "second_positive": 27,
+        "intersection": 23,
+        "union": 30,
+        "iou": 0.7666666666666667
+      },
+      "binary_gated_h": {
+        "changed": 7,
+        "first_positive": 24,
+        "second_positive": 25,
+        "intersection": 21,
+        "union": 28,
+        "iou": 0.75
+      },
+      "stick_fraction_abs_change": {
+        "median": 0.0005468750000000022,
+        "p90": 0.0052875000000000005,
+        "max": 0.0395375
+      },
+      "periodicity_abs_change": {
+        "median": 0.0010327240509019897,
+        "p90": 0.08661903435257418,
+        "max": 0.45148994220934224
+      },
+      "relative_frequency_abs_change": {
+        "median": 5.946946611594591e-05,
+        "p90": 0.004720236285802646,
+        "max": 0.4936812130632686
+      },
+      "relative_amplitude_abs_change": {
+        "median": 0.0066520432573296834,
+        "p90": 0.042193062086554226,
+        "max": 0.2942255967603659
+      },
+      "spectral_total_variation": {
+        "median": 0.024715732606693536,
+        "p90": 0.2975609377740197,
+        "max": 0.7811772573428986
+      },
+      "stick_change_gt_0_02": 3,
+      "spectral_tv_gt_0_10": 24
+    },
+    {
+      "comparison": "rate",
+      "duration": 0.6,
+      "first": 400000,
+      "second": 800000,
+      "n": 96,
+      "changed_labels": 15,
+      "binary_h": {
+        "changed": 8,
+        "first_positive": 27,
+        "second_positive": 25,
+        "intersection": 22,
+        "union": 30,
+        "iou": 0.7333333333333333
+      },
+      "binary_gated_h": {
+        "changed": 8,
+        "first_positive": 25,
+        "second_positive": 23,
+        "intersection": 20,
+        "union": 28,
+        "iou": 0.7142857142857143
+      },
+      "stick_fraction_abs_change": {
+        "median": 0.0003453125000000279,
+        "p90": 0.004492187500000022,
+        "max": 0.032062499999999994
+      },
+      "periodicity_abs_change": {
+        "median": 0.0006657325074400644,
+        "p90": 0.10542920820232635,
+        "max": 0.5319067443541738
+      },
+      "relative_frequency_abs_change": {
+        "median": 2.9230278862766737e-05,
+        "p90": 0.009490102654879177,
+        "max": 0.5004340163573511
+      },
+      "relative_amplitude_abs_change": {
+        "median": 0.00679252650304104,
+        "p90": 0.06781208144023032,
+        "max": 0.25281498086820753
+      },
+      "spectral_total_variation": {
+        "median": 0.026698117201790814,
+        "p90": 0.2661391400572141,
+        "max": 0.7407582079531111
+      },
+      "stick_change_gt_0_02": 1,
+      "spectral_tv_gt_0_10": 26
+    },
+    {
+      "comparison": "rate",
+      "duration": 1.2,
+      "first": 50000,
+      "second": 100000,
+      "n": 90,
+      "changed_labels": 22,
+      "binary_h": {
+        "changed": 12,
+        "first_positive": 37,
+        "second_positive": 27,
+        "intersection": 26,
+        "union": 38,
+        "iou": 0.6842105263157895
+      },
+      "binary_gated_h": {
+        "changed": 11,
+        "first_positive": 33,
+        "second_positive": 24,
+        "intersection": 23,
+        "union": 34,
+        "iou": 0.6764705882352942
+      },
+      "stick_fraction_abs_change": {
+        "median": 0.001887500000000042,
+        "p90": 0.013534999999999995,
+        "max": 0.04717499999999997
+      },
+      "periodicity_abs_change": {
+        "median": 0.0012228635957971523,
+        "p90": 0.09241516606310225,
+        "max": 0.4167276011395242
+      },
+      "relative_frequency_abs_change": {
+        "median": 0.0001923387637046824,
+        "p90": 0.49660077602521246,
+        "max": 1.0005963514394163
+      },
+      "relative_amplitude_abs_change": {
+        "median": 0.009644976626421917,
+        "p90": 0.08282578687898429,
+        "max": 0.31611628383551055
+      },
+      "spectral_total_variation": {
+        "median": 0.03210123357260089,
+        "p90": 0.44074727030621075,
+        "max": 0.9478328037674727
+      },
+      "stick_change_gt_0_02": 7,
+      "spectral_tv_gt_0_10": 30
+    },
+    {
+      "comparison": "rate",
+      "duration": 1.2,
+      "first": 100000,
+      "second": 200000,
+      "n": 96,
+      "changed_labels": 20,
+      "binary_h": {
+        "changed": 10,
+        "first_positive": 29,
+        "second_positive": 35,
+        "intersection": 27,
+        "union": 37,
+        "iou": 0.7297297297297297
+      },
+      "binary_gated_h": {
+        "changed": 9,
+        "first_positive": 26,
+        "second_positive": 31,
+        "intersection": 24,
+        "union": 33,
+        "iou": 0.7272727272727273
+      },
+      "stick_fraction_abs_change": {
+        "median": 0.0007500000000000284,
+        "p90": 0.012868749999999929,
+        "max": 0.04160000000000008
+      },
+      "periodicity_abs_change": {
+        "median": 0.0016072670860501348,
+        "p90": 0.08902044960560607,
+        "max": 0.2561082773883242
+      },
+      "relative_frequency_abs_change": {
+        "median": 0.00018904194047961417,
+        "p90": 0.49407054155554897,
+        "max": 1.000940292184675
+      },
+      "relative_amplitude_abs_change": {
+        "median": 0.0065108648671123905,
+        "p90": 0.10949147378275295,
+        "max": 0.318547641574687
+      },
+      "spectral_total_variation": {
+        "median": 0.024345061923636592,
+        "p90": 0.4318561850526714,
+        "max": 0.9489013870712961
+      },
+      "stick_change_gt_0_02": 8,
+      "spectral_tv_gt_0_10": 38
+    },
+    {
+      "comparison": "rate",
+      "duration": 1.2,
+      "first": 200000,
+      "second": 400000,
+      "n": 96,
+      "changed_labels": 18,
+      "binary_h": {
+        "changed": 3,
+        "first_positive": 35,
+        "second_positive": 34,
+        "intersection": 33,
+        "union": 36,
+        "iou": 0.9166666666666666
+      },
+      "binary_gated_h": {
+        "changed": 3,
+        "first_positive": 31,
+        "second_positive": 30,
+        "intersection": 29,
+        "union": 32,
+        "iou": 0.90625
+      },
+      "stick_fraction_abs_change": {
+        "median": 0.00046875000000001776,
+        "p90": 0.004212499999999952,
+        "max": 0.046218750000000086
+      },
+      "periodicity_abs_change": {
+        "median": 0.0004281651319427149,
+        "p90": 0.10908946380625573,
+        "max": 0.3777840246205606
+      },
+      "relative_frequency_abs_change": {
+        "median": 6.757770116045059e-05,
+        "p90": 0.0135263014391618,
+        "max": 0.5016134738618707
+      },
+      "relative_amplitude_abs_change": {
+        "median": 0.0026438868554706533,
+        "p90": 0.04822842191703656,
+        "max": 0.3143508620372704
+      },
+      "spectral_total_variation": {
+        "median": 0.01859639638966308,
+        "p90": 0.3457899087003239,
+        "max": 0.9333284266610968
+      },
+      "stick_change_gt_0_02": 4,
+      "spectral_tv_gt_0_10": 28
+    },
+    {
+      "comparison": "rate",
+      "duration": 1.2,
+      "first": 400000,
+      "second": 800000,
+      "n": 96,
+      "changed_labels": 17,
+      "binary_h": {
+        "changed": 7,
+        "first_positive": 34,
+        "second_positive": 31,
+        "intersection": 29,
+        "union": 36,
+        "iou": 0.8055555555555556
+      },
+      "binary_gated_h": {
+        "changed": 6,
+        "first_positive": 30,
+        "second_positive": 28,
+        "intersection": 26,
+        "union": 32,
+        "iou": 0.8125
+      },
+      "stick_fraction_abs_change": {
+        "median": 0.0002484374999999761,
+        "p90": 0.0046921875,
+        "max": 0.04625625
+      },
+      "periodicity_abs_change": {
+        "median": 0.00036770896806492814,
+        "p90": 0.14659022639265173,
+        "max": 0.38968624148743103
+      },
+      "relative_frequency_abs_change": {
+        "median": 2.688807023426896e-05,
+        "p90": 0.10032880373296738,
+        "max": 1.499362492258396
+      },
+      "relative_amplitude_abs_change": {
+        "median": 0.0011754914454984206,
+        "p90": 0.06261267626278036,
+        "max": 0.2806539528497611
+      },
+      "spectral_total_variation": {
+        "median": 0.009375264539748407,
+        "p90": 0.357802720615381,
+        "max": 0.9037517063233064
+      },
+      "stick_change_gt_0_02": 2,
+      "spectral_tv_gt_0_10": 24
+    },
+    {
+      "comparison": "duration",
+      "rate": 50000,
+      "first": 0.6,
+      "second": 1.2,
+      "n": 90,
+      "changed_labels": 17,
+      "binary_h": {
+        "changed": 10,
+        "first_positive": 29,
+        "second_positive": 37,
+        "intersection": 28,
+        "union": 38,
+        "iou": 0.7368421052631579
+      },
+      "binary_gated_h": {
+        "changed": 9,
+        "first_positive": 26,
+        "second_positive": 33,
+        "intersection": 25,
+        "union": 34,
+        "iou": 0.7352941176470589
+      },
+      "stick_fraction_abs_change": {
+        "median": 0.0008999999999999564,
+        "p90": 0.010420000000000077,
+        "max": 0.1432500000000001
+      },
+      "periodicity_abs_change": {
+        "median": 0.0015493340368566422,
+        "p90": 0.1463398087225275,
+        "max": 0.37890073155645704
+      },
+      "relative_frequency_abs_change": {
+        "median": 5.234533346871537e-05,
+        "p90": 0.03241470486088924,
+        "max": 1.0006738637504713
+      },
+      "relative_amplitude_abs_change": {
+        "median": 0.013208214229246637,
+        "p90": 0.09637997540674532,
+        "max": 0.42036855187633443
+      },
+      "spectral_total_variation": {
+        "median": 0.03381874291020069,
+        "p90": 0.20879984463637358,
+        "max": 0.45147092433217745
+      },
+      "stick_change_gt_0_02": 9,
+      "spectral_tv_gt_0_10": 26
+    },
+    {
+      "comparison": "duration",
+      "rate": 100000,
+      "first": 0.6,
+      "second": 1.2,
+      "n": 96,
+      "changed_labels": 17,
+      "binary_h": {
+        "changed": 12,
+        "first_positive": 23,
+        "second_positive": 29,
+        "intersection": 20,
+        "union": 32,
+        "iou": 0.625
+      },
+      "binary_gated_h": {
+        "changed": 10,
+        "first_positive": 22,
+        "second_positive": 26,
+        "intersection": 19,
+        "union": 29,
+        "iou": 0.6551724137931034
+      },
+      "stick_fraction_abs_change": {
+        "median": 0.0008500000000000174,
+        "p90": 0.01942499999999997,
+        "max": 0.14759999999999995
+      },
+      "periodicity_abs_change": {
+        "median": 0.0013589444765219616,
+        "p90": 0.1777811411747912,
+        "max": 0.3914798331661078
+      },
+      "relative_frequency_abs_change": {
+        "median": 5.55885000048177e-05,
+        "p90": 0.05920921216175862,
+        "max": 1.0011350038874165
+      },
+      "relative_amplitude_abs_change": {
+        "median": 0.018435606095509375,
+        "p90": 0.0935755217986508,
+        "max": 0.4490187894422363
+      },
+      "spectral_total_variation": {
+        "median": 0.04185015704961827,
+        "p90": 0.3048362835020726,
+        "max": 0.5071213912947482
+      },
+      "stick_change_gt_0_02": 10,
+      "spectral_tv_gt_0_10": 36
+    },
+    {
+      "comparison": "duration",
+      "rate": 200000,
+      "first": 0.6,
+      "second": 1.2,
+      "n": 96,
+      "changed_labels": 22,
+      "binary_h": {
+        "changed": 11,
+        "first_positive": 26,
+        "second_positive": 35,
+        "intersection": 25,
+        "union": 36,
+        "iou": 0.6944444444444444
+      },
+      "binary_gated_h": {
+        "changed": 9,
+        "first_positive": 24,
+        "second_positive": 31,
+        "intersection": 23,
+        "union": 32,
+        "iou": 0.71875
+      },
+      "stick_fraction_abs_change": {
+        "median": 0.0008500000000000174,
+        "p90": 0.02859375000000003,
+        "max": 0.14321249999999996
+      },
+      "periodicity_abs_change": {
+        "median": 0.001618888956700204,
+        "p90": 0.1576762548242312,
+        "max": 0.4631717235039696
+      },
+      "relative_frequency_abs_change": {
+        "median": 7.710350436294195e-05,
+        "p90": 0.12069329386333666,
+        "max": 1.0009953540926557
+      },
+      "relative_amplitude_abs_change": {
+        "median": 0.019577734008080803,
+        "p90": 0.1220273023717582,
+        "max": 0.41479673758465857
+      },
+      "spectral_total_variation": {
+        "median": 0.06587980268812771,
+        "p90": 0.2888708393368287,
+        "max": 0.6508173842209163
+      },
+      "stick_change_gt_0_02": 12,
+      "spectral_tv_gt_0_10": 39
+    },
+    {
+      "comparison": "duration",
+      "rate": 400000,
+      "first": 0.6,
+      "second": 1.2,
+      "n": 96,
+      "changed_labels": 20,
+      "binary_h": {
+        "changed": 9,
+        "first_positive": 27,
+        "second_positive": 34,
+        "intersection": 26,
+        "union": 35,
+        "iou": 0.7428571428571429
+      },
+      "binary_gated_h": {
+        "changed": 7,
+        "first_positive": 25,
+        "second_positive": 30,
+        "intersection": 24,
+        "union": 31,
+        "iou": 0.7741935483870968
+      },
+      "stick_fraction_abs_change": {
+        "median": 0.0006062499999999194,
+        "p90": 0.01813437499999998,
+        "max": 0.14287499999999986
+      },
+      "periodicity_abs_change": {
+        "median": 0.0017106858502933253,
+        "p90": 0.16153231077666105,
+        "max": 0.48450956942420964
+      },
+      "relative_frequency_abs_change": {
+        "median": 9.707147662105775e-05,
+        "p90": 0.11435661076666931,
+        "max": 1.0008307380144164
+      },
+      "relative_amplitude_abs_change": {
+        "median": 0.019042011247706984,
+        "p90": 0.11248874723139646,
+        "max": 0.41505236822375646
+      },
+      "spectral_total_variation": {
+        "median": 0.05928548951529144,
+        "p90": 0.2963272300336999,
+        "max": 0.627076590853748
+      },
+      "stick_change_gt_0_02": 9,
+      "spectral_tv_gt_0_10": 39
+    },
+    {
+      "comparison": "duration",
+      "rate": 800000,
+      "first": 0.6,
+      "second": 1.2,
+      "n": 96,
+      "changed_labels": 25,
+      "binary_h": {
+        "changed": 12,
+        "first_positive": 25,
+        "second_positive": 31,
+        "intersection": 22,
+        "union": 34,
+        "iou": 0.6470588235294118
+      },
+      "binary_gated_h": {
+        "changed": 11,
+        "first_positive": 23,
+        "second_positive": 28,
+        "intersection": 20,
+        "union": 31,
+        "iou": 0.6451612903225806
+      },
+      "stick_fraction_abs_change": {
+        "median": 0.0010156249999999645,
+        "p90": 0.027600000000000013,
+        "max": 0.1441
+      },
+      "periodicity_abs_change": {
+        "median": 0.001632705192689432,
+        "p90": 0.1574236883995429,
+        "max": 0.4090840064064979
+      },
+      "relative_frequency_abs_change": {
+        "median": 0.000119044279897002,
+        "p90": 0.02484346978303044,
+        "max": 1.4998117564351705
+      },
+      "relative_amplitude_abs_change": {
+        "median": 0.020618838866605968,
+        "p90": 0.11199172692553222,
+        "max": 0.4308223892460573
+      },
+      "spectral_total_variation": {
+        "median": 0.08169375402280085,
+        "p90": 0.3137874465935121,
+        "max": 0.5424502361455004
+      },
+      "stick_change_gt_0_02": 12,
+      "spectral_tv_gt_0_10": 43
+    }
+  ],
+  "elapsed_seconds": 3.9799494170583785
+}

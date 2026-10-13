@@ -141,7 +141,9 @@ def run(diagram: str, reports: Path, cache_root: Path, out_data: Path, out_repor
     reference_f0 = {name: regime["conditions"][name]["reference_f0_hz"] for name in by_condition}
     run_id = f"{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')}_{uuid.uuid4().hex[:8]}"
     sim_cache, sim_reports = out_data / diagram / run_id, out_reports / diagram / run_id
-    parameters = {"rate": rate, "impedance": impedance, "q1": string_overrides.get("q1", bs.StringParams.q1),
+    parameters = {"model_version": "passive-point-bow-waveguide-v2",
+                  "evaluation_scope": "target-adapted diagnostic; settings may be estimated from this diagram",
+                  "rate": rate, "impedance": impedance, "q1": string_overrides.get("q1", bs.StringParams.q1),
                   "corner_hz": string_overrides.get("corner_hz", bs.StringParams.corner_hz),
                   "friction": vars(friction), "observation_noise": noise, "reference_f0": reference_f0,
                   "backend": backend.name, "limit": limit, "seed": seed}

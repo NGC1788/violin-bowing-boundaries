@@ -1,0 +1,2 @@
+# Keep scientific CSV bytes stable: manifests pin their original CRLF checksums.
+research/**/*.csv -text whitespace=cr-at-eol

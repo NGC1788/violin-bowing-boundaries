@@ -1,0 +1,514 @@
+{
+  "protocol": {
+    "rates": [
+      100000,
+      200000
+    ],
+    "duration": 0.6,
+    "analysis_window": [
+      0.2,
+      0.58
+    ],
+    "q1": 200.0,
+    "corner_hz": 6000.0,
+    "impedance": 1.0,
+    "noise_force_bound_over_Zv": 0.002,
+    "threshold_for_near_stick_over_v": 0.01,
+    "shared_Z_perturbation": 1.1,
+    "scope": "Conditional known-parameter synthetic reconstruction, no real data or labels"
+  },
+  "cases_per_rate": 96,
+  "toy_checks": {
+    "integer_delay_identity_max_error": 4.440892098500626e-16,
+    "half_sample_observer_hidden_Nyquist_max_amplitude": 0.0,
+    "hidden_velocity_original_max_amplitude": 1.0,
+    "shared_impedance_scale_counterexample": "Both velocity reconstructions scale by 1/1.1 if Z is 10% too high; their crossfiltered residual remains zero."
+  },
+  "production_bridge_float32_max_parity_error": 0.0,
+  "by_rate": {
+    "100000": {
+      "n": 96,
+      "methods": {
+        "known_bridge": {
+          "velocity_rmse_over_speed": {
+            "median": 0.05236450564902499,
+            "max": 0.7282459595719253,
+            "mean": 0.14480399861758503
+          },
+          "velocity_max_error_over_speed": {
+            "median": 0.5365649515432294,
+            "max": 8.783273470511984,
+            "mean": 1.7875032812794611
+          },
+          "stick_fraction_abs_error_at_1pct_speed": {
+            "median": 0.010131578947368436,
+            "max": 0.054526315789473756,
+            "mean": 0.012977521929824565
+          },
+          "stick_indicator_error_at_1pct_speed": {
+            "median": 0.01013157894736842,
+            "max": 0.05452631578947369,
+            "mean": 0.012978070175438597
+          },
+          "false_stick_samples": {
+            "median": 0.0,
+            "max": 19.0,
+            "mean": 0.53125
+          },
+          "missed_stick_samples": {
+            "median": 385.0,
+            "max": 2072.0,
+            "mean": 492.6354166666667
+          }
+        },
+        "known_nut": {
+          "velocity_rmse_over_speed": {
+            "median": 0.06415483085865095,
+            "max": 0.8957352060722219,
+            "mean": 0.13112975186387985
+          },
+          "velocity_max_error_over_speed": {
+            "median": 0.6228672342815653,
+            "max": 8.123972656024554,
+            "mean": 1.685487125926674
+          },
+          "stick_fraction_abs_error_at_1pct_speed": {
+            "median": 0.010644736842105262,
+            "max": 0.05415789473684207,
+            "mean": 0.01327247807017544
+          },
+          "stick_indicator_error_at_1pct_speed": {
+            "median": 0.010644736842105262,
+            "max": 0.054157894736842106,
+            "mean": 0.013279605263157893
+          },
+          "false_stick_samples": {
+            "median": 0.0,
+            "max": 5.0,
+            "mean": 0.13541666666666666
+          },
+          "missed_stick_samples": {
+            "median": 404.5,
+            "max": 2058.0,
+            "mean": 504.4895833333333
+          }
+        },
+        "known_average": {
+          "velocity_rmse_over_speed": {
+            "median": 0.06442556639160751,
+            "max": 0.8119905828220737,
+            "mean": 0.13796687524073245
+          },
+          "velocity_max_error_over_speed": {
+            "median": 0.5832668798148749,
+            "max": 7.777316297040935,
+            "mean": 1.7364952036030676
+          },
+          "stick_fraction_abs_error_at_1pct_speed": {
+            "median": 0.01039473684210529,
+            "max": 0.054526315789473756,
+            "mean": 0.013246984649122813
+          },
+          "stick_indicator_error_at_1pct_speed": {
+            "median": 0.010394736842105262,
+            "max": 0.05452631578947369,
+            "mean": 0.013253015350877194
+          },
+          "false_stick_samples": {
+            "median": 0.0,
+            "max": 12.0,
+            "mean": 0.23958333333333334
+          },
+          "missed_stick_samples": {
+            "median": 395.0,
+            "max": 2072.0,
+            "mean": 503.375
+          }
+        },
+        "naive_bridge": {
+          "velocity_rmse_over_speed": {
+            "median": 0.23731483391598784,
+            "max": 1.5859061204285032,
+            "mean": 0.36294793211286613
+          },
+          "velocity_max_error_over_speed": {
+            "median": 1.5155291715744172,
+            "max": 13.871534867805428,
+            "mean": 3.678435104342696
+          },
+          "stick_fraction_abs_error_at_1pct_speed": {
+            "median": 0.6909868421052632,
+            "max": 0.9685,
+            "mean": 0.6520337171052631
+          },
+          "stick_indicator_error_at_1pct_speed": {
+            "median": 0.6909868421052632,
+            "max": 0.9685,
+            "mean": 0.6522354714912281
+          },
+          "false_stick_samples": {
+            "median": 0.0,
+            "max": 55.0,
+            "mean": 3.8333333333333335
+          },
+          "missed_stick_samples": {
+            "median": 26257.5,
+            "max": 36803.0,
+            "mean": 24781.114583333332
+          }
+        },
+        "naive_nut": {
+          "velocity_rmse_over_speed": {
+            "median": 0.25479944727601783,
+            "max": 2.0141157903794094,
+            "mean": 0.4430767439913746
+          },
+          "velocity_max_error_over_speed": {
+            "median": 1.3163312168669328,
+            "max": 13.113474690028104,
+            "mean": 3.5522009246927984
+          },
+          "stick_fraction_abs_error_at_1pct_speed": {
+            "median": 0.6777631578947368,
+            "max": 0.958,
+            "mean": 0.6615825109649123
+          },
+          "stick_indicator_error_at_1pct_speed": {
+            "median": 0.6777631578947368,
+            "max": 0.958,
+            "mean": 0.6617513706140351
+          },
+          "false_stick_samples": {
+            "median": 0.0,
+            "max": 54.0,
+            "mean": 3.2083333333333335
+          },
+          "missed_stick_samples": {
+            "median": 25755.0,
+            "max": 36404.0,
+            "mean": 25143.34375
+          }
+        },
+        "shared_Z_10pct_high": {
+          "velocity_rmse_over_speed": {
+            "median": 0.20146122725434235,
+            "max": 1.014811137451183,
+            "mean": 0.30127392883171694
+          },
+          "velocity_max_error_over_speed": {
+            "median": 0.7243792502759063,
+            "max": 9.79130534096534,
+            "mean": 2.3409566666512314
+          },
+          "stick_fraction_abs_error_at_1pct_speed": {
+            "median": 0.7931578947368421,
+            "max": 0.973078947368421,
+            "mean": 0.7989405153508772
+          },
+          "stick_indicator_error_at_1pct_speed": {
+            "median": 0.7931578947368421,
+            "max": 0.973078947368421,
+            "mean": 0.7989405153508772
+          },
+          "false_stick_samples": {
+            "median": 0.0,
+            "max": 0.0,
+            "mean": 0.0
+          },
+          "missed_stick_samples": {
+            "median": 30140.0,
+            "max": 36977.0,
+            "mean": 30359.739583333332
+          }
+        },
+        "bounded_noise_average": {
+          "velocity_rmse_over_speed": {
+            "median": 0.06442900458010335,
+            "max": 0.8119900914486959,
+            "mean": 0.13800004625937748
+          },
+          "velocity_max_error_over_speed": {
+            "median": 0.5836015151095293,
+            "max": 7.777553971267359,
+            "mean": 1.7366334452203536
+          },
+          "stick_fraction_abs_error_at_1pct_speed": {
+            "median": 0.010407894736842116,
+            "max": 0.054526315789473756,
+            "mean": 0.013247807017543864
+          },
+          "stick_indicator_error_at_1pct_speed": {
+            "median": 0.010407894736842106,
+            "max": 0.05452631578947369,
+            "mean": 0.013253837719298245
+          },
+          "false_stick_samples": {
+            "median": 0.0,
+            "max": 13.0,
+            "mean": 0.25
+          },
+          "missed_stick_samples": {
+            "median": 395.5,
+            "max": 2072.0,
+            "mean": 503.3958333333333
+          }
+        }
+      },
+      "checks": {
+        "known_vs_exact_smoothed_truth_max_over_speed": 5.981444506364397e-11,
+        "crossfiltered_endpoint_residual_max_over_speed": 5.925093748970767e-11,
+        "shared_Z_error_crossfiltered_residual_max_over_speed": 5.3864488627006964e-11,
+        "noise_bound_over_speed": 0.0019980770866026573,
+        "observed_noise_error_max_over_speed": 0.0017031803338338203,
+        "oracle_local_smoothing_bound_max_violation_over_speed": 4.61623799088404e-11
+      }
+    },
+    "200000": {
+      "n": 96,
+      "methods": {
+        "known_bridge": {
+          "velocity_rmse_over_speed": {
+            "median": 0.029372450176236922,
+            "max": 0.6126418311384079,
+            "mean": 0.09380204650919217
+          },
+          "velocity_max_error_over_speed": {
+            "median": 0.37731523805642375,
+            "max": 7.701354612035571,
+            "mean": 1.5448069916048957
+          },
+          "stick_fraction_abs_error_at_1pct_speed": {
+            "median": 0.004730263157894765,
+            "max": 0.03311842105263163,
+            "mean": 0.006388706140350878
+          },
+          "stick_indicator_error_at_1pct_speed": {
+            "median": 0.004730263157894737,
+            "max": 0.03311842105263158,
+            "mean": 0.006390350877192982
+          },
+          "false_stick_samples": {
+            "median": 0.0,
+            "max": 49.0,
+            "mean": 1.0520833333333333
+          },
+          "missed_stick_samples": {
+            "median": 359.5,
+            "max": 2517.0,
+            "mean": 484.6145833333333
+          }
+        },
+        "known_nut": {
+          "velocity_rmse_over_speed": {
+            "median": 0.03472539999274667,
+            "max": 0.4930323675206726,
+            "mean": 0.07773228183561581
+          },
+          "velocity_max_error_over_speed": {
+            "median": 0.405258772892988,
+            "max": 7.730881071876954,
+            "mean": 1.2490817500281455
+          },
+          "stick_fraction_abs_error_at_1pct_speed": {
+            "median": 0.0050263157894736565,
+            "max": 0.03311842105263163,
+            "mean": 0.006663925438596489
+          },
+          "stick_indicator_error_at_1pct_speed": {
+            "median": 0.005026315789473684,
+            "max": 0.03311842105263158,
+            "mean": 0.006666666666666668
+          },
+          "false_stick_samples": {
+            "median": 0.0,
+            "max": 21.0,
+            "mean": 0.3125
+          },
+          "missed_stick_samples": {
+            "median": 382.0,
+            "max": 2517.0,
+            "mean": 506.3541666666667
+          }
+        },
+        "known_average": {
+          "velocity_rmse_over_speed": {
+            "median": 0.043667927589115446,
+            "max": 0.451566467126546,
+            "mean": 0.08576716417240399
+          },
+          "velocity_max_error_over_speed": {
+            "median": 0.4408632769252097,
+            "max": 6.18470485755519,
+            "mean": 1.3969443708165203
+          },
+          "stick_fraction_abs_error_at_1pct_speed": {
+            "median": 0.005217105263157884,
+            "max": 0.03311842105263163,
+            "mean": 0.0066522752192982445
+          },
+          "stick_indicator_error_at_1pct_speed": {
+            "median": 0.0052171052631578944,
+            "max": 0.03311842105263158,
+            "mean": 0.006655564692982456
+          },
+          "false_stick_samples": {
+            "median": 0.0,
+            "max": 38.0,
+            "mean": 0.5208333333333334
+          },
+          "missed_stick_samples": {
+            "median": 396.5,
+            "max": 2517.0,
+            "mean": 505.3020833333333
+          }
+        },
+        "naive_bridge": {
+          "velocity_rmse_over_speed": {
+            "median": 0.2695360727567542,
+            "max": 1.882500110934212,
+            "mean": 0.41362909471233755
+          },
+          "velocity_max_error_over_speed": {
+            "median": 1.9119611105536825,
+            "max": 17.42419817320984,
+            "mean": 4.707696228126307
+          },
+          "stick_fraction_abs_error_at_1pct_speed": {
+            "median": 0.6850460526315789,
+            "max": 0.9674078947368421,
+            "mean": 0.6538245614035088
+          },
+          "stick_indicator_error_at_1pct_speed": {
+            "median": 0.685203947368421,
+            "max": 0.9674078947368421,
+            "mean": 0.6540567434210526
+          },
+          "false_stick_samples": {
+            "median": 0.0,
+            "max": 119.0,
+            "mean": 8.822916666666666
+          },
+          "missed_stick_samples": {
+            "median": 52069.5,
+            "max": 73523.0,
+            "mean": 49699.489583333336
+          }
+        },
+        "naive_nut": {
+          "velocity_rmse_over_speed": {
+            "median": 0.3015781112271602,
+            "max": 2.2688206618822573,
+            "mean": 0.4958992915736175
+          },
+          "velocity_max_error_over_speed": {
+            "median": 2.1363448266058915,
+            "max": 19.144402775327347,
+            "mean": 4.793896876697998
+          },
+          "stick_fraction_abs_error_at_1pct_speed": {
+            "median": 0.6924473684210526,
+            "max": 0.9570921052631578,
+            "mean": 0.662555509868421
+          },
+          "stick_indicator_error_at_1pct_speed": {
+            "median": 0.6924473684210526,
+            "max": 0.9570921052631579,
+            "mean": 0.6627523300438597
+          },
+          "false_stick_samples": {
+            "median": 0.0,
+            "max": 108.0,
+            "mean": 7.479166666666667
+          },
+          "missed_stick_samples": {
+            "median": 52626.0,
+            "max": 72739.0,
+            "mean": 50361.697916666664
+          }
+        },
+        "shared_Z_10pct_high": {
+          "velocity_rmse_over_speed": {
+            "median": 0.19501480286117742,
+            "max": 0.6880854133958725,
+            "mean": 0.2647375232050117
+          },
+          "velocity_max_error_over_speed": {
+            "median": 0.7834519198237362,
+            "max": 8.177739758942906,
+            "mean": 2.0537370817534053
+          },
+          "stick_fraction_abs_error_at_1pct_speed": {
+            "median": 0.7940065789473685,
+            "max": 0.9738947368421053,
+            "mean": 0.7992757675438598
+          },
+          "stick_indicator_error_at_1pct_speed": {
+            "median": 0.7940065789473685,
+            "max": 0.9738947368421053,
+            "mean": 0.7992757675438598
+          },
+          "false_stick_samples": {
+            "median": 0.0,
+            "max": 0.0,
+            "mean": 0.0
+          },
+          "missed_stick_samples": {
+            "median": 60344.5,
+            "max": 74016.0,
+            "mean": 60744.958333333336
+          }
+        },
+        "bounded_noise_average": {
+          "velocity_rmse_over_speed": {
+            "median": 0.04366833284045861,
+            "max": 0.45156618790852493,
+            "mean": 0.08580670051893245
+          },
+          "velocity_max_error_over_speed": {
+            "median": 0.4409855519111358,
+            "max": 6.184538466915557,
+            "mean": 1.3971459477169137
+          },
+          "stick_fraction_abs_error_at_1pct_speed": {
+            "median": 0.005223684210526325,
+            "max": 0.03311842105263163,
+            "mean": 0.006651178728070175
+          },
+          "stick_indicator_error_at_1pct_speed": {
+            "median": 0.005223684210526316,
+            "max": 0.03311842105263158,
+            "mean": 0.006653919956140351
+          },
+          "false_stick_samples": {
+            "median": 0.0,
+            "max": 38.0,
+            "mean": 0.5208333333333334
+          },
+          "missed_stick_samples": {
+            "median": 397.0,
+            "max": 2517.0,
+            "mean": 505.1770833333333
+          }
+        }
+      },
+      "checks": {
+        "known_vs_exact_smoothed_truth_max_over_speed": 1.373801072901415e-10,
+        "crossfiltered_endpoint_residual_max_over_speed": 8.528844297472915e-11,
+        "shared_Z_error_crossfiltered_residual_max_over_speed": 7.753494815884467e-11,
+        "noise_bound_over_speed": 0.001998130132032124,
+        "observed_noise_error_max_over_speed": 0.0014808545724864786,
+        "oracle_local_smoothing_bound_max_violation_over_speed": 1.3737996851226342e-10
+      }
+    }
+  },
+  "elapsed_seconds": 4.090991707984358,
+  "limitations": [
+    "No empirical endpoint signal was read or fitted.",
+    "Endpoint forces follow the frozen lumped-loss observation convention, not a validated transducer transfer function.",
+    "Known model parameters and time alignment are oracle inputs.",
+    "Near-zero velocity does not distinguish exact mathematical sticking from sufficiently slow slip.",
+    "Dual-end agreement cannot certify shared parameter accuracy or recover a common observation nullspace.",
+    "Oracle local smoothing error bound is unavailable without a justified physical smoothness bound.",
+    "Wave reconstruction is established prior work, not a new method claim."
+  ]
+}

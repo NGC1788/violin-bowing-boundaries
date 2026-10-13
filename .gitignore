@@ -2,6 +2,8 @@
 __pycache__/
 *.py[cod]
 .venv/
+.venv-mac/
+_server_extra/
 .cache/
 .local-tools/
 .ipynb_checkpoints/

@@ -1,0 +1,65 @@
+[
+  {
+    "model": "boundary_static",
+    "speed": 0.05,
+    "n": 264,
+    "unknown": 0,
+    "iou": 0.8395061728395061
+  },
+  {
+    "model": "boundary_uniform",
+    "speed": 0.05,
+    "n": 264,
+    "unknown": 0,
+    "iou": 0.696969696969697
+  },
+  {
+    "model": "boundary_asymmetric",
+    "speed": 0.05,
+    "n": 264,
+    "unknown": 0,
+    "iou": 0.7777777777777778
+  },
+  {
+    "model": "boundary_static",
+    "speed": 0.15,
+    "n": 264,
+    "unknown": 0,
+    "iou": 0.8571428571428571
+  },
+  {
+    "model": "boundary_uniform",
+    "speed": 0.15,
+    "n": 264,
+    "unknown": 0,
+    "iou": 0.8297872340425532
+  },
+  {
+    "model": "boundary_asymmetric",
+    "speed": 0.15,
+    "n": 264,
+    "unknown": 0,
+    "iou": 0.900523560209424
+  },
+  {
+    "model": "boundary_static",
+    "speed": 0.2,
+    "n": 249,
+    "unknown": 15,
+    "iou": 0.7788944723618091
+  },
+  {
+    "model": "boundary_uniform",
+    "speed": 0.2,
+    "n": 249,
+    "unknown": 15,
+    "iou": 0.7647058823529411
+  },
+  {
+    "model": "boundary_asymmetric",
+    "speed": 0.2,
+    "n": 249,
+    "unknown": 15,
+    "iou": 0.9038461538461539
+  }
+]

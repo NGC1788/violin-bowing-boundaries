@@ -1,0 +1,5 @@
+{
+  "ignored_prediction_path": "reports/published_violin/2026-10-13/predictions.csv",
+  "sha256": "4de53ead47c67a56d8b21201c4609524e561892185083eb8c199929a11dcc103",
+  "reason": "Complete predictions reproducible by script; compact summaries, folds and per-beta errors stored here."
+}

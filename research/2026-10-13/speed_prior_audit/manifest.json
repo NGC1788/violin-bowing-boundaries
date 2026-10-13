@@ -1,0 +1,21 @@
+{
+  "scope": "Post-hoc retrospective diagnostic motivated by already inspected primary results; no sample2 access.",
+  "priors": [
+    0.0,
+    0.5,
+    1.0,
+    1.5
+  ],
+  "learners": [
+    "quadratic_logistic",
+    "rbf_svm"
+  ],
+  "C_grid": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "selection": "Pooled source-only 5 contiguous beta-column folds; family-minimum IoU; first tie wins.",
+  "no_target_selection": "Every exponent is reported. A single training speed cannot identify a speed law.",
+  "code_sha256": "effa8704f27e8167ac5da8c51bee96fdd26107e518bf319e7a5fb25e23a63fc2"
+}

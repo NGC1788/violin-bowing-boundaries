@@ -1,0 +1,1118 @@
+[
+  {
+    "speed": 0.05,
+    "beta_column": 0,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        12,
+        17
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.35,
+        0.419
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.025,
+        1.226
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.05,
+    "beta_column": 1,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        8,
+        17
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.171,
+        0.205
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.025,
+        1.226
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.05,
+    "beta_column": 2,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        9,
+        17
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.205,
+        0.245
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.025,
+        1.226
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.05,
+    "beta_column": 3,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        8,
+        17
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.171,
+        0.205
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.025,
+        1.226
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.05,
+    "beta_column": 4,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        3,
+        16
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.07,
+        0.084
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        0.857,
+        1.025
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.05,
+    "beta_column": 5,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        4,
+        17
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.084,
+        0.1
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.025,
+        1.226
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.05,
+    "beta_column": 6,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        0,
+        16
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        0.857,
+        1.025
+      ]
+    ],
+    "low_acquisition_edge_H": true,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.05,
+    "beta_column": 7,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        0,
+        15
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        0.716,
+        0.857
+      ]
+    ],
+    "low_acquisition_edge_H": true,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.05,
+    "beta_column": 8,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        0,
+        13
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        0.501,
+        0.599
+      ]
+    ],
+    "low_acquisition_edge_H": true,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.05,
+    "beta_column": 9,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        0,
+        13
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        0.501,
+        0.599
+      ]
+    ],
+    "low_acquisition_edge_H": true,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.05,
+    "beta_column": 10,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        0,
+        14
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        0.599,
+        0.716
+      ]
+    ],
+    "low_acquisition_edge_H": true,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.1,
+    "beta_column": 0,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        13,
+        19
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.419,
+        0.501
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.466,
+        1.753
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.1,
+    "beta_column": 1,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        10,
+        19
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.245,
+        0.293
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.466,
+        1.753
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.1,
+    "beta_column": 2,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        10,
+        19
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.245,
+        0.293
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.466,
+        1.753
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.1,
+    "beta_column": 3,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        7,
+        18
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.143,
+        0.171
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.226,
+        1.466
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.1,
+    "beta_column": 4,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        3,
+        3
+      ],
+      [
+        5,
+        17
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.07,
+        0.084
+      ],
+      [
+        0.1,
+        0.12
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        0.084,
+        0.1
+      ],
+      [
+        1.025,
+        1.226
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.1,
+    "beta_column": 5,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        1,
+        17
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.049,
+        0.058
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.025,
+        1.226
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.1,
+    "beta_column": 6,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        2,
+        17
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.058,
+        0.07
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.025,
+        1.226
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.1,
+    "beta_column": 7,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        1,
+        16
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.049,
+        0.058
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        0.857,
+        1.025
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.1,
+    "beta_column": 8,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        0,
+        15
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        0.716,
+        0.857
+      ]
+    ],
+    "low_acquisition_edge_H": true,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.1,
+    "beta_column": 9,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        0,
+        16
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        0.857,
+        1.025
+      ]
+    ],
+    "low_acquisition_edge_H": true,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.1,
+    "beta_column": 10,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        0,
+        15
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        0.716,
+        0.857
+      ]
+    ],
+    "low_acquisition_edge_H": true,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.15,
+    "beta_column": 0,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        11,
+        22
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.293,
+        0.35
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        2.508,
+        3.0
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.15,
+    "beta_column": 1,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        11,
+        21
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.293,
+        0.35
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        2.097,
+        2.508
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.15,
+    "beta_column": 2,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        9,
+        21
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.205,
+        0.245
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        2.097,
+        2.508
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.15,
+    "beta_column": 3,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        4,
+        21
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.084,
+        0.1
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        2.097,
+        2.508
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.15,
+    "beta_column": 4,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        3,
+        21
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.07,
+        0.084
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        2.097,
+        2.508
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.15,
+    "beta_column": 5,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        2,
+        19
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.058,
+        0.07
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.466,
+        1.753
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.15,
+    "beta_column": 6,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        0,
+        17
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.025,
+        1.226
+      ]
+    ],
+    "low_acquisition_edge_H": true,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.15,
+    "beta_column": 7,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        0,
+        17
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.025,
+        1.226
+      ]
+    ],
+    "low_acquisition_edge_H": true,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.15,
+    "beta_column": 8,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        0,
+        17
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.025,
+        1.226
+      ]
+    ],
+    "low_acquisition_edge_H": true,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.15,
+    "beta_column": 9,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        0,
+        17
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.025,
+        1.226
+      ]
+    ],
+    "low_acquisition_edge_H": true,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.15,
+    "beta_column": 10,
+    "unknown_force_ranks": [],
+    "positive_runs_without_gap_filling": [
+      [
+        0,
+        15
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        0.716,
+        0.857
+      ]
+    ],
+    "low_acquisition_edge_H": true,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.2,
+    "beta_column": 0,
+    "unknown_force_ranks": [
+      0
+    ],
+    "positive_runs_without_gap_filling": [
+      [
+        12,
+        23
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.35,
+        0.419
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": true,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.2,
+    "beta_column": 1,
+    "unknown_force_ranks": [
+      0
+    ],
+    "positive_runs_without_gap_filling": [
+      [
+        12,
+        23
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.35,
+        0.419
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": true,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.2,
+    "beta_column": 2,
+    "unknown_force_ranks": [
+      0
+    ],
+    "positive_runs_without_gap_filling": [
+      [
+        7,
+        23
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.143,
+        0.171
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": true,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.2,
+    "beta_column": 3,
+    "unknown_force_ranks": [
+      0
+    ],
+    "positive_runs_without_gap_filling": [
+      [
+        5,
+        23
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.1,
+        0.12
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": true,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.2,
+    "beta_column": 4,
+    "unknown_force_ranks": [
+      0
+    ],
+    "positive_runs_without_gap_filling": [
+      [
+        3,
+        22
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.07,
+        0.084
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        2.508,
+        3.0
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.2,
+    "beta_column": 5,
+    "unknown_force_ranks": [
+      0
+    ],
+    "positive_runs_without_gap_filling": [
+      [
+        1,
+        21
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        2.097,
+        2.508
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": true,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.2,
+    "beta_column": 6,
+    "unknown_force_ranks": [
+      23
+    ],
+    "positive_runs_without_gap_filling": [
+      [
+        1,
+        19
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [
+      [
+        0.049,
+        0.058
+      ]
+    ],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.466,
+        1.753
+      ]
+    ],
+    "low_acquisition_edge_H": false,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.2,
+    "beta_column": 7,
+    "unknown_force_ranks": [
+      23
+    ],
+    "positive_runs_without_gap_filling": [
+      [
+        0,
+        19
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.466,
+        1.753
+      ]
+    ],
+    "low_acquisition_edge_H": true,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.2,
+    "beta_column": 8,
+    "unknown_force_ranks": [
+      23
+    ],
+    "positive_runs_without_gap_filling": [
+      [
+        0,
+        18
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.226,
+        1.466
+      ]
+    ],
+    "low_acquisition_edge_H": true,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.2,
+    "beta_column": 9,
+    "unknown_force_ranks": [
+      21,
+      22,
+      23
+    ],
+    "positive_runs_without_gap_filling": [
+      [
+        0,
+        18
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        1.226,
+        1.466
+      ]
+    ],
+    "low_acquisition_edge_H": true,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  },
+  {
+    "speed": 0.2,
+    "beta_column": 10,
+    "unknown_force_ranks": [
+      21,
+      22,
+      23
+    ],
+    "positive_runs_without_gap_filling": [
+      [
+        0,
+        16
+      ]
+    ],
+    "lower_adjacent_transition_brackets_N": [],
+    "upper_adjacent_transition_brackets_N": [
+      [
+        0.857,
+        1.025
+      ]
+    ],
+    "low_acquisition_edge_H": true,
+    "high_acquisition_edge_H": false,
+    "positive_adjacent_to_unknown": false,
+    "interpretation": "Observed author-label adjacency; not continuous or physical boundary certification"
+  }
+]

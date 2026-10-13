@@ -2,6 +2,8 @@
 
 Initial checks: 2026-09-07. Updated data preparation: 2026-09-13. This distinguishes local preparation checks from a subsequent user-provided Ubuntu server transcript. Neither is an experimental research result.
 
+The dated historical records below are preserved. The **2026-10-13** audit supersedes their interpretation where it identifies a defective passive-physics baseline; current research results are summarized in [the executed research report](../research/2026-10-13/README.md).
+
 ## Local preparation checks
 
 | Check | Observed result | Scope |
@@ -276,5 +278,68 @@ Server run (`overnight.sh`, diagram `2024-03-25_TypeA_sample1`, trained on `2024
 | best found | 0.738 | 0.710 |
 | best, held-out bow speeds (1,000 cells) | 0.661 | 0.703 |
 
-The held-out speeds were never used in the search, so the gain is not fitting noise. The top five sets all sit at `corner_hz` 1,538–1,983 against a search floor of 1,500, and `mu_s` clusters near its ceiling: the optimum is outside the box. `calibrate` now takes `--space name=low:high` and `--around-best FACTOR` (with `--seed-from`) so the box can be widened and the neighbourhood refined; tests cover box overrides, refinement bounds and picking the best row.
+The held-out speeds were not used in that parameter search; this alone does not establish independence from all model and classifier development or rule out fitting label artifacts. The top five sets sit at `corner_hz` 1,538–1,983 against a search floor of 1,500, and `mu_s` clusters near its ceiling: this motivates investigating the search boundary, but does not prove an optimum outside the box. `calibrate` takes `--space name=low:high` and `--around-best FACTOR` (with `--seed-from`); tests cover box overrides, refinement bounds and picking the best row. See the October audit below before interpreting these historical scores.
+
+### Passive reflection correction and compiled CPU audit — 2026-10-13
+
+**Defect.** The coefficient design assumed `H(z)=g(1-p)/(1-p z^-1)`, while the time loop used
+`state=g*((1-p)*input+p*state)`, moving the pole to `g*p`. Default Q=2000 consequently
+gave response-equivalent Q about 1147 at 50 kHz and 711 at 100 kHz before interpolation.
+The historical best Q=3726.62/corner=1896.41 gave reflection magnitude **above one** at
+the fundamental (1.00295 at 50 kHz, 1.00682 at 100 kHz). These historical calibration
+scores cannot support a passive-physics performance claim.
+
+**Correction.** The recurrence is `state=g*(1-p)*input+p*state`. A separate passivity
+guard rejects gain greater than one; fixing the recurrence alone does not make the old
+best admissible. Requested Q and corner are coupled by the one-pole design. New diagnostics
+include fractional-delay loss in nominal-frequency effective Q. Both delay lines and
+buffer capacity, profile shapes, physical domains and finite inputs are checked.
+
+**Independent verification.** Free vibration after contact removal recovers the predicted
+effective Q within 1%, using a fitted fundamental decay rather than a copied recurrence
+calculation. A numba CPU implementation without fastmath matches reference waveforms and
+thread-count results. Its contact load-line residual and nonnegative friction dissipation
+are checked. The original slow-bow F=1.5 N toy case changes regime under the correction;
+the flyback-law test now uses F=2 N, the force-scaled counterpart of the F=4 N case.
+This fixture change is recorded explicitly rather than presenting unchanged historical labels.
+
+**Observation limitation.** Controlled pure sine and symmetric-triangle signals are both
+labelled `helmholtz` by the historical one-flyback rule. Shape agreement is therefore not
+ground truth. Real-data labels are preserved for audit; new label claims need independent
+evidence and specified uncertainty.
+
+**Executed numerical sweep.** 960 generic strings at violin open-string frequencies,
+plus rate repeats, produced 1146 valid synthetic strokes. Six near-bridge E5 cases were
+rejected at 50 kHz. Provisional labels changed in 21/90 pairs between 50 and 100 kHz and
+19/96 between 100 and 200 kHz. This is a numerical-sensitivity result, not real-violin
+validation or a convergence guarantee. Eighteen targeted physics/CPU tests passed.
+See [physics audit](../research/2026-10-13/physics_audit.md) for equations, source scope,
+scripts and raw-result locations.
+
+**Endpoint and delay ablations (same day).** The extended fixed-case factorial reaches
+800 kHz and 1.2 s duration. Multiclass changes are explicitly separated from binary H
+membership changes: for the 1.2 s, 400→800 kHz pair, the linear method changes 17/96
+full labels but only 7/96 H memberships (cross-rate H IoU 0.806). An optional first-order
+Thiran feedback delay, with the observation path unchanged, removes interpolation loss
+in free-decay tests but does not uniformly improve binary stability. It changes 5/96 H
+memberships at that finest pair (IoU 0.865), while worsening the preceding pair. No
+continuum guarantee follows. The allpass impulse magnitude/DC-delay and integer-bypass
+tests pass. See [convergence analysis](../research/2026-10-13/convergence_analysis.md) and
+[matched delay-method analysis](../research/2026-10-13/delay_method_analysis.md).
+
+### Source-only learning, reproducibility and prospective guards — 2026-10-13
+
+The Mac CPU environment is isolated in `.venv-mac`, with Python 3.11.15 and actual package pins in `requirements-mac.lock.txt`. The existing Linux CUDA lock is unchanged. The compact public input tables are lossless gzip copies with pinned decompressed checksums; absent historical report paths resolve to those copies, while present-but-modified reports are rejected. The primary A/B/C/D benchmark completed 1,645 fits, no optimizer failures, and 1,155 independently recomputed panel-metric arrays.
+
+Calibration now rejects unversioned/nonpassive legacy seeds and incompatible resumes. A run fingerprint binds selected source rows/labels, profile arrays, nuisance settings, parameter box, refinement center, implementation and input bytes. Iteration/batch-budget extensions are allowed without silently changing the scientific inputs. The held-out diagnostic is evaluated after parameter search and saved separately. A changed observation or source cannot inherit an old optimization trace under the same filename. Fifteen calibration tests passed; no new large empirical physics calibration has been claimed without its raw inputs.
+
+Fourteen originally frozen source-A estimators were rebuilt from portable inputs and saved parameters with **byte-identical checkpoint SHA256 values**. Main A2 evaluation checks frozen code/model/input identities, full raw-archive MD5, exact expected specimen/row structure and fixed A-derived observer settings. The continuation wrapper separately pins extraction/collection code, binds preprocessing caches to the archive and specifications, rejects stale or tampered unbound outputs, and never fits a model. Meaningful regression tests cover verification-before-decoding, downloader publication races, external/relative output paths, concurrent extraction exclusion and checkpoint tampering. Synthetic/mocked guard tests do not mean that A2 has completed.
+
+An independent assistant review of affine transport verified 110 randomized finite-difference gradient cases (maximum absolute error 1.78e−7), all 18 source-model digests/source-ID sets/source-CV selections, and all 162 saved scope metric results. Six known-prior model selections and 18 ensemble scores matched independent reconstruction. The review found no actionable result-changing defect. This is computational review, not independent human expert validation. Complete development protocols preserve target exposure and the E-string selection caveat.
+
+The canonical full suite passed **259 tests and 102 subtests** in 26.48 seconds before the final matched-width and supplementary-evaluation additions. Later additions require another final run, recorded with the release audit; this count is not silently reused for untested later code.
+
+**Final canonical run after those additions:** `bash scripts/run_mac.sh test` passed **269 tests and 102 subtests** in 26.81 seconds, with no skips. `git diff --check` and syntax checks for both Mac shell scripts passed. An isolated fresh-workspace run without copied raw files, reports or model checkpoints reproduced **390 scientific numeric values within 1e−12** and all fourteen original checkpoint hashes exactly. It reused the installed interpreter and is not a fresh dependency installation; its two optional checks skipped unavailable 7-Zip PATH/private-original fixtures. See [the reproduction audit](../research/2026-10-13/reproduction_audit.md).
+
+The separate late pre-decoding transport addendum was frozen at 2026-10-13 09:02:25 UTC. Its twelve embedded model records were independently reconstructed from the original source-only fits with exact JSON equality. Canonical specification hash: `787d7839871519816f39d710ae1947dd17548c160b9dee5a3b64635a13186377`. The original fourteen-model protocol is unchanged. Another assistant verified the evaluation order: successful main completion, original freeze identities, post-addendum whole-archive verification, bound output hashes and matching target IDs before predictions. No fitting occurs in this evaluator. Both prospective evaluation processes were launched and waiting; these software checks do not claim completed A2 outcomes.
 

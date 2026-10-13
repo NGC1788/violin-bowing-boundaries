@@ -1,0 +1,208 @@
+{
+  "checked_utc_date": "2026-10-13",
+  "records": [
+    {
+      "query": "10.3813/AAA.918070",
+      "source": "https://api.crossref.org/works/10.3813%2FAAA.918070",
+      "metadata": {
+        "DOI": "10.3813/aaa.918070",
+        "title": [
+          "An Empirical Investigation of Bow-Force Limits in the Schelleng Diagram"
+        ],
+        "author": [
+          {
+            "given": "Erwin",
+            "family": "Schoonderwaldt"
+          },
+          {
+            "given": "Knut",
+            "family": "Guettler"
+          },
+          {
+            "given": "Anders",
+            "family": "Askenfelt"
+          }
+        ],
+        "container-title": [
+          "Acta Acustica united with Acustica"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2008,
+              7,
+              1
+            ]
+          ]
+        },
+        "volume": "94",
+        "issue": "4",
+        "page": "604-622",
+        "type": "journal-article",
+        "URL": "https://doi.org/10.3813/aaa.918070"
+      }
+    },
+    {
+      "query": "10.1121/2.0002111",
+      "source": "https://api.crossref.org/works/10.1121%2F2.0002111",
+      "metadata": {
+        "DOI": "10.1121/2.0002111",
+        "title": [
+          "Experimental analysis of cello string types: influence on playability and tonal characteristics using Schelleng diagrams"
+        ],
+        "author": [
+          {
+            "given": "Alessio",
+            "family": "Lampis"
+          },
+          {
+            "given": "Vasileios",
+            "family": "Chatziioannou"
+          },
+          {
+            "given": "Gary",
+            "family": "Scavone"
+          }
+        ],
+        "container-title": [
+          "Proceedings of Meetings on Acoustics",
+          "International Symposium on Music and Room Acoustics"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "volume": "58",
+        "page": "035013",
+        "type": "proceedings-article",
+        "URL": "https://doi.org/10.1121/2.0002111"
+      }
+    },
+    {
+      "query": "10.3389/frsip.2025.1525044",
+      "source": "https://api.crossref.org/works/10.3389%2Ffrsip.2025.1525044",
+      "metadata": {
+        "DOI": "10.3389/frsip.2025.1525044",
+        "title": [
+          "Numerical modelling of elasto-plastic friction in bow–string interaction with guaranteed passivity"
+        ],
+        "author": [
+          {
+            "given": "Ewa",
+            "family": "Matusiak"
+          },
+          {
+            "given": "Vasileios",
+            "family": "Chatziioannou"
+          },
+          {
+            "given": "Maarten",
+            "family": "Van Walstijn"
+          }
+        ],
+        "container-title": [
+          "Frontiers in Signal Processing"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              21
+            ]
+          ]
+        },
+        "volume": "5",
+        "article-number": "1525044",
+        "type": "journal-article",
+        "URL": "https://doi.org/10.3389/frsip.2025.1525044"
+      }
+    },
+    {
+      "query": "10.1051/aacus/2026042",
+      "source": "https://api.crossref.org/works/10.1051%2Faacus%2F2026042",
+      "metadata": {
+        "DOI": "10.1051/aacus/2026042",
+        "title": [
+          "A thermal elasto-plastic friction model for bowed-string simulation"
+        ],
+        "author": [
+          {
+            "given": "Maarten",
+            "family": "van Walstijn"
+          },
+          {
+            "given": "Vasileios",
+            "family": "Chatziioannou"
+          },
+          {
+            "given": "Alessio",
+            "family": "Lampis"
+          },
+          {
+            "given": "Ewa",
+            "family": "Matusiak"
+          }
+        ],
+        "container-title": [
+          "Acta Acustica"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "volume": "10",
+        "page": "47",
+        "type": "journal-article",
+        "URL": "https://doi.org/10.1051/aacus/2026042"
+      }
+    },
+    {
+      "query": "10.1121/1.429529",
+      "source": "https://api.crossref.org/works/10.1121%2F1.429529",
+      "metadata": {
+        "DOI": "10.1121/1.429529",
+        "title": [
+          "Reconstruction of bowing point friction force in a bowed string"
+        ],
+        "author": [
+          {
+            "given": "J.",
+            "family": "Woodhouse"
+          },
+          {
+            "given": "R. T.",
+            "family": "Schumacher"
+          },
+          {
+            "given": "S.",
+            "family": "Garoff"
+          }
+        ],
+        "container-title": [
+          "The Journal of the Acoustical Society of America"
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2000,
+              7,
+              1
+            ]
+          ]
+        },
+        "volume": "108",
+        "issue": "1",
+        "page": "357-368",
+        "type": "journal-article",
+        "URL": "https://doi.org/10.1121/1.429529"
+      }
+    }
+  ]
+}

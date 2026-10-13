@@ -1,0 +1,127 @@
+{
+  "scope": "Retrospective development benchmark; all four specimens were previously inspected.",
+  "target": "Rule-generated provisional Helmholtz label, not author-verified ground truth.",
+  "feature_names": [
+    "beta",
+    "force_N",
+    "velocity_m_s"
+  ],
+  "predictor_exclusions": "No measured bridge-force features, trial index, force rank, labels, target impedance, target pitch or target noise in X.",
+  "counts": {
+    "raw": 24000,
+    "off_plateau": 521,
+    "nonpositive_force": 178,
+    "eligible": 23301,
+    "ambiguous_eligible": 211,
+    "selected": 23301,
+    "train": 1750
+  },
+  "include_ambiguous": true,
+  "classifier_reference": {
+    "training_panel": "A/0.1",
+    "training_ids_sha256": "c1576dde13b5e896ebc765507012e2f50adf48d81aa6299ab7045c23c897433e",
+    "noise_floor": {
+      "controls": 115,
+      "factor": 3.0,
+      "fallback": 0.02,
+      "control_median": 0.077769,
+      "control_p95": 0.254619,
+      "min_amplitude": 0.23330562561750412,
+      "source": "column-1<=0 windows"
+    },
+    "f0_hz": 98.08739519244497,
+    "thresholds": {
+      "flyback_frac": 0.5,
+      "hysteresis_sigma": 3.0,
+      "noise_floor_factor": 3.0,
+      "min_amplitude": 0.23330562561750412,
+      "min_periodicity": 0.8,
+      "max_aperiodic": 0.5,
+      "subharmonic_ratio": 0.75,
+      "max_hole": 2
+    }
+  },
+  "simulation_scope": "Historical target-adapted diagnostic. Corrected classifier settings do not undo target-derived simulation inputs.",
+  "n_label_changes_with_fixed_reference": 115,
+  "n_sim_label_changes_with_fixed_reference": 667,
+  "n_binary_sim_changes_with_fixed_reference": 0,
+  "ids_sha256": "02d346b7f5885941784b5b279d792a4cf8e6a8905592d2706d08a74bdde8d08e",
+  "split_ids_sha256": {
+    "train_A_0.1": "8ccd5de2bbcc86e66811359c255328f31e135d534390969f5b7a8cdc28965bca",
+    "evaluation_retrospective": "b0195f6e5314b6545e4af8cf5b54492d7d8018a8bf4f293c1b587347930a6b15"
+  },
+  "groups": {
+    "A/0.05": 1949,
+    "A/0.1": 1750,
+    "A/0.2": 1626,
+    "B/0.05": 1986,
+    "B/0.1": 1990,
+    "B/0.2": 2000,
+    "C/0.05": 2000,
+    "C/0.1": 2000,
+    "C/0.2": 2000,
+    "D/0.05": 2000,
+    "D/0.1": 2000,
+    "D/0.2": 2000
+  },
+  "independence": "Four sample1 string specimens, three speed panels each. Rows/grid cells are not independent replications of instruments. For spatial resampling use complete beta columns; for transfer report each specimen/speed panel.",
+  "sources": [
+    {
+      "role": "measured",
+      "string": "A",
+      "path": "reports/collection/2024-03-25_TypeA_sample1/regime_map/20260917T135154Z_3982fcc7/regimes.csv",
+      "sha256": "53afd784fdd8bbb010c69f0b4779f3a18b4eb3ddace9514f02d51748ef64da61",
+      "rows": 6000
+    },
+    {
+      "role": "simulated",
+      "string": "A",
+      "path": "reports/simulation/2024-03-25_TypeA_sample1/20260919T060704Z_47169eda/regime_map/20260919T062942Z_f02993f1/regimes.csv",
+      "sha256": "e814094b64a41be776b2a889e26d5eeef8f69596c62d81d93685926d4fb04dc7",
+      "rows": 6000
+    },
+    {
+      "role": "measured",
+      "string": "B",
+      "path": "reports/collection/2024-04-10_TypeB_sample1__2024-04-10/regime_map/20260917T154209Z_aa60a05c/regimes.csv",
+      "sha256": "0e002bde53b9e12951a4fcfef95c1ee43e7c4f433ea23e996f4a3badd537416f",
+      "rows": 6000
+    },
+    {
+      "role": "simulated",
+      "string": "B",
+      "path": "reports/simulation/2024-04-10_TypeB_sample1__2024-04-10/20260919T070011Z_8ccdc396/regime_map/20260919T072355Z_5df18cf0/regimes.csv",
+      "sha256": "cce26b42dab8c82b481c013f930d29e91ca0824de616c4a5cc4163609208b6f7",
+      "rows": 6000
+    },
+    {
+      "role": "measured",
+      "string": "C",
+      "path": "reports/collection/2024-04-12_TypeC_sample1__2024-04-15/regime_map/20260917T163822Z_54d11e71/regimes.csv",
+      "sha256": "386c10e4faae2a400bd6bc4153e8d0042d2390e52c783acd355bc93d2d22225e",
+      "rows": 6000
+    },
+    {
+      "role": "simulated",
+      "string": "C",
+      "path": "reports/simulation/2024-04-12_TypeC_sample1__2024-04-15/20260919T072408Z_8306725d/regime_map/20260919T074703Z_c841637f/regimes.csv",
+      "sha256": "fcc15fb8ea5742f478d50c08e8e0d3bd8b7587b5690dbb2f0fa7e10fff39a41c",
+      "rows": 6000
+    },
+    {
+      "role": "measured",
+      "string": "D",
+      "path": "reports/collection/2024-04-15_TypeD_sample1__2024-04-17/regime_map/20260917T172527Z_6dbcf479/regimes.csv",
+      "sha256": "398eb11e129935edb57c0e15cd6f4a7f40fde5ecc1b37f390de341d9924ec4b7",
+      "rows": 6000
+    },
+    {
+      "role": "simulated",
+      "string": "D",
+      "path": "reports/simulation/2024-04-15_TypeD_sample1__2024-04-17/20260919T074717Z_f3212a15/regime_map/20260919T081004Z_2ab933f2/regimes.csv",
+      "sha256": "43912c440a96e9a50a13139c9d6297cdc7433cbf6d47755a02f2e83b9c838c57",
+      "rows": 6000
+    }
+  ],
+  "manifest_sha256": "b7f74c9576737c7ef72eed6911cd680a7e9e93f7488ecf34e55a6a5d237ac690"
+}

@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-10-13T08:39:08.276052+00:00",
+  "frozen_model_sha256": "6191519763c552ef57f22062933714b0ad71403c159e479171d210c659544913",
+  "evaluation_spec_sha256": "98abb7aec35054ae8516f9c5c3f9ed8985a31bac9cc3d75a9800056d525822ad",
+  "lockbox": {
+    "record": "17782542",
+    "file": "2024-04-19_TypeA_sample2.7z",
+    "md5": "ec520fecf6c5011ef8491b335edc1cee"
+  },
+  "implementation_sha256": {
+    "collection.py": "b57695a0afb52c109c7f0312ac8fb226792f558229dbe7454f3e0600baddad5b",
+    "zenodo_catalog.py": "a74b3d75ed2e6067e100fd023718ece079acd0e32259d3a1d5858b6b5b419d9f",
+    "continue_lockbox.py": "ade6a6b6203ba4ef32c595678a59abaa397188372556ff42a14e20d4fcc25ec8"
+  },
+  "workers": 2,
+  "requires_whole_archive_md5_before_decoding": true,
+  "requires_bound_per_output_preprocessing_cache": true,
+  "does_not_change_models_or_observation_family": true,
+  "preprocessing_spec_sha256": "c6f7a0a7cb6a0f514807b65e03c6b54d533307de6faea641e330cef021cc9565"
+}

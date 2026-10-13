@@ -1,0 +1,70 @@
+{
+  "A": {
+    "seconds": 9.2,
+    "models": 28,
+    "fits": 413,
+    "optimization_failures": 0,
+    "independent_panel_rechecks": 308,
+    "selected_macro_family_min": {
+      "covariant_logistic": 0.6883612430624493,
+      "covariant_svc": 0.6744978264010698,
+      "covariant_nominal_bce": 0.6625538930498432,
+      "covariant_consensus_bce": 0.6600115688454106,
+      "covariant_nominal_iou": 0.6738488182907779,
+      "covariant_box_robust": 0.6574014903218378,
+      "covariant_family_robust": 0.6695558439156178,
+      "rawlog_family_robust": 0.5351107368496141
+    }
+  },
+  "B": {
+    "seconds": 9.69,
+    "models": 24,
+    "fits": 409,
+    "optimization_failures": 0,
+    "independent_panel_rechecks": 264,
+    "selected_macro_family_min": {
+      "covariant_logistic": 0.6587929196275565,
+      "covariant_svc": 0.6852335018475804,
+      "covariant_nominal_bce": 0.6803835370097678,
+      "covariant_consensus_bce": 0.675235990514174,
+      "covariant_nominal_iou": 0.6243872633161591,
+      "covariant_box_robust": 0.6608351102672135,
+      "covariant_family_robust": 0.6653080165891736,
+      "rawlog_family_robust": 0.5569612657893454
+    }
+  },
+  "C": {
+    "seconds": 10.04,
+    "models": 27,
+    "fits": 412,
+    "optimization_failures": 0,
+    "independent_panel_rechecks": 297,
+    "selected_macro_family_min": {
+      "covariant_logistic": 0.6588294235621364,
+      "covariant_svc": 0.6328136859521992,
+      "covariant_nominal_bce": 0.6560050701244348,
+      "covariant_consensus_bce": 0.6589993082248294,
+      "covariant_nominal_iou": 0.6360746835359332,
+      "covariant_box_robust": 0.6359497028893754,
+      "covariant_family_robust": 0.6330742625579474,
+      "rawlog_family_robust": 0.5538363592196665
+    }
+  },
+  "D": {
+    "seconds": 10.43,
+    "models": 26,
+    "fits": 411,
+    "optimization_failures": 0,
+    "independent_panel_rechecks": 286,
+    "selected_macro_family_min": {
+      "covariant_logistic": 0.6886946868464825,
+      "covariant_svc": 0.6617960517292534,
+      "covariant_nominal_bce": 0.6395474938578375,
+      "covariant_consensus_bce": 0.6308219787293646,
+      "covariant_nominal_iou": 0.6537124593660909,
+      "covariant_box_robust": 0.6818972383685873,
+      "covariant_family_robust": 0.6469001508923626,
+      "rawlog_family_robust": 0.5409937363160444
+    }
+  }
+}
