@@ -4,18 +4,20 @@
 
 불확실성을 고려한 활–현 경계 예측 연구를 위한 저장소입니다. 공개 로봇 운궁 자료, 물리 시뮬레이터와 데이터 기반 예측기를 비교합니다. **공개 첼로 현 자료와 기존 논문의 바이올린 현 모노코드 실험을 사용합니다. 조립된 바이올린의 전체 연주 영역을 검증한 결과는 아닙니다.** 별도로 바이올린 개방현 주파수의 일반적인 가상 현을 계산합니다. 자체 녹음·센서·추가 구매는 사용하지 않습니다.
 
-**2026-10-13 실행 결과:** Apple Silicon 노트북에서 24,000개 과거 시행을 감사해 공통 기준에 맞는 23,301개를 분석했습니다. 공개 논문의 벡터 그림에서 판정이 명시된 바이올린 현 조건 1,171개도 복원했습니다. 기존 물리 모델의 반사 필터 오류를 수정했고, 강한 단순 기준 모델과 후보 방법을 비교했습니다. 새로운 방법의 일반적인 우월성은 아직 입증되지 않았습니다. [실제 결과와 연구 판단](research/2026-10-13/README.md), [실험 프로토콜](research/2026-10-13/protocol.md), [과거 결과 감사](research/2026-10-13/evidence_audit.md).
+**2026-10-17 현재:** Apple Silicon 노트북에서 과거 첼로 시행 23,301개와 공개 논문의 바이올린 현 조건 1,171개를 분석했고, 추가 첼로 표본 A2의 적격 시행 5,892개로 고정된 26개 모델을 평가했습니다. 두 후보 모두 정해 둔 주 비교에서 단순 기준 모델을 이기지 못했습니다. 실패 결과를 포함한 전체 수치와 재현 코드를 공개합니다. 기존 물리 모델의 반사 필터 오류도 수정했습니다. **새 방법의 일반적인 우월성과 높은 방법론적 novelty는 아직 입증되지 않았습니다.** [추가 표본 결과](research/2026-10-14/lockbox_A2/README.md), [독립 수치 감사](research/2026-10-14/lockbox_independent_audit.md), [전체 연구 판단](research/2026-10-13/README.md).
 
 ## Mac에서 재현
 
 ```bash
 bash scripts/bootstrap_mac.sh
 bash scripts/run_mac.sh test
-bash scripts/run_mac.sh benchmark --out reports/reproduction_A --source A
+bash scripts/run_mac.sh benchmark --out reports/reproduction/benchmark_A --source A
+bash scripts/run_mac.sh python scripts/restore_frozen_models.py
+bash scripts/run_mac.sh python research/2026-10-14/lockbox_release.py replay
 bash scripts/run_mac.sh python research/2026-10-13/violin_synthetic_benchmark.py
 ```
 
-`requirements-mac.lock.txt`는 실제 사용한 별도 CPU 환경입니다. Linux/CUDA용 `uv.lock`은 유지합니다. 비교 실험용 파생 입력 약 4.1 MB를 [출처·체크섬과 함께](research/inputs/README.md) 포함했으므로, 기본 벤치마크에는 대형 원시 아카이브 다운로드가 필요하지 않습니다. 합성 실험의 첫 실행에는 Numba 컴파일 시간이 추가됩니다. 전체 명령과 새 표본 검증 절차는 [Mac 연구 실행 안내](docs/mac_research.md)에 있습니다.
+`requirements-mac.lock.txt`는 실제 사용한 별도 CPU 환경입니다. Linux/CUDA용 `uv.lock`은 유지합니다. 비교 실험용 파생 입력 약 4.1 MB를 [출처·체크섬과 함께](research/inputs/README.md) 포함했고, 완료된 A2의 파생 입력도 공개했으므로 위 수치 재현에는 대형 원시 아카이브 다운로드가 필요하지 않습니다. 파형 전처리 재실행은 별도입니다. 합성 실험의 첫 실행에는 Numba 컴파일 시간이 추가됩니다. 전체 명령과 원시 자료 재현 절차는 [Mac 연구 실행 안내](docs/mac_research.md)에 있습니다.
 
 ## 서버에서 시작
 
@@ -85,6 +87,7 @@ PyTorch 2.14.0 공식 릴리스와 TorchAudio의 안정 ABI 호환 표를 확인
 
 ## 연구 자료와 검증
 
+- [연구 결과와 현재 판단](research/2026-10-14/README.md)
 - [데이터 계약 및 공개 자료 해석](docs/data_contract.md)
 - [연구 단계와 검증 기준](docs/research_roadmap.md)
 - [이 저장소에서 실제 수행한 검증](docs/validation.md)

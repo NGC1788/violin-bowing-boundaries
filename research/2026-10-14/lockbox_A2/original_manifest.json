@@ -1,0 +1,36 @@
+{
+  "evaluated_utc": "2026-10-14T06:40:45.036922+00:00",
+  "status": "PASS",
+  "frozen_model_fingerprint": "6191519763c552ef57f22062933714b0ad71403c159e479171d210c659544913",
+  "evaluation_spec_sha256": "98abb7aec35054ae8516f9c5c3f9ed8985a31bac9cc3d75a9800056d525822ad",
+  "archive_verification": {
+    "status": "verified",
+    "whole_archive_verified": true,
+    "archive_filename": "2024-04-19_TypeA_sample2.7z",
+    "record": "17782542",
+    "actual_md5": "ec520fecf6c5011ef8491b335edc1cee",
+    "bytes": 14775691753,
+    "verified_utc": "2026-10-14T06:19:49.644936+00:00"
+  },
+  "input_csv_sha256": "4a720305e5499cae9f1f52c131ef0e35e43ba6ca22e19e240dd6d4e2d6593bd6",
+  "feature_summary_sha256": "b7fd8afacbebd0a20805125b41c3f908a750b487f4c7953fef5ff575e9f916f9",
+  "ids_sha256": "6952f42bf790b4d84dbef279d034b2c12698c59533a9a9958ba29a2f5cd35e9f",
+  "counts": {
+    "raw": 6000,
+    "eligible": 5892,
+    "off_plateau": 0,
+    "nonpositive_force": 108
+  },
+  "selected_simple_baseline": "covariant_logistic",
+  "primary_comparisons": [
+    "covariant_logistic",
+    "covariant_family_robust",
+    "covariant_box_robust",
+    "covariant_nominal_iou",
+    "covariant_nominal_bce",
+    "covariant_consensus_bce"
+  ],
+  "legacy_label_disagreements": 0,
+  "no_fit_or_adaptation": true,
+  "scope": "Previously unseen public Type A sample2 only if the non-exposure history holds; outcomes are weak observation-rule labels, not physical ground truth."
+}

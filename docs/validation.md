@@ -343,3 +343,78 @@ The canonical full suite passed **259 tests and 102 subtests** in 26.48 seconds 
 
 The separate late pre-decoding transport addendum was frozen at 2026-10-13 09:02:25 UTC. Its twelve embedded model records were independently reconstructed from the original source-only fits with exact JSON equality. Canonical specification hash: `787d7839871519816f39d710ae1947dd17548c160b9dee5a3b64635a13186377`. The original fourteen-model protocol is unchanged. Another assistant verified the evaluation order: successful main completion, original freeze identities, post-addendum whole-archive verification, bound output hashes and matching target IDs before predictions. No fitting occurs in this evaluator. Both prospective evaluation processes were launched and waiting; these software checks do not claim completed A2 outcomes.
 
+### Completed A2 outcomes and diagnostic release — 2026-10-17
+
+The preceding October 13 entry is historical. Both A2 evaluations completed on
+October 14 at 06:40 UTC. Their prespecified primary comparisons are negative:
+coherent-family robust minus source-selected covariant logistic is −0.024118;
+primary affine flow minus matched k=0 is −0.014285 and minus source-selected
+learned exponent is −0.008687. All original fourteen and additional twelve
+models, every secondary speed pair, and all frozen definitions are retained.
+See [complete results](../research/2026-10-14/lockbox_A2/README.md).
+
+An independent implementation reverified the complete 14,775,691,753-byte archive
+MD5, eligibility and observer rules, then reconstructed 153,192 probabilities
+from twenty-six models with maximum discrepancy 5.55e−16. All 4,694 numeric
+metric/summary occurrences match exactly. Standard estimators still use their
+frozen scikit-learn prediction implementations. Neither this audit nor the
+portable replay repeats the raw feature extraction. A separate frozen-code
+check confirms that four specifications and fifteen implementation files match
+commit `fce8d32` byte-for-byte.
+
+The public release checks complete file inventory, data/model/source identities,
+preprocessing bindings, original/additional result cross-links, recorded
+chronology and contrast arithmetic. Rehashed-but-inconsistent manifests,
+incomplete inventories, invalid metric values and changed outputs are rejected.
+Four independent-metric tests and twelve release-integrity tests pass.
+
+The conditional width extension retains all eighteen tasks and fails its
+both-corpus improvement gate. Separate prediction, fold, objective-gradient,
+source-selection and metric calculations reproduce 5,577,870 numeric occurrences
+within 3.00e−15. Shared-observer comparison retains every one of 5,596 pairs and
+scopes; rebuilding all reported extremum witnesses reproduces 22,384 IoUs within
+2.22e−16. Source-boundary identification retains conflicting ties, empty
+alternatives and censored endpoints rather than inventing missing boundaries.
+These are software checks and reused observations, not independent repetitions.
+
+The nominal-control width diagnostic covers all 186 source-pair/rule cases.
+Separate reclassification and maximum-subarray calculations check 702,153 reused
+row evaluations across 7,266 paired columns. Constructive witnesses establish
+attainment; the global-optimality claim additionally uses finite enumeration
+and exhaustive small-instance tests. It is floating computation, not an
+interval-arithmetic proof. Measured-control differences prevent interpreting
+its cello objective as a certified lower bound for the implemented predictor.
+
+Fresh-tree reproduction with no copied raw data, reports or checkpoints restored
+all fourteen original checkpoints with exact hashes, replayed all twenty-six
+A2 models with 2,886 numerical values and zero error, and reproduced the
+conditional/width audit JSONs byte-for-byte. The installed interpreter was reused;
+this is not a fresh package installation. Captured evidence is in
+[public_reproduction.json](../research/2026-10-14/public_reproduction.json).
+
+Before the final bounded-width sensitivity addition, the full suite passed
+**349 tests and 102 subtests** in 50.32 seconds. Final post-addition verification
+is recorded below. Successful tests establish neither independent physical
+ground truth nor general predictive superiority or methodological novelty.
+
+**Final canonical run, October 17:** `bash scripts/run_mac.sh test` passed
+**361 tests and 102 subtests** in 51.56 seconds, with no skips. This includes the
+twelve bounded-width sensitivity tests: direct endpoint/spike fixtures, 120
+abstract interval problems and sixty full small force-band problems against
+uncompressed exhaustive optimization, with constructive reclassification.
+
+The bounded calculation preserves the original diagnostic artifacts and applies
+the predictor's `k ∈ [−2,2]` range. Only six of 186 minimum costs rise, by one or
+three rows. Nominal cello and all published-D results are unchanged. All
+twenty-three needed replacement witnesses were reconstructed and independently
+reclassified. A second new filesystem tree reproduced the full sensitivity
+artifact exactly except for its run timestamp, without creating or copying
+original reports, raw data or checkpoints. See
+[public_bound_reproduction.json](../research/2026-10-14/public_bound_reproduction.json).
+
+A final read-only assistant release review found no material correctness,
+privacy or local-link defect. It separately ran the sixteen A2 release/audit
+tests, twelve bounded-width tests and twenty-six-model numerical replay.
+Publication path cleanup is documented with original hashes and does not change
+scientific values. See [release audit](../research/2026-10-14/release_audit.md).
+

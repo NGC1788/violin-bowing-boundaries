@@ -1,0 +1,25 @@
+{
+  "configuration": {
+    "archive": {
+      "record": "17782542",
+      "archive_filename": "2024-04-19_TypeA_sample2.7z",
+      "actual_md5": "ec520fecf6c5011ef8491b335edc1cee",
+      "bytes": 14775691753
+    },
+    "frozen_model_sha256": "6191519763c552ef57f22062933714b0ad71403c159e479171d210c659544913",
+    "evaluation_spec_sha256": "98abb7aec35054ae8516f9c5c3f9ed8985a31bac9cc3d75a9800056d525822ad",
+    "preprocessing_spec_sha256": "c6f7a0a7cb6a0f514807b65e03c6b54d533307de6faea641e330cef021cc9565",
+    "feature_pipeline_sha256": {
+      "regime_map.py": "63afbfa6f479e30310eaab723d530cb043daf5ac7b84daefcb0d3b52ef75e1ce",
+      "trial_audit.py": "aa699b02375c0f27e1ca97ce3d3aa1c2bace4b2793436f9adcc7fc743e68c24b",
+      "grid_summary.py": "205fc47103c3d5f2d260e02ec5e67d9e8566b48f6b90e027c5a6d437e482933a"
+    },
+    "collection_sha256": "b57695a0afb52c109c7f0312ac8fb226792f558229dbe7454f3e0600baddad5b",
+    "workers": 2
+  },
+  "status": "complete",
+  "output_sha256": {
+    "2024-04-19_TypeA_sample2/regime_map/20261014T064041Z_5403c150/regimes.csv": "4a720305e5499cae9f1f52c131ef0e35e43ba6ca22e19e240dd6d4e2d6593bd6",
+    "2024-04-19_TypeA_sample2/regime_map/20261014T064041Z_5403c150/summary.json": "b7fd8afacbebd0a20805125b41c3f908a750b487f4c7953fef5ff575e9f916f9"
+  }
+}

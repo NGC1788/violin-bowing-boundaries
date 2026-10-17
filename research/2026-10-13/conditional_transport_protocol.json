@@ -1,0 +1,77 @@
+{
+  "created_utc": "2026-10-13T09:32:24.259311+00:00",
+  "status": "POST-HOC development on already inspected corpora; not confirmatory",
+  "hypothesis": "A beta-dependent width rate addresses the global-k source incompatibility diagnostic.",
+  "changed": "k=k0+k1*log(beta/.1); one extra parameter; k1 bounded[-2,2], penalized toward0",
+  "same": [
+    "source folds",
+    "normalization",
+    "base concavity",
+    "loss",
+    "regularization grids",
+    "three initial k0 starts"
+  ],
+  "source_selection": "pooled source OOF minimum IoU over fixed observer family",
+  "decision_before_run": "Accept as broad predictive improvement only if BOTH corpora combined macro family minimum improve over full flow, learned alpha and raw3D. Report all18 tasks and separate transfer scopes regardless.",
+  "novelty": "Conditional linear flows and varying coefficients are established; predictive test only.",
+  "prospective_A2": "excluded; no new candidate added to its frozen evaluation",
+  "published_headline": "D held-out speeds only; E conditional boundary-focused diagnostic excluded",
+  "code_sha256": {
+    "conditional_transport.py": "7df642f935114f3287c2e27a69b2af84ab36d60b18f6f41b5a55836ca922ff59",
+    "affine_transport.py": "7bff0713172168eebb884c479e568079629aae3124693b1683de35ca763366ce",
+    "multispeed_scaling.py": "436fc20f3a2d9dc399be41778e20cac97bb838e0811ab3d83e1a3784b000bbb1",
+    "benchmark_data.py": "b3dd7db79ef581a16244a32dfc34ee88244323cf74f43bab7c1010d4e006eb8d"
+  },
+  "lambda_grid": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "warp_lambda_grid": [
+    0.001,
+    0.01,
+    0.1
+  ],
+  "bounds": [
+    [
+      null,
+      null
+    ],
+    [
+      null,
+      null
+    ],
+    [
+      null,
+      null
+    ],
+    [
+      null,
+      null
+    ],
+    [
+      null,
+      null
+    ],
+    [
+      null,
+      -1e-06
+    ],
+    [
+      -1.0,
+      3.0
+    ],
+    [
+      -2.0,
+      2.0
+    ],
+    [
+      -2.0,
+      2.0
+    ],
+    [
+      -2.0,
+      2.0
+    ]
+  ]
+}

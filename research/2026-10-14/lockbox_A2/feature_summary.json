@@ -1,0 +1,1093 @@
+{
+  "created_utc": "20261014T064041Z",
+  "source_trials": "reports/research_20261013/lockbox_A2_preprocess/2024-04-19_TypeA_sample2/trial_audit/20261014T064026Z_eb6f59d1/trials.csv",
+  "window_source": "cache",
+  "thresholds_provisional": {
+    "flyback_frac": 0.5,
+    "hysteresis_sigma": 3.0,
+    "noise_floor_factor": 3.0,
+    "min_amplitude": 0.02,
+    "min_periodicity": 0.8,
+    "max_aperiodic": 0.5,
+    "subharmonic_ratio": 0.75,
+    "max_hole": 2
+  },
+  "noise_floor": {
+    "controls": 108,
+    "factor": 3.0,
+    "fallback": 0.02,
+    "control_median": 0.135444,
+    "control_p95": 0.169878,
+    "min_amplitude": 0.4063327834010124,
+    "source": "column-1<=0 windows"
+  },
+  "thresholds_applied": {
+    "flyback_frac": 0.5,
+    "hysteresis_sigma": 3.0,
+    "noise_floor_factor": 3.0,
+    "min_amplitude": 0.4063327834010124,
+    "min_periodicity": 0.8,
+    "max_aperiodic": 0.5,
+    "subharmonic_ratio": 0.75,
+    "max_hole": 2
+  },
+  "limit_per_condition": null,
+  "f0_search_hz": [
+    40.0,
+    160.0
+  ],
+  "label_scope": "Rule-based, provisional, from the shape of column 3 (plus one global noise floor from column-1<=0 windows). Not published reference labels; verify with examples.png before interpreting boundaries.",
+  "conditions": {
+    "v1": {
+      "trials_classified": 2000,
+      "errors": 0,
+      "c2_peak": [
+        0.05
+      ],
+      "reference_f0_hz": 97.99,
+      "f0_hz": {
+        "n": 2000,
+        "min": -647.72,
+        "p25": 97.86,
+        "median": 97.95,
+        "p75": 98.01,
+        "max": 181.24
+      },
+      "classes": {
+        "helmholtz": 1175,
+        "multiple_slip": 604,
+        "subharmonic": 14,
+        "aperiodic": 107,
+        "no_oscillation": 68,
+        "ambiguous": 32
+      },
+      "classes_among_off_plateau": {},
+      "classes_among_nonpositive_force": {
+        "helmholtz": 3,
+        "multiple_slip": 9,
+        "no_oscillation": 2
+      },
+      "boundaries": {
+        "lower": {
+          "n": 38,
+          "slope": -0.786,
+          "slope_se": 0.095,
+          "intercept": -4.3484,
+          "beta_span": 9.45,
+          "theory_slope": -2,
+          "censored_levels": 2,
+          "points": [
+            [
+              0.01996,
+              0.69656
+            ],
+            [
+              0.02117,
+              0.30776
+            ],
+            [
+              0.02246,
+              0.51315
+            ],
+            [
+              0.02384,
+              0.34099
+            ],
+            [
+              0.02529,
+              0.27758
+            ],
+            [
+              0.02687,
+              0.30776
+            ],
+            [
+              0.02848,
+              0.20281
+            ],
+            [
+              0.03023,
+              0.20281
+            ],
+            [
+              0.03203,
+              0.12136
+            ],
+            [
+              0.03399,
+              0.20281
+            ],
+            [
+              0.03607,
+              0.20281
+            ],
+            [
+              0.03828,
+              0.16435
+            ],
+            [
+              0.04058,
+              0.08339
+            ],
+            [
+              0.04307,
+              0.09899
+            ],
+            [
+              0.04569,
+              0.09899
+            ],
+            [
+              0.04849,
+              0.05235
+            ],
+            [
+              0.05143,
+              0.07732
+            ],
+            [
+              0.05458,
+              0.07732
+            ],
+            [
+              0.05787,
+              0.06109
+            ],
+            [
+              0.0614,
+              0.07732
+            ],
+            [
+              0.06511,
+              0.16435
+            ],
+            [
+              0.06909,
+              0.08938
+            ],
+            [
+              0.07332,
+              0.09899
+            ],
+            [
+              0.07779,
+              0.11048
+            ],
+            [
+              0.08751,
+              0.13347
+            ],
+            [
+              0.09286,
+              0.11048
+            ],
+            [
+              0.09847,
+              0.07732
+            ],
+            [
+              0.10446,
+              0.08339
+            ],
+            [
+              0.11086,
+              0.06968
+            ],
+            [
+              0.11753,
+              0.07732
+            ],
+            [
+              0.12476,
+              0.07732
+            ],
+            [
+              0.13232,
+              0.05588
+            ],
+            [
+              0.14034,
+              0.08938
+            ],
+            [
+              0.14886,
+              0.07732
+            ],
+            [
+              0.15796,
+              0.06109
+            ],
+            [
+              0.16756,
+              0.05588
+            ],
+            [
+              0.17776,
+              0.05235
+            ],
+            [
+              0.18855,
+              0.06109
+            ]
+          ]
+        },
+        "upper": {
+          "n": 24,
+          "slope": -1.161,
+          "slope_se": 0.044,
+          "intercept": -2.2578,
+          "beta_span": 3.89,
+          "theory_slope": -1,
+          "censored_levels": 16,
+          "points": [
+            [
+              0.05143,
+              3.06479
+            ],
+            [
+              0.05458,
+              3.06479
+            ],
+            [
+              0.05787,
+              2.77918
+            ],
+            [
+              0.0614,
+              2.52117
+            ],
+            [
+              0.06511,
+              2.52117
+            ],
+            [
+              0.06909,
+              2.77918
+            ],
+            [
+              0.07332,
+              2.28363
+            ],
+            [
+              0.07779,
+              1.87782
+            ],
+            [
+              0.08249,
+              2.07008
+            ],
+            [
+              0.08751,
+              1.7016
+            ],
+            [
+              0.09286,
+              1.7016
+            ],
+            [
+              0.09847,
+              1.7016
+            ],
+            [
+              0.10446,
+              1.54224
+            ],
+            [
+              0.11086,
+              1.26695
+            ],
+            [
+              0.11753,
+              1.14605
+            ],
+            [
+              0.12476,
+              1.26695
+            ],
+            [
+              0.13232,
+              0.94042
+            ],
+            [
+              0.14034,
+              0.94042
+            ],
+            [
+              0.14886,
+              0.84975
+            ],
+            [
+              0.15796,
+              0.84975
+            ],
+            [
+              0.16756,
+              0.76897
+            ],
+            [
+              0.17776,
+              0.84975
+            ],
+            [
+              0.18855,
+              0.76897
+            ],
+            [
+              0.20003,
+              0.76897
+            ]
+          ]
+        },
+        "levels_with_helmholtz": 40,
+        "levels_total": 40,
+        "max_hole": 2,
+        "non_helmholtz_cells_bridged": 83,
+        "censored_next_to_excluded": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "flyback_frac_sensitivity": [
+        {
+          "flyback_frac": 0.3,
+          "helmholtz": 1061,
+          "lower_slope": -0.866,
+          "lower_slope_se": 0.1,
+          "lower_n": 39,
+          "upper_slope": -1.16,
+          "upper_slope_se": 0.05,
+          "upper_n": 24
+        },
+        {
+          "flyback_frac": 0.4,
+          "helmholtz": 1115,
+          "lower_slope": -0.875,
+          "lower_slope_se": 0.095,
+          "lower_n": 39,
+          "upper_slope": -1.163,
+          "upper_slope_se": 0.047,
+          "upper_n": 24
+        },
+        {
+          "flyback_frac": 0.5,
+          "helmholtz": 1175,
+          "lower_slope": -0.786,
+          "lower_slope_se": 0.095,
+          "lower_n": 38,
+          "upper_slope": -1.161,
+          "upper_slope_se": 0.044,
+          "upper_n": 24
+        },
+        {
+          "flyback_frac": 0.6,
+          "helmholtz": 1268,
+          "lower_slope": -0.905,
+          "lower_slope_se": 0.143,
+          "lower_n": 28,
+          "upper_slope": -1.158,
+          "upper_slope_se": 0.044,
+          "upper_n": 24
+        },
+        {
+          "flyback_frac": 0.7,
+          "helmholtz": 1396,
+          "lower_slope": -0.778,
+          "lower_slope_se": 0.133,
+          "lower_n": 22,
+          "upper_slope": -1.148,
+          "upper_slope_se": 0.042,
+          "upper_n": 22
+        }
+      ],
+      "helmholtz_impedance_kg_s": {
+        "n": 1175,
+        "min": 0.0872,
+        "p25": 0.8377,
+        "median": 0.9172,
+        "p75": 0.9727,
+        "max": 1.3734
+      }
+    },
+    "v2": {
+      "trials_classified": 2000,
+      "errors": 0,
+      "c2_peak": [
+        0.1
+      ],
+      "reference_f0_hz": 98.06,
+      "f0_hz": {
+        "n": 2000,
+        "min": 43.34,
+        "p25": 97.94,
+        "median": 98.02,
+        "p75": 98.09,
+        "max": 149.61
+      },
+      "classes": {
+        "helmholtz": 862,
+        "multiple_slip": 1075,
+        "subharmonic": 5,
+        "aperiodic": 27,
+        "no_oscillation": 6,
+        "ambiguous": 25
+      },
+      "classes_among_off_plateau": {},
+      "classes_among_nonpositive_force": {},
+      "boundaries": {
+        "lower": {
+          "n": 40,
+          "slope": -1.455,
+          "slope_se": 0.05,
+          "intercept": -5.0894,
+          "beta_span": 10.04,
+          "theory_slope": -2,
+          "censored_levels": 0,
+          "points": [
+            [
+              0.01992,
+              1.92402
+            ],
+            [
+              0.02115,
+              1.74534
+            ],
+            [
+              0.02246,
+              1.30496
+            ],
+            [
+              0.02382,
+              1.43811
+            ],
+            [
+              0.02527,
+              1.30496
+            ],
+            [
+              0.02682,
+              1.18421
+            ],
+            [
+              0.02843,
+              1.18421
+            ],
+            [
+              0.03017,
+              0.97864
+            ],
+            [
+              0.03201,
+              0.88688
+            ],
+            [
+              0.034,
+              0.6639
+            ],
+            [
+              0.03607,
+              1.07732
+            ],
+            [
+              0.03822,
+              0.88688
+            ],
+            [
+              0.04055,
+              0.6639
+            ],
+            [
+              0.04305,
+              0.72928
+            ],
+            [
+              0.04566,
+              0.80428
+            ],
+            [
+              0.04846,
+              0.54485
+            ],
+            [
+              0.05141,
+              0.44705
+            ],
+            [
+              0.05456,
+              0.33657
+            ],
+            [
+              0.05786,
+              0.33657
+            ],
+            [
+              0.06137,
+              0.30596
+            ],
+            [
+              0.06509,
+              0.2507
+            ],
+            [
+              0.06907,
+              0.27615
+            ],
+            [
+              0.07327,
+              0.20946
+            ],
+            [
+              0.07775,
+              0.16023
+            ],
+            [
+              0.08247,
+              0.40941
+            ],
+            [
+              0.0875,
+              0.20946
+            ],
+            [
+              0.09285,
+              0.14506
+            ],
+            [
+              0.09845,
+              0.22855
+            ],
+            [
+              0.10445,
+              0.16023
+            ],
+            [
+              0.1108,
+              0.12418
+            ],
+            [
+              0.11753,
+              0.14506
+            ],
+            [
+              0.12474,
+              0.14506
+            ],
+            [
+              0.1323,
+              0.12418
+            ],
+            [
+              0.14032,
+              0.09592
+            ],
+            [
+              0.14884,
+              0.09592
+            ],
+            [
+              0.15794,
+              0.10589
+            ],
+            [
+              0.16751,
+              0.06923
+            ],
+            [
+              0.17773,
+              0.12418
+            ],
+            [
+              0.18852,
+              0.06532
+            ],
+            [
+              0.19999,
+              0.06166
+            ]
+          ]
+        },
+        "upper": {
+          "n": 15,
+          "slope": -1.234,
+          "slope_se": 0.215,
+          "intercept": -1.8862,
+          "beta_span": 2.43,
+          "theory_slope": -1,
+          "censored_levels": 25,
+          "points": [
+            [
+              0.08247,
+              3.12744
+            ],
+            [
+              0.09285,
+              3.12744
+            ],
+            [
+              0.09845,
+              3.12744
+            ],
+            [
+              0.10445,
+              2.83584
+            ],
+            [
+              0.1108,
+              2.3396
+            ],
+            [
+              0.11753,
+              2.83584
+            ],
+            [
+              0.12474,
+              1.74534
+            ],
+            [
+              0.1323,
+              1.30496
+            ],
+            [
+              0.14032,
+              1.18421
+            ],
+            [
+              0.14884,
+              1.18421
+            ],
+            [
+              0.15794,
+              1.58488
+            ],
+            [
+              0.16751,
+              1.43811
+            ],
+            [
+              0.17773,
+              1.18421
+            ],
+            [
+              0.18852,
+              1.43811
+            ],
+            [
+              0.19999,
+              1.43811
+            ]
+          ]
+        },
+        "levels_with_helmholtz": 40,
+        "levels_total": 40,
+        "max_hole": 2,
+        "non_helmholtz_cells_bridged": 75,
+        "censored_next_to_excluded": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "flyback_frac_sensitivity": [
+        {
+          "flyback_frac": 0.3,
+          "helmholtz": 780,
+          "lower_slope": -1.372,
+          "lower_slope_se": 0.039,
+          "lower_n": 40,
+          "upper_slope": -1.185,
+          "upper_slope_se": 0.19,
+          "upper_n": 16
+        },
+        {
+          "flyback_frac": 0.4,
+          "helmholtz": 812,
+          "lower_slope": -1.438,
+          "lower_slope_se": 0.044,
+          "lower_n": 40,
+          "upper_slope": -1.209,
+          "upper_slope_se": 0.182,
+          "upper_n": 16
+        },
+        {
+          "flyback_frac": 0.5,
+          "helmholtz": 862,
+          "lower_slope": -1.455,
+          "lower_slope_se": 0.05,
+          "lower_n": 40,
+          "upper_slope": -1.234,
+          "upper_slope_se": 0.215,
+          "upper_n": 15
+        },
+        {
+          "flyback_frac": 0.6,
+          "helmholtz": 934,
+          "lower_slope": -1.511,
+          "lower_slope_se": 0.048,
+          "lower_n": 39,
+          "upper_slope": -1.222,
+          "upper_slope_se": 0.227,
+          "upper_n": 13
+        },
+        {
+          "flyback_frac": 0.7,
+          "helmholtz": 1032,
+          "lower_slope": -1.538,
+          "lower_slope_se": 0.063,
+          "lower_n": 38,
+          "upper_slope": -1.206,
+          "upper_slope_se": 0.251,
+          "upper_n": 12
+        }
+      ],
+      "helmholtz_impedance_kg_s": {
+        "n": 862,
+        "min": 0.2187,
+        "p25": 0.8923,
+        "median": 0.9628,
+        "p75": 1.0108,
+        "max": 1.4375
+      }
+    },
+    "v3": {
+      "trials_classified": 2000,
+      "errors": 0,
+      "c2_peak": [
+        0.2
+      ],
+      "reference_f0_hz": 98.07,
+      "f0_hz": {
+        "n": 2000,
+        "min": 49.14,
+        "p25": 97.97,
+        "median": 98.04,
+        "p75": 98.11,
+        "max": 98.7
+      },
+      "classes": {
+        "helmholtz": 485,
+        "multiple_slip": 1501,
+        "subharmonic": 0,
+        "aperiodic": 5,
+        "no_oscillation": 3,
+        "ambiguous": 6
+      },
+      "classes_among_off_plateau": {},
+      "classes_among_nonpositive_force": {
+        "helmholtz": 2,
+        "multiple_slip": 92
+      },
+      "boundaries": {
+        "lower": {
+          "n": 32,
+          "slope": -1.859,
+          "slope_se": 0.095,
+          "intercept": -5.2878,
+          "beta_span": 6.25,
+          "theory_slope": -2,
+          "censored_levels": 0,
+          "points": [
+            [
+              0.03202,
+              2.4476
+            ],
+            [
+              0.03402,
+              2.4476
+            ],
+            [
+              0.03609,
+              3.30451
+            ],
+            [
+              0.03827,
+              1.99285
+            ],
+            [
+              0.0406,
+              1.62819
+            ],
+            [
+              0.04307,
+              1.47256
+            ],
+            [
+              0.0457,
+              1.99285
+            ],
+            [
+              0.0485,
+              1.32866
+            ],
+            [
+              0.05144,
+              1.47256
+            ],
+            [
+              0.05458,
+              1.19512
+            ],
+            [
+              0.05787,
+              1.47256
+            ],
+            [
+              0.0614,
+              0.87346
+            ],
+            [
+              0.06513,
+              0.78541
+            ],
+            [
+              0.0691,
+              0.63211
+            ],
+            [
+              0.07331,
+              0.56693
+            ],
+            [
+              0.07778,
+              0.70476
+            ],
+            [
+              0.08249,
+              0.35374
+            ],
+            [
+              0.08755,
+              0.4506
+            ],
+            [
+              0.09288,
+              0.35374
+            ],
+            [
+              0.09851,
+              0.35374
+            ],
+            [
+              0.10447,
+              0.5072
+            ],
+            [
+              0.11085,
+              0.27458
+            ],
+            [
+              0.11756,
+              0.24083
+            ],
+            [
+              0.12474,
+              0.24083
+            ],
+            [
+              0.13235,
+              0.18656
+            ],
+            [
+              0.14033,
+              0.27458
+            ],
+            [
+              0.1489,
+              0.21172
+            ],
+            [
+              0.15798,
+              0.27458
+            ],
+            [
+              0.16759,
+              0.18656
+            ],
+            [
+              0.17776,
+              0.0668
+            ],
+            [
+              0.18857,
+              0.16452
+            ],
+            [
+              0.20004,
+              0.04748
+            ]
+          ]
+        },
+        "upper": {
+          "n": 12,
+          "slope": -0.103,
+          "slope_se": 0.07,
+          "intercept": 0.7,
+          "beta_span": 6.25,
+          "theory_slope": -1,
+          "censored_levels": 20,
+          "points": [
+            [
+              0.03202,
+              2.7044
+            ],
+            [
+              0.08755,
+              2.4476
+            ],
+            [
+              0.11756,
+              2.7044
+            ],
+            [
+              0.12474,
+              2.98644
+            ],
+            [
+              0.13235,
+              2.98644
+            ],
+            [
+              0.14033,
+              2.4476
+            ],
+            [
+              0.1489,
+              2.4476
+            ],
+            [
+              0.15798,
+              2.20813
+            ],
+            [
+              0.16759,
+              2.4476
+            ],
+            [
+              0.17776,
+              1.99285
+            ],
+            [
+              0.18857,
+              2.20813
+            ],
+            [
+              0.20004,
+              2.4476
+            ]
+          ]
+        },
+        "levels_with_helmholtz": 32,
+        "levels_total": 40,
+        "max_hole": 2,
+        "non_helmholtz_cells_bridged": 70,
+        "censored_next_to_excluded": {
+          "lower": 0,
+          "upper": 0
+        }
+      },
+      "flyback_frac_sensitivity": [
+        {
+          "flyback_frac": 0.3,
+          "helmholtz": 424,
+          "lower_slope": -1.755,
+          "lower_slope_se": 0.106,
+          "lower_n": 31,
+          "upper_slope": -0.257,
+          "upper_slope_se": 0.149,
+          "upper_n": 11
+        },
+        {
+          "flyback_frac": 0.4,
+          "helmholtz": 446,
+          "lower_slope": -1.755,
+          "lower_slope_se": 0.103,
+          "lower_n": 32,
+          "upper_slope": -0.103,
+          "upper_slope_se": 0.07,
+          "upper_n": 12
+        },
+        {
+          "flyback_frac": 0.5,
+          "helmholtz": 485,
+          "lower_slope": -1.859,
+          "lower_slope_se": 0.095,
+          "lower_n": 32,
+          "upper_slope": -0.103,
+          "upper_slope_se": 0.07,
+          "upper_n": 12
+        },
+        {
+          "flyback_frac": 0.6,
+          "helmholtz": 534,
+          "lower_slope": -1.988,
+          "lower_slope_se": 0.121,
+          "lower_n": 32,
+          "upper_slope": -0.257,
+          "upper_slope_se": 0.149,
+          "upper_n": 11
+        },
+        {
+          "flyback_frac": 0.7,
+          "helmholtz": 629,
+          "lower_slope": -1.33,
+          "lower_slope_se": 0.274,
+          "lower_n": 37,
+          "upper_slope": 1.51,
+          "upper_slope_se": 0.508,
+          "upper_n": 13
+        }
+      ],
+      "helmholtz_impedance_kg_s": {
+        "n": 485,
+        "min": 0.1079,
+        "p25": 0.9173,
+        "median": 0.9774,
+        "p75": 1.0116,
+        "max": 1.4425
+      }
+    }
+  },
+  "schelleng_law": {
+    "lower": {
+      "n": 110,
+      "intercept": -1.5729,
+      "rms_log_residual": 0.4113,
+      "exponent_speed": 1.384,
+      "exponent_speed_se": 0.073,
+      "exponent_beta": -1.296,
+      "exponent_beta_se": 0.062,
+      "theory_speed": 1,
+      "theory_beta": -2
+    },
+    "upper": {
+      "n": 51,
+      "intercept": 0.1528,
+      "rms_log_residual": 0.2423,
+      "exponent_speed": 0.516,
+      "exponent_speed_se": 0.065,
+      "exponent_beta": -0.789,
+      "exponent_beta_se": 0.089,
+      "theory_speed": 1,
+      "theory_beta": -1
+    }
+  },
+  "flyback_law": {
+    "n": 2522,
+    "intercept": 0.7965,
+    "rms_log_residual": 0.213,
+    "exponent_speed": 1.032,
+    "exponent_speed_se": 0.008,
+    "exponent_beta": -0.947,
+    "exponent_beta_se": 0.007,
+    "theory": "flyback = 2 Z v_b / beta (speed exponent +1, beta exponent -1)",
+    "impedance_kg_s": {
+      "p25": 0.8588,
+      "median": 0.9461,
+      "p75": 0.9995
+    },
+    "reference_impedance_kg_s": 1.175
+  },
+  "plots": [
+    "reports/research_20261013/lockbox_A2_preprocess/2024-04-19_TypeA_sample2/regime_map/20261014T064041Z_5403c150/regime_map.png",
+    "reports/research_20261013/lockbox_A2_preprocess/2024-04-19_TypeA_sample2/regime_map/20261014T064041Z_5403c150/examples.png",
+    "reports/research_20261013/lockbox_A2_preprocess/2024-04-19_TypeA_sample2/regime_map/20261014T064041Z_5403c150/features.png",
+    "reports/research_20261013/lockbox_A2_preprocess/2024-04-19_TypeA_sample2/regime_map/20261014T064041Z_5403c150/flyback_law.png"
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "audited_utc": "2026-10-14T17:42:53.363086+00:00",
+  "status": "PASS",
+  "audit_script_sha256": "7782688fa4528f0ee00e59f5509567f75b49e18fc66d270d806cc9f1611b16b0",
+  "frozen_implementation_files_checked": 15,
+  "independent_method": "csv.DictReader eligibility; Python scalar label gates; Python set IoU/bounds; independent coordinate/RBF/transport formulas; existing frozen sklearn estimators only for original standard classifiers.",
+  "no_fit_or_adaptation": true,
+  "counts": {
+    "raw": 6000,
+    "eligible": 5892,
+    "off_plateau": 0,
+    "nonpositive_force": 108
+  },
+  "eligible_by_panel": {
+    "A2/0.05": 1986,
+    "A2/0.1": 2000,
+    "A2/0.2": 1906
+  },
+  "labels_matched_saved_arrays": true,
+  "development_ids_overlap": 0,
+  "models_checked": 26,
+  "probability_values_checked": 153192,
+  "max_probability_absolute_error": 5.551115123125783e-16,
+  "numeric_metric_occurrences_checked": 4694,
+  "max_metric_absolute_error": 0.0,
+  "original_model_endpoints": {
+    "rawlog_logistic": 0.48628507057197273,
+    "rawlog_svc": 0.2324074074074074,
+    "rawlog_extra_trees": 0.5201068956074362,
+    "covariant_logistic": 0.6595695000343585,
+    "covariant_svc": 0.6505039307967181,
+    "covariant_extra_trees": 0.6409325627484196,
+    "rawlog_hgb": 0.5137840346712792,
+    "covariant_nominal_bce": 0.646105310654889,
+    "covariant_family_mean_bce": 0.6476628189166094,
+    "covariant_consensus_bce": 0.6296516414616095,
+    "covariant_nominal_iou": 0.6418914140171971,
+    "covariant_box_robust": 0.6264995109887708,
+    "covariant_family_robust": 0.6354515328841585,
+    "rawlog_family_robust": 0.5283377446485247
+  },
+  "transport_endpoints_and_contrasts": {
+    "A__0.05_0.1": {
+      "training_speeds": [
+        0.05,
+        0.1
+      ],
+      "primary_endpoint_by_model": {
+        "affine_flow": 0.6535855588211746,
+        "translation_k0": 0.667870239881,
+        "learned_alpha": 0.6622727272448393,
+        "raw_3d": 0.6764299263695501
+      },
+      "selected_simple_baseline": "learned_alpha",
+      "affine_minus_k0": -0.014284681059825388,
+      "affine_minus_selected_simple": -0.008687168423664682
+    },
+    "A__0.05_0.2": {
+      "training_speeds": [
+        0.05,
+        0.2
+      ],
+      "primary_endpoint_by_model": {
+        "affine_flow": 0.6577602257168402,
+        "translation_k0": 0.6555580931249381,
+        "learned_alpha": 0.6477816778230715,
+        "raw_3d": 0.5556588589314991
+      },
+      "selected_simple_baseline": "learned_alpha",
+      "affine_minus_k0": 0.0022021325919021617,
+      "affine_minus_selected_simple": 0.00997854789376873
+    },
+    "A__0.1_0.2": {
+      "training_speeds": [
+        0.1,
+        0.2
+      ],
+      "primary_endpoint_by_model": {
+        "affine_flow": 0.6400138693302831,
+        "translation_k0": 0.6028387776324761,
+        "learned_alpha": 0.6401467030005162,
+        "raw_3d": 0.6707396941733998
+      },
+      "selected_simple_baseline": "learned_alpha",
+      "affine_minus_k0": 0.03717509169780708,
+      "affine_minus_selected_simple": -0.00013283367023309012
+    }
+  },
+  "original_family_minus_selected_baseline": -0.024117967150200093,
+  "transport_primary": {
+    "training_speeds": [
+      0.05,
+      0.1
+    ],
+    "primary_endpoint_by_model": {
+      "affine_flow": 0.6535855588211746,
+      "translation_k0": 0.667870239881,
+      "learned_alpha": 0.6622727272448393,
+      "raw_3d": 0.6764299263695501
+    },
+    "selected_simple_baseline": "learned_alpha",
+    "affine_minus_k0": -0.014284681059825388,
+    "affine_minus_selected_simple": -0.008687168423664682
+  },
+  "chronology": {
+    "original_model_freeze": "2026-10-13T07:34:07.125559+00:00",
+    "evaluation_freeze": "2026-10-13T07:42:27.887597+00:00",
+    "preprocessing_freeze": "2026-10-13T08:39:08.276052+00:00",
+    "transport_freeze": "2026-10-13T09:02:25.800573+00:00",
+    "archive_verified": "2026-10-14T06:19:49.644936+00:00",
+    "features_completed": "20261014T064041Z",
+    "original_evaluated": "2026-10-14T06:40:45.036922+00:00",
+    "transport_evaluated": "2026-10-14T06:40:49.410652+00:00"
+  },
+  "archive_reverification": {
+    "performed": true,
+    "bytes": 14775691753,
+    "md5": "ec520fecf6c5011ef8491b335edc1cee"
+  },
+  "scope": "Independent arithmetic/provenance reconstruction from saved derived features. No raw waveform extraction rerun; no proof about external human exposure, physical Helmholtz truth, or independent specimen replication.",
+  "release_verbatim_json_count": 5,
+  "summary_transformation_verified": "Repository prefix removed from source_trials and four plots paths; all other values identical.",
+  "all_frozen_specs_and_code_unchanged": true
+}

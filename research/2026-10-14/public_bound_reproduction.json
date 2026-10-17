@@ -1,0 +1,19 @@
+{
+  "started_utc": "2026-10-17T01:25:49.545581+00:00",
+  "scope": "Only public files in a fresh tree; no original reports, raw data, or model checkpoints. Reuses installed Python, not a fresh dependency installation.",
+  "copied_files": 224,
+  "command": [
+    "python",
+    "research/2026-10-14/width_bound_sensitivity.py",
+    "--output",
+    "bounded_replay.json"
+  ],
+  "exit_code": 0,
+  "seconds": 25.10949108400382,
+  "stdout": "{\n  \"all\": {\n    \"tasks\": 186,\n    \"saved_witness_outside_bounds\": 23,\n    \"cost_increased_tasks\": 6,\n    \"maximum_cost_increase\": 3,\n    \"sum_cost_increase_with_observation_reuse\": 12,\n    \"maximum_bounded_extra_disagreements\": 12,\n    \"maximum_bounded_extra_disagreement_fraction\": 0.005681818181818182\n  },\n  \"cello_all_rules\": {\n    \"tasks\": 180,\n    \"saved_witness_outside_bounds\": 23,\n    \"cost_increased_tasks\": 6,\n    \"maximum_cost_increase\": 3,\n    \"sum_cost_increase_with_observation_reuse\": 12,\n    \"maximum_bounded_extra_disagreements\": 12,\n    \"maximum_bounded_extra_disagreement_fraction\": 0.0033566433566433566\n  },\n  \"cello_nominal\": {\n    \"tasks\": 12,\n    \"saved_witness_outside_bounds\": 1,\n    \"cost_increased_tasks\": 0,\n    \"maximum_cost_increase\": 0,\n    \"sum_cost_increase_with_observation_reuse\": 0,\n    \"maximum_bounded_extra_disagreements\": 7,\n    \"maximum_bounded_extra_disagreement_fraction\": 0.001892403352257367\n  },\n  \"published_D\": {\n    \"tasks\": 6,\n    \"saved_witness_outside_bounds\": 0,\n    \"cost_increased_tasks\": 0,\n    \"maximum_cost_increase\": 0,\n    \"sum_cost_increase_with_observation_reuse\": 0,\n    \"maximum_bounded_extra_disagreements\": 3,\n    \"maximum_bounded_extra_disagreement_fraction\": 0.005681818181818182\n  }\n}\n",
+  "stderr": "Matplotlib is building the font cache; this may take a moment.\n",
+  "scientific_artifact_exactly_equal_excluding_created_utc": true,
+  "all_186_tasks_and_23_new_witnesses_checked": true,
+  "no_original_or_new_reports_data_checkpoints": true,
+  "finished_utc": "2026-10-17T01:26:14.767307+00:00"
+}

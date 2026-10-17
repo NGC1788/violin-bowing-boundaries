@@ -1,7 +1,7 @@
 # Scientific claim ledger and manuscript readiness
 
-Reviewed 2026-10-13 against the current research README, archived numerical
-results, affine-transport assessment and verified primary literature. This is an
+Updated 2026-10-17 against the research README, archived development results,
+completed A2 evaluations, source-identification audit and verified primary literature. This is an
 independent research-level review, not a prediction of journal acceptance.
 
 **The work is ready to document as a rigorous exploratory research study, but
@@ -43,17 +43,21 @@ validation on the user's violins or a digital twin of a complete violin.
 | The project now includes empirical violin-string evidence without new recordings. | **Supported, bounded** | 1,584 published grid slots; 1,171 strict classes; D benchmark 1,041 cells. Exact PDF provenance, 24-cell two-assistant visual check and complete coefficient-table checks are retained. | 1,171 independent instruments, exhaustive human reannotation, or full assembled-violin validation. |
 | Existing historical simulator calibration shows an accurate physical model. | **Withdrawn** | Reflection-filter recurrence and passivity defects invalidate that interpretation. Corrected implementation and old results are preserved separately. | Fair historical zero-shot transfer: nuisance quantities were also target-adapted. |
 | Force/speed coordinates improve the retained cello speed-transfer comparison. | **Supported on development data** | Matched-dimensional controls retain the advantage; all four source variants are reported. The exponent is a fixed physical prior. | A newly learned law from a single source speed or universal superiority on violin strings. |
-| A coherent weak-label minimax training objective improves over strong baselines. | **Negative result** | It loses to the strongest declared simple baseline in all four original source sweeps. | A promising method can be called successful solely because the uncertainty formulation is elegant. |
+| A coherent weak-label minimax training objective improves over strong baselines. | **Negative result** | It loses to the strongest declared simple baseline in all four original source sweeps. Frozen A2 evaluation also loses: .635452 versus the source-selected baseline's .659570. | A promising method can be called successful solely because the uncertainty formulation is elegant. |
 | The known asymmetric force-boundary prior performs well on published D data. | **Supported reproduction** | Primary one-speed macro IoU .860716 versus static band .825181; all four source-speed macro comparisons favor the asymmetric prior, with an explicit transfer-direction loss. | Discovery of a new physical law: the prior and experiment come from the same 2008 publication. |
-| Affine speed flow is generally better than established prediction methods. | **Unsupported** | On cello, .694794 versus learned alpha .694609 and raw 3D .694037 for the declared macro family score; reasonable alternative aggregations change the ordering. | Consistent predictive superiority, statistical equivalence, or an identified mechanism. |
+| Affine speed flow is generally better than established prediction methods. | **Unsupported; primary A2 result is negative** | Development cello .694794 is close to learned alpha .694609 and raw 3D .694037. Frozen primary A2 flow .653586 loses to k=0 .667870 and source-selected learned alpha .662273. | Consistent predictive superiority, statistical equivalence, or an identified mechanism. |
 | Affine flow gives a modest published-D improvement over a stronger known-prior comparator. | **Supported exploratory observation** | .861265 versus asymmetric two-source ensemble .844512, five source-pair wins and one loss. At the highest training pair, .754746 versus .803740 is a clear loss. | General violin-string superiority, an independent validation, or identification of a physical mechanism. |
 | Learned width deformation helps within the tested band model. | **Supported conditionally on D** | Matched k=0 ablation: D .861265 versus .840464, five wins and one loss. Cello aggregate .694794 versus .693502 is small; same-specimen held-speed flow .713565 is worse than k=0 .719325. | A universal width benefit, new flow mathematics, or independent confirmation outside development data. |
+| Making the width generator depend on bow position resolves the transfer limitation. | **Negative result** | Same 18 source tasks and selection protocol: cello .688991 versus global flow .694794; D .862281 versus .861265, but only two of six D tasks improve. The declared both-corpus gate fails. | A general improvement, identification of a width mechanism, or novelty from one additional coefficient. |
+| A well-fitting affine predictor identifies a common physical width law. | **Unsupported** | Exact retained published-D boundary brackets give empty common-rate intersections in five of six source-speed pairs. Cello nominal single-band mismatch is 4.854%, with extensive censoring. | A physical impossibility theorem after allowing control/annotation error, a calibrated labeling-error rate, or predictive failure whenever exact compatibility fails. |
+| A shared width constraint explains the candidate's transfer failures. | **Not established** | Finite nominal-control diagnostic finds at most 12 additional disagreements across all cello rules/tasks and at most 3 on published D, beyond independent-band mismatch. | A lower loss bound for the measured-coordinate cello predictor, a bound on held-out IoU, or a causal explanation for the candidate's failure. |
 | The continuous-rule oracle covers every label state in the specified threshold rectangle. | **Supported conditionally** | Exact finite-state representation; established fractional reduction and quadrant sweep; exhaustive/reference tests; residual gap bound under exact arithmetic and a globally solved subproblem. | A certified floating-point enclosure or coverage of the correct mechanical labels. |
-| Replacing 15 rules with the continuous oracle changes the real-data model-selection conclusions. | **Not observed** | Largest IoU lower-bound difference .000357; mean .0000598; zero within-source pairwise rank reversals or ties broken among 56 arrays. | Large practical benefit inferred from a deliberately constructed grid-failure example. |
+| Replacing 15 rules with continuous individual score minima changes the real-data maximin ranking. | **Not observed** | Largest IoU lower-bound difference .000357; mean .0000598; zero within-source maximin rank reversals or ties broken among 56 arrays. | This is not a claim that shared-observer pairwise differences keep one sign. |
+| Model ranking is stable under a shared observation rule. | **False for some development comparisons** | Exact pairwise-difference audit: 52/364 original-model pooled pairs reverse, versus 51/364 detected by the 15-rule grid; all 5,596 pair/scope comparisons retained. Two pairs show the original panelwise maximin preference opposed to uniform shared-rule macro dominance. | Confidence intervals, coverage of physical truth, or a reason to change either frozen A2 primary endpoint. |
 | The oracle is 77 times faster. | **Superseded measurement** | Seven warm repetitions at synthetic N=2,000 give 67.35× median solve-only ratio, or 47.08× including preparation, on this Mac. | Universal speedup, cold-start performance, or the speed ratio on the actual data's much smaller state matrix. |
 | Dual-endpoint reconstruction agreement certifies contact-state accuracy. | **Falsified under allowed misspecification** | A shared 10% impedance error leaves redundant estimates mutually consistent while producing large synthetic stick-indicator error. | A new inverse-physics discovery or a measured error rate on public real recordings. |
 | High-rate simulation labels are numerical ground truth. | **Unsupported** | Label changes persist between the tested finite rates and delay methods. | Continuum convergence, structural stability, or a certified physical bifurcation boundary. |
-| An untouched specimen confirms the method. | **Evaluation pending; both plans frozen** | The original 14-model A2 protocol is unchanged. A separate 12-model transport addendum was frozen before local decoding at 2026-10-13T09:02:25.800573Z; its canonical hash was independently verified. | A completed result merely because plans/models are frozen, formal preregistration, or silently adding candidates to the original protocol. |
+| The additional A2 specimen confirms either candidate's general improvement. | **Negative primary results, completed 14 October** | Original candidate minus source-selected baseline: −.024118. Primary transport flow minus k=0: −.014285; minus source-selected learned exponent: −.008687. Both frozen plans and every secondary result are preserved. | Formal preregistration, population-level confirmation, switching the primary speed pair, or treating now-observed A2 as untouched for a redesigned method. |
 
 All row-wise IoUs are scores on the specified eligible discrete acquisition
 grids. They are not uniformly weighted areas of a continuous physical parameter
@@ -101,6 +105,11 @@ scope narrowing. It is acceptable to report a domain-specific exploratory
 finding; it is not acceptable to imply the requested general improvement was
 achieved. The current evidence cannot support “universally better,” “state of
 the art,” or “ICML outstanding-paper-level novelty.”
+
+The completed A2 test strengthens this limitation: the frozen primary flow
+loses to both its matched k=0 ablation and source-selected learned-exponent
+baseline. Some secondary source-speed pairs fare better, but their designation
+was fixed in advance and cannot be exchanged with the primary pair afterward.
 
 ## 4. What the prior work already rules out
 
@@ -168,11 +177,12 @@ but same-specimen held-speed scores are .713565 versus .719325. Width deformatio
 therefore has conditional predictive value on D within this model family; it
 does not explain a general advantage across both corpora.
 
-**Independence:** all present source corpora were examined during development.
-Finishing the original A2 protocol can add new-specimen evidence for its frozen
-14 models. A **separate** twelve-model pre-outcome addendum is now frozen: three
-A-source speed pairs, each with full flow, k=0, learned alpha and raw 3D. The
-original 14-model protocol is unchanged. The canonical hash in
+**Independence and completed outcome:** the sample1 and published-D corpora were
+examined during development. Both separate A2 protocols completed on
+**2026-10-14 06:40 UTC (15:40 KST)**, with 5,892 eligible rows from 6,000 raw
+trials. The original 14-model evaluation and twelve-model pre-outcome addendum
+remain unchanged. The addendum has three A-source speed pairs, each with full
+flow, k=0, learned alpha and raw 3D. Its canonical hash in
 `transport_lockbox_spec.json` was independently recomputed and matches:
 
     787d7839871519816f39d710ae1947dd17548c160b9dee5a3b64635a13186377
@@ -188,14 +198,49 @@ The recorded local non-exposure check found only partial-download files, the
 download lock and a waiting pipeline state, with no decoded A2 outcomes. This is
 a recorded **pre-decoding prospective addendum after development**, not formal
 preregistration or certification of all possible human/external exposure history.
-Its separate evaluator waits for the main evaluation to complete. No A2 score,
-candidate advantage or completed evaluation is claimed here.
+The archive was fully verified after freezing and before decoding; the separate
+evaluator ran after the main evaluation completed. Neither candidate improved
+its prespecified primary comparison. Original robust minus baseline is
+−.024118; primary flow minus k=0 is −.014285 and minus source-selected learned
+alpha is −.008687. The 0.05/0.20 and 0.10/0.20 source pairs remain secondary,
+including their favorable outcomes. Full results and numerical replay are in
+the [portable A2 release](../2026-10-14/lockbox_A2/README.md).
+
+The [independent A2 audit](../2026-10-14/lockbox_independent_audit.md) checks all
+26 models through separate eligibility, observation and metric implementations,
+with independently coded prediction transforms. It also recomputes the complete
+local archive MD5 and verifies the unchanged freezes. This is independent
+arithmetic/provenance reconstruction after waveform feature extraction; it is
+not a second physical experiment or an independent raw-waveform reanalysis.
+
+A2 is now exposed. A method designed after these results may use it as
+development evidence but cannot call its next A2 evaluation untouched
+confirmation. One additional cello specimen also does not establish performance
+on a population of instruments or on assembled violins.
 
 **Meaning of the target:** neither the present threshold family nor an internally
 consistent simulator proves physical contact-state truth. The narrow operational
 map paper can state this limitation. A physical-state certification paper would
 need independently justified observation/calibration/model uncertainty bounds;
 current metadata and synthetic identities do not supply them.
+
+**Structural diagnostic, completed but limited:** the
+[nominal-control width-law calculation](../2026-10-14/width_law_assessment.md)
+separates single-band mismatch from the additional disagreement forced by one
+shared width exponent. The latter is small: at most twelve cello rows across
+all fifteen observers and three published-D rows. Its exact fixed-control
+premise is absent in the measured-coordinate cello predictor, so its value is
+not a certified loss bound for that predictor. Source Hamming cost under this
+relaxation also cannot bound held-out IoU. This result guides interpretation;
+it neither establishes a new successful method nor identifies the cause of
+the failed A2 transfer.
+
+The [bounded-exponent follow-up](../2026-10-14/width_bound_sensitivity.md) matches
+the predictor's `k ∈ [−2,2]` range and raises six of 186 optima by one or three
+rows. All nominal cello and published-D optima remain unchanged. Alternative
+bounded witnesses attain the original optimum in seventeen cases whose saved
+representative lay outside the range. This strengthens the diagnostic's range
+sensitivity check, but the other relaxations and novelty limitations remain.
 
 ### Completed bounded experiment; no new architecture search recommended
 
@@ -208,8 +253,10 @@ Only one of 810 full-flow CV fits improved its training objective by more than
 claim of perfectly identical optimization paths.
 
 The ablation resolves the immediate width-attribution question sufficiently to
-report a limited D finding. It does not resolve novelty or independent
-generalization. Repeating this recommendation as unfinished work would be stale.
+report a limited D finding. The completed A2 primary evaluation supplies
+additional-specimen evidence against general improvement. These completed tests
+do not resolve methodological novelty; repeating them as unfinished work would
+be stale.
 
 No further architecture search, simulated dataset expansion or task switching
 is justified merely to obtain a favorable headline.
@@ -239,11 +286,12 @@ A focused main text should follow one argument:
    ambiguous and censored conditions. Make retrospective exposure explicit.
 3. Present matched static/uniform/known-asymmetric comparisons across all tasks;
    show that a broad speed-law conclusion fails across the two source corpora.
-4. Present continuous shared-rule sensitivity as a technically precise evaluator,
-   including its small observed effect and unchanged model rankings.
+4. Distinguish the small effect on individually minimized score rankings from
+   shared-observer pairwise reversals and the two aggregation counterexamples.
 5. Report robust-learning failures, the bounded affine candidate and its matched
    width ablation together. Preserve the D gain, cello near-equality and losses.
-6. State which conclusions a completed fixed A2 test adds, if and when it exists.
+6. Report both completed fixed A2 evaluations, including their negative primary
+   contrasts, all secondary pairs and the now-exposed status of the specimen.
 
 Detailed simulator bug history, endpoint inverse identities, cache regression
 tests and large convergence tables belong in reproducibility material or a
@@ -258,8 +306,9 @@ negative controls. It is not an empty proposal. It also has **not satisfied the
 original demand for a clearly superior, high-novelty new method**. Preserve that
 distinction when describing progress.
 
-The root README is scientifically cautious overall. The manuscript should
-include the now-completed width ablation and distinguish the original frozen A2
-benchmark from the separately frozen candidate addendum. Both evaluations remain
-pending; freezing their plans is not an outcome. No root file was edited by this
-review.
+The manuscript and Korean report now distinguish development, the original
+frozen A2 benchmark and its separately frozen transport addendum. The completed
+negative primary results must remain visible when pursuing a new methodology.
+Source censoring, structural mismatch and shared-observer comparisons provide
+specific technical questions for that next work; they do not yet constitute a
+validated novel estimator.

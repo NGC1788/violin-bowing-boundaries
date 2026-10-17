@@ -1,0 +1,1146 @@
+{
+  "scope": "Independent reclassification and dynamic-programming band baseline; not an independent global-optimality proof or physical validation",
+  "tasks_verified": 186,
+  "rows_reclassified_with_reuse": 702153,
+  "columns_verified_with_reuse": 7266,
+  "data_controls": {
+    "nominal_cello_columns": 480,
+    "quantiles": [
+      0,
+      0.5,
+      0.95,
+      1
+    ],
+    "relative_beta_range_quantiles": [
+      0.00014197779398619106,
+      0.0006707047502723546,
+      0.00186340695152513,
+      0.002833029456746535
+    ],
+    "relative_speed_range_quantiles": [
+      0.0,
+      1.3877787807814457e-16,
+      1.3877787807814457e-16,
+      0.0002141524904601677
+    ]
+  },
+  "task_checks": {
+    "cello__A__0.05_0.1__rule0": {
+      "rows_reclassified": 3699,
+      "columns": 40,
+      "independent_band_cost": 135,
+      "attained_shared_width_cost": 138
+    },
+    "cello__A__0.05_0.1__rule1": {
+      "rows_reclassified": 3699,
+      "columns": 40,
+      "independent_band_cost": 134,
+      "attained_shared_width_cost": 137
+    },
+    "cello__A__0.05_0.1__rule2": {
+      "rows_reclassified": 3699,
+      "columns": 40,
+      "independent_band_cost": 131,
+      "attained_shared_width_cost": 135
+    },
+    "cello__A__0.05_0.1__rule3": {
+      "rows_reclassified": 3699,
+      "columns": 40,
+      "independent_band_cost": 137,
+      "attained_shared_width_cost": 143
+    },
+    "cello__A__0.05_0.1__rule4": {
+      "rows_reclassified": 3699,
+      "columns": 40,
+      "independent_band_cost": 136,
+      "attained_shared_width_cost": 142
+    },
+    "cello__A__0.05_0.1__rule5": {
+      "rows_reclassified": 3699,
+      "columns": 40,
+      "independent_band_cost": 133,
+      "attained_shared_width_cost": 140
+    },
+    "cello__A__0.05_0.1__rule6": {
+      "rows_reclassified": 3699,
+      "columns": 40,
+      "independent_band_cost": 149,
+      "attained_shared_width_cost": 156
+    },
+    "cello__A__0.05_0.1__rule7": {
+      "rows_reclassified": 3699,
+      "columns": 40,
+      "independent_band_cost": 147,
+      "attained_shared_width_cost": 154
+    },
+    "cello__A__0.05_0.1__rule8": {
+      "rows_reclassified": 3699,
+      "columns": 40,
+      "independent_band_cost": 143,
+      "attained_shared_width_cost": 150
+    },
+    "cello__A__0.05_0.1__rule9": {
+      "rows_reclassified": 3699,
+      "columns": 40,
+      "independent_band_cost": 227,
+      "attained_shared_width_cost": 235
+    },
+    "cello__A__0.05_0.1__rule10": {
+      "rows_reclassified": 3699,
+      "columns": 40,
+      "independent_band_cost": 219,
+      "attained_shared_width_cost": 229
+    },
+    "cello__A__0.05_0.1__rule11": {
+      "rows_reclassified": 3699,
+      "columns": 40,
+      "independent_band_cost": 207,
+      "attained_shared_width_cost": 216
+    },
+    "cello__A__0.05_0.1__rule12": {
+      "rows_reclassified": 3699,
+      "columns": 40,
+      "independent_band_cost": 349,
+      "attained_shared_width_cost": 358
+    },
+    "cello__A__0.05_0.1__rule13": {
+      "rows_reclassified": 3699,
+      "columns": 40,
+      "independent_band_cost": 339,
+      "attained_shared_width_cost": 349
+    },
+    "cello__A__0.05_0.1__rule14": {
+      "rows_reclassified": 3699,
+      "columns": 40,
+      "independent_band_cost": 317,
+      "attained_shared_width_cost": 326
+    },
+    "cello__A__0.05_0.2__rule0": {
+      "rows_reclassified": 3575,
+      "columns": 40,
+      "independent_band_cost": 89,
+      "attained_shared_width_cost": 89
+    },
+    "cello__A__0.05_0.2__rule1": {
+      "rows_reclassified": 3575,
+      "columns": 40,
+      "independent_band_cost": 85,
+      "attained_shared_width_cost": 85
+    },
+    "cello__A__0.05_0.2__rule2": {
+      "rows_reclassified": 3575,
+      "columns": 40,
+      "independent_band_cost": 84,
+      "attained_shared_width_cost": 84
+    },
+    "cello__A__0.05_0.2__rule3": {
+      "rows_reclassified": 3575,
+      "columns": 40,
+      "independent_band_cost": 97,
+      "attained_shared_width_cost": 99
+    },
+    "cello__A__0.05_0.2__rule4": {
+      "rows_reclassified": 3575,
+      "columns": 40,
+      "independent_band_cost": 91,
+      "attained_shared_width_cost": 93
+    },
+    "cello__A__0.05_0.2__rule5": {
+      "rows_reclassified": 3575,
+      "columns": 40,
+      "independent_band_cost": 90,
+      "attained_shared_width_cost": 92
+    },
+    "cello__A__0.05_0.2__rule6": {
+      "rows_reclassified": 3575,
+      "columns": 40,
+      "independent_band_cost": 111,
+      "attained_shared_width_cost": 115
+    },
+    "cello__A__0.05_0.2__rule7": {
+      "rows_reclassified": 3575,
+      "columns": 40,
+      "independent_band_cost": 105,
+      "attained_shared_width_cost": 109
+    },
+    "cello__A__0.05_0.2__rule8": {
+      "rows_reclassified": 3575,
+      "columns": 40,
+      "independent_band_cost": 100,
+      "attained_shared_width_cost": 104
+    },
+    "cello__A__0.05_0.2__rule9": {
+      "rows_reclassified": 3575,
+      "columns": 40,
+      "independent_band_cost": 190,
+      "attained_shared_width_cost": 195
+    },
+    "cello__A__0.05_0.2__rule10": {
+      "rows_reclassified": 3575,
+      "columns": 40,
+      "independent_band_cost": 178,
+      "attained_shared_width_cost": 183
+    },
+    "cello__A__0.05_0.2__rule11": {
+      "rows_reclassified": 3575,
+      "columns": 40,
+      "independent_band_cost": 159,
+      "attained_shared_width_cost": 164
+    },
+    "cello__A__0.05_0.2__rule12": {
+      "rows_reclassified": 3575,
+      "columns": 40,
+      "independent_band_cost": 310,
+      "attained_shared_width_cost": 321
+    },
+    "cello__A__0.05_0.2__rule13": {
+      "rows_reclassified": 3575,
+      "columns": 40,
+      "independent_band_cost": 292,
+      "attained_shared_width_cost": 304
+    },
+    "cello__A__0.05_0.2__rule14": {
+      "rows_reclassified": 3575,
+      "columns": 40,
+      "independent_band_cost": 263,
+      "attained_shared_width_cost": 275
+    },
+    "cello__A__0.1_0.2__rule0": {
+      "rows_reclassified": 3376,
+      "columns": 40,
+      "independent_band_cost": 104,
+      "attained_shared_width_cost": 104
+    },
+    "cello__A__0.1_0.2__rule1": {
+      "rows_reclassified": 3376,
+      "columns": 40,
+      "independent_band_cost": 105,
+      "attained_shared_width_cost": 105
+    },
+    "cello__A__0.1_0.2__rule2": {
+      "rows_reclassified": 3376,
+      "columns": 40,
+      "independent_band_cost": 103,
+      "attained_shared_width_cost": 103
+    },
+    "cello__A__0.1_0.2__rule3": {
+      "rows_reclassified": 3376,
+      "columns": 40,
+      "independent_band_cost": 118,
+      "attained_shared_width_cost": 120
+    },
+    "cello__A__0.1_0.2__rule4": {
+      "rows_reclassified": 3376,
+      "columns": 40,
+      "independent_band_cost": 117,
+      "attained_shared_width_cost": 119
+    },
+    "cello__A__0.1_0.2__rule5": {
+      "rows_reclassified": 3376,
+      "columns": 40,
+      "independent_band_cost": 115,
+      "attained_shared_width_cost": 117
+    },
+    "cello__A__0.1_0.2__rule6": {
+      "rows_reclassified": 3376,
+      "columns": 40,
+      "independent_band_cost": 140,
+      "attained_shared_width_cost": 144
+    },
+    "cello__A__0.1_0.2__rule7": {
+      "rows_reclassified": 3376,
+      "columns": 40,
+      "independent_band_cost": 138,
+      "attained_shared_width_cost": 142
+    },
+    "cello__A__0.1_0.2__rule8": {
+      "rows_reclassified": 3376,
+      "columns": 40,
+      "independent_band_cost": 133,
+      "attained_shared_width_cost": 137
+    },
+    "cello__A__0.1_0.2__rule9": {
+      "rows_reclassified": 3376,
+      "columns": 40,
+      "independent_band_cost": 189,
+      "attained_shared_width_cost": 194
+    },
+    "cello__A__0.1_0.2__rule10": {
+      "rows_reclassified": 3376,
+      "columns": 40,
+      "independent_band_cost": 187,
+      "attained_shared_width_cost": 192
+    },
+    "cello__A__0.1_0.2__rule11": {
+      "rows_reclassified": 3376,
+      "columns": 40,
+      "independent_band_cost": 182,
+      "attained_shared_width_cost": 187
+    },
+    "cello__A__0.1_0.2__rule12": {
+      "rows_reclassified": 3376,
+      "columns": 40,
+      "independent_band_cost": 289,
+      "attained_shared_width_cost": 299
+    },
+    "cello__A__0.1_0.2__rule13": {
+      "rows_reclassified": 3376,
+      "columns": 40,
+      "independent_band_cost": 285,
+      "attained_shared_width_cost": 296
+    },
+    "cello__A__0.1_0.2__rule14": {
+      "rows_reclassified": 3376,
+      "columns": 40,
+      "independent_band_cost": 276,
+      "attained_shared_width_cost": 287
+    },
+    "cello__B__0.05_0.1__rule0": {
+      "rows_reclassified": 3976,
+      "columns": 40,
+      "independent_band_cost": 176,
+      "attained_shared_width_cost": 176
+    },
+    "cello__B__0.05_0.1__rule1": {
+      "rows_reclassified": 3976,
+      "columns": 40,
+      "independent_band_cost": 175,
+      "attained_shared_width_cost": 175
+    },
+    "cello__B__0.05_0.1__rule2": {
+      "rows_reclassified": 3976,
+      "columns": 40,
+      "independent_band_cost": 173,
+      "attained_shared_width_cost": 173
+    },
+    "cello__B__0.05_0.1__rule3": {
+      "rows_reclassified": 3976,
+      "columns": 40,
+      "independent_band_cost": 178,
+      "attained_shared_width_cost": 178
+    },
+    "cello__B__0.05_0.1__rule4": {
+      "rows_reclassified": 3976,
+      "columns": 40,
+      "independent_band_cost": 177,
+      "attained_shared_width_cost": 177
+    },
+    "cello__B__0.05_0.1__rule5": {
+      "rows_reclassified": 3976,
+      "columns": 40,
+      "independent_band_cost": 175,
+      "attained_shared_width_cost": 175
+    },
+    "cello__B__0.05_0.1__rule6": {
+      "rows_reclassified": 3976,
+      "columns": 40,
+      "independent_band_cost": 211,
+      "attained_shared_width_cost": 211
+    },
+    "cello__B__0.05_0.1__rule7": {
+      "rows_reclassified": 3976,
+      "columns": 40,
+      "independent_band_cost": 210,
+      "attained_shared_width_cost": 210
+    },
+    "cello__B__0.05_0.1__rule8": {
+      "rows_reclassified": 3976,
+      "columns": 40,
+      "independent_band_cost": 208,
+      "attained_shared_width_cost": 208
+    },
+    "cello__B__0.05_0.1__rule9": {
+      "rows_reclassified": 3976,
+      "columns": 40,
+      "independent_band_cost": 262,
+      "attained_shared_width_cost": 262
+    },
+    "cello__B__0.05_0.1__rule10": {
+      "rows_reclassified": 3976,
+      "columns": 40,
+      "independent_band_cost": 260,
+      "attained_shared_width_cost": 260
+    },
+    "cello__B__0.05_0.1__rule11": {
+      "rows_reclassified": 3976,
+      "columns": 40,
+      "independent_band_cost": 255,
+      "attained_shared_width_cost": 255
+    },
+    "cello__B__0.05_0.1__rule12": {
+      "rows_reclassified": 3976,
+      "columns": 40,
+      "independent_band_cost": 333,
+      "attained_shared_width_cost": 333
+    },
+    "cello__B__0.05_0.1__rule13": {
+      "rows_reclassified": 3976,
+      "columns": 40,
+      "independent_band_cost": 328,
+      "attained_shared_width_cost": 328
+    },
+    "cello__B__0.05_0.1__rule14": {
+      "rows_reclassified": 3976,
+      "columns": 40,
+      "independent_band_cost": 318,
+      "attained_shared_width_cost": 318
+    },
+    "cello__B__0.05_0.2__rule0": {
+      "rows_reclassified": 3986,
+      "columns": 40,
+      "independent_band_cost": 164,
+      "attained_shared_width_cost": 166
+    },
+    "cello__B__0.05_0.2__rule1": {
+      "rows_reclassified": 3986,
+      "columns": 40,
+      "independent_band_cost": 162,
+      "attained_shared_width_cost": 164
+    },
+    "cello__B__0.05_0.2__rule2": {
+      "rows_reclassified": 3986,
+      "columns": 40,
+      "independent_band_cost": 161,
+      "attained_shared_width_cost": 163
+    },
+    "cello__B__0.05_0.2__rule3": {
+      "rows_reclassified": 3986,
+      "columns": 40,
+      "independent_band_cost": 176,
+      "attained_shared_width_cost": 178
+    },
+    "cello__B__0.05_0.2__rule4": {
+      "rows_reclassified": 3986,
+      "columns": 40,
+      "independent_band_cost": 174,
+      "attained_shared_width_cost": 176
+    },
+    "cello__B__0.05_0.2__rule5": {
+      "rows_reclassified": 3986,
+      "columns": 40,
+      "independent_band_cost": 173,
+      "attained_shared_width_cost": 175
+    },
+    "cello__B__0.05_0.2__rule6": {
+      "rows_reclassified": 3986,
+      "columns": 40,
+      "independent_band_cost": 190,
+      "attained_shared_width_cost": 191
+    },
+    "cello__B__0.05_0.2__rule7": {
+      "rows_reclassified": 3986,
+      "columns": 40,
+      "independent_band_cost": 188,
+      "attained_shared_width_cost": 189
+    },
+    "cello__B__0.05_0.2__rule8": {
+      "rows_reclassified": 3986,
+      "columns": 40,
+      "independent_band_cost": 187,
+      "attained_shared_width_cost": 188
+    },
+    "cello__B__0.05_0.2__rule9": {
+      "rows_reclassified": 3986,
+      "columns": 40,
+      "independent_band_cost": 226,
+      "attained_shared_width_cost": 227
+    },
+    "cello__B__0.05_0.2__rule10": {
+      "rows_reclassified": 3986,
+      "columns": 40,
+      "independent_band_cost": 224,
+      "attained_shared_width_cost": 225
+    },
+    "cello__B__0.05_0.2__rule11": {
+      "rows_reclassified": 3986,
+      "columns": 40,
+      "independent_band_cost": 221,
+      "attained_shared_width_cost": 222
+    },
+    "cello__B__0.05_0.2__rule12": {
+      "rows_reclassified": 3986,
+      "columns": 40,
+      "independent_band_cost": 290,
+      "attained_shared_width_cost": 291
+    },
+    "cello__B__0.05_0.2__rule13": {
+      "rows_reclassified": 3986,
+      "columns": 40,
+      "independent_band_cost": 287,
+      "attained_shared_width_cost": 288
+    },
+    "cello__B__0.05_0.2__rule14": {
+      "rows_reclassified": 3986,
+      "columns": 40,
+      "independent_band_cost": 282,
+      "attained_shared_width_cost": 283
+    },
+    "cello__B__0.1_0.2__rule0": {
+      "rows_reclassified": 3990,
+      "columns": 40,
+      "independent_band_cost": 188,
+      "attained_shared_width_cost": 191
+    },
+    "cello__B__0.1_0.2__rule1": {
+      "rows_reclassified": 3990,
+      "columns": 40,
+      "independent_band_cost": 189,
+      "attained_shared_width_cost": 193
+    },
+    "cello__B__0.1_0.2__rule2": {
+      "rows_reclassified": 3990,
+      "columns": 40,
+      "independent_band_cost": 188,
+      "attained_shared_width_cost": 193
+    },
+    "cello__B__0.1_0.2__rule3": {
+      "rows_reclassified": 3990,
+      "columns": 40,
+      "independent_band_cost": 208,
+      "attained_shared_width_cost": 214
+    },
+    "cello__B__0.1_0.2__rule4": {
+      "rows_reclassified": 3990,
+      "columns": 40,
+      "independent_band_cost": 209,
+      "attained_shared_width_cost": 216
+    },
+    "cello__B__0.1_0.2__rule5": {
+      "rows_reclassified": 3990,
+      "columns": 40,
+      "independent_band_cost": 208,
+      "attained_shared_width_cost": 215
+    },
+    "cello__B__0.1_0.2__rule6": {
+      "rows_reclassified": 3990,
+      "columns": 40,
+      "independent_band_cost": 235,
+      "attained_shared_width_cost": 239
+    },
+    "cello__B__0.1_0.2__rule7": {
+      "rows_reclassified": 3990,
+      "columns": 40,
+      "independent_band_cost": 236,
+      "attained_shared_width_cost": 240
+    },
+    "cello__B__0.1_0.2__rule8": {
+      "rows_reclassified": 3990,
+      "columns": 40,
+      "independent_band_cost": 235,
+      "attained_shared_width_cost": 239
+    },
+    "cello__B__0.1_0.2__rule9": {
+      "rows_reclassified": 3990,
+      "columns": 40,
+      "independent_band_cost": 296,
+      "attained_shared_width_cost": 298
+    },
+    "cello__B__0.1_0.2__rule10": {
+      "rows_reclassified": 3990,
+      "columns": 40,
+      "independent_band_cost": 296,
+      "attained_shared_width_cost": 299
+    },
+    "cello__B__0.1_0.2__rule11": {
+      "rows_reclassified": 3990,
+      "columns": 40,
+      "independent_band_cost": 294,
+      "attained_shared_width_cost": 299
+    },
+    "cello__B__0.1_0.2__rule12": {
+      "rows_reclassified": 3990,
+      "columns": 40,
+      "independent_band_cost": 385,
+      "attained_shared_width_cost": 388
+    },
+    "cello__B__0.1_0.2__rule13": {
+      "rows_reclassified": 3990,
+      "columns": 40,
+      "independent_band_cost": 383,
+      "attained_shared_width_cost": 386
+    },
+    "cello__B__0.1_0.2__rule14": {
+      "rows_reclassified": 3990,
+      "columns": 40,
+      "independent_band_cost": 378,
+      "attained_shared_width_cost": 381
+    },
+    "cello__C__0.05_0.1__rule0": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 191,
+      "attained_shared_width_cost": 196
+    },
+    "cello__C__0.05_0.1__rule1": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 189,
+      "attained_shared_width_cost": 194
+    },
+    "cello__C__0.05_0.1__rule2": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 189,
+      "attained_shared_width_cost": 194
+    },
+    "cello__C__0.05_0.1__rule3": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 216,
+      "attained_shared_width_cost": 217
+    },
+    "cello__C__0.05_0.1__rule4": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 214,
+      "attained_shared_width_cost": 215
+    },
+    "cello__C__0.05_0.1__rule5": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 215,
+      "attained_shared_width_cost": 215
+    },
+    "cello__C__0.05_0.1__rule6": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 228,
+      "attained_shared_width_cost": 228
+    },
+    "cello__C__0.05_0.1__rule7": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 228,
+      "attained_shared_width_cost": 228
+    },
+    "cello__C__0.05_0.1__rule8": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 229,
+      "attained_shared_width_cost": 229
+    },
+    "cello__C__0.05_0.1__rule9": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 265,
+      "attained_shared_width_cost": 265
+    },
+    "cello__C__0.05_0.1__rule10": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 265,
+      "attained_shared_width_cost": 265
+    },
+    "cello__C__0.05_0.1__rule11": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 264,
+      "attained_shared_width_cost": 264
+    },
+    "cello__C__0.05_0.1__rule12": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 317,
+      "attained_shared_width_cost": 317
+    },
+    "cello__C__0.05_0.1__rule13": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 317,
+      "attained_shared_width_cost": 317
+    },
+    "cello__C__0.05_0.1__rule14": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 314,
+      "attained_shared_width_cost": 314
+    },
+    "cello__C__0.05_0.2__rule0": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 204,
+      "attained_shared_width_cost": 210
+    },
+    "cello__C__0.05_0.2__rule1": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 203,
+      "attained_shared_width_cost": 209
+    },
+    "cello__C__0.05_0.2__rule2": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 202,
+      "attained_shared_width_cost": 208
+    },
+    "cello__C__0.05_0.2__rule3": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 214,
+      "attained_shared_width_cost": 216
+    },
+    "cello__C__0.05_0.2__rule4": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 213,
+      "attained_shared_width_cost": 215
+    },
+    "cello__C__0.05_0.2__rule5": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 213,
+      "attained_shared_width_cost": 215
+    },
+    "cello__C__0.05_0.2__rule6": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 232,
+      "attained_shared_width_cost": 235
+    },
+    "cello__C__0.05_0.2__rule7": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 233,
+      "attained_shared_width_cost": 236
+    },
+    "cello__C__0.05_0.2__rule8": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 233,
+      "attained_shared_width_cost": 236
+    },
+    "cello__C__0.05_0.2__rule9": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 283,
+      "attained_shared_width_cost": 284
+    },
+    "cello__C__0.05_0.2__rule10": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 284,
+      "attained_shared_width_cost": 285
+    },
+    "cello__C__0.05_0.2__rule11": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 283,
+      "attained_shared_width_cost": 284
+    },
+    "cello__C__0.05_0.2__rule12": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 328,
+      "attained_shared_width_cost": 329
+    },
+    "cello__C__0.05_0.2__rule13": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 329,
+      "attained_shared_width_cost": 330
+    },
+    "cello__C__0.05_0.2__rule14": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 326,
+      "attained_shared_width_cost": 327
+    },
+    "cello__C__0.1_0.2__rule0": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 201,
+      "attained_shared_width_cost": 205
+    },
+    "cello__C__0.1_0.2__rule1": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 200,
+      "attained_shared_width_cost": 204
+    },
+    "cello__C__0.1_0.2__rule2": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 199,
+      "attained_shared_width_cost": 203
+    },
+    "cello__C__0.1_0.2__rule3": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 216,
+      "attained_shared_width_cost": 219
+    },
+    "cello__C__0.1_0.2__rule4": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 215,
+      "attained_shared_width_cost": 218
+    },
+    "cello__C__0.1_0.2__rule5": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 214,
+      "attained_shared_width_cost": 217
+    },
+    "cello__C__0.1_0.2__rule6": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 230,
+      "attained_shared_width_cost": 235
+    },
+    "cello__C__0.1_0.2__rule7": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 229,
+      "attained_shared_width_cost": 234
+    },
+    "cello__C__0.1_0.2__rule8": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 228,
+      "attained_shared_width_cost": 233
+    },
+    "cello__C__0.1_0.2__rule9": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 298,
+      "attained_shared_width_cost": 300
+    },
+    "cello__C__0.1_0.2__rule10": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 297,
+      "attained_shared_width_cost": 299
+    },
+    "cello__C__0.1_0.2__rule11": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 295,
+      "attained_shared_width_cost": 297
+    },
+    "cello__C__0.1_0.2__rule12": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 395,
+      "attained_shared_width_cost": 398
+    },
+    "cello__C__0.1_0.2__rule13": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 394,
+      "attained_shared_width_cost": 397
+    },
+    "cello__C__0.1_0.2__rule14": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 392,
+      "attained_shared_width_cost": 394
+    },
+    "cello__D__0.05_0.1__rule0": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 148,
+      "attained_shared_width_cost": 148
+    },
+    "cello__D__0.05_0.1__rule1": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 149,
+      "attained_shared_width_cost": 149
+    },
+    "cello__D__0.05_0.1__rule2": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 148,
+      "attained_shared_width_cost": 148
+    },
+    "cello__D__0.05_0.1__rule3": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 159,
+      "attained_shared_width_cost": 159
+    },
+    "cello__D__0.05_0.1__rule4": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 160,
+      "attained_shared_width_cost": 160
+    },
+    "cello__D__0.05_0.1__rule5": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 158,
+      "attained_shared_width_cost": 158
+    },
+    "cello__D__0.05_0.1__rule6": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 170,
+      "attained_shared_width_cost": 170
+    },
+    "cello__D__0.05_0.1__rule7": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 171,
+      "attained_shared_width_cost": 171
+    },
+    "cello__D__0.05_0.1__rule8": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 168,
+      "attained_shared_width_cost": 168
+    },
+    "cello__D__0.05_0.1__rule9": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 204,
+      "attained_shared_width_cost": 204
+    },
+    "cello__D__0.05_0.1__rule10": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 205,
+      "attained_shared_width_cost": 205
+    },
+    "cello__D__0.05_0.1__rule11": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 203,
+      "attained_shared_width_cost": 203
+    },
+    "cello__D__0.05_0.1__rule12": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 256,
+      "attained_shared_width_cost": 256
+    },
+    "cello__D__0.05_0.1__rule13": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 257,
+      "attained_shared_width_cost": 257
+    },
+    "cello__D__0.05_0.1__rule14": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 255,
+      "attained_shared_width_cost": 255
+    },
+    "cello__D__0.05_0.2__rule0": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 150,
+      "attained_shared_width_cost": 151
+    },
+    "cello__D__0.05_0.2__rule1": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 151,
+      "attained_shared_width_cost": 152
+    },
+    "cello__D__0.05_0.2__rule2": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 150,
+      "attained_shared_width_cost": 151
+    },
+    "cello__D__0.05_0.2__rule3": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 155,
+      "attained_shared_width_cost": 156
+    },
+    "cello__D__0.05_0.2__rule4": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 156,
+      "attained_shared_width_cost": 157
+    },
+    "cello__D__0.05_0.2__rule5": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 154,
+      "attained_shared_width_cost": 155
+    },
+    "cello__D__0.05_0.2__rule6": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 160,
+      "attained_shared_width_cost": 161
+    },
+    "cello__D__0.05_0.2__rule7": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 161,
+      "attained_shared_width_cost": 162
+    },
+    "cello__D__0.05_0.2__rule8": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 159,
+      "attained_shared_width_cost": 160
+    },
+    "cello__D__0.05_0.2__rule9": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 177,
+      "attained_shared_width_cost": 177
+    },
+    "cello__D__0.05_0.2__rule10": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 178,
+      "attained_shared_width_cost": 178
+    },
+    "cello__D__0.05_0.2__rule11": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 177,
+      "attained_shared_width_cost": 177
+    },
+    "cello__D__0.05_0.2__rule12": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 225,
+      "attained_shared_width_cost": 228
+    },
+    "cello__D__0.05_0.2__rule13": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 226,
+      "attained_shared_width_cost": 229
+    },
+    "cello__D__0.05_0.2__rule14": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 225,
+      "attained_shared_width_cost": 228
+    },
+    "cello__D__0.1_0.2__rule0": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 188,
+      "attained_shared_width_cost": 191
+    },
+    "cello__D__0.1_0.2__rule1": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 188,
+      "attained_shared_width_cost": 191
+    },
+    "cello__D__0.1_0.2__rule2": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 188,
+      "attained_shared_width_cost": 191
+    },
+    "cello__D__0.1_0.2__rule3": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 204,
+      "attained_shared_width_cost": 205
+    },
+    "cello__D__0.1_0.2__rule4": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 204,
+      "attained_shared_width_cost": 205
+    },
+    "cello__D__0.1_0.2__rule5": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 204,
+      "attained_shared_width_cost": 205
+    },
+    "cello__D__0.1_0.2__rule6": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 216,
+      "attained_shared_width_cost": 217
+    },
+    "cello__D__0.1_0.2__rule7": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 216,
+      "attained_shared_width_cost": 217
+    },
+    "cello__D__0.1_0.2__rule8": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 215,
+      "attained_shared_width_cost": 216
+    },
+    "cello__D__0.1_0.2__rule9": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 243,
+      "attained_shared_width_cost": 243
+    },
+    "cello__D__0.1_0.2__rule10": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 243,
+      "attained_shared_width_cost": 243
+    },
+    "cello__D__0.1_0.2__rule11": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 242,
+      "attained_shared_width_cost": 242
+    },
+    "cello__D__0.1_0.2__rule12": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 315,
+      "attained_shared_width_cost": 319
+    },
+    "cello__D__0.1_0.2__rule13": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 315,
+      "attained_shared_width_cost": 319
+    },
+    "cello__D__0.1_0.2__rule14": {
+      "rows_reclassified": 4000,
+      "columns": 40,
+      "independent_band_cost": 314,
+      "attained_shared_width_cost": 318
+    },
+    "published__D4__0.05_0.1__rule0": {
+      "rows_reclassified": 528,
+      "columns": 11,
+      "independent_band_cost": 1,
+      "attained_shared_width_cost": 2
+    },
+    "published__D4__0.05_0.15__rule0": {
+      "rows_reclassified": 528,
+      "columns": 11,
+      "independent_band_cost": 0,
+      "attained_shared_width_cost": 3
+    },
+    "published__D4__0.05_0.2__rule0": {
+      "rows_reclassified": 513,
+      "columns": 11,
+      "independent_band_cost": 0,
+      "attained_shared_width_cost": 2
+    },
+    "published__D4__0.1_0.15__rule0": {
+      "rows_reclassified": 528,
+      "columns": 11,
+      "independent_band_cost": 1,
+      "attained_shared_width_cost": 4
+    },
+    "published__D4__0.1_0.2__rule0": {
+      "rows_reclassified": 513,
+      "columns": 11,
+      "independent_band_cost": 1,
+      "attained_shared_width_cost": 2
+    },
+    "published__D4__0.15_0.2__rule0": {
+      "rows_reclassified": 513,
+      "columns": 11,
+      "independent_band_cost": 0,
+      "attained_shared_width_cost": 0
+    }
+  },
+  "bundle_sha256": "1ba65ba0409ded1189fc0d5fb2c25314234d4a924f3686c72fdebc0498110cde"
+}

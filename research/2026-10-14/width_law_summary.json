@@ -1,0 +1,376 @@
+{
+  "pairs": [
+    {
+      "domain": "cello",
+      "source": "A",
+      "speeds": [
+        0.05,
+        0.1
+      ],
+      "source_rows": 3699,
+      "nominal_band_errors": 147,
+      "nominal_extra_width_errors": 7,
+      "nominal_extra_constant_width_errors": 9,
+      "rule_count": 15,
+      "rules_with_positive_gap": 15,
+      "extra_width_range": [
+        3,
+        10
+      ]
+    },
+    {
+      "domain": "cello",
+      "source": "A",
+      "speeds": [
+        0.05,
+        0.2
+      ],
+      "source_rows": 3575,
+      "nominal_band_errors": 105,
+      "nominal_extra_width_errors": 4,
+      "nominal_extra_constant_width_errors": 4,
+      "rule_count": 15,
+      "rules_with_positive_gap": 12,
+      "extra_width_range": [
+        0,
+        12
+      ]
+    },
+    {
+      "domain": "cello",
+      "source": "A",
+      "speeds": [
+        0.1,
+        0.2
+      ],
+      "source_rows": 3376,
+      "nominal_band_errors": 138,
+      "nominal_extra_width_errors": 4,
+      "nominal_extra_constant_width_errors": 4,
+      "rule_count": 15,
+      "rules_with_positive_gap": 12,
+      "extra_width_range": [
+        0,
+        11
+      ]
+    },
+    {
+      "domain": "cello",
+      "source": "B",
+      "speeds": [
+        0.05,
+        0.1
+      ],
+      "source_rows": 3976,
+      "nominal_band_errors": 210,
+      "nominal_extra_width_errors": 0,
+      "nominal_extra_constant_width_errors": 12,
+      "rule_count": 15,
+      "rules_with_positive_gap": 0,
+      "extra_width_range": [
+        0,
+        0
+      ]
+    },
+    {
+      "domain": "cello",
+      "source": "B",
+      "speeds": [
+        0.05,
+        0.2
+      ],
+      "source_rows": 3986,
+      "nominal_band_errors": 188,
+      "nominal_extra_width_errors": 1,
+      "nominal_extra_constant_width_errors": 9,
+      "rule_count": 15,
+      "rules_with_positive_gap": 15,
+      "extra_width_range": [
+        1,
+        2
+      ]
+    },
+    {
+      "domain": "cello",
+      "source": "B",
+      "speeds": [
+        0.1,
+        0.2
+      ],
+      "source_rows": 3990,
+      "nominal_band_errors": 236,
+      "nominal_extra_width_errors": 4,
+      "nominal_extra_constant_width_errors": 10,
+      "rule_count": 15,
+      "rules_with_positive_gap": 15,
+      "extra_width_range": [
+        2,
+        7
+      ]
+    },
+    {
+      "domain": "cello",
+      "source": "C",
+      "speeds": [
+        0.05,
+        0.1
+      ],
+      "source_rows": 4000,
+      "nominal_band_errors": 228,
+      "nominal_extra_width_errors": 0,
+      "nominal_extra_constant_width_errors": 1,
+      "rule_count": 15,
+      "rules_with_positive_gap": 5,
+      "extra_width_range": [
+        0,
+        5
+      ]
+    },
+    {
+      "domain": "cello",
+      "source": "C",
+      "speeds": [
+        0.05,
+        0.2
+      ],
+      "source_rows": 4000,
+      "nominal_band_errors": 233,
+      "nominal_extra_width_errors": 3,
+      "nominal_extra_constant_width_errors": 3,
+      "rule_count": 15,
+      "rules_with_positive_gap": 15,
+      "extra_width_range": [
+        1,
+        6
+      ]
+    },
+    {
+      "domain": "cello",
+      "source": "C",
+      "speeds": [
+        0.1,
+        0.2
+      ],
+      "source_rows": 4000,
+      "nominal_band_errors": 229,
+      "nominal_extra_width_errors": 5,
+      "nominal_extra_constant_width_errors": 6,
+      "rule_count": 15,
+      "rules_with_positive_gap": 15,
+      "extra_width_range": [
+        2,
+        5
+      ]
+    },
+    {
+      "domain": "cello",
+      "source": "D",
+      "speeds": [
+        0.05,
+        0.1
+      ],
+      "source_rows": 4000,
+      "nominal_band_errors": 171,
+      "nominal_extra_width_errors": 0,
+      "nominal_extra_constant_width_errors": 0,
+      "rule_count": 15,
+      "rules_with_positive_gap": 0,
+      "extra_width_range": [
+        0,
+        0
+      ]
+    },
+    {
+      "domain": "cello",
+      "source": "D",
+      "speeds": [
+        0.05,
+        0.2
+      ],
+      "source_rows": 4000,
+      "nominal_band_errors": 161,
+      "nominal_extra_width_errors": 1,
+      "nominal_extra_constant_width_errors": 2,
+      "rule_count": 15,
+      "rules_with_positive_gap": 12,
+      "extra_width_range": [
+        0,
+        3
+      ]
+    },
+    {
+      "domain": "cello",
+      "source": "D",
+      "speeds": [
+        0.1,
+        0.2
+      ],
+      "source_rows": 4000,
+      "nominal_band_errors": 216,
+      "nominal_extra_width_errors": 1,
+      "nominal_extra_constant_width_errors": 8,
+      "rule_count": 15,
+      "rules_with_positive_gap": 12,
+      "extra_width_range": [
+        0,
+        4
+      ]
+    },
+    {
+      "domain": "published",
+      "source": "D4",
+      "speeds": [
+        0.05,
+        0.1
+      ],
+      "source_rows": 528,
+      "nominal_band_errors": 1,
+      "nominal_extra_width_errors": 1,
+      "nominal_extra_constant_width_errors": 3,
+      "rule_count": 1,
+      "rules_with_positive_gap": 1,
+      "extra_width_range": [
+        1,
+        1
+      ]
+    },
+    {
+      "domain": "published",
+      "source": "D4",
+      "speeds": [
+        0.05,
+        0.15
+      ],
+      "source_rows": 528,
+      "nominal_band_errors": 0,
+      "nominal_extra_width_errors": 3,
+      "nominal_extra_constant_width_errors": 17,
+      "rule_count": 1,
+      "rules_with_positive_gap": 1,
+      "extra_width_range": [
+        3,
+        3
+      ]
+    },
+    {
+      "domain": "published",
+      "source": "D4",
+      "speeds": [
+        0.05,
+        0.2
+      ],
+      "source_rows": 513,
+      "nominal_band_errors": 0,
+      "nominal_extra_width_errors": 2,
+      "nominal_extra_constant_width_errors": 23,
+      "rule_count": 1,
+      "rules_with_positive_gap": 1,
+      "extra_width_range": [
+        2,
+        2
+      ]
+    },
+    {
+      "domain": "published",
+      "source": "D4",
+      "speeds": [
+        0.1,
+        0.15
+      ],
+      "source_rows": 528,
+      "nominal_band_errors": 1,
+      "nominal_extra_width_errors": 3,
+      "nominal_extra_constant_width_errors": 12,
+      "rule_count": 1,
+      "rules_with_positive_gap": 1,
+      "extra_width_range": [
+        3,
+        3
+      ]
+    },
+    {
+      "domain": "published",
+      "source": "D4",
+      "speeds": [
+        0.1,
+        0.2
+      ],
+      "source_rows": 513,
+      "nominal_band_errors": 1,
+      "nominal_extra_width_errors": 1,
+      "nominal_extra_constant_width_errors": 19,
+      "rule_count": 1,
+      "rules_with_positive_gap": 1,
+      "extra_width_range": [
+        1,
+        1
+      ]
+    },
+    {
+      "domain": "published",
+      "source": "D4",
+      "speeds": [
+        0.15,
+        0.2
+      ],
+      "source_rows": 513,
+      "nominal_band_errors": 0,
+      "nominal_extra_width_errors": 0,
+      "nominal_extra_constant_width_errors": 3,
+      "rule_count": 1,
+      "rules_with_positive_gap": 0,
+      "extra_width_range": [
+        0,
+        0
+      ]
+    }
+  ],
+  "domains": {
+    "cello": {
+      "tasks": 180,
+      "positive_gap_tasks": 128,
+      "nominal_tasks": 12,
+      "nominal_positive_gap_tasks": 9,
+      "max_extra_errors": 12,
+      "max_extra_error_fraction": 0.0033566433566433566,
+      "nominal_max_extra_error_fraction": 0.001892403352257367,
+      "nominal_independent_band_fraction_range": [
+        0.02937062937062937,
+        0.05914786967418546
+      ]
+    },
+    "published": {
+      "tasks": 6,
+      "positive_gap_tasks": 5,
+      "nominal_tasks": 6,
+      "nominal_positive_gap_tasks": 5,
+      "max_extra_errors": 3,
+      "max_extra_error_fraction": 0.005681818181818182,
+      "nominal_max_extra_error_fraction": 0.005681818181818182,
+      "nominal_independent_band_fraction_range": [
+        0.0,
+        0.001949317738791423
+      ]
+    }
+  },
+  "protocol": {
+    "created_utc": "2026-10-14T17:40:06.238560+00:00",
+    "status": "Retrospective source-only diagnostic; no A2, no target outcomes, no predictor fit",
+    "law": "W2=exp(k*log(v2/v1))*W1; one k shared across nominal beta columns; centers completely free",
+    "scope": "Necessary width-only relaxation of affine flow on an exactly nominal control grid; G>0 rules out zero-extra-repair nominal realization, G=0 does not validate full flow or physical truth. Not a certified loss bound for the cello predictor with varying measured controls.",
+    "observer": "All fifteen prespecified coherent cello observer rules, each separately; published D author classifications. No best-observer selection.",
+    "loss": "Unweighted row disagreement counts; paired sources only; no deletion or alteration of labels",
+    "empty_observed_prediction": "Nonempty positive-width band outside sampled force range; arbitrary width permitted because centers are free",
+    "endpoint_convention": "Closed positive band; nonempty observed interval width lower inclusive (except W>0), upper strict. Pair k bounds strict.",
+    "numerics": "Finite exhaustive cost-envelope optimization in floating log coordinates; every chosen witness reclassifies all source rows. Not interval arithmetic.",
+    "null_values": "A null lower endpoint is negative infinity; null upper endpoint is positive infinity",
+    "control_limit": "Measured beta/speed variations within nominal columns are not modeled",
+    "code_sha256": {
+      "width_law_certificate.py": "c6eb4c4cabac40cbbbf322a8b3d8c69bc42dfed45e2ec947ffc3a44a5b2c0e3a",
+      "affine_transport.py": "7bff0713172168eebb884c479e568079629aae3124693b1683de35ca763366ce",
+      "benchmark_data.py": "b3dd7db79ef581a16244a32dfc34ee88244323cf74f43bab7c1010d4e006eb8d",
+      "set_envelope.py": "3f951a44d29cdbf2caf02fb433e8f234d74e89dbaa012eee396abfe8be1a8b48"
+    }
+  },
+  "runtime_seconds": 78.96852737502195
+}

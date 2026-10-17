@@ -1,0 +1,35 @@
+{
+  "released_utc": "2026-10-14T10:48:47.282159+00:00",
+  "scope": "Derived numerical replay of first completed fixed A2 evaluations; not a new untouched test.",
+  "counts": {
+    "raw": 6000,
+    "eligible": 5892,
+    "off_plateau": 0,
+    "nonpositive_force": 108
+  },
+  "ids_sha256": "6952f42bf790b4d84dbef279d034b2c12698c59533a9a9958ba29a2f5cd35e9f",
+  "regimes_decompressed_sha256": "4a720305e5499cae9f1f52c131ef0e35e43ba6ca22e19e240dd6d4e2d6593bd6",
+  "original_feature_summary_sha256": "b7fd8afacbebd0a20805125b41c3f908a750b487f4c7953fef5ff575e9f916f9",
+  "summary_edit": "Repository absolute prefix removed from source_trials and four plots paths; scientific values unchanged.",
+  "historical_archive_receipt_is_not_local_raw_reverification": true,
+  "license": "CC-BY-4.0",
+  "attribution": "Alessio Lampis, A collection of bowed responses of cello strings (part 2), record17782542; project-derived features and labels.",
+  "source_url": "https://doi.org/10.5281/zenodo.17782542",
+  "files": {
+    "feature_summary.json": "1d3decacd318cd9797faf266afd2b22b7734bf412a0dd5625806ada1797054b8",
+    "original_manifest.json": "1ea15b6abeeda91cf75cd26daea623844868206313e077a45ccfdafc0150322a",
+    "original_results.json": "e0cd4a56c0958f70fa45a3f84b675c957ffab36590be6f8ea432166b5e113bc3",
+    "preprocessing_provenance.json": "cf808e00ab29ccee1cde56514f37dbe6b42c2fcd27f78c6f22ee6d0762908f3d",
+    "regimes.csv.gz": "48f6cec39c78fc4d37e7d4c1e553cc79275049c919d1fa8a7a43242a08a7a94d",
+    "transport_manifest.json": "7521026962bc959b64974e5b9c50071ae3fe603dc8c3bae2866f4c235fef4049",
+    "transport_results.json": "921f81a28c8f8065fd25884145009cb5dd08173b96a1711f52ee29ce8a100633"
+  },
+  "original_file_hashes": {
+    "original_manifest.json": "1ea15b6abeeda91cf75cd26daea623844868206313e077a45ccfdafc0150322a",
+    "original_results.json": "e0cd4a56c0958f70fa45a3f84b675c957ffab36590be6f8ea432166b5e113bc3",
+    "transport_manifest.json": "7521026962bc959b64974e5b9c50071ae3fe603dc8c3bae2866f4c235fef4049",
+    "transport_results.json": "921f81a28c8f8065fd25884145009cb5dd08173b96a1711f52ee29ce8a100633",
+    "preprocessing_provenance.json": "cf808e00ab29ccee1cde56514f37dbe6b42c2fcd27f78c6f22ee6d0762908f3d"
+  },
+  "root_outcome_inspection_recorded_utc": "2026-10-14T10:46:48+00:00"
+}

@@ -1,0 +1,56 @@
+{
+  "started_utc": "2026-10-15T12:35:24.376725+00:00",
+  "scope": "Public files in a new filesystem tree; installed interpreter reused, not a fresh dependency installation. No original reports, raw files or model checkpoints copied.",
+  "copied_files": 219,
+  "steps": [
+    {
+      "command": [
+        "python",
+        "scripts/restore_frozen_models.py"
+      ],
+      "seconds": 1.7534700830001384,
+      "exit_code": 0,
+      "stdout": "Verified exact reconstruction: rawlog_logistic\nVerified exact reconstruction: rawlog_svc\nVerified exact reconstruction: rawlog_extra_trees\nVerified exact reconstruction: covariant_logistic\nVerified exact reconstruction: covariant_svc\nVerified exact reconstruction: covariant_extra_trees\nVerified exact reconstruction: rawlog_hgb\nVerified exact reconstruction: covariant_nominal_bce\nVerified exact reconstruction: covariant_family_mean_bce\nVerified exact reconstruction: covariant_consensus_bce\nVerified exact reconstruction: covariant_nominal_iou\nVerified exact reconstruction: covariant_box_robust\nVerified exact reconstruction: covariant_family_robust\nVerified exact reconstruction: rawlog_family_robust\n{\n  \"status\": \"PASS\",\n  \"verified_models\": 14,\n  \"frozen_manifest_unchanged\": true,\n  \"no_target_access\": true\n}\n",
+      "stderr": "<reused-python-environment>/lib/python3.11/site-packages/sklearn/svm/_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`\n  warnings.warn(\n<reused-python-environment>/lib/python3.11/site-packages/sklearn/svm/_base.py:236: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`\n  warnings.warn(\n"
+    },
+    {
+      "command": [
+        "python",
+        "research/2026-10-14/lockbox_release.py",
+        "replay"
+      ],
+      "seconds": 1.606476749991998,
+      "exit_code": 0,
+      "stdout": "{\n  \"models_replayed\": 26,\n  \"numeric_values\": 2886,\n  \"maximum_absolute_error\": 0.0,\n  \"counts\": {\n    \"raw\": 6000,\n    \"eligible\": 5892,\n    \"off_plateau\": 0,\n    \"nonpositive_force\": 108\n  },\n  \"no_fit_or_adaptation\": true,\n  \"raw_waveform_extraction_repeated\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "research/2026-10-13/conditional_transport_assessment.py"
+      ],
+      "seconds": 18.50734395813197,
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS independent numerical and source-isolation audit; predictive improvement gate FAILED\",\n  \"tasks\": 18,\n  \"source_cv_fits\": 810,\n  \"final_source_fits\": 18,\n  \"optimizer_starts\": {\n    \"successful\": 2484\n  },\n  \"independently_compared_numeric_values\": 5577870,\n  \"maximum_numeric_error\": 2.9976021664879227e-15,\n  \"source_target_or_fold_id_checks\": 1692,\n  \"gradient_checks\": 48,\n  \"maximum_gradient_absolute_error\": 3.885185506646849e-10,\n  \"broad_improvement_gate\": false,\n  \"A2_accessed\": false,\n  \"scope\": \"Post-hoc sample1 and published D/E only. E is conditional diagnostic, excluded from headline.\",\n  \"bundle_uncompressed_sha256\": \"ca939f3bb41b989c17d3e246b1e7aed7c49d859df9131314abb8f5cb7e062d2e\",\n  \"publication_transformations\": [\n    {\n      \"file\": \"input_manifests.json\",\n      \"field\": \"published.source\",\n      \"change\": \"Repository-relative source path; JSON indentation normalized. All other files retain original bytes.\",\n      \"original_file_sha256\": \"8d76ffec4d67a56fa021f2a6440268a29e4fe9322f9919ae0fa18b899586bc4c\"\n    }\n  ]\n}\n",
+      "stderr": "Matplotlib is building the font cache; this may take a moment.\n"
+    },
+    {
+      "command": [
+        "python",
+        "research/2026-10-14/width_law_report.py"
+      ],
+      "seconds": 3.7167100419756025,
+      "exit_code": 0,
+      "stdout": "{\n  \"scope\": \"Independent reclassification and dynamic-programming band baseline; not an independent global-optimality proof or physical validation\",\n  \"tasks_verified\": 186,\n  \"rows_reclassified_with_reuse\": 702153,\n  \"columns_verified_with_reuse\": 7266,\n  \"data_controls\": {\n    \"nominal_cello_columns\": 480,\n    \"quantiles\": [\n      0,\n      0.5,\n      0.95,\n      1\n    ],\n    \"relative_beta_range_quantiles\": [\n      0.00014197779398619106,\n      0.0006707047502723546,\n      0.00186340695152513,\n      0.002833029456746535\n    ],\n    \"relative_speed_range_quantiles\": [\n      0.0,\n      1.3877787807814457e-16,\n      1.3877787807814457e-16,\n      0.0002141524904601677\n    ]\n  },\n  \"bundle_sha256\": \"1ba65ba0409ded1189fc0d5fb2c25314234d4a924f3686c72fdebc0498110cde\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "all_passed": true,
+  "no_raw_archive_created": true,
+  "published_audits_identical": {
+    "research/2026-10-13/conditional_transport_independent_audit.json": true,
+    "research/2026-10-14/width_law_witness_audit.json": true
+  },
+  "finished_utc": "2026-10-15T12:35:50.023458+00:00",
+  "publication_note": "Only the local interpreter prefix in captured warning paths is replaced by <reused-python-environment>; warning text and numerical outputs retained."
+}

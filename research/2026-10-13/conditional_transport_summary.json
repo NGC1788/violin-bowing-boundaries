@@ -1,0 +1,418 @@
+{
+  "status": "POST-HOC development on already inspected corpora; not confirmatory",
+  "aggregate": {
+    "cello": {
+      "tasks": 12,
+      "methods": {
+        "conditional_flow": {
+          "combined": {
+            "macro_panels": {
+              "family_min_iou": 0.6889914992727094,
+              "nominal_iou": 0.7426879757053358
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.7175196203768519,
+              "nominal_iou": 0.7586784081127239
+            }
+          },
+          "source_heldout_speed": {
+            "macro_panels": {
+              "family_min_iou": 0.6950591331548895,
+              "nominal_iou": 0.7460966017516978
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.6950591331548895,
+              "nominal_iou": 0.7460966017516978
+            }
+          },
+          "other_specimens": {
+            "macro_panels": {
+              "family_min_iou": 0.6883173177302448,
+              "nominal_iou": 0.7423092394779623
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.714977998355936,
+              "nominal_iou": 0.7579092233638788
+            }
+          }
+        },
+        "full_flow": {
+          "combined": {
+            "macro_panels": {
+              "family_min_iou": 0.6947942448043762,
+              "nominal_iou": 0.7478845589956418
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.7211949916540847,
+              "nominal_iou": 0.7625102675600086
+            }
+          },
+          "source_heldout_speed": {
+            "macro_panels": {
+              "family_min_iou": 0.71356475362717,
+              "nominal_iou": 0.7604016113808857
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.71356475362717,
+              "nominal_iou": 0.7604016113808857
+            }
+          },
+          "other_specimens": {
+            "macro_panels": {
+              "family_min_iou": 0.6927086327129547,
+              "nominal_iou": 0.7464937753972815
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.7175214798692887,
+              "nominal_iou": 0.7607669879546832
+            }
+          }
+        },
+        "learned_alpha": {
+          "combined": {
+            "macro_panels": {
+              "family_min_iou": 0.6946089787545741,
+              "nominal_iou": 0.7493433384502719
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.7170815513519487,
+              "nominal_iou": 0.7617575098914227
+            }
+          },
+          "source_heldout_speed": {
+            "macro_panels": {
+              "family_min_iou": 0.7209034236086375,
+              "nominal_iou": 0.7724692239122138
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.7209034236086375,
+              "nominal_iou": 0.7724692239122138
+            }
+          },
+          "other_specimens": {
+            "macro_panels": {
+              "family_min_iou": 0.6916873737707893,
+              "nominal_iou": 0.7467737956211673
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.713947150592159,
+              "nominal_iou": 0.7593913149144722
+            }
+          }
+        },
+        "raw_3d": {
+          "combined": {
+            "macro_panels": {
+              "family_min_iou": 0.6940371149749707,
+              "nominal_iou": 0.747927920579137
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.7233132456460075,
+              "nominal_iou": 0.761946813289621
+            }
+          },
+          "source_heldout_speed": {
+            "macro_panels": {
+              "family_min_iou": 0.6897136158225797,
+              "nominal_iou": 0.7391239922826083
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.6897136158225797,
+              "nominal_iou": 0.7391239922826083
+            }
+          },
+          "other_specimens": {
+            "macro_panels": {
+              "family_min_iou": 0.6945175037696809,
+              "nominal_iou": 0.7489061348343068
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.7234763817865911,
+              "nominal_iou": 0.7630011255860683
+            }
+          }
+        }
+      },
+      "paired": {
+        "full_flow": {
+          "mean": -0.005802745531666996,
+          "wins": 5,
+          "losses": 7
+        },
+        "learned_alpha": {
+          "mean": -0.005617479481864807,
+          "wins": 6,
+          "losses": 6
+        },
+        "raw_3d": {
+          "mean": -0.005045615702261447,
+          "wins": 5,
+          "losses": 7
+        }
+      }
+    },
+    "published": {
+      "tasks": 6,
+      "methods": {
+        "conditional_flow": {
+          "combined": {
+            "macro_panels": {
+              "family_min_iou": 0.8622807821218917,
+              "nominal_iou": 0.8622807821218917
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.8656461116425777,
+              "nominal_iou": 0.8656461116425777
+            }
+          },
+          "source_heldout_speed": {
+            "macro_panels": {
+              "family_min_iou": 0.8622807821218917,
+              "nominal_iou": 0.8622807821218917
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.8656461116425777,
+              "nominal_iou": 0.8656461116425777
+            }
+          },
+          "other_specimens": {
+            "macro_panels": {
+              "family_min_iou": 0.43151876574548304,
+              "nominal_iou": 0.43151876574548304
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.4334262547280028,
+              "nominal_iou": 0.4334262547280028
+            }
+          }
+        },
+        "full_flow": {
+          "combined": {
+            "macro_panels": {
+              "family_min_iou": 0.8612645058677045,
+              "nominal_iou": 0.8612645058677045
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.8658163192664899,
+              "nominal_iou": 0.8658163192664899
+            }
+          },
+          "source_heldout_speed": {
+            "macro_panels": {
+              "family_min_iou": 0.8612645058677045,
+              "nominal_iou": 0.8612645058677045
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.8658163192664899,
+              "nominal_iou": 0.8658163192664899
+            }
+          },
+          "other_specimens": {
+            "macro_panels": {
+              "family_min_iou": 0.4300826448609844,
+              "nominal_iou": 0.4300826448609844
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.4324892305484094,
+              "nominal_iou": 0.4324892305484094
+            }
+          }
+        },
+        "learned_alpha": {
+          "combined": {
+            "macro_panels": {
+              "family_min_iou": 0.842084724507204,
+              "nominal_iou": 0.842084724507204
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.8431433935078942,
+              "nominal_iou": 0.8431433935078942
+            }
+          },
+          "source_heldout_speed": {
+            "macro_panels": {
+              "family_min_iou": 0.842084724507204,
+              "nominal_iou": 0.842084724507204
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.8431433935078942,
+              "nominal_iou": 0.8431433935078942
+            }
+          },
+          "other_specimens": {
+            "macro_panels": {
+              "family_min_iou": 0.4309636886963288,
+              "nominal_iou": 0.4309636886963288
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.4336616720502378,
+              "nominal_iou": 0.4336616720502378
+            }
+          }
+        },
+        "raw_3d": {
+          "combined": {
+            "macro_panels": {
+              "family_min_iou": 0.813397704247795,
+              "nominal_iou": 0.813397704247795
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.8145397228164852,
+              "nominal_iou": 0.8145397228164852
+            }
+          },
+          "source_heldout_speed": {
+            "macro_panels": {
+              "family_min_iou": 0.813397704247795,
+              "nominal_iou": 0.813397704247795
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.8145397228164852,
+              "nominal_iou": 0.8145397228164852
+            }
+          },
+          "other_specimens": {
+            "macro_panels": {
+              "family_min_iou": 0.42640079843042855,
+              "nominal_iou": 0.42640079843042855
+            },
+            "global_same_rule": {
+              "family_min_iou": 0.42751374728594344,
+              "nominal_iou": 0.42751374728594344
+            }
+          }
+        }
+      },
+      "paired": {
+        "full_flow": {
+          "mean": 0.0010162762541870614,
+          "wins": 2,
+          "losses": 4
+        },
+        "learned_alpha": {
+          "mean": 0.02019605761468764,
+          "wins": 4,
+          "losses": 2
+        },
+        "raw_3d": {
+          "mean": 0.04888307787409666,
+          "wins": 4,
+          "losses": 2
+        }
+      }
+    }
+  },
+  "all_tasks": {
+    "cello__A__0.05_0.1": {
+      "conditional_flow": 0.6893974578447455,
+      "full_flow": 0.6890223069634732,
+      "learned_alpha": 0.6880595525817225,
+      "raw_3d": 0.6949852112773557
+    },
+    "cello__A__0.05_0.2": {
+      "conditional_flow": 0.6842968259530191,
+      "full_flow": 0.7032187221247845,
+      "learned_alpha": 0.6887320110714988,
+      "raw_3d": 0.5951228117670716
+    },
+    "cello__A__0.1_0.2": {
+      "conditional_flow": 0.650177607185074,
+      "full_flow": 0.648143719785,
+      "learned_alpha": 0.682133674259724,
+      "raw_3d": 0.6994339037182156
+    },
+    "cello__B__0.05_0.1": {
+      "conditional_flow": 0.6901037182511975,
+      "full_flow": 0.7133241224379427,
+      "learned_alpha": 0.7001375126076179,
+      "raw_3d": 0.693213903990675
+    },
+    "cello__B__0.05_0.2": {
+      "conditional_flow": 0.7136955976245906,
+      "full_flow": 0.7120103590554219,
+      "learned_alpha": 0.6985910597576864,
+      "raw_3d": 0.7090600267300855
+    },
+    "cello__B__0.1_0.2": {
+      "conditional_flow": 0.6458865136382435,
+      "full_flow": 0.6530292779495905,
+      "learned_alpha": 0.6915999529975952,
+      "raw_3d": 0.7172234670727685
+    },
+    "cello__C__0.05_0.1": {
+      "conditional_flow": 0.6671820586487817,
+      "full_flow": 0.6900943917772456,
+      "learned_alpha": 0.6968650585963962,
+      "raw_3d": 0.683020320867998
+    },
+    "cello__C__0.05_0.2": {
+      "conditional_flow": 0.7087161302960772,
+      "full_flow": 0.7060081476719355,
+      "learned_alpha": 0.7031100461228571,
+      "raw_3d": 0.7233123848392233
+    },
+    "cello__C__0.1_0.2": {
+      "conditional_flow": 0.6965759352367631,
+      "full_flow": 0.6970814944681835,
+      "learned_alpha": 0.7128675392066236,
+      "raw_3d": 0.7166082653063628
+    },
+    "cello__D__0.05_0.1": {
+      "conditional_flow": 0.708510871113545,
+      "full_flow": 0.710878158106242,
+      "learned_alpha": 0.7027597227136895,
+      "raw_3d": 0.6995418854342289
+    },
+    "cello__D__0.05_0.2": {
+      "conditional_flow": 0.7097204985822346,
+      "full_flow": 0.7112043779445963,
+      "learned_alpha": 0.6952245811297448,
+      "raw_3d": 0.6946340852317805
+    },
+    "cello__D__0.1_0.2": {
+      "conditional_flow": 0.7036347768982394,
+      "full_flow": 0.7035158593680992,
+      "learned_alpha": 0.6752270340097326,
+      "raw_3d": 0.7022891134638831
+    },
+    "published__D4__0.05_0.1": {
+      "conditional_flow": 0.8894963684252535,
+      "full_flow": 0.8911486486486486,
+      "learned_alpha": 0.8235871271585558,
+      "raw_3d": 0.7148259561667383
+    },
+    "published__D4__0.05_0.15": {
+      "conditional_flow": 0.9053569362489876,
+      "full_flow": 0.9102485380116958,
+      "learned_alpha": 0.8667014998770592,
+      "raw_3d": 0.7939630166787527
+    },
+    "published__D4__0.05_0.2": {
+      "conditional_flow": 0.879003768252473,
+      "full_flow": 0.8833512931034483,
+      "learned_alpha": 0.879682446339312,
+      "raw_3d": 0.8866517857142857
+    },
+    "published__D4__0.1_0.15": {
+      "conditional_flow": 0.8923192257888639,
+      "full_flow": 0.873633596236336,
+      "learned_alpha": 0.8631322094055014,
+      "raw_3d": 0.8490772219524041
+    },
+    "published__D4__0.1_0.2": {
+      "conditional_flow": 0.8644270493585562,
+      "full_flow": 0.854458736811678,
+      "learned_alpha": 0.8479814564419548,
+      "raw_3d": 0.8636906257853731
+    },
+    "published__D4__0.15_0.2": {
+      "conditional_flow": 0.7430813446572158,
+      "full_flow": 0.7547462223944208,
+      "learned_alpha": 0.7714236078208409,
+      "raw_3d": 0.772177619189216
+    }
+  },
+  "seconds": 21.49189866683446,
+  "broad_improvement_gate": false,
+  "caveat": "Overlapping tasks are not independent replicates; gate passing is not novelty or statistical significance."
+}
