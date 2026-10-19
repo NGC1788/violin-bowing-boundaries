@@ -1,0 +1,11 @@
+[2026-10-18 10:45:09] 대기: C1 완료를 기다림
+[2026-10-18 11:11:42] C1 상태: done
+[2026-10-18 11:12:02] 기존 replicate: 12819 12821  / recover_B1: 33979
+[2026-10-18 11:12:02] recover_B1 일시정지
+[2026-10-18 11:12:02] 다운로드 자식: 39445 
+[2026-10-18 11:12:02] 종료 확인: replicate 0개 남음
+/Users/jeongjihoon/violin-rne/data/raw/zenodo/17782542/2024-04-15_TypeD_sample1.7z.download.lock
+[2026-10-18 11:12:17] 새 replicate: 39505 39507 
+[2026-10-18 11:12:17] 로그 끝:   parallel: 421/421 chunks to fetch over 8 connections
+[2026-10-18 11:12:17] recover_B1 재개
+[2026-10-18 11:12:17] 완료

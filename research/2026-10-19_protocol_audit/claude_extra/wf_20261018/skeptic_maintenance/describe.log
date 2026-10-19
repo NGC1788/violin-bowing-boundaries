@@ -1,0 +1,12 @@
+A2 v=0.05: cols 19 floor strokes 888 entered 569; windows/stroke 38; entries at first possible window 80%, entries t>=0.5 s 15%; low in last 0.25 s 53%; P(up | nonH) 0.0100 P(down | H) 0.0022; entered & not H at end 4%; median F_end/F_start (entered) 0.89
+A2 v=0.10: cols 19 floor strokes 919 entered 282; windows/stroke 17; entries at first possible window 82%, entries t>=0.5 s 8%; low in last 0.25 s 55%; P(up | nonH) 0.0048 P(down | H) 0.0005; entered & not H at end 1%; median F_end/F_start (entered) 0.99
+A2 v=0.20: cols 8 floor strokes 395 entered 65; windows/stroke 7; entries at first possible window 88%, entries t>=0.5 s 0%; low in last 0.25 s 100%; P(up | nonH) 0.0055 P(down | H) 0.0000; entered & not H at end 0%; median F_end/F_start (entered) 1.00
+A1 v=0.05: cols 20 floor strokes 896 entered 441; windows/stroke 38; entries at first possible window 81%, entries t>=0.5 s 13%; low in last 0.25 s 7%; P(up | nonH) 0.0056 P(down | H) 0.0027; entered & not H at end 4%; median F_end/F_start (entered) 1.04
+A1 v=0.10: cols 26 floor strokes 1024 entered 378; windows/stroke 17; entries at first possible window 86%, entries t>=0.5 s 5%; low in last 0.25 s 6%; P(up | nonH) 0.0063 P(down | H) 0.0029; entered & not H at end 2%; median F_end/F_start (entered) 1.07
+A1 v=0.20: cols 25 floor strokes 776 entered 321; windows/stroke 7; entries at first possible window 88%, entries t>=0.5 s 0%; low in last 0.25 s 99%; P(up | nonH) 0.0182 P(down | H) 0.0060; entered & not H at end 2%; median F_end/F_start (entered) 1.05
+
+A2 v1 matched-time comparison (per column, then median over columns)
+  t in [0.0,0.3): entries in window per column median 26 (sum 474); q10(maintained H)/q10(entries in same window) median 1.00 over 19 cols; share of not-yet-entered windows above q10(maintained) 0.17
+  t in [0.5,1.0): entries in window per column median 2 (sum 42); q10(maintained H)/q10(entries in same window) median 2.29 over 6 cols; share of not-yet-entered windows above q10(maintained) 0.05
+  t in [1.0,1.5): entries in window per column median 0 (sum 22); q10(maintained H)/q10(entries in same window) median 2.32 over 3 cols; share of not-yet-entered windows above q10(maintained) 0.08
+  t in [1.4,2.1): entries in window per column median 1 (sum 24); q10(maintained H)/q10(entries in same window) median 9.59 over 3 cols; share of not-yet-entered windows above q10(maintained) 0.09

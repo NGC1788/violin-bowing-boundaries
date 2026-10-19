@@ -1,0 +1,21 @@
+{
+ "created_kst": "2026-10-19T10:42:01.414796+09:00",
+ "frozen_params_sha256": "1a14b5aedfa0284c94889db7988401217ad495eca59e5e89bdc825a6776d23f4",
+ "code_sha256": {
+  "common.py": "abd143caff8062c46b47ca455b5b8906f7af2c816b89a898174be115651bed6b",
+  "model.py": "7b22e91ada1d77456003bea915e8492f41b8a5a01038ab7d7bde0b8e4828a54a",
+  "freeze.py": "d0cc8ea886ee4f7fd5780097d1f800e0dfafb6186d2f6190776b7114b1cef64a",
+  "predict_from_controls.py": "98f13d083b7af102daba0f15b2f7dd24b5430b42262d6248743df816f90eb75f",
+  "score_frozen.py": "dcaca696348362f43f7386e1695453577ca2392293afd7e930b097e8b7866cf2",
+  "validate.py": "64a8a546b54c3521a7200d8fc58f458231f8b0cb7c496be28417adb821ecb1c9",
+  "validate2.py": "e63b6e11e1ffb10f28bda24b9e6bbad160e0196cedb81fd04e1fc6ad62359829"
+ },
+ "development_results_sha256": {
+  "validation_v1_results.json": "22785229b41c37452fb3ff51a17af430ba6a07ac50ec033526c6ebe665e2383e",
+  "validation_v2_results.json": "fba4bca648439fd370906f43d7b7f97fdbd8bd42d380d607c0806e0a061584c7"
+ },
+ "classifier_sha256": {
+  "claude_extra/verify_astra_boundaries.py": "2dfd0572c8b4eca7865662136dccbaf6f2aa392936199860eaaa2f1af7ca926d"
+ },
+ "note": "local freeze (not an external registry); targets unseen at freeze time except where stated"
+}

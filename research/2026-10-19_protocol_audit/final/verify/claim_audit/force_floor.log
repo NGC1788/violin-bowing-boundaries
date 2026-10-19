@@ -1,0 +1,7 @@
+A1      per-column min force at t=0.2: median 0.038 N [p10 0.015, p90 0.099] | max force median 3.96 | left-censored cols 0 with min force median nan N
+A2      per-column min force at t=0.2: median 0.057 N [p10 0.001, p90 0.109] | max force median 4.01 | left-censored cols 1 with min force median 0.072 N
+B1      per-column min force at t=0.2: median 0.090 N [p10 0.061, p90 0.155] | max force median 4.30 | left-censored cols 21 with min force median 0.143 N
+C1      per-column min force at t=0.2: median 0.150 N [p10 0.075, p90 0.179] | max force median 4.21 | left-censored cols 27 with min force median 0.162 N
+D1      per-column min force at t=0.2: median 0.222 N [p10 0.159, p90 0.265] | max force median 4.41 | left-censored cols 33 with min force median 0.233 N
+B_T2r1  per-column min force at t=0.2: median 0.229 N [p10 0.131, p90 0.340] | max force median 4.00 | left-censored cols 46 with min force median 0.303 N
+B_T2r2  per-column min force at t=0.2: median 0.334 N [p10 0.224, p90 0.399] | max force median 4.17 | left-censored cols 51 with min force median 0.318 N

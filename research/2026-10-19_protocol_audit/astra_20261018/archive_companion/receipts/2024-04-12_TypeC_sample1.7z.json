@@ -1,0 +1,60 @@
+{
+  "archive": "2024-04-12_TypeC_sample1.7z",
+  "started_utc": "2026-10-18T01:48:54.656237+00:00",
+  "status": "complete",
+  "pin": "/Users/jeongjihoon/violin-rne/astra_20261018/archive_companion/pins/2024-04-12_TypeC_sample1.7z",
+  "stage": "/Users/jeongjihoon/violin-rne/astra_20261018/archive_companion/staging/2024-04-12_TypeC_sample1-ff7171bdae424c8d83c62e6cb815efa7",
+  "commands": [
+    {
+      "extractor": "ramp_meta",
+      "command": [
+        "/Users/jeongjihoon/violin-bowing-boundaries/.venv-mac/bin/python",
+        "-I",
+        "/Users/jeongjihoon/violin-rne/claude_extra/ramp_meta.py",
+        "/Users/jeongjihoon/violin-rne/astra_20261018/archive_companion/pins/2024-04-12_TypeC_sample1.7z",
+        "/Users/jeongjihoon/violin-rne/astra_20261018/archive_companion/staging/2024-04-12_TypeC_sample1-ff7171bdae424c8d83c62e6cb815efa7/ramp_meta_2024-04-12_TypeC_sample1.csv"
+      ],
+      "started_utc": "2026-10-18T01:49:19.470546+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-10-18T02:06:27.752447+00:00"
+    },
+    {
+      "extractor": "stroke_blocks",
+      "command": [
+        "/Users/jeongjihoon/violin-bowing-boundaries/.venv-mac/bin/python",
+        "-I",
+        "/Users/jeongjihoon/violin-rne/claude_extra/stroke_blocks.py",
+        "/Users/jeongjihoon/violin-rne/astra_20261018/archive_companion/pins/2024-04-12_TypeC_sample1.7z",
+        "/Users/jeongjihoon/violin-rne/astra_20261018/archive_companion/staging/2024-04-12_TypeC_sample1-ff7171bdae424c8d83c62e6cb815efa7/blocks_2024-04-12_TypeC_sample1.npz"
+      ],
+      "started_utc": "2026-10-18T02:06:27.753597+00:00",
+      "exit_code": 0,
+      "ended_utc": "2026-10-18T02:23:33.653820+00:00"
+    }
+  ],
+  "extractor_sha256": {
+    "ramp_meta": "d0734cd7840749f6017c1bd3d8326d50dc39e482f080bb66a8a3d06dc4266760",
+    "stroke_blocks": "7b6c1bf4c892a3504dee22b30439801b2423bcb57a502b2d4c86df56b56334cb"
+  },
+  "companion_sha256": "f53440ebfb07c618b7469d7109bfa091be3871845730451e559056c1a1168397",
+  "archive_integrity": {
+    "bytes": 15054063064,
+    "md5": "1197e7e4543368f0b18fdbec72c133ba",
+    "metadata_path": "/Users/jeongjihoon/violin-rne/data/manifests/zenodo_17749110_20261017T211622.441452Z.json",
+    "metadata_sha256": "571b3bb80833aed431c682012d833e4f9de83b9d678b375c89ed3cfb2ec6199c"
+  },
+  "validation": {
+    "trials": 6000,
+    "blocks": 462251,
+    "folders": {
+      "2024-04-12_TypeC_sample1/2024-04-15/v1": 2000,
+      "2024-04-12_TypeC_sample1/2024-04-15/v2": 2000,
+      "2024-04-12_TypeC_sample1/2024-04-15/v3": 2000
+    },
+    "ramp_sha256": "466f9da854f9e40aa52a1a09fff3ead82a948c663e02f3085ed35c0b24275468",
+    "blocks_sha256": "408212ef306aefbcc30eb7922f009626745a65f39fc3b6951714177b1260dc8a",
+    "coverage_sha256": "47455e6e3e792b941ed11bd119fea945dbdfcc411db21e4954264ade4b1f7732"
+  },
+  "ended_utc": "2026-10-18T02:23:33.798690+00:00",
+  "published": "/Users/jeongjihoon/violin-rne/astra_20261018/archive_companion/2024-04-12_TypeC_sample1"
+}

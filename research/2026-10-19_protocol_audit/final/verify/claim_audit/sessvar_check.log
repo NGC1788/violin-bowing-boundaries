@@ -1,0 +1,16 @@
+
+2024-10-23_variability_setup: 긋기 12000, 세션(속도 폴더) 6
+  t=0.0: β 기울기 -1.77, 잔차 σ 0.43 | β=0.1 경계 — v=0.05: rep_1/v1: 0.109 N, rep_2/v1: 0.118 N  (반복 간 log 차이 0.08) | v=0.1: rep_1/v2: 0.197 N, rep_2/v2: 0.216 N  (반복 간 log 차이 0.09) | v=0.2: rep_1/v3: 0.686 N, rep_2/v3: 0.723 N  (반복 간 log 차이 0.05)
+    2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1: 속도 지수(수준 기준) +1.32
+    2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2: 속도 지수(수준 기준) +1.31
+  t=0.3: β 기울기 -2.09, 잔차 σ 0.40 | β=0.1 경계 — v=0.05: rep_1/v1: 0.059 N, rep_2/v1: 0.076 N  (반복 간 log 차이 0.25) | v=0.1: rep_1/v2: 0.115 N, rep_2/v2: 0.134 N  (반복 간 log 차이 0.15) | v=0.2: rep_1/v3: 0.361 N, rep_2/v3: 0.432 N  (반복 간 log 차이 0.18)
+    2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1: 속도 지수(수준 기준) +1.30
+    2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2: 속도 지수(수준 기준) +1.25
+joint MLE rep_1 t=0.0: speed exp +1.364 beta exp -1.759 sigma 0.45 cols 120 left 39 right 11
+joint MLE rep_1 t=0.1: speed exp +1.448 beta exp -2.047 sigma 0.38 cols 120 left 44 right 11
+joint MLE rep_1 t=0.2: speed exp +1.423 beta exp -2.175 sigma 0.33 cols 120 left 46 right 11
+joint MLE rep_1 t=0.3: speed exp +1.435 beta exp -2.253 sigma 0.34 cols 120 left 48 right 10
+joint MLE rep_2 t=0.0: speed exp +1.347 beta exp -1.795 sigma 0.47 cols 120 left 49 right 12
+joint MLE rep_2 t=0.1: speed exp +1.217 beta exp -1.824 sigma 0.44 cols 120 left 52 right 12
+joint MLE rep_2 t=0.2: speed exp +1.217 beta exp -1.816 sigma 0.42 cols 120 left 51 right 11
+joint MLE rep_2 t=0.3: speed exp +1.225 beta exp -1.917 sigma 0.46 cols 120 left 52 right 12

@@ -1,0 +1,27 @@
+{
+  "A1_to_A2": {
+    "total_target_windows": 24000,
+    "matched_windows": 20385,
+    "matched_fraction": 0.849375,
+    "rule": "same sorted beta level, speed and time; nearest current force within max(0.01N,5% absolute target force)",
+    "accel_mismatch_factor_over2_fraction": 0.44316899681138094,
+    "median_accel_ratio_target_over_source": 1.0,
+    "onset_mismatch_over0p05N_fraction": 0.5480500367917587,
+    "travel_mismatch_over0p02m_fraction": 0.20539612460142262,
+    "median_absolute_force_matching_error_N": 0.009458893602204727,
+    "scope": "Descriptive support; reused nearest neighbors, approximate matching, no outcome comparison or causal estimate."
+  },
+  "A2_to_A1": {
+    "total_target_windows": 24000,
+    "matched_windows": 20657,
+    "matched_fraction": 0.8607083333333333,
+    "rule": "same sorted beta level, speed and time; nearest current force within max(0.01N,5% absolute target force)",
+    "accel_mismatch_factor_over2_fraction": 0.47494795952945734,
+    "median_accel_ratio_target_over_source": 1.0,
+    "onset_mismatch_over0p05N_fraction": 0.5953429830081812,
+    "travel_mismatch_over0p02m_fraction": 0.24059640799728904,
+    "median_absolute_force_matching_error_N": 0.008825130544582671,
+    "scope": "Descriptive support; reused nearest neighbors, approximate matching, no outcome comparison or causal estimate."
+  },
+  "source_sha256": "f673d8e2ebac30a6ad793615d28efb6769e313ac6b4180aee061f3a4bf1fbb08"
+}

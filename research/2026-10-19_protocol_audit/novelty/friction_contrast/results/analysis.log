@@ -1,0 +1,92 @@
+steady Helmholtz windows (both thresholds): 31
+
+[1] descriptive (phase-averaged cycle)
+  avg_mu_peak  median 0.839  range [0.680, 0.913]
+  avg_mu_d     median 0.559  range [0.433, 0.791]
+  avg_dmu      median 0.301  range [0.036, 0.401]
+  hyst         median 0.122  range [-0.092, 0.303]
+  Fb<1.0 N: n 4, mu_peak 0.898, mu_d 0.775, dmu 0.133, hyst -0.004
+  Fb>2.4 N: n 13, mu_peak 0.838, mu_d 0.484, dmu 0.347, hyst 0.235
+
+[1b] OLS: y = a + g log Fb + k log v + l log beta
+  log dmu     : g(Fb) +0.687±0.093  k(v) +0.182±0.127  l(beta) +0.548±0.130  R2 0.77  sd 0.282
+  log mu_d    : g(Fb) -0.182±0.014  k(v) -0.180±0.019  l(beta) -0.004±0.020  R2 0.95  sd 0.042
+  log mu_peak : g(Fb) +0.004±0.019  k(v) -0.031±0.026  l(beta) +0.066±0.026  R2 0.25  sd 0.057
+  power collapse: log y = a + c log(Fb*v) + d log v + l log beta  (d = 0 <=> y depends on Fb, v only via Fb*v)
+    avg_mu_d    : c -0.182±0.014  d +0.002±0.029  l -0.004±0.020 | single log(Fb v): -0.181±0.008 R2 0.95 sd 0.041
+    avg_dmu     : c +0.687±0.093  d -0.505±0.190  l +0.548±0.130 | single log(Fb v): +0.438±0.066 R2 0.61 sd 0.353
+    avg_mu_peak : c +0.004±0.019  d -0.035±0.039  l +0.066±0.026 | single log(Fb v): -0.016±0.011 R2 0.07 sd 0.061
+  hyst (lin)  : Fb +0.141±0.017  v -0.007±0.024  beta +0.052±0.024  R2 0.76
+  log dmu low (Fb<=1.6)  n 18: g +0.648±0.167  k +0.254±0.187  l +0.716±0.156
+  log dmu high (Fb>=1.2) n 26: g +0.609±0.110  k +0.225±0.113  l +0.387±0.126
+  log dmu top (Fb>=2.4)  n 13: g +0.031±0.087  k +0.027±0.059  l +0.051±0.093
+  force series (dmu):
+    beta 0.0405, v 0.05: 0.58N->0.036, 1.26N->0.133, 1.54N->0.214, 2.63N->0.316, 3.27N->0.325, 4.15N->0.345, 5.26N->0.347
+    beta 0.1044, v 0.05: 0.32N->0.112, 0.50N->0.153, 0.83N->0.177, 1.21N->0.190, 1.35N->0.203
+  speed series (dmu, mu_d):
+    beta 0.0484: v0.05/1.28N->0.107,0.573, v0.05/2.96N->0.308,0.527, v0.10/2.92N->0.350,0.464, v0.15/3.09N->0.365,0.440, v0.20/3.05N->0.301,0.437
+    beta 0.1175: v0.05/1.20N->0.208,0.680, v0.05/1.48N->0.196,0.651, v0.10/1.52N->0.306,0.559, v0.15/1.51N->0.363,0.518, v0.20/1.44N->0.372,0.473
+
+[2] Schelleng with measured dmu(F, v, beta): implied boundary exponents (speed, beta)
+  global    : upper v^+0.48 beta^-0.92 | lower v^+0.48 beta^-1.51  (constant dmu: upper +1/-1, lower +1/-2)
+  low-F fit : upper v^+0.45 beta^-1.04 | lower v^+0.45 beta^-1.65  (constant dmu: upper +1/-1, lower +1/-2)
+  high-F fit: upper v^+0.48 beta^-0.86 | lower v^+0.48 beta^-1.48  (constant dmu: upper +1/-1, lower +1/-2)
+  top-F fit : upper v^+0.94 beta^-1.02 | lower v^+0.94 beta^-1.99  (constant dmu: upper +1/-1, lower +1/-2)
+  measured B_T2r1: upper v^+0.86 beta^-1.29 | lower v^+1.42 beta^-2.18
+  measured B_T2r2: upper v^+0.70 beta^-0.97 | lower v^+1.22 beta^-1.82
+  measured A1    : upper v^+0.62 beta^-1.11 | lower v^+0.67 beta^-0.97
+  measured A2    : upper v^+0.71 beta^-1.12 | lower v^+0.94 beta^-1.09
+  structured law: mu_peak 0.839 (const), mu_d = 0.390 (Fb v)^-0.181; contrast -> 0 at Fb*v = 0.0143 W (lowest measured Fb*v 0.016)
+  structured law, self-consistent upper: v^+0.70 beta^-0.85 (grid beta 0.04-0.12, v 0.05-0.2; C 2.38)
+  structured law, self-consistent upper_calibrated: v^+0.63 beta^-0.81 (grid beta 0.04-0.12, v 0.05-0.2; C 1.08)
+  structured law, self-consistent lower: v^-0.64 beta^-0.38 (grid beta 0.04-0.12, v 0.05-0.2; C 0.000214)
+
+[3] Absolute Schelleng upper limit F_max = 2 Z v/(beta dmu), Z = 1.1899 (POMA B_T2)
+  beta 0.1044 v 0.05: measured F_up 1.71 N | dmu(meas, at F_up) 0.271 -> Schelleng F_max 4.20 N (x2.45) | dmu required 0.67
+  beta 0.1044 v 0.10: measured F_up 2.94 N | dmu(meas, at F_up) 0.447 -> Schelleng F_max 5.10 N (x1.74) | dmu required 0.78
+  beta 0.0405 v 0.05: measured F_up 4.99 N | dmu(meas, at F_up) 0.337 -> Schelleng F_max 8.72 N (x1.75) | dmu required 0.59
+  beta 0.0405 v 0.10: measured F_up 8.57 N | dmu(meas, at F_up) 0.554 -> Schelleng F_max 10.60 N (x1.24) | dmu required 0.69
+  beta 0.0484 v 0.05: measured F_up 4.08 N | dmu(meas, at F_up) 0.324 -> Schelleng F_max 7.60 N (x1.86) | dmu required 0.60
+  beta 0.0484 v 0.20: measured F_up 12.03 N | dmu(meas, at F_up) 0.876 -> Schelleng F_max 11.23 N (x0.93) | dmu required 0.82
+  beta 0.1175 v 0.05: measured F_up 1.50 N | dmu(meas, at F_up) 0.264 -> Schelleng F_max 3.83 N (x2.56) | dmu required 0.68
+  beta 0.1175 v 0.20: measured F_up 4.42 N | dmu(meas, at F_up) 0.715 -> Schelleng F_max 5.66 N (x1.28) | dmu required 0.92
+  local version (dmu of the measured steady Helmholtz window(s) of the same beta & v closest to F_up; no extrapolation):
+    beta 0.1044 v 0.05: F_up 1.71 N; window 1.35 N dmu 0.203 (peak 0.82, mu_d 0.62) -> Schelleng 5.62 N (x3.28); required dmu 0.67
+    beta 0.1044 v 0.10: F_up 2.94 N; window 2.66 N dmu 0.350 (peak 0.84, mu_d 0.49) -> Schelleng 6.50 N (x2.21); required dmu 0.78
+    beta 0.0405 v 0.05: F_up 4.99 N; window 5.26 N dmu 0.347 (peak 0.85, mu_d 0.50) -> Schelleng 8.47 N (x1.70); required dmu 0.59
+    beta 0.0484 v 0.05: F_up 4.08 N; window 2.96 N dmu 0.308 (peak 0.83, mu_d 0.53) -> Schelleng 7.99 N (x1.96); required dmu 0.60
+    beta 0.1175 v 0.05: F_up 1.50 N; window 1.48 N dmu 0.196 (peak 0.85, mu_d 0.65) -> Schelleng 5.18 N (x3.46); required dmu 0.68
+    beta 0.1175 v 0.20: skipped (F_up 4.42 N outside measured range or nearest window 1.44 N too far)
+    beta 0.0484 v 0.20: skipped (F_up 12.03 N outside measured range or nearest window 3.05 N too far)
+  same-specimen brackets from the reconstruction strokes (last Helmholtz / first non-Helmholtz, steady window):
+    beta 0.0405 v 0.05: 0.33x 0.58H 0.85x 1.26H 1.54H 2.63H 3.27H 4.15H 5.26H 6.7x
+    beta 0.0405 v 0.1: 0.38x 0.84x 2.62H 6.72H
+    beta 0.1044 v 0.05: 0.32H 0.34x 0.5H 0.83H 1.21H 1.35H 2.5x 3.45x 7.0x
+    beta 0.1044 v 0.1: 2.66H 3.33x 3.75x 6.84x
+    beta 0.1777 v 0.1: 0.89x 1.23x 1.71x 2.41x 3.38x 4.81x 6.95x
+
+[4] Cross-string levels (log offsets vs type-A law; given) vs string properties (POMA Table 1)
+  string   L_lo    L_up   | log Z/ZA  log EI/EIA | required log(dmu/dmu_A): from upper, from lower | implied R/R_A (lower-upper)
+  A1      +0.115 +0.002 | +0.000   +0.000   | -0.002 (1.00x)  -0.115 (0.89x) | 0.89
+  A2      -0.118 -0.002 | +0.000   +0.000   | +0.002 (1.00x)  +0.118 (1.13x) | 1.12
+  B1      -0.357 +0.299 | +0.038   +0.372   | -0.261 (0.77x)  +0.432 (1.54x) | 2.00
+  C1      -0.561 -0.004 | -0.006   +0.036   | -0.002 (1.00x)  +0.548 (1.73x) | 1.73
+  D1      -0.248 +0.172 | -0.018   +0.548   | -0.190 (0.83x)  +0.211 (1.23x) | 1.49
+  A_T2    -0.539 +0.197 | +0.115   +0.269   | -0.082 (0.92x)  +0.769 (2.16x) | 2.34
+  B_T2r1  -0.318 +0.240 | +0.116   +0.878   | -0.124 (0.88x)  +0.551 (1.73x) | 1.96
+  B_T2r2  -0.139 +0.249 | +0.116   +0.878   | -0.133 (0.88x)  +0.372 (1.45x) | 1.66
+  corr(required contrast from upper, from lower), non-A diagrams (n 6): +0.54; sign agreement 0/6
+  corr(L_lo, L_up) all 8: -0.26
+  corr log Z : lower -0.24, upper +0.67
+  corr log EI: lower -0.05, upper +0.80
+
+  model RMS over 8 diagrams (in-sample) and grouped leave-one-string-out RMS (free models):
+    null (0)                                       lower 0.343  upper 0.186   (no free parameters)
+    Schelleng Z (lo 2z, up z)                      lower 0.446  upper 0.134   (no free parameters)
+    Beigi Z lower (z)                              lower 0.391  upper 0.134   (no free parameters)
+    Schelleng Z + measured dmu(F) common law       lower 0.403  upper 0.136   (no free parameters)
+    common per-string friction factor (Lo = Up + z) lower 0.548  upper 0.548   (no free parameters)
+    a*logZ                                         lower 0.273 (LOO 0.317) coef [-2.86] | upper 0.109 (LOO 0.113) coef [2.08]
+    b*logEI                                        lower 0.274 (LOO 0.374) coef [-0.41] | upper 0.077 (LOO 0.126) coef [0.33]
+    a*logZ + b*logEI                               lower 0.266 (LOO 0.489) coef [-1.63 -0.22] | upper 0.073 (LOO 0.156) coef [0.54 0.27]
+  measurement-noise yardsticks (given): lower A1-A2 0.233, B_T2 rep-rep 0.179; upper A1-A2 0.004, B_T2 rep-rep 0.009

@@ -1,0 +1,1089 @@
+ACTA ACUSTICA UNITED WITH ACUSTICA
+Vol. 89 (2003) 355 – 368
+
+
+
+
+                       Bowed String Simulation Using a Thermal
+                       Friction Model
+
+                       J. Woodhouse
+                       Cambridge University Engineering Department, Trumpington Street, Cambridge CB2 1PZ, UK.
+                       jw12@eng.cam.ac.uk
+
+
+                       Summary
+                       In the past, theoretical modelling of the motion of a bowed string has assumed that the frictional force due
+                       to the rosin on the bow was determined by the sliding speed only. Recently, it has been proposed that a better
+                       constitutive law would be to assume that the friction force is a function of the contact temperature. The predictions
+                       of these two models are compared, using the best available calibration data for the properties of the rosin and
+                       the instrument string. The main conclusion is that the thermal friction model predicts bowing behaviour which
+                       is more “benign”, in that the desired Helmholtz motion of the bowed string is established more reliably and
+                       more quickly than with the old friction model. The two models also predict different detailed behaviour of the
+                       frequency of the string oscillation as a function of normal force, the “flattening effect”. These predictions are
+                       amenable to direct experimental check, and it is hoped that measurements will soon provide evidence to test the
+                       predictions, discriminate between the models, and fine-tune the more successful model.
+                       PACS no. 43.75.De, 46.55
+
+
+
+
+1. Introduction                                                         is varying rapidly, the friction force is still determined by
+                                                                        the instantaneous value of sliding speed according to this
+Much of the special quality of the violin derives from the              steady-sliding relation. However, there is no obvious phys-
+complex and subtle range of vibration behaviour of a string             ical reason why this should be true, and recent measure-
+excited by bowing. In recent decades, understanding of                  ments have shown decisively that in fact it is not true [8, 9].
+this behaviour has advanced steadily. Progress has been                 If the force and sliding velocity are measured during
+made by the development of increasingly complete theo-                  stick-slip motion with rosin at the interface, the results can
+retical models of the bowing process, and by comparing                  be plotted in the - plane. What is found is a hysteresis
+simulations based on these models with observations of                  loop, a typical example being shown in Figure 2. The loop
+real bowed strings. As a result many features of bowed-                 is traversed in the anticlockwise direction: at the end of
+string motion have been explained qualitatively, and to a               sticking the friction force is high, and as sliding begins the
+certain extent quantitatively [1, 2, 3, 4, 5, 6, 7].                    force falls rapidly. During the return to sticking, though,
+   One ingredient of these models which has remained                    the force remains quite low. No portion of this loop fol-
+largely unquestioned since the earliest work is the descrip-            lows the steady-sliding relation of Figure 1, shown as a
+tion of the interfacial friction between bow and string. It             dashed line in Figure 2.
+has been conventional to assume that the frictional force is               It is immediately apparent that a different friction law
+governed by the speed of relative sliding between bow and               is needed to account for this behaviour, and the main pur-
+string. If experimental measurements are made of the co-                pose of this paper is to explore alternative models. Based
+efficient of friction of a rosin-coated surface during steady           on a variety of evidence, it has been suggested [8] that
+sliding at different speeds, results are obtained like those            the simplest plausible model is obtained by supposing that
+shown in Figure 1 [2, 8]. At very low sliding speeds the                the friction force during sliding does not depend directly
+coefficient of friction is large, even exceeding unity. Dur-            on variations of sliding speed, but rather on variations of
+ing sticking, when the relative velocity is zero, the coef-             temperature in the interfacial rosin layer. Rosin is a brittle
+ficient of friction can take any value up to this limiting              solid at room temperature, but it softens and undergoes a
+value. As sliding speed increases the coefficient of friction           glass transition at temperatures not much higher than this.
+falls rapidly.                                                          This implies that the mechanical behaviour will be sensi-
+   Given results like these it is an easy step to suppose               tive to temperature in the range just above normal ambient:
+that during stick-slip oscillation, when the sliding speed              in particular the shear strength of a rosin layer will de-
+                                                                        crease as temperature increases. The behaviour shown in
+Received 22 March 2002,                                                 Figure 1 is consistent with such a model: as will be seen in
+accepted 11 October 2002.                                               detail shortly, there is a monotonic relation between con-
+
+
+
+c S. Hirzel Verlag EAA                                                                                                                 355
+ACTA ACUSTICA UNITED WITH ACUSTICA                                                                                         Woodhouse: Thermal friction model for bowing
+Vol. 89 (2003)
+
+
+
+
+                         1.2                                                                                       1.2
+
+
+                              1                                                                                     1
+
+
+
+
+                                                                                       Coefficient of friction µ
+  Coefficient of friction µ
+                         0.8                                                                                       0.8
+
+
+                         0.6                                                                                       0.6
+
+
+                         0.4                                                                                       0.4
+
+
+                         0.2                                                                                       0.2
+
+                              0                                                                                     0
+                                  0   0.05   0.1       0.15       0.2   0.25   0.3                                       -0.15    -0.1          -0.05          0   0.05
+                                              Sliding velocity (m/s)                                                                     Slider velocity (m/s)
+
+
+Figure 1. Coefficient of friction between rosin-coated PMMA                          Figure 2. Solid line: coefficient of friction between rosin-coated
+surfaces, measured as a function of steady sliding speed, from                       surfaces, one of PMMA and one of wood, as a function of sliding
+reference [8]. Solid line: curve fit to the measured points, equa-                   velocity during a stick-slip oscillation, from Reference [8]. The
+tion (2).                                                                            hysteresis loop is traversed in an anticlockwise direction. The
+                                                                                     “loops” during the near-vertical “sticking” portion of the curve
+                                                                                     are an artefact of the instrumentation, as described in Reference
+                                                                                     [8]. Dashed line: the steady-sliding relation of Figure 1.
+tact temperature and speed of steady sliding, which could
+account for the falling trend of the friction force with slid-
+ing speed.
+   A thermal-based friction model of this kind immedi-                               in describing, at least qualitatively, many observed aspects
+ately suggests a qualitative explanation of the hysteresis                           of bowed- string behaviour. Two particular successes can
+loop shown in Figure 2, because the dynamics of heat flow                            be highlighted. First is the prediction of the region of pa-
+near the contact will inevitably produce a time lag between                          rameter space within which the desired “Helmholtz mo-
+changes in sliding speed and changes in temperature. Dur-                            tion” of the string is possible: this region was famously
+ing sticking the contact region will cool by heat conduc-                            represented in diagrammatic form by Schelleng [1]. Sec-
+tion into the bulk materials behind the contact. This will                           ond is the explanation of how the period of a Helmholtz
+allow the shear strength of the interface, and hence the co-                         motion can increase above the natural period of the string’s
+efficient of friction, to reach a high value. Once sliding                           motion when the bow force is high, the so-called “flatten-
+begins, the contact region will be heated by the work done                           ing effect” [3, 10]. The calculations underlying both these
+against friction, the rosin layer will weaken, and the fric-                         predictions, of the minimum and maximum bow force for
+tion coefficient will fall. Now the dynamics of the vibrat-                          the Helmholtz motion and of the flattening effect, are ex-
+ing system will mean that, in due course, the sliding speed                          plicitly built around the friction-curve model. It is not im-
+reduces and sticking is re-established. If this process hap-                         mediately obvious that the new thermal model of friction
+pens relatively quickly compared to the time scale of heat                           will reproduce either prediction. In particular, Schumacher
+conduction, the contact region will still be warm and the                            [11] has pointed out that the thermal model may not be
+friction force will remain low. During the ensuing period                            compatible with some observed details of the flattening
+of sticking cooling occurs, allowing the cycle to repeat.                            effect. Both phenomena will be explored using simulation
+   A simple model based on this idea has been developed                              studies in this paper, and the predictions of the thermal
+[8], and used with some success to reproduce the results of                          model and friction-curve model compared.
+the measurements. These first measurements were made,                                   The long-term goal of this research is to construct
+not with a bowed string, but with a vibrator which be-                               a physically-based model of the bowed string, capable
+haved approximately like a harmonic oscillator. Subse-                               of predicting transient behaviour which agrees quantita-
+quently, similar measurements have been made using a                                 tively with experimental measurements over a wide range
+bowed string [9]. These showed qualitatively similar be-                             of bowing gestures of musical interest. If this could be
+haviour: in particular they showed similar hysteresis be-                            achieved, it would justify the use of simulation studies
+haviour in the - plane. It is thus natural to use the pro-                           to answer “design” questions: how is the “playability”
+posed thermal model of rosin friction to carry out bowed-                            of a string on a given instrument influenced by the con-
+string simulations to see whether it is capable of reproduc-                         structional details of the string, bow, bridge and instru-
+ing features of the observations more successfully than the                          ment body, and also by the details of the player’s bow-
+old “friction curve model”. That is the task of this paper.                          ing gesture? Preliminary studies along these lines have
+   Although now known to be wrong in some respects,                                  given an idea of how such questions might be approached
+the friction-curve model has been remarkably successful                              [6, 7, 12, 13], but all have used the old friction-curve model
+
+
+
+356
+Woodhouse: Thermal friction model for bowing                                           A CTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                              Vol. 89 (2003)
+
+
+so that the detailed conclusions must be regarded with           change of state. Details of the Green’s function are given
+some scepticism.                                                 in reference [8]. This model is suitable for time-stepping
+                                                                 simulation once the time derivative is represented as a for-
+2. The simulation model                                          ward difference, and it is easily incorporated into the type
+2.1. The thermal friction model                                  of bowed-string simulation described in earlier references
+                                                                 [2, 3, 5, 14].
+In the steady-sliding measurement which produced the
+                                                                    The first task for this model, needed for calibration pur-
+data of Figure 1, the geometry of the contact was that
+                                                                 poses, is to simulate the conditions of the steady-sliding
+of two crossed cylinders of perspex (PMMA, polymethyl
+                                                                 experiment. This gives the contact temperature as a func-
+methacrylate) loaded together to give an approximately
+                                                                 tion of sliding speed, and once that is known the results
+circular contact area. One of the cylinders was stationary,
+                                                                 for friction force shown in Figure 1 can be converted into
+while the other moved across it carrying a layer of rosin.
+                                                                 a function of temperature which will then be used in bow-
+This rosin would be at ambient temperature on entry to the
+                                                                 ing simulations. The underlying assumption, central to this
+contact zone. As it moves into the contact zone frictional
+                                                                 simplest version of a thermal model of friction, is that the
+energy will heat the surface of the rosin layer, probably
+                                                                 coefficient of friction depends only on temperature, not
+sufficiently that it sticks to the fixed cylinder. There would
+                                                                 on any other state variables. That is the model to be ex-
+then be a layer of some thickness within which shearing
+                                                                 plored in this paper. A convenient curve-fit to the mea-
+motion takes place. This might be a relatively thick layer
+                                                                 sured steady-sliding friction results of Figure 1, shown as
+within which the deformation is best described as viscous
+                                                                 the solid line, is the function
+flow, or it might be a thin interfacial layer better described
+by visco-plastic yielding of rosin in a semi-solid state. It                                                              (2)
+was shown [8] that a model based on the latter possibility
+produced a more satisfactory match to the results of stick-      where is the coefficient of friction and is the relative
+slip measurements, and the same model will be used here.         sliding speed. Using best estimates of the contact condi-
+   The temperature at the sliding contact can be calculated      tions and thermal properties appropriate to the measure-
+by modelling the heat generation and transfer in the mate-       ment, the result shown in Figure 3 is obtained: the friction
+rial surrounding the interface. No attempt is made to take       force falls approximately linearly in the temperature range
+detailed account of the variations of temperature, layer         from ambient up to about 40 above that, then flattens
+thickness and material properties within the contact re-         out to a constant level. Note that all temperatures quoted
+gion: the objective at present is to use the simplest model      throughout this work will be relative to ambient – to con-
+which incorporates dependence on temperature rather than         vert them to Celsius, add 20 .
+on sliding speed. It is hoped that any major qualitative dif-       The radius of the contact region and the thickness
+ferences from the old friction-curve model will show up          of the deforming layer are both hard to determine with
+even in such a simplified model. The model is therefore          very great reliability for the conditions of the experimental
+formulated in terms of a single, averaged “contact temper-       measurements. The parameters used here, specified in the
+ature”, , a circular contact area of radius and a uniform        caption of Figure 3, were chosen to be within the range of
+layer thickness . (The contact temperature is measured           plausibility for the steady-sliding measurement, and also
+relative to ambient temperature.) The rate at which heat         to produce the change of friction behaviour in roughly
+is generated at the contact is given by the product of the       the right temperature range to accord with other measure-
+frictional force and the sliding velocity. This heat input to    ments of rosin behaviour [8]. Fortunately, the exact choice
+the contact volume is balanced by three effects: conduc-         is not in the end very critical for later simulations using
+tion into the two neighbouring solids, convection with the       the model. It was found in the earlier study that when
+rosin as cold material flows into the contact region while       the model was used to predict stick-slip motion the re-
+heated material flows out, and absorption in the contact         sults for oscillator motion did not depend very sensitively
+volume, changing its temperature. The first of these effects     on the choice: the only thing which changes is the abso-
+can be represented in terms of a suitable Green’s function       lute temperature. Much the same has been found with the
+      for the heat-diffusion problem, while the other two        bowed-string simulations to be described shortly. The un-
+have simple closed-form expressions within the approx-           derlying reason seems to be that the system tends to adjust
+imations used. The resulting governing equation for the          its spread of temperature fluctuations into the range where
+time-varying contact temperature, with the three terms on        the friction is varying most sensitively: high friction gives
+the right-hand side in the order just described, is              strong heating, and the contact continues to warm up until
+                                                                 this effect is compensated by the decrease of friction co-
+                                                                 efficient. This kind of “self-buffering”, in a more extreme
+                                                                 form, has been used to explain the frictional properties of
+                                                          (1)    ice skates and skis [15].
+                                                                    The next stage is to adapt the model for the different
+where is the friction force, is the relative sliding speed,      contact conditions relevant to bowing a string. Two cases
+   is the density of rosin and is the “effective” specific       can be distinguished: bowing with a normal violin bow,
+heat capacity of rosin, including any contribution from          and “bowing” with a rosin-coated rod, as in many ex-
+
+
+
+                                                                                                                         357
+ACTA ACUSTICA UNITED WITH ACUSTICA                                                                          Woodhouse: Thermal friction model for bowing
+Vol. 89 (2003)
+
+
+                                                                                              string. The reason is that even this simple model will pro-
+                                                                                              duce a number of predictions which are amenable to exper-
+                              1.2
+                                                                                              imental test. It is relatively easy to conduct well-controlled
+                                                                                              experiments for this case, and it is hoped that such experi-
+                               1
+                                                                                              ments will allow the friction model to be thoroughly tested
+
+
+
+  Coefficient of friction µ
+                              0.8                                                             and, perhaps, modified. After that it would be possible to
+                                                                                              incorporate that model into the more complicated simu-
+                              0.6                                                             lations appropriate to a real violin bow with a distributed
+                                                                                              contact and allowing for bow-hair dynamics [17, 18], and a
+                              0.4                                                             further round of experiments would then be undertaken to
+                                                                                              test the new predictions. Purely for simplicity, the simula-
+                              0.2                                                             tions here will assume that the contact area scales linearly
+                                                                                              with the normal force, despite the doubts expressed above.
+                               0
+                                    0   10   20      30      40     50      60   70    80     This allows the concept of “coefficient of friction” to be
+                                                  Temperature above ambient                   retained, and the results of Figure 3 to be used to calibrate
+                                                                                              the model. However, it is expected that this functional de-
+Figure 3. Coefficient of friction as a function of contact temper-                            pendence will need to be modified when experimental data
+ature (in C above ambient) deduced from the data of Figure 1                                  is available, and perhaps more extensive steady-sliding
+using the thermal model described in the text assuming a normal                               measurements with a range of normal loads will be nec-
+force of 3 N, a contact radius of 0.5 mm, a deforming layer thick-                            essary for calibration.
+ness of 10 m, and thermal properties for PMMA as listed under                                    For the rod/string contact, it is necessary to make in-
+“bow” in Table I.
+                                                                                              formed guesses at the effective contact size and thickness
+                                                                                              of the deforming layer in the rosin. Also, the effective ther-
+Table I. Parameter values used in simulations.
+                                                                                              mal properties of the “string” and “bow” material have to
+                                                                  String     Bow      Rosin   be estimated. If the rosin layer is thin and most of it is in-
+                                                                                              volved in the shear deformation, then the appropriate val-
+Density (kg/m )                                                    3000      600      1010
+Specific heat capacity (J/kg K)                                    1000      1680      250
+                                                                                              ues might be those of the substrate materials. On the other
+Thermal conductivity (W/m K)                                        1.4       0.2     0.113   hand, if only the top fraction of a thick rosin layer is in-
+                                                                   2050      450       170    volved in heat generation, the heat diffusion rates may be
+                                                                                              determined mainly by the properties of rosin. These ther-
+Active layer thickness ( m)                                                            1
+                                                                                              mal properties only enter via the Green’s function of
+Contact radius at 1 N normal load ( m)                                                250
+                                                                                              equation (1), and it was shown earlier [8] that this depends
+Bowing speed (m/s)                                                                    0.05
+                                                                                              only on the thermal parameter
+
+                                                                                                                                                        (3)
+perimental studies [3, 4]. The real bow has a large num-
+ber of contacts between the string and individual hairs of
+the bow, while the rod has a single contact more like the                                     where is the thermal conductivity, is the thermal dif-
+steady-sliding test, but with different geometry and (per-                                    fusivity, is the specific heat capacity and is the den-
+haps) thermal properties. This distinction may influence                                      sity. Values of this parameter must be chosen for the two
+the variation of contact area with normal force. For the                                      contacting surfaces. For the simulations to be run here,
+rod, contact at very low forces       will presumably fol-                                    the system is envisaged as a rosin-coated rod of perspex
+low the Hertzian law, with area proportional to       . But                                   (PMMA), bowing a string whose outer layer is metal but
+once contact pressure become high enough that the rosin                                       which is thermally shielded by a transferred layer of rosin.
+layer deforms plastically then the growth of the contact                                      Values of all relevant material properties have been cho-
+area with force may slow down when the material of the                                        sen to be representative of this situation: they are listed
+rod comes close to direct contact with the string material                                    in Table I. The thermal properties of the shielded string
+after cutting through the rosin layer. The real bow, on the                                   are taken, somewhat arbitrarily, as the geometric mean of
+other hand, is likely to react to increasing normal force                                     values for a typical steel and values for a typical polymer.
+by bringing more hairs into contact. This is reminiscent                                      Some of these values are quite uncertain, and it is expected
+of the well-studied behaviour of contacting asperities be-                                    that they may have to be adjusted in the light of experimen-
+tween rough surfaces [16]. The result is likely to be that                                    tal data when this becomes available.
+the real area of contact is approximately proportional to
+                                                                                              2.2. The string model
+normal force. This in turn would mean that frictional force
+would be proportional to normal force, “Amonton’s law”,                                       Modelling of the dynamic behaviour of the string is sub-
+and it would make sense to speak of a coefficient of fric-                                    ject to fewer uncertainties than the friction model. All the
+tion. This may not be the case for the rod-string contact.                                    simulation results in this paper are based on modelling
+   This paper will concentrate on the simpler problem of                                      the best-understood musical string, a “Dominant” cello D
+bowing with a rod, giving a single contact patch with the                                     string. For this particular string a reasonably complete set
+
+
+
+358
+Woodhouse: Thermal friction model for bowing                                                                A CTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                                                   Vol. 89 (2003)
+
+
+of calibration data is available, covering transverse vibra-
+tion frequencies and damping factors, torsional frequen-                                      150
+cies and damping factors, and bending stiffness. No al-
+lowance is made here for the coupling of the string to                                        149
+modes of an instrument body, but this choice is made
+
+
+
+
+                                                                      Frequency/mode number
+purely for simplicity: the necessary modification to the re-
+flection behaviour at the cello bridge could be included                                      148
+
+straightforwardly, as illustrated by earlier simulations of
+the “wolf note” [2, 3].                                                                       147
+   The open D string of a cello is tuned to 147 Hz.
+Empirically, the transverse modes have, very approxi-
+mately, constant factors for a wide range of overtones.                                       146
+There are significant variations, mainly resulting from the
+frequency-dependent input admittance of the instrument                                        145
+                                                                                                    0   5       10       15       20      25
+body: measured results for a string on a particular cello                                                        Mode number
+are given in Figure 4b. As already stated, such effects of
+the instrument body are ignored here. The transverse string                            1000
+damping is simulated using the constant- reflection func-
+tion described in an earlier work [19], using the numerical                                   800
+value             , a reasonable average of the observed be-
+haviour. Bending stiffness is also allowed for, using the
+                                                                                              600
+stiff-string reflection function described earlier [5, see Ap-
+                                                                   Q factor
+pendix]. Appropriate versions of this reflection function
+are applied to both portions of the string, on the “bridge”                                   400
+and “nut” sides of the bow. The measured value of bend-
+ing stiffness for this string is               Nm . The tor-
+                                                                                              200
+sional wavespeed at nominal string tension has been mea-
+sured at 1060 m/s, and the first few torsional modes of the
+string have been shown to have constant factors of ap-                                          0
+                                                                                                    0   5       10       15       20      25
+proximately 45 [19]. A suitable version of the constant-                                                         Mode number
+reflection function is used to simulate this behaviour. Fi-
+nally, the transverse wave impedance is 0.55 Ns/m, and the       Figure 4. (a) Frequency normalised by mode number for the first
+torsional impedance (measured tangentially at the string’s       25 transverse modes of a Dominant cello D string as measured
+surface) is 1.8 Ns/m.                                            (plot symbols ‘o’) and as given by the string model described in
+   The position of the bowed point on the string is de-          the text for           (‘+’) and        (‘x’). (b) Corresponding
+noted, as usual, by the dimensionless quantity , the frac-       data for the -factors of the same string modes. In both plots,
+tional distance of the “bow” from the bridge. Results will       every 5th symbol ‘x’ is missing because the corresponding mode
+be shown for a wide range of values of , in order to             has a node at this value of .
+plot “Schelleng diagrams”. This raises an issue not pre-
+viously addressed, of how accurately the stiff-string re-
+flection function works over such a wide range. This was         to simulate such a relatively high , and also of the filter
+tested by using a modified version of the bowing simu-           which must be applied to the stiff-string reflection func-
+lation program to generate the free impulse response of          tion, as described earlier [5] – throughout this work, an
+the string at different values, then analysing these as if       8th-order Butterworth filter with cutoff at 0.4 times the
+they were measured data to establish the frequencies and         Nyquist frequency was used. However, given the scatter
+damping factors of the first 25 modes. Results are plotted       of the measurements (arising from coupling to the cello
+in Figure 4, for at the extremes of the range of interest.       body vibration), the results seem sufficiently accurate for
+It is clear from Figure 4a that the results for frequencies      the present purpose. For the lower -value of the torsional
+are very little influenced by the value of , and that they       modes a much more accurate result is given by the simu-
+match the measured values well, so that this particular as-      lation, as was shown in reference [19].
+pect of the accuracy of simulation need cause no concern.           It should be noted that mode frequencies and -factors
+The measured frequencies show some significant pertur-           are not necessarily the best way to assess the accuracy of
+bations caused by coupling of the string to the instrument       the various reflection functions used here. The bow-string
+body. Figure 4b shows that the desired “constant- ” be-          interaction is sensitive to details of the temporal behaviour,
+haviour is only achieved to rather modest accuracy: low          which are only represented rather indirectly in the modal
+modes give values fairly close to the intended value 500,        description. However, it is reassuring to note that direct ob-
+but for higher modes the -factor decreases. Also, the            servations of the pluck response of a string [9] show excel-
+value varies significantly with the value of . This is a re-     lent agreement with the temporal details of an equivalent
+sult of the inherent limitations of the method when trying       simulation using the stiff-string reflection function.
+
+
+
+                                                                                                                                            359
+ACTA ACUSTICA UNITED WITH ACUSTICA                                              Woodhouse: Thermal friction model for bowing
+Vol. 89 (2003)
+
+
+2.3. Bowed string simulation
+The complete simulation model can now be assembled.                                               f
+At each time step, several convolution integrals are per-                                        µ(Τ) Ν
+formed. One is to calculate the current contact tempera-
+ture using equation (1), from which the current value of
+limiting friction force can be deduced using the curve of                                         O                 v
+Figure 3. Four convolutions with reflection functions give                       vh                          vb
+the amplitudes of the transverse and torsional waves in-
+coming to the contact point from the two sides. These four                                       −µ(Τ) Ν
+are added together to give , the total incident velocity.
+Finally, the new values of velocity of the string at the
+contact point, and of friction force , are deduced from
+the fact that they satisfy simultaneously the two equations       Figure 5. The “Friedlander construction” for finding the values
+                                                                  of and at a given time step as the intersection of two lines
+                                                           (4)    (shown ringed).
+
+
+and
+                                                                     plane by the results. A hysteresis loop is clearly visi-
+                                                           (5)    ble, traversed in the anticlockwise direction as expected
+                                                                  from the earlier qualitative account of the time delay inher-
+where        and     are the impedances of the string to trans-   ent in the thermal model, and as seen in measured results
+verse and torsional waves respectively,         is the normal     [9]. Notice that the effective coefficient of friction gets no
+bow force and             is the temperature-dependent fric-      higher than 0.77, much lower than the limiting coefficient
+tion coefficient plotted in Figure 3. (If contact area were       of sticking friction from the steady measurement of Fig-
+not assumed to scale linearly with normal force, equation         ure 1, because the contact temperature never falls below
+(5) would be modified to reflect the alternative scaling          17 above ambient. This value is similar to that shown in
+assumed.) These equations are solved by the “Friedlan-            Figure 2. Also similar to that figure, no part of the hystere-
+der construction” [20], as illustrated in Figure 5. Notice        sis loops follows the steady-sliding curve, shown dashed.
+that, whatever the value of , there is a unique and well-            For comparison, Figure 7 shows the results of a simu-
+defined intersection of the stepped line representing equa-       lation using the identical string model and bowing param-
+tion (5) and the sloping line representing equation (4). This     eters, but using the friction-curve model in place of the
+will lie on one of the horizontal portions of the friction        thermal model. The assumed friction curve is the curve-fit
+relation during slipping, or on the vertical portion during       to the measured results, equation (2). This model also pre-
+sticking. There is no need for any numerical tricks to round      dicts a Helmholtz motion under the assumed conditions,
+off the vertical sticking portion of the curve, as was neces-     but the waveform details are quite different: the edges of
+sary in the simulations of the earlier oscillator model [8].      the velocity pulse during slipping are steeper, and the am-
+Once and have been found, the new outgoing ampli-                 plitude of “Schelleng ripples” [1, 4] visible in the outgoing
+tudes of transverse and torsional waves can be calculated         velocity waveform (Figure 7b) is larger than with the ther-
+in the usual way [2, 3, 14]. The process then repeats for         mal model. The - plane (Figure 7c) this time shows all
+the next time step.                                               points lying on the assumed friction curve, as expected.
+   A first example of the output from this simulation pro-        The “missing” portion of the friction curve, at low sliding
+gram is shown in Figure 6. This shows the last two period-        speeds, corresponds to the portion which is leapfrogged
+lengths after a simulation of length 0.4 s (i.e. 59 period-       by the jumps resulting from the Friedlander construction
+lengths at the nominal 147 Hz), the string having started         [3, 20]. This case exhibits a high level of frictional hystere-
+at rest. It is reassuring to see that the new friction model      sis, indicated by the two sloping lines added to the plotted
+has produced a version of the familiar Helmholtz motion           points. The fact that the left-hand line crosses the slipping
+(see e.g. [1, 2]), characterised by a single episode of slip-     portion of the friction curve near the highest slipping ve-
+ping per cycle (shown by the waveform of surface veloc-           locity for this motion shows that the case studied has a
+ity in Figure 6a) and an outgoing velocity wave which is          parameter set making it very close to the Schelleng max-
+a sawtooth wave (see Figure 6b). In fact, as will be shown        imum bow force. This issue will be explored further in
+later, the set of parameters chosen here place this run in the    section 4, when the reason for choosing this particular pair
+middle of the normal playing range in parameter space.            of waveforms for a comparison between the two friction
+Figure 6c shows the temperature variation at the contact          models will be explained.
+associated with the vibration. The temperature varies dur-           Before proceeding any further with simulations, the
+ing each cycle in the range 17–31 above ambient, a range          question of convergence and choice of time step must be
+which is broadly compatible with direct measurements              addressed. Numerical experiments have been made, vary-
+of temperature rise during bowing reported by Pickering           ing the time step over a wide range for both friction mod-
+[21]. Finally, Figure 6d shows the path traced in the -           els. The conclusion is that the thermal model is much more
+
+
+
+360
+Woodhouse: Thermal friction model for bowing                                                                                    A CTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                                                                       Vol. 89 (2003)
+
+
+
+
+                              0.1                                                                       32
+
+                               0                                                                        30
+
+
+
+
+                                                                       Temperature above ambient (°C)
+                             -0.1                                                                       28
+
+                             -0.2                                                                       26
+
+
+  Velocity (m/s)
+                             -0.3                                                                       24
+
+                             -0.4                                                                       22
+
+                             -0.5                                                                       20
+
+                             -0.6                                                                       18
+
+                             -0.7                                                                       16
+                                    0   2   4   6      8    10   12                                       0     2           4       6       8         10    12
+  (a)                                           Time (ms)              (c)                                                          Time (ms)
+                              0.6                                                                       0.9
+
+                              0.5
+                                                                                                        0.8
+
+
+
+
+  Velocity to bridge (m/s)                                              Coefficient of friction µ
+                              0.4
+                                                                                                        0.7
+                              0.3
+                                                                                                        0.6
+                              0.2
+                                                                                                        0.5
+                              0.1
+
+                                                                                                        0.4
+                               0
+
+                             -0.1                                                                       0.3
+                                    0   2   4   6       8   10   12                                           -0.6   -0.5       -0.4 -0.3 -0.2       -0.1   0    0.1
+  (b)                                           Time (ms)              (d)                                                          Velocity (m/s)
+
+
+Figure 6. Helmholtz motion simulated using the thermal friction model as described in the text. (a) String velocity at the bowed point;
+(b) outgoing velocity wave towards the bridge; (c) contact temperature variation (in degrees above ambient); (d) force/velocity plane,
+together with the steady-sliding friction curve of Figure 1 (dashed line). This transient corresponds to the (10,10) point of Figure 9a,
+indexed from the lower left-hand corner.
+
+
+“benign” than the friction-curve model, an important fact             tional to the transverse force exerted on the instrument
+which will manifest itself in a number of ways later in this          bridge, which is significant because this is the waveform
+paper. For the parameter values used here, it was found               most readily measured in an experiment, using a piezo-
+that a time step of 20 s was sufficiently short to give well-         electric force sensor built into the string’s termination. Fig-
+converged results for the thermal model. For the friction-            ure 8a shows a “double-slipping” waveform, characteristic
+curve model matters are more complicated. As explained                of a normal force somewhat too low to sustain Helmholtz
+in earlier work [12], when the normal force is high enough            motion and associated with what is described by violin-
+to provoke hysteretic jumps in the friction force the pre-            ists as “surface sound”. The waveform is periodic, but has
+dictions can exhibit sensitive dependence on initial condi-           two slips per cycle rather than one as in the Helmholtz
+tions, and on noise from rounding errors. This means that             motion, signalled by the two abrupt downward steps in the
+no time step is short enough to guarantee convergence in              waveform. At even lower normal force, the number of slips
+every case. Experiments reveal that a time step of 5 s is             per cycle increases, until at a sufficiently low normal force
+short enough that the qualitative results are predicted ro-           sticking no longer occurs at all. Below this force the state
+bustly, even though individual transient details are not nec-         of steady slipping becomes stable, and the initial motion
+essarily captured correctly. These two values of time step,           from the switch-on bowing transient simply decays away
+for the respective models, are used throughout this paper.            with time.
+   Figure 8 shows some examples of other waveforms sim-                  When the normal force is too high for the Helmholtz
+ulated with the thermal model. All are qualitatively famil-           motion, one of two things generally happens. The model
+iar, from observations and from earlier simulations, sug-             may predict non-periodic “raucous” motion (not illus-
+gesting that the thermal model gives predictions which are            trated), or it may predict periodic (or nearly-periodic) mo-
+at least generically plausible. In each case, waveforms of            tion with a period much longer than the natural period
+outgoing velocity are plotted. This waveform is propor-               of the string. Such motions have been dubbed “anoma-
+
+
+
+                                                                                                                                                                       361
+ACTA ACUSTICA UNITED WITH ACUSTICA                                                   Woodhouse: Thermal friction model for bowing
+Vol. 89 (2003)
+
+
+
+
+                              0.1
+
+                               0
+
+                             -0.1
+
+                             -0.2
+
+
+
+  Velocity (m/s)
+                             -0.3
+
+                             -0.4
+
+                             -0.5
+
+                             -0.6
+
+                             -0.7
+
+                             -0.8
+                                    0   2   4   6      8    10   12
+  (a)                                           Time (ms)             (c)
+                              0.6
+
+                              0.5
+
+                              0.4
+
+
+
+
+  Velocity to bridge (m/s)
+                              0.3
+
+                               0.2
+
+                              0.1
+
+                                0
+                                                                      Figure 7. Helmholtz motion simulated using the friction-curve
+                             -0.1                                     model using identical parameters to Figure 6. (a) String veloc-
+                             -0.2                                     ity at the bowed point; (b) outgoing velocity wave towards the
+                                                                      bridge; (c) force/velocity plane, together with lines indicating
+                             -0.3                                     the jumps arising from the Friedlander construction. This tran-
+                                    0   2   4   6      8    10   12
+  (b)                                           Time (ms)             sient corresponds to the (10,10) point of Figure 10a.
+
+
+
+lous low frequencies” or ALFs [11, 22, 23]. An example                transient bowing gestures. For the present purpose, to ex-
+is shown in Figure 8b: in this case the period is approxi-            amine whether and when the thermal model gives qualita-
+mately three times the natural string period (note the dif-           tively different predictions from the friction-curve model,
+ferent time scale in this figure). These ALFs are occasion-           a simpler and better-understood parameter subspace seems
+ally used for deliberate musical effect, by sufficiently ac-          appropriate: the Schelleng diagram. Schelleng [1] calcu-
+complished players (e.g. [24]). Finally, it can sometimes             lated formulae for the maximum and minimum bow forces
+happen that, under conditions when a Helmholtz motion                 between which the Helmholtz motion of the string is pos-
+might have been expected, a periodic motion different                 sible, and plotted the results in the plane of force against
+from those shown so far arises at (or near) the string’s nat-         bowing position . Schelleng’s calculations, and their ex-
+ural period. These “higher types” were analysed and clas-             tensions to more realistic string models [6], are based ex-
+sified by Raman in a monumental work early in the last                plicitly on the friction-curve model, and it is natural to ask
+century [25]. Higher types arise most often when the bow-             whether the thermal model predicts similar behaviour.
+ing position is not close to the end of the string, i.e. when            Accordingly, the simulation programs were run for a
+is not small. A particularly common type was analysed by              grid of points covering the relevant range of this param-
+Lawergren [26], and dubbed by him “S motion”. A simu-                 eter plane. The points were chosen to be logarithmically
+lated example is shown in Figure 8c.                                  spaced on both axes, since the standard Schelleng diagram
+                                                                      is plotted on log-log axes to bring out the different power-
+                                                                      law relations: Schelleng’s minimum bow force is propor-
+3. Schelleng diagrams                                                 tional to     , while his maximum force is proportional to
+                                                                           . To present results in a useful form, it is also neces-
+For a more thorough and systematic comparison of the two              sary to classify what kind of motion the string is executing
+friction models, it is necessary to compare the predictions           at the end of the period of simulation. This was done in
+over a range of parameter space rather than simply looking            an earlier study [12], but because it is intended in later
+at individual cases. Various subsets of bowing parameter              work to compare these computations with corresponding
+space have been examined in the past by systematic simu-              experimental results it is desirable that the classification
+lation [6, 7, 12, 13], but these have all concerned details of        method should use only information which could be mea-
+
+
+
+362
+Woodhouse: Thermal friction model for bowing                                                                                       A CTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                                                                          Vol. 89 (2003)
+
+
+
+
+                              0.25                                                                                  0.35
+
+                               0.2                                                                                   0.3
+
+                                                                                                                    0.25
+
+
+
+
+  Velocity to bridge (m/s)
+                              0.15
+
+
+
+
+                                                                                        Velocity to bridge (m/s)
+                                                                                                                     0.2
+                               0.1
+                                                                                                                    0.15
+                              0.05
+                                                                                                                     0.1
+                                    0
+                                                                                                                    0.05
+
+                             -0.05                                                                                     0
+
+                              -0.1                                                                                 -0.05
+                                        0        5           10          15        20                                      0   5           10        15          20
+  (a)                                                     Time (ms)                     (c)                                             Time (ms)
+                                3
+
+                              2.5
+
+
+
+
+  Velocity to bridge (m/s)
+                                2
+
+                              1.5
+
+                                1
+
+                              0.5
+                                                                                        Figure 8. Examples of other waveforms simulated using
+                                0                                                       the thermal friction model: (a) double-slipping motion; (b)
+                                                                                        “anomalous low frequency” (note different time scale); (c) “S
+                             -0.5
+                                    0       5   10   15      20     25   30   35   40   motion”. These waveforms correspond to the following points
+  (b)                                                     Time (ms)                     in Figure 9a: (a) (10,8); (b) (10,18); (c) (18,11).
+
+
+
+sured from a real string, so a new approach has been de-                                erally longer transients and a more irregular pattern which
+veloped which is based entirely on analysis of the wave-                                would presumably appear confusingly inconsistent to a
+form of outgoing velocity towards the bridge, as plotted                                player.
+in Figures 6b, 7b and 8. The algorithm is described in the                                 Figure 9a and, less clearly, Figure 10a show traces of
+Appendix.                                                                               the wedge-shaped region of Helmholtz motion predicted
+   Results are shown in Figure 9a, for the thermal fric-                                by Schelleng. Lines are superimposed on the figures, indi-
+tion model and a string which starts at rest (i.e. initialised                          cating the predicted slopes of      and     for the two force
+with zero displacement and velocity everywhere). Dif-                                   limits. The vertical positions of these lines are arbitrarily
+ferent plotted symbols denote the outcome identified by                                 chosen, near the observed boundaries of Helmholtz mo-
+the classification algorithm (see caption for details). For                             tion in Figure 9a, so that only the slopes of the two lines
+the cases which eventually produced Helmholtz motion,                                   should be regarded as having any theoretical significance.
+the transient length was also computed, and is plotted                                  The immediate impression given by a comparison of the
+in Figure 9b. Corresponding results computed with the                                   two figures is that Schelleng’s pattern appears more clearly
+friction-curve model using otherwise identical parameters                               with the thermal model, where it has no theoretical sup-
+are shown in Figure 10.                                                                 port as yet, than with the friction-curve model for which
+   It is immediately apparent on comparing these figures                                Schelleng’s limits were derived. The differences between
+that the region of Helmholtz motion is significantly bigger                             the two models are sufficiently striking that it should prove
+for the thermal model – in other words, this model gives a                              straightforward to determine which is better supported by
+bowed string which is “easier to play” than that using the                              experimental results. Such a comparison would provide a
+friction-curve model. The transient lengths tell a similar                              key piece of evidence for the rival frictional theories.
+story. For each value of , the thermal model shows long                                    One possible reason for the non-appearance of Schel-
+transients at the lowest force for which Helmholtz mo-                                  leng’s predicted boundary lines with the friction-curve
+tion occurs, as double-slipping motion takes a long time                                model is that Schelleng’s limits apply to the maximum and
+to give way to Helmholtz motion. For almost all values                                  minimum forces between which it is possible to maintain
+the transients shorten rapidly and consistently as force in-                            a Helmholtz motion, not necessarily to the region in which
+creases. By contrast, the friction-curve model shows gen-                               a particular bowing transient leads to a Helmholtz motion
+
+
+
+                                                                                                                                                                      363
+ACTA ACUSTICA UNITED WITH ACUSTICA                                                                                  Woodhouse: Thermal friction model for bowing
+Vol. 89 (2003)
+
+
+
+
+                      10                                                                               10
+
+                       3                                                                                3
+
+
+
+
+  Normal force (N)                                                                 Normal force (N)
+                       1                                                                                1
+
+                      0.3                                                                              0.3
+
+                      0.1                                                                              0.1
+
+                     0.03                                                                             0.03
+
+                     0.01                                                                             0.01
+                            0.02   0.03   0.05 0.07 0.1          0.2   0.3 0.4                               0.02     0.03   0.05 0.07 0.1         0.2   0.3 0.4
+                                                Bow position β                                                                    Bow position β
+
+
+
+
+Figure 9. (a) Schelleng diagram computed using the thermal fric-                 Figure 10. Results corresponding to Figure 9, obtained using the
+tion model. Plotted symbols indicate the oscillation regime found                friction-curve model with otherwise identical parameters. The
+at the end of each simulation run (of length 0.4 s): Helmholtz                   transients range up to 53 period-lengths.
+motion (square); multiple-slipping motion (x); decaying motion
+(dot); aperiodic motion (+); ALF (triangle); Raman “higher type”
+(star). Solid lines indicate slopes of     and     in this log-log
+plot, corresponding to Schelleng’s predictions for maximum and
+                                                                                                       10
+minimum bow force respectively. (b) Transient length (in num-
+ber of periods) for the runs which showed Helmholtz motion in
+(a). The transients range up to 53 period-lengths.                                                       3
+
+
+
+
+                                                                                   Normal force (N)
+                                                                                                         1
+
+
+                                                                                                       0.3
+rather than some other motion. To get closer to this situa-
+tion, another set of simulations was carried out in which                                              0.1
+the program was initialised with a “typical” Helmholtz
+motion rather than started from rest. The results are shown                                           0.03
+
+in Figure 11 (for the thermal model) and Figure 12 (for
+                                                                                                      0.01
+the friction-curve model). There are many more squares
+                                                                                                             0.02    0.03    0.05 0.07 0.1         0.2   0.3 0.4
+in the plots, as one would expect. However, neither fric-                                                                         Bow position β
+tion model gives results which match the slopes of Schel-
+leng’s lines more accurately. A similar pattern of change                        Figure 11. Schelleng plot for the thermal model, as Figure 9a ex-
+is seen with both friction models. For a given the max-                          cept that the string was initialised with Helmholtz motion rather
+imum force for Helmholtz motion is almost unchanged,                             than starting from rest.
+but the minimum force is consistently lower, especially at
+larger values of . The result is that if one tries to fit a
+straight line to the minimum force threshold the slope is                        and 10 the apparent slope was less steep than the predic-
+much steeper than the predicted      , whereas in Figures 9                      tion.
+
+
+
+364
+Woodhouse: Thermal friction model for bowing                                                                              A CTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                                                                 Vol. 89 (2003)
+
+
+
+
+                      10                                                                              10
+
+
+                       3                                                                               3
+
+
+
+
+                                                                                  Normal force (N)
+                                                                                                       1
+
+
+
+  Normal force (N)
+                       1
+
+
+                      0.3                                                                             0.3
+
+
+                      0.1                                                                             0.1
+
+
+                     0.03                                                                            0.03
+
+                     0.01                                                                            0.01
+
+                            0.02   0.03   0.05 0.07 0.1         0.2   0.3 0.4                               0.02   0.03   0.05 0.07 0.1         0.2   0.3 0.4
+                                               Bow position β                                                                  Bow position β
+
+
+Figure 12. Schelleng plot for the friction-curve model, as Fig-                 Figure 13. Schelleng plot for the thermal model, as Figure 9a
+ure 10a except that the string was initialised with Helmholtz mo-               except that the torsional impedance of the string was increased
+tion rather than starting from rest.                                            by a factor of     to inhibit torsional motion.
+
+
+
+   The probable explanation for the steep slope lies in the                     that the Helmholtz corner, when it arrives at the bow at
+“ripples” exhibited by waveforms such as Figures 6b and                         the end of the sticking phase, needs to produce a sufficient
+7b. The ideal Helmholtz motion, which was the basis of                          force jump to ensure a transition from sticking to slipping.
+Schelleng’s calculation, would show a perfect sawtooth                          For a given string model, and assuming ideal Helmholtz
+wave. Schelleng’s argument started from this ideal wave-                        motion, the force jump from the Helmholtz corner will
+form, and used it to calculate the fluctuating force at the                     not depend on the friction model. However, to deduce a
+bow during the sticking phase of the motion. When that                          maximum bow force requires knowledge of the value of
+additional force reaches the limit of sticking friction the                     limiting friction, and hence again the temperature.
+Helmholtz motion must break down, and this is the min-                             The main conclusion from these results is that the ther-
+imum force criterion. In practice, ripples produce an ex-                       mal model produces more “benign” behaviour than the
+tra component of force fluctuation, and will thus tend to                       friction-curve model. This, in a sense, continues a progres-
+raise the minimum force. Ripples tend to be bigger when                         sion in bowed-string modelling. The earliest model was
+the normal force is higher, because they are excited by                         the Raman/Friedlander model, which used the friction-
+the fluctuations of friction force during stick-slip transi-                    curve model together with an assumption of an ideal
+tions and these fluctuations can be expected to increase                        string. This produced results which were very badly be-
+with higher normal force. Ripples are thus likely to have                       haved: indeed, Friedlander proved [20] that within this
+a bigger influence on minimum bow force at low . If the                         model all periodic solutions were unstable. When the
+force threshold is raised above Schelleng’s prediction by                       rounded-corner model was introduced, first by Cremer
+an amount which increases at small , the result will be                         [27] for periodic solutions and then by McIntyre and
+a steeper slope in the Schelleng diagram, as seen in the                        Woodhouse [3] for transients, much better behaviour was
+computed results.                                                               found, and stable periodic solutions were possible. How-
+   It is less obvious why Schelleng’s limits seem to work                       ever, the behaviour was still quite “twitchy”. The ther-
+so well, at least qualitatively, for the thermal friction                       mal friction model produces a further improvement in this
+model. The argument outlined above for minimum bow                              regard. Empirically, the computed results seem to show
+force is still relevant, but to apply it quantitatively to this                 that the phase lag inherent in the thermal model pro-
+case it would be necessary to calculate the temperature                         duces qualitatively similar effects to using broader reflec-
+variation from the assumed Helmholtz motion in order to                         tion functions (i.e. more high-frequency damping). In par-
+find the appropriate value of limiting friction. This calcu-                    ticular, varying the thermal parameter       makes changes
+lation has no simple closed-form answer, mainly because                         in the waveforms which are very reminiscent of varying
+of the awkward form of the Green’s function            , espe-                  the amount of “corner-rounding”. Even without quantita-
+cially for the moving surface, the “bow”. Of course the                         tive experimental data, the smoother behaviour of the ther-
+temperature could be computed numerically from an as-                           mal model seems more in accord with the experiences of
+sumed Helmholtz motion, but this would amount to a very                         string players.
+similar calculation to what has already been done to de-                           One significant manifestation of this smoother beha-
+termine the Schelleng diagram, and would not add much                           viour concerns the influence of torsional string motion.
+theoretical insight. Similar comments apply to the maxi-                        When the early bowed-string models, described above,
+mum bow force. Schelleng’s argument is based on the fact                        were first used, they frequently exhibited instability. This
+
+
+
+                                                                                                                                                            365
+ACTA ACUSTICA UNITED WITH ACUSTICA                                                                               Woodhouse: Thermal friction model for bowing
+Vol. 89 (2003)
+
+
+was traced to the fact that subharmonic perturbations to
+the Helmholtz motion could grow [4]. To stop this, it was                                           0.3
+very important in those models to include the effect of tor-
+sional motion of the string, because torsional modes have                                          0.25
+much higher damping than transverse modes and this ex-
+
+
+
+                                                                   Velocity to bridge (m/s)
+tra dissipation was sufficient to stabilise the subharmon-                                          0.2
+ics. This important role of torsion has become so familiar
+that it came as a surprise to find that the thermal friction                                       0.15
+model did not need this extra stabilising influence, and in
+fact displays behaviour remarkably insensitive to torsion                                           0.1
+[28]. Figure 13 shows results which are directly compara-
+ble to Figure 9a, the only difference being that the torsional                                     0.05
+impedance of the string has been increased by a factor of
+      to inhibit any torsional motion. A few symbols are                                                0
+                                                                                                            0         0.02      0.04        0.06         0.08
+different between the two plots, but in general the simi-                                                                           Time (s)
+larity is very striking. Even more striking, perhaps, is the
+comparison shown in Figure 14. This shows the first few          Figure 14. Initial transients of outgoing velocity waves towards
+period-lengths of a typical transient (described in detail in    the bridge (proportional to “bridge force”) for a matching pair of
+the figure caption), with and without the modified torsional     points from Figures 9a (solid line) and 13 (dashed line): the cho-
+impedance. It is immediately apparent that torsion is hav-       sen point is the (10,10) point in the grid plotted in the Schelleng
+ing a very tiny influence here, and indeed one would guess       diagrams. The string started from rest in both cases.
+that the entire significance of torsion in this model may be
+less than that of other factors which have been omitted or
+treated in an approximate manner. (Note that the waveform
+plotted in this figure is outgoing velocity, proportional to                                        6
+“bridge force”. States of sticking and slipping cannot be
+                                                                                                    5
+distinguished clearly from this waveform, apart from the
+initial sticking interval leading to the steep “ramp” seen in                                       4
+
+
+
+
+                                                                            Period extension (%)
+the first few ms of the plot. Helmholtz motion would ap-
+pear as a sawtooth waveform, hints of which are beginning                                           3
+to form by the right-hand edge of the plot.)
+                                                                                                    2
+
+                                                                                                    1
+4. Flattening
+                                                                                                    0
+Another bowed-string phenomenon which might provide
+useful evidence to discriminate between the different fric-                                        -1
+                                                                                                        0       0.2   0.4    0.6   0.8      1      1.2    1.4   1.6
+tion models is the “flattening effect”. If a Helmholtz mo-                                                                    Normal force (N)
+tion is established on a string and the bow force is slowly
+increased, then the pitch of the note generally falls. An un-
+                                                                 Figure 15. Percentage flattening for Helmholtz motion as a func-
+acceptable level of this flattening can be a factor which in     tion of normal force, for the thermal friction model (solid line),
+practice governs the highest useful bow force. The flatten-      the thermal model with torsion inhibited (dashed line), and the
+ing effect was first explained in terms of the friction-curve    friction-curve model (circles). In each case            (the 10th
+model [3], as being a result of the hysteresis loop arising      value in the Schelleng grids).
+from the asymmetric jumps associated with the Friedlan-
+der construction, as indicated in Figure 7c. This explana-
+tion suggests that at low bow forces there might be no           centage period extension relative to the nominal period,
+flattening, and that there will be a threshold of bow force      for Helmholtz motion at                 (the 10th value in the
+when jumps in the - plane first become necessary, lead-          Schelleng diagram grids). The period rises linearly with
+ing to a threshold bow force for flattening.                     normal force until it has increased by about 2% (one third
+   It is not immediately apparent that the thermal model         of a semitone), at which time large fluctuations occur as
+will predict flattening at all – there are no jumps in this      the vibration regime changes, signalling that the maximum
+model. However, it has already been seen that the model          bow force has been reached. The pattern contrasts with the
+leads to a hysteresis loop in the - plane. Boutillon [10]        corresponding results for the friction-curve model, plotted
+has described an approach to the flattening effect based         as circles. Here, a threshold for flattening is seen, followed
+on harmonic balance, which suggests that any such hys-           by rather rapid period increase until, for this model, max-
+teresis loop traversed in the anticlockwise sense should         imum bow force is reached at a much lower force around
+lead to flattening. This expectation is borne out by sim-        0.7 N. Notice that the two models have very similar lev-
+ulation results. The solid line in Figure 15 shows the per-      els of flattening at the last of the plotted circles: these are
+
+
+
+366
+Woodhouse: Thermal friction model for bowing                                            A CTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                               Vol. 89 (2003)
+
+
+the two cases whose waveforms were shown in Figures 6             is possible. The other is the “flattening effect”, whereby
+and 7, since they give a close and fair comparison between        the pitch of a bowed note may fall as normal bow force is
+the two friction models. It is now clear that Figure 7 did        increased.
+indeed show a case very close to maximum bow force for               The main effect noted in all the results presented here is
+the friction-curve model, as remarked earlier.                    that the thermal friction model is more “benign” than the
+   The dashed line in Figure 15 shows the results for the         older friction-curve model. Waveforms depend less criti-
+thermal model with torsion suppressed by increasing the           cally on the precise details of the bowing gesture assumed,
+torsional impedance as in Figures 13, 14. This follows            the Helmholtz motion of the string is elicited more readily,
+the solid line closely at low normal forces, then jumps           and the initial transients tend to be shorter and more reg-
+abruptly away at a force around 0.9 N. The lines than re-         ular in structure. As a related phenomenon, the computer
+main parallel until they both start large fluctuations at the     simulations gave well-converged results with a longer time
+same force around 1.4 N. This unexpected effect of torsion        step than was necessary with the friction-curve model.
+is not fully understood. What seems to be happening where         Torsional motion of the string, necessary in earlier models
+the jump occurs is that the waveforms with and without            to produce stable periodic motion with realistic parameter
+torsion are just sufficiently different that for the no-torsion   values, has only a very minor influence on behaviour with
+case a small second slip occurs. This changes the pattern         the new friction model. At least at a qualitative level, this
+of temperature variation, and hence the shape of the hys-         more benign behaviour seems to match the experience of
+teresis loop, and hence the degree of flattening.                 string players better than the more “jumpy” behaviour of
+   The main conclusion from Figure 15 is that the two fric-       the friction-curve model. Whether this impression will be
+tion models predict quite different patterns of flattening,       vindicated by quantitative comparisons with experiments
+of a kind which one might hope to be able to discrimi-            remains to be seen.
+nate clearly in experimental results. Such data as already           The results on flattening are more equivocal. The ther-
+exists [11, 29] shows that, at least sometimes, behaviour         mal model predicts flattening which increases linearly
+is seen which exhibits a threshold more reminiscent of            with normal force. The friction-curve model predicts a
+the friction-curve model than the thermal model. How-             threshold of force before flattening begins, and there is
+ever, none of that data is strictly comparable with the pre-      some evidence that this might be a more accurate descrip-
+dictions here because the string properties were different.       tion of what happens in practice. If that suspicion is con-
+What is needed is a careful experiment using a Dominant           firmed by more careful measurements, it may point to a
+cello string, bowed by a rosin-coated rod, which can be           need for a friction model which combines elements of
+compared directly with the predictions here.                      both models presented here. The evidence that tempera-
+                                                                  ture plays a role in the friction of rosin is very strong, but
+                                                                  that does not mean that sliding speed may not also have a
+5. Conclusions                                                    direct influence. Rosin is, after all, a viscoelastic mixture
+                                                                  of organic materials, and it would not be surprising if it
+The context of this paper is that models of the bowed
+                                                                  exhibited rate-dependent behaviour.
+string are reaching a sufficiently sophisticated state that
+it has become sensible to seek detailed, quantitative agree-
+                                                                  Appendix
+ment with experiment. The target for the next few years is
+to make a definitive comparison between theory and ex-            Automatic classification of vibration regimes
+periment, and then fine-tune the theoretical model so that
+transient details are convincingly reproduced under a wide        The various vibration regimes described in section 2.3,
+range of conditions. It will then be justified to return to the   some of which were illustrated in Figures 6, 7 and 8, can
+kind of systematic simulations described earlier [6, 7, 12],      be classified with reasonable reliability by a method based
+to do design studies in the computer to assess the influ-         only on the waveform of velocity sent out from the bowed
+ence on “playability” of various parameters governing the         point, which is proportional to the waveform of transverse
+behaviour of the string, bow, bridge and body.                    force exerted by the string on the bridge of the instrument.
+   It has been argued here that the main uncertainty may          The first stage of the process is to calculate the autocor-
+at present lie in the theoretical description of the frictional   relation function of a few cycles of the waveform. This
+force which drives the string. A model in which the friction      allows three cases to be distinguished: near-periodic wave-
+force is determined by temperature in the contact zone,           forms at or close to the nominal period of the string, near-
+rather than by sliding speed, has been proposed on the            periodic waveforms at other periods (e.g. ALFs), and non-
+basis of experimental work on a different stick-slip os-          periodic waveforms (“raucous” motion).
+cillator. Results have been presented here to show some              The next stage is further classification of the first group
+important consequences of this model when it is used in           of these waveforms. If the motion has very small am-
+bowed-string simulations. Two particular aspects of be-           plitude, decaying motion is diagnosed. Otherwise, the
+haviour have been highlighted, both of which lend them-           Helmholtz motion and the other periodic regimes to be
+selves to relatively straightforward experimental test. One       identified are all characterised by sawtooth-like wave-
+aspect is the “Schelleng diagram”, the region of steady-          forms. The “ramp” slope of the sawtooth is determined
+bowing parameter space within which a Helmholtz motion            kinematically by the bow speed and the bow position ,
+
+
+
+                                                                                                                           367
+ACTA ACUSTICA UNITED WITH ACUSTICA                                                Woodhouse: Thermal friction model for bowing
+Vol. 89 (2003)
+
+
+as was first realised by Raman [25]. Knowing these pa-              [10] X. Boutillon: Analytical investigation of the flattening ef-
+rameters, therefore, this slope can be subtracted, leaving               fect. J. Acoust. Soc. Amer. 90 (1991) 754–763.
+a staircase-like waveform. The effect of Schelleng ripples          [11] R. T. Schumacher: Measurements of some parameters of
+can be reduced by applying a moving average with period                  bowing. J. Acoust. Soc. Am. 96 (1994) 1985–1998.
+                                                                    [12] R. T. Schumacher, J. Woodhouse: The transient behaviour
+   times the string’s period. A histogram of the sampled
+                                                                         of models of bowed-string motion. Chaos 5 (1995) 509–
+values of this staircase is now calculated, which will ex-
+                                                                         523.
+hibit peaks corresponding to each ramp section of the orig-         [13] A. Askenfelt, K. Guettler: The bouncing bow: an experi-
+inal waveform. If the result shows just one large peak per               mental study. J. Catgut Acoust. Soc. 3 (1998) 3–8.
+period, the motion is classified as Helmholtz. Other pat-           [14] M. E. McIntyre, R. T. Schumacher, J. Woodhouse: On the
+terns of peaks can be analysed to reveal multiple-slipping               oscillations of musical instruments. J. Acoust. Soc. Amer.
+motion, S-motion, and other Raman “higher types”. The                    74 (1983) 1325–1345.
+exact details involve choosing threshold values for the var-        [15] F. P. Bowden, T. P. Hughes: The mechanism of sliding on
+ious tests, and these were fine-tuned by trial and error. The            ice and snow. Proc. Royal Soc. London A 172 (1939) 290–
+resulting algorithm seems to perform robustly on all un-                 298.
+ambiguous waveforms. Naturally the result is less robust            [16] K. L. Johnson: Contact mechanics. Cambridge University
+                                                                         Press, 1985. See Chapter 13.
+near boundaries between different regimes, where it is of-
+                                                                    [17] R. Pitteroff, J. Woodhouse: Mechanics of the contact area
+ten not clear what the “correct” classification should be.
+                                                                         between a violin bow and a string, Part II: simulating the
+   For the purposes of the Schelleng diagram calculations                bowed string. Acustica - acta acustica 84 (1998) 744–757.
+this classification routine was executed every five nomi-           [18] R. Pitteroff, J. Woodhouse: Mechanics of the contact area
+nal period-lengths, so that the length of the transient be-              between a violin bow and a string, Part III: parameter de-
+fore Helmholtz motion became established could be found                  pendence. Acustica - acta acustica 84 (1998) 929–946.
+where appropriate.                                                  [19] J. Woodhouse, A. R. Loach: The torsional behaviour of
+                                                                         cello strings. Acustica - acta acustica 85 (1999) 734–740.
+Acknowledgement                                                     [20] F. G. Friedlander: On the oscillations of the bowed string.
+                                                                         Proc. Cambridge Phil. Soc. 49 (1953) 516–530.
+It is a pleasure to acknowledge useful discussions on
+                                                                    [21] N. C. Pickering: The bowed string. Ameron, Mattituck,
+this material with Ken Johnson, Bob Schumacher, Julius
+                                                                         New York, 1992.
+Smith, Stefania Serafin and Paul Galluzzo.                          [22] R. J. Hanson, A. J. Schneider, F. W. Halgedahl: Anomalous
+                                                                         low-pitched tones from a bowed violin string. J. Catgut
+References
+                                                                         Acoust. Soc. 2 (1994) 1–7.
+ [1] J. C. Schelleng: The bowed string and the player. J. Acoust.   [23] K. Guettler: Wave analysis of a string bowed to anomalous
+     Soc. Am. 53 (1973) 26–41.                                           low frequencies. J. Catgut Acoust. Soc. 2 (1994) 8–14.
+ [2] L. Cremer: The physics of the violin. MIT Press, Cam-          [24] M. Kimura: How to produce subharmonics on the violin. J.
+     bridge MA, 1985.                                                    New Music Research 28 (1999) 178–184.
+ [3] M. E. McIntyre, J. Woodhouse: Fundamentals of bowed-           [25] C. V. Raman: On the mechanical theory of vibrations of
+     string dynamics. Acustica 43 (1979) 93–108.                         bowed strings. Indian Assoc. Cult. Sci. Bull. 15 (1918) 1–
+ [4] M. E. McIntyre, R. T. Schumacher, J. Woodhouse: Aperi-              158.
+     odicity in bowed-string motion. Acustica 49 (1981) 13–32.      [26] B. Lawergren: On the motion of bowed violin strings.
+ [5] J. Woodhouse: On the playability of violins. Part I: reflec-        Acustica 44 (1980) 194–206.
+     tion functions. Acustica 78 (1993) 125–136.                    [27] L. Cremer: Der Einfluß des Bogendrucks auf die selbster-
+ [6] J. Woodhouse: On the playability of violins. Part II: min-          regten Schwingungen der gestrichenen Saite. Acustica 30
+     imum bow force and transients. Acustica 78 (1993) 137–              (1974) 119.
+     153.                                                           [28] S. Serafin, J. O. Smith, J. Woodhouse: An investigation of
+ [7] R. T. Schumacher, J. Woodhouse: Computer modelling of               the impact of torsion waves and friction characteristics on
+     violin playing. Contemporary Physics 36 (1995) 79–92.               the playability of virtual bowed strings. Proc. 1999 IEEE
+ [8] J. H. Smith, J. Woodhouse: The tribology of rosin. J. Mech.         Workshop on Applications of Signal processing to Audio
+     Phys. Solids 48 (2000) 1633–1681.                                   and Acoustics, IEEE Press, New York, 1999, W99/1–4.
+ [9] J. Woodhouse, R. T. Schumacher, S. Garoff: Reconstruc-         [29] C.-A. Faure, X. Boutillon: Determination et etude experi-
+     tion of bowing point friction force in a bowed string. J.           mentale de la frequence d’oscillation d’une corde frottée.
+     Acoust. Soc. Amer. 108 (2000) 357–368.                              C. R. Acad. Sci. Paris 317 (1993) 1377–1382.
+
+
+
+
+368
+

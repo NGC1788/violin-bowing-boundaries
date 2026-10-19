@@ -1,0 +1,30 @@
+A2 0.05 m/s: lag 4 windows (0.2 s, non-overlapping); force bins of F(t+0.2)/F_E,cur
+  t+0.2 in [0.0,0.8):
+     F/F_E [0.00,0.35): from nonH n= 271 up   3 (0.011) | from H n=   0 down   0 (0.000)
+     F/F_E [0.35,0.65): from nonH n= 345 up   5 (0.014) | from H n=   7 down   1 (0.143)
+     F/F_E [0.65,1.0): from nonH n= 270 up   5 (0.019) | from H n=  34 down   0 (0.000)
+     F/F_E [1.00,1.5): from nonH n= 205 up  15 (0.073) | from H n=  97 down   0 (0.000)
+     F/F_E [1.50,3): from nonH n= 118 up  17 (0.144) | from H n= 327 down   0 (0.000)
+     F/F_E [3.00,inf): from nonH n=  47 up   9 (0.191) | from H n= 943 down   1 (0.001)
+  t+0.2 in [0.8,2.5):
+     F/F_E [0.00,0.35): from nonH n=1010 up  15 (0.015) | from H n=  62 down   9 (0.145)
+     F/F_E [0.35,0.65): from nonH n= 586 up  17 (0.029) | from H n= 111 down   5 (0.045)
+     F/F_E [0.65,1.0): from nonH n= 295 up  13 (0.044) | from H n= 203 down   0 (0.000)
+     F/F_E [1.00,1.5): from nonH n= 142 up   9 (0.063) | from H n= 305 down   1 (0.003)
+     F/F_E [1.50,3): from nonH n=  79 up   5 (0.063) | from H n= 668 down   0 (0.000)
+     F/F_E [3.00,inf): from nonH n=  49 up   1 (0.020) | from H n=1820 down   1 (0.001)
+A1 0.05 m/s: lag 4 windows (0.2 s, non-overlapping); force bins of F(t+0.2)/F_E,cur
+  t+0.2 in [0.0,0.8):
+     F/F_E [0.00,0.35): from nonH n= 959 up   4 (0.004) | from H n=   8 down   5 (0.625)
+     F/F_E [0.35,0.65): from nonH n= 279 up   2 (0.007) | from H n=   6 down   3 (0.500)
+     F/F_E [0.65,1.0): from nonH n= 182 up   5 (0.027) | from H n=  39 down   0 (0.000)
+     F/F_E [1.00,1.5): from nonH n=  83 up  12 (0.145) | from H n= 150 down   1 (0.007)
+     F/F_E [1.50,3): from nonH n=  36 up   3 (0.083) | from H n= 363 down   1 (0.003)
+     F/F_E [3.00,inf): from nonH n=  33 up   5 (0.152) | from H n= 547 down   2 (0.004)
+  t+0.2 in [0.8,2.5):
+     F/F_E [0.00,0.35): from nonH n=1938 up   3 (0.002) | from H n=   4 down   4 (1.000)
+     F/F_E [0.35,0.65): from nonH n= 562 up   6 (0.011) | from H n=  10 down   3 (0.300)
+     F/F_E [0.65,1.0): from nonH n= 292 up  18 (0.062) | from H n= 141 down   0 (0.000)
+     F/F_E [1.00,1.5): from nonH n=  78 up  18 (0.231) | from H n= 390 down   2 (0.005)
+     F/F_E [1.50,3): from nonH n=  40 up   6 (0.150) | from H n= 751 down   2 (0.003)
+     F/F_E [3.00,inf): from nonH n=  52 up   4 (0.077) | from H n=1120 down   2 (0.002)

@@ -1,0 +1,121 @@
+{
+  "status": "post hoc; D_T2 already scored once; no rescoring, no new archive",
+  "mean_lnZ_T1": 0.0600705662069337,
+  "lnZ": {
+    "A1": 0.05751390620060664,
+    "A2": 0.05751390620060664,
+    "B1": 0.09512834509157737,
+    "C1": 0.051168286574399424,
+    "D1": 0.0390283869674784,
+    "A_T2": 0.17260786460631544,
+    "B_T2s1": 0.1738692699789707,
+    "B_T2r1": 0.1738692699789707,
+    "B_T2r2": 0.1738692699789707,
+    "C_T2": 0.10921308497331624,
+    "D_T2": 0.18407002732807146
+  },
+  "lnZ_range_all_strings": [
+    0.0390283869674784,
+    0.18407002732807146
+  ],
+  "T1_between_diagram_SD_of_strict_residual": 0.11751854983489819,
+  "per_diagram": {
+    "A1": {
+      "strict_Z1_error": -0.0797411103900828,
+      "fair_noZ_error": -0.08229777039640987,
+      "Z2_error": -0.07718445038375574,
+      "leverage_lnZ_minus_T1mean": -0.002556660006327059
+    },
+    "A2": {
+      "strict_Z1_error": -0.08405456200911636,
+      "fair_noZ_error": -0.08661122201544341,
+      "Z2_error": -0.08149790200278931,
+      "leverage_lnZ_minus_T1mean": -0.002556660006327059
+    },
+    "B1": {
+      "strict_Z1_error": 0.1584548837033279,
+      "fair_noZ_error": 0.19351266258797156,
+      "Z2_error": 0.12339710481868421,
+      "leverage_lnZ_minus_T1mean": 0.035057778884643676
+    },
+    "C1": {
+      "strict_Z1_error": -0.08897461111440533,
+      "fair_noZ_error": -0.0978768907469396,
+      "Z2_error": -0.08007233148187105,
+      "leverage_lnZ_minus_T1mean": -0.008902279632534274
+    },
+    "D1": {
+      "strict_Z1_error": 0.093777664610696,
+      "fair_noZ_error": 0.07273548537124071,
+      "Z2_error": 0.1148198438501513,
+      "leverage_lnZ_minus_T1mean": -0.021042179239455297
+    },
+    "A_T2": {
+      "strict_Z1_error": 0.00694718258478679,
+      "fair_noZ_error": 0.11948448098416853,
+      "Z2_error": -0.10559011581459496,
+      "leverage_lnZ_minus_T1mean": 0.11253729839938174
+    },
+    "B_T2s1": {
+      "strict_Z1_error": 0.09180435401019721,
+      "fair_noZ_error": 0.2056030577822342,
+      "Z2_error": -0.021994349761839796,
+      "leverage_lnZ_minus_T1mean": 0.113798703772037
+    },
+    "B_T2r1": {
+      "strict_Z1_error": 0.048194016165933655,
+      "fair_noZ_error": 0.16199271993797065,
+      "Z2_error": -0.06560468760610336,
+      "leverage_lnZ_minus_T1mean": 0.113798703772037
+    },
+    "B_T2r2": {
+      "strict_Z1_error": 0.044699632717394064,
+      "fair_noZ_error": 0.15849833648943107,
+      "Z2_error": -0.06909907105464294,
+      "leverage_lnZ_minus_T1mean": 0.113798703772037
+    },
+    "C_T2": {
+      "strict_Z1_error": 0.051738202972341496,
+      "fair_noZ_error": 0.10088072173872403,
+      "Z2_error": 0.002595684205958959,
+      "leverage_lnZ_minus_T1mean": 0.04914251876638254
+    },
+    "D_T2": {
+      "strict_Z1_error": -0.001797528956085443,
+      "fair_noZ_error": 0.12220193216505232,
+      "Z2_error": -0.1257969900772232,
+      "leverage_lnZ_minus_T1mean": 0.12399946112113776
+    }
+  },
+  "D_T2": {
+    "strict_error": -0.001797528956085443,
+    "frozen_noZ_comparator_error": 0.182272498371986,
+    "frozen_noZ_comparator_note": "confirm_d_t2.py drops log Z from the strict prediction without recalibrating c; it is not a fair no-Z model",
+    "fair_noZ_error": 0.12220193216505232,
+    "leverage": 0.12399946112113776,
+    "Z_exponent_interval_passing_tolerance": [
+      0.01775759463100579,
+      1.9532498768558357
+    ],
+    "conditional_bootstrap_95_level": [
+      -0.07819186331646269,
+      0.09119956056726929
+    ],
+    "Z_exponent_interval_from_bootstrap_level_interval": [
+      0.3694177167425319,
+      1.7354835234176902
+    ]
+  },
+  "batch_offset_alternative": {
+    "delta_T2_from_A_B_C": 0.13190996915314596,
+    "D_T2_error_batch_model": -0.009708036988093638,
+    "D_T2_error_Z1_model": -0.001797528956085443,
+    "note": "post hoc: a T2-session offset without Z would also have hit D_T2 within tolerance; Z and T1/T2 batch are not separable in these data"
+  },
+  "within_T2_slope_of_noZ_level_on_lnZ": {
+    "slope": 0.5093057573965131,
+    "n_strings": 4,
+    "lnZ_SD": 0.034205153036706945,
+    "note": "4 strings, lnZ SD ~0.03; slope is not interpretable as an exponent estimate"
+  }
+}

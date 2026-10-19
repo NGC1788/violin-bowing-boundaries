@@ -1,0 +1,38 @@
+{
+  "archive": "2024-04-19_TypeA_sample2.7z",
+  "started_utc": "2026-10-17T22:57:48.057614+00:00",
+  "status": "validated",
+  "pin": "/Users/jeongjihoon/violin-rne/astra_20261018/archive_companion/pins/2024-04-19_TypeA_sample2.7z",
+  "stage": "/Users/jeongjihoon/violin-rne/astra_20261018/archive_companion/staging/2024-04-19_TypeA_sample2-cdf485d3af50485a9125febcd464ef5a",
+  "commands": [],
+  "extractor_sha256": {
+    "ramp_meta": "d0734cd7840749f6017c1bd3d8326d50dc39e482f080bb66a8a3d06dc4266760",
+    "stroke_blocks": "7b6c1bf4c892a3504dee22b30439801b2423bcb57a502b2d4c86df56b56334cb"
+  },
+  "companion_sha256": "f53440ebfb07c618b7469d7109bfa091be3871845730451e559056c1a1168397",
+  "archive_integrity": {
+    "bytes": 14775691753,
+    "md5": "ec520fecf6c5011ef8491b335edc1cee",
+    "metadata_path": "/Users/jeongjihoon/violin-bowing-boundaries/data/manifests/zenodo_17782542_20261014T054345.402488Z.json",
+    "metadata_sha256": "3cb545a2327724a4936915d2270433ccea436c99bd87432853f62e35ac1e1691"
+  },
+  "legacy_reused": [
+    "/Users/jeongjihoon/violin-rne/claude_extra/ramp_meta_A2.csv",
+    "/Users/jeongjihoon/violin-rne/claude_extra/blocks/blocks_A2.npz"
+  ],
+  "legacy_exit_codes": "unknown; adopted only after current coverage/integrity validation",
+  "validation": {
+    "trials": 6000,
+    "blocks": 457271,
+    "folders": {
+      "2024-04-19_TypeA_sample2/v2": 2000,
+      "2024-04-19_TypeA_sample2/v1": 2000,
+      "2024-04-19_TypeA_sample2/v3": 2000
+    },
+    "ramp_sha256": "fa71bc0c9f01acf1edbd85028f0fd0f5b508466525022cce0a9c73ae599feb7f",
+    "blocks_sha256": "b18c49fa9a2d97a4c7a5aa2d10e66e3a01b8461e381adebc8d407933cfdca784",
+    "coverage_sha256": "31df0aa749d31025974512243a9667629ea3c883dcdd272265ce118997fd6f16"
+  },
+  "ended_utc": "2026-10-17T22:58:11.187337+00:00",
+  "published": "/Users/jeongjihoon/violin-rne/astra_20261018/archive_companion/2024-04-19_TypeA_sample2"
+}

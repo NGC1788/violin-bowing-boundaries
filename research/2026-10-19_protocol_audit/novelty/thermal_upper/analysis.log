@@ -1,0 +1,122 @@
+full fits (all 11): {'S0_dmu_steady': ([], 0.995), 'T0_peak': ([], 0.811), 'T0_break': ([], 0.382), 'S1_strict': ([0.986], 0.384), 'T1k_peak': ([-0.842], 0.359), 'T1k_break': ([0.258], 0.35), 'T1mu': ([-0.02], 0.345), 'T2_mu_k': ([0.097, 0.152], 0.348), 'E3_free_Z': ([0.067, 0.698, -1.065], 0.329)}
+
+(1) per diagram: measured free censored exponents [boot 95%] vs thermal local exponents (T1k_break, T1k_peak, T1mu fitted on all 11)
+    and the thermal identity e_beta + (1 + e_v)/2 = 0 evaluated with the MEASURED e_v
+  A1      v +0.62 [+0.50,+0.75] b -1.11 [-1.27,-0.97] | identity -0.30 [-0.44,-0.20] | T-break v +0.84 b -0.92 (s 0.08) | T-peak v +0.60 b -0.79 (s 0.24, dmu 0.36) | fin/right 59/53
+  A2      v +0.71 [+0.58,+0.83] b -1.12 [-1.28,-0.98] | identity -0.26 [-0.37,-0.18] | T-break v +0.84 b -0.92 (s 0.08) | T-peak v +0.60 b -0.79 (s 0.24, dmu 0.36) | fin/right 59/52
+  B1      v +0.77 [+0.57,+0.99] b -0.92 [-1.17,-0.75] | identity -0.04 [-0.22,+0.09] | T-break v +0.84 b -0.92 (s 0.08) | T-peak v +0.60 b -0.79 (s 0.24, dmu 0.36) | fin/right 48/64
+  C1      v +0.80 [+0.68,+0.98] b -1.07 [-1.25,-0.93] | identity -0.17 [-0.30,-0.06] | T-break v +0.84 b -0.92 (s 0.08) | T-peak v +0.60 b -0.79 (s 0.24, dmu 0.36) | fin/right 61/52
+  D1      v +0.75 [+0.66,+0.85] b -1.04 [-1.10,-0.95] | identity -0.16 [-0.25,-0.08] | T-break v +0.84 b -0.92 (s 0.08) | T-peak v +0.60 b -0.79 (s 0.24, dmu 0.36) | fin/right 60/51
+  A_T2    v +0.49 [+0.33,+0.69] b -0.91 [-1.16,-0.72] | identity -0.17 [-0.33,-0.02] | T-break v +0.85 b -0.92 (s 0.08) | T-peak v +0.62 b -0.80 (s 0.23, dmu 0.37) | fin/right 53/61
+  B_T2s1  v +0.84 [+0.66,+1.08] b -1.40 [-1.62,-1.21] | identity -0.48 [-0.64,-0.32] | T-break v +0.84 b -0.92 (s 0.08) | T-peak v +0.61 b -0.79 (s 0.23, dmu 0.37) | fin/right 44/66
+  B_T2r1  v +0.86 [+0.65,+1.10] b -1.29 [-1.62,-1.05] | identity -0.36 [-0.62,-0.17] | T-break v +0.84 b -0.92 (s 0.08) | T-peak v +0.60 b -0.79 (s 0.23, dmu 0.37) | fin/right 43/66
+  B_T2r2  v +0.70 [+0.52,+0.89] b -0.97 [-1.19,-0.80] | identity -0.12 [-0.29,+0.01] | T-break v +0.84 b -0.92 (s 0.08) | T-peak v +0.61 b -0.79 (s 0.23, dmu 0.37) | fin/right 47/62
+  C_T2    v +0.68 [+0.46,+0.93] b -1.13 [-1.53,-0.89] | identity -0.29 [-0.60,-0.08] | T-break v +0.85 b -0.92 (s 0.08) | T-peak v +0.61 b -0.80 (s 0.23, dmu 0.37) | fin/right 51/64
+  D_T2    v +0.61 [+0.43,+0.82] b -1.02 [-1.29,-0.84] | identity -0.22 [-0.41,-0.08] | T-break v +0.85 b -0.92 (s 0.08) | T-peak v +0.61 b -0.79 (s 0.23, dmu 0.37) | fin/right 48/63
+  pooled (11 diagrams, cluster boot): v +0.699 [0.63 0.76] b -1.065 [-1.14 -1.01] identity -0.216 [-0.282 -0.175]
+  [62 s]
+  LODO fold A1 done [65 s]
+  LODO fold A2 done [67 s]
+  LODO fold B1 done [70 s]
+  LODO fold C1 done [72 s]
+  LODO fold D1 done [75 s]
+  LODO fold A_T2 done [77 s]
+  LODO fold B_T2s1 done [79 s]
+  LODO fold B_T2r1 done [82 s]
+  LODO fold B_T2r2 done [84 s]
+  LODO fold C_T2 done [86 s]
+  LODO fold D_T2 done [89 s]
+  LOSO fold A T1 done [91 s]
+  LOSO fold A T2 done [93 s]
+  LOSO fold B T1 done [96 s]
+  LOSO fold B T2 done [98 s]
+  LOSO fold C T1 done [100 s]
+  LOSO fold C T2 done [103 s]
+  LOSO fold D T1 done [105 s]
+  LOSO fold D T2 done [107 s]
+
+(2) LODO: held-out mean NLL/column | RMS level error | mean |level| | median finite |log err| | hit | RMS e_v err | RMS e_beta err
+  S0_dmu_steady  1.884 | 0.909 | 0.906 | 0.932 | 0.53 | 0.31 | 0.17
+  T0_peak        1.813 | 0.696 | 0.691 | 0.795 | 0.53 | 0.11 | 0.29
+  T0_break       1.608 | 0.247 | 0.236 | 0.233 | 0.49 | 0.16 | 0.23
+  S1_strict      1.491 | 0.085 | 0.072 | 0.144 | 0.69 | 0.31 | 0.17
+  T1k_peak       1.520 | 0.084 | 0.070 | 0.193 | 0.62 | 0.15 | 0.33
+  T1k_break      1.468 | 0.083 | 0.070 | 0.151 | 0.69 | 0.17 | 0.22
+  T1mu           1.469 | 0.083 | 0.070 | 0.165 | 0.67 | 0.14 | 0.24
+  T2_mu_k        1.470 | 0.083 | 0.070 | 0.158 | 0.68 | 0.16 | 0.23
+  E3_free_Z      1.422 | 0.087 | 0.072 | 0.129 | 0.71 | 0.12 | 0.16
+    T1k_peak     - S1: mean dNLL +0.0286 [-0.0114,+0.0621] wins(NLL) 2/11 | mean d|level| -0.0019 wins(level) 6/11
+    T1k_break    - S1: mean dNLL -0.0226 [-0.0356,-0.0096] wins(NLL) 9/11 | mean d|level| -0.0018 wins(level) 6/11
+    T1mu         - S1: mean dNLL -0.0225 [-0.0394,-0.0060] wins(NLL) 8/11 | mean d|level| -0.0022 wins(level) 7/11
+    T2_mu_k      - S1: mean dNLL -0.0215 [-0.0355,-0.0080] wins(NLL) 9/11 | mean d|level| -0.0020 wins(level) 6/11
+    E3_free_Z    - S1: mean dNLL -0.0691 [-0.0974,-0.0432] wins(NLL) 10/11 | mean d|level| +0.0004 wins(level) 4/11
+    T0_break     - S1: mean dNLL +0.1170 [+0.0576,+0.1714] wins(NLL) 1/11 | mean d|level| +0.1639 wins(level) 0/11
+    per-diagram level errors (held out):
+     A1      S1_strict:-0.110 T1k_peak:-0.139 T1k_break:-0.114 T1mu:-0.113 E3_free_Z:-0.111
+     A2      S1_strict:-0.115 T1k_peak:-0.133 T1k_break:-0.116 T1mu:-0.115 E3_free_Z:-0.116
+     B1      S1_strict:+0.153 T1k_peak:+0.133 T1k_break:+0.149 T1mu:+0.149 E3_free_Z:+0.170
+     C1      S1_strict:-0.121 T1k_peak:-0.109 T1k_break:-0.110 T1mu:-0.107 E3_free_Z:-0.110
+     D1      S1_strict:+0.081 T1k_peak:+0.041 T1k_break:+0.074 T1mu:+0.072 E3_free_Z:+0.094
+     A_T2    S1_strict:-0.014 T1k_peak:-0.025 T1k_break:-0.009 T1mu:-0.006 E3_free_Z:-0.021
+     B_T2s1  S1_strict:+0.079 T1k_peak:+0.061 T1k_break:+0.075 T1mu:+0.075 E3_free_Z:+0.059
+     B_T2r1  S1_strict:+0.031 T1k_peak:+0.028 T1k_break:+0.031 T1mu:+0.032 E3_free_Z:+0.021
+     B_T2r2  S1_strict:+0.027 T1k_peak:+0.008 T1k_break:+0.024 T1mu:+0.025 E3_free_Z:+0.029
+     C_T2    S1_strict:+0.035 T1k_peak:+0.038 T1k_break:+0.041 T1mu:+0.044 E3_free_Z:+0.034
+     D_T2    S1_strict:-0.024 T1k_peak:-0.052 T1k_break:-0.027 T1mu:-0.027 E3_free_Z:-0.029
+
+(2) LOSO: held-out mean NLL/column | RMS level error | mean |level| | median finite |log err| | hit | RMS e_v err | RMS e_beta err
+  S0_dmu_steady  1.884 | 0.909 | 0.906 | 0.932 | 0.53 | 0.31 | 0.17
+  T0_peak        1.813 | 0.696 | 0.691 | 0.795 | 0.53 | 0.11 | 0.29
+  T0_break       1.610 | 0.247 | 0.236 | 0.233 | 0.49 | 0.16 | 0.23
+  S1_strict      1.493 | 0.090 | 0.077 | 0.157 | 0.69 | 0.31 | 0.17
+  T1k_peak       1.522 | 0.090 | 0.076 | 0.193 | 0.61 | 0.15 | 0.33
+  T1k_break      1.471 | 0.088 | 0.075 | 0.159 | 0.68 | 0.17 | 0.22
+  T1mu           1.471 | 0.087 | 0.075 | 0.164 | 0.67 | 0.14 | 0.24
+  T2_mu_k        1.473 | 0.088 | 0.075 | 0.157 | 0.68 | 0.16 | 0.23
+  E3_free_Z      1.426 | 0.091 | 0.077 | 0.131 | 0.70 | 0.12 | 0.16
+    T1k_peak     - S1: mean dNLL +0.0287 [-0.0131,+0.0603] wins(NLL) 2/11 | mean d|level| -0.0017 wins(level) 6/11
+    T1k_break    - S1: mean dNLL -0.0223 [-0.0348,-0.0105] wins(NLL) 9/11 | mean d|level| -0.0019 wins(level) 7/11
+    T1mu         - S1: mean dNLL -0.0223 [-0.0392,-0.0068] wins(NLL) 8/11 | mean d|level| -0.0027 wins(level) 8/11
+    T2_mu_k      - S1: mean dNLL -0.0209 [-0.0350,-0.0073] wins(NLL) 9/11 | mean d|level| -0.0022 wins(level) 7/11
+    E3_free_Z    - S1: mean dNLL -0.0675 [-0.0934,-0.0414] wins(NLL) 10/11 | mean d|level| -0.0006 wins(level) 5/11
+    T0_break     - S1: mean dNLL +0.1165 [+0.0588,+0.1740] wins(NLL) 1/11 | mean d|level| +0.1584 wins(level) 0/11
+    per-diagram level errors (held out):
+     A1      S1_strict:-0.125 T1k_peak:-0.153 T1k_break:-0.128 T1mu:-0.127 E3_free_Z:-0.125
+     A2      S1_strict:-0.129 T1k_peak:-0.148 T1k_break:-0.130 T1mu:-0.129 E3_free_Z:-0.130
+     B1      S1_strict:+0.153 T1k_peak:+0.133 T1k_break:+0.149 T1mu:+0.149 E3_free_Z:+0.170
+     C1      S1_strict:-0.121 T1k_peak:-0.109 T1k_break:-0.110 T1mu:-0.107 E3_free_Z:-0.110
+     D1      S1_strict:+0.081 T1k_peak:+0.041 T1k_break:+0.074 T1mu:+0.072 E3_free_Z:+0.094
+     A_T2    S1_strict:-0.014 T1k_peak:-0.025 T1k_break:-0.009 T1mu:-0.006 E3_free_Z:-0.021
+     B_T2s1  S1_strict:+0.087 T1k_peak:+0.069 T1k_break:+0.082 T1mu:+0.081 E3_free_Z:+0.065
+     B_T2r1  S1_strict:+0.043 T1k_peak:+0.040 T1k_break:+0.043 T1mu:+0.043 E3_free_Z:+0.031
+     B_T2r2  S1_strict:+0.040 T1k_peak:+0.021 T1k_break:+0.036 T1mu:+0.035 E3_free_Z:+0.035
+     C_T2    S1_strict:+0.035 T1k_peak:+0.038 T1k_break:+0.041 T1mu:+0.044 E3_free_Z:+0.034
+     D_T2    S1_strict:-0.024 T1k_peak:-0.052 T1k_break:-0.027 T1mu:-0.027 E3_free_Z:-0.029
+
+(3) D_T2 replay (post hoc; D_T2 already scored once with S1 trained on T1 strings)
+  T1_only      S0_dmu_steady  theta [] | D_T2 level err -0.9295 | NLL 1.670 | med finite 0.932 | e_v +1.00 e_b -1.00 (obs +0.61 / -1.02)
+  T1_only      T0_peak        theta [] | D_T2 level err -0.7233 | NLL 1.597 | med finite 0.822 | e_v +0.69 e_b -0.84 (obs +0.61 / -1.02)
+  T1_only      T0_break       theta [] | D_T2 level err +0.2087 | NLL 1.374 | med finite 0.232 | e_v +0.84 e_b -0.91 (obs +0.61 / -1.02)
+  T1_only      S1_strict      theta [0.966] | D_T2 level err -0.0018 | NLL 1.321 | med finite 0.124 | e_v +1.00 e_b -1.00 (obs +0.61 / -1.02)
+  T1_only      T1k_peak       theta [-0.869] | D_T2 level err -0.0280 | NLL 1.290 | med finite 0.179 | e_v +0.61 e_b -0.79 (obs +0.61 / -1.02)
+  T1_only      T1k_break      theta [0.236] | D_T2 level err -0.0053 | NLL 1.282 | med finite 0.143 | e_v +0.85 e_b -0.92 (obs +0.61 / -1.02)
+  T1_only      T1mu           theta [-0.003] | D_T2 level err -0.0047 | NLL 1.276 | med finite 0.145 | e_v +0.81 e_b -0.90 (obs +0.61 / -1.02)
+  T1_only      T2_mu_k        theta [0.153 0.2  ] | D_T2 level err -0.0055 | NLL 1.281 | med finite 0.143 | e_v +0.84 e_b -0.92 (obs +0.61 / -1.02)
+  T1_only      E3_free_Z      theta [ 0.148  0.73  -1.058] | D_T2 level err -0.0126 | NLL 1.222 | med finite 0.104 | e_v +0.73 e_b -1.06 (obs +0.61 / -1.02)
+  all_but_D_T2 S0_dmu_steady  theta [] | D_T2 level err -0.9295 | NLL 1.670 | med finite 0.932 | e_v +1.00 e_b -1.00 (obs +0.61 / -1.02)
+  all_but_D_T2 T0_peak        theta [] | D_T2 level err -0.7233 | NLL 1.596 | med finite 0.822 | e_v +0.69 e_b -0.84 (obs +0.61 / -1.02)
+  all_but_D_T2 T0_break       theta [] | D_T2 level err +0.2087 | NLL 1.372 | med finite 0.232 | e_v +0.84 e_b -0.91 (obs +0.61 / -1.02)
+  all_but_D_T2 S1_strict      theta [0.988] | D_T2 level err -0.0236 | NLL 1.304 | med finite 0.140 | e_v +1.00 e_b -1.00 (obs +0.61 / -1.02)
+  all_but_D_T2 T1k_peak       theta [-0.838] | D_T2 level err -0.0523 | NLL 1.290 | med finite 0.192 | e_v +0.61 e_b -0.79 (obs +0.61 / -1.02)
+  all_but_D_T2 T1k_break      theta [0.261] | D_T2 level err -0.0275 | NLL 1.268 | med finite 0.149 | e_v +0.85 e_b -0.92 (obs +0.61 / -1.02)
+  all_but_D_T2 T1mu           theta [-0.022] | D_T2 level err -0.0272 | NLL 1.264 | med finite 0.149 | e_v +0.81 e_b -0.90 (obs +0.61 / -1.02)
+  all_but_D_T2 T2_mu_k        theta [0.129 0.194] | D_T2 level err -0.0279 | NLL 1.267 | med finite 0.149 | e_v +0.84 e_b -0.91 (obs +0.61 / -1.02)
+  all_but_D_T2 E3_free_Z      theta [ 0.083  0.706 -1.067] | D_T2 level err -0.0288 | NLL 1.206 | med finite 0.116 | e_v +0.71 e_b -1.07 (obs +0.61 / -1.02)
+
+(4) T1 -> T2 upper level shifts (observed = censored offset vs base_A; predicted = mean model difference on the T1 design)
+  A: dlnZ +0.115 | observed dlevel +0.197 (Z exp +1.71) | predicted S1_strict +0.115 T1k_peak +0.092 T1k_break +0.106 T1mu +0.104 E3_free_Z +0.115
+  B: dlnZ +0.079 | observed dlevel -0.045 (Z exp -0.57) | predicted S1_strict +0.079 T1k_peak +0.063 T1k_break +0.073 T1mu +0.071 E3_free_Z +0.079
+  C: dlnZ +0.058 | observed dlevel +0.189 (Z exp +3.25) | predicted S1_strict +0.058 T1k_peak +0.046 T1k_break +0.053 T1mu +0.052 E3_free_Z +0.058
+  D: dlnZ +0.145 | observed dlevel +0.033 (Z exp +0.23) | predicted S1_strict +0.145 T1k_peak +0.116 T1k_break +0.134 T1mu +0.131 E3_free_Z +0.145
+
+wrote analysis.json [112 s]

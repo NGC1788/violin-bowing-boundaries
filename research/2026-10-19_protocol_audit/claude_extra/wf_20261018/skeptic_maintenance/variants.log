@@ -1,0 +1,53 @@
+== 1. observed establishment only (entry run starts at t >= t0; strokes already H at plateau start dropped) ==
+A2 first-run start >= 0.0: v=0.05 cols 19 ratio 0.65 (<1 100%) [min_n=3: cols 20 ratio 0.65 (<1 100%)] | v=0.10 cols 19 ratio 0.96 (<1 95%) [min_n=3: cols 19 ratio 0.96 (<1 95%)] | v=0.20 cols  8 ratio 0.99 (<1 88%) [min_n=3: cols 11 ratio 0.99 (<1 91%)]
+A2 first-run start >= 0.1: v=0.05 cols 12 ratio 0.82 (<1 92%) [min_n=3: cols 17 ratio 0.83 (<1 94%)] | v=0.10 cols  1 ratio 0.67 (<1 100%) [min_n=3: cols  9 ratio 0.98 (<1 100%)] | v=0.20 cols  0 ratio nan (<1 nan%) [min_n=3: cols  1 ratio 1.00 (<1 100%)]
+A2 first-run start >= 0.3: v=0.05 cols  9 ratio 0.84 (<1 89%) [min_n=3: cols 16 ratio 0.85 (<1 94%)] | v=0.10 cols  1 ratio 0.63 (<1 100%) [min_n=3: cols  6 ratio 0.96 (<1 100%)] | v=0.20 cols  0 ratio nan (<1 nan%) [min_n=3: cols  0 ratio nan (<1 nan%)]
+A1 first-run start >= 0.0: v=0.05 cols 20 ratio 0.97 (<1 90%) [min_n=3: cols 20 ratio 0.97 (<1 90%)] | v=0.10 cols 26 ratio 1.00 (<1 62%) [min_n=3: cols 27 ratio 1.00 (<1 59%)] | v=0.20 cols 25 ratio 1.00 (<1 44%) [min_n=3: cols 30 ratio 1.00 (<1 37%)]
+A1 first-run start >= 0.1: v=0.05 cols  7 ratio 0.92 (<1 86%) [min_n=3: cols 13 ratio 0.99 (<1 69%)] | v=0.10 cols  1 ratio 1.00 (<1 100%) [min_n=3: cols  9 ratio 1.00 (<1 56%)] | v=0.20 cols  0 ratio nan (<1 nan%) [min_n=3: cols  5 ratio 1.00 (<1 20%)]
+A1 first-run start >= 0.3: v=0.05 cols  6 ratio 0.95 (<1 83%) [min_n=3: cols 13 ratio 0.98 (<1 69%)] | v=0.10 cols  0 ratio nan (<1 nan%) [min_n=3: cols  4 ratio 1.00 (<1 75%)] | v=0.20 cols  0 ratio nan (<1 nan%) [min_n=3: cols  0 ratio nan (<1 nan%)]
+
+== 2. force-validity floor: windows with F < Fv set to non-H ==
+A2 Fv=0.00 N: v=0.05 cols 19 ratio 0.65 (<1 100%) | v=0.10 cols 19 ratio 0.96 (<1 95%) | v=0.20 cols  8 ratio 0.99 (<1 88%)
+A2 Fv=0.02 N: v=0.05 cols 19 ratio 0.65 (<1 100%) | v=0.10 cols 19 ratio 0.96 (<1 95%) | v=0.20 cols  8 ratio 0.99 (<1 88%)
+A2 Fv=0.03 N: v=0.05 cols 19 ratio 0.65 (<1 100%) | v=0.10 cols 19 ratio 0.96 (<1 95%) | v=0.20 cols  8 ratio 0.99 (<1 88%)
+A2 Fv=0.05 N: v=0.05 cols 19 ratio 0.67 (<1 100%) | v=0.10 cols 19 ratio 0.96 (<1 95%) | v=0.20 cols  8 ratio 0.99 (<1 88%)
+A2 Fv=0.08 N: v=0.05 cols 19 ratio 0.71 (<1 100%) | v=0.10 cols 19 ratio 0.96 (<1 95%) | v=0.20 cols  8 ratio 0.99 (<1 88%)
+   A2 v=0.05: H windows with F<0.03 N: 207 of 19807; share H among windows F<0.03: 0.29
+   A2 v=0.10: H windows with F<0.03 N: 0 of 4404; share H among windows F<0.03: 0.00
+   A2 v=0.20: H windows with F<0.03 N: 35 of 580; share H among windows F<0.03: 0.01
+A1 Fv=0.00 N: v=0.05 cols 20 ratio 0.97 (<1 90%) | v=0.10 cols 26 ratio 1.00 (<1 62%) | v=0.20 cols 25 ratio 1.00 (<1 44%)
+A1 Fv=0.02 N: v=0.05 cols 20 ratio 0.97 (<1 90%) | v=0.10 cols 26 ratio 1.00 (<1 62%) | v=0.20 cols 25 ratio 1.00 (<1 44%)
+A1 Fv=0.03 N: v=0.05 cols 20 ratio 0.98 (<1 90%) | v=0.10 cols 26 ratio 1.00 (<1 62%) | v=0.20 cols 25 ratio 1.00 (<1 44%)
+A1 Fv=0.05 N: v=0.05 cols 20 ratio 0.98 (<1 90%) | v=0.10 cols 26 ratio 1.00 (<1 62%) | v=0.20 cols 25 ratio 1.00 (<1 44%)
+A1 Fv=0.08 N: v=0.05 cols 20 ratio 0.98 (<1 90%) | v=0.10 cols 26 ratio 1.00 (<1 62%) | v=0.20 cols 25 ratio 1.00 (<1 44%)
+   A1 v=0.05: H windows with F<0.03 N: 11 of 15066; share H among windows F<0.03: 0.01
+   A1 v=0.10: H windows with F<0.03 N: 0 of 6090; share H among windows F<0.03: 0.00
+   A1 v=0.20: H windows with F<0.03 N: 0 of 2273; share H among windows F<0.03: nan
+
+== 3. classifier perturbations (A2 thresholds varied one at a time) ==
+A2 baseline                    : v=0.05 cols 19 ratio 0.65 (<1 100%) | v=0.10 cols 19 ratio 0.96 (<1 95%) | v=0.20 cols  8 ratio 0.99 (<1 88%)
+A2 min_periodicity=0.75        : v=0.05 cols 19 ratio 0.65 (<1 100%) | v=0.10 cols 19 ratio 0.96 (<1 95%) | v=0.20 cols  8 ratio 0.99 (<1 88%)
+A2 min_periodicity=0.85        : v=0.05 cols 19 ratio 0.65 (<1 100%) | v=0.10 cols 19 ratio 0.96 (<1 95%) | v=0.20 cols  8 ratio 0.99 (<1 88%)
+A2 max_aperiodic=0.4           : v=0.05 cols 19 ratio 0.65 (<1 100%) | v=0.10 cols 19 ratio 0.96 (<1 95%) | v=0.20 cols  8 ratio 0.99 (<1 88%)
+A2 max_aperiodic=0.6           : v=0.05 cols 19 ratio 0.65 (<1 100%) | v=0.10 cols 19 ratio 0.96 (<1 95%) | v=0.20 cols  8 ratio 0.99 (<1 88%)
+A2 min_amplitude=0.203         : v=0.05 cols 19 ratio 0.65 (<1 100%) | v=0.10 cols 19 ratio 0.96 (<1 95%) | v=0.20 cols  8 ratio 0.99 (<1 88%)
+A2 min_amplitude=0.813         : v=0.05 cols 19 ratio 0.65 (<1 100%) | v=0.10 cols 19 ratio 0.96 (<1 95%) | v=0.20 cols  8 ratio 0.99 (<1 88%)
+A2 subharmonic_ratio=0.7       : v=0.05 cols 19 ratio 0.65 (<1 100%) | v=0.10 cols 19 ratio 0.96 (<1 95%) | v=0.20 cols  8 ratio 0.99 (<1 88%)
+A2 subharmonic_ratio=0.8       : v=0.05 cols 19 ratio 0.65 (<1 100%) | v=0.10 cols 19 ratio 0.96 (<1 95%) | v=0.20 cols  8 ratio 0.99 (<1 88%)
+A1 baseline                    : v=0.05 cols 20 ratio 0.97 (<1 90%) | v=0.10 cols 26 ratio 1.00 (<1 62%) | v=0.20 cols 25 ratio 1.00 (<1 44%)
+A1 min_periodicity=0.75        : v=0.05 cols 20 ratio 0.97 (<1 90%) | v=0.10 cols 26 ratio 1.00 (<1 62%) | v=0.20 cols 25 ratio 1.00 (<1 44%)
+A1 min_periodicity=0.85        : v=0.05 cols 19 ratio 0.97 (<1 84%) | v=0.10 cols 26 ratio 1.00 (<1 62%) | v=0.20 cols 25 ratio 1.00 (<1 44%)
+A1 max_aperiodic=0.4           : v=0.05 cols 20 ratio 0.97 (<1 90%) | v=0.10 cols 26 ratio 1.00 (<1 62%) | v=0.20 cols 25 ratio 1.00 (<1 44%)
+A1 max_aperiodic=0.6           : v=0.05 cols 20 ratio 0.97 (<1 90%) | v=0.10 cols 26 ratio 1.00 (<1 62%) | v=0.20 cols 25 ratio 1.00 (<1 44%)
+A1 min_amplitude=0.203         : v=0.05 cols 20 ratio 0.97 (<1 90%) | v=0.10 cols 26 ratio 1.00 (<1 62%) | v=0.20 cols 25 ratio 1.00 (<1 44%)
+A1 min_amplitude=0.813         : v=0.05 cols 20 ratio 0.97 (<1 90%) | v=0.10 cols 26 ratio 1.00 (<1 62%) | v=0.20 cols 25 ratio 1.00 (<1 44%)
+A1 subharmonic_ratio=0.7       : v=0.05 cols 20 ratio 0.97 (<1 90%) | v=0.10 cols 26 ratio 1.00 (<1 62%) | v=0.20 cols 25 ratio 1.00 (<1 44%)
+A1 subharmonic_ratio=0.8       : v=0.05 cols 20 ratio 0.97 (<1 90%) | v=0.10 cols 26 ratio 1.00 (<1 62%) | v=0.20 cols 25 ratio 1.00 (<1 44%)
+
+== 4/5. exits and late entries relative to the column's F_E,cur (q10 entries) and F_M (q10 lows), K=2 ==
+A2 v=0.05: entered 569 (late t>=0.3 s: 95); late entries below F_E,cur 57 (60%), below F_M 38 (40%), median late F/F_E 0.88; strokes with an exit 13, exit force / F_E median 0.36, / F_M median 0.63, exits below F_E 85%
+A2 v=0.10: entered 282 (late t>=0.3 s: 36); late entries below F_E,cur 17 (47%), below F_M 15 (42%), median late F/F_E 1.00; strokes with an exit 2, exit force / F_E median 0.15, / F_M median 0.16, exits below F_E 100%
+A2 v=0.20: entered 65 (late t>=0.3 s: 0); late entries below F_E,cur 0 (nan%), below F_M 0 (nan%), median late F/F_E nan; strokes with an exit 0
+A1 v=0.05: entered 441 (late t>=0.3 s: 69); late entries below F_E,cur 32 (46%), below F_M 32 (46%), median late F/F_E 1.03; strokes with an exit 16, exit force / F_E median 0.46, / F_M median 0.48, exits below F_E 62%
+A1 v=0.10: entered 378 (late t>=0.3 s: 43); late entries below F_E,cur 24 (56%), below F_M 24 (56%), median late F/F_E 0.97; strokes with an exit 4, exit force / F_E median 2.82, / F_M median 2.82, exits below F_E 25%
+A1 v=0.20: entered 321 (late t>=0.3 s: 4); late entries below F_E,cur 2 (50%), below F_M 2 (50%), median late F/F_E 1.14; strokes with an exit 2, exit force / F_E median 2.61, / F_M median 2.61, exits below F_E 0%

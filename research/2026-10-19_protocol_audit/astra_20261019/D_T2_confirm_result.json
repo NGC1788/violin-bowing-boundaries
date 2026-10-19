@@ -1,0 +1,1792 @@
+{
+  "stage": "score_complete",
+  "controls_receipt_sha256": "422dbbb938c409fe7faae2aa81db200ad572e6b76d6458a579e3105ffd22be7a",
+  "created_utc": "2026-10-19T00:52:11.253209+00:00",
+  "level_fits": {
+    "lower": {
+      "n_total": 120,
+      "n_used": 120,
+      "n_unavailable": 0,
+      "success": false,
+      "reason": "invalid_or_zero_width_interval"
+    },
+    "upper_strict": {
+      "n_total": 120,
+      "n_used": 111,
+      "n_unavailable": 9,
+      "success": true,
+      "level": -0.001797528956085443,
+      "sigma": 0.3963252857977661,
+      "optimizer_success": true,
+      "message": "Optimization terminated successfully.",
+      "nll": 144.4679661510294,
+      "nit": 32
+    },
+    "upper_empirical_secondary": {
+      "n_total": 120,
+      "n_used": 111,
+      "n_unavailable": 9,
+      "success": true,
+      "level": -0.011814957403840892,
+      "sigma": 0.32809410264626293,
+      "optimizer_success": true,
+      "message": "Optimization terminated successfully.",
+      "nll": 133.343727814783,
+      "nit": 44
+    }
+  },
+  "decisions": {
+    "lower": {
+      "verdict": "검증 불가",
+      "reason": "invalid_or_zero_width_interval"
+    },
+    "upper_strict": {
+      "verdict": "허용오차 안",
+      "absolute_log_error": 0.001797528956085443,
+      "no_Z_absolute_log_error": 0.182272498371986,
+      "gain_over_no_Z": 0.18047496941590055,
+      "Z_comparison": "Z 식 우세 방향"
+    },
+    "scope": "한 도표의 동결 실용 기준; 인과/보편법칙/통계적 동등성 판정 아님"
+  },
+  "column_scores": {
+    "lower": {
+      "protocol": {
+        "counts": {
+          "finite": 111,
+          "n_scored": 120,
+          "right_censored": 9,
+          "left_censored": 0,
+          "unavailable": 0,
+          "prediction_failures": 0
+        },
+        "hits": 28,
+        "hit_rate": 0.23333333333333334,
+        "n_finite_errors": 111,
+        "median_abs_log_error": 0.28592483691514964
+      },
+      "mean": {
+        "counts": {
+          "finite": 111,
+          "n_scored": 120,
+          "right_censored": 9,
+          "left_censored": 0,
+          "unavailable": 0,
+          "prediction_failures": 0
+        },
+        "hits": 23,
+        "hit_rate": 0.19166666666666668,
+        "n_finite_errors": 111,
+        "median_abs_log_error": 0.3284249571396138
+      },
+      "log_Z": {
+        "counts": {
+          "finite": 111,
+          "n_scored": 120,
+          "right_censored": 9,
+          "left_censored": 0,
+          "unavailable": 0,
+          "prediction_failures": 0
+        },
+        "hits": 20,
+        "hit_rate": 0.16666666666666666,
+        "n_finite_errors": 111,
+        "median_abs_log_error": 0.37628407226202987
+      },
+      "log_EI": {
+        "counts": {
+          "finite": 111,
+          "n_scored": 120,
+          "right_censored": 9,
+          "left_censored": 0,
+          "unavailable": 0,
+          "prediction_failures": 0
+        },
+        "hits": 22,
+        "hit_rate": 0.18333333333333332,
+        "n_finite_errors": 111,
+        "median_abs_log_error": 0.3250771683048964
+      },
+      "log_Z_EI": {
+        "counts": {
+          "finite": 111,
+          "n_scored": 120,
+          "right_censored": 9,
+          "left_censored": 0,
+          "unavailable": 0,
+          "prediction_failures": 0
+        },
+        "hits": 22,
+        "hit_rate": 0.18333333333333332,
+        "n_finite_errors": 111,
+        "median_abs_log_error": 0.3864972177816406
+      }
+    },
+    "upper": {
+      "upper_strict": {
+        "counts": {
+          "right_censored": 63,
+          "n_scored": 111,
+          "finite": 48,
+          "unavailable": 9,
+          "left_censored": 0,
+          "prediction_failures": 0
+        },
+        "hits": 87,
+        "hit_rate": 0.7837837837837838,
+        "n_finite_errors": 48,
+        "median_abs_log_error": 0.12395809171943903
+      },
+      "upper_strict_no_Z": {
+        "counts": {
+          "right_censored": 63,
+          "n_scored": 111,
+          "finite": 48,
+          "unavailable": 9,
+          "left_censored": 0,
+          "prediction_failures": 0
+        },
+        "hits": 65,
+        "hit_rate": 0.5855855855855856,
+        "n_finite_errors": 48,
+        "median_abs_log_error": 0.22572784018673336
+      },
+      "upper_empirical_secondary": {
+        "counts": {
+          "right_censored": 63,
+          "n_scored": 111,
+          "finite": 48,
+          "unavailable": 9,
+          "left_censored": 0,
+          "prediction_failures": 0
+        },
+        "hits": 86,
+        "hit_rate": 0.7747747747747747,
+        "n_finite_errors": 48,
+        "median_abs_log_error": 0.11334475206832248
+      }
+    }
+  },
+  "no_detected_band_columns": 9,
+  "bootstrap": {
+    "lower": {
+      "requested": 2000,
+      "successful": 728,
+      "failed": 1272,
+      "failure_reasons": {
+        "invalid_or_zero_width_interval": 1272
+      },
+      "percentile_95_conditional_successes": [
+        -0.19290495532173002,
+        0.012638423602620305
+      ],
+      "warning": "조건부 성공 재표집의 구간; 실패 수를 무시한 무조건 coverage 주장 불가"
+    },
+    "upper_strict": {
+      "requested": 2000,
+      "successful": 1999,
+      "failed": 1,
+      "failure_reasons": {
+        "optimizer_failed": 1
+      },
+      "percentile_95_conditional_successes": [
+        -0.07819186331646269,
+        0.09119956056726929
+      ],
+      "warning": "조건부 성공 재표집의 구간; 실패 수를 무시한 무조건 coverage 주장 불가"
+    },
+    "upper_empirical_secondary": {
+      "requested": 2000,
+      "successful": 1998,
+      "failed": 2,
+      "failure_reasons": {
+        "optimizer_failed": 2
+      },
+      "percentile_95_conditional_successes": [
+        -0.07216228936945591,
+        0.044406268768415455
+      ],
+      "warning": "조건부 성공 재표집의 구간; 실패 수를 무시한 무조건 coverage 주장 불가"
+    }
+  },
+  "bootstrap_conditioning": "predictions fixed; only 40 beta clusters paired across speeds resampled; no descriptor/training/new-session uncertainty",
+  "upper_empirical_secondary_absolute_level_error": 0.011814957403840892,
+  "secondary_variants_deferred": [
+    "K3",
+    "t=.1/.3",
+    "nominal force axis"
+  ],
+  "label_counts": {
+    "no_oscillation": 1024,
+    "multiple_slip": 3083,
+    "helmholtz": 1685,
+    "aperiodic": 167,
+    "ambiguous": 36,
+    "subharmonic": 5
+  },
+  "n_primary_windows": 6000,
+  "target": "2024-06-17_TypeD_T2_sample1",
+  "observed_boundaries": [
+    {
+      "lower": [
+        -0.010173510311333164,
+        0.11147704331785427
+      ],
+      "upper": [
+        1.3022182104920441,
+        "+inf"
+      ],
+      "column": 0,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.250143853364206,
+        0.36736091916434704
+      ],
+      "upper": [
+        1.303420957344084,
+        "+inf"
+      ],
+      "column": 1,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.2335087031140071,
+        0.3518347718278419
+      ],
+      "upper": [
+        1.2979516988247626,
+        "+inf"
+      ],
+      "column": 2,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.004802071423777625,
+        0.10828397215268781
+      ],
+      "upper": [
+        1.302412402871081,
+        "+inf"
+      ],
+      "column": 3,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.12778268409187776,
+        0.0034731684150109883
+      ],
+      "upper": [
+        1.307043218340989,
+        "+inf"
+      ],
+      "column": 4,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.099708884281189,
+        -0.935704392408542
+      ],
+      "upper": [
+        1.3026347783025316,
+        "+inf"
+      ],
+      "column": 5,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.5779690702963297,
+        -0.45881973870458526
+      ],
+      "upper": [
+        1.3137057918941202,
+        "+inf"
+      ],
+      "column": 6,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.3392992483960889,
+        -0.20888217631891803
+      ],
+      "upper": [
+        1.310978101957642,
+        "+inf"
+      ],
+      "column": 7,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.7003500774995415,
+        -0.5795475346986224
+      ],
+      "upper": [
+        1.313726292445429,
+        "+inf"
+      ],
+      "column": 8,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.010022235702549,
+        -0.8682152073213352
+      ],
+      "upper": [
+        1.3085903237580017,
+        "+inf"
+      ],
+      "column": 9,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.516510608069612,
+        -1.3777381263727722
+      ],
+      "upper": [
+        1.3179723612572523,
+        "+inf"
+      ],
+      "column": 10,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.0873341523628943,
+        -0.971504176060784
+      ],
+      "upper": [
+        1.3164663166967996,
+        "+inf"
+      ],
+      "column": 11,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -2.4392258436649774,
+        -2.287457924595601
+      ],
+      "upper": [
+        1.3171530592716278,
+        "+inf"
+      ],
+      "column": 12,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.6055693805942157,
+        -1.4270484842580198
+      ],
+      "upper": [
+        1.3174620259933192,
+        "+inf"
+      ],
+      "column": 13,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.8431718028450137,
+        -1.6526260608658767
+      ],
+      "upper": [
+        1.3097840120415651,
+        "+inf"
+      ],
+      "column": 14,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.7871260482206377,
+        -1.640762503993103
+      ],
+      "upper": [
+        1.3089259074651556,
+        "+inf"
+      ],
+      "column": 15,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.8171034890006006,
+        -1.6509047843020677
+      ],
+      "upper": [
+        1.3226544544312595,
+        "+inf"
+      ],
+      "column": 16,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -2.884963854213852,
+        -2.6077037512093972
+      ],
+      "upper": [
+        1.2539272602202325,
+        1.3698226477257187
+      ],
+      "column": 17,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.5353836536080018,
+        -0.42057822176584636
+      ],
+      "upper": [
+        1.0400842621101747,
+        1.1478324433994718
+      ],
+      "column": 18,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.5031652046572219,
+        -0.3842495691449055
+      ],
+      "upper": [
+        0.9352922003188897,
+        1.0455937491040572
+      ],
+      "column": 19,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.5970027446886734,
+        -0.4794179473780173
+      ],
+      "upper": [
+        0.9409258807647233,
+        1.0496040879872954
+      ],
+      "column": 20,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.6858812623708774,
+        -0.5702238936287132
+      ],
+      "upper": [
+        0.9523943812390051,
+        1.0616388568299593
+      ],
+      "column": 21,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.9362292582471039,
+        -0.8262754521788142
+      ],
+      "upper": [
+        0.8388603506967431,
+        0.9447433895713837
+      ],
+      "column": 22,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.1497391827351453,
+        -1.0139926898720286
+      ],
+      "upper": [
+        0.8428113813704751,
+        0.9480273326919493
+      ],
+      "column": 23,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.8663607013827378,
+        -0.7352383715051724
+      ],
+      "upper": [
+        0.6101329383268015,
+        0.7196182360535913
+      ],
+      "column": 24,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.8559899380199703,
+        -0.7465887730135448
+      ],
+      "upper": [
+        0.6064276755197174,
+        0.7166720957973819
+      ],
+      "column": 25,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.8925810393963625,
+        -0.7773640785470668
+      ],
+      "upper": [
+        0.3823638136277878,
+        0.49480727760263804
+      ],
+      "column": 26,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.4920252689450413,
+        -1.3669422344003965
+      ],
+      "upper": [
+        0.5114513891546106,
+        0.6179174166117996
+      ],
+      "column": 27,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.078197448372283,
+        -0.966736640604452
+      ],
+      "upper": [
+        0.5188543904170974,
+        0.63125797380772
+      ],
+      "column": 28,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.2029417572460879,
+        -1.0948858741438456
+      ],
+      "upper": [
+        0.3334862716118669,
+        0.4415129213265469
+      ],
+      "column": 29,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.3883869372876054,
+        -1.282746877910837
+      ],
+      "upper": [
+        0.44002346172036055,
+        0.5477028575175736
+      ],
+      "column": 30,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.7008049873413338,
+        -1.534327622879689
+      ],
+      "upper": [
+        0.5332793193861525,
+        0.6392553985007071
+      ],
+      "column": 31,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -2.279032433565843,
+        -2.1635227816522353
+      ],
+      "upper": [
+        0.2122612864647401,
+        0.3192039638449146
+      ],
+      "column": 32,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.8064163191688656,
+        -1.7017152155046074
+      ],
+      "upper": [
+        0.09771157098833544,
+        0.20823924018321002
+      ],
+      "column": 33,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.3194000349382289,
+        -1.2434509317385294
+      ],
+      "upper": [
+        -0.2167817298611641,
+        -0.09746929099739167
+      ],
+      "column": 34,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -2.150504741543434,
+        -2.0099290207481695
+      ],
+      "upper": [
+        -0.10980164329950001,
+        -0.004341068176399357
+      ],
+      "column": 35,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.4917852643073102,
+        -1.345391607085241
+      ],
+      "upper": [
+        -0.23803695538317224,
+        -0.12774682728144676
+      ],
+      "column": 36,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -2.3376829643063823,
+        -2.2012246703706064
+      ],
+      "upper": [
+        -0.25645426086676987,
+        -0.14462300670756753
+      ],
+      "column": 37,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -2.3132319160419272,
+        -2.1477822878572406
+      ],
+      "upper": [
+        -0.2267235658944576,
+        -0.11867111517268329
+      ],
+      "column": 38,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.913648363117385,
+        -1.7875653575584338
+      ],
+      "upper": [
+        -0.33970824420269347,
+        -0.22637356080948037
+      ],
+      "column": 39,
+      "folder": "2024-06-17_TypeD_T2_sample1/v1",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.8857490655902597,
+        1.0017902131082637
+      ],
+      "upper": [
+        1.3441982711076008,
+        "+inf"
+      ],
+      "column": 0,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.5355438033916153,
+        0.6511847399871439
+      ],
+      "upper": [
+        1.3340546536069213,
+        "+inf"
+      ],
+      "column": 1,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.7481654918662783,
+        0.8620632540449897
+      ],
+      "upper": [
+        1.323082563461023,
+        "+inf"
+      ],
+      "column": 2,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.5213434702753921,
+        0.6349236577733738
+      ],
+      "upper": [
+        1.3230751215178518,
+        "+inf"
+      ],
+      "column": 3,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.2848208557459247,
+        0.3988708602230603
+      ],
+      "upper": [
+        1.3201954118087222,
+        "+inf"
+      ],
+      "column": 4,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.2790699682077916,
+        0.40083864417193577
+      ],
+      "upper": [
+        1.3169182407938345,
+        "+inf"
+      ],
+      "column": 5,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.16353040074733824,
+        0.28111902423201374
+      ],
+      "upper": [
+        1.3174801708240271,
+        "+inf"
+      ],
+      "column": 6,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.07744333196987324,
+        0.04287009478269211
+      ],
+      "upper": [
+        1.3192041314837528,
+        "+inf"
+      ],
+      "column": 7,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.27303500808076187,
+        0.3970543246865481
+      ],
+      "upper": [
+        1.315663075008783,
+        "+inf"
+      ],
+      "column": 8,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.023130756719531166,
+        0.1496081641566044
+      ],
+      "upper": [
+        1.3109336862964338,
+        "+inf"
+      ],
+      "column": 9,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.3490660628050384,
+        -0.22088199649662243
+      ],
+      "upper": [
+        1.313225323176258,
+        "+inf"
+      ],
+      "column": 10,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.23907764605119972,
+        -0.11435511076424953
+      ],
+      "upper": [
+        1.3124090841409353,
+        "+inf"
+      ],
+      "column": 11,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.3740942349968139,
+        -0.24238752038094788
+      ],
+      "upper": [
+        1.3077877391134352,
+        "+inf"
+      ],
+      "column": 12,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.6459757552670925,
+        -0.5013761905458377
+      ],
+      "upper": [
+        1.3072535539003938,
+        "+inf"
+      ],
+      "column": 13,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.6430144853138621,
+        -0.5059075632427265
+      ],
+      "upper": [
+        1.3105984816038334,
+        "+inf"
+      ],
+      "column": 14,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.7823885690602604,
+        -0.6465460859090676
+      ],
+      "upper": [
+        1.3154064154401242,
+        "+inf"
+      ],
+      "column": 15,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.0713048815815893,
+        -0.9103520869269672
+      ],
+      "upper": [
+        1.31626009949723,
+        "+inf"
+      ],
+      "column": 16,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.1069960289353356,
+        -0.9569672613336027
+      ],
+      "upper": [
+        1.3371825979791738,
+        "+inf"
+      ],
+      "column": 17,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.5658590137606562,
+        -0.429365795449648
+      ],
+      "upper": [
+        1.3496018654442736,
+        "+inf"
+      ],
+      "column": 18,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.27104376103528893,
+        -0.14374334349048476
+      ],
+      "upper": [
+        1.3521761020925742,
+        "+inf"
+      ],
+      "column": 19,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.7115226125232237,
+        -0.5858658218869057
+      ],
+      "upper": [
+        1.3592604217405968,
+        "+inf"
+      ],
+      "column": 20,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.1985442579338472,
+        -0.08861071003655369
+      ],
+      "upper": [
+        1.3668561324179833,
+        "+inf"
+      ],
+      "column": 21,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.6639744401423237,
+        -0.5458440729440722
+      ],
+      "upper": [
+        1.3713967992286016,
+        "+inf"
+      ],
+      "column": 22,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.4253608539005053,
+        -0.30587063271178366
+      ],
+      "upper": [
+        1.373300087977655,
+        "+inf"
+      ],
+      "column": 23,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.07904098222329202,
+        0.038758737812896585
+      ],
+      "upper": [
+        1.3675492305576553,
+        "+inf"
+      ],
+      "column": 24,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.5612018618568368,
+        -0.440713736179557
+      ],
+      "upper": [
+        1.2548781731790783,
+        1.3694765819594412
+      ],
+      "column": 25,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.077939735887091,
+        -0.9552842470025947
+      ],
+      "upper": [
+        1.2553235165232781,
+        1.371555242828573
+      ],
+      "column": 26,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.9639540726116094,
+        -0.8351769068932445
+      ],
+      "upper": [
+        1.1480828200102204,
+        1.260143715239916
+      ],
+      "column": 27,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.3757695172619473,
+        -1.2281734104741744
+      ],
+      "upper": [
+        1.0390256014860955,
+        1.14814974566494
+      ],
+      "column": 28,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.2815815326461788,
+        -1.1667825374972352
+      ],
+      "upper": [
+        1.1558208726517132,
+        1.263684628570527
+      ],
+      "column": 29,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.5556365940062793,
+        -1.398171589903291
+      ],
+      "upper": [
+        0.9402614151641894,
+        1.049636199428929
+      ],
+      "column": 30,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.5828861860181773,
+        -1.441302543769027
+      ],
+      "upper": [
+        1.268904853371862,
+        1.3823575513242568
+      ],
+      "column": 31,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.2933042898346812,
+        -1.161910786959479
+      ],
+      "upper": [
+        0.7132184640501862,
+        0.8275192865947416
+      ],
+      "column": 32,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.7886040983590752,
+        -1.6189970753694203
+      ],
+      "upper": [
+        0.2779120063719504,
+        0.3870040791491862
+      ],
+      "column": 33,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.5498949114108491,
+        -1.4037846480102052
+      ],
+      "upper": [
+        0.29179760648797326,
+        0.40849468774517156
+      ],
+      "column": 34,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.9966269352912163,
+        -1.910268977076861
+      ],
+      "upper": [
+        0.4149166182835345,
+        0.5190694938664192
+      ],
+      "column": 35,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.7514686126166759,
+        -1.58280484547385
+      ],
+      "upper": [
+        0.39957214193845236,
+        0.513766700568435
+      ],
+      "column": 36,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.7091645708437022,
+        -1.5823239067002228
+      ],
+      "upper": [
+        0.39212932950674306,
+        0.501502864850792
+      ],
+      "column": 37,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -3.887895878714412,
+        -3.8031005676407927
+      ],
+      "upper": [
+        0.5122695625731335,
+        0.6199431780747643
+      ],
+      "column": 38,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.8998613656627654,
+        -1.7458193954204877
+      ],
+      "upper": [
+        0.28315731843600933,
+        0.3928328056148072
+      ],
+      "column": 39,
+      "folder": "2024-06-17_TypeD_T2_sample1/v2",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        1.2691120216376681,
+        "+inf"
+      ],
+      "upper": [
+        null,
+        null
+      ],
+      "column": 0,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": true
+    },
+    {
+      "lower": [
+        1.2693942344929978,
+        "+inf"
+      ],
+      "upper": [
+        null,
+        null
+      ],
+      "column": 1,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": true
+    },
+    {
+      "lower": [
+        1.269183684522407,
+        "+inf"
+      ],
+      "upper": [
+        null,
+        null
+      ],
+      "column": 2,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": true
+    },
+    {
+      "lower": [
+        1.2653822919661706,
+        "+inf"
+      ],
+      "upper": [
+        null,
+        null
+      ],
+      "column": 3,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": true
+    },
+    {
+      "lower": [
+        1.2694262771182494,
+        "+inf"
+      ],
+      "upper": [
+        null,
+        null
+      ],
+      "column": 4,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": true
+    },
+    {
+      "lower": [
+        1.2644336506637541,
+        "+inf"
+      ],
+      "upper": [
+        null,
+        null
+      ],
+      "column": 5,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": true
+    },
+    {
+      "lower": [
+        1.2694058953184875,
+        "+inf"
+      ],
+      "upper": [
+        null,
+        null
+      ],
+      "column": 6,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": true
+    },
+    {
+      "lower": [
+        1.2691538254526622,
+        "+inf"
+      ],
+      "upper": [
+        null,
+        null
+      ],
+      "column": 7,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": true
+    },
+    {
+      "lower": [
+        1.2685973584131522,
+        "+inf"
+      ],
+      "upper": [
+        null,
+        null
+      ],
+      "column": 8,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": true
+    },
+    {
+      "lower": [
+        0.7807454240103646,
+        0.9029364497146688
+      ],
+      "upper": [
+        1.26766276786154,
+        "+inf"
+      ],
+      "column": 9,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.5299960326363322,
+        0.6508889687666959
+      ],
+      "upper": [
+        0.9003689055114988,
+        1.0233119264877226
+      ],
+      "column": 10,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.6627295814784732,
+        0.7821348934667911
+      ],
+      "upper": [
+        1.2712987841100045,
+        "+inf"
+      ],
+      "column": 11,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.5398494391158506,
+        0.6686032827962435
+      ],
+      "upper": [
+        1.274879072476709,
+        "+inf"
+      ],
+      "column": 12,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.2905793273317468,
+        0.4191046573430748
+      ],
+      "upper": [
+        1.279311115831812,
+        "+inf"
+      ],
+      "column": 13,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.6655502911272125,
+        0.7971273523292428
+      ],
+      "upper": [
+        1.277406940488112,
+        "+inf"
+      ],
+      "column": 14,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.41302615147043714,
+        0.5410238919017644
+      ],
+      "upper": [
+        1.157815462495678,
+        1.2764813762079006
+      ],
+      "column": 15,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.2791167484185043,
+        0.41202637820974397
+      ],
+      "upper": [
+        1.2774009289250698,
+        "+inf"
+      ],
+      "column": 16,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.10825433419066363,
+        0.02649183527113474
+      ],
+      "upper": [
+        1.2791789701197944,
+        "+inf"
+      ],
+      "column": 17,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.38286427396439476,
+        -0.24635672295105132
+      ],
+      "upper": [
+        1.2860987043717054,
+        "+inf"
+      ],
+      "column": 18,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.07976924490394356,
+        0.06306774790250906
+      ],
+      "upper": [
+        1.2935806101785965,
+        "+inf"
+      ],
+      "column": 19,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.22139539692074134,
+        0.3398057135698596
+      ],
+      "upper": [
+        1.3021145775862366,
+        "+inf"
+      ],
+      "column": 20,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.15825927846630936,
+        -0.020633916802245827
+      ],
+      "upper": [
+        1.3127746508322067,
+        "+inf"
+      ],
+      "column": 21,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.24941287163639939,
+        0.3695350335375105
+      ],
+      "upper": [
+        1.3137148910044651,
+        "+inf"
+      ],
+      "column": 22,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.28158183395867303,
+        -0.14106419330118836
+      ],
+      "upper": [
+        1.310596312976935,
+        "+inf"
+      ],
+      "column": 23,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        0.3610869278000607,
+        0.48970373791805755
+      ],
+      "upper": [
+        1.3108988749945454,
+        "+inf"
+      ],
+      "column": 24,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.28214293985783223,
+        -0.1396206831652987
+      ],
+      "upper": [
+        1.3159589006656713,
+        "+inf"
+      ],
+      "column": 25,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.30797605490523766,
+        -0.1659704526255221
+      ],
+      "upper": [
+        1.3160949358923422,
+        "+inf"
+      ],
+      "column": 26,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.8500872839436199,
+        -0.701523825353602
+      ],
+      "upper": [
+        1.3229864356905203,
+        "+inf"
+      ],
+      "column": 27,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.08910093870196814,
+        0.026220586318181142
+      ],
+      "upper": [
+        1.3303197894620498,
+        "+inf"
+      ],
+      "column": 28,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.3833567654650758,
+        -0.2549854111827872
+      ],
+      "upper": [
+        1.3314859590924881,
+        "+inf"
+      ],
+      "column": 29,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.287852582028037,
+        -1.1337271837496399
+      ],
+      "upper": [
+        1.3229725794690135,
+        "+inf"
+      ],
+      "column": 30,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -0.5329082025970135,
+        -0.3870573484069183
+      ],
+      "upper": [
+        0.8622840840904742,
+        0.9777719679773373
+      ],
+      "column": 31,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -6.907755278982137,
+        -6.907755278982137
+      ],
+      "upper": [
+        1.1137910808993674,
+        1.2257679355892963
+      ],
+      "column": 32,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.2905887622816723,
+        -1.1558013212966174
+      ],
+      "upper": [
+        0.6571646023634333,
+        0.771278285109189
+      ],
+      "column": 33,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.2417666480394525,
+        -1.0731258345989587
+      ],
+      "upper": [
+        0.7746859706739567,
+        0.888361789516118
+      ],
+      "column": 34,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.4392360856853517,
+        -1.2148041413583934
+      ],
+      "upper": [
+        0.9994524384609617,
+        1.118780630322118
+      ],
+      "column": 35,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.3673870168770237,
+        -1.180169142196878
+      ],
+      "upper": [
+        1.3448838563660843,
+        "+inf"
+      ],
+      "column": 36,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.2870886409230289,
+        -1.1254745927960912
+      ],
+      "upper": [
+        0.996199293226346,
+        1.1148531621728197
+      ],
+      "column": 37,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -1.5364009229649842,
+        -1.357900835977781
+      ],
+      "upper": [
+        0.6664134615172985,
+        0.7785741228367848
+      ],
+      "column": 38,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    },
+    {
+      "lower": [
+        -2.275963524762551,
+        -2.095340549586
+      ],
+      "upper": [
+        1.0046286439344938,
+        1.1184423085214161
+      ],
+      "column": 39,
+      "folder": "2024-06-17_TypeD_T2_sample1/v3",
+      "no_detected_band": false
+    }
+  ],
+  "prediction_receipt": "/Users/jeongjihoon/violin-rne/astra_20261019/D_T2_controls_frozen.json"
+}

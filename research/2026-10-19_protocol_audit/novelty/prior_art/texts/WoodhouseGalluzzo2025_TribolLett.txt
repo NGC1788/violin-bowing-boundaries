@@ -1,0 +1,951 @@
+        Enhanced tribological modelling of violin rosin
+
+                     Jim Woodhouse1* and Paul Galluzzo2
+   1*
+        Department of Engineering, Cambridge University, Trumpington St,
+                         Cambridge, CB2 1PZ, U.K..
+            2
+              TTP plc, Cambridge Road, Melbourn, SG8 6HQ, U.K..
+
+
+             *Corresponding author(s). E-mail(s): jw12@cam.ac.uk;
+
+
+                                        Abstract
+     Accurate simulation of the motion of a bowed violin string requires a reliable
+     tribological model for rosin, with which the bow-hairs are coated. None of the
+     models proposed in the past have given entirely satisfactory results. An enhanced
+     model is proposed here, which combines influences from the contact tempera-
+     ture and the sliding speed. Transient vibration predictions using this model are
+     compared with earlier experimental measurements in the “Guettler diagram”,
+     demonstrating better agreement than with earlier models.
+
+     Keywords: rosin, bowed string
+
+
+
+
+To commemorate the centenary of the birth of Professor K. L. Johnson (1925–2015)
+
+1 Introduction
+When a violin string is bowed in the normal way, it executes stick-slip vibration of
+one kind or another. There are a number of questions relevant to violinists or violin
+makers that can in principle be investigated by modelling and computer simulation
+of the bowing process. Some of these questions concern the wide variety of possible
+periodic motions of a bowed string, but for other important issues it is not sufficient for
+a simulation model to predict only the steady periodic motion of the string: instead,
+it is crucial that some details of the transient motion in response to a particular bow
+gesture are captured reliably.
+     This requirement for accurate transient prediction is rare among engineering appli-
+cations of friction-excited vibration, and it poses a severe challenge in terms of the
+required constitutive model to describe the frictional interaction. Previous literature
+
+
+                                            1
+has used two types of constitutive model (reviewed in section 2), but neither of
+them captures the transient details very convincingly. This paper puts forward an
+enhanced model combining elements of the two (described in section 3). The predic-
+tions of this enhanced model are tested by comparing detailed simulation results with
+measurements, in section 4.
+    There is a long history of efforts to measure and model the motion of a bowed
+string, stretching back to Helmholtz [1] and Raman [2]. The early work concentrated
+on periodic motion, but an important contribution to understanding of bowed-string
+transients was made in 2002 by Guettler [3]. He studied a particular family of bowing
+gestures, in which the bow is held against the string with a constant normal force,
+and accelerated from rest with a given acceleration. Using a severely simplified model,
+Guettler predicted that the fastest starting transients should only be possible in a
+certain wedge-shaped region of the “Guettler plane” indexed by the values of the
+normal force and acceleration.
+    Using a computer-controlled bowing machine, Galluzzo [4] was able to measure
+transient response to such constant-acceleration gestures at a grid of points in the
+Guettler plane. These measurements allowed Guettler’s predictions to be tested, and
+they provide a wealth of data on which the present study will draw heavily. Some
+aspects of these measurements will be data-mined to give information for the con-
+struction of an enhanced constitutive frictional model, described in section 3. Other
+aspects, such as the nature of the final periodic motion in each case (if any) and the
+length of the starting transient leading to this final state, will be used to explore the
+predictive capability of the enhanced model in comparison with the earlier ones.
+
+2 Review of models for rosin friction
+The friction between a violin bow and string is deliberately manipulated by coating
+the hairs of the bow with rosin, a natural material obtained from various species of
+pine tree. The raw tree resin is separated using distillation or solvents into a liquid
+component called “spirit of turpentine” and a solid component, which is rosin. Its
+principal chemical component is abietic acid.
+    The earliest attempts to construct theoretical models of a bowed string assumed
+that the frictional behaviour could be approximated by the familiar approaches to dry
+friction: Coulomb’s model with fixed values for the static and dynamic coefficients of
+friction, or a Stribeck-type model in which the friction force during sliding was some
+assumed function of the relative sliding speed.
+    Quantitative form was given to this “friction curve model” by measurements of the
+coefficient of friction during steady sliding at a range of imposed speeds [5, 6]. Figure
+1 shows measured points as circles, plus two different curve fits to them. It has been
+plotted in a way that emphasises the fact that the friction force always opposes the
+direction of sliding. The solid line is the function
+
+                   µ = −sgn(v )[0.4e−|v|/0.01 + 0.45e−|v|/0.1 + 0.35]                (1)
+
+where µ is the coefficient of friction and v = vs − vb is the relative sliding speed
+across the contact, vs being the string velocity at the contact and vb the bow speed.
+
+
+                                           2
+                                     1
+
+
+
+
+         Coefficient of friction
+                                   0.5
+
+
+                                     0
+
+
+                                   -0.5
+
+
+                                    -1
+
+
+                                          -0.3   -0.2   -0.1      0       0.1    0.2   0.3
+                                                        Sliding velocity (m/s)
+Fig. 1: Measured values of the coefficient of friction of a rosin-coated contact when
+steady sliding was imposed at a range of speeds (circles). The curved lines are different
+curve-fits to these measurements, described in the text: the solid red curve is based on
+exponential functions of sliding speed, the dashed blue curve is based on a power-law
+relation.
+
+
+This is a form that fits with expectations for dry friction: it has a static coefficient of
+friction 1.2, an asymptotic dynamic coefficient 0.35, and a smooth curve connecting
+them. This function has been used repeatedly in earlier studies of the bowed string
+(e.g. [7, 8]), but we will have reason to revisit it when other measurements are brought
+into the picture in section 3. The dashed line in Fig. 1 will then be explained. The
+vertical section of the solid curve represents sticking, when the friction force can take
+any value between the limits set by the static coefficient of friction. In the context of
+a bowed-string model, with a positive value of the bow speed, the left-hand portion of
+Fig. 1 represents the usual direction of slipping. The right-hand half would represent
+“forward slipping”, where the string slips forwards past the bow-hair. It rarely arises
+in the models to be discussed here.
+    A simulation model for the motion of a bowed string can be built around a friction
+curve model like the solid curve in Fig. 1. The procedure has been described in detail
+previously (see the review [9] and references cited therein), but one aspect of the model
+will play an essential role later in this study, so a brief summary is necessary here.
+As well as being related via the friction curve, the friction force and string velocity at
+the bowed point are related via the vibrational dynamics of the string. That relation
+takes the form
+                                  f (t) = 2Z0 [vs (t) − vh (t)]                         (2)
+
+
+                                                              3
+where f (t) is the force, vs (t) is the string velocity, Z0 is a wave impedance for the
+string motion, and vh (t) is the net effect of reflected waves arriving back at the bowed
+point on the string at time t. In the context of a time-stepping simulation, vh is a
+known quantity at time t: it can be calculated from the past history of the motion,
+making use of properties of the string and of the violin body to which it is attached.
+    It follows that the values of f and vs at the next time-step must lie at the
+intersection of the straight line described by eq. (2) and the friction curve
+
+                                    f = Fb µ(vs − vb )                                  (3)
+
+where Coulomb’s law has been assumed, Fb being the normal force between the bow
+and the string. In the course of the simulation the slope of the straight line stays the
+same, but it moves back and forth as vh changes. For many positions of the line, there
+is only a single intersection with the friction curve. However, if the line lies between
+the two positions marked in blue in Fig. 2 there are three possible intersections. This
+leads to a hysteresis loop, as indicated by the arrows in the figure [10]. If the line
+enters the ambiguous range from the left, the force and velocity track along the rising
+curve until they reach the position marked by the right-hand blue line, after which
+they jump to the vertical part of the friction curve. But if the line then moves back
+towards the left, the force and velocity remain on the vertical line until the position
+marked by the left-hand blue line, at which point they must execute a larger jump
+back to the curving line.
+    These jumps will play an important role in the enhanced model to be developed in
+section 3, but before that we need to look briefly at the second constitutive model for
+rosin friction that has been explored in earlier literature. This model is based on the
+fact that rosin is a glassy material, with a glass transition not far above normal ambi-
+ent temperature. Different commercial formulations for musical purposes give different
+transition temperatures, but for the violin rosin upon which this study will concen-
+trate, calorimetry measurements suggest a transition temperature around 50◦ C. The
+mechanical properties of rosin can be expected to vary rapidly with temperature in a
+range straddling this transition.
+    Direct evidence has been shown of partial melting of the rosin during the bowing
+of a string, in the form of scanning electron microscope images of the track left when
+a string was bowed with a rosin-coated glass rod [11]. So perhaps the variation of
+coefficient of friction with sliding speed shown in Fig. 1 arises because frictional sliding
+raises the temperature in the contact region, and the friction force then falls because
+of temperature sensitivity.
+    Interestingly, such behaviour would be a mirror image of what occurs in a lubri-
+cated rolling mill. In the rolling context, lubricant enters the nip in a liquid state. It
+is then subjected to high pressure and frictional heating, which affect the viscosity in
+opposite senses. The pressure effect wins, and the lubricant becomes more “solid” and
+so able to sustain the necessary tractive force (see for example section 10.4 of John-
+son [12]). In violin bowing, by contrast, the rosin layer enters the contact zone in a
+solid state. It is again subjected to high pressure and frictional heating, but now the
+heating effect wins and the rosin becomes more “liquid”.
+
+
+
+                                             4
+Fig. 2: Diagram to illustrate the simulation procedure involving the intersection of a
+straight line and the friction curve, and a hysteresis rule to resolve the ambiguity.
+
+
+   The proposed model assumed a temperature-dependent yield stress Y (T ), so that
+the friction force was given by
+
+                                  f = A sgn(v ) Y (T )                               (4)
+
+where the term sgn(v ) ensures that the friction force always opposes the sliding motion,
+and A is the total area of contact. If Coulomb’s law is still to hold, A must scale in
+proportion to the normal load Fb .
+    The simulation process now requires a temperature calculation alongside the calcu-
+lation of the string motion. The averaged temperature in the small volume of rosin in
+the contact patch was estimated by a simple control volume model balancing the heat
+gained by frictional work against the heat lost by conduction, advection by the mov-
+ing bow, and changing temperature of the rosin. The form of Y (T ) was determined by
+requiring that under conditions of steady sliding, the friction force predicted by the
+model should match the fitted friction relation eq. (1). The equation that ensures this
+match [6] will be needed in section 3: it is
+                                                          r
+                                                               3v
+                        Fb µ(v ) v = vaδρr cr T + T AKr                              (5)
+                                                              8aDr
+
+
+
+
+                                           5
+                                   p
+(from eq. (20) of [6]) where a = A/π is the effective radius of the contact patch, δ
+is the rosin thickness, ρr is the density of rosin, cr is its specific heat capacity, Kr is
+its thermal conductivity and Dr = Kr /ρr cr is its thermal diffusivity. The full details
+of the model for calculating contact temperature are described in [6]. That reference
+also gives representative plots of the deduced yield stress Y (T ).
+    This thermal model has been shown to give more convincing predictions of many
+aspects of transient motion than the friction-curve model [13]. However, that reference
+also highlighted some significant shortcomings in the model, and the task of this study
+is to formulate a model that addresses some of these shortcomings.
+
+3 An enhanced friction model
+3.1 Guettler transients
+The Galluzzo measurements of transient response in the Guettler plane used a cello
+rather than a violin, for practical reasons. The open D string of a cello (fundamental
+frequency 146.8 Hz) was bowed at a variety of different positions, either with a normal
+cello bow or with a rosin-coated perspex rod. The rod tests were intended to give a
+closer approach to the theoretical assumption of a single bowing point. The results
+showed relatively little difference between the two cases (with some exceptions, to be
+mentioned shortly). This study will concentrate on results from the normal bow. The
+bow or rod was moved with the required velocity profile vb (t) by a linear motor, while
+the bow force was held at the required constant level by a force actuator driven by a
+feedback controller. Full details of the experimental setup can be found in [4].
+    The cello bridge was equipped with a force sensor to measure the transverse force
+exerted on the bridge by the vibrating string. Examples of the resulting output for two
+different constant-acceleration Guettler transients are shown in Fig. 3. Both have the
+same bow acceleration and bow position on the string (characterised by a dimensionless
+parameter β , the distance of the bow from the bridge as a fraction of the string
+length), but they have different values of the normal force Fb . The upper plot, with
+the higher value of Fb , shows one of Guettler’s “perfect transients”: the waveform
+settles immediately into the sawtooth form that is the characteristic of “Helmholtz
+motion”, the string vibration regime that violinist (and cellists) normally want [9].
+By contrast, the lower plot shows a rather unsatisfactory and hesitant start, with
+an irregular sawtooth wave of shorter period suggesting string vibration with several
+stick-slip transitions in each period of the sawtooth from the upper plot.
+    Figure 4(a) shows the context of these two cases in the Guettler plane. For com-
+parison, Fig. 4(b) shows the corresponding results obtained with the rosin-coated rod.
+Measurements were made on a 20 × 20 grid of points in the Guettler plane. The result
+of each run was post-processed by a routine that located the timing of the first slip,
+then established the length of time after that before Helmholtz motion became estab-
+lished (if it ever was). The algorithm used for this task is described in section 9.5.4 of
+Woodhouse [14]. The plots in Fig. 4 are colour-shaded to indicate this transient length
+after first slip, expressed as a number of nominal period-lengths. Black pixels indicate
+that Helmholtz motion was not found within 25 period-lengths of the first slip. The
+
+
+
+                                            6
+         Bridge force
+
+
+
+
+                        0   0.01   0.02   0.03    0.04   0.05   0.06     0.07
+                                            Time (s)
+Fig. 3: Two examples of measured bridge force during Guettler constant-acceleration
+transients. A cello D string has been excited with a normal cello bow at position
+β = 0.09, with acceleration 1.56 m/s2 and two values of normal bow force: 1.73 N for
+the upper curve, 0.84 N for the lower curve. The curves have been offset for clarity:
+both transients have zero force at the start.
+
+
+two green squares mark the cases shown in Fig. 3, and the colours agree with expec-
+tations from that plot: the higher force gave a perfect start, leading to a white pixel,
+while the lower force never did produce Helmholtz motion, indicated by a black pixel.
+    The region within which coloured pixels occur in Fig. 4 shows the general form of
+Guettler’s predicted wedge, and in the core of this region there is a liberal scatter of
+very pale yellow pixels connoting very short initial transients. The two plots show a
+broadly similar region of coloured pixels, except that the shape of the bottom edge is
+a little different in the two cases: a possible explanation will be suggested at the end
+of section 3.3.
+    Both plots in Fig. 4 show terrain that is “speckly” rather than showing smooth vari-
+ations of colour. There are some black pixels within the wedge, indicating cases where
+the string chose to vibrate in a regime other than Helmholtz motion. For some detail
+of these alternative regimes, see for example [9]. The bowed string system appears to
+be on the edge of chaotic behaviour: the speckly pattern has been observed to exhibit a
+degree of sensitive dependence if the experiment is repeated under nominally identical
+conditions [15].
+
+
+
+
+                                               7
+                                                        Periods                                                                  Periods
+
+                                                                  25                                                                       25
+                  3                                                                        3
+
+                                                                  20                                                                       20
+
+
+
+
+  Bow force (N)                                                            Bow force (N)
+                                                                  15                                                                       15
+                  2                                                                        2
+
+
+                                                                  10                                                                       10
+
+
+                  1                                                                        1
+                                                                  5                                                                        5
+
+
+                                                                  0                                                                        0
+                  0.08     1              2         3                                      0.08     1              2         3
+                         Bow acceleration (m/s 2)                                                 Bow acceleration (m/s 2)
+
+                                    (a)                                                                      (b)
+
+Fig. 4: Measured 30 × 30 grids of Guettler constant-acceleration transients for the
+cello D string; (a) excited with a normal bow at position β = 0.09, (b) excited with
+a rosin-coated rod. The two cases illustrated in Fig. 3 are marked with green squares.
+Pixels are colour shaded according to the length of initial transient before Helmholtz
+motion is established. Pixels marked ‘×’ could not be analysed, because the first slip
+occurred so late that the recorded segment contained insufficient data.
+
+
+    Both bridge force waveforms in Fig. 3 begin with a smooth parabolic rise. During
+this rise, the string is sticking to the bow-hairs and being pulled sideways in a quasi-
+static manner. With constant bow acceleration ab , the displacement at the bowed
+point is given by y = ab t2 /2. A simple static force calculation then says that the
+friction force at the bow is
+                                               Py
+                                       f≈                                           (6)
+                                           Lβ (1 − β )
+where P is the string tension, L is the string length, and the position of the bow on
+the string is a distance βL from the bridge. The bridge force is
+
+                                                                             Py
+                                                         fbr ≈                                                                                 (7)
+                                                                             βL
+
+so that
+                                             fbr
+                                                  .     f≈                            (8)
+                                            1−β
+Equation (7) accounts for the parabolic rise, and eq. (8) allows the peak value to be
+converted to the peak friction force.
+    After the parabolic rise, the two waveforms in Fig. 3 behave differently: the upper
+plot shows an abrupt jump, but the lower one does not. Note that eq. (8) only applies
+during the parabolic rise: a sudden jump in friction force is transmitted to an identical
+jump in bridge force, without the factor (1 − β ). The case with a jump highlights a
+major shortcoming with the thermal model just described: this model is unable to
+give such an abrupt initial jump in friction force, it always behaves more like the lower
+
+
+                                                                       8
+plot. When slipping starts the contact temperature begins to rise, but the yield stress
+can only reduce gradually and progressively. Some simulated examples will be shown
+later, in Fig. 10(b).
+
+3.2 A proposed friction law
+The challenge now is to formulate a model that preserves the advantages of the thermal
+model, but allows the possibility of an initial jump in friction force. A simple, if ad
+hoc, possibility is to modify eq. (4) to
+
+                                    f = A h(v ) Y (T )                                 (9)
+
+where h(v ) is an antisymmetric function of sliding speed generically similar to Fig.
+1. This describes a friction curve model in which the friction curve is scaled down
+as temperature rises, so that jumps by the mechanism of Fig. 2 become less severe.
+Equation (9) is a friction law of the “rate and state” kind, with temperature as the state
+variable. However, the governing equation for the temperature (described briefly at
+the end of section 2) is quite different from the simple evolution laws usually assumed
+in rate and state laws: see for example [16].
+    The pattern of jumps in the measured Guettler data can be used to test whether
+this idea has any merit, and to give information about the required form of h(v ). From
+a waveform like the upper plot in Fig. 3, values can be determined for the maximum
+friction force just before the jump, and for the subsequent jump in friction force. If that
+jump is caused by the phenomenon illustrated in Fig. 2, points can then be plotted
+in the µ − v plane representing the two ends of the jump: the relative velocity at the
+start is zero by definition, and the value at the end can be deduced from the jump
+in force and the slope 2Z0 , from eq. (2). Repeating the analysis for different cases of
+the Guettler plane scan, if eq. (9) is to hold and if the temperature is the same in all
+cases when the jump occurs, T0 say, the points should all fall on a curve Kh(v )Y (T0 )
+where the constant K = A/Fb .
+    Figure 5 shows the maximum coefficient of friction just before the first slip, for
+the same Guettler scan as in Fig. 4. This shows that the sticking friction tends to be
+high for the leftmost columns, where the acceleration is low. It also tends to be rather
+low in the bottom few rows, where the bow force is low. But outside these regions the
+majority of the plot shows relatively uniform colour, connoting rather similar values
+of the friction coefficient and therefore (perhaps) rather similar temperatures.
+    A tentative explanation for the high forces shown on the left-hand side of Fig. 5
+is that when the bow acceleration was low there will inevitably have been a longer
+delay before the first slip occurs. That will have given the contact region a little longer
+to cool down after the last major slip, and for some “junction growth” to occur in
+the rosin. Both effects could explain why the frictional bond was stronger. The SEM
+images mentioned earlier of the friction track left on the surface of a rosin-coated glass
+rod used to bow a string [11] point towards some kind of brittle/ductile transition
+between different parts of the track. It is noteworthy that the highest values in the
+low-acceleration region of Fig. 5 are comparable with the spread of values of static
+friction coefficient shown in Fig. 1, which were measured at ambient temperature.
+
+
+                                            9
+                                                                      Max
+
+
+
+
+                           3                                                1.4
+
+                                                                            1.2
+
+
+
+
+          Bow force (N)
+                                                                            1
+                           2
+                                                                            0.8
+
+                                                                            0.6
+
+                           1                                                0.4
+
+                                                                            0.2
+                          0.4
+                             0.08    1              2           3
+                                                         2
+                                    Bow acceleration (m/s )
+Fig. 5: Maximum coefficient of friction immediately before the first slip, using the
+same measured Guettler scan as in Fig. 4(a).
+
+
+    In the light of Fig. 5, the procedure described above to map out the function
+h(v ) has been carried out using Guettler scan data excluding the lowest 4 rows and
+the leftmost 4 columns. To reduce scatter, for each value of acceleration the friction
+coefficients in the corresponding column of Fig. 5 were averaged. Guettler scans for
+several different bow positions β have been combined. The result is shown in Fig. 6
+in the form of red stars — over 1000 of them appear in this plot. It is immediately
+clear that these points do indeed map out a consistent curve, albeit with some scatter
+(possibly due to variations in the temperature and the detailed state of the rosin, as
+well as some uncertainty associated with the automated routine used to identify the
+initial jumps).
+    The black line is a fit to this curve, which will be explained in detail shortly. It
+follows a line towards the top edge of the cloud, rather than through the centre, in
+recognition of the fact that during a large jump the contact temperature will rise,
+leading to an overshoot of the desired constant-temperature end point.
+    The plot also shows, as green circles, the steady-sliding measurements from Fig.
+1. The green line indicates the curve fit from eq. (1), and the blue dashed line is
+an alternative curve fit to be discussed in the next subsection. The steady sliding
+measurements are higher than the cloud of red stars at low sliding speed, but they fall
+below them at higher speed. This is exactly as would be expected from eq. (9). The
+steady sliding measurements show the combined effect of the “rate” term h(v ) and
+the “state” term Y (T ), whereas the hypothesis is that the red stars show only h(v )
+because the temperature was (approximately) constant at T0 .
+
+
+                                               10
+Fig. 6: Red stars mark values of coefficient of friction and sliding velocity deduced
+from the initial jumps in measured bridge force from Guettler transients, as described
+in the text. Data from four different bow positions has been combined, having β =
+0.071, 0.090, 0.113, 0.143. The black line is a curve fit, using eq. (14). Green circles
+show the steady sliding measurements from Fig. 1, with two curve fits to them: the
+green line shows the original fit, eq. (1), and the dashed blue line shows the revised
+fit, eq. (13).
+
+
+3.3 Calibration through steady sliding
+As in the original thermal model, the function Y (T ) can be determined by requiring
+that eq. (9) should reproduce the results from Fig. 1 under conditions of steady sliding.
+Since h(v ) and Y (T ) appear as a product, there is an undetermined factor that could
+multiply one while dividing the other. It is convenient to fix this factor by requiring
+that the curve fitted to the red stars, µjump (v ) say, is simply equal to h(v ). This
+requires
+                                      KY (T0 ) = 1                                   (10)
+in terms of the constant K = A/Fb introduced earlier. For steady sliding, we then
+require
+
+             µsteady (v ) = Kh(v )Y (Tsteady (v )) = h(v )Y (Tsteady (v ))/Y (T0 )      (11)
+
+where µsteady (v ) is the curve fit to the steady sliding data, and Tsteady (v ) is the tem-
+perature that results from solving eq. (5) with µ(v ) = µsteady (v ). For self-consistency
+of this model, Tsteady should be a monotonically decreasing function of |v|. It follows
+from eq. (11) that
+                           µsteady ≷ µjump when Tsteady ≶ T0                             (12)
+
+
+                                              11
+so that T0 is defined by the crossing of the lines representing the two curve fits.
+    There are now two good reasons why the original curve fit to the steady sliding
+results, given in eq. (1) and shown by the green line in Fig. 6, is not a good choice.
+First, based on the expected material properties of rosin above the glass transition
+temperature, one would expect µsteady (v ) → 0 as v → ∞ because Y (T ) will decrease
+to very small values. Second, by the highest sliding speed shown in Fig. 6 the green
+curve has risen to the top of the cloud of red stars so that it nearly contravenes the
+inequality (12).
+    The challenge, then, is to find satisfactory curve fits to both sets of data such that
+the steady sliding fit leads to a monotonic increase of temperature with sliding speed,
+and (12) is satisfied. With the parameter values used in the bowing model, the first
+term on the right-hand side of eq. (5) turns out to be small compared to the second
+           p range of sliding speed of interest here, so T is approximately proportional
+term for the
+to µsteady |v|. In order that T is always increasing with |v|, µsteady (v ) must therefore
+decrease more slowly than |v|−1/2 .
+    The combination of these constraints leaves very little flexibility, but it is possible
+to find curve fits that satisfy them all. One example of such fits is shown in the black
+line and the blue dashed line in Fig. 6, and this finally explains the blue dashed line
+included in Fig. 1. It fits the measured points just as well as the earlier curve, but
+Fig. 6 shows that it follows a very different trend at higher sliding speeds. This blue
+dashed line is the function
+
+                       µsteady (v ) = −0.2 sgn(v ) (|v| + 0.011)−0.4                  (13)
+
+while the black line is the function
+
+                    µjump (v ) = h(v ) = −0.5 sgn(v ) (|v| + 0.27)−0.4 .              (14)
+
+    Using these expressions, the temperature T0 is 26.2◦ above ambient, or 46.2◦ C.
+The temperature above ambient as a function of sliding speed is shown in Fig. 7: it
+indeed monotonically increasing. The resulting yield stress Y is shown as a function of
+temperature in Fig. 8. This latter figure is plotted in degrees Celsius, to make it clear
+that the predicted drop in yield stress does indeed occur for temperatures around the
+measured glass transition of rosin.
+    It is of interest to compare Fig. 6 with Fig. 9, which shows the corresponding plot
+based on the bowing tests with a rosin-coated rod rather than a normal bow. The red
+stars again mark out a curve, but it lies at lower values than the previous case. It
+is still possible to achieve a fit of sorts that satisfies all the constraints using a very
+similar function, with the same power-law decay with speed and a crossing point with
+the dashed blue line at a point corresponding to temperature 36.8◦ above ambient, or
+56.8◦ C. This fit is shown by the black line, which represents the function
+
+                   µjump (v ) = h(v ) = −0.37 sgn(v ) (|v| + 0.35)−0.4 .              (15)
+
+   However, the fit is less convincing than the one shown in Fig. 6. A tentative expla-
+nation for this raises an interesting tribological issue. So far, Coulomb’s law has been
+
+
+                                            12
+                                           60
+
+
+                                           50
+
+
+
+
+         Temperature (° C above ambient)
+                                           40
+
+
+                                           30
+
+
+                                           20
+
+
+                                           10
+
+
+                                            0
+                                    2           03  1        4           5
+                                  Sliding speed (m/s)
+Fig. 7: The contact temperature T as a function of sliding speed, deduced from the
+enhanced friction model.
+
+
+assumed throughout this study. But the contact between a string and a rosin-coated
+rod may not satisfy this law: the contact region is quite small and the pressure is
+high, so the classic argument for Coulomb’s law in terms of rough surfaces contact-
+ing through random asperities probably does not apply. Instead, contact is probably
+achieved over the entire nominal area, leading to behaviour closer to Hertzian contact.
+    However, for the original case using a conventional bow, the situation is different.
+Contact is now through a ribbon made up of separate horse-hairs, all coated with
+rosin. As the bow force Fb increases, more of these hairs will come into contact with
+the string. The result might resemble the classic Greenwood and Williamson model
+of asperity contact [17], leading to behaviour closer to Coulomb’s law. This difference
+between the two cases could plausibly lead to a distortion of the trend in Fig. 9
+compared to Fig. 6. It could also account for the difference in shape of the lower edge
+of the regions of coloured pixels in Figs. 4(a) and 4(b).
+
+4 Results and discussion
+The three friction models can be tested by using them to simulate Guettler transients
+and comparing the results with measurements. The revised curve fit to the steady
+sliding results will be used throughout, so the results from all three models differ from
+previous published comparisons [13, 18]. The measurements gave a 20 × 20 grid of
+Guettler transients for 8 different bow positions β , all of which have been simulated
+
+
+                                                        13
+                               5.5
+
+                                5
+
+                               4.5
+
+
+
+
+        Yield stress Y (MPa)
+                                4
+
+                               3.5
+
+                                3
+
+                               2.5
+
+                                2
+
+                               1.5
+                                  20   30   40      50        60   70    80
+                                              Temperature (°C)
+Fig. 8: The yield stress Y (T ) deduced from the enhanced friction model, plotted as
+a function of temperature in ◦ C.
+
+
+
+
+Fig. 9: Values of friction coefficient and sliding velocity deduced from the Guettler
+transient measurements using a rosin-coated rod, in the same format as Fig. 6. The
+black line the curve fit given by eq. (15).
+
+
+                                                  14
+using all three friction models, but space constraints mean that only a tiny subset of
+the results can be shown here. A larger selection can be seen on an accompanying web
+site [14] (see sections 9.6 and 9.6.3).
+    In order to run the simulations, values must be chosen for all the model parameters.
+Some of these are already determined by the tribological models described above,
+but there are many others. The parameters describing the vibration behaviour of
+the string and the cello body are known to moderate accuracy through calibration
+experiments described previously [18]. But, especially for the two thermal models,
+there are parameters that are more challenging: the thermal properties of the various
+materials, the footprint and effective thickness of the contact patch. These can be
+estimated, as described previously [18], but there is considerable uncertainty about
+details.
+    This uncertainty is important because, as stated earlier, the physical bowed string
+system shows the kind of sensitive dependence that suggests that it may be on the
+edge of chaotic behaviour. Similar sensitivity is also found in all the simulation models.
+This restricts the level of agreement to be expected between any particular measure-
+ment and a simulated version of it, and means that caution must be exercised when
+interpreting the comparisons to be shown here. Broad patterns and trends should be
+captured by a successful friction model, but individual details would only be of interest
+if they can be shown to be robust: for example speckly terrain should be reproduced,
+but individual speckles may not be.
+    The enhanced thermal model was designed around the earliest stage of the Guettler
+transients, up to the time of the first slip, so this is the first target for comparison.
+Figure 10 shows bridge force waveforms for the first 0.08 s of a selection of cases. They
+all have the same bow acceleration, and 5 different values of the bow force Fb . The
+curves have been spaced for clarity. In each case, the measured waveform is shown in
+black while the corresponding simulated one is in red. Panel (a) shows results for the
+friction-curve model, panel (b) for the original thermal model, and panel (c) shows
+the enhanced thermal model.
+    The behaviour of the first slips follows what would be expected. The friction curve
+model gives over-large jumps at first slip, and the subsequent behaviour bears little
+resemblance to the measurements. The original thermal model shows no abrupt jumps
+(although it sometimes shows gradual jumps), and again the behaviour bears little
+resemblance to measurements. The enhanced thermal model gives initial jumps of the
+correct magnitude, as it was designed to do, but encouragingly it also gives a pattern
+of subsequent behaviour that is strikingly similar to the measurements. Furthermore,
+this level of broad agreement is shared by other cases in the Guettler plane, not
+reproduced here (see section 9.6.3 of [14] for more examples). The timings of the first
+slips do not precisely match the measurements, but this simply reflects the scatter in
+those measurements.
+    Figure 11 shows Guettler diagrams for the measurements and the three sets of sim-
+ulations, with the positions of the waveforms from Fig. 10 marked by green squares.
+Panel (a) shows the same measured data as Fig. 4(a). Panel (b) shows a pattern from
+the friction-curve model that reveals a “Guettler wedge”, but one that shows little
+agreement with the measured case. The two thermal models, in panels (c) and (d),
+
+
+
+                                           15
+                     (a)                                        (b)
+
+
+
+
+                                           (c)
+
+Fig. 10: The early portions of bridge force waveforms from selected Guettler tran-
+sients, measured (black) and simulated (red) (a): using the friction curve model; (b)
+using the original thermal model; (c) using the enhanced thermal model. All have
+acceleration 1.89 m/s2 , and a range of bow forces 0.84, 1.43, 2.02, 2.61, 3.20 N. The
+curves have been spaced for clarity, with the bow force increasing upwards.
+
+
+show rather similar patterns, both coming somewhat closer to matching the measure-
+ments. The lower edge of the region of coloured pixels is in roughly the right place, but
+in the upper left-hand region of the diagrams, neither model shows as many successful
+transients as in the measurements.
+    Figure 12 shows waveform comparisons in a similar format to Fig. 10, but this time
+showing 4 nominal period-lengths of the various waveforms from near the end of the
+measurement interval to show the final state of each transient. To aid comparison, the
+simulated extracts have been scaled to the same RMS value and phase-shifted to line
+up with the measurements. As Fig. 11 implied, the measurements eventually yielded
+the Helmholtz sawtooth waveform for all these cases except for the one with the lowest
+force. For the friction curve model in panel (a), only the second and fourth of the
+waveforms give a reasonable match, while the others give either the wrong periodic
+
+
+
+                                           16
+                                                        Periods                                                                       Periods
+
+                                                                  25                                                                            25
+                  3                                                                          3
+
+                                                                  20                                                                            20
+
+
+
+
+  Bow force (N)                                                             Bow force (N)
+                                                                  15                                                                            15
+                  2                                                                          2
+
+
+                                                                  10                                                                            10
+
+
+                  1                                                                          1
+                                                                  5                                                                             5
+
+
+                                                                  0                                                                             0
+                  0.08    1               2         3                                        0.08        1              2         3
+                                               2                                                                             2
+                         Bow acceleration (m/s )                                                        Bow acceleration (m/s )
+
+                                    (a)                                                                           (b)
+                                                        Periods
+                                                                  25                                                                  Periods
+                                                                                                                                                25
+                  3                                                                          3
+                                                                  20                                                                            20
+
+
+
+
+  Bow force (N)                                                              Bow force (N)
+                                                                  15                                                                            15
+                  2                                                                          2
+
+                                                                  10                                                                            10
+
+                  1                                                                          1
+                                                                  5                                                                             5
+
+
+                                                                  0                                                                             0
+                  0.08     1              2         3                                            0.08     1             2         3
+                         Bow acceleration (m/s 2)                                                                            2
+                                                                                                        Bow acceleration (m/s )
+
+                                    (c)                                                                           (d)
+
+Fig. 11: Guettler diagrams (a) measured (as in Fig. 4(a)); (b) simulated with the
+friction curve model; (c) simulated with the original thermal model; (d) simulated with
+the enhanced thermal model. Green squares mark the cases shown in Figs. 10 and 12.
+
+
+waveform or a conspicuously non-periodic one. Both thermal models do much better:
+all except the lowest waveform gives a reasonable match. For that lowest waveform,
+both thermal models predict a double sawtooth wave characteristic of “double slipping
+motion” (see for example [9]). That waveform is similar to the measured one, but not
+identical.
+    The combined impression given by Figs. 10, 11 and 12 is that the friction curve
+model does a uniformly poor job in all comparisons with the measurements. Both
+thermal models perform significantly better, and for accuracy of prediction of the
+early motion following the first slip, the enhanced thermal model is the clear winner.
+However, Fig. 11(d) shows that this model is by no means perfect, even at the level
+of broad patterns. With high bow force in the upper left-hand region of the Guettler
+plots, the model fails to predict periodic motion everywhere that the measurements
+
+
+                                                                       17
+                     (a)                                        (b)
+
+
+
+
+                                           (c)
+
+Fig. 12: Bridge force waveform comparisons for the same set of cases as in Fig. 10,
+showing the behaviour near the end of the measurement period. Measured curves
+(black) have been phase-shifted to match the simulations (red).
+
+
+showed successful transients. This anomaly is a topic for future research: it is far from
+clear whether the explanation is to be sought in the tribology, or in other aspects of
+the simulation model.
+    As a final example from these simulations, it is of interest to see a comparison
+between the two thermal models of the predicted contact temperature variation. A
+matching pair of cases are shown in Fig. 13, corresponding to the second case from
+the bottom in Figs. 12(b,c). The original thermal model, plotted in black, predicts
+temperatures that rise some 10◦ C higher than those from the enhanced model (plotted
+in red).
+
+
+
+
+                                           18
+                            80
+
+
+                            70
+
+
+
+
+         Temperature (°C)
+                            60
+
+
+                            50
+
+
+                            40
+
+
+                            30
+
+
+                            20
+                             0.25   0.255   0.26    0.265     0.27   0.275   0.28
+                                                   Time (s)
+Fig. 13: Predicted contact temperature waveforms from selected simulations with the
+original thermal model (black) and the enhanced thermal model (red). The chosen
+cases are the second from the bottom in Figs. 12(b,c).
+
+
+5 Conclusions
+The friction of violin rosin, and the motion it causes in a bowed string, have been
+studied for a long time. Previous models used in simulation studies have either assumed
+that friction force was a function of the instantaneous sliding speed, or that it was
+a function of contact temperature. In this paper a unified model of “rate and state”
+type has been formulated, combining these two influences. The model was calibrated
+by making use of measurements of rosin friction under conditions of imposed steady
+sliding, and also of the pattern of frictional jumps at the moment of first slip in
+measured grids of constant-acceleration “Guettler” transients.
+    In the course of constructing this model, it was discovered that a commonly-used
+curve fit to the steady-sliding measurements needed to be called into question. For
+self-consistency of the enhanced model, a different curve fit was required. This new
+curve fit had a significant effect on the predictions of the earlier styles of model, as
+well as on those of the new model.
+    All three friction models, with the new curve fit, have been explored by extensive
+simulation studies. Results have been compared with detailed measurements of a grid
+of transients in the Guettler plane. The old-style model in which friction force was
+a nonlinear function of sliding speed has been shown to give uniformly poor predic-
+tions, reinforcing the conclusion of earlier studies [13]. Both varieties of thermal model
+showed much better performance. In some comparisons the two models performed
+
+
+                                                    19
+comparably well, but when the detailed waveforms in the early part of the transients
+were examined, the enhanced model gave by far the best match to measurements.
+    The main conclusions are that the new curve fit to the steady-sliding measure-
+ments improves the prediction accuracy of the two thermal models, and that the new
+enhanced model has addressed at least some of the problems of earlier models. This
+model appears to be a promising candidate for studies of the influence of various
+factors on the “playability” of bowed-string instruments.
+
+Declarations
+• Funding: no funding was received to support this work.
+• Competing interests: the authors declare no competing interests.
+• Author contribution: both authors contributed equally to this work.
+
+References
+ [1] Helmholtz, H.: On the Sensations of Tone. Dover Publications (English translation
+     1954), New York (1877)
+
+ [2] Raman, C.V.: On the mechanical theory of bowed strings and of musical instru-
+     ments of the violin family, with experimental verification of results: Part I.
+     Bulletin of the Indian Association for the Cultivation of Science 15, 1–158 (1918)
+
+ [3] Guettler, K.: On the creation of the Helmholtz motion in bowed strings. Acta
+     Acustica united with Acustica 88(6), 970–985 (2002)
+
+ [4] Galluzzo, P.M., Woodhouse, J.: High-performance bowing machine tests of
+     bowed-string transients. Acta Acustica united with Acustica 100(1), 139–153
+     (2014)
+
+ [5] Lazarus, H.: Die Behandlung der Selbsterregten Kippschwingungen der Gestrich-
+     enen, Saite mit Hilfeder Endlichen Laplacetransformation. Thesis, Technical
+     University of Berlin (1972)
+
+ [6] Smith, J.H., Woodhouse, J.: The tribology of rosin. Journal of the Mechanics and
+     Physics of Solids 48(8), 1633–1681 (2000)
+
+ [7] Schumacher, R.T., Woodhouse, J.: Computer modelling of violin playing. Con-
+     temporary Physics 36(2), 79–92 (1995)
+
+ [8] Schumacher, R.T., Woodhouse, J.: The transient behaviour of models of bowed-
+     string motion. Chaos: An Interdisciplinary Journal of Nonlinear Science 5(3),
+     509–523 (1995)
+
+ [9] Woodhouse, J.: The acoustics of the violin: a review. Reports on Progress in
+     Physics 77(11), 1–42 (2014)
+
+
+
+                                          20
+[10] McIntyre, M.E., Woodhouse, J.: On the fundamentals of bowed string dynamics.
+     Acustica 43(2), 93–108 (1979)
+
+[11] Woodhouse, J., Schumacher, R.T., Garoff, S.: Reconstruction of bowing point
+     friction force in a bowed string. The Journal of the Acoustical Society of America
+     108(1), 357–368 (2000)
+
+[12] Johnson, K.L.: Contact Mechanics. Cambridge University Press, Cambridge, UK
+     (1985)
+
+[13] Galluzzo, P.M., Woodhouse, J.: Assessing friction laws for simulating bowed-
+     string motion. Acta Acustica united with Acustica 103, 1080–1099 (2017)
+
+[14] Woodhouse, J.: Euphonics: the Science of Musical Instruments. https://www.
+     euphonics.org Accessed 2025-08-18
+
+[15] Galluzzo, P.M.: On the playability of stringed instruments. Thesis, Engineering
+     Department, University of Cambridge, Cambridge, UK (2003)
+
+[16] Rice, J.R., Lapusta, N., Ranjith, K.: Rate and state dependent friction and the
+     stability of sliding between elastically deformable solids. Journal of the Mechanics
+     and Physics of Solids 49(9), 1865–1898 (2001)
+
+[17] Greenwood, J.A., Williamson, J.B.P.: Contact of nominally flat surfaces. Pro-
+     ceedings of the Royal Society of London, Series A: Mathematical and Physical
+     Sciences 295, 300–319 (1966)
+
+[18] Woodhouse, J.: Bowed string simulation using a thermal friction model. Acta
+     Acustica united with Acustica 89(2), 355–368 (2003)
+
+
+
+
+                                           21
+

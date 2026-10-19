@@ -1,0 +1,64 @@
+
+=== A2
+  v1: floor strokes 229 (rank<=30); beta median 0.125
+    event-aligned median log-amplitude change vs lag (blocks of 50 ms; 0 = reading reaches floor):
+     -10:+0.05 -9:+0.05 -8:+0.04 -7:+0.04 -6:+0.04 -5:+0.03 -4:+0.02 -3:+0.02 -2:+0.01 -1:+0.01 +0:+0.00 +1:-0.01 +2:-0.02 +3:-0.03 +4:-0.04 +5:-0.05 +6:-0.06 +7:-0.07 +8:-0.08 +9:-0.09 +10:-0.10 +11:-0.11 +12:-0.13
+    log-amplitude rate (1/s), medians: pre-floor plateau -0.11 | floor plateau -0.27 | deceleration -1.22 | after stop -1.04
+    at 30 % bow speed in the deceleration: amplitude ratio 0.61 (driven-Helmholtz expectation ~ speed ratio 0.22; free-decay continuation 0.93)
+  v2: floor strokes 85 (rank<=30); beta median 0.140
+    event-aligned median log-amplitude change vs lag (blocks of 50 ms; 0 = reading reaches floor):
+     -10:+0.04 -9:+0.04 -8:+0.04 -7:+0.04 -6:+0.04 -5:+0.03 -4:+0.03 -3:+0.03 -2:+0.02 -1:+0.01 +0:+0.00 +1:-0.02 +2:-0.03 +3:-0.04 +4:-0.05 +5:-0.07 +6:-0.07 +7:-0.10 +8:-0.11 +9:-0.13 +10:-0.15 +11:-0.17 +12:-0.19
+    log-amplitude rate (1/s), medians: pre-floor plateau -0.09 | floor plateau -0.28 | deceleration -1.98 | after stop -1.40
+    at 30 % bow speed in the deceleration: amplitude ratio 0.50 (driven-Helmholtz expectation ~ speed ratio 0.26; free-decay continuation 0.89)
+  v3: floor strokes 256 (rank<=30); beta median 0.078
+    event-aligned median log-amplitude change vs lag (blocks of 50 ms; 0 = reading reaches floor):
+     -10:+nan -9:+nan -8:-0.16 -7:-0.14 -6:+0.12 -5:+0.11 -4:+0.08 -3:+0.06 -2:+0.04 -1:+0.03 +0:+0.00 +1:-0.03 +2:-0.07 +3:-0.11 +4:-0.15 +5:-0.18 +6:-0.22 +7:-0.23 +8:-0.30 +9:+nan +10:+nan +11:+nan +12:+nan
+    log-amplitude rate (1/s), medians: pre-floor plateau -0.56 | floor plateau -0.82 | deceleration -1.31 | after stop -0.99
+    at 30 % bow speed in the deceleration: amplitude ratio 0.61 (driven-Helmholtz expectation ~ speed ratio 0.24; free-decay continuation 0.72)
+
+=== A1
+  v1: floor strokes 45 (rank<=30); beta median 0.069
+    event-aligned median log-amplitude change vs lag (blocks of 50 ms; 0 = reading reaches floor):
+     -10:+0.02 -9:+0.02 -8:+0.02 -7:+0.01 -6:+0.00 -5:+0.00 -4:+0.02 -3:+0.00 -2:+0.02 -1:+0.00 +0:+0.00 +1:-0.00 +2:-0.02 +3:-0.04 +4:-0.06 +5:-0.07 +6:-0.07 +7:-0.09 +8:-0.08 +9:-0.11 +10:-0.12 +11:-0.12 +12:-0.11
+    log-amplitude rate (1/s), medians: pre-floor plateau +0.01 | floor plateau -0.30 | deceleration -1.23 | after stop -2.69
+    at 30 % bow speed in the deceleration: amplitude ratio 0.96 (driven-Helmholtz expectation ~ speed ratio 0.01; free-decay continuation 0.97)
+  v2: floor strokes 113 (rank<=30); beta median 0.024
+    event-aligned median log-amplitude change vs lag (blocks of 50 ms; 0 = reading reaches floor):
+     -10:-0.07 -9:-0.06 -8:-0.06 -7:-0.04 -6:-0.04 -5:-0.04 -4:-0.03 -3:-0.01 -2:+0.00 -1:+0.00 +0:+0.00 +1:+0.00 +2:+0.00 +3:-0.00 +4:+0.00 +5:-0.01 +6:-0.00 +7:-0.01 +8:+0.00 +9:-0.01 +10:-0.04 +11:-0.05 +12:-0.07
+    log-amplitude rate (1/s), medians: pre-floor plateau +0.13 | floor plateau -0.06 | deceleration -0.96 | after stop -3.71
+    at 30 % bow speed in the deceleration: amplitude ratio 0.62 (driven-Helmholtz expectation ~ speed ratio 0.27; free-decay continuation 0.96)
+  v3: floor strokes 15 (rank<=30); beta median 0.149
+    event-aligned median log-amplitude change vs lag (blocks of 50 ms; 0 = reading reaches floor):
+     -10:-0.33 -9:-0.38 -8:-0.37 -7:-0.33 -6:-0.29 -5:-0.17 -4:-0.12 -3:-0.09 -2:-0.00 -1:+0.00 +0:+0.00 +1:+0.00 +2:+0.06 +3:+0.06 +4:+0.06 +5:+0.05 +6:+0.09 +7:+0.07 +8:+0.08 +9:+0.10 +10:+0.10 +11:+0.04 +12:+0.09
+    log-amplitude rate (1/s), medians: pre-floor plateau +0.70 | floor plateau +0.35 | deceleration +nan | after stop -5.72
+    at 30 % bow speed in the deceleration: amplitude ratio 1.00 (driven-Helmholtz expectation ~ speed ratio 0.01; free-decay continuation 1.04)
+
+=== A2
+  pre-onset edge (noise) median 5129.1 N/s
+  v1: n 229  lag(blocks): -8 -6 -4 -2 +0 +2 +4 +6 +8 +10 +12
+     dlog p2p : +0.04 +0.04 +0.02 +0.01 +0.00 -0.02 -0.04 -0.06 -0.08 -0.10 -0.13
+     dlog edge: +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00
+     from last moving block to end of record (bow stopped): dlog p2p -0.20  dlog edge +0.00
+  v2: n 85  lag(blocks): -8 -6 -4 -2 +0 +2 +4 +6 +8 +10 +12
+     dlog p2p : +0.04 +0.04 +0.03 +0.02 +0.00 -0.03 -0.05 -0.07 -0.11 -0.15 -0.19
+     dlog edge: +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.12
+     from last moving block to end of record (bow stopped): dlog p2p -0.28  dlog edge +0.00
+  v3: n 256  lag(blocks): -8 -6 -4 -2 +0 +2 +4 +6 +8 +10 +12
+     dlog p2p : -0.16 +0.12 +0.08 +0.04 +0.00 -0.07 -0.15 -0.22 -0.30 +nan +nan
+     dlog edge: -10.98 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +nan +nan
+     from last moving block to end of record (bow stopped): dlog p2p -0.17  dlog edge +0.00
+
+=== A1
+  pre-onset edge (noise) median 4965.7 N/s
+  v1: n 45  lag(blocks): -8 -6 -4 -2 +0 +2 +4 +6 +8 +10 +12
+     dlog p2p : +0.02 +0.00 +0.02 +0.02 +0.00 -0.02 -0.06 -0.07 -0.08 -0.12 -0.11
+     dlog edge: +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00
+     from last moving block to end of record (bow stopped): dlog p2p -4.35  dlog edge +0.00
+  v2: n 113  lag(blocks): -8 -6 -4 -2 +0 +2 +4 +6 +8 +10 +12
+     dlog p2p : -0.06 -0.04 -0.03 +0.00 +0.00 +0.00 +0.00 -0.00 +0.00 -0.04 -0.07
+     dlog edge: +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00
+     from last moving block to end of record (bow stopped): dlog p2p -0.73  dlog edge +0.00
+  v3: n 15  lag(blocks): -8 -6 -4 -2 +0 +2 +4 +6 +8 +10 +12
+     dlog p2p : -0.37 -0.29 -0.12 -0.00 +0.00 +0.06 +0.06 +0.09 +0.08 +0.10 +0.09
+     dlog edge: +8.64 +0.00 +0.93 +0.00 +0.00 +0.00 +3.47 +0.00 +0.00 -5.91 -11.87
+     from last moving block to end of record (bow stopped): dlog p2p -4.63  dlog edge +0.00

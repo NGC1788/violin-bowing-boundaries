@@ -1,0 +1,171 @@
+== baseline and K / quantile variants (0.2 s windows, floor strokes) ==
+A2 v=0.05
+   K=2 q=0.05: cols 19 ratio 0.78 (<1 100%) per-stroke low/entry 0.89
+   K=2 q=0.10: cols 19 ratio 0.65 (<1 100%) per-stroke low/entry 0.89
+   K=2 q=0.20: cols 19 ratio 0.67 (<1 100%) per-stroke low/entry 0.89
+   K=2 q=0.50: cols 19 ratio 0.88 (<1 100%) per-stroke low/entry 0.89
+   K=3 q=0.05: cols 19 ratio 0.79 (<1 100%) per-stroke low/entry 0.89
+   K=3 q=0.10: cols 19 ratio 0.67 (<1 100%) per-stroke low/entry 0.89
+   K=3 q=0.20: cols 19 ratio 0.70 (<1 100%) per-stroke low/entry 0.89
+   K=3 q=0.50: cols 19 ratio 0.88 (<1 100%) per-stroke low/entry 0.89
+   K=4 q=0.05: cols 19 ratio 0.71 (<1 100%) per-stroke low/entry 0.90
+   K=4 q=0.10: cols 19 ratio 0.68 (<1 100%) per-stroke low/entry 0.90
+   K=4 q=0.20: cols 19 ratio 0.71 (<1 100%) per-stroke low/entry 0.90
+   K=4 q=0.50: cols 19 ratio 0.89 (<1 100%) per-stroke low/entry 0.90
+   K=6 q=0.05: cols 19 ratio 0.77 (<1 95%) per-stroke low/entry 0.92
+   K=6 q=0.10: cols 19 ratio 0.73 (<1 100%) per-stroke low/entry 0.92
+   K=6 q=0.20: cols 19 ratio 0.75 (<1 100%) per-stroke low/entry 0.92
+   K=6 q=0.50: cols 19 ratio 0.91 (<1 100%) per-stroke low/entry 0.92
+   K=2 K_low=4 (low must sit at the end of a >= 4-window H run): cols 19 ratio 0.67 (<1 100%) per-stroke low/entry 0.89
+   K=2 K_low=8 (low must sit at the end of a >= 8-window H run): cols 19 ratio 0.71 (<1 100%) per-stroke low/entry 0.89
+   K=2 K_low=12 (low must sit at the end of a >= 12-window H run): cols 19 ratio 0.69 (<1 100%) per-stroke low/entry 0.89
+   K=2 lows only after the entry run: cols 19 ratio 0.65 (<1 100%) per-stroke low/entry 0.89
+   K=2 min entered per column 10: cols 18 ratio 0.65 (<1 100%) per-stroke low/entry 0.90
+   K=2 min entered per column 15: cols 18 ratio 0.65 (<1 100%) per-stroke low/entry 0.90
+A2 v=0.10
+   K=2 q=0.05: cols 19 ratio 0.96 (<1 100%) per-stroke low/entry 0.98
+   K=2 q=0.10: cols 19 ratio 0.96 (<1 95%) per-stroke low/entry 0.98
+   K=2 q=0.20: cols 19 ratio 0.96 (<1 89%) per-stroke low/entry 0.98
+   K=2 q=0.50: cols 19 ratio 0.97 (<1 100%) per-stroke low/entry 0.98
+   K=3 q=0.05: cols 19 ratio 0.97 (<1 100%) per-stroke low/entry 0.98
+   K=3 q=0.10: cols 19 ratio 0.97 (<1 95%) per-stroke low/entry 0.98
+   K=3 q=0.20: cols 19 ratio 0.96 (<1 95%) per-stroke low/entry 0.98
+   K=3 q=0.50: cols 19 ratio 0.98 (<1 100%) per-stroke low/entry 0.98
+   K=4 q=0.05: cols 19 ratio 0.97 (<1 95%) per-stroke low/entry 0.99
+   K=4 q=0.10: cols 19 ratio 0.97 (<1 84%) per-stroke low/entry 0.99
+   K=4 q=0.20: cols 19 ratio 0.97 (<1 95%) per-stroke low/entry 0.99
+   K=4 q=0.50: cols 19 ratio 0.98 (<1 100%) per-stroke low/entry 0.99
+   K=6 q=0.05: cols 19 ratio 0.97 (<1 100%) per-stroke low/entry 0.99
+   K=6 q=0.10: cols 19 ratio 0.97 (<1 95%) per-stroke low/entry 0.99
+   K=6 q=0.20: cols 19 ratio 0.98 (<1 100%) per-stroke low/entry 0.99
+   K=6 q=0.50: cols 19 ratio 0.99 (<1 79%) per-stroke low/entry 0.99
+   K=2 K_low=4 (low must sit at the end of a >= 4-window H run): cols 19 ratio 0.96 (<1 95%) per-stroke low/entry 0.98
+   K=2 K_low=8 (low must sit at the end of a >= 8-window H run): cols 19 ratio 0.96 (<1 95%) per-stroke low/entry 0.98
+   K=2 K_low=12 (low must sit at the end of a >= 12-window H run): cols 18 ratio 0.96 (<1 94%) per-stroke low/entry 0.98
+   K=2 lows only after the entry run: cols 19 ratio 0.96 (<1 95%) per-stroke low/entry 0.98
+   K=2 min entered per column 10: cols 16 ratio 0.96 (<1 94%) per-stroke low/entry 0.98
+   K=2 min entered per column 15: cols 11 ratio 0.95 (<1 91%) per-stroke low/entry 0.97
+A2 v=0.20
+   K=2 q=0.05: cols  8 ratio 0.99 (<1 88%) per-stroke low/entry 1.00
+   K=2 q=0.10: cols  8 ratio 0.99 (<1 88%) per-stroke low/entry 1.00
+   K=2 q=0.20: cols  8 ratio 0.99 (<1 100%) per-stroke low/entry 1.00
+   K=2 q=0.50: cols  8 ratio 0.99 (<1 88%) per-stroke low/entry 1.00
+   K=3 q=0.05: cols  8 ratio 1.00 (<1 100%) per-stroke low/entry 1.00
+   K=3 q=0.10: cols  8 ratio 1.00 (<1 100%) per-stroke low/entry 1.00
+   K=3 q=0.20: cols  8 ratio 1.00 (<1 75%) per-stroke low/entry 1.00
+   K=3 q=0.50: cols  8 ratio 1.00 (<1 75%) per-stroke low/entry 1.00
+   K=4 q=0.05: cols  8 ratio 1.00 (<1 50%) per-stroke low/entry 1.00
+   K=4 q=0.10: cols  8 ratio 1.00 (<1 50%) per-stroke low/entry 1.00
+   K=4 q=0.20: cols  8 ratio 1.00 (<1 50%) per-stroke low/entry 1.00
+   K=4 q=0.50: cols  8 ratio 1.00 (<1 38%) per-stroke low/entry 1.00
+   K=6 q=0.05: cols  7 ratio 1.00 (<1 14%) per-stroke low/entry 1.00
+   K=6 q=0.10: cols  7 ratio 1.00 (<1 14%) per-stroke low/entry 1.00
+   K=6 q=0.20: cols  7 ratio 1.00 (<1 0%) per-stroke low/entry 1.00
+   K=6 q=0.50: cols  7 ratio 1.00 (<1 14%) per-stroke low/entry 1.00
+   K=2 K_low=4 (low must sit at the end of a >= 4-window H run): cols  8 ratio 0.99 (<1 100%) per-stroke low/entry 1.00
+   K=2 K_low=8 (low must sit at the end of a >= 8-window H run): cols  0 ratio nan (<1 nan%) per-stroke low/entry nan
+   K=2 K_low=12 (low must sit at the end of a >= 12-window H run): cols  0 ratio nan (<1 nan%) per-stroke low/entry nan
+   K=2 lows only after the entry run: cols  8 ratio 0.99 (<1 100%) per-stroke low/entry 1.00
+   K=2 min entered per column 10: cols  3 ratio 0.99 (<1 100%) per-stroke low/entry 0.99
+   K=2 min entered per column 15: cols  0 ratio nan (<1 nan%) per-stroke low/entry nan
+A1 v=0.05
+   K=2 q=0.05: cols 20 ratio 0.98 (<1 80%) per-stroke low/entry 0.99
+   K=2 q=0.10: cols 20 ratio 0.97 (<1 90%) per-stroke low/entry 0.99
+   K=2 q=0.20: cols 20 ratio 0.98 (<1 95%) per-stroke low/entry 0.99
+   K=2 q=0.50: cols 20 ratio 0.99 (<1 90%) per-stroke low/entry 0.99
+   K=3 q=0.05: cols 20 ratio 0.98 (<1 75%) per-stroke low/entry 0.99
+   K=3 q=0.10: cols 20 ratio 0.99 (<1 80%) per-stroke low/entry 0.99
+   K=3 q=0.20: cols 20 ratio 0.97 (<1 100%) per-stroke low/entry 0.99
+   K=3 q=0.50: cols 20 ratio 0.99 (<1 90%) per-stroke low/entry 0.99
+   K=4 q=0.05: cols 20 ratio 0.99 (<1 80%) per-stroke low/entry 0.99
+   K=4 q=0.10: cols 20 ratio 0.99 (<1 90%) per-stroke low/entry 0.99
+   K=4 q=0.20: cols 20 ratio 0.98 (<1 95%) per-stroke low/entry 0.99
+   K=4 q=0.50: cols 20 ratio 0.99 (<1 95%) per-stroke low/entry 0.99
+   K=6 q=0.05: cols 19 ratio 0.99 (<1 84%) per-stroke low/entry 1.00
+   K=6 q=0.10: cols 19 ratio 0.99 (<1 84%) per-stroke low/entry 1.00
+   K=6 q=0.20: cols 19 ratio 0.98 (<1 84%) per-stroke low/entry 1.00
+   K=6 q=0.50: cols 19 ratio 0.99 (<1 84%) per-stroke low/entry 1.00
+   K=2 K_low=4 (low must sit at the end of a >= 4-window H run): cols 20 ratio 0.98 (<1 80%) per-stroke low/entry 0.99
+   K=2 K_low=8 (low must sit at the end of a >= 8-window H run): cols 19 ratio 0.97 (<1 74%) per-stroke low/entry 0.99
+   K=2 K_low=12 (low must sit at the end of a >= 12-window H run): cols 19 ratio 0.97 (<1 74%) per-stroke low/entry 0.99
+   K=2 lows only after the entry run: cols 20 ratio 0.98 (<1 80%) per-stroke low/entry 0.99
+   K=2 min entered per column 10: cols 19 ratio 0.97 (<1 89%) per-stroke low/entry 0.99
+   K=2 min entered per column 15: cols 17 ratio 0.97 (<1 94%) per-stroke low/entry 0.99
+A1 v=0.10
+   K=2 q=0.05: cols 26 ratio 1.00 (<1 73%) per-stroke low/entry 1.00
+   K=2 q=0.10: cols 26 ratio 1.00 (<1 62%) per-stroke low/entry 1.00
+   K=2 q=0.20: cols 26 ratio 1.00 (<1 81%) per-stroke low/entry 1.00
+   K=2 q=0.50: cols 26 ratio 1.00 (<1 81%) per-stroke low/entry 1.00
+   K=3 q=0.05: cols 25 ratio 1.00 (<1 64%) per-stroke low/entry 1.00
+   K=3 q=0.10: cols 25 ratio 1.00 (<1 44%) per-stroke low/entry 1.00
+   K=3 q=0.20: cols 25 ratio 1.00 (<1 68%) per-stroke low/entry 1.00
+   K=3 q=0.50: cols 25 ratio 1.00 (<1 68%) per-stroke low/entry 1.00
+   K=4 q=0.05: cols 25 ratio 1.00 (<1 60%) per-stroke low/entry 1.00
+   K=4 q=0.10: cols 25 ratio 1.00 (<1 48%) per-stroke low/entry 1.00
+   K=4 q=0.20: cols 25 ratio 1.00 (<1 64%) per-stroke low/entry 1.00
+   K=4 q=0.50: cols 25 ratio 1.00 (<1 60%) per-stroke low/entry 1.00
+   K=6 q=0.05: cols 25 ratio 1.00 (<1 32%) per-stroke low/entry 1.00
+   K=6 q=0.10: cols 25 ratio 1.00 (<1 32%) per-stroke low/entry 1.00
+   K=6 q=0.20: cols 25 ratio 1.00 (<1 20%) per-stroke low/entry 1.00
+   K=6 q=0.50: cols 25 ratio 1.00 (<1 28%) per-stroke low/entry 1.00
+   K=2 K_low=4 (low must sit at the end of a >= 4-window H run): cols 25 ratio 1.00 (<1 44%) per-stroke low/entry 1.00
+   K=2 K_low=8 (low must sit at the end of a >= 8-window H run): cols 25 ratio 1.02 (<1 20%) per-stroke low/entry 1.01
+   K=2 K_low=12 (low must sit at the end of a >= 12-window H run): cols 25 ratio 1.03 (<1 8%) per-stroke low/entry 1.03
+   K=2 lows only after the entry run: cols 25 ratio 1.00 (<1 44%) per-stroke low/entry 1.00
+   K=2 min entered per column 10: cols 19 ratio 1.00 (<1 53%) per-stroke low/entry 1.00
+   K=2 min entered per column 15: cols 13 ratio 1.00 (<1 46%) per-stroke low/entry 1.00
+A1 v=0.20
+   K=2 q=0.05: cols 25 ratio 1.00 (<1 44%) per-stroke low/entry 1.00
+   K=2 q=0.10: cols 25 ratio 1.00 (<1 44%) per-stroke low/entry 1.00
+   K=2 q=0.20: cols 25 ratio 1.00 (<1 28%) per-stroke low/entry 1.00
+   K=2 q=0.50: cols 25 ratio 1.00 (<1 8%) per-stroke low/entry 1.00
+   K=3 q=0.05: cols 25 ratio 1.00 (<1 36%) per-stroke low/entry 1.00
+   K=3 q=0.10: cols 25 ratio 1.00 (<1 24%) per-stroke low/entry 1.00
+   K=3 q=0.20: cols 25 ratio 1.00 (<1 12%) per-stroke low/entry 1.00
+   K=3 q=0.50: cols 25 ratio 1.00 (<1 0%) per-stroke low/entry 1.00
+   K=4 q=0.05: cols 25 ratio 1.00 (<1 36%) per-stroke low/entry 1.00
+   K=4 q=0.10: cols 25 ratio 1.00 (<1 16%) per-stroke low/entry 1.00
+   K=4 q=0.20: cols 25 ratio 1.00 (<1 16%) per-stroke low/entry 1.00
+   K=4 q=0.50: cols 25 ratio 1.00 (<1 0%) per-stroke low/entry 1.00
+   K=6 q=0.05: cols 24 ratio 1.00 (<1 8%) per-stroke low/entry 1.00
+   K=6 q=0.10: cols 24 ratio 1.00 (<1 0%) per-stroke low/entry 1.00
+   K=6 q=0.20: cols 24 ratio 1.00 (<1 4%) per-stroke low/entry 1.00
+   K=6 q=0.50: cols 24 ratio 1.00 (<1 0%) per-stroke low/entry 1.00
+   K=2 K_low=4 (low must sit at the end of a >= 4-window H run): cols 25 ratio 1.01 (<1 8%) per-stroke low/entry 1.01
+   K=2 K_low=8 (low must sit at the end of a >= 8-window H run): cols  0 ratio nan (<1 nan%) per-stroke low/entry nan
+   K=2 K_low=12 (low must sit at the end of a >= 12-window H run): cols  0 ratio nan (<1 nan%) per-stroke low/entry nan
+   K=2 lows only after the entry run: cols 25 ratio 1.01 (<1 8%) per-stroke low/entry 1.01
+   K=2 min entered per column 10: cols 18 ratio 1.00 (<1 50%) per-stroke low/entry 1.00
+   K=2 min entered per column 15: cols  9 ratio 1.00 (<1 44%) per-stroke low/entry 1.00
+
+== window length (K scaled to keep the run span ~0.25 s and also K=2) ==
+A2 win=0.1 K=2: v=0.05 cols 19 ratio 0.66 (<1 100%) per-stroke low/entry 0.88 | v=0.10 cols 19 ratio 0.96 (<1 95%) per-stroke low/entry 0.97 | v=0.20 cols  8 ratio 0.99 (<1 88%) per-stroke low/entry 0.99
+A2 win=0.1 K=4: v=0.05 cols 19 ratio 0.67 (<1 100%) per-stroke low/entry 0.89 | v=0.10 cols 19 ratio 0.97 (<1 95%) per-stroke low/entry 0.98 | v=0.20 cols  8 ratio 1.00 (<1 62%) per-stroke low/entry 1.00
+A2 win=0.2 K=2: v=0.05 cols 19 ratio 0.65 (<1 100%) per-stroke low/entry 0.89 | v=0.10 cols 19 ratio 0.96 (<1 95%) per-stroke low/entry 0.98 | v=0.20 cols  8 ratio 0.99 (<1 88%) per-stroke low/entry 1.00
+A2 win=0.4 K=2: v=0.05 cols 19 ratio 0.66 (<1 100%) per-stroke low/entry 0.90 | v=0.10 cols 19 ratio 0.97 (<1 100%) per-stroke low/entry 0.99 | v=0.20 cols  8 ratio 1.00 (<1 100%) per-stroke low/entry 1.00
+A2 win=0.4 K=4: v=0.05 cols 19 ratio 0.71 (<1 100%) per-stroke low/entry 0.91 | v=0.10 cols 19 ratio 0.98 (<1 89%) per-stroke low/entry 0.99 | v=0.20 cols  0 ratio nan (<1 nan%) per-stroke low/entry nan
+A1 win=0.1 K=2: v=0.05 cols 19 ratio 0.97 (<1 89%) per-stroke low/entry 0.99 | v=0.10 cols 26 ratio 0.99 (<1 69%) per-stroke low/entry 0.99 | v=0.20 cols 25 ratio 1.00 (<1 72%) per-stroke low/entry 1.00
+A1 win=0.1 K=4: v=0.05 cols 19 ratio 0.99 (<1 95%) per-stroke low/entry 0.99 | v=0.10 cols 25 ratio 1.00 (<1 68%) per-stroke low/entry 1.00 | v=0.20 cols 25 ratio 1.00 (<1 44%) per-stroke low/entry 1.00
+A1 win=0.2 K=2: v=0.05 cols 20 ratio 0.97 (<1 90%) per-stroke low/entry 0.99 | v=0.10 cols 26 ratio 1.00 (<1 62%) per-stroke low/entry 1.00 | v=0.20 cols 25 ratio 1.00 (<1 44%) per-stroke low/entry 1.00
+A1 win=0.4 K=2: v=0.05 cols 20 ratio 0.98 (<1 80%) per-stroke low/entry 1.00 | v=0.10 cols 25 ratio 1.00 (<1 40%) per-stroke low/entry 1.00 | v=0.20 cols 25 ratio 1.00 (<1 8%) per-stroke low/entry 1.00
+A1 win=0.4 K=4: v=0.05 cols 19 ratio 0.99 (<1 79%) per-stroke low/entry 1.00 | v=0.10 cols 25 ratio 1.00 (<1 24%) per-stroke low/entry 1.00 | v=0.20 cols  0 ratio nan (<1 nan%) per-stroke low/entry nan
+
+== population: floor tolerance and all strokes ==
+A2 floor_tol=1.05: v=0.05 cols 19 ratio 0.65 (<1 100%) per-stroke low/entry 0.89 | v=0.10 cols 19 ratio 0.96 (<1 95%) per-stroke low/entry 0.98 | v=0.20 cols  7 ratio 0.99 (<1 86%) per-stroke low/entry 1.00
+A2 floor_tol=1.15: v=0.05 cols 19 ratio 0.65 (<1 100%) per-stroke low/entry 0.89 | v=0.10 cols 19 ratio 0.96 (<1 95%) per-stroke low/entry 0.98 | v=0.20 cols  8 ratio 0.99 (<1 88%) per-stroke low/entry 1.00
+A2 floor_tol=1.5: v=0.05 cols 20 ratio 0.65 (<1 100%) per-stroke low/entry 0.88 | v=0.10 cols 19 ratio 0.96 (<1 95%) per-stroke low/entry 0.98 | v=0.20 cols  9 ratio 0.99 (<1 89%) per-stroke low/entry 1.00
+A2 floor_tol=3.0: v=0.05 cols 22 ratio 0.63 (<1 100%) per-stroke low/entry 0.88 | v=0.10 cols 24 ratio 0.95 (<1 96%) per-stroke low/entry 0.97 | v=0.20 cols 21 ratio 0.96 (<1 95%) per-stroke low/entry 0.97
+A2 floor_tol=all strokes: v=0.05 cols 40 ratio 0.34 (<1 98%) per-stroke low/entry 0.72 | v=0.10 cols 40 ratio 0.89 (<1 98%) per-stroke low/entry 0.90 | v=0.20 cols 29 ratio 0.92 (<1 97%) per-stroke low/entry 0.95
+A1 floor_tol=1.05: v=0.05 cols 19 ratio 0.97 (<1 89%) per-stroke low/entry 0.99 | v=0.10 cols 26 ratio 1.00 (<1 58%) per-stroke low/entry 1.00 | v=0.20 cols 25 ratio 1.00 (<1 36%) per-stroke low/entry 1.00
+A1 floor_tol=1.15: v=0.05 cols 20 ratio 0.97 (<1 90%) per-stroke low/entry 0.99 | v=0.10 cols 26 ratio 1.00 (<1 62%) per-stroke low/entry 1.00 | v=0.20 cols 25 ratio 1.00 (<1 44%) per-stroke low/entry 1.00
+A1 floor_tol=1.5: v=0.05 cols 20 ratio 0.97 (<1 95%) per-stroke low/entry 0.99 | v=0.10 cols 28 ratio 1.00 (<1 64%) per-stroke low/entry 1.00 | v=0.20 cols 28 ratio 1.00 (<1 54%) per-stroke low/entry 1.00
+A1 floor_tol=3.0: v=0.05 cols 22 ratio 0.97 (<1 95%) per-stroke low/entry 0.99 | v=0.10 cols 29 ratio 0.99 (<1 76%) per-stroke low/entry 1.00 | v=0.20 cols 29 ratio 1.00 (<1 62%) per-stroke low/entry 1.00
+A1 floor_tol=all strokes: v=0.05 cols 40 ratio 0.92 (<1 98%) per-stroke low/entry 0.96 | v=0.10 cols 40 ratio 0.98 (<1 82%) per-stroke low/entry 0.99 | v=0.20 cols 29 ratio 0.99 (<1 66%) per-stroke low/entry 1.00
+
+== force-fall-only prediction: low replaced by the stroke's force at the end of the plateau (H assumed kept) ==
+A2 v=0.05: observed median 0.65, force-fall-only median 0.64, corr across columns 1.00, median obs/pred 1.00
+A2 v=0.10: observed median 0.96, force-fall-only median 0.96, corr across columns 1.00, median obs/pred 1.00
+A2 v=0.20: observed median 0.99, force-fall-only median 0.99, corr across columns 1.00, median obs/pred 1.00
+A1 v=0.05: observed median 0.97, force-fall-only median 0.97, corr across columns 1.00, median obs/pred 1.00
+A1 v=0.10: observed median 1.00, force-fall-only median 1.00, corr across columns 1.00, median obs/pred 1.00
+A1 v=0.20: observed median 1.00, force-fall-only median 1.00, corr across columns 1.00, median obs/pred 1.00

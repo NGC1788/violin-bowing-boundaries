@@ -1,0 +1,77 @@
+  return np.nanmean(a, axis, out=out, keepdims=keepdims)
+
+=== A2
+  --- v1
+    log F_on: resid sd 0.1107; lag-1 r +0.982 (null 95% -0.070..+0.035, n 1960); mean resid 1st/2nd half -0.0000/-0.0000
+    dF10    : resid sd 0.0116; lag-1 r +0.517 (null 95% -0.070..+0.026, n 1960); mean resid 1st/2nd half -0.0000/-0.0000
+    dFend   : resid sd 0.0153; lag-1 r +0.592 (null 95% -0.067..+0.021, n 1960); mean resid 1st/2nd half -0.0000/-0.0000
+    carry-over: corr(resid log F_on[n], resid dFend[n-1]) -0.521; corr(resid log F_on[n], dFend[n-1]) -0.111 (n 1960)
+    pre-onset reading change (last-first pre-onset blocks, ~0.4 s) ranks 1-20: median -0.7 mN, p10/p90 -7.3/+6.1
+    pre-onset reading change (last-first pre-onset blocks, ~0.4 s) ranks 21-40: median -0.2 mN, p10/p90 -7.1/+6.2
+    pre-onset reading change (last-first pre-onset blocks, ~0.4 s) ranks 41-50: median -1.5 mN, p10/p90 -8.8/+4.9
+    first stroke of column (recorded after the tuning break): resid log F_on median +0.0841 vs 2nd +0.0971; resid dFend +0.0024 vs 2nd -0.0049
+    pre-onset bridge DC: median +0.28 mN, sd 1.54, corr with trial -0.36; nut DC median +1.57 mN sd 1.23
+    bridge: corr(pre-onset[n], end-of-record[n-1]) +0.160; end-of-record bridge DC for ranks 1-5 median -0.092
+    floor reading (post-stop, ranks 1-5): median -8.4 mN; corr with trial -0.83, with beta -0.74; first/last 10 columns +12.0/-15.2 mN
+  --- v2
+    log F_on: resid sd 0.1187; lag-1 r +0.986 (null 95% -0.071..+0.028, n 1960); mean resid 1st/2nd half -0.0000/-0.0000
+    dF10    : resid sd 0.0111; lag-1 r +0.453 (null 95% -0.069..+0.031, n 1960); mean resid 1st/2nd half -0.0000/-0.0000
+    dFend   : resid sd 0.0179; lag-1 r +0.604 (null 95% -0.072..+0.039, n 1960); mean resid 1st/2nd half -0.0000/-0.0000
+    carry-over: corr(resid log F_on[n], resid dFend[n-1]) -0.530; corr(resid log F_on[n], dFend[n-1]) -0.126 (n 1960)
+    pre-onset reading change (last-first pre-onset blocks, ~0.4 s) ranks 1-20: median -0.3 mN, p10/p90 -7.1/+5.7
+    pre-onset reading change (last-first pre-onset blocks, ~0.4 s) ranks 21-40: median -0.2 mN, p10/p90 -6.5/+6.3
+    pre-onset reading change (last-first pre-onset blocks, ~0.4 s) ranks 41-50: median -1.2 mN, p10/p90 -7.4/+5.8
+    first stroke of column (recorded after the tuning break): resid log F_on median +0.0349 vs 2nd +0.0419; resid dFend +0.0018 vs 2nd +0.0011
+    pre-onset bridge DC: median +0.31 mN, sd 1.39, corr with trial -0.22; nut DC median +1.57 mN sd 1.26
+    bridge: corr(pre-onset[n], end-of-record[n-1]) -0.002; end-of-record bridge DC for ranks 1-5 median -0.090
+    floor reading (post-stop, ranks 1-5): median +5.7 mN; corr with trial -0.92, with beta -0.79; first/last 10 columns +68.0/-14.5 mN
+  --- v3
+    log F_on: resid sd 0.0833; lag-1 r +0.956 (null 95% -0.074..+0.032, n 1960); mean resid 1st/2nd half -0.0000/-0.0000
+    dF10    : resid sd 0.0173; lag-1 r +0.416 (null 95% -0.068..+0.029, n 1960); mean resid 1st/2nd half -0.0000/-0.0000
+    dFend   : resid sd 0.0166; lag-1 r +0.510 (null 95% -0.071..+0.025, n 1960); mean resid 1st/2nd half -0.0000/-0.0000
+    carry-over: corr(resid log F_on[n], resid dFend[n-1]) -0.001; corr(resid log F_on[n], dFend[n-1]) +0.015 (n 1960)
+    pre-onset reading change (last-first pre-onset blocks, ~0.4 s) ranks 1-20: median -0.3 mN, p10/p90 -7.0/+6.4
+    pre-onset reading change (last-first pre-onset blocks, ~0.4 s) ranks 21-40: median -0.4 mN, p10/p90 -6.8/+6.5
+    pre-onset reading change (last-first pre-onset blocks, ~0.4 s) ranks 41-50: median -1.7 mN, p10/p90 -8.8/+5.8
+    first stroke of column (recorded after the tuning break): resid log F_on median +0.0092 vs 2nd -0.0074; resid dFend +0.0006 vs 2nd +0.0030
+    pre-onset bridge DC: median +0.32 mN, sd 1.38, corr with trial -0.13; nut DC median +1.57 mN sd 1.23
+    bridge: corr(pre-onset[n], end-of-record[n-1]) +0.056; end-of-record bridge DC for ranks 1-5 median -0.095
+    floor reading (post-stop, ranks 1-5): median -14.9 mN; corr with trial -0.13, with beta -0.08; first/last 10 columns -12.7/-15.6 mN
+
+=== A1
+  --- v1
+    log F_on: resid sd 0.1080; lag-1 r +0.895 (null 95% -0.076..+0.024, n 1960); mean resid 1st/2nd half +0.0000/+0.0000
+    dF10    : resid sd 0.0173; lag-1 r +0.608 (null 95% -0.076..+0.022, n 1960); mean resid 1st/2nd half +0.0000/+0.0000
+    dFend   : resid sd 0.0201; lag-1 r +0.641 (null 95% -0.085..+0.047, n 1960); mean resid 1st/2nd half -0.0000/-0.0000
+    carry-over: corr(resid log F_on[n], resid dFend[n-1]) +0.010; corr(resid log F_on[n], dFend[n-1]) -0.000 (n 1960)
+    pre-onset reading change (last-first pre-onset blocks, ~0.4 s) ranks 1-20: median +0.1 mN, p10/p90 -6.4/+6.7
+    pre-onset reading change (last-first pre-onset blocks, ~0.4 s) ranks 21-40: median -0.3 mN, p10/p90 -6.8/+5.9
+    pre-onset reading change (last-first pre-onset blocks, ~0.4 s) ranks 41-50: median -1.7 mN, p10/p90 -8.6/+5.4
+    first stroke of column (recorded after the tuning break): resid log F_on median +0.0198 vs 2nd +0.0201; resid dFend +0.0025 vs 2nd +0.0048
+    pre-onset bridge DC: median +0.17 mN, sd 1.63, corr with trial +0.36; nut DC median -1.64 mN sd 1.19
+    bridge: corr(pre-onset[n], end-of-record[n-1]) +0.144; end-of-record bridge DC for ranks 1-5 median -0.017
+    floor reading (post-stop, ranks 1-5): median +42.2 mN; corr with trial -0.25, with beta +0.43; first/last 10 columns +46.3/+102.9 mN
+  --- v2
+    log F_on: resid sd 0.0295; lag-1 r +0.612 (null 95% -0.075..+0.046, n 1960); mean resid 1st/2nd half +0.0000/+0.0000
+    dF10    : resid sd 0.0335; lag-1 r +0.855 (null 95% -0.075..+0.029, n 1960); mean resid 1st/2nd half +0.0000/+0.0000
+    dFend   : resid sd 0.0267; lag-1 r +0.744 (null 95% -0.069..+0.027, n 1960); mean resid 1st/2nd half +0.0000/+0.0000
+    carry-over: corr(resid log F_on[n], resid dFend[n-1]) +0.130; corr(resid log F_on[n], dFend[n-1]) +0.030 (n 1960)
+    pre-onset reading change (last-first pre-onset blocks, ~0.4 s) ranks 1-20: median -0.2 mN, p10/p90 -7.0/+6.5
+    pre-onset reading change (last-first pre-onset blocks, ~0.4 s) ranks 21-40: median -0.5 mN, p10/p90 -7.0/+6.3
+    pre-onset reading change (last-first pre-onset blocks, ~0.4 s) ranks 41-50: median -1.7 mN, p10/p90 -8.8/+5.6
+    first stroke of column (recorded after the tuning break): resid log F_on median +0.0034 vs 2nd +0.0034; resid dFend -0.0031 vs 2nd -0.0051
+    pre-onset bridge DC: median +0.23 mN, sd 1.42, corr with trial +0.31; nut DC median -1.64 mN sd 1.11
+    bridge: corr(pre-onset[n], end-of-record[n-1]) +0.109; end-of-record bridge DC for ranks 1-5 median -0.028
+    floor reading (post-stop, ranks 1-5): median +43.0 mN; corr with trial -0.49, with beta +0.40; first/last 10 columns -36.2/+67.7 mN
+  --- v3
+    log F_on: resid sd 0.1699; lag-1 r +0.975 (null 95% -0.073..+0.045, n 1960); mean resid 1st/2nd half -0.0000/+0.0000
+    dF10    : resid sd 0.0266; lag-1 r +0.651 (null 95% -0.066..+0.023, n 1960); mean resid 1st/2nd half +0.0000/+0.0000
+    dFend   : resid sd 0.0213; lag-1 r +0.500 (null 95% -0.076..+0.033, n 1960); mean resid 1st/2nd half -0.0000/-0.0000
+    carry-over: corr(resid log F_on[n], resid dFend[n-1]) -0.220; corr(resid log F_on[n], dFend[n-1]) -0.036 (n 1960)
+    pre-onset reading change (last-first pre-onset blocks, ~0.4 s) ranks 1-20: median -0.0 mN, p10/p90 -6.2/+6.1
+    pre-onset reading change (last-first pre-onset blocks, ~0.4 s) ranks 21-40: median -0.1 mN, p10/p90 -6.8/+6.4
+    pre-onset reading change (last-first pre-onset blocks, ~0.4 s) ranks 41-50: median -1.2 mN, p10/p90 -7.6/+6.2
+    first stroke of column (recorded after the tuning break): resid log F_on median -0.0523 vs 2nd -0.0522; resid dFend -0.0184 vs 2nd -0.0027
+    pre-onset bridge DC: median +0.18 mN, sd 1.47, corr with trial +0.27; nut DC median -1.64 mN sd 1.23
+    bridge: corr(pre-onset[n], end-of-record[n-1]) -0.037; end-of-record bridge DC for ranks 1-5 median -0.038
+    floor reading (post-stop, ranks 1-5): median +61.0 mN; corr with trial +0.95, with beta -0.88; first/last 10 columns +158.0/+3.6 mN

@@ -1,0 +1,23 @@
+2024-03-25_TypeA_sample1.csv: window=0.1, nuisance=pipeline_fixed complete
+2024-03-25_TypeA_sample1.csv: window=0.2, nuisance=pipeline_fixed complete
+2024-03-25_TypeA_sample1.csv: window=0.4, nuisance=pipeline_fixed complete
+{
+  "archive": "2024-03-25_TypeA_sample1",
+  "strokes": 6000,
+  "seconds": 35.14189508394338,
+  "causal_prefix_changes": 0,
+  "suffix_prefix_changes": 1823
+}
+2024-04-19_TypeA_sample2.csv: window=0.1, nuisance=frozen_acquisition_fixed complete
+2024-04-19_TypeA_sample2.csv: window=0.1, nuisance=pipeline_fixed complete
+2024-04-19_TypeA_sample2.csv: window=0.2, nuisance=frozen_acquisition_fixed complete
+2024-04-19_TypeA_sample2.csv: window=0.2, nuisance=pipeline_fixed complete
+2024-04-19_TypeA_sample2.csv: window=0.4, nuisance=frozen_acquisition_fixed complete
+2024-04-19_TypeA_sample2.csv: window=0.4, nuisance=pipeline_fixed complete
+{
+  "archive": "2024-04-19_TypeA_sample2",
+  "strokes": 6000,
+  "seconds": 69.35315024992451,
+  "causal_prefix_changes": 0,
+  "suffix_prefix_changes": 3842
+}

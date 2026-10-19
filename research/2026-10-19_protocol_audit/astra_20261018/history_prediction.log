@@ -1,0 +1,26 @@
+A1: joins and support validated
+A2: joins and support validated
+A1 A2 logistic_poly2 instant {'n': 24000, 'log_loss': 0.3418045682044306, 'brier': 0.0911516427445944, 'IoU': 0.6719421207325345, 'balanced_accuracy': 0.8577208282624535}
+A1 A2 logistic_poly2 clock {'n': 24000, 'log_loss': 0.3312365347836477, 'brier': 0.08685952967332071, 'IoU': 0.686771761480466, 'balanced_accuracy': 0.8650806215913605}
+A1 A2 logistic_poly2 history {'n': 24000, 'log_loss': 0.5680024410847155, 'brier': 0.13356529980708015, 'IoU': 0.6294386613483802, 'balanced_accuracy': 0.8500025630404877}
+A1 A2 logistic_poly2 no_onset {'n': 24000, 'log_loss': 0.5787856736013033, 'brier': 0.1357788395553804, 'IoU': 0.6229928085902867, 'balanced_accuracy': 0.8440134413113867}
+A1 A2 logistic_poly2 no_accel {'n': 24000, 'log_loss': 0.24757759644808766, 'brier': 0.07270378133221969, 'IoU': 0.7327616178004404, 'balanced_accuracy': 0.8898252953041073}
+A1 A2 logistic_poly2 no_travel {'n': 24000, 'log_loss': 0.3401371611082652, 'brier': 0.10584131665170143, 'IoU': 0.6453008653652647, 'balanced_accuracy': 0.8564370999732424}
+A1 A2 hist_gradient_boosting instant {'n': 24000, 'log_loss': 0.2665488113141379, 'brier': 0.07789763058145376, 'IoU': 0.7106598984771574, 'balanced_accuracy': 0.8741509913135497}
+A1 A2 hist_gradient_boosting clock {'n': 24000, 'log_loss': 0.26266032925057076, 'brier': 0.07657178309221066, 'IoU': 0.7149273135563172, 'balanced_accuracy': 0.8764084554034737}
+A1 A2 hist_gradient_boosting history {'n': 24000, 'log_loss': 0.28423598355735546, 'brier': 0.08540159674029442, 'IoU': 0.6841202698067909, 'balanced_accuracy': 0.8634030560860354}
+A1 A2 hist_gradient_boosting no_onset {'n': 24000, 'log_loss': 0.28651473122272453, 'brier': 0.08564457546491239, 'IoU': 0.6795656694004851, 'balanced_accuracy': 0.8593036674022996}
+A1 A2 hist_gradient_boosting no_accel {'n': 24000, 'log_loss': 0.26525411430481594, 'brier': 0.08006794105903352, 'IoU': 0.686902890313218, 'balanced_accuracy': 0.8573074114176732}
+A1 A2 hist_gradient_boosting no_travel {'n': 24000, 'log_loss': 0.30561014320665325, 'brier': 0.09170761257713371, 'IoU': 0.6744756804997769, 'balanced_accuracy': 0.8610436315372995}
+A2 A1 logistic_poly2 instant {'n': 24000, 'log_loss': 0.25209992802336817, 'brier': 0.07536835417892473, 'IoU': 0.7136451769268056, 'balanced_accuracy': 0.894976600472692}
+A2 A1 logistic_poly2 clock {'n': 24000, 'log_loss': 0.24473343838079067, 'brier': 0.0728837642370506, 'IoU': 0.7274843769145938, 'balanced_accuracy': 0.9011921985360056}
+A2 A1 logistic_poly2 history {'n': 24000, 'log_loss': 0.2498759291261858, 'brier': 0.06598970451316188, 'IoU': 0.755389514943655, 'balanced_accuracy': 0.9182928048943501}
+A2 A1 logistic_poly2 no_onset {'n': 24000, 'log_loss': 0.3381107713338147, 'brier': 0.08576890113381845, 'IoU': 0.7061508615770855, 'balanced_accuracy': 0.9025589399546701}
+A2 A1 logistic_poly2 no_accel {'n': 24000, 'log_loss': 0.21124851038282264, 'brier': 0.05856402596418729, 'IoU': 0.7696433025692193, 'balanced_accuracy': 0.9228091730018755}
+A2 A1 logistic_poly2 no_travel {'n': 24000, 'log_loss': 0.2159455934999632, 'brier': 0.060062093251463174, 'IoU': 0.759031514219831, 'balanced_accuracy': 0.9105502523392598}
+A2 A1 hist_gradient_boosting instant {'n': 24000, 'log_loss': 0.2140456137310446, 'brier': 0.06315175504506024, 'IoU': 0.7435279187817259, 'balanced_accuracy': 0.9034806378637207}
+A2 A1 hist_gradient_boosting clock {'n': 24000, 'log_loss': 0.20704271368031443, 'brier': 0.060728137964431855, 'IoU': 0.7584055017829853, 'balanced_accuracy': 0.9114632812143355}
+A2 A1 hist_gradient_boosting history {'n': 24000, 'log_loss': 0.3812280501747179, 'brier': 0.11660580165821388, 'IoU': 0.6226912928759895, 'balanced_accuracy': 0.860470158322723}
+A2 A1 hist_gradient_boosting no_onset {'n': 24000, 'log_loss': 0.3889920109811156, 'brier': 0.12128427667329783, 'IoU': 0.6012059465640919, 'balanced_accuracy': 0.8475673848803016}
+A2 A1 hist_gradient_boosting no_accel {'n': 24000, 'log_loss': 0.2101025910565455, 'brier': 0.06322293877965285, 'IoU': 0.7503978455135267, 'balanced_accuracy': 0.9153834632771733}
+A2 A1 hist_gradient_boosting no_travel {'n': 24000, 'log_loss': 0.3700096141893515, 'brier': 0.11320779121457053, 'IoU': 0.6277162334895612, 'balanced_accuracy': 0.8624602110552304}

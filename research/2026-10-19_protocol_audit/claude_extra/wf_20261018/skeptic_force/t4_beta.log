@@ -1,0 +1,29 @@
+  return 1.0 / (1.0 / kh + L * beta * (1 - beta) / T)
+
+=== A2
+  v1 x= 5.0 cm: a_c median -89 mN (small/large beta ratio 1.13); b_c median -49 mN/N | AIC M0 -376.0 M1(lin pose) -390.4 M2(stiffness) -389.5 [k_h 326 N/m, delta 0.30 mm] M3(quad pose) -388.8
+  v1 x=10.0 cm: a_c median -150 mN (small/large beta ratio 1.15); b_c median -47 mN/N | AIC M0 -340.6 M1(lin pose) -359.6 M2(stiffness) -358.6 [k_h 332 N/m, delta 0.50 mm] M3(quad pose) -357.9
+  v1 x=15.0 cm: a_c median -213 mN (small/large beta ratio 1.14); b_c median -13 mN/N | AIC M0 -319.4 M1(lin pose) -342.5 M2(stiffness) -341.7 [k_h 331 N/m, delta 0.70 mm] M3(quad pose) -340.5
+  v1 x=19.0 cm: a_c median -259 mN (small/large beta ratio 1.14); b_c median +50 mN/N | AIC M0 -319.0 M1(lin pose) -353.6 M2(stiffness) -353.1 [k_h 310 N/m, delta 0.91 mm] M3(quad pose) -351.8
+  v2 x= 5.0 cm: a_c median -84 mN (small/large beta ratio 1.11); b_c median -49 mN/N | AIC M0 -389.4 M1(lin pose) -399.3 M2(stiffness) -399.3 [k_h 251 N/m, delta 0.36 mm] M3(quad pose) -397.3
+  v2 x=10.0 cm: a_c median -140 mN (small/large beta ratio 1.07); b_c median -45 mN/N | AIC M0 -345.3 M1(lin pose) -348.1 M2(stiffness) -347.3 [k_h 151 N/m, delta 0.97 mm] M3(quad pose) -349.6
+  v2 x=15.0 cm: a_c median -196 mN (small/large beta ratio 1.02); b_c median -8 mN/N | AIC M0 -328.4 M1(lin pose) -328.0 M2(stiffness) -327.6 [k_h 70 N/m, delta 2.90 mm] M3(quad pose) -330.4
+  v2 x=19.0 cm: a_c median -245 mN (small/large beta ratio 1.06); b_c median +55 mN/N | AIC M0 -334.9 M1(lin pose) -340.4 M2(stiffness) -339.6 [k_h 126 N/m, delta 2.00 mm] M3(quad pose) -341.0
+  v3 x= 5.0 cm: a_c median -100 mN (small/large beta ratio 1.44); b_c median -45 mN/N | AIC M0 -323.8 M1(lin pose) -371.2 M2(stiffness) -363.9 [k_h 973 N/m, delta 0.13 mm] M3(quad pose) -370.5
+  v3 x=10.0 cm: a_c median -172 mN (small/large beta ratio 1.22); b_c median -44 mN/N | AIC M0 -312.2 M1(lin pose) -341.3 M2(stiffness) -338.4 [k_h 497 N/m, delta 0.39 mm] M3(quad pose) -340.4
+  v3 x=15.0 cm: a_c median -238 mN (small/large beta ratio 1.17); b_c median -12 mN/N | AIC M0 -309.3 M1(lin pose) -341.1 M2(stiffness) -338.3 [k_h 373 N/m, delta 0.69 mm] M3(quad pose) -340.3
+  v3 x=19.0 cm: a_c median -281 mN (small/large beta ratio 1.25); b_c median +57 mN/N | AIC M0 -276.1 M1(lin pose) -320.6 M2(stiffness) -314.1 [k_h 539 N/m, delta 0.59 mm] M3(quad pose) -321.5
+
+=== A1
+  v1 x= 5.0 cm: a_c median -51 mN (small/large beta ratio 0.94); b_c median -47 mN/N | AIC M0 -392.8 M1(lin pose) -392.3 M2(stiffness) -390.8 [k_h 0 N/m, delta 201.18 mm] M3(quad pose) -390.6
+  v1 x=10.0 cm: a_c median -63 mN (small/large beta ratio 1.46); b_c median -35 mN/N | AIC M0 -309.3 M1(lin pose) -317.1 M2(stiffness) -313.7 [k_h 753 N/m, delta 0.10 mm] M3(quad pose) -323.3
+  v1 x=15.0 cm: a_c median -65 mN (small/large beta ratio 2.77); b_c median +10 mN/N | AIC M0 -243.7 M1(lin pose) -249.0 M2(stiffness) -246.5 [k_h 1650 N/m, delta 0.06 mm] M3(quad pose) -247.8
+  v1 x=19.0 cm: a_c median -69 mN (small/large beta ratio -16.73); b_c median +87 mN/N | AIC M0 -233.8 M1(lin pose) -249.9 M2(stiffness) -240.7 [k_h 2982 N/m, delta 0.04 mm] M3(quad pose) -249.6
+  v2 x= 5.0 cm: a_c median -62 mN (small/large beta ratio 2.18); b_c median -41 mN/N | AIC M0 -296.7 M1(lin pose) -335.2 M2(stiffness) -356.1 [k_h 4741 N/m, delta 0.03 mm] M3(quad pose) -349.8
+  v2 x=10.0 cm: a_c median -93 mN (small/large beta ratio 3.10); b_c median -28 mN/N | AIC M0 -224.2 M1(lin pose) -234.8 M2(stiffness) -234.6 [k_h 4641 N/m, delta 0.05 mm] M3(quad pose) -232.8
+  v2 x=15.0 cm: a_c median -81 mN (small/large beta ratio 2.20); b_c median +36 mN/N | AIC M0 -219.3 M1(lin pose) -228.3 M2(stiffness) -239.0 [k_h 70861 N/m, delta 0.02 mm] M3(quad pose) -229.5
+  v2 x=19.0 cm: a_c median -100 mN (small/large beta ratio 1.65); b_c median +109 mN/N | AIC M0 -224.8 M1(lin pose) -229.1 M2(stiffness) -231.1 [k_h 2935 N/m, delta 0.07 mm] M3(quad pose) -228.0
+  v3 x= 5.0 cm: a_c median -41 mN (small/large beta ratio 1.65); b_c median -47 mN/N | AIC M0 -339.1 M1(lin pose) -357.8 M2(stiffness) -351.7 [k_h 1409 N/m, delta 0.04 mm] M3(quad pose) -364.4
+  v3 x=10.0 cm: a_c median -62 mN (small/large beta ratio 0.74); b_c median -23 mN/N | AIC M0 -315.6 M1(lin pose) -317.6 M2(stiffness) -313.6 [k_h 0 N/m, delta 761.18 mm] M3(quad pose) -327.4
+  v3 x=15.0 cm: a_c median -82 mN (small/large beta ratio 0.49); b_c median +32 mN/N | AIC M0 -260.3 M1(lin pose) -276.1 M2(stiffness) -258.3 [k_h 0 N/m, delta 1794.94 mm] M3(quad pose) -303.9
+  v3 x=19.0 cm: a_c median -79 mN (small/large beta ratio 0.58); b_c median +108 mN/N | AIC M0 -283.3 M1(lin pose) -288.2 M2(stiffness) -281.2 [k_h 0 N/m, delta 1220.93 mm] M3(quad pose) -307.3

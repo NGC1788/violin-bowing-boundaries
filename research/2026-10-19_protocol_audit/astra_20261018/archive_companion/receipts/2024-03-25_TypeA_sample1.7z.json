@@ -1,0 +1,28 @@
+{
+  "archive": "2024-03-25_TypeA_sample1.7z",
+  "status": "legacy_outputs_validated",
+  "ended_utc": "2026-10-17T16:53:58.056090+00:00",
+  "validation": {
+    "trials": 6000,
+    "blocks": 450631,
+    "folders": {
+      "2024-03-25_TypeA_sample1/2024-03-27_r_v3": 2000,
+      "2024-03-25_TypeA_sample1/2024-03-27_r_v2": 2000,
+      "2024-03-25_TypeA_sample1/2024-03-27_r_v1": 2000
+    },
+    "ramp_sha256": "8c3d3299c75bc379ec1c842d9eea331d1daf4c36187513c5b5daf8a6f9fdeb24",
+    "blocks_sha256": "f87ad21bcfa3480133a1b60bfedd58b760d8514cf185af05efcd955f00997428",
+    "coverage_sha256": "7421b0ac2ae4a81ee0819eab7e6f5f602b6808a48f693d43ed25feec1de774d1"
+  },
+  "reference": {
+    "feature_sha256": "e7961c8d86b514090967a288f1bd173190ee48021e01cab89303486ef55fe483",
+    "state_sha256": "49744866f80f240b62af01f8a38df51db2a44d73dd9a53df91362ad5b4aece60",
+    "scope": "feature IDs cross-checked against completed legacy state and contiguous 1..N trial identifiers; not raw archive verification"
+  },
+  "legacy_paths": [
+    "/Users/jeongjihoon/violin-rne/claude_extra/ramp/ramp_meta_2024-03-25_TypeA_sample1.csv",
+    "/Users/jeongjihoon/violin-rne/claude_extra/blocks/blocks_A1.npz"
+  ],
+  "extractor_exit_codes": null,
+  "original_archive_md5_verified": false
+}

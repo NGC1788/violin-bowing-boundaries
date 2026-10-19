@@ -1,0 +1,10 @@
+[2026-10-18 12:17:34] 즉시 재시작(연결 16개)
+[2026-10-18 12:17:34] 기존 replicate: 39505 39507  / recover_B1: 33979
+[2026-10-18 12:17:34] recover_B1 일시정지
+[2026-10-18 12:17:34] 다운로드 자식: 39508 
+[2026-10-18 12:17:34] 종료 확인: replicate 0개 남음
+/Users/jeongjihoon/violin-rne/data/raw/zenodo/17795326/2024-10-23_variability_setup.7z.download.lock
+[2026-10-18 12:17:49] 새 replicate: 41262 41264 
+[2026-10-18 12:17:49] 로그 끝:   parallel: 373/421 chunks to fetch over 16 connections
+[2026-10-18 12:17:49] recover_B1 재개
+[2026-10-18 12:17:49] 완료

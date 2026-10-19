@@ -1,0 +1,42 @@
+S1_strict      theta [0.9859] sigma 0.384 nll 1821.6 | level RMS (in-sample) 0.077
+S0_dmu_steady  theta [] sigma 0.995 nll 2312.3 | level RMS (in-sample) 0.909
+T0_peak        theta [] sigma 0.811 nll 2225.2 | level RMS (in-sample) 0.696
+T0_break       theta [] sigma 0.382 nll 1970.1 | level RMS (in-sample) 0.247
+T1k_peak       theta [-0.8424] sigma 0.359 nll 1858.9 | level RMS (in-sample) 0.076
+T1k_break      theta [0.258] sigma 0.350 nll 1793.5 | level RMS (in-sample) 0.075
+T1mu           theta [-0.0202] sigma 0.345 nll 1793.9 | level RMS (in-sample) 0.075
+T2_mu_k        theta [0.097  0.1516] sigma 0.348 nll 1793.2 | level RMS (in-sample) 0.075
+E3_free_Z      theta [ 0.0672  0.698  -1.0645] sigma 0.329 nll 1729.5 | level RMS (in-sample) 0.078
+wrote /Users/jeongjihoon/violin-rne/novelty/thermal_upper/FROZEN_v1.json 374b885d5f970cd8a44bbd3b4e499ed0881bed27cfb99950e500b723f75555eb 2026-10-19T10:25:51.998457+09:00
+2024-04-22_TypeA_sample3 type-mean {'level_A': 0.0, 'e_v': 0.661, 'e_beta': -1.112}
+   S1_strict    level_A +0.123 ±0.127  e_v +1.00 e_b -1.00
+   T1k_peak     level_A +0.040 ±0.126  e_v +0.60 e_b -0.79
+   T1k_break    level_A +0.072 ±0.124  e_v +0.84 e_b -0.92
+   T1mu         level_A +0.060 ±0.123  e_v +0.80 e_b -0.90
+   T2_mu_k      level_A +0.068 ±0.123  e_v +0.83 e_b -0.91
+   T0_break     level_A -0.165 ±0.407  e_v +0.83 e_b -0.91
+   E3_free_Z    level_A +0.089 ±0.129  e_v +0.70 e_b -1.06
+2024-04-24_TypeA_sample4 type-mean {'level_A': 0.0, 'e_v': 0.661, 'e_beta': -1.112}
+   S1_strict    level_A +0.123 ±0.127  e_v +1.00 e_b -1.00
+   T1k_peak     level_A +0.040 ±0.126  e_v +0.60 e_b -0.79
+   T1k_break    level_A +0.072 ±0.124  e_v +0.84 e_b -0.92
+   T1mu         level_A +0.060 ±0.123  e_v +0.80 e_b -0.90
+   T2_mu_k      level_A +0.068 ±0.123  e_v +0.83 e_b -0.91
+   T0_break     level_A -0.165 ±0.407  e_v +0.83 e_b -0.91
+   E3_free_Z    level_A +0.089 ±0.129  e_v +0.70 e_b -1.06
+2024-04-26_TypeD_sample2 type-mean {'level_A': 0.172, 'e_v': 0.755, 'e_beta': -1.035}
+   S1_strict    level_A +0.106 ±0.127  e_v +1.00 e_b -1.00
+   T1k_peak     level_A +0.028 ±0.126  e_v +0.60 e_b -0.79
+   T1k_break    level_A +0.057 ±0.124  e_v +0.84 e_b -0.92
+   T1mu         level_A +0.046 ±0.123  e_v +0.80 e_b -0.90
+   T2_mu_k      level_A +0.053 ±0.123  e_v +0.83 e_b -0.91
+   T0_break     level_A -0.179 ±0.407  e_v +0.83 e_b -0.91
+   E3_free_Z    level_A +0.071 ±0.129  e_v +0.70 e_b -1.06
+2024-07-03_TypeB_T2_sample2 type-mean {'level_A': 0.273, 'e_v': 0.841, 'e_beta': -1.402}
+   S1_strict    level_A +0.237 ±0.127  e_v +1.00 e_b -1.00
+   T1k_peak     level_A +0.135 ±0.126  e_v +0.61 e_b -0.79
+   T1k_break    level_A +0.179 ±0.124  e_v +0.84 e_b -0.92
+   T1mu         level_A +0.165 ±0.123  e_v +0.81 e_b -0.90
+   T2_mu_k      level_A +0.174 ±0.123  e_v +0.83 e_b -0.91
+   T0_break     level_A -0.059 ±0.407  e_v +0.84 e_b -0.91
+   E3_free_Z    level_A +0.205 ±0.129  e_v +0.70 e_b -1.06

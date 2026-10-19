@@ -1,0 +1,1489 @@
+ACTA ACUSTICA UNITED WITH ACUSTICA
+Vol. 94 (2008) 604 – 622
+                                                                                                               DOI 10.3813/AAA.918070
+
+
+
+
+                         An Empirical Investigation of Bow-Force Limits
+                         in the Schelleng Diagram
+
+                         Erwin Schoonderwaldt1) , Knut Guettler2) , Anders Askenfelt1)
+                         1)
+                            KTH-Computer Science and Communication, Dept. of Speech, Music and Hearing, Lindstedtsvägen 24,
+                            100 44 Stockholm, Sweden. schoondw@kth.se; andersa@speech.kth.se
+                         2)
+                            Norwegian Academy of Music, P.B. 5190 Majorstua, 0302 Oslo, Norway. knut.guettler@nmh.no
+
+
+                         Summary
+                         An experimental study of the upper and lower bow-force limits for bowed violin strings is reported. A bowing
+                         machine was used to perform bow strokes with a real violin bow on steel D and E strings mounted on a rigid
+                         monochord and on a violin. Measurements were systematically performed for 11 values of relative bow-bridge
+                         distance and 24 values of bow force at four bow velocities (5, 10, 15 and 20 cm/s). The measured string velocity
+                         signals were used to compile Schelleng diagrams, showing the distribution of diﬀerent classes of string mo-
+                         tion (multiple slipping, Helmholtz motion, raucous motion). It was found that the maximum bow-force limit for
+                         Helmholtz motion corresponded well to Schelleng’s equation in modiﬁed form, taking the shape of the (hyper-
+                         bolic) friction curve into account. The minimum bow force was found to be independent of bow velocity, which
+                         is in clear contradiction to Schelleng’s prediction. Observations and simulations suggested that the breakdown
+                         of Helmholtz motion at low bow forces involves a mechanism related to ripple and corner rounding which was
+                         not taken into account in Schelleng’s derivation of minimum bow force. The inﬂuence of damping showed only
+                         qualitative agreement with Schelleng’s predictions.
+                         PACS no. 43.75.De
+
+
+
+
+1. Introduction                                                         the maximum bow force as function of relative bow-bridge
+                                                                        distance β and bow velocity vB :
+Tone production in a bowed-string instrument is governed
+by a complex frictional interaction between the bow and                                   2Z0 vB
+                                                                               Fmax =               ,                                (1)
+the string. The physics of the interaction provides the                                 (µs − µd )β
+player the means to control the sound via the three main                                     Z02 vB
+bowing parameters bow velocity, bow force and bow-                      and    Fmin =                     .                          (2)
+                                                                                        2R(µs − µd )β 2
+bridge distance, but imposes constraints as well.
+   In classical playing Helmholtz motion is the established             Here Z0 is the characteristic transverse impedance of the
+norm for violin sound, corresponding to a regular string                string, µs the maximum static friction coeﬃcient, and µd
+vibration with one slip and stick phase per fundamental                 the dynamic friction coeﬃcient. R originates from Ra-
+period. Two requirements on the bow force must be met                   man’s string model on which Schelleng based his deriva-
+to maintain Helmholtz motion: (1) during the stick phase                tions with a ﬁxed string termination at the nut and a pure
+the bow force must be high enough to avoid premature                    mechanical resistance R at the bridge. The friction coeﬃ-
+slipping of the string, and (2) the bow force must be low               cient delta (µs − µd ) will be referred to as Δµ in the fol-
+enough that the circulating Helmholtz corner can trigger                lowing.
+the release of the string at the initiation of the slip phase.             It could be noted that the factor 2 in the numerator of
+For a given combination of bow velocity and bow-bridge                  equation (1) was not present in the original equation de-
+distance there is a certain range in bow force which must               rived by Schelleng, but was mentioned by him in a foot-
+be respected.                                                           note (footnote #10 in [1]). This factor is a necessary con-
+                                                                        dition for complete reﬂection of the discontinuity arriving
+1.1. Bow-force limits                                                   from the nut at the bow, and previous studies of the max-
+                                                                        imum bow-force limit have taken this factor into account,
+The limits of the playable region have been formalized by
+                                                                        e.g., Askenfelt [2], Woodhouse [3], Schumacher [4], and
+Schelleng [1], who gave expressions for the minimum and
+                                                                        Galluzzo [5].
+                                                                           Schelleng introduced a diagram with a log-log repre-
+Received 25 May 2007,                                                   sentation of relative bow force versus relative bow-bridge
+accepted 4 April 2008.                                                  distance. In the classical Schelleng diagram the upper and
+
+
+
+604                                                                                                             © S. Hirzel Verlag · EAA
+Schoonderwaldt et al.: Empirical investigation of bow-force limits           ACTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                                 Vol. 94 (2008)
+
+
+lower bow-force limits form straight lines with slopes of           This way of rewriting the Schelleng bow-force limits is
+−1 and −2, respectively, demarcating a triangular-shaped         based on the assumption that the friction curve can be de-
+playable region with Helmholtz motion. An important un-          scribed by a hyperbolic function, only dependent on the
+derlying assumption is that the friction coeﬃcient delta Δµ      relative velocity. This type of friction curve has been ap-
+is constant. This is mostly a reasonable approximation for       plied in many bowed-string simulations. It is also possible
+high bow velocities and short bow-bridge distances, but          to derive modiﬁed Schelleng equations for a more general
+it does not hold in general since the dynamic friction co-       class of velocity-dependent friction curves, as Schumacher
+eﬃcient is dependent on slip velocity. This was already          [4] has done for the maximum bow force.
+realized by Raman [6] and used by him to explain his ob-            Another approximation used by Schelleng was to ne-
+servation that the minimum bow force approached a ﬁnite          glect the eﬀects of torsion and dispersion in the string.
+minimum for decreasing bow velocities.                           However, the rotational compliance of the string can have
+   The variation in Δµ can be accounted for in the Schel-        a signiﬁcant inﬂuence on the maximum bow force. In
+leng equations by introducing a functional form of the fric-     order to take this into account the transverse charac-
+tion curve. This was done by Schelleng for the minimum           teristic impedance Z0 in equations (1) and (5) should
+bow force using a hyperbolic friction curve of the form:         be replaced by the combined characteristic tangential
+                                                                 impedance Ztot = Z0 ZR /(Z0 + ZR ), with ZR the tor-
+      µ = µd + K/(z − z0 ),                               (3)    sional wave impedance, which is typically a factor 2 to
+                                                                 4 higher than Z0 [4, 7]. This results in a lowering of the
+in which z is the relative slip velocity vB /β, z0 a veloc-
+                                                                 maximum bow force. In the expressions for minimum bow
+ity oﬀset to obtain a ﬁnite value for µs at z = 0, µd the
+                                                                 force, equations (2) and (4) the factor Z02 should be re-
+asymptotic value of µ for z → ∞, and K a constant de-
+                                                                 placed by Ztot Z0 , as the factor Z0 /R is associated with the
+termining the curvature. The friction coeﬃcient delta can
+                                                                 transfer function from string to body and is not inﬂuenced
+then be rewritten as:
+                                                                 by torsion of the string at the bow-string contact point.
+      (µs − µd ) = z(µs − µd )/(z + z0 )
+                                                                 1.2. Previous measurements of bow-force limits
+and the modiﬁed minimum bow force is then obtained by            Only a few experimental studies of bow-force limits have
+substitution of (µs − µd ) in equation (2):                      been published, most of them focusing on the minimum
+                                                                 bow force. The earliest known experimental study of min-
+                    Z02     vB + βz0
+      Fmin =                 ·       .                    (4)    imum bow force was done by Raman [6], using an in-
+               2R(µs − µd )    β2                                genious mechanical bowing machine, a real bow and a
+                                                                 real violin. His main ﬁndings were that (1) the minimum
+Note that equation (4) reduces to equation (2) when z0 =
+                                                                 bow force was proportional to 1/β 2 , (2) the minimum
+0. The factor (µs −µd ) is a constant, representing the diﬀer-
+                                                                 bow force increased with bow velocity (however generally
+ence between the maximum static friction coeﬃcient and
+                                                                 not proportionally), and (3) the minimum bow force was
+the asymptotic value of µ (the minimum value in case of
+                                                                 strongly increased at certain resonances of the violin. The
+the hyperbolic friction curve). It will be referred to as Δµ
+                                                                 ﬁrst two ﬁndings were later conﬁrmed by measurements
+in the following.
+                                                                 of Lazarus (see Cremer [8], section 4.5).
+   In the modiﬁed model the minimum bow force ap-
+                                                                    The maximum bow force has been experimentally mea-
+proaches a ﬁnite minimum when the bow velocity ap-
+                                                                 sured by Schumacher [4] for a number of diﬀerent strings.
+proaches zero, but the shape of the lower bow-force limit
+                                                                 A real bow and violin were used, and bow velocity and
+in the Schelleng diagram is also altered. When vB ap-
+                                                                 bow force were controlled by a computer-controlled bow-
+proaches zero, the minimum bow force becomes propor-
+                                                                 ing machine. From the measurements the values of Δµ
+tional to 1/β, rather than 1/β 2 . Furthermore, for constant
+                                                                 and Δµ were estimated (in Schumacher’s [4] notation in-
+vB the term βz0 in equation (4) gains relative importance
+                                                                 dicated by Δµ∗ and Δµ, respectively), using Schelleng’s
+with increasing β, leading to a curvature in the lower bow-
+                                                                 equation for maximum bow force in a generalized form
+force limit.
+                                                                 and taking the torsional wave impedance of the string into
+   Also the maximum bow force can be modiﬁed, taking
+                                                                 account. The ﬁndings suggested a reasonable agreement
+the functional form of the friction curve into account. Us-
+                                                                 between the observed values of maximum bow force and
+ing the same hyperbolic friction curve (equation 3) an ana-
+                                                                 Schelleng’s generalized equation.
+logue derivation of the maximum bow force yields
+                                                                    Previous experimental veriﬁcations of a complete
+                 2Z0        vB + βz0                             Schelleng diagram under well-controlled conditions have
+      Fmax =              ·          .                    (5)    been limited to a cello string at a single bow velocity [5].
+               (µs − µd )      β
+                                                                 In that experiment a computer-controlled bowing machine
+The consequences for the upper bow-force limit are the           was used to bow a cello D string with a rosined perspex rod
+same as for the lower limit. The maximum bow force ap-           at a velocity of 5 cm/s. The rod was considered as a rigid
+proaches a ﬁnite minimum when vB approaches zero, and            point bow, and was chosen to allow for an easier compari-
+the upper bow-force limit in the Schelleng diagram will be       son of the experimental results with bowed-string simula-
+slightly curved.                                                 tions. Also in this study, the dependence of the observed
+
+
+
+                                                                                                                          605
+ACTA ACUSTICA UNITED WITH ACUSTICA                    Schoonderwaldt et al.: Empirical investigation of bow-force limits
+Vol. 94 (2008)
+
+
+bow force limits on bow-bridge distance was found to be          was very low. Simulations showed that the slip phase at
+in reasonable agreement with Schelleng’s equations (equa-        low bow forces could be signiﬁcantly prolonged due to
+tions 1 and 2). At some particular values of β, close to inte-   corner rounding, even to an unrealistic extent. The discrep-
+ger ratios, also S-motion was found, characterized by very       ancy between these simulations and a real bowed string
+large ripple. S-motion occurred mostly beyond the maxi-          was explained by the presence of another source of per-
+mum bow force limit, but also at higher bow forces within        turbing force during the stick phase, namely ‘secondary’
+the Helmholtz region, forming ‘columns’ in the Schelleng         waves or ripple, the reﬂected waves between the bow and
+diagram. S-motion can be considered as a ‘higher’ type of        the bridge during the stick phase. This eﬀect is also ig-
+string motion, described in detail by Lawergren [9].             nored in Schelleng’s arguments for the presence of a min-
+1.3. Inﬂuence of the instrument, corner rounding                 imum bow force.
+       and ripple                                                   The lengthening of the slip phase by corner rounding
+                                                                 can be easily understood as follows. In a crude approx-
+The minimum bow force is dependent on the energy                 imation corner rounding can be described by a moving-
+losses. In Schelleng’s equation for the minimum bow force        average ﬁlter of ﬁnite width. With repeated ﬁltering the
+(equations 2 and 4) this is expressed by the mechanical re-      Helmholtz corner becomes increasingly rounded, an eﬀect
+sistance R, which represents the combined losses due to          counteracted by resharpening at the bowing point. Corner
+the internal friction in the string, the reﬂections at both      sharpening increases with bow force and friction delta. As
+string terminations (bridge and nut/ﬁnger) and the bow-          an eﬀect of corner rounding the sudden transition from
+string interaction. As the bridge mobility is strongly de-       stick to slip is smeared out in time, resulting in a ﬂank
+pendent on frequency due to the resonance structure of the       with ﬁnite slope, a longer duration of the slip phase and
+instrument, the minimum bow force can vary greatly be-           a shorter duration of the slipping part with nominal slip
+tween notes played on the same instrument or between dif-        velocity. (The duration of the slip at half height remains
+ferent instruments. For this reason the minimum bow force        unchanged, corresponding to the nominal slip duration of
+and its variation within a single instrument has often been      ideal Helmholtz motion). When the eﬀect of rounding ex-
+considered as a promising measure of the ‘playability’ of        tends over a time interval longer than the nominal duration
+an instrument [10]. Playability has been introduced as a         of the slip phase, the nominal slip velocity is no longer
+concept reﬂecting how an instrument reacts to the actions        reached, and the slip phase starts to collapse.
+of the player. This aspect was taken up already by Raman            Even though this simpliﬁed representation of corner
+[6] in his measurements of minimum bow force for dif-            rounding is far from realistic the qualitative inﬂuence on
+ferent notes. Saunders [11], using a rotating group of thin      the shape of the slip phase is described rather well, com-
+celluloid disks to bow the violin under controlled condi-        parable with more sophisticated models of corner round-
+tions, carried the work further by exploring the minimum         ing (see for example the Appendix in Boutillon [12]) and
+bow force necessary to ‘make the violin speak properly’          measured string-velocity signals.
+for diﬀerent notes, and made comparisons with ‘loudness
+curves’ showing the acoustical output for bowed notes at         1.4. Aim of the study
+diﬀerent pitches.                                                The main purpose of the current study was to perform
+   It is well known that the Raman string model is not very      a systematic experimental investigation of the bow-force
+realistic. The approximation that the string termination at      limits in the Schelleng diagram. In order to stay close
+the bridge is purely resistive implies that the reﬂection        to the reality experienced by the player a normal vio-
+function is characterized by a delta function. This means        lin bow was used to bow standard strings mounted on
+that the shape of the reﬂected waves remains unaltered, the      a monochord and on a violin. Empirical Schelleng dia-
+reﬂections only being attenuated by a constant factor de-        grams were compiled for diﬀerent strings and at diﬀerent
+pending on the amount of damping. As a result the Raman          bow velocities. The bowing parameters were controlled
+model does not account for corner rounding and ripple,           with a computer-controlled bowing machine, and an in-
+typically present in observations of real string vibrations      teractive, semi-automatic method was used for string mo-
+and in realistic bowed-string simulations.                       tion classiﬁcation (see section 2). The observed bow-force
+   Woodhouse [3] has derived a more general equation for         limits were used for evaluation of Schelleng’s equations
+the minimum bow force, without the restrictive assump-           by means of curve ﬁtting and estimation of the friction-
+tion of the Raman model. This equation allowed him to            coeﬃcient delta (section 3).
+use measured admittance curves to predict the frequency             A second experiment was performed to shed more light
+dependence of the minimum bow force for particular in-           on the string motion close to the minimum bow force (sec-
+struments. The generalization also makes it possible to de-      tion 4). In this experiment the minimum bow force was
+rive the minimum bow force for other theoretical instru-         determined more accurately, taking the variance observed
+ment models. This feature was demonstrated by Wood-              in this region into account. Also the transition from Helm-
+house [3] for the Cremer model, which is similar to the          holtz motion to multiple slipping was studied more closely
+Raman model, but with an additional reactive component           in relation to the shape of the slip phase.
+(see Cremer [8] and Woodhouse [10]). It was shown that              In a third experiment, the inﬂuence of the damping fac-
+the minimum bow force for Cremer’s model, and for mod-           tor R on the minimum bow force was investigated (section
+els characterized by narrow reﬂection functions in general,      5). For this purpose the minimum bow force was measured
+
+
+
+606
+Schoonderwaldt et al.: Empirical investigation of bow-force limits          ACTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                              Vol. 94 (2008)
+
+
+on a monochord and a violin using both open and stopped         which could be accurately positioned in two directions by
+strings. The values of R were estimated from the decay          means of two adjustable slides. The induced voltage was
+times of the plucked notes, allowing for direct comparison      picked up by electrodes attached to the passive parts of
+with Schelleng’s equation for minimum bow force.                the string and ampliﬁed with a balanced microphone pre-
+   In addition to a detailed investigation of the bow-force     ampliﬁer (Symmetrix SX 202). The string velocity signal
+limits two other features which also are dependent on the       was recorded into the computer using an external sound
+combination of bowing parameters were studied in rela-          device (Tascam US-122) at a sampling rate of 44.1 kHz.
+tion to the Schelleng diagram: pitch ﬂattening and the             A linear relation between the induced signal and the
+spectral centroid. The analysis of these data will be re-       transverse string velocity requires that the width of the
+ported elsewhere.                                               magnet is large compared to the vibration amplitude. As-
+                                                                suming ideal Helmholtz motion (and disregarding the
+2. Method                                                       static displacement), the amplitude of string displacement
+2.1. Experimental setup                                         at the bowing point is estimated by (1 − β) T1 vB , where T1
+Empirical Schelleng diagrams were obtained using a nor-         is the fundamental period. In the experiments the displace-
+mal bow driven by a computer-controlled bowing ma-              ment amplitude during Helmholtz motion did not exceed
+chine [13]. Most measurements were performed on a rigid         0.6 mm (for vB = 20 mm/s, β = 1/6 and T1 = 3.4 ms),
+monochord, in order to avoid the inﬂuence of the promi-         which is a factor 10 less than the diameter of the magnet.
+nent body modes of a violin. The monochord consisted            Even in the case of other types of motion, such as raucous
+of a duraluminium bar with a U-shaped cross-section             motion or anomalous low frequencies (ALF), which are
+(60×40 mm), glued onto a solid piece of hardwood. The           characterized by prolonged periods normally up to three
+dimensions and geometry of the monochord were copied            times T1 , the string displacement was considerably smaller
+from a standard modern violin (string length 325 mm,            than the width of the magnet.
+bridge height 42 mm above a reference line through the nut         Due to the ﬁnite width of the magnet the measured
+and the tailpiece rest). The solid duraluminium bridge had      string velocity signal is somewhat smoothed. Assuming
+the same shape as a normal violin bridge with notches for       that the eﬀective width of the magnetic ﬁeld was 50%
+the strings. Also the nut, made of a hard plastic, was mod-     wider than the actual magnet diameter, the averaging win-
+eled according to a violin. At both string supports (bridge     dow with respect to one fundamental period is about
+and nut) a piece of tape (medical waterproof tape, thick-       d/2L ≈ 0.01. For the D string sampled at 44.1 kHz (150
+ness 0.27 mm) was applied to improve the contact between        samples/period) the averaging window is about 1.5 sam-
+the string and the support and add appropriate damping.         ples, which is negligible for the purpose of string motion
+Without tape it was observed that pizzicato notes some-         classiﬁcation.
+times resulted in sitar-like sounds, indicating the presence
+                                                                2.2. The bowing machine
+of a non-linear interaction between the string and the string
+termination. The violin used for some of the measurements       The bowing machine was a converted daisy wheel printer
+in section 5 was a modern master violin built in 1997 by        controlled by an AT computer [13]. The machine per-
+Matthieu Besseling.                                             formed bow strokes deﬁned in input ﬁles containing target
+   The strings used were violin D and E steel strings man-      bow position and bow force contours sampled at a rate of
+ufactured by Prim (‘Medium tone’). The D string had             600 Hz. The bowing machine could reliably produce bow
+a steel core and a chrome steel winding (outer diameter         velocities up to 30 cm/s (and probably higher). In the range
+0.70 mm, linear density ρL = 1.29 g/m, Z0 = 0.25 kg/s).         5-30 cm/s the maximum amplitude of the velocity ﬂuctua-
+The E string was a plain steel string (diameter 0.26 mm,        tions during steady-state bow strokes (with moderate bow-
+ρL = 0.41 g/m, Z0 = 0.18 kg/s). The strings were tuned          force) was of the order of 5 mm/s. The RMS value of the
+to nominal pitch: D4 = 293 Hz and E5 = 660 Hz. The              ﬂuctuations at the lowest bow velocity (5 cm/s) reached
+linear densities were carefully measured using the speak-       about 5%.
+ing lengths of the strings as samples after having been            The maximum bow force that could be supplied by the
+brought up to nominal playing frequency. The character-         servo motor of the bowing machine was limited to about
+istic impedance was calculated as Z0 = 2ρL Lf1 , where L        2 N in the lower half of the bow, decreasing to about 1 N in
+is the speaking length and f1 fundamental frequency.            the upper half. In order to reach higher bow forces an extra
+   The bow used was a carbon ﬁbre composite bow manu-           mass (327 gram) was mounted on the bow hold to increase
+factured by Leopold, 1 with a total mass of 58 g. The width     the contribution of gravity to the torque. In this way bow
+of the bow hair ribbon was 10 mm. The rosin used was Pi-        forces up to 3 N could be reached when approaching the
+rastro Oliv/Evah.                                               frog.
+   The transverse string velocity under the bow was mea-           The maximum ﬂuctuation in bow force during steady-
+sured using a small cylindrical magnet (diameter 6 mm).         state bow strokes was about 20 mN for down-bows and
+The gap between the magnet and the string was typi-             30 mN for up-bows throughout the range of used bow
+cally 1 mm. The magnet was mounted in a plastic holder          forces (49-3000 mN). Thus, the relative ﬂuctuation error
+                                                                was largest at low bow forces. The RMS value of the ﬂuc-
+1 http://www.leopold-bow.com
+                                                                tuations relative to the lowest target force (49 mN) was
+
+
+
+                                                                                                                       607
+ACTA ACUSTICA UNITED WITH ACUSTICA                     Schoonderwaldt et al.: Empirical investigation of bow-force limits
+Vol. 94 (2008)
+
+
+about 20% for down-bows and 30% for up-bows. The rel-
+ative RMS value dropped below 10% for target forces                                         10                                                   vtarget
+
+
+                                                                      Bow vel., vB [cm/s]
+higher than 100 mN for down-bows and 143 mN for up-
+bows.
+                                                                                            5
+2.3. Bowing parameters
+The bowing parameters studied included the relative bow-                                    0
+bridge distance β, bow force FB and bow velocity vB . The                                        Tinit   Ttrans              Tsteady       Tstop
+parameter ranges were chosen to represent a substantial
+part of the control space in normal violin playing (see e.g.                                                                                     Fattack
+
+
+                                                                    Bow force, FB [N]
+                                                                                        1.0
+Askenfelt [2]).
+   The β range (about 1/30 to 1/6), was divided into a grid
+                                                                                        0.5
+of 11 logarithmically-spaced values (11, 13, 15, 18, 21, 24,
+                                                                                                                                                 F
+29, 34, 39, 46 and 55 mm). The bow-bridge distance was                                                                                             target
+                                                                                            0
+set by placing the magnet under the string with its center in                                      2      3             4              5     6
+                                                                                                                  Time (s)
+the target position. Then the alignment of the bowing ma-
+chine was adjusted so that the middle of the bow hair rib-
+                                                                  Figure 1. An example of bow velocity and bow force contours
+bon coincided with the center of the magnet. The achieved
+                                                                  used for measuring Schelleng diagrams. The acceleration-force
+positioning accuracy was estimated to be about ±0.5 mm.
+                                                                  combination during the attacks (start of Ttrans ) was chosen to ob-
+For all presented measurements the bow hair was ﬂat on            tain short pre-Helmholtz transients. During the transition phase
+the string (no bow tilt). It could be noted that due to the       Ttrans the force was smoothly changed to the target force Ftarget .
+ﬁnite width of the bow hair (10 mm) a substantial range of        Bow velocity and bow force were kept constant during Tsteady .
+β values were covered across the contact surface with the
+string. For the shortest bow-bridge distance used (11 mm)
+the edges of the bow hair corresponded to β values of 1/54        100-ms sample after 2 s of steady bowing. However, the
+and 1/20, respectively. For the six shortest bow-bridge dis-      string velocity signals measured in the current experiments
+tances (up to 24 mm), the bow positions were overlapping,         showed that changes in string motion occurred practically
+meaning that the previous center-line position was covered        simultaneously with changes in bow forces (both upwards
+by the bow hair ribbon in the next position.                      and downwards) and no long delays were observed for
+   The force range (49–3000 mN) was divided into a grid           transitions between diﬀerent types of string motion. Thus,
+of 24 logarithmically-spaced values (49, 58, 70, 84, 100,         it was concluded that Tsteady was long enough for reliable
+120, 143, 171, 205, 245, 293, 350, 419, 501, 599, 716,            string motion classiﬁcation also at the two highest bow ve-
+857, 1025, 1226, 1466, 1753, 2097, 2508 and 3000 mN).             locities.
+The bow velocities used were 5, 10, 15 and 20 cm/s.
+                                                                  2.5. Experimental conditions
+2.4. Bow strokes                                                  External factors will inﬂuence the string motion to some
+In the design of the bow strokes the following criteria were      extent. Such factors include tuning, amount and quality of
+taken into account: (1) Helmholtz motion should be de-            the rosin, bow-hair tension, and possibly also temperature
+veloped in the initial phase of the bow strokes, and (2)          and humidity. On a longer term aging of the string and the
+the steady part of the bow strokes (with constant bow ve-         bow hair could also play a role. Steps were taken to keep
+locity and bow force) should last long enough to estab-           the experimental conditions as constant as possible. Before
+lish a stable string motion pattern. These criteria resulted      each measurement session the string was tuned to nominal
+in a standard shape for the bow velocity and bow force            frequency and a small amount of rosin was applied by rub-
+contours as shown in Figure 1. The bow strokes were di-           bing the bow hair against the piece of rosin back and forth
+vided into four time intervals, the initial phase Tinit , the     once or twice. The bow was then prepared for playing by
+transition phase Ttrans , the steady phase Tsteady and the stop   drawing some long notes before the actual measurements
+phase Tstop . The exact shape and the duration of the diﬀer-      started. Furthermore, the time span in which the measure-
+ent phases were dependent on the target values of bow ve-         ments were performed was kept as short as possible. In
+locity and bow force, as well as on the conditions required       order to minimize possible trends in data due to external
+for rapid development of Helmholtz motion. The total du-          factors the bow-bridge distances were measured in random
+ration of the dynamic part (Ttrans +Tsteady +Tstop ) of the bow   order in most of the presented measurements.
+stroke was constrained due to limited stroke of the bowing
+machine (max. 31 cm), which necessitated a trade-oﬀ be-           2.6. String motion classiﬁcation method
+tween Ttrans and Tsteady , especially at higher bow velocities.   The compilation of Schelleng diagrams requires classiﬁ-
+Typical durations used were 0.5-1.0 seconds for Ttrans and        cation of diﬀerent types of string motion. Examples of the
+0.65-4.0 s for Tsteady .                                          most common types, including Helmholtz motion, multi-
+   For the two highest bow velocities (15 and 20 cm/s)            ple slipping and raucous motion are shown in Figure 2.
+Tsteady was rather short. For comparison, Galluzzo [5]            Other, more peculiar string vibration patterns observed
+monitored the motion of a cello D string by taking a              were anomalous low frequency (ALF) and S-motion.
+
+
+
+608
+Schoonderwaldt et al.: Empirical investigation of bow-force limits                          ACTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                                                          Vol. 94 (2008)
+
+
+
+
+                               (a)                                                    (a)                                   (b)
+                                                                                 1
+                                                                                0.8
+                                                                        dslip   0.6
+                                                                                0.4
+
+
+
+
+  String velocity [a.u.]
+                               (b)
+                                                                                0.2
+                                                                                 0
+                                                                                  0            0.5              1       0         0.5              1
+
+                                                                                 2 (c)                                      (d)
+                               (c)
+                                                                                1.5
+                                                                        dslip
+                                                                                 1
+
+                                                                                0.5
+                           0         5   10   15      20   25   30
+                                              Time [ms]                          0
+                                                                                  0                1                2   0             1                2
+                                                                                               T       /T                         T       /T
+                                                                                                slip        1                      slip        1
+Figure 2. Examples of common types of string motion (veloc-
+ity) as recorded in the experiments: (a) Helmholtz motion, (b)
+                                                                     Figure 3. Examples of string motion classiﬁcation diagrams for
+multiple slipping and (c) raucous motion.
+                                                                     (a) Helmholtz motion, (b) multiple slipping motion, (c) raucous
+                                                                     motion, and (d) anomalous low frequency (ALF). The classiﬁ-
+                                                                     cation diagrams are scatter plots of displacement during the slip
+   In order to facilitate the classiﬁcation of string velocity       phase dslip versus slip-to-slip interval Tslip . Each point in the di-
+signals a novel interactive method was developed. First,             agram corresponds to one detected slip phase. The units in the
+the slip phases in a selected interval were identiﬁed, using         diagram are normalized with respect to the fundamental period
+a simple velocity threshold criterion. Second, two features          T1 and displacement for ideal Helmholtz motion. The intersec-
+were determined for each detected slip phase: (1) the slip-          tion between the two dashed lines indicates the reference point
+to-slip time interval (between the previous and the cur-             for Helmholtz motion.
+rent slip phase), and (2) the string displacement during the
+slip phase. These features were then displayed in a two-
+                                                                     necessarily on the diagonal. In case of raucous motion
+dimensional scatter plot of displacement versus time, in
+                                                                     (panel c) the points are more or less randomly distributed
+the following referred to as a classiﬁcation diagram. The
+                                                                     across the diagram, reﬂecting the aperiodicity of this type
+velocity threshold for the detection of slip phases was by
+                                                                     of motion. Some points fall outside the reference rectan-
+default −vB , but could be manually adjusted. As the string
+                                                                     gle, indicating the presence of prolonged periods. Finally,
+velocity signals were not calibrated vB was estimated by
+                                                                     in case of ALF (panel d) the points fall in a single cluster,
+the median of the signal during stick phase. The onset and
+                                                                     indicating the periodicity of the signal. The cluster lies far
+oﬀset times of the detected slip phases were determined
+                                                                     outside the reference rectangle, on an extended diagonal
+from the zero-crossings, using linear interpolation.
+                                                                     between the origin and the reference point.
+   In case of ideal Helmholtz motion with constant vB and
+                                                                        The described classiﬁcation method has some similar-
+β all slip phases coincide at one point in the classiﬁcation
+                                                                     ities with the classiﬁcation method of transverse bridge-
+diagram with the fundamental period T1 as time coordinate
+                                                                     force waveforms used by Woodhouse [14]. In that method
+and the extent of the string displacement at the bowing
+                                                                     a classiﬁcation histogram is constructed, based on a se-
+point (1 − β)T1 vB as the displacement coordinate (Helm-
+                                                                     lected portion of the bridge-force signal. The distances be-
+holtz reference point). All measured points were normal-
+                                                                     tween the peaks in the histogram correspond to the mag-
+ized with respect to this reference point.
+                                                                     nitude of the ﬂyback force, which is proportional to the
+   The diﬀerent types of string motion were in most cases
+                                                                     string displacement during the slip phase measured close
+clearly recognizable from the emerging pattern in the clas-
+                                                                     to the bridge. No explicit timing measurements were used
+siﬁcation diagram. Some typical examples are shown in
+                                                                     by Woodhouse for the classiﬁcation.
+Figure 3a–d, illustrating the classiﬁcation diagrams of the
+string motions in Figure 2. In case of Helmholtz motion
+(panel a) the points fall into a single cluster close to the         3. Experiment I: Empirical Schelleng dia-
+reference point. In case of multiple slipping (panel b) the             grams
+points form a set of two or more clusters, corresponding
+to the diﬀerent slip phases within the fundamental period.           3.1. Experimental procedure and analysis
+This reﬂects the fact that multiple slipping is a rather per-        Empirical Schelleng diagrams were measured for the
+sistent periodic type of motion. All clusters lie within the         D string on the monochord at four bow velocities (5, 10,
+reference rectangle spanned up by the fundamental period             15 and 20 cm/s), 11 values of β and 24 values of FB . For
+and the displacement of ideal Helmholtz motion, but not              each bow-bridge distance a series of bow strokes was per-
+
+
+
+                                                                                                                                                           609
+ACTA ACUSTICA UNITED WITH ACUSTICA                                                        Schoonderwaldt et al.: Empirical investigation of bow-force limits
+Vol. 94 (2008)
+
+
+
+                                                        (a) 5 cm/s                                    (b) 10 cm/s
+                             3000
+                                                                                                                                  Figure 4. Schelleng diagrams for a vio-
+                                                                                                                                  lin steel D string mounted on a mono-
+                             1466                                                                                                 chord at four bow velocities (in cm/s): 5
+
+
+
+ Bow force, FB (rel. 1 mN)
+                                                                                                                                  (a), 10 (b), 15 (c) and 20 (d). Helmholtz
+                              716
+                                                                                                                                  motion is indicated by open squares
+                              350
+                                                                                                                                  (), constant slipping by dots (·), mul-
+                                                                                                                                  tiple slipping by plus signs (+), and
+                              171                                                                                                 raucous motion by crosses (×). Other
+                                                                                                                                  observed types of motion were anoma-
+                              84
+                                                                                                                                  lous low frequency (ALF), indicated by
+                                                                                                                                  open circles (◦) and S-motion indicated
+                                                       (c) 15 cm/s                                    (d) 20 cm/s                 by asterisks (∗). The solid lines indicate
+                             3000                                                                                                 the ﬁtted upper and lower bow-force
+                                                                                                                                  limits according to the basic Schelleng
+                             1466
+
+
+
+
+ Bow force, FB (rel. 1 mN)
+                                                                                                                                  model, equations (1) and (2), and the
+                              716                                                                                                 dashed lines the ﬁtted upper limit ac-
+                                                                                                                                  cording to the modiﬁed model, equation
+                              350                                                                                                 (5). The line in the upper part of panel
+                                                                                                                                  (b) shows the separation of the ALF re-
+                              171
+                                                                                                                                  gion in string motion with double and
+                              84                                                                                                  triple period lengths. The larger circles
+                                                                                                                                  indicate the minimum bow force values
+                                    1/30    1/22     1/16   1/11     1/8     1/6   1/30    1/22     1/16   1/11     1/8     1/6   at β values 1/25 and 1/18.1 found in Ex-
+                                           Relative bow-bridge distance,                 Relative bow-bridge distance,          periment II.
+
+
+
+formed with successively higher bow force and three re-                                                  However, the independence of the lower bow-force limit
+peated measurements at each force value. String motion                                                   on bow velocity is a surprising result in view of that vB
+classiﬁcation was applied on a manually selected portion                                                 also appears in the numerator of equation (2). This behav-
+of the signal (10 nominal periods), typically close to the                                               ior will be further examined in sections 3.8 and 4.3.
+end of the steady part of bowing. A ﬁnal decision about
+the type of string motion was taken by the experimenter                                                     An interesting detail was that clear playable regions of
+after inspection of both the string-velocity signal and the                                              anomalous low frequencies (ALF) were found, especially
+classiﬁcation diagram.                                                                                   at bow velocities of 10 and 15 cm/s (see Figure 4b and c).
+                                                                                                         Diﬀerent types of ALF were found, mostly with periods
+3.2. Playable region and bow-force limits                                                                of twice or three times the fundamental period. The lat-
+                                                                                                         ter was found at higher bow forces and larger values of β.
+The obtained Schelleng diagrams are displayed in Fig-                                                    In Figure 4 (b) the separation between the ALF regions
+ure 4, in which the observed types of string motion are                                                  with twice and three times the fundamental period is in-
+indicated with diﬀerent symbols. At all bow velocities a                                                 dicated. The shape of the ALF regions resembles the tri-
+continuous playable region of Helmholtz motion could                                                     angular region of Helmholtz motion, showing decreasing
+be observed with clear upper and lower bow-force lim-                                                    bow-force limits with increasing β. Both areas are however
+its. The triangular shape of the Helmholtz regions is in                                                 quite small, indicating that the stability of ALF is critically
+agreement with Schelleng’s observations [1]. The upper                                                   dependent on the bowing parameters.
+and lower bow-force limits formed approximately straight
+lines, in good agreement with the predictions of equations                                                  In most cases, the string motion could be classiﬁed with-
+(1) and (2) (see section 3.3). Above the upper bow-force                                                 out any problem. However, in the vicinity of the min-
+limit mostly raucous motion was observed, as well as some                                                imum bow force the type of motion could not always
+cases of anomalous low frequency (ALF) and S-motion.                                                     be determined unambiguously, due to repeated alterna-
+Below the lower limit multiple slipping, multiple ﬂyback                                                 tion between Helmholtz motion and multiple slipping. In
+and constant slipping motion were observed.                                                              these cases the classiﬁcation could depend on where in
+   The four panels in Figure 4 show how the playable re-                                                 the ‘steady part’ the analyzed sample was taken. A restric-
+gion depended on bow velocity. It can be seen that the                                                   tive strategy was used by classifying the string motion as
+playable region became larger with increasing bow veloc-                                                 Helmholtz motion only when there was no doubt about
+ity. The upper bow-force limit was clearly shifted upward,                                               the stability. Also close to the maximum bow force the de-
+while the lower limit remained rather constant. The obser-                                               tection of Helmholtz motion could be ambiguous due to a
+vation that the upper bow-force limit increased with in-                                                 large amount of ripple, jitter and pitch ﬂattening. In these
+creasing bow velocity is in agreement with equation (1),                                                 cases the adopted strategy was to classify the string vibra-
+which predicts that the upper limit is proportional to vB .                                              tion as Helmholtz motion if no clear random slip-to-slip
+
+
+
+610
+Schoonderwaldt et al.: Empirical investigation of bow-force limits                           ACTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                                                       Vol. 94 (2008)
+
+
+intervals or indications of other types of motion (ALF, S-       Table I. Values and estimated standard errors of cupper and clower
+motion) were found.                                              deﬁning the upper and lower bow-force limits in the Schelleng
+                                                                 diagrams in Figure 4 (monochord, steel D string) The values
+3.3. Fitting of Schelleng’s bow-force limits                     were obtained by ﬁtting the Schelleng limits (equations 1 and
+                                                                 2) to the observed bow-force limits at diﬀerent bow velocities
+According to equations (1) and (2), the upper and lower          vB . The values of cupper were used to estimate Δµ. The standard
+bow-force limits are proportional to 1/β and 1/β 2 , respec-     errors were calculated by dividing the 95% conﬁdence intervals
+tively, at constant bow velocity vB and under the assump-        of the ﬁt results by a factor 3.92.
+tion that the friction-coeﬃcient delta (µs − µd ) is constant.
+                                                                  vB [cm/s]                        cupper [mN]           clower [mN]           Δµ
+The constants of proportionality can be written as
+                                                                                         5         66 ± 7                0.43 ± 0.06           0.38
+         cupper = 2Z0 vB /(µs − µd )                      (6)                           10         86 ± 8                0.47 ± 0.04           0.58
+and      clower = Z02 vB /2R(µs − µd ).                   (7)                           15         125 ± 8               0.38 ± 0.05           0.60
+                                                                                        20         166 ± 7               0.38 ± 0.06           0.60
+The Schelleng limits were ﬁtted in the logarithmic domain
+using a least-squares method, yielding an estimate of cupper
+and clower (see Table I) as well as the 95% conﬁdence
+bounds. To avoid bias the bow-force limits at each β were                           0
+set between the observed Helmholtz and non-Helmholtz                                                                 Upper bow-force limit
+
+regions. This was achieved by taking the geometric mean
+of the adjoining points. The ﬁtted bow-force limits are in-                        -1
+dicated by solid lines in the Schelleng diagrams in Fig-
+
+                                                                    Fitted slope
+ure 4.
+                                                                                   -2
+   Given the characteristic impedance Z0 of 0.25 kg/s the
+obtained values of cupper can now be used to estimate the
+value of the friction-coeﬃcient delta Δµ (see Table I). The                                      Lower bow-force limit
+                                                                                   -3
+estimated values of Δµ were close to 0.6 except for the
+lowest bow velocity. These values, however, are slightly
+overestimated as string torsion has not been taken into                            -4
+                                                                                             5             10            15               20
+account. Assuming that the torsional impedance of the                                                    Bow speed, vB [cm/s]
+D string used is about a factor two higher than Z0 (e.g.,
+Schumacher [4]), the total impedance at the string sur-          Figure 5. Fitted slopes of the upper bow-force limits (squares,
+face Ztot is about 0.17 kg/s, resulting in an estimation of      dashed line) and the lower limits (circles, dash-dotted line) in
+Δµ = 0.4. Commonly, values of Δµ observed in experi-             the Schelleng diagrams for diﬀerent bow velocities in Figure 4.
+ments, or used in simulations giving realistic output, range     The error bars indicate the 95% conﬁdence intervals of the ﬁtted
+between 0.3-0.8 (e.g. Galluzzo [5], Guettler [15], Lazarus       values. The predicted slopes for maximum and minimum bow
+[16], Schumacher [17], and Smith & Woodhouse [18]).              force (−1 and −2) are indicated by the horizontal dotted lines.
+
+3.4. Slope of the bow-force limits in the Schelleng
+     diagram                                                     slopes of both the upper and the lower bow-force limits
+                                                                 become increasingly steep with increasing vB . A possible
+At some bow velocities, especially 5 and 10 cm/s, the data       explanation will be given in the next section.
+in Figure 4 suggest that the slope of the upper bow-force
+limit was not as steep as predicted by equation (1) un-          3.5. Schelleng’s bow-force limits based on hyper-
+der the assumption that the friction-coeﬃcient delta Δµ is            bolic friction curve
+constant. An estimation of the deviation in slope from the
+predicted value of −1 was made by comparing the ﬁtted            In the preceding ﬁts of the Schelleng limits, Δµ was con-
+Schelleng limits with an alternative model, in which the         sidered constant. However, as explained in the introduc-
+slope was added as a ﬁt parameter. It should be noted that       tion this is generally not a valid approximation, and the
+such a model has no physical interpretation presently.           observed deviations in the slope of the upper bow force
+   The ﬁtted slope values and the 95% conﬁdence inter-           limit might be explained by variations in Δµ. It is there-
+vals plotted versus bow velocity are shown in Figure 5.          fore likely that the modiﬁed Schelleng equations, based on
+It can be clearly seen that the slopes of the upper bow-         the hyperbolic friction curve (equation 3), would provide
+force limits were signiﬁcantly less steep than the predicted     a better description of the observed bow-force limits.
+Schelleng slope (−1), except for 20 cm/s. At the two low-           For comparison the modiﬁed Schelleng equations (4)
+est velocities (5 and 10 cm/s) the slopes were only about        and (5) were ﬁtted to the observed bow-force limits at dif-
+−0.5. For the lower bow-force limit the ﬁtted slopes were        ferent bow speeds. The friction curve parameters were as-
+not signiﬁcantly diﬀerent from the predicted slope of −2         sumed to be K = 8 cm/s, µd = 0.4 and z0 = 20 cm/s,
+at all bow velocities. However, the conﬁdence intervals          based on values commonly used in bowed-string simula-
+were relatively large. The data in Figure 5 suggest that the     tions of the violin (e.g., Guettler [15], Woodhouse [19]).
+
+
+
+                                                                                                                                                611
+ACTA ACUSTICA UNITED WITH ACUSTICA                        Schoonderwaldt et al.: Empirical investigation of bow-force limits
+Vol. 94 (2008)
+
+
+Table II. Values of and estimated standard errors of cupper and      Table III. R2 values for the alternative ﬁts of the upper bow-force
+clower deﬁning the modiﬁed upper and lower bow force limits in       limits. At bow velocities vB of 5 and 10 cm/s the R2 values could
+the Schelleng diagrams in Figure 4 (monochord, steel D string).      not be calculated for the ﬁts of equation (1). In these cases the
+The values were obtained by ﬁtting equations (4) and (5) to the      slope of the observed limits was less steep than −0.5, i.e., a ﬁtted
+observed bow force limits at diﬀerent bow velocities vB . The val-   line with slope −1 provided a poorer ﬁt than a horizontal line.
+ues of cupper were used to estimate Δµ .
+                                                                      vB                             Basic Sch.         Modiﬁed Sch.         Variable slope
+ vB [cm/s]          cupper [kg/s]       clower [g/s]        Δµ                                      (equation 1)        (equation 5)
+         5          1.0 ± 0.24          7.0 ± 1.0          0.51
+                                                                       5                                   n/a               0.45                  0.75
+        10          0.73 ± 0.05         4.2 ± 0.4          0.69
+                                                                      10                                   n/a               0.38                  0.91
+        15          0.75 ± 0.04         2.3 ± 0.3          0.67
+                                                                      15                                  0.80               0.85                  0.91
+        20          0.75 ± 0.03         1.8 ± 0.3          0.67
+                                                                      20                                  0.94               0.93                  0.94
+
+
+With these parameters the maximum static friction coeﬃ-
+cient becomes µs = 0.8 and (µs − µd ) = 0.4 for z → ∞                                             3000
+                                                                                                                                               10 cm/s
+(i.e., Δµ = 0.4).
+   Least-square ﬁts were performed using the logarithmic                                          1466
+
+
+
+
+                                                                        Bow force, F (rel. 1mN)
+values of β and FB . The ﬁt parameters were
+                                                                                                  716
+         cupper = 2Z0 /(µs − µd ),                                                  B
+                                                                                                  350
+and      clower = Z02 /2R(µs − µd ).
+                                                                                                  171
+In contrast to cupper and clower (see equations 6 and 7) these
+ﬁt parameters are independent of bow velocity vB , and are                                         84
+supposed to be constant. Note that only the choice of z0
+explicitly inﬂuences the ﬁtting, as (µs − µd ) is included in                                            1/30    1/22     1/16     1/11      1/8     1/6
+the ﬁt parameters.                                                                                               Relative bow-bridge distance, 
+   The ﬁtted upper bow-force limits, corresponding to
+equation (5) are indicated in Figure 4 with dashed lines.            Figure 6. Reproduced Schelleng diagram at a bow velocity of
+It can be seen that the correspondence with the observed             10 cm/s, measured about 5 months earlier than the corresponding
+upper bow-force limits was improved in comparison with               diagram in Figure 4 (b). The solid lines represent the ﬁtted Schel-
+the earlier ﬁts (solid lines). The diﬀerences were more              leng limits. The dashed line indicates the ﬁtted lower bow-force
+marked at lower bow velocities and explain partly the de-            limit in Figure 4 (b). The ﬁtted upper bow-force limits coincided
+viations from the predicted slopes when using the unmod-             exactly.
+iﬁed Schelleng equations as discussed above.
+   The numerical ﬁt results are displayed in Table II. The
+                                                                     have a substantial inﬂuence (see section 5 for the inﬂuence
+values of Δµ were estimated from cupper , and were as ex-
+                                                                     of damping on the bow-force limits).
+pected somewhat larger than the estimated values of Δµ
+                                                                        The ﬁtted bow-force limits (according to equations 1
+in Table I. Taking the lowering by torsion into account the
+                                                                     and 2) are shown in Figure 6 by solid lines. For compari-
+value of Δµ becomes 0.45.
+                                                                     son the ﬁtted bow-force limits of Figure 4 (b) are indicated
+   In Table III the R2 values of the three alternative ﬁt
+                                                                     with dashed lines. It can be seen that the playable regions
+methods used are shown for all four bow velocities. It can
+                                                                     coincided rather well. The ﬁtted upper bow-force limit co-
+be seen that the straight-line ﬁt with variable slope gave
+                                                                     incided exactly with that in Figure 4 (b). Also the region
+the best ﬁt results. The modiﬁed Schelleng equation pro-
+                                                                     of ALF representing a doubling of the normal fundamen-
+vided a better ﬁt than the unmodiﬁed Schelleng equation,
+                                                                     tal period was found at about the same combinations of
+especially at low bow velocities.
+                                                                     bowing parameters.
+                                                                        Some diﬀerences could be observed as well. In the
+3.6. Reproducibility of the Schelleng diagram
+                                                                     Schelleng diagram in Figure 6 the lower bow-force limit
+In order to assess the reproducibility of the Schelleng di-          was shifted approximately one step down on the force grid,
+agrams in Figure 4 a comparison was made with a Schel-               corresponding to about 20%. However, a diﬀerence of this
+leng diagram measured about ﬁve months earlier, using the            magnitude is not unexpected as the determination of the
+same experimental setup (string type, bow, monochord),               lower force limit always is associated with greater uncer-
+see Figure 6. The bow velocity was 10 cm/s correspond-               tainty than the upper limit (see section 4).
+ing to Figure 4 (b). The only known diﬀerence was that                  Furthermore, it can be seen that the slope of the ﬁtted
+a slightly thinner PVC tape (thickness 0.17 mm) was ap-              upper bow-force limit coincided better with the observed
+plied to the string supports. This could have altered the            border between Helmholtz and raucous motion than in the
+reﬂection properties somewhat, but this change should not            unmodiﬁed ﬁt in Figure 4 (b). The ﬁtted slope value was
+
+
+
+612
+Schoonderwaldt et al.: Empirical investigation of bow-force limits                                       ACTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                                                               Vol. 94 (2008)
+
+
+−0.9 compared to −0.5 (see Figure 5) and did not signiﬁ-
+cantly diﬀer from the predicted slope of −1. The cause of                                        3000
+                                                                                                                                             (a) 10 cm/s
+this diﬀerence is not directly clear but might be related to
+the amount of rosin or other external conditions mentioned                                       1466
+
+
+
+
+                                                                     Bow force, FB (rel. 1 mN)
+in section 2.5.
+                                                                                                 716
+   All together, the generally good agreement between the
+two Schelleng diagrams in Figures 4b and 6 indicates that                                        350
+the reproducibility of the measurements was clearly ac-
+ceptable. It seems safe to conclude that the observed type                                       171
+of string motion was determined by the combination of
+bowing parameters under control of the bowing machine,                                            84
+and that external conditions only had a secondary inﬂu-
+ence.
+                                                                                                 3000
+3.7. Schelleng diagrams of the E string                                                                                                      (b) 20 cm/s
+
+                                                                                                 1466
+The properties of the strings of the violin vary consider-
+
+
+
+
+                                                                     Bow force, F (rel. 1 mN)
+ably from the G to the E string. In order to verify the gen-                                      716
+erality of Schelleng’s predictions and obtain an estimation
+of the inﬂuence of Z0 and ZR Schelleng diagrams were                              B
+                                                                                                  350
+measured for the E string at two bow velocities (10 and
+20 cm/s), see Figure 7.                                                                           171
+   Again, the overall shape of the playable regions with
+Helmholtz motion was as expected at both bow velocities.                                           84
+
+For comparison the ﬁtted bow-force limits of the D string
+in Figure 4 (b) and (d) are indicated with dashed lines.                                                1/30   1/22      1/16     1/11       1/8     1/6
+                                                                                                                Relative bow-bridge distance, 
+Both the upper and lower bow-force limits of the E string
+were found to be lower than those of the D string, the upper
+bow-force limit by 19% and the lower bow-force limit by           Figure 7. Schelleng diagrams for a steel E string mounted on a
+                                                                  monochord at bow velocities (a) 10 and (b) 20 cm/s. The ﬁtted
+64% (at vB =10 cm/s).
+                                                                  Schelleng limits are indicated with solid lines. The ﬁtted bow-
+   According to equation (1) the upper bow-force limit            force limits of the D string in Figure 4 are indicated with dashed
+should be proportional to Z0 under the assumption that Δµ         lines. The middle parts of the Helmholtz regions, indicated by
+is similar for both strings. This was clearly not the case, as    gray squares, were not systematically analyzed, but there was no
+Z0 of the E string (0.18 kg/s) was 28% lower than that            doubt about the consistency of Helmholtz motion.
+of the D string. Taking torsion into account explains the
+diﬀerence. Measurements by Schumacher [4] indicate that
+the ratio ZR /Z0 for D strings (gut or synthetic core) is            For higher bow velocities the upper bow-force limit of
+about 2 (1.4-2.4) compared to approximately 3.5 for solid         the D string was found to be proportional to bow velocity,
+steel E strings (theoretical value 3.7, Cremer [8]). Includ-      as can be seen in Figure 8a. The ﬁtted line, which was
+ing torsion in the calculation, the upper limit of the E string   forced to go through the origin (constant Δµ) coincided
+is expected to be 16% lower than that of the D string,            well with the data, except at 5 cm/s, for which the limit
+which is close to the observed 19%. This agreement sug-           was found to be higher. Also for the E string the upper
+gests that Δµ is rather similar for the two strings.              bow force limit showed proportionality to vB .
+   The observed shift of the lower bow-force limit from              In contrast, the lower bow-force limits for both the D
+the D to the E string was larger than the predicted ratio in      and the E strings showed no clear dependence on bow ve-
+Z02 given by equation 2 (−48% compared to the observed            locity, as can be seen in Figure 8 (b). Instead, the lower
+−64%). Including torsion gave an even poorer agreement            bow-force limits were found to be approximately constant
+(−40%). The discrepancy could probably be attributed to           within the measured range of bow velocities, which is in
+the lower damping of the E string (larger R), as will be          clear contradiction with Schelleng’s prediction (equation
+discussed in section 5.                                           2).
+
+3.8. Dependence of bow-force limits on bow velocity
+                                                                  4. Experiment II: Minimum bow-force
+According to equations (1) and (2) both the maximum                  limit – a closer look
+and minimum bow force, and thus the values of cupper and
+clower , should be proportional to vB . In Figure 8 the experi-   An additional experiment was conducted to gain more in-
+mental data for the bow-force limits for the D and E strings      sight in the transition region around the minimum bow
+are summarized, showing the estimated values of cupper            force and the dependence of minimum bow force on bow
+and clower versus vB .                                            velocity. One concern regarding Experiment I was that the
+
+
+
+                                                                                                                                                           613
+ACTA ACUSTICA UNITED WITH ACUSTICA                                               Schoonderwaldt et al.: Empirical investigation of bow-force limits
+Vol. 94 (2008)
+
+
+                                                                                            Table IV. Results of string motion classiﬁcation in Experiment II
+                                                                                            at β = 1/25. For each combination of bow velocity vB and bow
+               0.2                                                                          force FB the number of occurrences of Helmholtz motion is dis-
+                                                                                            played (max. 9). The number of cases in which there was doubt
+              0.15
+                                                                                            about the classiﬁcation of Helmholtz motion is indicated by a
+   [N]
+                                                                                            second number. The bold numbers indicate the lower bow-force
+                                                                    E-string                limit using a heuristic criterion for the deﬁnition (see text).
+      upper    0.1
+                                  D-string
+                                                                                             vB      120 143 171 205 245 293 350 419 501
+   c
+
+
+              0.05                                                                            5       0     0     1/1   3/1   6/1    9/1    9     9     9
+                                                                               (a)           10       0     0     1/1    0     3      9     9     9     9
+                      0                                                                      15       0     0     6/3   7/3    3      8     9     9     9
+                             -4
+                          x 10                                                               20       0    4/1    9/2   4/1   6/2     6     8     9     9
+                      5
+
+                                                             D-string
+                      4
+                                                                                            Helmholtz motion could shed some light on the underlying
+                      3
+                                                                                            mechanisms.
+         clower [N]
+                      2
+                                                             E-string                       4.1. Experimental procedure and analysis
+                                                                                            The same experimental setup as described earlier was used
+                      1
+                                                                                            with the D string on the monochord. The measurements
+                                                                               (b)
+                                                                                            were performed at two β values (1/25 and 1/18 mm) using
+                      0
+                       0            5           10        15            20           25     the same bow velocities as before (5, 10, 15 and 20 cm/s).
+                                             Bow speed, v [cm/s]
+                                                         B                                  For each bow-bridge distance a subset of nine bow force
+                                                                                            values was selected, centered around the minimum bow-
+Figure 8. Dependence of the bow-force limits on bow velocity in                             force limit found in Experiment I. Each combination of
+Experiment I. The plots show (a) cupper and (b) clower as function                          bowing parameters was measured three times. Except for
+of bow velocity, estimated from the Schelleng diagrams of the                               bow-bridge distance, which is not a control parameter of
+D string (circles) and E string (squares). According to the Schel-
+                                                                                            the bowing machine, the measurements were performed in
+leng equations there should be a linear relationship. The solid
+line in (a) shows a least-squares ﬁt of the upper bow-force limit
+                                                                                            random order (including the three repetitions).
+of the D string according to equation (1), under the assumption                                The same string motion classiﬁcation method as in Ex-
+that Δµ is constant.                                                                        periment I was used with some important modiﬁcations of
+                                                                                            the analysis procedure. For each bow stroke three inter-
+                                                                                            vals, each with a duration of 10 nominal periods, were se-
+Schelleng diagrams were measured at diﬀerent occasions                                      lected for string motion classiﬁcation. The intervals were
+over a period of several weeks. For this reason it could not                                taken at predetermined positions within the steady part of
+be ruled out with certainty that the results were inﬂuenced                                 the signal. With the three repetitions this provided a total
+by changes in experimental conditions. Another problem                                      of nine observations for each combination of bowing pa-
+was that there was some ambiguity in the classiﬁcation of                                   rameters. The intervals were analyzed in the same random
+string motion in the vicinity of the lower bow-force limit                                  order as they were measured. The bow force value was
+due to the occurrence of long transients and mixed types of                                 unknown to the experimenter when performing the classi-
+motion. As the string motion classiﬁcation was based on                                     ﬁcation.
+a single manually selected interval for each combination
+of bowing parameters the transition region might not have                                   4.2. Determination of lower bow-force limits
+been characterized correctly, and the possibility exists that                               The results of the string motion classiﬁcation are sum-
+the results could somehow have been biased. In the design                                   marized in Tables IV and V. For each bowing parameter
+of the new experiment three main objectives were: (1) to                                    combination (β, vB and FB ) the number of occurrences
+restrict the inﬂuence of the external conditions out of the                                 of Helmholtz motion are displayed (max. 9). All cases of
+control of the experimenter, (2) to resolve the ambiguity                                   non-Helmholtz motion were found to be multiple slipping
+in string motion classiﬁcation in the vicinity of the lower                                 motion.
+bow-force limit, and (3) to reduce the signiﬁcance of the                                      In some cases the string motion was classiﬁed as Helm-
+role of the experimenter in the string motion classiﬁcation                                 holtz motion by the classiﬁcation algorithm, but manual
+procedure.                                                                                  inspection of the waveforms gave reason to doubt this
+   In Experiment II transitions from Helmholtz to multi-                                    judgment. These cases are indicated by a second number
+ple slipping motion were also studied in detail by using                                    in Tables IV and V. In most of these cases the envelopes
+bow strokes with a gradually decreasing bow force. The                                      showed slow ﬂuctuations. Also the slip velocity was much
+hypothesis was that observations of the changes in string                                   lower than expected for Helmholtz motion. Some exam-
+velocity waveforms in the vicinity of the breakdown of                                      ples are shown in Figure 9. In Figure 9a it can be seen
+
+
+
+614
+Schoonderwaldt et al.: Empirical investigation of bow-force limits                                       ACTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                                                                     Vol. 94 (2008)
+
+
+Table V. Results of string motion classiﬁcation in Experiment II
+at β = 1/18.1 (see Table IV for explanations).                                                                                                              v
+                                                                                                   (a) vb=15 cm/s; =1/25; FB=171 mN                         S
+
+ vB      70    84    100   120   143   171    205   245   293
+
+  5      2/2   6/1   9/1    8     9     9      9     9     9
+ 10      2/1   8/1   9/1    9     9     9      9     9     9                                                                                                vS
+                                                                                                   (b) vb=15 cm/s; =1/25; FB=245 mN
+ 15      7/1    8     9     9     9     9      9     9     9
+
+
+
+
+                                                                      String velocity [a.u.]
+ 20      9/2    9     9     9     9     9      9     9     9
+
+                                                                                                                                                            vS
+                                                                                                   (c) vb=15 cm/s; =1/18; FB=70 mN
+that the slip phase became broader as the slip velocity de-
+creased. Closer inspection revealed that the slip phase ac-
+tually was composed of two slip phases. This is clearer in
+                                                                                                                                                            vS
+Figure 9b, where an additional slip phase can be distin-                                           (d) vb=5 cm/s; =1/18; FB=70 mN
+guished as it grows into the main slip. At the same time
+the amplitude of the main slip decreases. Other examples
+are shown in Figure 9c and d. In the last example it can be                                    0         5      10      15    20           25   30     35
+clearly seen that there is a double slip phase. The behavior                                                             Time [ms]
+of the string motion is not completely clear in these cases
+and seems to represent some kind of long-lasting transient         Figure 9. Examples of string velocity waveforms in the vicin-
+behavior (further discussed in section 4.4). For this reason       ity of the minimum bow force (D string). In all examples only
+string motions displaying this type of behavior were not           one slip phase per fundamental period was detected, but closer
+considered as pure Helmholtz motion.                               inspection revealed the presence of an additional slip phase in-
+                                                                   cluded in the main slip, leading to a prolonged slip phase. It was
+   The minimum bow force was determined for the eight
+                                                                   also observed that the maximum slip velocity was signiﬁcantly
+combinations of β and vB , using a heuristic criterion. The        lower than the nominal slip velocity for Helmholtz motion vS
+lowest bow force at which at least eight out of the nine           (indicated at the top of the panels by dashed lines). The slow
+selected intervals were undoubtedly classiﬁed as stable            ﬂuctuations in the waveform indicate transient behavior, even af-
+Helmholtz motion was taken as the minimum bow-force                ter one or more seconds of steady bowing.
+limit. These values, which imposes a rather strict criterion
+on Helmholtz motion at the lower limit, are indicated in
+Tables IV and V in bold. The obtained values were close
+                                                                                                         -4
+to the lower bow-force limits observed in Experiment I                                               x 10
+(see Figure 4). It was noted, however, that the values for                                     5
+β = 1/18 (Table V) were consistently lower than those in
+Figure 4 by 2-4 grid steps, suggesting a somewhat steeper                                      4
+slope for the lower bow-force limit than found in Experi-
+                                                                      clower [N]
+ment I.                                                                                        3
+
+
+                                                                                               2
+4.3. Dependence on bow velocity
+The values of clower at each bow velocity were calculated                                      1
+by multiplying the found values of minimum bow force in
+Tables IV and V with β 2 and taking the geometric aver-                                        0
+                                                                                                0              5         10        15            20         25
+age across β. This way of calculating clower is identical to                                                          Bow speed, v [cm/s]
+                                                                                                                                       B
+ﬁtting a straight line with slope −2 in the log-log represen-
+tation of bow force versus β.                                      Figure 10. Mean values of clower versus bow velocity for the D
+   In Figure 10 the estimated values of clower are plotted as      string in Experiment II. The best linear ﬁt (solid line) and the
+function of vB . The best linear ﬁt together with the 95%          95% prediction interval (dotted lines) indicate that the minimum
+prediction bounds are shown as well. The ﬁgure clearly             bow-force limit was not dependent on bow velocity within the
+                                                                   measured range 5-20 cm/s.
+shows that the slope was not signiﬁcantly diﬀerent from
+zero, which indicates that there was no dependence of
+the lower bow-force limit on bow velocity. The results
+                                                                   4.4. Breakdown of Helmholtz motion at minimum
+of Experiment II thus conﬁrm the observations in Exper-
+                                                                        bow force
+iment I. In contrast to Schelleng’s predictions, the exper-
+iments show that the lower bow-force limit was indepen-            In order to gain more insight in the breakdown of Helm-
+dent of bow velocity in the measured range 5-20 cm/s. It           holtz motion at minimum bow force, measurements were
+can be noted that bow velocities around 20 cm/s are typical        made using bow strokes with gradually decreasing force.
+in normal violin playing (Askenfelt [2]).                          The bowing parameter proﬁles were similar to the ones de-
+
+
+
+                                                                                                                                                                615
+ACTA ACUSTICA UNITED WITH ACUSTICA                                               Schoonderwaldt et al.: Empirical investigation of bow-force limits
+Vol. 94 (2008)
+
+
+
+                              F [mN]
+                               B       500    450       400          350   300
+                        (a)
+                                       (b)           (c)       (d)
+
+
+
+
+   String vel. [a.u.]
+                                                                                                                dslip (area)
+                                                                                                                                                          vslip, max
+
+
+
+                                                                                              String velocity
+                                                                                                                               Tslip, half-width
+
+                               0.5      1     1.5          2         2.5    3
+                                             Time [s]
+                                                                                 vS
+                        (b)
+                                                                                                                                   Tslip
+
+                                                                                                                                                   Time
+
+
+                                                                                  vS        Figure 12. Features used to characterize the shape of the slip
+
+
+   String velocity
+                        (c)                                                                 phase: the traversed distance during slip (area of the slip phase,
+                                                                                            dslip ), the maximum slip velocity vslip,max , the duration of the
+                                                                                            slip phase Tslip and the width of the slip phase at half height
+                                                                                            Tslip,half-width .
+                                                                                  v
+                                                                                  S
+                        (d)
+
+                                                                                               Before the transition Helmholtz motion was observed
+                                                                                            as can be seen in panel (b), with stick and slip veloci-
+                                                                                            ties corresponding to ideal Helmholtz motion. Just before
+                                              Time                                          the transition (panel c) the nominal slip velocity vS was
+                                                                                            no longer reached. Furthermore, the string motion became
+Figure 11. Breakdown of Helmholtz motion at minimum bow                                     more agitated during the stick phase and a tendency to
+force (D string). The string velocity signal shown in (a) resulted
+                                                                                            form extra slips could be observed (indicated by the ar-
+from a bow stroke with a slowly linearly decreasing bow force
+FB (the decreasing bow force during the semi-steady part of the
+                                                                                            rows). It could be noted that the secondary slip appears
+bow stroke is indicated in (a) by the upper axis). The relative                             quite early after the main slip, and not in the middle of the
+bow-bridge distance β was 1/21.7. The transition from Helm-                                 stick phase as predicted by the Raman/Schelleng model.
+holtz to non-Helmholtz motion is marked with a vertical dashed                              Simulations indicate that the explanation is related to rip-
+line. After the transition the string motion became unstable as                             ple in friction force (see section 6.3).
+can be seen from the envelope, including two slip phases which                                 At the transition an additional slip was ﬁnally formed
+grow and diminish alternately. The envelope shows a minimum                                 and started to grow, while the main slip diminished. At t ≈
+when both slip phases are equal in magnitude. Selected parts of                             2.3 s (panel d) the second slip became larger than the main
+the signal, indicated by the arrows in (a), are shown in close-up
+                                                                                            slip, which ﬁnally disappeared completely. Just before the
+in (b), (c) and (d). The nominal slip velocity vS is indicated by
+                                                                                            ‘old’ main slip disappeared (at t ≈ 2.6 s) another small slip
+the horizontal dashed lines (vB was calculated from the uncal-
+ibrated string velocity signal by taking the median of selected                             was formed just after the ‘new’ main slip, and the process
+stick phases of the signal in the time interval 0.85-1.75 s; vS was                         repeated itself.
+calculated as vB (β − 1)/β.                                                                    For studying the eﬀect of corner rounding on the shape
+                                                                                            of the slip phase the following features were determined
+                                                                                            as indicated in Figure 12: the area of the slip phase (tra-
+scribed in section 2.4, except that the constant bow force                                  versed distance) dslip , the maximum slip velocity vslip,max ,
+during the steady phase Tsteady was replaced with a slowly                                  the duration of the slip phase Tslip , and the width of the
+linearly decreasing bow force. The initial force and the                                    slip phase at half-height Tslip,half-width . The latter measure
+gradient were chosen so that the string was in Helmholtz                                    could be considered as the eﬀective width of the slip phase,
+motion in the beginning of the ‘decreasing’ (semi-steady)                                   mostly dependent on the position on the string where the
+phase and the minimum bow force was passed about in the                                     string velocity was measured and to a lesser degree on cor-
+middle of this phase.                                                                       ner rounding.
+   A typical transition from Helmholtz motion to multiple                                      Figure 13 shows the continuous change in the features
+slipping is shown in Figure 11. It can be clearly seen from                                 of the slip shape of the signal shown in Figure 11. The
+the envelope in panel (a) that the string motion becomes                                    maximum slip velocity vslip,max decreased with decreas-
+unstable after the transition (marked by the dashed line).                                  ing bow force when the string was in Helmholtz motion
+Selected parts of the string velocity waveform are shown                                    (t = 1-2 s). At the same time the slip duration Tslip in-
+in panels (b) to (d). The estimated values of the velocity                                  creased. Consequently, the displacement during the slip
+during stick vB and the slip velocity vS are also indicated,                                phase dslip remained relatively constant, close to its nomi-
+showing the outline of ideal Helmholtz motion.                                              nal value until shortly before the transition. These changes
+
+
+
+616
+Schoonderwaldt et al.: Empirical investigation of bow-force limits                           ACTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                                                Vol. 94 (2008)
+
+
+                                                                                 friction of the string, (b) the losses at the contact point
+                                                                                 with the bow, and (c) the losses due to the reﬂection at the
+                                                                                 upper end of the string (ﬁnger/nut).
+          [a.u.]
+                                                                           vS
+                                                                                    As R appears in the Schelleng equation for the mini-
+               slip, max
+                                                                                 mum bow force (equation 2) it is desirable to determine
+          v                                                                      its value by experiments. This would shed light on the in-
+                                                                                 ﬂuence of the instrument, the string, and the stopping of
+    (a)
+                                                                                 the string with the ﬁnger. Furthermore, by estimating R,
+               0.4         T                                                     the empirically found lower bow-force limits could be di-
+                           slip
+                                                                                 rectly compared with the theoretical value from Schelleng
+   Dur. [ms]
+               0.3
+                                                                                 equation (2).
+                                         Tslip, half-width
+               0.2                                                                  For this purpose, additional measurements were per-
+                                                                           T1
+               0.1                                                               formed using an identical D string as in Experiment I
+    (b)                                                                          and II on a violin. The bow-force limits were obtained
+                                                                                 both for open and stopped strings. The string was stopped
+                                                                           dHH   by clamping a piece of expanded polystyrene against the
+          [a.u.]                                                                 string. The damping, which could be modiﬁed by chang-
+               slip                                                              ing the pressure of the clamp was adjusted to be similar to
+          d
+                                                                                 the damping of a ﬁnger in normal playing conditions by
+                                                                                 comparing the decay times of pizzicato notes.
+    (c) 0                      0.5   1       1.5
+                                            Time [s]
+                                                             2   2.5   3
+
+                                                                                 5.1. Determination of Q values and the mechanical
+Figure 13. Development of the slip shape during a bow stroke                          resistance R
+with decreasing bow force extracted from the string velocity sig-
+nal shown in Figure 11: (a) Maximum slip velocity (vslip,max ), (b)              The mechanical resistance R with the string mounted on
+the two width features (Tslip and Tslip,half-width ), and (c) the distance       the monochord and the violin, respectively, were deter-
+traversed during slip phase (dslip ). The minimum bow-force limit                mined from plucked-string signals. The plucking was per-
+is reached at the vertical dashed line. The nominal values of the                formed by pulling the string in the bowing direction with
+slip speed vS , slip duration βT1 and displacement vB T1 (β − 1) for             a loop of a thin copper wire until it broke. The relative
+ideal Helmholtz motion are indicated by horizontal dashed lines.                 plucking point β was about 1/18.
+                                                                                    The Q value of the fundamental string mode for diﬀer-
+could be attributed to the increasing eﬀect of corner round-                     ent conditions (instrument, string, open/stopped) was de-
+ing with decreasing bow force. After t ≈ 1.8 s the slip                          termined from the decay time τ1 of the fundamental
+phase started to collapse, as can be seen from the pro-
+nounced decrease in vslip and dslip , marking the beginning                            Q1 = πf1 τ1 .
+of the breakdown of Helmholtz motion. Immediately af-
+ter the transition the presence of an additional slip phase
+which successively grows in prominence is clearly visi-                          where f1 is the fundamental frequency. The mechanical re-
+ble in all panels. Also the process of mutual growing and                        sistance R was calculated as (see Appendix)
+diminishing of the co-existing slip phases is clearly visi-
+ble. Even after the transition, the shape of the slip phase                            R ≈ 2Z0 f1 τ1 .
+continued to change due to the increasing eﬀect of corner
+rounding. For example at t = 2.4 s, the point at which the                       The values of τ1 , Q1 and R (averaged across 2-4 plucks)
+original slip phase had disappeared almost completely, the                       are displayed in Table VI for four string-instrument combi-
+dominant slip phase was broader (Tslip ) and its maximum                         nations. The Q1 values of the open D strings on the mono-
+slip velocity vslip,max was lower compared to the single slip                    chord and the violin, respectively, were rather similar (480
+phase just before the transition.                                                and 410). This is about a factor two lower than the values
+                                                                                 measured on a rigid test bench (Jansson [20]). The agree-
+5. Experiment III: The role of damping                                           ment between the Q values for the monochord and violin
+                                                                                 indicates that the tape on the bridge and the plastic nut in-
+In deriving the expressions for the bow-force limits, Schel-                     troduced suitable losses for the lowest mode in order for
+leng used the Raman string model, in which one string ter-                       the monochord to behave ‘violin-like.’ When stopping the
+mination is ﬁxed and the other represented by a mechan-                          string Q1 was signiﬁcantly decreased to 281 (−40%). Q1
+ical resistance R. As pointed out by Schelleng R may be                          for the open E string on the monochord was about a factor
+thought of as composed of two components in parallel, one                        two greater than for the D string. This is most likely due to
+being the resistance of the body of the instrument and the                       lower internal losses in the solid E string compared to the
+other representing the combined losses due to (a) internal                       wound D string.
+
+
+
+                                                                                                                                         617
+ACTA ACUSTICA UNITED WITH ACUSTICA                       Schoonderwaldt et al.: Empirical investigation of bow-force limits
+Vol. 94 (2008)
+
+
+Table VI. Damping characteristics for four string-instrument combinations. The measured decay time of the fundamental τ1 in plucked-
+string signals was used to calculate Q1 and R. The estimated errors are based on the standard deviation of τ1 . For the stopped D string
+on the violin only one pluck was measured.
+
+             Instrument, string             Z0 [kg/s]                 τ1 [s]                  Q1                 R [kg/s]
+
+             Monochord, D                      0.25              0.521 ± 0.016             480 ± 14             76 ± 2.3
+             Violin, D (open)                  0.25              0.448 ± 0.017             410 ± 15             65 ± 2.5
+             Violin, D (stopped)               0.25                  0.296                   281                   45
+             Monochord, E                      0.18              0.457 ± 0.004             945 ± 8              108 ± 1.0
+
+
+
+5.2. Dependence of bow-force limits on damping                        values of R of the D and the E string into account (76
+                                                                      and 108 kg/s) the Z02 /R ratio becomes 0.36, which coin-
+The same method as in section 4.4 with gradually increas-
+                                                                      cides exactly with the observed −64% shift of the lower
+ing or decreasing bow force was used to determine cupper
+                                                                      limit. Taking torsion into account the predicted decrease
+and clower for diﬀerent damping conditions. The force at
+                                                                      amounts 57%, which is slightly less in agreement with the
+which breakdown of Helmholtz motion was observed was
+                                                                      observed shift.
+taken as the force limit. This was done for 3-4 bow-bridge
+distances (depending on the range in which the transition
+could be observed) with two or three repetitions. The val-            6. Discussion
+ues of cupper and clower were obtained by multiplying the
+found maximum and minimum bow forces with β and                       6.1. Empirical Schelleng diagrams
+β 2 , respectively, and taking the geometric mean. The val-           In the experiments a number of aspects of Schelleng’s pre-
+ues of Δµ were again obtained from the found values of                dictions of upper and lower limits of bow force have been
+cupper , using equation (6). The values of clower according           examined. Generally, a rather good agreement between
+to Schelleng were calculated from equation (7), using the             theory and observations was found. Most discrepancies
+estimated values of Δµ and R in Table VI.                             were encountered in the determination of the lower bow-
+    In Table VII the empirically determined values of cupper          force limit, in particular the dependence on bow velocity.
+and clower for the monochord and violin (open and stopped             In contrast to Schelleng’s predictions the lower limit was
+string) are summarized. Comparing the three conditions                found to be independent of bow velocity, and a follow-up
+for the D string it can be seen that the upper bow-force              experiment was run to verify the results. Some method-
+limit was not completely independent of damping as pre-               ological issues are of particular interest to consider.
+dicted by Schelleng. A tendency to increase with decreas-                The experiments gave a clear indication of the fact that
+ing R was observed. As R dropped to 60% from mono-                    there are some principal diﬃculties in the classiﬁcation
+chord to stopped string condition, the upper limit increased          of the string motion in the vicinity of the minimum bow
+by 20%.                                                               force. As shown in section 4 there is a gray zone between
+    In contrast, the minimum bow force showed a strong de-            clear cases of Helmholtz motion and multiple slipping,
+pendence on R. The observed lower bow-force limit was a               characterized by an alternation between these two types of
+factor 1.5 higher for the open D string on the violin com-            motion, compound slip phases (composed of two neigh-
+pared with the monochord, and increased signiﬁcantly to               boring slip phases), and long transients. This means that
+a factor 3.4 when stopping the string. The dependence on              the determination of the minimum bow force will always
+R was thus much stronger than the inverse proportionality             be dependent on criteria set by the experimenter, either in
+predicted by equation ((2)). For the three damping cases              manual judgments of individual cases, or coded in an auto-
+measured with the D string the dependence was well de-                matic classiﬁcation algorithm. In this study a combination
+scribed by clower ∝ R−2.3 .                                           of manual judgment guided by an interactive classiﬁcation
+    Comparing the magnitude of the empirically found val-             algorithm was used in order to arrive at highest possible
+ues of clower with the values estimated using equation (7),           conﬁdence in the classiﬁcation. Each decision was based
+it can be seen that Schelleng’s equation provided a gross             on data on the string waveform compiled by a classiﬁca-
+underestimation of the minimum bow force for all cases.               tion algorithm into a ‘decision chart’ which gave charac-
+The empirically found lower bow-force limits were almost              teristic patterns for the diﬀerent types of string motion. In-
+one order of magnitude larger (a factor 6-11). It is not              ﬂuence of the experimenter’s prejudices was reduced as
+plausible that this discrepancy could be attributed to errors         far as possible by hiding information about the combina-
+in the determination of the damping characteristics alone,            tion of bowing parameter values. In this way consistency
+which gave reasonable values. The results mean that in                in the judgments was assured at the same time as each clas-
+all cases the observed playable force ratio Fmax /Fmin was            siﬁcation was checked for being reasonable.
+much smaller than the theoretical value of 4Rβ/Z0 .                      The performance of the bowing machine and the inﬂu-
+    In section 3.7 it was observed that the measured lower            ence on the string motion is an essential aspect. As de-
+bow-force limits of the D and E strings diﬀered more                  scribed in section 2 there were some ﬂuctuations in bow
+than predicted by the change in Z02 . Taking the diﬀerent             force during a bow stroke. Accurate control of bow force
+
+
+
+618
+Schoonderwaldt et al.: Empirical investigation of bow-force limits                     ACTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                                             Vol. 94 (2008)
+
+
+Table VII. Bow-force limits and estimated standard errors for the four string-instrument combinations in Table VI at vB = 10 cm/s. The
+predicted values of clower according to Schelleng, calculated using equation (7), and the estimated values of R and Δµ are displayed in
+the last column.
+           Instrument, string             R [kg/s]          cupper [mN]        Δµ         clower [mN]        clower, Schelleng [mN]
+
+           Monochord, D                     76                 86 ± 8         0.58        0.47 ± 0.04               0.070
+           Violin, D (open)                 65                 91 ± 8         0.55        0.69 ± 0.04               0.088
+           Violin, D (stopped)              45               103 ± 2.4        0.49        1.56 ± 0.13               0.143
+           Monochord, E                     108               70 ± 2.3        0.52        0.17 ± 0.02               0.029
+
+
+
+is a diﬃcult problem due to the combination of relatively                  For the two plain steel E strings in his study, he found max-
+heavy bow and low bouncing frequency against the string.                   imum bow forces corresponding to values of cupper of 88
+The relative amplitude of the ﬂuctuations was rather large                 and 98 mN. These values are somewhat higher than the
+at low forces, and at the lowest target force (49 mN) the                  value of cupper = 70 mN (monochord) in the current study.
+relative RMS ﬂuctuation reached 20-30%. However, the                          For the determination of Δµ it is important to take tor-
+relative error decreased rapidly with increasing bow force                 sion into account. The change is proportional to the ratio
+and for a majority of the measurements (85% with target                    Ztot /Z0 , which lowered the estimated values for the D and
+values above 100 mN) the ﬂuctuations were well below                       E string about 30% and 20%, respectively.
+10%. For comparison, Galluzzo [5] using a more com-                           An interesting observation was that the slope of the up-
+plex control strategy and more powerful bowing machine                     per bow-force limit in the Schelleng diagram increased
+to play a cello bow reported a maximum ﬂuctuation error                    with increasing bow velocity, approaching the theoretical
+in bow force of 3%. However, these values cannot be di-                    value of −1. This could be attributed to a variation in the
+rectly compared as Galluzzo measured Guettler diagrams                     friction coeﬃcient delta Δµ with bow velocity by ﬁtting
+with accelerating bow at higher bow forces (min. 0.5 N).                   the modiﬁed Schelleng equation (based on a hyperbolic
+   The eﬀect of the ﬂuctuations, which would have the                      friction curve) to the data. This functional behavior of Δµ
+largest inﬂuence on the determination of the lower bow                     gave a better ﬁt than the assumption of a constant Δµ, indi-
+force limit, is not exactly known. It could be speculated                  cating that the variation in Δµ with bow velocity is clearly
+whether the surprising result that the lower bow force limit               reﬂected in the empirical Schelleng diagrams.
+was independent of bow velocity is related to unsatisfac-
+tory control of bow force. Admittedly, it is possible that the             6.3. Minimum bow force
+pattern of Helmholtz motion could be disturbed by ﬂuctu-
+ations in force when approaching the lower limit, which                    Regarding the minimum bow force the experiments
+in turn would lead to an overestimation of the minimum                     showed some marked deviations from Schelleng’s theo-
+bow force. Such an eﬀect would be particularly evident                     retical description. Firstly, there was no signiﬁcant de-
+for the lowest forces at large β values. The measurements                  pendence of minimum bow force on bow velocity within
+showed, however, no indications of this type of artifact.                  the measured range of bow velocities (5–20 cm/s). Sec-
+The data indicate a linear slope of about 1/β 2 for the lower              ondly, it was shown in section 5 that the dependence of
+limit throughout the β range, without a noticeable upward                  the minimum bow force on damping (represented by the
+curvature in the low forces at large β values. Furthermore,                estimated value of R) was much stronger than inversely
+clear diﬀerences in the levels of minimum bow force could                  proportional. Furthermore, it was shown that Schelleng’s
+be observed between the D and E strings, both showing the                  equation for minimum bow force (2) lead to a gross un-
+expected slope of about 1/β 2 . All together these observa-                derestimation of the lower bow-force limit, using the esti-
+tions indicate that the control of bow force was accurate                  mated values of R.
+enough for the purposes of the current study. In particular,                  All together, these observations put the mechanism
+it can be concluded that bow-velocity dependent changes                    causing breakdown of Helmholtz motion at minimum bow
+in the lower bow-force limit should have been observed if                  force proposed by Schelleng severely into question. The
+there were any.                                                            Schelleng equations are based on the assumption that the
+                                                                           impedance of the bridge termination is purely resistive,
+6.2. Maximum bow force                                                     which means that corner rounding and ripple are ignored.
+The upper bow-force limits determined in this study are                    However, as suggested by Woodhouse [3] ripple might be
+in good agreement with measurements of Schumacher                          an important source of perturbation for the breakdown of
+[4], who reported values of cupper for a number of violin                  Helmholtz motion. This can also be seen in Figure 11 (c),
+D strings of diﬀerent types in the range of 75-109 mN at                   which shows the ‘seeds’ of an additional slip phase.
+vB = 10 cm/s on a violin (cf. 91 mN in the current study).2                   In Raman’s analysis the reﬂection functions are of the
+                                                                           Dirac-delta type (giving Q values proportional to the har-
+2 The maximum bow forces reported by Schumacher were expressed in          monic numbers). One useful feature here is a friction force
+normalized units. The values of cupper were calculated from equation (5)   rising in steps from a minimum value equal to FB µd dur-
+in [4]                                                                     ing the slip interval to a maximum occurring somewhere
+
+
+
+                                                                                                                                      619
+ACTA ACUSTICA UNITED WITH ACUSTICA                                            Schoonderwaldt et al.: Empirical investigation of bow-force limits
+Vol. 94 (2008)
+
+
+                                                                                         bow velocity can be observed. As opposed to the Raman
+                                   Raman             v =5 cm/s
+                                                      B
+                                                                     vB=20 cm/s          model (upper panel), which shows a proportional relation
+                           110
+                                                                                         between minimum bow force and bow velocity, the model
+                                                                                         with narrow reﬂection functions shows a mere 17% in-
+
+
+   Friction Force [a.u.]
+                           100
+                                                                                         crease of minimum bow force when bow velocity is in-
+                            90
+                                                                                         creased from 5 to 20 cm/s. More generally, simulations
+                            80                                                           showed that the inﬂuence of bow velocity on minimum
+                            70 b=1/10                                                    bow force is dramatically reduced for large values of β,
+                                                                                         and shows only limited eﬀects (never proportionally) at
+                            60
+                                                                                         smaller β. Since both the empirical results and simulations
+                                   Moving average
+                           110                                                           suggest that Schelleng’s calculations for minimum bow
+                                                                                         force might be based on faulty assumptions, these issues
+
+
+
+   Friction Force [a.u.]
+                           100
+                                                                                         are certainly worth further investigation.
+                            90                                                              Closing the discussion of the lower limit of bow force
+                            80
+                                                                                         it can be speculated about the signiﬁcance for the player.
+                                                                                         From the performer’s point of view the lower limit in bow
+                            70                                                           force may not be as critical as the upper. A low bow force
+                                 b=1/10
+                            60                                                           in the vicinity of the lower limit is typically used for pp
+                            -0.5           0        0.5          1           1.5
+                                               Time [Periods]                            playing at relatively large values of β. For such cases a
+                                                                                         certain amount of multiple slipping in the waveform is not
+Figure 14. Periodically repeating patterns of friction force sim-                        easily perceptible, particularly not in orchestral playing.
+ulated with hyperbolic friction model (not including torsion and                         In contrast, the player needs to have a good feeling for the
+dispersion). The upper panel shows the patterns resulting from                           margins to the upper bow force limit when exploring the
+the Raman model, on which Schelleng based his calculations.                              ﬀ range, notably for long notes played with a low bow ve-
+There is a proportionality between bow velocity (vB ) and the                            locity. Here, the amount of pitch ﬂattening and noise con-
+force range which determines the minimum bow force. The lower                            tent are helpful by giving continuous indications of how
+panel shows the pattern resulting from the same bowing param-                            far away the disastrous switch-over to raucous motion ac-
+eters applied to a model with narrow reﬂection functions (Q-                             tually is.
+values fading with increasing frequency). The slipping intervals
+vary in length. The resulting ripple force range (excluding tran-
+sitional spikes) at vB = 20 cm/s is a mere 17% wider than at                             7. Conclusions
+5 cm/s, as opposed to 300% with the Raman model. The range
+of periodic friction-force variation is indicated by the double ar-                      In this study bow-force limits for bowed violin strings
+rows.                                                                                    were systematically measured for wide ranges in bow-
+                                                                                         bridge distance and bow force, covering a substantial part
+                                                                                         of the ranges used in normal violin playing (β values 1/30-
+close to the middle of the stick interval, when the string                               1/6, bow forces 49-3000 mN). In the measurements a nor-
+is excited at an integer-ratio position. Raman showed this                               mal violin bow was used to play a monochord and a vio-
+periodic change of friction to be proportional to bow ve-                                lin. The bow velocity and the bow force were controlled
+locity. However, with any kind of slightly more realistic                                by a bowing machine. The results were compiled in em-
+damping, the step-like force buildup would be replaced                                   pirical Schelleng diagrams for four bow velocities (5, 10,
+by a force ripple, with maxima most likely to occur at                                   15, 20 cm/s).
+the instance βT1 before the stick-slip transition (caused                                   Summarizing the results, it was found that there was
+by reﬂections from the nut), or βT1 after the slip-stick                                 generally a good qualitative agreement between the em-
+transition (caused by reﬂections from the bridge). Simula-                               pirical Schelleng diagrams and the properties predicted
+tions show that these are due to rounded-corner sharpening                               by Schelleng. There was a continuous playable region
+(‘echos’), a feature not present in the Raman model. The                                 in the central part with Helmholtz motion (‘Schelleng’s
+ripple amplitudes are dependent (although not linearly) on                               triangle’), surrounded by regions of raucous motion and
+the length of the slip interval, friction-coeﬃcient delta, and                           anomalous low frequencies (ALF) at higher bow forces
+damping properties, but are not directly related to bow ve-                              and multiple slipping at lower forces.
+locity. At minimum bow force a certain degree of subhar-                                    The upper and lower bow-force limits for Helmholtz
+monic interference [21] often contributes to further blurri-                             motion formed approximately straight lines in the log-log
+ness. It is thus hard to see how the Raman model could be                                Schelleng diagrams. The slope of ﬁtted upper limits was
+useful for estimation of minimum bow force.                                              found to be less steep than the predicted value of −1,
+   Figure 14 shows the eﬀect of Raman damping versus a                                   in particular for low bow velocities. A better agreement
+moving-average type of damping. The range of periodic                                    with measurements was reached by taking the variation in
+friction-force variation, equal to FB (µs − µd ), determines                             friction-coeﬃcient delta with bow velocity into account.
+the minimum bow force in all cases. A clear diﬀerence                                    This was done by incorporating a hyperbolic friction curve
+in the behavior of these damping models with respect to                                  in the model (modiﬁed form of Schelleng’s equation). The
+
+
+
+620
+Schoonderwaldt et al.: Empirical investigation of bow-force limits           ACTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                                        Vol. 94 (2008)
+
+
+magnitude of the upper bow force was proportional to bow      the fundamental is considered as it dominates the decay.
+velocity in accordance with predictions. Damping at the       For a quasi-ﬁxed termination (R > Z0 ) the combination
+string terminations inﬂuenced the upper limit to some ex-     of equations (A1) and (A2) yields
+tent, which is not in line with Schelleng’s predictions.
+   The lower bow-force limit showed no signiﬁcant devia-                    eT1 /τ1 + 1
+                                                                      R = Z0 T /τ       ,
+tion from the predicted slope of −2. However, three other                   e 1 1 −1
+results did not correspond with predictions at all: (1) the   which can be written as
+lower limit was not dependent on bow velocity, (2) the
+magnitude of the lower bow force was an order of mag-                 R = Z0 coth(T1 /2τ1 ).
+nitude higher than predictions, and (3) the dependence
+of damping was far stronger than inversely proportional.      For small arguments (τ1             T1 ) this can be approximated
+These ﬁndings suggest that Schelleng’s derivation of the      by
+                                                                         2Z0 τ1
+lower limit for Helmholtz motion was not based on cor-              R≈          ,                                                 (A3)
+                                                                           T1
+rect assumptions, a conclusion conﬁrmed by simulations
+with diﬀerent types of reﬂection functions.                   which is identical to [8], equation (4.32a).
+   The experiments showed that the transition from Helm-        Using the relation between Q and τ
+holtz motion to multiple slipping at the lower limit is not
+                                                                      Q = πf τ,
+well deﬁned but covers a gray zone in which the classiﬁca-
+tion of string motion is ambiguous. Observations show that    where f is the mode frequency, the Q value can be written
+as bow force is reduced the slip phase becomes distorted      as               π
+and additional small slips start to grow and replace the            Q=                ,
+main slip in a repeated pattern before complete breakdown                 ln (1/ |λ|)
+of Helmholtz motion occurs. Simulations indicate that the     and            2Z0 Q
+mechanisms involved include eﬀects of corner rounding                 R≈           .
+and resharpening at release which give rise to substantial                     π
+ripples in friction force. The magnitude of these ripples     For an alternative derivation, see [22], equation (2.45)
+is not reduced in proportion to bow velocity. Such eﬀects     case (1), for R   Z0 .3
+were not taken into account by Schelleng, who based his
+derivation on the well-behaved friction force in the Raman    Acknowledgments
+model. This model predicts a periodic variation in force      This work was supported by the Swedish Science Founda-
+with a magnitude directly proportional to bow velocity.       tion, contract 621-2001-2537.
+
+Appendix                                                      References
+
+Calculation of the mechanical resistance R                     [1] J. C. Schelleng: The bowed string and the player. J. Acoust.
+                                                                   Soc. Am. 53 (1973) 26–41.
+The formula for calculating the mechanical resistance R        [2] A. Askenfelt: Measurement of the bowing parameters in
+from the decay time τ1 of the fundamental string mode              violin playing. II: Bow-bridge distance, dynamic range, and
+according to Raman’s string model can be derived as fol-           limits of bow force. J. Acoust. Soc. Am. 86 (August 1989)
+                                                                   503–516. Reprinted in Research paper in violin acoustics
+lows.                                                              1975-1993, ed. Hutchins, pp. 305-318.
+   The reﬂection factor of the bridge termination of the       [3] J. Woodhouse: On the playability of violins. Part II: Min-
+string is given by                                                 imum bow force and transients. Acustica 78 (1993) 137–
+                                                                   153. Reprinted in Research paper in violin acoustics 1975-
+           Z0 − R                                                  1993, ed. Hutchins, pp. 283-299.
+      λ=          ,                                   (A1)
+           Z0 + R                                              [4] R. T. Schumacher: Measurement of some parameters of
+                                                                   bowing. J. Acoust. Soc. Am. 96 (1994) 1985–1998.
+where Z0 is the characteristic wave impedance (cf. [8],            Reprinted in Research paper in violin acoustics 1975-1993,
+equation 5.21). The relative amount of reﬂected energy per         ed. Hutchins, pp. 255-268.
+fundamental period T1 (one lossy reﬂection) is                 [5] P. M. Galluzzo: On the playability of stringed instruments.
+                                                                   Dissertation. Trinity College, University of Cambridge,
+      |λ|2 = e−2T1 /τ ,                                            October 2003.
+                                                               [6] C. V. Raman: Experiments with mechanically-played vio-
+where τ the decay time, so that                                    lins. Proc. Indian Assoc. Cultivation Sci., 1920-1921, 19–
+                                                                   36. Reprinted in Musical Acoustics, Part I, ed. Hutchins,
+               T1                                                  pp. 186-204.
+      τ=               .                              (A2)
+           ln (1/ |λ|)
+                                                              3 Note the misprint in the following paragraph in the third edition of [22]
+According to the Raman model the decay times of all           discussing the wave pattern of case (2), referred to as a ﬁxed-ﬁxed string
+string modes are equal, which is not in agreement with        instead of the correct ﬁxed-free string. Case (1) corresponds to the ﬁxed-
+observations of real strings. For the calculation of R only   ﬁxed string.
+
+
+
+
+                                                                                                                                   621
+ACTA ACUSTICA UNITED WITH ACUSTICA                       Schoonderwaldt et al.: Empirical investigation of bow-force limits
+Vol. 94 (2008)
+
+
+ [7] N. C. Pickering: Physical properties of violin strings. J.     [15] K. Guettler: On the creation of the helmholtz motion in
+     Catgut Acoust. Soc. 44 (1985) 6–8. Reprinted in Research            bowed strings. Acustica united with Acta Acustica 88
+     paper in violin acoustics 1975-1993, ed. Hutchins, pp. 229-         (2002) 970–985.
+     232.                                                           [16] H. Lazarus: Die Behandlung der selbsterregten Kipp-
+ [8] L. Cremer: The physics of the violin. The MIT Press, 1984.          schwingungen der gestrichenen Saite mit Hilfe der end-
+                                                                         lichen Laplacetransformation. Dissertation. Technical Uni-
+ [9] B. Lawergren: Harmonics of S motion on bowed strings. J.            versity of Berlin, 1972.
+     Acoust. Soc. Am. 73 (1983) 2174–2179. Reprinted in Re-
+     search paper in violin acoustics 1975-1993, ed. Hutchins,      [17] R. T. Schumacher: Self-sustained oscillations of the bowed
+     pp. 177-182.                                                        string. Acoustica 43 (1979) 109–120. Reprinted in Re-
+                                                                         search paper in violin acoustics 1975-1993, ed. Hutchins,
+[10] J. Woodhouse: On the playability of violins. Part I: Reﬂec-         pp. 243-254.
+     tion functions. Acustica 78 (1993) 125–136. Reprinted
+     in: Research paper in violin acoustics 1975–1993, ed.          [18] J. H. Smith, J. Woodhouse: The tribology of rosin. J. Mech.
+     Hutchins, pp. 271-282.                                              Phys. Solids 48 (2000) 1633–1681.
+                                                                    [19] J. Woodhouse, P. M. Galluzzo: The bowed string as we
+[11] F. A. Saunders: The mechanical action of violins. J. Acoust.        know it today. Acustica - Acta Acustica 90 (2004) 579–
+     Soc. Am. 9 (1937) 81–98.                                            589.
+[12] X. Boutillon: Analytical investigation of the ﬂattening ef-    [20] E. Jansson: Acoustics for violin and guitar makers. Dept. of
+     fect: the reactive power balance rule. J. Acoust. Soc. Am.          Speech Music and Hearing, Royal Institute of Technology
+     90 (1991) 754–763.                                                  (KTH), 2002.
+[13] A. Cronhjort: A computer-controlled bowing machine             [21] J. Woodhouse: On the stability of bowed string motion.
+     (MUMS). STL-QPSR 33 (1992) 61–66.                                   Acustica 80 (1994) 58–72.
+[14] J. Woodhouse: Bowed string simulation using a thermal          [22] L. E. Kinsler, A. R. Frey, A. B. Coppens, J. V. Sanders:
+     friction model. Acustica united with Acta Acustica 89               Fundamentals of acoustics. Third ed. John Wiley & Sons,
+     (2003) 355–368.                                                     Inc., 1982.
+
+
+
+
+622
+

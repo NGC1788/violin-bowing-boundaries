@@ -1,0 +1,148 @@
+
+== LOTO t=0.2 hold out type B: train A1+A2+C1+D1
+  P-Sch      lower 0.290 (hit 0.45)  upper 0.283 (hit 0.49)   [B1:0.436/0.239 B_T2r1:0.235/0.300 B_T2r2:0.200/0.310]
+  P-Beigi    lower 0.396 (hit 0.29)  upper 0.283 (hit 0.49)   [B1:0.316/0.239 B_T2r1:0.470/0.300 B_T2r2:0.402/0.310]
+  P-free     lower 0.309 (hit 0.34)  upper 0.212 (hit 0.54)   [B1:0.255/0.188 B_T2r1:0.346/0.213 B_T2r2:0.325/0.236]
+  D-logit    lower 0.316 (hit 0.40)  upper 0.296 (hit 0.63)   [B1:0.270/0.283 B_T2r1:0.368/0.317 B_T2r2:0.309/0.289]
+  D-gbm      lower 0.267 (hit 0.38)  upper 0.169 (hit 0.65)   [B1:0.195/0.174 B_T2r1:0.302/0.180 B_T2r2:0.306/0.152]
+  Triv-nn    lower 0.282 (hit 0.36)  upper 0.166 (hit 0.60)   [B1:0.226/0.141 B_T2r1:0.338/0.184 B_T2r2:0.283/0.172]
+  Triv-5     lower 0.266 (hit 0.38)  upper 0.196 (hit 0.60)   [B1:0.222/0.189 B_T2r1:0.315/0.215 B_T2r2:0.261/0.184]
+   P-free lower params (c, a_v, b_beta, log sigma): [-1.996  0.925 -1.287 -0.477]  upper: [ 0.119  0.719 -1.082 -1.367]
+
+== LOTO t=0.2 hold out type C: train A1+A2+B1+D1+B_T2r1+B_T2r2
+  P-Sch      lower 0.593 (hit 0.21)  upper 0.185 (hit 0.64)   [C1:0.593/0.185]
+  P-Beigi    lower 0.286 (hit 0.28)  upper 0.185 (hit 0.64)   [C1:0.286/0.185]
+  P-free     lower 0.465 (hit 0.22)  upper 0.246 (hit 0.57)   [C1:0.465/0.246]
+  D-logit    lower 0.369 (hit 0.22)  upper 0.417 (hit 0.54)   [C1:0.369/0.417]
+  D-gbm      lower 0.255 (hit 0.27)  upper 0.237 (hit 0.58)   [C1:0.255/0.237]
+  Triv-nn    lower 0.363 (hit 0.12)  upper 0.141 (hit 0.66)   [C1:0.363/0.141]
+  Triv-5     lower 0.362 (hit 0.10)  upper 0.193 (hit 0.65)   [C1:0.362/0.193]
+   P-free lower params (c, a_v, b_beta, log sigma): [-2.31   0.989 -1.473 -0.518]  upper: [ 0.294  0.729 -1.077 -1.225]
+
+== LOTO t=0.2 hold out type D: train A1+A2+B1+C1+B_T2r1+B_T2r2
+  P-Sch      lower 0.288 (hit 0.45)  upper 0.081 (hit 0.77)   [D1:0.288/0.081]
+  P-Beigi    lower 0.305 (hit 0.27)  upper 0.081 (hit 0.77)   [D1:0.305/0.081]
+  P-free     lower 0.188 (hit 0.39)  upper 0.094 (hit 0.78)   [D1:0.188/0.094]
+  D-logit    lower 0.192 (hit 0.51)  upper 0.333 (hit 0.60)   [D1:0.192/0.333]
+  D-gbm      lower 0.190 (hit 0.42)  upper 0.152 (hit 0.68)   [D1:0.190/0.152]
+  Triv-nn    lower 0.189 (hit 0.30)  upper 0.083 (hit 0.55)   [D1:0.189/0.083]
+  Triv-5     lower 0.158 (hit 0.36)  upper 0.116 (hit 0.53)   [D1:0.158/0.116]
+   P-free lower params (c, a_v, b_beta, log sigma): [-2.364  0.996 -1.477 -0.461]  upper: [ 0.285  0.743 -1.084 -1.103]
+
+== LOTO t=0.2 hold out type A: train B1+C1+D1+B_T2r1+B_T2r2
+  P-Sch      lower 0.611 (hit 0.16)  upper 0.152 (hit 0.70)   [A1:0.492/0.126 A2:0.730/0.178]
+  P-Beigi    lower 0.381 (hit 0.15)  upper 0.152 (hit 0.70)   [A1:0.395/0.126 A2:0.367/0.178]
+  P-free     lower 0.424 (hit 0.25)  upper 0.206 (hit 0.61)   [A1:0.283/0.188 A2:0.564/0.224]
+  D-logit    lower 0.348 (hit 0.30)  upper 0.346 (hit 0.55)   [A1:0.209/0.338 A2:0.487/0.354]
+  D-gbm      lower 0.303 (hit 0.28)  upper 0.168 (hit 0.67)   [A1:0.279/0.160 A2:0.327/0.176]
+  Triv-nn    lower 0.253 (hit 0.29)  upper 0.165 (hit 0.68)   [A1:0.215/0.176 A2:0.290/0.154]
+  Triv-5     lower 0.261 (hit 0.33)  upper 0.190 (hit 0.65)   [A1:0.201/0.175 A2:0.321/0.205]
+   P-free lower params (c, a_v, b_beta, log sigma): [-2.95   1.193 -1.79  -0.629]  upper: [ 0.5    0.774 -1.048 -1.118]
+
+== LOTO t=0.2 — same 5 test specimens as the report (each from its own LOTO split)
+  P-Sch      lower 0.350 (hit 0.40)  upper 0.223 (hit 0.57)   [B1:0.436/0.239 C1:0.593/0.185 D1:0.288/0.081 B_T2r1:0.235/0.300 B_T2r2:0.200/0.310]
+  P-Beigi    lower 0.356 (hit 0.28)  upper 0.223 (hit 0.57)   [B1:0.316/0.239 C1:0.286/0.185 D1:0.305/0.081 B_T2r1:0.470/0.300 B_T2r2:0.402/0.310]
+  P-free     lower 0.316 (hit 0.33)  upper 0.195 (hit 0.59)   [B1:0.255/0.188 C1:0.465/0.246 D1:0.188/0.094 B_T2r1:0.346/0.213 B_T2r2:0.325/0.236]
+  D-logit    lower 0.302 (hit 0.38)  upper 0.328 (hit 0.61)   [B1:0.270/0.283 C1:0.369/0.417 D1:0.192/0.333 B_T2r1:0.368/0.317 B_T2r2:0.309/0.289]
+  D-gbm      lower 0.249 (hit 0.36)  upper 0.179 (hit 0.64)   [B1:0.195/0.174 C1:0.255/0.237 D1:0.190/0.152 B_T2r1:0.302/0.180 B_T2r2:0.306/0.152]
+  Triv-nn    lower 0.280 (hit 0.30)  upper 0.144 (hit 0.60)   [B1:0.226/0.141 C1:0.363/0.141 D1:0.189/0.083 B_T2r1:0.338/0.184 B_T2r2:0.283/0.172]
+  Triv-5     lower 0.263 (hit 0.32)  upper 0.179 (hit 0.60)   [B1:0.222/0.189 C1:0.362/0.193 D1:0.158/0.116 B_T2r1:0.315/0.215 B_T2r2:0.261/0.184]
+
+== LOTO t=0.0 hold out type B: train A1+A2+C1+D1
+  P-Sch      lower 0.431 (hit 0.36)  upper 0.212 (hit 0.54)   [B1:0.691/0.176 B_T2r1:0.358/0.229 B_T2r2:0.245/0.232]
+  P-Beigi    lower 0.377 (hit 0.24)  upper 0.212 (hit 0.54)   [B1:0.347/0.176 B_T2r1:0.407/0.229 B_T2r2:0.378/0.232]
+  P-free     lower 0.401 (hit 0.24)  upper 0.169 (hit 0.55)   [B1:0.369/0.113 B_T2r1:0.435/0.151 B_T2r2:0.398/0.244]
+  D-logit    lower 0.366 (hit 0.25)  upper 0.321 (hit 0.55)   [B1:0.369/0.290 B_T2r1:0.390/0.309 B_T2r2:0.339/0.363]
+  D-gbm      lower 0.299 (hit 0.25)  upper 0.120 (hit 0.70)   [B1:0.207/0.122 B_T2r1:0.377/0.097 B_T2r2:0.313/0.141]
+  Triv-nn    lower 0.325 (hit 0.26)  upper 0.124 (hit 0.66)   [B1:0.240/0.105 B_T2r1:0.370/0.117 B_T2r2:0.366/0.150]
+  Triv-5     lower 0.339 (hit 0.26)  upper 0.114 (hit 0.70)   [B1:0.268/0.088 B_T2r1:0.404/0.102 B_T2r2:0.344/0.150]
+   P-free lower params (c, a_v, b_beta, log sigma): [-0.778  0.936 -0.968 -0.441]  upper: [-0.007  0.694 -1.063 -1.438]
+
+== LOTO t=0.0 hold out type C: train A1+A2+B1+D1+B_T2r1+B_T2r2
+  P-Sch      lower 0.717 (hit 0.16)  upper 0.177 (hit 0.59)   [C1:0.717/0.177]
+  P-Beigi    lower 0.377 (hit 0.23)  upper 0.177 (hit 0.59)   [C1:0.377/0.177]
+  P-free     lower 0.442 (hit 0.17)  upper 0.205 (hit 0.54)   [C1:0.442/0.205]
+  D-logit    lower 0.357 (hit 0.15)  upper 0.382 (hit 0.45)   [C1:0.357/0.382]
+  D-gbm      lower 0.279 (hit 0.19)  upper 0.204 (hit 0.58)   [C1:0.279/0.204]
+  Triv-nn    lower 0.282 (hit 0.17)  upper 0.131 (hit 0.66)   [C1:0.282/0.131]
+  Triv-5     lower 0.303 (hit 0.16)  upper 0.112 (hit 0.70)   [C1:0.303/0.112]
+   P-free lower params (c, a_v, b_beta, log sigma): [-1.15   0.998 -1.173 -0.445]  upper: [ 0.016  0.637 -1.03  -1.426]
+
+== LOTO t=0.0 hold out type D: train A1+A2+B1+C1+B_T2r1+B_T2r2
+  P-Sch      lower 0.557 (hit 0.28)  upper 0.135 (hit 0.65)   [D1:0.557/0.135]
+  P-Beigi    lower 0.290 (hit 0.25)  upper 0.135 (hit 0.65)   [D1:0.290/0.135]
+  P-free     lower 0.264 (hit 0.28)  upper 0.095 (hit 0.71)   [D1:0.264/0.095]
+  D-logit    lower 0.220 (hit 0.30)  upper 0.376 (hit 0.47)   [D1:0.220/0.376]
+  D-gbm      lower 0.266 (hit 0.28)  upper 0.081 (hit 0.78)   [D1:0.266/0.081]
+  Triv-nn    lower 0.245 (hit 0.28)  upper 0.062 (hit 0.60)   [D1:0.245/0.062]
+  Triv-5     lower 0.212 (hit 0.35)  upper 0.058 (hit 0.64)   [D1:0.212/0.058]
+   P-free lower params (c, a_v, b_beta, log sigma): [-1.136  1.015 -1.165 -0.411]  upper: [ 0.035  0.648 -1.027 -1.345]
+
+== LOTO t=0.0 hold out type A: train B1+C1+D1+B_T2r1+B_T2r2
+  P-Sch      lower 0.835 (hit 0.14)  upper 0.177 (hit 0.65)   [A1:0.685/0.179 A2:0.985/0.175]
+  P-Beigi    lower 0.289 (hit 0.26)  upper 0.177 (hit 0.65)   [A1:0.218/0.179 A2:0.360/0.175]
+  P-free     lower 0.387 (hit 0.18)  upper 0.136 (hit 0.68)   [A1:0.286/0.132 A2:0.488/0.139]
+  D-logit    lower 0.508 (hit 0.15)  upper 0.430 (hit 0.54)   [A1:0.379/0.432 A2:0.638/0.429]
+  D-gbm      lower 0.274 (hit 0.32)  upper 0.126 (hit 0.71)   [A1:0.304/0.125 A2:0.244/0.127]
+  Triv-nn    lower 0.372 (hit 0.24)  upper 0.133 (hit 0.72)   [A1:0.338/0.156 A2:0.406/0.110]
+  Triv-5     lower 0.353 (hit 0.29)  upper 0.114 (hit 0.74)   [A1:0.313/0.129 A2:0.392/0.099]
+   P-free lower params (c, a_v, b_beta, log sigma): [-1.746  1.155 -1.453 -0.495]  upper: [ 0.143  0.659 -0.999 -1.346]
+
+== LOTO t=0.0 — same 5 test specimens as the report (each from its own LOTO split)
+  P-Sch      lower 0.514 (hit 0.31)  upper 0.190 (hit 0.57)   [B1:0.691/0.176 C1:0.717/0.177 D1:0.557/0.135 B_T2r1:0.358/0.229 B_T2r2:0.245/0.232]
+  P-Beigi    lower 0.360 (hit 0.24)  upper 0.190 (hit 0.57)   [B1:0.347/0.176 C1:0.377/0.177 D1:0.290/0.135 B_T2r1:0.407/0.229 B_T2r2:0.378/0.232]
+  P-free     lower 0.381 (hit 0.23)  upper 0.162 (hit 0.58)   [B1:0.369/0.113 C1:0.442/0.205 D1:0.264/0.095 B_T2r1:0.435/0.151 B_T2r2:0.398/0.244]
+  D-logit    lower 0.335 (hit 0.24)  upper 0.344 (hit 0.51)   [B1:0.369/0.290 C1:0.357/0.382 D1:0.220/0.376 B_T2r1:0.390/0.309 B_T2r2:0.339/0.363]
+  D-gbm      lower 0.288 (hit 0.25)  upper 0.129 (hit 0.69)   [B1:0.207/0.122 C1:0.279/0.204 D1:0.266/0.081 B_T2r1:0.377/0.097 B_T2r2:0.313/0.141]
+  Triv-nn    lower 0.300 (hit 0.25)  upper 0.113 (hit 0.65)   [B1:0.240/0.105 C1:0.282/0.131 D1:0.245/0.062 B_T2r1:0.370/0.117 B_T2r2:0.366/0.150]
+  Triv-5     lower 0.306 (hit 0.26)  upper 0.102 (hit 0.68)   [B1:0.268/0.088 C1:0.303/0.112 D1:0.212/0.058 B_T2r1:0.404/0.102 B_T2r2:0.344/0.150]
+
+== LOTO t=0.3 hold out type B: train A1+A2+C1+D1
+  P-Sch      lower 0.258 (hit 0.47)  upper 0.300 (hit 0.49)   [B1:0.367/0.264 B_T2r1:0.194/0.325 B_T2r2:0.213/0.312]
+  P-Beigi    lower 0.466 (hit 0.29)  upper 0.300 (hit 0.49)   [B1:0.434/0.264 B_T2r1:0.516/0.325 B_T2r2:0.450/0.312]
+  P-free     lower 0.330 (hit 0.36)  upper 0.217 (hit 0.54)   [B1:0.253/0.178 B_T2r1:0.376/0.255 B_T2r2:0.361/0.217]
+  D-logit    lower 0.316 (hit 0.42)  upper 0.277 (hit 0.63)   [B1:0.278/0.263 B_T2r1:0.367/0.296 B_T2r2:0.301/0.272]
+  D-gbm      lower 0.275 (hit 0.40)  upper 0.186 (hit 0.64)   [B1:0.206/0.207 B_T2r1:0.298/0.207 B_T2r2:0.320/0.144]
+  Triv-nn    lower 0.276 (hit 0.41)  upper 0.186 (hit 0.60)   [B1:0.220/0.179 B_T2r1:0.339/0.188 B_T2r2:0.268/0.192]
+  Triv-5     lower 0.270 (hit 0.44)  upper 0.218 (hit 0.59)   [B1:0.234/0.195 B_T2r1:0.324/0.231 B_T2r2:0.254/0.227]
+   P-free lower params (c, a_v, b_beta, log sigma): [-2.503  0.911 -1.41  -0.451]  upper: [ 0.103  0.708 -1.086 -1.281]
+
+== LOTO t=0.3 hold out type C: train A1+A2+B1+D1+B_T2r1+B_T2r2
+  P-Sch      lower 0.680 (hit 0.20)  upper 0.187 (hit 0.69)   [C1:0.680/0.187]
+  P-Beigi    lower 0.340 (hit 0.25)  upper 0.187 (hit 0.69)   [C1:0.340/0.187]
+  P-free     lower 0.519 (hit 0.18)  upper 0.233 (hit 0.57)   [C1:0.519/0.233]
+  D-logit    lower 0.359 (hit 0.27)  upper 0.399 (hit 0.55)   [C1:0.359/0.399]
+  D-gbm      lower 0.360 (hit 0.20)  upper 0.255 (hit 0.60)   [C1:0.360/0.255]
+  Triv-nn    lower 0.386 (hit 0.11)  upper 0.161 (hit 0.64)   [C1:0.386/0.161]
+  Triv-5     lower 0.386 (hit 0.10)  upper 0.163 (hit 0.65)   [C1:0.386/0.163]
+   P-free lower params (c, a_v, b_beta, log sigma): [-2.778  0.992 -1.599 -0.508]  upper: [ 0.25   0.716 -1.087 -1.156]
+
+== LOTO t=0.3 hold out type D: train A1+A2+B1+C1+B_T2r1+B_T2r2
+  P-Sch      lower 0.315 (hit 0.49)  upper 0.110 (hit 0.73)   [D1:0.315/0.110]
+  P-Beigi    lower 0.357 (hit 0.23)  upper 0.110 (hit 0.73)   [D1:0.357/0.110]
+  P-free     lower 0.192 (hit 0.44)  upper 0.104 (hit 0.76)   [D1:0.192/0.104]
+  D-logit    lower 0.184 (hit 0.47)  upper 0.299 (hit 0.63)   [D1:0.184/0.299]
+  D-gbm      lower 0.216 (hit 0.44)  upper 0.159 (hit 0.68)   [D1:0.216/0.159]
+  Triv-nn    lower 0.151 (hit 0.43)  upper 0.113 (hit 0.50)   [D1:0.151/0.113]
+  Triv-5     lower 0.160 (hit 0.42)  upper 0.103 (hit 0.53)   [D1:0.160/0.103]
+   P-free lower params (c, a_v, b_beta, log sigma): [-2.862  0.974 -1.592 -0.435]  upper: [ 0.306  0.727 -1.069 -1.052]
+
+== LOTO t=0.3 hold out type A: train B1+C1+D1+B_T2r1+B_T2r2
+  P-Sch      lower 0.541 (hit 0.19)  upper 0.206 (hit 0.67)   [A1:0.473/0.208 A2:0.608/0.204]
+  P-Beigi    lower 0.427 (hit 0.12)  upper 0.206 (hit 0.67)   [A1:0.436/0.208 A2:0.418/0.204]
+  P-free     lower 0.406 (hit 0.21)  upper 0.226 (hit 0.61)   [A1:0.344/0.225 A2:0.469/0.228]
+  D-logit    lower 0.353 (hit 0.28)  upper 0.409 (hit 0.56)   [A1:0.313/0.388 A2:0.393/0.430]
+  D-gbm      lower 0.375 (hit 0.30)  upper 0.217 (hit 0.65)   [A1:0.326/0.210 A2:0.424/0.224]
+  Triv-nn    lower 0.282 (hit 0.27)  upper 0.180 (hit 0.64)   [A1:0.246/0.177 A2:0.318/0.184]
+  Triv-5     lower 0.273 (hit 0.29)  upper 0.207 (hit 0.64)   [A1:0.239/0.188 A2:0.307/0.227]
+   P-free lower params (c, a_v, b_beta, log sigma): [-3.415  1.175 -1.896 -0.542]  upper: [ 0.479  0.741 -1.033 -1.047]
+
+== LOTO t=0.3 — same 5 test specimens as the report (each from its own LOTO split)
+  P-Sch      lower 0.354 (hit 0.42)  upper 0.240 (hit 0.58)   [B1:0.367/0.264 C1:0.680/0.187 D1:0.315/0.110 B_T2r1:0.194/0.325 B_T2r2:0.213/0.312]
+  P-Beigi    lower 0.419 (hit 0.27)  upper 0.240 (hit 0.58)   [B1:0.434/0.264 C1:0.340/0.187 D1:0.357/0.110 B_T2r1:0.516/0.325 B_T2r2:0.450/0.312]
+  P-free     lower 0.340 (hit 0.34)  upper 0.198 (hit 0.59)   [B1:0.253/0.178 C1:0.519/0.233 D1:0.192/0.104 B_T2r1:0.376/0.255 B_T2r2:0.361/0.217]
+  D-logit    lower 0.298 (hit 0.40)  upper 0.306 (hit 0.62)   [B1:0.278/0.263 C1:0.359/0.399 D1:0.184/0.299 B_T2r1:0.367/0.296 B_T2r2:0.301/0.272]
+  D-gbm      lower 0.280 (hit 0.37)  upper 0.194 (hit 0.64)   [B1:0.206/0.207 C1:0.360/0.255 D1:0.216/0.159 B_T2r1:0.298/0.207 B_T2r2:0.320/0.144]
+  Triv-nn    lower 0.273 (hit 0.36)  upper 0.166 (hit 0.59)   [B1:0.220/0.179 C1:0.386/0.161 D1:0.151/0.113 B_T2r1:0.339/0.188 B_T2r2:0.268/0.192]
+  Triv-5     lower 0.271 (hit 0.37)  upper 0.184 (hit 0.59)   [B1:0.234/0.195 C1:0.386/0.163 D1:0.160/0.103 B_T2r1:0.324/0.231 B_T2r2:0.254/0.227]
+loto exit 0

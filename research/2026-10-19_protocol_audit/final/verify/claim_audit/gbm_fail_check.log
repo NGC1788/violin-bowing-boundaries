@@ -1,0 +1,17 @@
+/Users/jeongjihoon/violin-rne/final/verify/claim_audit/gbm_fail_check.py:21: RuntimeWarning: Mean of empty slice
+  print("windows with force<0.03 N:", m.sum(), "H share", d["H"][m].mean() if m.any() else np.nan, "| force<=0:", (d["force"] <= 0).sum(), "H share", d["H"][d["force"] <= 0].mean())
+/Users/jeongjihoon/violin-bowing-boundaries/.venv-mac/lib/python3.11/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/Users/jeongjihoon/violin-rne/final/verify/claim_audit/gbm_fail_check.py:24: RuntimeWarning: Mean of empty slice
+  print(f"  {tag}: windows force<0.05 N {m.sum()} ({m.mean():.1%}), H share there {x['H'][m].mean():.2f}")
+finite lower cols 58 | pred lower at grid bottom (0.03 N): 32 | pred inf: 2
+median |err| 2.34678356638414
+median observed lower mid (N) 1.2167743790764707
+windows with force<0.03 N: 0 H share nan | force<=0: 0 H share nan
+  A1: windows force<0.05 N 1781 (7.4%), H share there 0.01
+  A2: windows force<0.05 N 2073 (8.6%), H share there 0.02
+  B1: windows force<0.05 N 65 (0.3%), H share there 0.17
+  C1: windows force<0.05 N 27 (0.1%), H share there 0.22
+  D1: windows force<0.05 N 0 (0.0%), H share there nan
+  B_T2r1: windows force<0.05 N 0 (0.0%), H share there nan
+  B_T2r2: windows force<0.05 N 0 (0.0%), H share there nan

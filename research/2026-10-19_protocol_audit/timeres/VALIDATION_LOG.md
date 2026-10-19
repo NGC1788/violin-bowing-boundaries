@@ -1,0 +1,14 @@
+
+## 2026-10-18 — Astra force-history correction and independent rechecks
+
+- Read latest handoff in requested order; work ownership recorded in COLLAB_LOG before edits.
+- Preserved original scripts/results. New files under ../astra_20261018. Full findings and reproducible commands: RESEARCH_STATUS.md.
+- Old analysis_multi beta fragmentation fixed only in audit implementation: actual40columns, all6000 A2 identities match original. Cached6000 acquisition-window feature/label replay exact. Original constants vs pipeline constants change0 binaryH decisions.
+- Corrected snapshot estimator: stable log normal interval probability; complete trial support rather than positive-force-count equality; three optimizer starts; group bootstrap. Synthetic tail and coefficient-recovery tests pass. A1 speed exponents0.574–0.666, A2 0.940–1.041; these are measured-path-conditioned summaries, not equilibrium laws.
+- New constant-force assumption correction: force changes with travel; onset force and attack acceleration vary with design. No survival theta/critical-slowing inference supported. Source documentation confirms open-loop force control; precise mechanical cause remains incompletely calibrated.
+- Event definition corrected to causal firstK completed-window decisions; all prefix checks0 changes. Retrospective suffix definition produces86 and94 changes at half followup for A1/A2 with0.2s windows. Recurrence separately reported; no permanent-lock or cure-fraction claim.
+- Joined A1/A2 full ramp/block/time-window records: no missing/duplicate keys or beta mismatches. Same four0.2s windows per stroke,24000 rows/specimen; source and target specimens separated. History models failed preregistered primary predictive comparison; complete negative and ablation outputs saved. No target-selected hyperparameter search.
+- Development implementation failures caught before interpretation: old original-window field names corrected to c1_window_mean/c2_window_mean; JSON numpy integers converted; paired-loss bool targets cast to float and covered by regression test. Initial failed runs left logs; only completed hashed outputs interpreted.
+- New archive companion uses durable hardlinks, MD5 metadata checks, exact trial/beta/full-block validation, atomic output publication, singleton locking and failed-job preservation. Original replicate process unchanged. A1 legacy adoption cannot verify deleted raw MD5/old exit codes; receipt states this. A2 raw checksum verified.
+- B1 was deleted06:16 by old pipeline before sidecar activation during session interruption. No additional B1 metadata found. Recovery waiter queued after existing pipeline completion, with60GB+archive+output reserve check; B1 not claimed recovered or evaluated. C1 onward watcher active.
+- Tests:35new +5earlier audit tests pass, including real bundled7-Zip stream-order fixture. Full old repo suite not rerun because no tracked repo implementation changed.

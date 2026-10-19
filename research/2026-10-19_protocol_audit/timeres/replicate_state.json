@@ -1,0 +1,151 @@
+{
+ "2024-04-19_TypeA_sample2.7z": {
+  "folders_done": [
+   "2024-04-19_TypeA_sample2/v1",
+   "2024-04-19_TypeA_sample2/v2",
+   "2024-04-19_TypeA_sample2/v3"
+  ],
+  "status": "done",
+  "folders": {
+   "2024-04-19_TypeA_sample2/v2": 2000,
+   "2024-04-19_TypeA_sample2/v1": 2000,
+   "2024-04-19_TypeA_sample2/v3": 2000
+  }
+ },
+ "2024-03-25_TypeA_sample1.7z": {
+  "folders_done": [
+   "2024-03-25_TypeA_sample1/2024-03-27_r_v1",
+   "2024-03-25_TypeA_sample1/2024-03-27_r_v2",
+   "2024-03-25_TypeA_sample1/2024-03-27_r_v3"
+  ],
+  "status": "done",
+  "folders": {
+   "2024-03-25_TypeA_sample1/2024-03-27_r_v1": 2000,
+   "2024-03-25_TypeA_sample1/2024-03-27_r_v2": 2000,
+   "2024-03-25_TypeA_sample1/2024-03-27_r_v3": 2000
+  }
+ },
+ "2024-04-10_TypeB_sample1.7z": {
+  "folders_done": [
+   "2024-04-10_TypeB_sample1/2024-04-10/v1",
+   "2024-04-10_TypeB_sample1/2024-04-10/v2",
+   "2024-04-10_TypeB_sample1/2024-04-10/v3"
+  ],
+  "status": "done",
+  "folders": {
+   "2024-04-10_TypeB_sample1/2024-04-10/v2": 2000,
+   "2024-04-10_TypeB_sample1/2024-04-10/v1": 2000,
+   "2024-04-10_TypeB_sample1/2024-04-10/v3": 2000
+  }
+ },
+ "2024-04-12_TypeC_sample1.7z": {
+  "folders_done": [
+   "2024-04-12_TypeC_sample1/2024-04-15/v1",
+   "2024-04-12_TypeC_sample1/2024-04-15/v2",
+   "2024-04-12_TypeC_sample1/2024-04-15/v3"
+  ],
+  "status": "done",
+  "folders": {
+   "2024-04-12_TypeC_sample1/2024-04-15/v2": 2000,
+   "2024-04-12_TypeC_sample1/2024-04-15/v1": 2000,
+   "2024-04-12_TypeC_sample1/2024-04-15/v3": 2000
+  }
+ },
+ "2024-10-23_variability_setup.7z": {
+  "folders_done": [
+   "2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1",
+   "2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2",
+   "2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v3",
+   "2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v1",
+   "2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2",
+   "2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v3"
+  ],
+  "status": "done",
+  "folders": {
+   "2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": 2000,
+   "2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2": 2000,
+   "2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v3": 2000,
+   "2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v1": 2000,
+   "2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2": 2000,
+   "2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v3": 2000
+  }
+ },
+ "2024-04-15_TypeD_sample1.7z": {
+  "folders_done": [
+   "2024-04-15_TypeD_sample1/2024-04-17/v1",
+   "2024-04-15_TypeD_sample1/2024-04-17/v2",
+   "2024-04-15_TypeD_sample1/2024-04-17/v3"
+  ],
+  "status": "done",
+  "folders": {
+   "2024-04-15_TypeD_sample1/2024-04-17/v2": 2000,
+   "2024-04-15_TypeD_sample1/2024-04-17/v1": 2000,
+   "2024-04-15_TypeD_sample1/2024-04-17/v3": 2000
+  }
+ },
+ "2024-06-19_TypeA_T2_sample1.7z": {
+  "folders_done": [
+   "2024-06-19_TypeA_T2_sample1/v1",
+   "2024-06-19_TypeA_T2_sample1/v2",
+   "2024-06-19_TypeA_T2_sample1/v3"
+  ],
+  "status": "done",
+  "folders": {
+   "2024-06-19_TypeA_T2_sample1/v1": 2000,
+   "2024-06-19_TypeA_T2_sample1/v2": 2000,
+   "2024-06-19_TypeA_T2_sample1/v3": 2000
+  }
+ },
+ "2024-06-13_TypeB_T2_sample1.7z": {
+  "folders_done": [
+   "2024-06-13_TypeB_T2_sample1/v1",
+   "2024-06-13_TypeB_T2_sample1/v2",
+   "2024-06-13_TypeB_T2_sample1/v3"
+  ],
+  "status": "done",
+  "folders": {
+   "2024-06-13_TypeB_T2_sample1/v1": 2000,
+   "2024-06-13_TypeB_T2_sample1/v2": 2000,
+   "2024-06-13_TypeB_T2_sample1/v3": 2000
+  }
+ },
+ "2024-06-11_TypeC_T2_sample1.7z": {
+  "folders_done": [
+   "2024-06-11_TypeC_T2_sample1/v1",
+   "2024-06-11_TypeC_T2_sample1/v2",
+   "2024-06-11_TypeC_T2_sample1/v3"
+  ],
+  "status": "done",
+  "folders": {
+   "2024-06-11_TypeC_T2_sample1/v1": 2000,
+   "2024-06-11_TypeC_T2_sample1/v2": 2000,
+   "2024-06-11_TypeC_T2_sample1/v3": 2000
+  }
+ },
+ "2024-06-17_TypeD_T2_sample1.7z": {
+  "folders_done": [
+   "2024-06-17_TypeD_T2_sample1/v1",
+   "2024-06-17_TypeD_T2_sample1/v2",
+   "2024-06-17_TypeD_T2_sample1/v3"
+  ],
+  "status": "done",
+  "folders": {
+   "2024-06-17_TypeD_T2_sample1/v1": 2000,
+   "2024-06-17_TypeD_T2_sample1/v2": 2000,
+   "2024-06-17_TypeD_T2_sample1/v3": 2000
+  }
+ },
+ "2024-04-22_TypeA_sample3.7z": {
+  "folders_done": [
+   "2024-04-22_TypeA_sample3/v1",
+   "2024-04-22_TypeA_sample3/v2",
+   "2024-04-22_TypeA_sample3/v3"
+  ],
+  "status": "done",
+  "folders": {
+   "2024-04-22_TypeA_sample3/v2": 2000,
+   "2024-04-22_TypeA_sample3/v1": 2000,
+   "2024-04-22_TypeA_sample3/v3": 2000
+  }
+ }
+}

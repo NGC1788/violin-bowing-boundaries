@@ -1,0 +1,43 @@
+(e) window-length: paired bootstrap over beta columns, train A1+A2
+  w=0.1 t=0.2 [lower] D-gbm-P-free: -0.039 CI95 [-0.088,+0.011] P(<0) 0.943
+  w=0.1 t=0.2 [lower] Triv-5-D-gbm: -0.015 CI95 [-0.049,+0.020] P(<0) 0.817
+  w=0.1 t=0.2 [lower] P-Sch-P-free: +0.218 CI95 [+0.147,+0.282] P(<0) 0.000
+  w=0.1 t=0.2 [upper] D-gbm-P-free: -0.036 CI95 [-0.060,-0.013] P(<0) 0.999
+  w=0.1 t=0.2 [upper] Triv-5-D-gbm: -0.009 CI95 [-0.034,+0.013] P(<0) 0.782
+  w=0.1 t=0.2 [upper] P-Sch-P-free: +0.033 CI95 [+0.003,+0.067] P(<0) 0.017
+  w=0.1 t=0.0 [lower] D-gbm-P-free: -0.094 CI95 [-0.162,-0.030] P(<0) 0.999
+  w=0.1 t=0.0 [lower] Triv-5-D-gbm: -0.012 CI95 [-0.050,+0.025] P(<0) 0.729
+  w=0.1 t=0.0 [lower] P-Sch-P-free: +0.512 CI95 [+0.414,+0.605] P(<0) 0.000
+  w=0.1 t=0.0 [upper] D-gbm-P-free: +0.074 CI95 [+0.034,+0.117] P(<0) 0.001
+  w=0.1 t=0.0 [upper] Triv-5-D-gbm: -0.105 CI95 [-0.155,-0.060] P(<0) 1.000
+  w=0.1 t=0.0 [upper] P-Sch-P-free: +0.079 CI95 [+0.049,+0.111] P(<0) 0.000
+  w=0.4 t=0.2 [lower] D-gbm-P-free: -0.102 CI95 [-0.155,-0.053] P(<0) 1.000
+  w=0.4 t=0.2 [lower] Triv-5-D-gbm: +0.019 CI95 [-0.021,+0.057] P(<0) 0.174
+  w=0.4 t=0.2 [lower] P-Sch-P-free: +0.117 CI95 [+0.050,+0.180] P(<0) 0.000
+  w=0.4 t=0.2 [upper] D-gbm-P-free: -0.031 CI95 [-0.054,-0.005] P(<0) 0.993
+  w=0.4 t=0.2 [upper] Triv-5-D-gbm: +0.024 CI95 [-0.002,+0.050] P(<0) 0.039
+  w=0.4 t=0.2 [upper] P-Sch-P-free: +0.014 CI95 [-0.018,+0.046] P(<0) 0.189
+  w=0.4 t=0.0 [lower] D-gbm-P-free: -0.051 CI95 [-0.096,-0.006] P(<0) 0.986
+  w=0.4 t=0.0 [lower] Triv-5-D-gbm: +0.010 CI95 [-0.025,+0.041] P(<0) 0.248
+  w=0.4 t=0.0 [lower] P-Sch-P-free: +0.213 CI95 [+0.154,+0.271] P(<0) 0.000
+  w=0.4 t=0.0 [upper] D-gbm-P-free: -0.027 CI95 [-0.049,-0.007] P(<0) 0.996
+  w=0.4 t=0.0 [upper] Triv-5-D-gbm: -0.020 CI95 [-0.042,-0.000] P(<0) 0.976
+  w=0.4 t=0.0 [upper] P-Sch-P-free: +0.013 CI95 [-0.017,+0.045] P(<0) 0.183
+/Users/jeongjihoon/violin-rne/final/verify/robustness/run_extra2.py:64: RuntimeWarning: Mean of empty slice
+  print(f"  B_T2r2 training windows with F<0.15 N at v{s}: n {m.sum()}, H share {d['H'][m].mean():.2f}")
+/Users/jeongjihoon/violin-bowing-boundaries/.venv-mac/lib/python3.11/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/Users/jeongjihoon/violin-rne/final/verify/robustness/run_extra2.py:68: RuntimeWarning: Mean of empty slice
+  print(f"  B_T2r1 test windows with F<0.15 N at v{s}: n {m.sum()}, H share {d['H'][m].mean():.2f}")
+
+(f) GBM failure anatomy: train B_T2r2 -> test B_T2r1, t=0.2, K=2
+  v0.05: finite cols 13, predicted lower at the grid floor 0.03 N: 4, below the lowest measured force: 4
+  v0.1: finite cols 24, predicted lower at the grid floor 0.03 N: 12, below the lowest measured force: 12
+  v0.2: finite cols 26, predicted lower at the grid floor 0.03 N: 24, below the lowest measured force: 24
+  median |err| raw 2.012; with prediction clipped to the column's measured force range 0.274
+  B_T2r2 training windows with F<0.15 N at v0.05: n 0, H share nan
+  B_T2r2 training windows with F<0.15 N at v0.1: n 0, H share nan
+  B_T2r2 training windows with F<0.15 N at v0.2: n 0, H share nan
+  B_T2r1 test windows with F<0.15 N at v0.05: n 0, H share nan
+  B_T2r1 test windows with F<0.15 N at v0.1: n 21, H share 0.05
+  B_T2r1 test windows with F<0.15 N at v0.2: n 351, H share 0.46

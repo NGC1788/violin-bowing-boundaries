@@ -1,0 +1,107 @@
+{
+  "created_kst": "2026-10-19T01:19:27.357240+09:00",
+  "status": "D_T2 결과 미열람. 다운로드 중지. 로컬 파일 동결이며 외부 사전등록 서비스가 아니다.",
+  "training_tags": [
+    "A1",
+    "A2",
+    "B1",
+    "C1",
+    "D1",
+    "A_T2",
+    "B_T2s1",
+    "B_T2r1",
+    "B_T2r2",
+    "C_T2"
+  ],
+  "training_dec5_pl_N": [
+    -0.03180687780641577,
+    -0.0625719774152602,
+    -0.1041769382739347,
+    -0.09621201527702421,
+    -0.07654164254318861,
+    -0.12007354015283687,
+    -0.09070433782542786,
+    -0.08903251249650479,
+    -0.09157693125425685,
+    -0.10650972000769206
+  ],
+  "training_lower_levels": [
+    0.11469837571216243,
+    -0.11840343043547075,
+    -0.3571439066864987,
+    -0.5609202771031981,
+    -0.24778126488328445,
+    -0.539325304700282,
+    -0.26038069156083143,
+    -0.3182719204557571,
+    -0.13935684087601002,
+    -0.5556897072378075
+  ],
+  "lower_reference_shape_c_v_beta_logsigma": [
+    -1.451783207275219,
+    0.8061412547703237,
+    -1.0324842250632422,
+    -0.5652647681876097
+  ],
+  "protocol_model": {
+    "intercept": 0.3686114637809065,
+    "slope_per_N": 7.672158065244612,
+    "training_descriptor_range_N": [
+      -0.12007354015283687,
+      -0.03180687780641577
+    ]
+  },
+  "property_models": {
+    "log_Z": {
+      "coefficients": [
+        -0.21845548753298902,
+        -0.7229873189845163
+      ],
+      "prediction_D_T2": -0.35153578309631806
+    },
+    "log_EI": {
+      "coefficients": [
+        -0.3204163894551621,
+        0.014558785979801776
+      ],
+      "prediction_D_T2": -0.2949097079879804
+    },
+    "log_Z_EI": {
+      "coefficients": [
+        -0.4247629284950358,
+        -1.6288557211879762,
+        0.20124160110522038
+      ],
+      "prediction_D_T2": -0.3720154671992407
+    }
+  },
+  "lower_mean_only_prediction": -0.29825749682269775,
+  "D_T2_published_properties": {
+    "Z": 1.2021,
+    "EI_in_1e4_Nm2": 5.766
+  },
+  "upper_strict_log_c": 0.9660052175147187,
+  "upper_empirical_log_c": 0.03283938074444927,
+  "upper_empirical_reference": {
+    "c": -0.1764277369756792,
+    "a_v": 0.6606815556587429,
+    "b_beta": -1.1107153335353168,
+    "sigma": 0.21691009791394897
+  },
+  "thresholds_log": {
+    "lower_tolerance": 0.23,
+    "upper_tolerance": 0.12,
+    "lower_comparison_margin": 0.23,
+    "upper_comparison_margin": 0.12
+  },
+  "source_sha256": {
+    "novelty/lower_protocol/descriptors.json": "d9f0d757020d844c9e976a3f86873180b009614eae790bbb9d90636f9b9278c1",
+    "novelty/upper_law/upper_law_t0.2.json": "f9e2b212be64b8ece2e08a21b46e250c66a626f5ac110ce8268136ffb1ae2a7a",
+    "novelty/lower_protocol/analysis.py": "44e5cd98816bd9139cec9ad3b61903c8d44c750719739e33cd483b7f86348f51",
+    "final/confirm_A_T2.py": "cd15414af8a4697c39ff4f2970d7322561bb928b038e6b0870e7ae799c293667",
+    "final/compare.py": "0967e96b1ce7c8d8572dc36560f610b8279b2aa7fefa2501d9619b4bce0150a6",
+    "final/data.py": "df6ed901fc6df82db2fb2e4a8f8d0c23808d8d6615e4288b6ba66ae30ab2283b",
+    "astra_20261019/descriptor_only.py": "15109af7ecb87191ad91426411dc67864bb27b0adeb15a66e9be015fc5b5223d",
+    "astra_20261019/freeze_confirmation.py": "d96403ce166de466e1f291f2a326709d14f8ddcef5e779320c55d5f308ae1446"
+  }
+}

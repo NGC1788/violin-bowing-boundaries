@@ -1,0 +1,501 @@
+{
+  "summary": "Check novelty of bifurcation-aware extrapolation of regime boundaries and bowed-string settling literature",
+  "agentCount": 2,
+  "logs": [
+    "완료 2/2"
+  ],
+  "result": {
+    "branches": [
+      {
+        "branch": "dynamics",
+        "verdict": "partial_overlap",
+        "verdict_reason": "구성요소 하나하나는 이미 다른 분야에 있다. (1) 관측 시간이 유한해서 측정된 경계가 치우친다는 점은 잘 알려져 있다. 유리전이 Tg를 '이완시간이 실험시간을 넘는 온도'로 정하는 조작적 정의, 파이프 유동 임계 Re 논쟁(Mukund & Hof는 정상상태를 보려고 10^7 시간단위 넘게 돌림), 항복응력 유체의 유동화 시간 발산이 실험시간(20~30 h)에 막히는 문제가 그 예다. 무엇보다 같은 분야의 Schoonderwaldt et al. 2008이 이미 질적으로 지적했다. 최소 활 압력 근처에서는 '분류 결과가 정상구간 안 어디서 샘플을 떼느냐에 따라 달라지고', 긴 과도현상과 Helmholtz/다중미끄럼 교대가 나타나며, 활 속도가 클수록 T_steady가 짧아졌다고 썼다. (2) 분기 종류로 정해지는 임계감속 지수(saddle-node 0.5, Hopf 1)를 써서 짧은 관측창에서 분기점을 외삽하는 방법도 Meisel et al. 2015(PLoS Comput Biol)가 실험으로 보였다. 비슷한 외삽이 탄성 띠(Radisson & Kanso 2023), 비행 플러터(감쇠를 0까지 외삽), 큰 섭동 회복 기반 예측(D'Souza·Epureanu·Pascual 2015), 정규형 맞춤(arXiv 1007.1376)에도 있다. (3) 이진 안정/불안정 라벨로 경계를 베이즈 추정하는 연구는 절삭 채터에 있다(Karandikar·Schmitz 계열). 하지만 다음 세 가지를 합친 선행연구는 찾지 못했다. 첫째, 시간분해 '잠금(lock-in) 시각'을 구간검열(interval-censored)·우측검열 생존자료로 다룬다. 둘째, 분기 종류로 형태를 정한 이완모형으로 정상상태 경계 F*와 지수를 동시에 추정한다. 셋째, '이완시간이 관측시간을 넘으면 경계를 식별할 수 없다고 선언'하는 명시적 규칙을 둔다. 로봇 보잉 Schelleng 경계에 적용한 사례도 없다. 그래서 기여는 '유한창 편향의 발견'이 아니라 '검열 자료용 추정량 + 식별불가 판정 규칙 + 활 현 데이터로 첫 정량 보정'으로 주장해야 반박을 피할 수 있다.",
+        "per_component": [
+          {
+            "component": "① 유한 관측창 때문에 측정된 체제 경계가 치우침(finite-window bias)",
+            "status": "exists",
+            "evidence": "여러 분야에 이미 있다. 유리전이: Tg를 이완시간이 실험시간을 넘는 온도로 정하는 '잠정적' 정의, 데보라 수 D=τ_relax/t_obs(arXiv 0903.4264, Lehigh 강의, 검색 확인). 파이프 유동: 수천 D 길이 파이프에서는 패턴이 초기조건에 좌우되고 정상상태에 이르지 못한다. 그래서 10^7 이류 시간 이상 돌려 2020<Re_c<2060을 얻었다(Mukund & Hof, arXiv 1709.06372, 직접 열람). 항복응력 유체: 유동화 시간이 멱법칙으로 발산하지만 실측 최대치가 20~30 h에서 막힌다(arXiv 1605.02083, 검색). 생태: 표본창이 가장 긴 이완시간보다 짧으면 느린 모드가 평균되지 않아 가짜 극단 상관이 생긴다(arXiv 2608.20086, 2026, 검색). 같은 분야: Schoonderwaldt et al. 2008(Acta Acustica 94:604, PDF 직접 열람)이 최소 활 압력 근처의 '긴 과도현상', Helmholtz와 다중미끄럼의 반복 교대, '정상구간 어디서 샘플을 떼느냐에 따라 분류가 달라짐', 활 기계 행정 제약 때문에 고속(15·20 cm/s)에서 T_steady가 짧아짐(0.65~4.0 s)을 명시했다. 다만 이를 보정하지는 않았고 '판정은 실험자 기준에 늘 의존한다'고 결론지었다. 클라리넷: 증가하는 램프로는 정적 문턱 근처를 정확히 알 수 없다고 경고했다(Bergeot et al., arXiv 1310.8045, 직접 열람)."
+          },
+          {
+            "component": "② 이완/임계감속 모형으로 정상상태 경계를 외삽(분기 종류가 형태를 결정)",
+            "status": "exists",
+            "evidence": "Meisel, Klaus, Kuehn, Plenz 2015(PLoS Comput Biol, PMC 직접 열람)가 회복률을 λ=a(Vcp−V)^θ로 맞춰 임계전압을 자유모수로 추정했다. θ=0.5(saddle-node)일 때만 예측 거리와 실측 거리가 유의하게 상관했고 θ=1(Hopf)은 그렇지 않았다. 저자들은 '분기 종류와 지수를 알면 제한된 창에서 문턱을 추정할 수 있다'고 결론지었다. 이것은 제안의 핵심 아이디어와 직접 겹친다. 그 밖에 탄성 띠에서 T^{-1/a}(μ)를 외삽해 분기 위치를 예측한 연구(Radisson & Kanso 2023, arXiv 2302.12176, 내용은 검색 스니펫), 플러터 비행시험에서 아임계 감쇠를 0까지 외삽하는 고전 방법(NASA 보고서, 검색), 두 개 이상의 아임계 모수값에서 큰 섭동 회복을 이용해 분기점과 분기 종류를 예측한 연구(D'Souza·Epureanu·Pascual 2015 PLoS ONE, 검색), saddle-node 정규형을 시계열에 맞춰 티핑 시각을 추정한 연구(arXiv 1007.1376·Ditlevsen 강의 슬라이드, 검색)가 있다. 차이점: 이들은 안정 쪽에서 작은 섭동의 이완율을 재서 외삽한다. 제안은 '시간에 따라 움직이는 겉보기 경계 F_min(t)'를 t→∞로 외삽하고, 측정량이 공격(attack) 과도에서 잠금까지의 '큰 섭동 1차 통과시간'이다. 이 형태를 쓴 선행연구는 찾지 못했다."
+          },
+          {
+            "component": "③ 이완시간 > 관측시간이면 경계를 식별할 수 없다는 규칙",
+            "status": "partial",
+            "evidence": "개념적 유사물만 있다. 유리전이에서 τ_relax>t_obs이면 비에르고딕으로 보고 Tg를 '잠정적'으로만 정의한다(검색). Mukund & Hof는 짧은 계산에서는 정상상태에 다가가는 징후가 없다고 보고했다. 2026년 arXiv 2607.11350은 임계까지의 거리에 관측을 늘려도 줄지 않는 '구조적 불확실성'이 있다고 주장한다(검색). Schoonderwaldt 2008은 회색지대 때문에 최소 활 압력 결정이 늘 실험자 기준에 의존한다고 썼다. 그러나 경계 추정에서 'τ(F)가 T_obs를 넘는 구간은 식별불가로 선언'하는 명시적 통계 규칙(프로파일 우도가 평평해지는 조건 등)은 찾지 못했다."
+          },
+          {
+            "component": "④ 구간검열된 이진 체제 라벨(시간분해)로 경계 추정",
+            "status": "partial",
+            "evidence": "이진 라벨로 경계를 추정하는 연구는 있다. 절삭 채터에서 각 (축 절입, 주축 속도) 쌍의 안정 확률을 시험할 때마다 베이즈 갱신하고, 이진 결과와 채터 주파수를 MCMC로 결합한다(Karandikar, Honeycutt, Schmitz, Smith, J. Manuf. Processes / CIRP Annals / MSSP, 검색). 구간검열 생존분석 자체는 생물통계 표준이다(illness-death 모형, 검색). 그러나 (a) 시간분해 라벨에서 '잠금 시각'을 구간검열·우측검열 사건으로 다루고 (b) 사건 시각 척도를 임계감속 법칙 (F−F*)^−θ로 매개화해 F*를 추정하는 결합은 찾지 못했다. 채터 연구는 시간을 무시한 정적 이진 결과만 쓴다."
+          },
+          {
+            "component": "(보조) 분기 종류에 따라 정해지는 이완시간 지수와 비평활 분기의 예외",
+            "status": "partial",
+            "evidence": "매끄러운 분기의 지수는 확립되어 있다. saddle-node는 회복률 ∝ 거리^0.5, Hopf는 ∝ 거리^1(Meisel 2015, 직접 열람). 이를 실험에서 처음 보였다고 주장한 연구가 Meisel 2015다. 반면 활 현의 최소 활 압력 경계가 어떤 분기인지는 문헌에서 확정되지 않았다. Gourc et al. 2022(JSV 516, 직접 열람)는 최소 활 압력과 주기해의 '고전적 및 비평활' 분기를 연결했지만 초록에는 종류를 명시하지 않았다. 비평활(grazing-sliding) 분기에서는 Floquet 승수가 '점프'한다는 리뷰(Leine & van Campen, 검색)가 있어, 임계감속이 일반적으로 보장되지 않을 수 있다."
+          }
+        ],
+        "closest_work": [
+          {
+            "title": "Critical Slowing Down Governs the Transition to Neuron Spiking",
+            "authors": "Christian Meisel, Andreas Klaus, Christian Kuehn, Dietmar Plenz",
+            "venue": "PLoS Computational Biology 11(2):e1004097",
+            "year": 2015,
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4338190",
+            "what_it_does": "천천히 탈분극하는 신경세포에서 작은 섭동 회복률 λ를 재고 λ=a(Vcp−V)^θ를 맞춰 스파이킹 분기점을 예측했다. θ=0.5(saddle-node) 가정에서만 예측이 실측과 맞았고, 분기 종류의 지수를 알면 제한된 관측창에서 문턱을 추정할 수 있다고 주장한다. 유한창 편향과 검열은 통계 문제로 다루지 않았다.",
+            "overlap": "direct",
+            "verified_by_fetch": true
+          },
+          {
+            "title": "An Empirical Investigation of Bow-Force Limits in the Schelleng Diagram",
+            "authors": "Erwin Schoonderwaldt, Knut Guettler, Anders Askenfelt",
+            "venue": "Acta Acustica united with Acustica 94:604-622",
+            "year": 2008,
+            "url": "https://knutsacoustics.com/files/schoonderwaldt-et-al.-empirical-schelleng.pdf",
+            "what_it_does": "활 기계로 바이올린 D/E현의 Schelleng 경계를 쟀고 최소 활 압력이 활 속도와 무관하다고 보고했다. 그런데 본문에서 최소 활 압력 근처의 긴 과도현상, Helmholtz와 다중미끄럼의 교대, '분류가 정상구간 어디서 샘플을 떼느냐에 따라 달라짐'을 인정했다. 또 행정 길이(31 cm) 제약 때문에 고속에서 T_steady가 짧았다(0.65~4.0 s). 10주기 구간 3개(8/9 기준)로 판정했고 보정은 하지 않았다.",
+            "overlap": "partial",
+            "verified_by_fetch": true
+          },
+          {
+            "title": "The critical point of the transition to turbulence in pipe flow",
+            "authors": "Vasudevan Mukund, Björn Hof",
+            "venue": "arXiv:1709.06372 (JFM DOI 10.1017/jfm.2017.923)",
+            "year": 2018,
+            "url": "https://arxiv.org/abs/1709.06372",
+            "what_it_does": "파이프 길이가 유한해 관측이 정상상태에 이르지 못하는 문제를, 퍼프 열을 입구에서 재생하는 방식으로 풀었다. 10^7 이류 시간 이상 관측해 임계 Re를 2020~2060으로 좁혔다. 유한 관측이 체제 경계 추정을 흐린다는 점을 정면으로 다룬 예다.",
+            "overlap": "partial",
+            "verified_by_fetch": true
+          },
+          {
+            "title": "Dynamic behavior of elastic strips near shape transition",
+            "authors": "Basile Radisson, Eva Kanso",
+            "venue": "Physical Review E 107, 065001 (arXiv:2302.12176)",
+            "year": 2023,
+            "url": "https://arxiv.org/abs/2302.12176",
+            "what_it_does": "검색 스니펫에 따르면 여러 제어모수에서 이완시간 T(μ)를 재고 T^{-1/a}(μ)를 선형 외삽해 분기 위치를 예측한다. 스케일링 영역에 충분히 가까워야 한다는 한계도 명시한다. 열람한 초록에는 외삽 절차가 나오지 않는다.",
+            "overlap": "partial",
+            "verified_by_fetch": true
+          },
+          {
+            "title": "Forecasting bifurcations from large perturbation recoveries in feedback ecosystems",
+            "authors": "D'Souza, Epureanu, Pascual",
+            "venue": "PLoS ONE",
+            "year": 2015,
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4565629",
+            "what_it_does": "임계점 이전 두 개 이상의 모수값에서 큰 섭동 회복 궤적을 이용해 분기점, 분기 후 거동, 쌍안정 여부를 모형 없이 예측한다. 큰 섭동 회복을 쓴다는 점에서 활 현의 공격→잠금 과도와 가장 가깝다.",
+            "overlap": "partial",
+            "verified_by_fetch": false
+          },
+          {
+            "title": "Stability boundary and optimal operating parameter identification in milling using Bayesian learning",
+            "authors": "Karandikar, Honeycutt, Schmitz, Smith",
+            "venue": "Journal of Manufacturing Processes",
+            "year": 2020,
+            "url": "https://www.ornl.gov/publication/stability-boundary-and-optimal-operating-parameter-identification-milling-using",
+            "what_it_does": "절삭 시험의 이진 안정/불안정 결과로 각 모수쌍의 안정 확률을 베이즈 갱신해 채터 안정 경계를 추정한다. 시간분해와 검열, 임계감속은 고려하지 않는다.",
+            "overlap": "partial",
+            "verified_by_fetch": false
+          },
+          {
+            "title": "Bergeot et al., arXiv:1310.8045 (artificial-mouth clarinet-like instrument with increasing/plateau blowing-pressure profiles)",
+            "authors": "B. Bergeot, A. Almeida, C. Vergez, B. Gazengel, D. Ferrand",
+            "venue": "arXiv:1310.8045",
+            "year": 2013,
+            "url": "https://ar5iv.labs.arxiv.org/html/1310.8045",
+            "what_it_does": "인공 입 실험에서 증가 램프 때 진동 시작 압력이 정적 문턱보다 높고(분기 지연), 램프 속도가 클수록 지연도 커짐을 보였다. 증가 스윕은 정적 문턱 근처 정보를 정확히 주지 못한다고 경고한다. 정적 문턱은 외삽하지 않고 해석적으로 계산했다.",
+            "overlap": "related",
+            "verified_by_fetch": true
+          },
+          {
+            "title": "Prediction of the dynamic oscillation threshold of a clarinet model: Comparison between analytical predictions and simulation results",
+            "authors": "Bergeot, Almeida, Vergez et al.",
+            "venue": "arXiv:1407.3782",
+            "year": 2014,
+            "url": "https://arxiv.org/pdf/1407.3782",
+            "what_it_does": "천천히 증가하는 블로잉 압력에서 동적 문턱을 해석적으로 예측한다. 동적 문턱은 램프 시작값에 민감하고 잡음에 크게 의존한다.",
+            "overlap": "related",
+            "verified_by_fetch": false
+          },
+          {
+            "title": "Critical Slowing Down in a Real Physical System",
+            "authors": "Mathias Marconi, Karin Alfaro-Bittner, Lucas Sarrazin, Massimo Giudici, Jorge R. Tredicce",
+            "venue": "arXiv:2403.17973",
+            "year": 2024,
+            "url": "https://arxiv.org/abs/2403.17973",
+            "what_it_does": "발진 문턱을 지나는 레이저에서 임계감속을 실험으로 보이고, 시간에 따라 변하는 모수와 잡음이 임계감속에 주는 영향을 분석한다. 검색 요약에 따르면 스윕 방식에 따라 임계감속 위치가 달라진다.",
+            "overlap": "related",
+            "verified_by_fetch": true
+          },
+          {
+            "title": "Experiments and modelling of rate-dependent transition delay in a stochastic subcritical bifurcation",
+            "authors": "Bonciolini et al.",
+            "venue": "Royal Society Open Science",
+            "year": 2018,
+            "url": "https://doaj.org/article/a61cf83c435743dbb60fed82fcac06a3",
+            "what_it_does": "열음향 연소기에서 준정적 램프와 유한속도 램프를 비교해 램프 속도에 따른 분기 지연을 보이고, 지연 통계를 예측하는 대리모형을 만들었다(검색 스니펫, 열람은 403).",
+            "overlap": "related",
+            "verified_by_fetch": false
+          },
+          {
+            "title": "Nonlinear dynamics of the wolf tone production",
+            "authors": "Etienne Gourc, Christophe Vergez, Pierre Olivier Mattei, Samy Missoum",
+            "venue": "Journal of Sound and Vibration 516:116463",
+            "year": 2022,
+            "url": "https://experts.arizona.edu/en/publications/nonlinear-dynamics-of-the-wolf-tone-production/",
+            "what_it_does": "쿨롱 마찰 활 현 모형에서 매핑으로 주기해를 연속 추적하고, 고전적·비평활 분기를 최소 활 압력 개념과 연결한다. 초록에는 분기 종류가 명시되어 있지 않다.",
+            "overlap": "related",
+            "verified_by_fetch": true
+          },
+          {
+            "title": "Beyond Critical Slowing Down: Slow Modes, Extreme Tails, and Field Decoherence in Tipping Transitions",
+            "venue": "arXiv:2607.11350",
+            "year": 2026,
+            "url": "https://arxiv.org/html/2607.11350",
+            "what_it_does": "검색 요약에 따르면, 문턱 위치를 찾는 외삽 기반 조기경보에는 관측을 늘려도 줄지 않는 구조적 불확실성이 있다고 주장한다. ③의 식별불가 논의와 맞닿는다.",
+            "overlap": "related",
+            "verified_by_fetch": false
+          },
+          {
+            "title": "Correlations at criticality in ecological communities",
+            "venue": "arXiv:2608.20086",
+            "year": 2026,
+            "url": "https://arxiv.org/pdf/2608.20086",
+            "what_it_does": "표본창이 가장 긴 이완시간보다 짧으면 느린 모드가 평균되지 않아 추정 상관이 왜곡된다고 지적한다. 추론된 상호작용 척도가 측정 기간에 의존한다는 선행연구도 인용한다(검색 스니펫).",
+            "overlap": "related",
+            "verified_by_fetch": false
+          },
+          {
+            "title": "Power-law creep and residual stresses in a carbopol microgel",
+            "venue": "arXiv:1605.02083",
+            "year": 2016,
+            "url": "https://arxiv.org/pdf/1605.02083",
+            "what_it_does": "검색 요약에 따르면 유동화 시간이 응력의 멱법칙으로 발산하지만 실측 최대치가 20~30 h에서 막힌다. 실험시간이 경계 근처 측정을 자르는 예다.",
+            "overlap": "related",
+            "verified_by_fetch": false
+          },
+          {
+            "title": "Finite-time Scaling with Arbitrary Driving Rates: Bridging the Kibble-Zurek and De Grandi-Gritsev-Polkovnikov Limits",
+            "authors": "Shuai Yin",
+            "venue": "arXiv:2605.30938",
+            "year": 2026,
+            "url": "https://arxiv.org/pdf/2605.30938",
+            "what_it_does": "구동 속도 전 범위에서 유한시간 스케일링(Kibble-Zurek) 틀을 일반화한다. 램프/유한시간 데이터와 정적 임계점의 관계를 다루는 통계물리 쪽 틀이다(검색).",
+            "overlap": "related",
+            "verified_by_fetch": false
+          }
+        ],
+        "physics_notes": "결론부터: 최소 활 압력 경계(Helmholtz → 다중미끄럼)가 어떤 분기인지 확정한 문헌은 찾지 못했다. 근거와 추론을 나눠 적는다.\n(1) 고전적 유도: Schelleng과 이를 개정한 Mansour·Woodhouse·Scavone(Acta Acustica united with Acustica 103, 직접 열람: 초록만)는 최소 활 압력을 '고정 마찰이 스틱 구간 동안 버티는지'라는 힘 부등식으로 유도한다. 고유값이나 성장률 기반 안정성 분석은 초록에서 확인되지 않았다. 부등식 경계를 넘는 순간 두 번째 미끄럼이 생기는 구조이므로, 비평활 동역학 용어로는 스틱 경계를 스치는 discontinuity-induced(grazing-sliding/crossing-sliding류) 분기일 가능성이 높다. 이 부분은 추론이다. Gourc et al. 2022(JSV 516, 직접 열람)는 최소 활 압력을 주기해의 '고전적 및 비평활 분기'와 연결했지만 초록에 종류를 명시하지 않았다. Wijnand·Terrien 등(ENOC 2024, 직접 열람)도 분기 지도만 언급한다.\n(2) 실험적 단서: Schoonderwaldt et al. 2008(PDF 직접 열람)에 따르면 최소 활 압력 근처에서 Helmholtz와 다중미끄럼이 반복 교대하고, 주 미끄럼 안에서 두 번째 미끄럼이 자라나며, 1초 이상 정상 보잉 후에도 느린 요동이 남는다('long-lasting transient'). 이것은 간헐성(intermittency)이나 유령(ghost) 병목 통과의 전형적 징후다.\n(3) 예상 지수(분기 종류별): 매끄러운 saddle-node(주기해의 fold, 위상고정 경계의 병목)라면 회복률 ∝ ε^{1/2}, 곧 이완/잠금 시간 τ ∝ ε^{-1/2}이다(Meisel et al. 2015, 직접 열람: saddle-node θ=0.5, 분산 지수 −0.5). Type-I(Pomeau–Manneville) 간헐성이면 평균 층류 길이 ⟨l⟩ ∝ ε^{-1/2}이다(chao-dyn/9912019 등, 검색). Hopf, Neimark–Sacker, 주기배가, transcritical처럼 승수가 단위원을 '통과'하는 경우는 τ ∝ ε^{-1}이다(Meisel 2015: Hopf θ=1, 분산 지수 −1). 비평활 grazing류라면 Floquet 승수가 경계에서 '점프'할 수 있어(Leine & van Campen 리뷰, 검색) 선형 이완시간이 발산하지 않을 수 있다. 이때 경계 근처 잠금 지연은 임계감속이 아니라 Helmholtz 끌개 basin 축소나 유령 통과 같은 큰 섭동 1차 통과 효과일 수 있다.\n(4) 잡음: 잡음이 있으면 type-I 스케일링은 ε<0 쪽에서 exp(|ε|^{3/2}/D)로 크게 변형된다(Kye & Kim, chao-dyn/9912019, 검색). Schoonderwaldt 2008은 최저 목표 압력에서 활 압력 요동 RMS가 20~30%였다고 보고했으므로, 로봇 보잉 데이터에서도 압력 잡음이 지수 식별을 흐릴 가능성이 크다.\n정리: 사전 가설은 'τ ∝ ε^{-1/2}(saddle-node/간헐성) vs ε^{-1}(승수 통과) vs 비발산(비평활)' 세 모형을 경쟁시키는 것이 맞다. 현재 관측(경계에 가까울수록 잠금이 늦어짐, Spearman −0.38/−0.34/−0.19, 0.05 m/s에서 경계 바로 위 60%가 플래토 안에 잠기지 않음)은 세 모형 모두와 양립할 수 있으므로 지수를 데이터로 판별해야 한다.",
+        "ideas_to_strengthen": [
+          "Schoonderwaldt et al. 2008을 반박 대상이자 선행 증거로 정면 인용할 것. 그들도 최소 활 압력 근처에서 '분류가 정상구간 어디서 샘플을 떼느냐에 달라짐'과 '긴 과도현상'을 기록했고, 행정 31 cm 제약 때문에 고속(15·20 cm/s)에서 T_steady가 짧았다(0.65~4.0 s). 그러면 그들의 '최소 활 압력은 속도와 무관' 결론도 같은 settling-time 교란을 받았을 수 있다는 논리가 성립한다. 우리 지수 +1이 Schoonderwaldt의 0과 다른 이유를 이것으로 설명하라.",
+          "기여 주장을 좁힐 것. '유한창 편향의 존재'는 유리전이 Tg, 파이프 유동 Re_c, 항복응력 연구에서 이미 알려져 있다. 새로운 것은 (a) 잠금 시각의 구간검열·우측검열 생존우도, (b) 사건 시간 척도를 (F−F*)^−θ로 둔 F*·θ 동시추정, (c) τ(F)>T_obs 구간의 식별불가 판정, (d) 로봇 보잉 Schelleng 경계 첫 정량 보정이다.",
+          "Meisel 2015처럼 θ=1/2(saddle-node·type-I 간헐성), θ=1(Hopf/Neimark–Sacker/주기배가), '비발산'(비평활 grazing: 상수 τ + basin 효과) 세 모형을 같은 생존우도에서 AIC/우도비로 비교하라. 분기 종류를 '가정'하지 말고 '판별'하는 결과로 내면 Meisel과 구별되는 기여가 된다.",
+          "식별불가 규칙을 프로파일 우도로 정의하라. F*의 프로파일 로그우도가 최댓값에서 1.92 이내로 평평한 구간이 관측 가능한 힘 범위 끝에 닿거나 추정 τ(F*+δ)가 플래토 길이를 넘으면 'non-identifiable'로 보고한다. 0.05 m/s(경계 바로 위 60% 미잠금)가 첫 적용 사례가 될 것이다.",
+          "지상진실(ground truth) 시뮬레이션 검증: McIntyre–Schumacher–Woodhouse류 활 현 시뮬레이터로 충분히 긴 실행(수 초~수십 초)에서 정상상태 경계를 구한 뒤, 데이터셋과 같은 0.4 s 창과 같은 플래토 오프셋으로 잘랐을 때 생기는 편향과 제안 추정량의 복원력을 보여라. 압력 잡음 수준(RMS 20~30%)을 넣은 경우도 포함할 것.",
+          "교대 체류시간 분석: Schoonderwaldt가 본 'Helmholtz↔다중미끄럼 반복 교대'를 슬라이딩 창 라벨로 정량화하라. Helmholtz 체류시간 분포와 평균이 ε^{-1/2}로 커지는지(type-I 간헐성), 지수 분포인지(잡음 유도 도약), 멱꼬리인지 확인하면 분기 종류의 독립 증거가 된다.",
+          "속도 램프의 기억 효과: 데이터셋은 속도 램프 뒤 플래토이므로 클라리넷의 분기 지연 연구(Bergeot et al.: 동적 문턱이 램프 시작값과 잡음에 민감)처럼 공격 조건이 잠금 시간에 남기는 영향을 공변량으로 넣어라(플래토 진입 시점의 체제 라벨, 램프 지속시간).",
+          "IWK 데이터셋의 다른 현 표본(Zenodo 17749111/17782542)에서 같은 분석을 반복해 속도 지수 약 +1과 β 지수 −2.16이 표본 간에 재현되는지 보여라. 단일 표본(A2) 결론은 심사에서 가장 먼저 공격받는다.",
+          "Beigi & Conneely 2026의 β^-1 주장과 비교할 때, 그들의 측정·시뮬레이션 창 길이와 이완시간의 비(데보라 수 τ/T_obs)를 계산해 '유한창 효과로 β 지수가 완만해진다(초기 −0.6 → 후기 −2)'는 우리 메커니즘으로 그 차이를 설명할 수 있는지 정량 제시하라."
+        ],
+        "search_log": [
+          "critical slowing down bias finite observation time stability boundary measurement extrapolation steady state → 생태(2608.20086), 안정성 추론 한계(2606.23644) 등 간접 결과만",
+          "minimum bow force Helmholtz motion transient length critical slowing down → 임계감속 연결 문헌 없음; Schoonderwaldt 2008, Guettler, Lampis 2024",
+          "estimating bifurcation point from relaxation time critical slowing down quantitative extrapolation experiment → Meisel 2015 신경, Radisson & Kanso 2023 탄성 띠, ESPCI 강의노트",
+          "dynamic oscillation threshold clarinet slowly varying blowing pressure bifurcation delay static threshold → Bergeot·Almeida·Vergez 일련 논문",
+          "critical slowing down governs the transition to neuron spiking scaling laws predict bifurcation → Meisel et al. 2015 확인",
+          "machining chatter stability lobe experimental identification transient finite cut duration bias → 램프 절입/속도 시험법, 유한 지속시간 편향 문헌 없음",
+          "finite-time scaling driven critical phenomena sweep rate extrapolation static critical point Kibble-Zurek hysteresis → Yin 2026 FTS, 정적점 외삽 직접 문헌 없음",
+          "dynamic hysteresis sweep rate scaling extrapolate quasistatic bifurcation threshold laser optical bistability → Geng 2020, 지연 문턱 레이저; 준정적 외삽 직접 문헌 없음",
+          "transient time diverges near boundary observation time censored transition times survival analysis estimate critical parameter → 결합 문헌 없음, 검열 생존분석 일반론만",
+          "pipe flow turbulence lifetime finite observation time critical Reynolds number Hof → Hof 2008, Avila 2011, Mukund & Hof 2018",
+          "fluidization time diverges power law near yield stress apparent yield stress depends on observation time → Divoux carbopol(20~30 h 상한), 평균장 모형",
+          "thermoacoustic slow passage Hopf bifurcation ramp rate estimate static point from delay → Bonciolini 2018, Unni 2019; 0속도 외삽 명시 문헌 없음",
+          "Epureanu forecasting bifurcations from transient recovery rates → D'Souza·Epureanu·Pascual 2015, Chen & Epureanu 2017",
+          "flutter speed prediction subcritical damping extrapolation flutter margin method → NASA 감쇠 외삽, Zimmerman 플러터 마진",
+          "bowed string playability simulation transient duration near Schelleng boundary Galluzzo Woodhouse → Guettler 다이어그램, Lampis 2024; Schelleng 경계 장과도 분류 문헌 없음",
+          "Bayesian learning milling stability boundary binary stable unstable Karandikar Schmitz → 이진 라벨 베이즈 경계 추정(시간 무시)",
+          "estimating critical point from distribution of transient times censored power-law divergence MLE → 일반 신뢰성/변화점 문헌만",
+          "quantitative estimate tipping point from CSD saddle-node normal form Ditlevsen → arXiv 1007.1376, Ditlevsen 슬라이드(커버리지 76%)",
+          "short-time critical dynamics locate critical point directed percolation Takeuchi → 단시간 동역학으로 임계점 위치 결정(일반 DP 기법)",
+          "onset of convection critical slowing down determination critical Rayleigh number → SF6 요동 감쇠율 임계감속(cond-mat/0309689)",
+          "2024 2025 arXiv finite observation window biases estimated bifurcation threshold CSD correction (extended) → 2607.11350(구조적 불확실성), 2403.17973 레이저; 전용 보정법 없음",
+          "long transients ecology ghost attractor saddle-node finite observation → Morozov 2020 리뷰, Poulsen 2024",
+          "interval-censored bifurcation OR regime transition onset time estimation → 결합 문헌 없음",
+          "glass transition operational definition relaxation time exceeds observation time Deborah → τ>t_obs 잠정적 Tg 정의 확인",
+          "bifurcation analysis bowed string Helmholtz stability continuation minimum bow force → Gourc 2022 JSV, Wijnand ENOC 2024, Debut & Antunes 2017",
+          "Woodhouse minimum bow force derivation stability ripple multiple slip → Mansour·Woodhouse·Scavone, Schoonderwaldt ripple/corner rounding",
+          "Woodhouse On the stability of bowed string motion 1994 → 해당 논문 미확인",
+          "grazing-sliding bifurcation stick-slip Floquet multiplier jump → Leine & van Campen 리뷰(승수 점프)",
+          "Pomeau-Manneville type I intermittency laminar length ε^-1/2 → Kye & Kim(잡음 변형), 실험 사례",
+          "Arnold tongue locking boundary finite time locking time inverse square root → 직접 문헌 없음",
+          "Kuehn mathematical framework critical transitions normal forms variance scaling → arXiv 1101.2908 확인(지수 상세는 미열람)",
+          "WebFetch 열람: PMC4338190(Meisel), arXiv 1709.06372(Mukund & Hof), arXiv 2302.12176(Radisson & Kanso), ar5iv 1310.8045(Bergeot 실험), arXiv 2403.17973(Marconi), Arizona experts(Gourc 2022), ENOC24 초록(Wijnand), Cambridge repo(Mansour·Woodhouse·Scavone), Crossref(Debut 2017), knutsacoustics Schoonderwaldt 2008 PDF(pdftotext로 본문 확인); DOAJ Bonciolini는 403"
+        ]
+      },
+      {
+        "branch": "bowedstring",
+        "verdict": "partial_overlap",
+        "verdict_reason": "조각은 각각 선행연구에 있지만, 그것들을 하나로 묶은 방법(유한 관측창 편향 → 시간분해·구간검열 라벨 → 분기유형 기반 이완모형으로 정상상태 경계 외삽 → τ>T_obs면 식별불가 선언)은 찾지 못했다. 문헌별 겹침은 다음과 같다. (1) Beigi & Conneely arXiv 2609.14990 v3(2026-09-28)은 시뮬레이션에서 정착창 규약(문자열 주기 고정 vs 초 고정)에 따라 A현 F_min의 β 지수가 −1.14와 −1.58 사이에서 바뀐다고 본문 II-H에 직접 적었다. 플레이어빌리티 맵의 Helmholtz 셀 수도 규약에 따라 38% 달라지고, 초 고정 창에서는 G현 경계가 10개 위치 중 7곳에서 아예 잡히지 않았다. 따라서 'F_min 지수가 정착 규약에 의존한다'는 사실 자체는 새롭지 않다. 다만 그들은 '제대로 정착시키면(140주기) β^-1'이라고 결론지을 뿐 시간 외삽이나 임계 감속을 다루지 않았다. (2) Schoonderwaldt 외(2008)는 F_min 근처의 '긴 과도'와 '1초 이상 정상 활긋기 뒤에도 남는 느린 요동'을 실험으로 관찰했다. 분류가 정상 구간 어디서 샘플을 떼느냐에 달려 있다는 점도 인정했고, 대응책으로 3구간×3반복 중 8/9 이상 규칙을 썼다. 그러나 개시시간을 (F−F_min)의 함수로 정량화하거나 발산·스케일링으로 다루지는 않았다. (3) Galluzzo(2004)는 F_min 선 근처의 '불신뢰성'과 '이중 슬립이 서서히 Helmholtz로 바뀌는' 과도를 보고했지만 어택(Guettler) 맥락이다. (4) F_min 경계의 분기 유형을 이론이나 시뮬레이션으로 정한 문헌은 없었다. (5) IWK 논문들의 창 선택 근거와 속도-정착 교락을 언급한 곳도 찾지 못했다(POMA와 van Walstijn 2026의 본문은 열지 못했다).",
+        "per_component": [
+          {
+            "component": "① 정속 활긋기에서 F_min 근처 Helmholtz 개시·정착 시간과 활 압력의 관계(발산 여부)",
+            "status": "partial",
+            "evidence": "Schoonderwaldt, Guettler, Askenfelt(2008, Acta Acust. 94, PDF 본문 확인): Experiment I은 '하한 근처에서 긴 과도와 혼합 운동 때문에 분류가 모호했다'고 적었다. Fig. 9 캡션은 F_min 근처 파형의 느린 요동이 '1초 이상 정상 활긋기 뒤에도' 남는 과도라고 설명한다. 하한 근처에서 Helmholtz와 다중슬립이 반복적으로 교대해 분류가 정상 구간의 샘플 위치에 따라 달라졌다는 서술도 있다. 반면 2.4절에서는 '긴 지연이 관찰되지 않아 T_steady가 충분하다'고 결론지었다. 그들의 T_steady는 0.65–4 s였고, 활 행정 한계(31 cm) 때문에 15·20 cm/s에서 짧았다. IWK 데이터와 같은 방향의 속도-정착 교락이다. Galluzzo(2004, 박사논문, 본문 확인): Schelleng 측정은 0.05 m/s에서 2초 유지 후 0.1초를 분석했고 '모든 경우 2초로 충분했다'고 주장한다. 어택(Guettler) 실험에서는 F_min 선 근처에서 '이중 슬립이 서서히 Helmholtz로 바뀌고' 경계 근처 작동점이 가장 불안정하다고 보고했다. Lampis 외(2024, Acta Acustica 8:44, 본문 확인)와 JASA EL 2024(본문 확인)는 가속도-압력 평면의 pre-Helmholtz 과도시간 지도이며, 정속에서 (F−F_min)에 따른 발산은 다루지 않았다. 결론: '경계 근처에서 과도가 길다'는 정성적 관찰은 선행이 있다. 정속 조건에서 잠금시간과 경계거리의 상관(Spearman), 미잠금 비율, 발산 스케일링을 정량화한 문헌은 찾지 못했다."
+          },
+          {
+            "component": "② F_min 경계의 분기 유형(주기배가/안장-마디/subcritical)",
+            "status": "not_found",
+            "evidence": "분기 유형을 명시한 문헌을 찾지 못했다. Boutillon(2000, Mécanique & Industries, 초록만 확인): Helmholtz 안정성과 과도 후 도달 조건을 분석했다고만 적혀 있고 유형은 초록에 없다. Debut, Antunes, Inácio(2017, JASA 141:2107, 초록 확인): 정상 미끄럼 평형을 선형화한 모드 안정성 분석으로, 발진 개시(Hopf류)를 다룬다. Helmholtz와 다중슬립 사이 경계는 아니다. Wijnand, Terrien, Ablitzer, Maugeais(ENOC 2024, 초록 확인): 정규화 Coulomb 최소모델의 분기 지도를 만들었지만 초록에 분기 유형이 나오지 않는다. Schoonderwaldt 2008 §4.4(본문 확인)의 메커니즘 서술: 압력을 서서히 줄이면 주 슬립 직후에 2차 슬립이 생겨 자라고, 주 슬립은 줄며 둘이 번갈아 커지고 작아진 끝에 주 슬립이 사라진다. 원인은 마찰력 리플로 본다. Beigi & Conneely v3: 해상도를 두 배로 올려도 경계 셀 판정의 29%가 바뀌고 교차 횟수가 수렴하지 않는다고 보고했지만 분기 해석은 없다."
+          },
+          {
+            "component": "③ F_min 지수(β·속도)의 정착 규약 의존성",
+            "status": "exists",
+            "evidence": "Beigi & Conneely, arXiv 2609.14990 v3(2026-09-28, PDF 본문 확인) II-H절: 지수와 공동 적합은 '고정 시간이 아니라 고정 주기 수로 잡은 창'에서 측정했다. 초 고정 창에서는 네 현이 정착에 15.7/23.5/35.2/52.8 주기만 받고, 경계를 찾지 못한 β 위치 수가 이 순서를 그대로 따른다(G 7/10, D 3/10, A·E 0). 두 규약은 속도 지수에서 거의 일치하지만(+0.04, −0.09), A현 β 지수는 −1.14에서 −1.58로 이동한다(문장상 방향은 명시되지 않음). II-F/G절: 140 정착주기로 맵을 다시 만들면 Helmholtz 셀이 118개에서 163개로 늘고(38%), '그 개수는 한 분석창에서의 측정값이지 현의 성질이 아니다'라고 적었다. Table III(주기 창)의 F_min β 지수는 G −0.83, D −1.00, A −1.08, E −0.60이고 속도 지수는 +0.82~+1.14다. 한계: 시뮬레이션(강체 종단, 브리지 저항 없음, Q=900 고정)이고, 시간 외삽·이완모형·임계감속 개념은 없다. 실험에서 규약 의존성을 보인 문헌은 찾지 못했다."
+          },
+          {
+            "component": "④ IWK 논문의 분석창 선택과 속도-정착 교락 언급 여부",
+            "status": "partial",
+            "evidence": "Zenodo 17749111/17782542(확인): 측정마다 '분류창 시작·끝' timestamps 파일이 있다고만 하고 선택 기준은 설명하지 않는다. 속도는 폴더1=0.1, 폴더2=0.05, 폴더3=0.2 m/s다. POMA 58:035013 초록(pubs.aip.org 확인): 'steady-state signals'로 Schelleng 도표를 구성했다고만 쓴다. 'string settling에 따른 음색 편차가 커서 play-in 기간이 중요하다'는 문장의 settling은 새 현 길들이기를 뜻하며 활긋기 내 과도 정착이 아니다. PDF 본문은 접근하지 못했다. mdw magazin(2025-09-26, Lampis 본인 글, 확인): '도표들은 활이 처음 닿은 뒤 현이 정상 진동에 정착하는 데 걸리는 시간도 보여준다'고 썼는데, Guettler 도표와 함께 언급된 문장이다. van Walstijn, Chatziioannou, Lampis, Matusiak(2026, Acta Acustica 10:47): PDF·HTML·epub·abs 모두 403이라 열지 못했다. 검색 스니펫과 Beigi 논문의 인용으로 보면 마찰 파라미터를 맞춰 여러 β에서 측정된 최소·최대 압력을 재현했다고 한다. pub.mdw.ac.at에서는 같은 그룹의 2025 Frontiers 논문만 찾았다. 결론: 창 선택 근거나 속도-정착 교락을 논의한 IWK 문헌은 확인하지 못했다(두 본문은 미확인)."
+          }
+        ],
+        "closest_work": [
+          {
+            "title": "Learned Bow Control on a Measured Bowed-String Model: a Revised Minimum-Bow-Force Law, a Recurrent Controller, and the Domain of a Supervision Ceiling",
+            "authors": "Homayoon Beigi, Grace Conneely",
+            "venue": "arXiv 2609.14990 (v3, 2026-09-28)",
+            "year": 2026,
+            "url": "https://arxiv.org/abs/2609.14990",
+            "what_it_does": "유한차분 활현 모델(암시적 Stribeck 마찰, 강체 종단)에서 F_min = C·Z·v_b/β(C=1.112)를 제안했다. II-H절에서 정착창 규약(주기 고정 vs 초 고정)에 따라 A현 F_min의 β 지수가 −1.14와 −1.58 사이로 바뀌고 맵의 Helmholtz 셀 수가 38% 달라진다고 명시했다. 다만 주기 고정 140주기 창을 '제대로 정착된' 기준으로 보고 β^-1을 결론으로 삼았으며, 시간 외삽이나 임계감속 논의는 없다.",
+            "overlap": "partial",
+            "verified_by_fetch": true
+          },
+          {
+            "title": "An Empirical Investigation of Bow-Force Limits in the Schelleng Diagram",
+            "authors": "Erwin Schoonderwaldt, Knut Guettler, Anders Askenfelt",
+            "venue": "Acta Acustica united with Acustica 94(4), 604-622",
+            "year": 2008,
+            "url": "https://knutsacoustics.com/files/schoonderwaldt-et-al.-empirical-schelleng.pdf",
+            "what_it_does": "활긋기 기계로 바이올린 D/E현의 Schelleng 도표를 측정해 F_min이 속도와 무관하다고 보고했다. F_min 근처에서 긴 과도, 1초 넘게 남는 느린 요동, Helmholtz와 다중슬립의 반복 교대를 관찰했다. 정상 구간 안 미리 정한 3개 지점에서 각 10주기 창을 떼고 3반복 중 8/9 이상 기준을 썼다. T_steady는 고속에서 짧았다(속도-정착 교락). 감소 램프로 붕괴 메커니즘도 기술했다.",
+            "overlap": "partial",
+            "verified_by_fetch": true
+          },
+          {
+            "title": "On the Playability of Stringed Instruments (PhD thesis)",
+            "authors": "Paul M. Galluzzo",
+            "venue": "University of Cambridge",
+            "year": 2004,
+            "url": "https://www.repository.cam.ac.uk/bitstream/1810/244810/1/Galluzzo%20thesis_root_singleSided3Apr04.pdf",
+            "what_it_does": "첼로 활긋기 기계를 썼다. Schelleng 측정은 Helmholtz로 시작해 0.05 m/s에서 2초 유지 후 0.1초 창으로 분류했고 '2초면 항상 충분'하다고 주장했다. Guettler 도표에서는 F_min 선 근처 과도가 길고 반복 재현성이 낮으며 경계가 흐려진다고 보고했다.",
+            "overlap": "related",
+            "verified_by_fetch": true
+          },
+          {
+            "title": "Assessing playability limits of bowed-string transients using experimental measurements",
+            "authors": "Alessio Lampis, Alexander Mayer, Vasileios Chatziioannou",
+            "venue": "Acta Acustica 8, 44",
+            "year": 2024,
+            "url": "https://pub.mdw.ac.at/pubmdw/publication/9056290a-503f-411f-82c9-13d16ef757d5/pdf",
+            "what_it_does": "로봇팔로 브리지력을 측정해 가속도-압력 평면(Guettler 도표)의 pre-Helmholtz 과도시간 지도를 만들었다. 20주기 이상을 실패로 처리했고, 0.2 s 창의 ZCR로 보조 판정했다. 정속 조건의 F_min 근처 정착시간은 다루지 않았다.",
+            "overlap": "related",
+            "verified_by_fetch": true
+          },
+          {
+            "title": "Experimental analysis of cello string types: influence on playability and tonal characteristics using Schelleng diagrams",
+            "authors": "Alessio Lampis, Vasileios Chatziioannou, Gary Scavone",
+            "venue": "Proceedings of Meetings on Acoustics 58, 035013",
+            "year": 2025,
+            "url": "https://pubs.aip.org/asa/poma/article/doi/10.1121/2.0002111",
+            "what_it_does": "사용 중인 Zenodo 데이터셋의 원 논문이다. G2 첼로현 8종을 로봇으로 측정해 고해상도 Schelleng 도표를 만들었다. 초록에는 'steady-state signals'만 언급되고, 'string settling'은 현 길들이기(play-in)를 뜻한다. 창 선택 근거는 본문에 접근하지 못해 확인하지 못했다(초록만 확인).",
+            "overlap": "related",
+            "verified_by_fetch": true
+          },
+          {
+            "title": "A thermal elasto-plastic friction model for bowed-string simulation",
+            "authors": "Maarten van Walstijn, Vasileios Chatziioannou, Alessio Lampis, Ewa Matusiak",
+            "venue": "Acta Acustica 10, 47",
+            "year": 2026,
+            "url": "https://acta-acustica.edpsciences.org/articles/aacus/abs/2026/01/aacus260048/aacus260048.html",
+            "what_it_does": "탄소성 사전미끄럼과 열 마찰을 결합한 모델로 측정된 브리지력을 재현하고, 여러 β에서 최소·최대 압력을 예측한다(검색 스니펫과 Beigi 논문의 인용 기준). 본문은 모두 403이라 열지 못했다.",
+            "overlap": "related",
+            "verified_by_fetch": false
+          },
+          {
+            "title": "A collection of bowed responses of cello strings (part 1 / part 2)",
+            "authors": "Alessio Lampis; Vasileios Chatziioannou; Alexander Mayer",
+            "venue": "Zenodo 17749111 / 17782542",
+            "year": 2025,
+            "url": "https://zenodo.org/records/17749111",
+            "what_it_does": "UR5e 로봇 활긋기로 얻은 G2 첼로현 데이터셋(50 kHz, β 0.02–0.2, 압력 0.1–4 N, 속도 3종)이다. 분류창 timestamps를 제공하지만 선택 근거는 설명하지 않는다.",
+            "overlap": "related",
+            "verified_by_fetch": true
+          },
+          {
+            "title": "An experimental approach for comparing the influence of cello string type on bowed attack response",
+            "authors": "Alessio Lampis, Alexander Mayer, Vasileios Chatziioannou",
+            "venue": "JASA Express Letters 4, 113201",
+            "year": 2024,
+            "url": "https://pub.mdw.ac.at/pubmdw/publication/50841b67-c7f9-43fa-b05d-8314c1edd2c1/pdf",
+            "what_it_does": "현 종류별 Guettler 도표의 과도시간을 비교하고, 10주기 미만 확률지도를 그렸다. 어택 맥락이다.",
+            "overlap": "related",
+            "verified_by_fetch": true
+          },
+          {
+            "title": "Linear modal stability analysis of bowed-strings",
+            "authors": "V. Debut, J. Antunes, O. Inácio",
+            "venue": "JASA 141(3), 2107-2120",
+            "year": 2017,
+            "url": "https://api.crossref.org/works/10.1121/1.4976092",
+            "what_it_does": "정상 미끄럼 평형을 선형화해 모드 안정성 차트를 그리고, 이를 분기 특성화의 예비 도구로 제시했다. Helmholtz와 다중슬립 사이 경계의 분기 유형은 다루지 않았다(초록 기준).",
+            "overlap": "related",
+            "verified_by_fetch": true
+          },
+          {
+            "title": "Bifurcation analysis of a minimal model of a bowed string instrument",
+            "authors": "Marc Wijnand, Soizic Terrien, Frédéric Ablitzer, Sylvain Maugeais",
+            "venue": "ENOC 2024 (abstract 254)",
+            "year": 2024,
+            "url": "https://enoc24.dryfta.com/16812888041/abstract-archive/abstract/public/254/bifurcation-analysis-of-a-minimal-model-of-a-bowed-string-instrument",
+            "what_it_does": "정규화 Coulomb 마찰 최소모델을 수치 연속법으로 분석해 음향 체제를 지도화했다. 초록에 F_min 경계의 분기 유형은 나오지 않는다.",
+            "overlap": "related",
+            "verified_by_fetch": true
+          },
+          {
+            "title": "Corde frottée sur un violon: Dynamique, mouvements standard et instabilités",
+            "authors": "Xavier Boutillon",
+            "venue": "Mécanique et Industries 1(6), 609-619",
+            "year": 2000,
+            "url": "https://researchportal.ip-paris.fr/en/publications/corde-frott%C3%A9e-sur-un-violon-dynamique-mouvements-standard-et-inst/",
+            "what_it_does": "Helmholtz 운동의 안정성, 초기 과도 후 도달 조건, 이상 운동에서의 이탈을 분석했다(초록만 확인, 분기 유형은 미확인).",
+            "overlap": "related",
+            "verified_by_fetch": true
+          },
+          {
+            "title": "On Minimum Bow Force for Bowed Strings",
+            "authors": "Hossein Mansour, Jim Woodhouse, Gary Scavone",
+            "venue": "Acta Acustica united with Acustica 103(2), 317-330",
+            "year": 2017,
+            "url": "https://www.repository.cam.ac.uk/handle/1810/263508",
+            "what_it_does": "몸통 공명과 비틀림을 고려해 최소 압력을 재유도하고 시뮬레이션으로 확인했다(검색 결과로만 확인).",
+            "overlap": "related",
+            "verified_by_fetch": false
+          },
+          {
+            "title": "Numerical study on transient response of the bowed string",
+            "authors": "Miwa Sueda et al.",
+            "venue": "Mechanical Engineering Journal 12(3)",
+            "year": 2025,
+            "url": "https://www.jstage.jst.go.jp/article/mej/12/3/12_24-00441/_article",
+            "what_it_does": "질량-스프링 사슬과 음의 기울기 마찰 모델로 과도 중 다중 Helmholtz파의 분리와 정상상태로의 전이를 분석했다. 초록에는 압력 의존성이나 F_min 근처 발산이 없다.",
+            "overlap": "related",
+            "verified_by_fetch": true
+          }
+        ],
+        "physics_notes": "【문헌상 분기 유형】 F_min 경계(Helmholtz와 다중슬립·이중슬립 사이)의 분기 유형을 이론이나 시뮬레이션으로 명시한 문헌은 이번 검색에서 찾지 못했다. 확인한 것은 다음과 같다. (a) Schoonderwaldt 외 2008 §4.4(본문 확인): 압력을 천천히 줄이면 F_min 직전에 공칭 슬립속도에 못 미치고, 고착 구간이 들썩이며, 주 슬립 직후에 2차 슬립이 생긴다. 이 2차 슬립이 자라고 주 슬립이 줄며 둘이 번갈아 커졌다 작아지고(포락선 최소=두 슬립 크기가 같을 때), 끝내 주 슬립이 사라지는 과정이 반복된다. 원인은 마찰력 리플로 해석한다. 또 F_min 근처에서는 'Helmholtz와 다중슬립의 반복 교대'와 '1초 넘는 느린 요동'이 있었다. (b) Galluzzo 2004(본문 확인): 경계 근처에서 '이중 슬립이 서서히 Helmholtz로 바뀌는' 과도와 반복 간 혼돈적 변동이 있다. (c) Boutillon 2000은 Helmholtz 안정성을 분석했지만 초록만 확인했다. Debut 외 2017은 정상 미끄럼의 선형 안정성으로, 발진 개시(Hopf류)를 다루며 F_min 경계와는 다른 분기다. Wijnand 외 ENOC 2024는 초록에 유형이 없다. (d) Beigi & Conneely v3는 경계 셀 판정이 해상도에 수렴하지 않는다(교차 수가 줄었다 다시 늘어남)고만 보고했다. 【추론(문헌 근거 아님)】 이중슬립 운동은 기본주기가 같으므로 주기배가보다는 Floquet 승수가 +1을 지나는 유형이 자연스러운 가설이다. 후보는 한계주기의 안장-마디, 트랜스크리티컬, 피치포크다. Schoonderwaldt의 '반복 교대'와 Galluzzo의 '경계 근처 불신뢰성'은 subcritical(쌍안정, 히스테리시스)이나 잡음 유도 간헐성과도 양립한다. 측정 방식의 차이도 중요하다. Galluzzo와 Schoonderwaldt는 먼저 Helmholtz를 만든 뒤 유지 여부를 보는 '유지 경계'를 쟀고, IWK 데이터는 어택에서 출발하는 '수립 경계'다. 분기가 subcritical이면 두 경계는 달라야 한다. 【기대 스케일링(일반 분기이론, 이번 검색에서 출처로 확인하지 않음)】 승수가 횡단적으로 통과하는 경우(트랜스크리티컬/피치포크/주기배가) 안정 측 선형 이완시간은 τ ∝ |F−F_c|^(−1)(지수 1)이고, 고정 초기교란 δ0에서의 잠금시간은 ≈ τ·ln(1/δ0)이다. 안장-마디(접선)라면 남는 안정 가지에서 τ ∝ (F−F_c)^(−1/2)이고, 반대쪽에서는 '유령' 병목 체류시간 ∝ (F_c−F)^(−1/2)이 나타나 경계 아래에서 Helmholtz 비슷한 긴 에피소드가 예상된다. subcritical이면 히스테리시스 띠 안에서 발산 대신 끌개 영역(초기조건) 문제가 된다. 0.05 m/s에서 '경계 바로 위 60% 미잠금'은 임계감속이 아니라 쌍안정의 신호일 수 있으므로, 생존분석의 cure fraction으로 따로 추정해야 한다. 판별법은 세 가지다. ① 경계 위 잠금시간 중앙값을 log(F−F_c)에 회귀해 기울기가 −1인지 −1/2인지 본다. ② 경계 아래에서 Helmholtz 유사 체류시간이 (F_c−F)^(−1/2)로 늘어나는지 본다. ③ 미잠금 비율이 F−F_c와 무관한 평탄 구간을 갖는지(쌍안정) 본다.",
+        "ideas_to_strengthen": [
+          "Beigi & Conneely v3 II-H절(β 지수 −1.14↔−1.58, 초 고정 창에서 G현 경계 7/10 소실, 맵 셀 수 38% 변동)을 '정착 의존성의 독립 시뮬레이션 증거'로 인용하라. 그 위에서 '140 정착주기도 경계 근처(τ 발산)에서는 정착이 아니다'를 반론으로 세우면 된다. 그들의 β^-1 결론과 우리의 외삽값 −2.16은 정면으로 충돌한다. 그들 모델에는 브리지 저항이 없고(강체 종단, Q 고정) Schelleng의 F_min ∝ 1/R 메커니즘이 빠져 있다는 점도 함께 지적하라.",
+          "Schoonderwaldt 2008을 '정성적 선행'으로 명확히 인정하라(긴 과도, 1초 넘는 느린 요동, 샘플 위치 의존 분류, 3창×3반복 중 8/9 규칙). 그들의 T_steady가 고속에서 짧았다(0.65–4 s, 31 cm 행정 한계)는 사실은 IWK와 같은 방향의 속도-정착 교락이다. 이를 근거로 '속도 지수 0'이라는 기존 결론의 재검토 필요성을 제기할 수 있다.",
+          "분기 유형을 데이터로 판별하는 분석을 추가하라. 잠금시간과 (F−F_c)의 로그-로그 기울기(−1 vs −1/2)를 보고, 경계 아래 Helmholtz 유사 에피소드의 체류시간 분포(유령 병목)를 보고, 미잠금 비율을 cure fraction으로 둔 구간검열 생존모형(혼합 치유모형)으로 쌍안정 여부를 검정하라.",
+          "유지 경계와 수립 경계를 구분하라. IWK 데이터는 어택 출발이고, Galluzzo와 Schoonderwaldt는 Helmholtz 출발이다. subcritical이면 히스테리시스가 생기므로, 같은 β에서 두 정의의 F_min 차이를 문헌값과 비교하거나 시뮬레이션에서 증가·감소 램프로 히스테리시스를 직접 재라.",
+          "현 길들이기(POMA 초록의 'string settling', Zenodo Part 3 cold/warm, Part 6 반복 측정)에 따른 장기 드리프트와 활긋기 내 과도 정착을 분리하라. 측정 순서·세션 효과를 공변량으로 넣고, 다른 현 표본과 반복 세트로 재현해 A2 한 표본이라는 약점을 메워라.",
+          "시뮬레이션으로 교차 검증하라. Beigi형 FD 모델이나 열-탄소성 모델을 F_min 근처에서 길게(수천 주기) 돌려 τ(F)의 발산과 지수를 직접 재고, '주기 고정 창'의 길이를 바꿔 가며 β 지수가 −1에서 −2로 이동하는지 보여 주면 방법론의 일반성이 강해진다.",
+          "τ > T_obs인 조건(0.05 m/s)을 '식별불가'로 표시하는 규칙을 Beigi의 'G현 경계 소실' 현상과 연결해 일반 원리로 제시하라. 외삽 지수의 신뢰구간이 관측시간에 따라 어떻게 수렴하는지 곡선으로 보고하라.",
+          "Lampis(IWK)에게 분류창 timestamps의 선택 기준과 POMA 본문을 직접 문의하라. van Walstijn 2026 본문은 기관 접속으로 확보해 창 규약을 확인하라. 현재 두 본문은 403/미접근 상태다."
+        ],
+        "search_log": [
+          "WebFetch arxiv.org/abs/2609.14990 → 제목·v1(09-14)/v2(09-19)/v3(09-28) 확인, 초록에는 창 규약 언급 없음",
+          "WebSearch: Beigi Conneely minimum bow force exponent arXiv 2026 Schelleng",
+          "WebFetch arxiv.org/pdf/2609.14990v3 → PDF 저장 후 pdftotext로 본문 추출, II-H절에서 'moves from −1.14 to −1.58' 및 15.7/23.5/35.2/52.8주기, 140 정착주기 118→163 셀 확인",
+          "WebSearch: Mansour Woodhouse Scavone 'minimum bow force' Acta Acustica 2017",
+          "WebSearch: Galluzzo Woodhouse bowing machine transients Helmholtz time to establish",
+          "WebFetch pub.mdw.ac.at 9056290a…/pdf → Lampis 2024 Acta Acustica 8:44 본문 추출(Guettler 과도시간, 참고문헌)",
+          "WebFetch pub.mdw.ac.at 50841b67…/pdf → Lampis 2024 JASA EL 본문 추출",
+          "WebSearch: Woodhouse 'On the playability of violins' Part II minimum bow force transients 1993",
+          "WebSearch: bowed string bifurcation Helmholtz minimum bow force period-doubling saddle-node",
+          "WebSearch: Müller Lauterborn bowed string nonlinear dynamical system bifurcation",
+          "WebFetch ioa.org.uk Woodhouse 'Measuring the playing properties' → 404",
+          "WebFetch ENOC24 abstract 254 (Wijnand et al.) → 분기 유형 미명시",
+          "WebFetch api.crossref.org 10.1121/1.4976092 → Debut, Antunes, Inácio 2017 초록",
+          "WebSearch: Wijnand Terrien Ablitzer Maugeais bowed string bifurcation continuation 2025",
+          "WebFetch jstage MEJ 12(3) Sueda et al. 2025 초록; WebFetch arxiv 2502.11902(Kawano 외, 무관)",
+          "WebSearch: Lampis Chatziioannou Scavone POMA 2025 bow force limits cello robot",
+          "WebSearch: van Walstijn Chatziioannou Lampis Matusiak Acta Acustica 2026 elasto-plastic thermal",
+          "WebFetch acta-acustica aacus260048 pdf / full_html / epub / abs → 모두 403",
+          "WebFetch zenodo 17749111 → 분류창 timestamps 존재, 선택 근거 없음",
+          "WebFetch pub.mdw.ac.at e0518e7b… → Matusiak 외 2025 Frontiers(대상 논문 아님)",
+          "WebSearch: 'thermal elasto-plastic friction model for bowed-string simulation'",
+          "WebSearch: 'Experimental analysis of cello string types' Schelleng diagrams Lampis",
+          "WebFetch mdw.ac.at magazin 2025-09-26 → Lampis 본인 글, 정착시간 언급(Guettler·Schelleng 공통 문장)",
+          "WebFetch pubs.aip.org POMA 58/1/035013 → 404; WebFetch doi.org/10.1121/2.0002111 → 리다이렉트; WebFetch pubs.aip.org/asa/poma/article/doi/10.1121/2.0002111 → 초록 확인(string settling=play-in)",
+          "WebSearch: Alessio Lampis dissertation bowed string Schelleng classification window",
+          "WebSearch: Lampis 'string settling' Schelleng G2 pitch flattening",
+          "WebSearch: Schumacher Woodhouse 'transient behaviour of models of bowed-string motion' Chaos 1995",
+          "WebFetch knutsacoustics Schoonderwaldt 2008 PDF → 본문 추출: T_steady 0.65–4 s, 고속에서 짧음, F_min 근처 긴 과도·느린 요동·샘플 위치 의존, 3창×3반복 8/9 기준, §4.4 붕괴 메커니즘",
+          "WebFetch Cambridge repository Galluzzo thesis(리다이렉트 → api.repository.cam.ac.uk) → 본문 추출: 0.05 m/s 2초 유지 후 0.1 s 창, F_min 선 근처 과도·불신뢰성",
+          "WebSearch: Woodhouse 'On the stability of bowed string motion' Acustica 1994 Floquet",
+          "WebSearch: Weinreich Caussé 'Elementary stability considerations for bowed-string motion' 1991",
+          "WebFetch researchportal.ip-paris.fr Boutillon 2000 초록; WebFetch escholarship.mcgill.ca → 리다이렉트(미확인)",
+          "WebSearch: bowed string Helmholtz double slip hysteresis bistability minimum bow force",
+          "WebSearch: 'critical slowing down' stick-slip OR bowed string regime boundary finite observation time bias → 활현 관련 결과 없음(Pomeau & Le Berre 2011 등 일반 마찰)",
+          "WebSearch: Mores 'Complementary empirical data on minimum bow force' JASA 2017 → 서지만, 본문 없음",
+          "WebSearch: arXiv 2025 2026 bowed string Schelleng transient settling classification window robot",
+          "WebFetch zenodo 17782542 → part 2, 창 선택 근거 없음, Part 3 cold/warm·Part 6 반복 측정 언급",
+          "WebSearch: 'playability of violins' 'minimum bow force and transients' Woodhouse Acustica 78 abstract → 본문·초록 미확보"
+        ]
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Search"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "lit:finite-time-bifurcation",
+      "phaseIndex": 1,
+      "phaseTitle": "Search",
+      "agentId": "af7d5a92642c594bb",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1792234931040,
+      "queuedAt": 1792234931023,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "dynamics",
+      "promptPreview": "[Research context]\nPublic robot-bowing cello data (IWK Vienna, Zenodo 17749111/17782542, Lampis, Mayer, Chatziioannou). Each string specimen: 3 bow speeds x 40 bow positions (beta) x 50 bow forces = 6,000 strokes, bridge and nut force at 50 kHz. We label Helmholtz vs multiple-slip vs aperiodic from bridge-force waveforms.\nFindings today (one specimen, A2): (1) the dataset's fixed 0.4 s analysis wi…",
+      "promptFramed": true,
+      "lastProgressAt": 1792235408978,
+      "tokens": 129132,
+      "toolCalls": 49,
+      "durationMs": 477938,
+      "resultPreview": "{\"branch\":\"dynamics\",\"verdict\":\"partial_overlap\",\"verdict_reason\":\"구성요소 하나하나는 이미 다른 분야에 있다. (1) 관측 시간이 유한해서 측정된 경계가 치우친다는 점은 잘 알려져 있다. 유리전이 Tg를 '이완시간이 실험시간을 넘는 온도'로 정하는 조작적 정의, 파이프 유동 임계 Re 논쟁(Mukund & Hof는 정상상태를 보려고 10^7 시간단위 넘게 돌림), 항복응력 유체의 유동화 시간 발산이 실험시간(20~30 h)에 막히는 문제가 그 예다. 무엇보다 같은 분야의 Schoonderwaldt et al. 2008이 이미 질적으로 지적했다. 최소 활 압력 근처에서는 '분류 결과가 정상구간 안 어디서 샘플을 떼느냐에 따라 달라지고', 긴 과도현상과 He…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "lit:bowed-string-settling",
+      "phaseIndex": 1,
+      "phaseTitle": "Search",
+      "agentId": "a736a1fd4803c8a66",
+      "model": "claude-opus-5-5",
+      "state": "done",
+      "startedAt": 1792234931040,
+      "queuedAt": 1792234931023,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "bowedstring",
+      "promptPreview": "[Research context]\nPublic robot-bowing cello data (IWK Vienna, Zenodo 17749111/17782542, Lampis, Mayer, Chatziioannou). Each string specimen: 3 bow speeds x 40 bow positions (beta) x 50 bow forces = 6,000 strokes, bridge and nut force at 50 kHz. We label Helmholtz vs multiple-slip vs aperiodic from bridge-force waveforms.\nFindings today (one specimen, A2): (1) the dataset's fixed 0.4 s analysis wi…",
+      "promptFramed": true,
+      "lastProgressAt": 1792235594533,
+      "tokens": 159181,
+      "toolCalls": 66,
+      "durationMs": 659663,
+      "resultPreview": "{\"branch\":\"bowedstring\",\"verdict\":\"partial_overlap\",\"verdict_reason\":\"조각은 각각 선행연구에 있지만, 그것들을 하나로 묶은 방법(유한 관측창 편향 → 시간분해·구간검열 라벨 → 분기유형 기반 이완모형으로 정상상태 경계 외삽 → τ>T_obs면 식별불가 선언)은 찾지 못했다. 문헌별 겹침은 다음과 같다. (1) Beigi & Conneely arXiv 2609.14990 v3(2026-09-28)은 시뮬레이션에서 정착창 규약(문자열 주기 고정 vs 초 고정)에 따라 A현 F_min의 β 지수가 −1.14와 −1.58 사이에서 바뀐다고 본문 II-H에 직접 적었다. 플레이어빌리티 맵의 Helmholtz 셀 수도 규약에 따라 38% 달라지고, 초 고정 창에서…"
+    }
+  ],
+  "totalTokens": 288313,
+  "totalToolCalls": 115
+}

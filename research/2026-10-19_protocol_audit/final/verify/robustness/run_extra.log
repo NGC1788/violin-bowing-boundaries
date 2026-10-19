@@ -1,0 +1,78 @@
+(a) observed finite lower-boundary midpoints: median force [N] and share < 0.2 N, per speed
+  B1      v0.05: med 0.446 N, <0.2N 0.21 (n 24, left-cens 16) | v0.1: med 0.596 N, <0.2N 0.31 (n 39, left-cens 1) | v0.2: med 0.996 N, <0.2N 0.11 (n 28, left-cens 4)
+  C1      v0.05: med 0.263 N, <0.2N 0.39 (n 23, left-cens 17) | v0.1: med 0.595 N, <0.2N 0.26 (n 31, left-cens 9) | v0.2: med 0.631 N, <0.2N 0.19 (n 32, left-cens 1)
+  D1      v0.05: med 0.457 N, <0.2N 0.00 (n 20, left-cens 20) | v0.1: med 0.834 N, <0.2N 0.23 (n 30, left-cens 9) | v0.2: med 0.940 N, <0.2N 0.14 (n 28, left-cens 4)
+  B_T2r1  v0.05: med 1.171 N, <0.2N 0.00 (n 13, left-cens 27) | v0.1: med 0.927 N, <0.2N 0.00 (n 24, left-cens 16) | v0.2: med 0.826 N, <0.2N 0.27 (n 26, left-cens 3)
+  B_T2r2  v0.05: med 1.236 N, <0.2N 0.00 (n 14, left-cens 26) | v0.1: med 1.182 N, <0.2N 0.00 (n 25, left-cens 15) | v0.2: med 1.264 N, <0.2N 0.00 (n 19, left-cens 10)
+  A1      v0.05: med 0.415 N, <0.2N 0.00 (n 40, left-cens 0) | v0.1: med 0.587 N, <0.2N 0.07 (n 40, left-cens 0) | v0.2: med 0.743 N, <0.2N 0.03 (n 32, left-cens 0)
+  A2      v0.05: med 0.340 N, <0.2N 0.28 (n 39, left-cens 1) | v0.1: med 0.623 N, <0.2N 0.07 (n 40, left-cens 0) | v0.2: med 0.676 N, <0.2N 0.13 (n 31, left-cens 0)
+
+(a2) lower |log err| restricted to columns whose observed midpoint >= 0.2 N (mean over 5 tests) vs all
+  P-Sch    all 0.525 | >=0.2N 0.526  [0.62 0.81 0.54 0.40 0.27]
+  P-Beigi  all 0.323 | >=0.2N 0.286  [0.23 0.35 0.22 0.31 0.33]
+  P-free   all 0.322 | >=0.2N 0.288  [0.21 0.35 0.21 0.33 0.34]
+  D-logit  all 0.310 | >=0.2N 0.278  [0.25 0.23 0.20 0.37 0.34]
+  D-gbm    all 0.297 | >=0.2N 0.254  [0.21 0.23 0.21 0.29 0.33]
+  Triv-nn  all 0.292 | >=0.2N 0.246  [0.20 0.22 0.22 0.27 0.32]
+  Triv-5   all 0.265 | >=0.2N 0.244  [0.19 0.24 0.18 0.33 0.28]
+
+(b) within-specimen floors at t=0.2, K=2
+  B1      self-fit P-free lower 0.227 upper 0.111 | LOO neighbour smoother lower 0.238 upper 0.090
+  C1      self-fit P-free lower 0.180 upper 0.148 | LOO neighbour smoother lower 0.101 upper 0.128
+  D1      self-fit P-free lower 0.159 upper 0.095 | LOO neighbour smoother lower 0.134 upper 0.091
+  B_T2r1  self-fit P-free lower 0.245 upper 0.125 | LOO neighbour smoother lower 0.119 upper 0.089
+  B_T2r2  self-fit P-free lower 0.201 upper 0.098 | LOO neighbour smoother lower 0.087 upper 0.096
+  A1      self-fit P-free lower 0.218 upper 0.094 | LOO neighbour smoother lower 0.135 upper 0.095
+  A2      self-fit P-free lower 0.289 upper 0.094 | LOO neighbour smoother lower 0.152 upper 0.095
+
+(c) repeat baseline per speed (Triv-5 and P-free, lower), t=0.2 K=2
+  B_T2r1->B_T2r2 Triv-5  v0.05: 0.178 | v0.1: 0.122 | v0.2: 0.128 || upper v0.05: 0.051 | v0.1: 0.085 | v0.2: 0.142
+  B_T2r1->B_T2r2 P-free  v0.05: 0.437 | v0.1: 0.189 | v0.2: 0.241 || upper v0.05: 0.137 | v0.1: 0.138 | v0.2: 0.375
+  B_T2r1->B_T2r2 P-Sch   v0.05: 0.236 | v0.1: 0.153 | v0.2: 0.402 || upper v0.05: 0.073 | v0.1: 0.097 | v0.2: 0.696
+  B_T2r1->B_T2r2 D-gbm   v0.05: 0.191 | v0.1: 0.194 | v0.2: 0.278 || upper v0.05: 0.094 | v0.1: 0.110 | v0.2: 0.461
+  B_T2r2->B_T2r1 Triv-5  v0.05: 0.166 | v0.1: 0.127 | v0.2: 0.231 || upper v0.05: 0.050 | v0.1: 0.087 | v0.2: 0.163
+  B_T2r2->B_T2r1 P-free  v0.05: 0.332 | v0.1: 0.236 | v0.2: 0.363 || upper v0.05: 0.102 | v0.1: 0.123 | v0.2: 0.512
+  B_T2r2->B_T2r1 P-Sch   v0.05: 0.142 | v0.1: 0.311 | v0.2: 0.208 || upper v0.05: 0.066 | v0.1: 0.090 | v0.2: 0.775
+  B_T2r2->B_T2r1 D-gbm   v0.05: 0.274 | v0.1: 1.129 | v0.2: 3.246 || upper v0.05: 0.076 | v0.1: 0.106 | v0.2: 0.228
+
+(c2) cross-string error on B_T2 tests per speed (train A1+A2), for comparison
+  B_T2r1 Triv-5  v0.05: 0.589 | v0.1: 0.259 | v0.2: 0.268 || upper v0.05: 0.184 | v0.1: 0.317 | v0.2: 0.321
+  B_T2r1 P-free  v0.05: 0.320 | v0.1: 0.406 | v0.2: 0.363 || upper v0.05: 0.195 | v0.1: 0.369 | v0.2: 0.212
+  B_T2r1 P-Sch   v0.05: 0.383 | v0.1: 0.551 | v0.2: 0.315 || upper v0.05: 0.323 | v0.1: 0.265 | v0.2: 0.469
+  B_T2r1 D-gbm   v0.05: 0.534 | v0.1: 0.237 | v0.2: 0.306 || upper v0.05: 0.114 | v0.1: 0.296 | v0.2: 0.290
+  B_T2r2 Triv-5  v0.05: 0.724 | v0.1: 0.267 | v0.2: 0.117 || upper v0.05: 0.154 | v0.1: 0.284 | v0.2: 0.191
+  B_T2r2 P-free  v0.05: 0.505 | v0.1: 0.352 | v0.2: 0.222 || upper v0.05: 0.205 | v0.1: 0.404 | v0.2: 0.496
+  B_T2r2 P-Sch   v0.05: 0.251 | v0.1: 0.323 | v0.2: 0.161 || upper v0.05: 0.354 | v0.1: 0.267 | v0.2: 0.403
+  B_T2r2 D-gbm   v0.05: 0.686 | v0.1: 0.272 | v0.2: 0.132 || upper v0.05: 0.111 | v0.1: 0.282 | v0.2: 0.340
+
+(d) LOTO paired bootstrap over beta columns (5 report test specimens, each from its LOTO split), B=4000
+  t=0.2 [lower] D-gbm-P-free: median -0.066 CI95 [-0.105,-0.025] P(<0) 0.999
+  t=0.2 [lower] Triv-5-P-free: median -0.058 CI95 [-0.089,-0.026] P(<0) 1.000
+  t=0.2 [lower] Triv-nn-D-gbm: median +0.025 CI95 [-0.010,+0.056] P(<0) 0.075
+  t=0.2 [lower] P-Sch-P-Beigi: median -0.008 CI95 [-0.071,+0.051] P(<0) 0.599
+  t=0.2 [lower] P-Sch-P-free: median +0.032 CI95 [-0.014,+0.079] P(<0) 0.093
+  t=0.2 [upper] D-gbm-P-free: median -0.017 CI95 [-0.040,+0.007] P(<0) 0.914
+  t=0.2 [upper] Triv-5-P-free: median -0.019 CI95 [-0.044,+0.006] P(<0) 0.936
+  t=0.2 [upper] Triv-nn-D-gbm: median -0.029 CI95 [-0.058,-0.003] P(<0) 0.988
+  t=0.2 [upper] P-Sch-P-Beigi: median +0.000 CI95 [+0.000,+0.000] P(<0) 0.000
+  t=0.2 [upper] P-Sch-P-free: median +0.028 CI95 [+0.001,+0.056] P(<0) 0.020
+  t=0.0 [lower] D-gbm-P-free: median -0.084 CI95 [-0.126,-0.044] P(<0) 1.000
+  t=0.0 [lower] Triv-5-P-free: median -0.076 CI95 [-0.109,-0.042] P(<0) 1.000
+  t=0.0 [lower] Triv-nn-D-gbm: median +0.003 CI95 [-0.041,+0.041] P(<0) 0.445
+  t=0.0 [lower] P-Sch-P-Beigi: median +0.155 CI95 [+0.094,+0.214] P(<0) 0.000
+  t=0.0 [lower] P-Sch-P-free: median +0.132 CI95 [+0.080,+0.183] P(<0) 0.000
+  t=0.0 [upper] D-gbm-P-free: median -0.033 CI95 [-0.051,-0.013] P(<0) 0.998
+  t=0.0 [upper] Triv-5-P-free: median -0.059 CI95 [-0.077,-0.040] P(<0) 1.000
+  t=0.0 [upper] Triv-nn-D-gbm: median -0.017 CI95 [-0.039,+0.002] P(<0) 0.960
+  t=0.0 [upper] P-Sch-P-Beigi: median +0.000 CI95 [+0.000,+0.000] P(<0) 0.000
+  t=0.0 [upper] P-Sch-P-free: median +0.027 CI95 [+0.005,+0.049] P(<0) 0.011
+  t=0.3 [lower] D-gbm-P-free: median -0.068 CI95 [-0.111,-0.021] P(<0) 0.997
+  t=0.3 [lower] Triv-5-P-free: median -0.073 CI95 [-0.107,-0.036] P(<0) 1.000
+  t=0.3 [lower] Triv-nn-D-gbm: median -0.001 CI95 [-0.040,+0.036] P(<0) 0.513
+  t=0.3 [lower] P-Sch-P-Beigi: median -0.079 CI95 [-0.148,-0.008] P(<0) 0.985
+  t=0.3 [lower] P-Sch-P-free: median +0.003 CI95 [-0.047,+0.052] P(<0) 0.456
+  t=0.3 [upper] D-gbm-P-free: median -0.006 CI95 [-0.032,+0.020] P(<0) 0.673
+  t=0.3 [upper] Triv-5-P-free: median -0.015 CI95 [-0.042,+0.011] P(<0) 0.855
+  t=0.3 [upper] Triv-nn-D-gbm: median -0.027 CI95 [-0.056,-0.001] P(<0) 0.978
+  t=0.3 [upper] P-Sch-P-Beigi: median +0.000 CI95 [+0.000,+0.000] P(<0) 0.000
+  t=0.3 [upper] P-Sch-P-free: median +0.037 CI95 [+0.010,+0.067] P(<0) 0.003

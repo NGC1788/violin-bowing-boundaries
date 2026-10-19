@@ -1,0 +1,3264 @@
+{
+  "scope": "Exposed A1/A2 development; no superiority or novelty claim",
+  "protocol_sha256": "45747a3ca14edc63e65fdf84b3cab14190450161f0ef5d0dd527471fe8d3a075",
+  "code_sha256": "73eacac9fb05004546063728d024376644566ab215386378da63e90cfeb879a5",
+  "inputs": {
+    "A1": {
+      "strokes": 6000,
+      "grid": {
+        "2024-03-25_TypeA_sample1/2024-03-27_r_v1": {
+          "trials": 2000,
+          "recovered_columns": 40,
+          "trials_per_column": [
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50
+          ],
+          "gap_threshold": 0.00016897363157793806,
+          "gap_ratio": 49.43332713295724,
+          "legacy_prepare_columns": 366
+        },
+        "2024-03-25_TypeA_sample1/2024-03-27_r_v2": {
+          "trials": 2000,
+          "recovered_columns": 40,
+          "trials_per_column": [
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50
+          ],
+          "gap_threshold": 0.00016704329967918882,
+          "gap_ratio": 48.216459534990854,
+          "legacy_prepare_columns": 343
+        },
+        "2024-03-25_TypeA_sample1/2024-03-27_r_v3": {
+          "trials": 2000,
+          "recovered_columns": 40,
+          "trials_per_column": [
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50
+          ],
+          "gap_threshold": 0.00013242985229641786,
+          "gap_ratio": 78.58709784313783,
+          "legacy_prepare_columns": 313
+        }
+      },
+      "input_dimensions": 64,
+      "snapshot_dimensions": 16,
+      "past_windows": [
+        [
+          0.2,
+          0.0
+        ],
+        [
+          0.1,
+          0.0
+        ],
+        [
+          0.1,
+          0.05
+        ],
+        [
+          0.1,
+          0.1
+        ]
+      ],
+      "origin_s": 0.2,
+      "target_windows": [
+        [
+          0.25,
+          0.45
+        ],
+        [
+          0.3,
+          0.5
+        ]
+      ],
+      "minimum_input_target_gap_s": 0.04999999999999999,
+      "past_H_count": 1482,
+      "coverage": [
+        {
+          "start": 0.25,
+          "speed": 0.05,
+          "n": 2000,
+          "future_H": 656,
+          "nonH_to_H": 115,
+          "H_to_nonH": 7
+        },
+        {
+          "start": 0.25,
+          "speed": 0.1,
+          "n": 2000,
+          "future_H": 657,
+          "nonH_to_H": 112,
+          "H_to_nonH": 2
+        },
+        {
+          "start": 0.25,
+          "speed": 0.2,
+          "n": 2000,
+          "future_H": 481,
+          "nonH_to_H": 97,
+          "H_to_nonH": 3
+        },
+        {
+          "start": 0.3,
+          "speed": 0.05,
+          "n": 2000,
+          "future_H": 663,
+          "nonH_to_H": 127,
+          "H_to_nonH": 12
+        },
+        {
+          "start": 0.3,
+          "speed": 0.1,
+          "n": 2000,
+          "future_H": 677,
+          "nonH_to_H": 135,
+          "H_to_nonH": 5
+        },
+        {
+          "start": 0.3,
+          "speed": 0.2,
+          "n": 2000,
+          "future_H": 497,
+          "nonH_to_H": 114,
+          "H_to_nonH": 4
+        }
+      ],
+      "sha256": "e7961c8d86b514090967a288f1bd173190ee48021e01cab89303486ef55fe483"
+    },
+    "A2": {
+      "strokes": 6000,
+      "grid": {
+        "2024-04-19_TypeA_sample2/v1": {
+          "trials": 2000,
+          "recovered_columns": 40,
+          "trials_per_column": [
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50
+          ],
+          "gap_threshold": 0.00013037473257870473,
+          "gap_ratio": 81.68903065440679,
+          "legacy_prepare_columns": 363
+        },
+        "2024-04-19_TypeA_sample2/v2": {
+          "trials": 2000,
+          "recovered_columns": 40,
+          "trials_per_column": [
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50
+          ],
+          "gap_threshold": 0.00015363805282405185,
+          "gap_ratio": 59.43305517121014,
+          "legacy_prepare_columns": 331
+        },
+        "2024-04-19_TypeA_sample2/v3": {
+          "trials": 2000,
+          "recovered_columns": 40,
+          "trials_per_column": [
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50
+          ],
+          "gap_threshold": 0.00011252774944210447,
+          "gap_ratio": 109.77913117409081,
+          "legacy_prepare_columns": 311
+        }
+      },
+      "input_dimensions": 64,
+      "snapshot_dimensions": 16,
+      "past_windows": [
+        [
+          0.2,
+          0.0
+        ],
+        [
+          0.1,
+          0.0
+        ],
+        [
+          0.1,
+          0.05
+        ],
+        [
+          0.1,
+          0.1
+        ]
+      ],
+      "origin_s": 0.2,
+      "target_windows": [
+        [
+          0.25,
+          0.45
+        ],
+        [
+          0.3,
+          0.5
+        ]
+      ],
+      "minimum_input_target_gap_s": 0.04999999999999999,
+      "past_H_count": 1555,
+      "coverage": [
+        {
+          "start": 0.25,
+          "speed": 0.05,
+          "n": 2000,
+          "future_H": 838,
+          "nonH_to_H": 181,
+          "H_to_nonH": 7
+        },
+        {
+          "start": 0.25,
+          "speed": 0.1,
+          "n": 2000,
+          "future_H": 715,
+          "nonH_to_H": 187,
+          "H_to_nonH": 13
+        },
+        {
+          "start": 0.25,
+          "speed": 0.2,
+          "n": 2000,
+          "future_H": 477,
+          "nonH_to_H": 139,
+          "H_to_nonH": 12
+        },
+        {
+          "start": 0.3,
+          "speed": 0.05,
+          "n": 2000,
+          "future_H": 874,
+          "nonH_to_H": 216,
+          "H_to_nonH": 6
+        },
+        {
+          "start": 0.3,
+          "speed": 0.1,
+          "n": 2000,
+          "future_H": 744,
+          "nonH_to_H": 213,
+          "H_to_nonH": 10
+        },
+        {
+          "start": 0.3,
+          "speed": 0.2,
+          "n": 2000,
+          "future_H": 492,
+          "nonH_to_H": 153,
+          "H_to_nonH": 11
+        }
+      ],
+      "sha256": "3345934e53c0eafdbca0a89717a22a43cfac2fd3c294a813673a43b8c960c272"
+    }
+  },
+  "fits": [
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.25,
+      "model": "fixed_persistence",
+      "metrics": {
+        "n": 6000,
+        "H": 2030,
+        "mean_probability": 0.2688,
+        "log_loss": 0.36981789743112403,
+        "brier": 0.08663999999999998,
+        "IoU": 0.7386032977691561,
+        "balanced_accuracy": 0.8710929260091077
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 838,
+          "mean_probability": 0.33872,
+          "log_loss": 0.3860338153399183,
+          "brier": 0.09063999999999998,
+          "IoU": 0.7775147928994083,
+          "balanced_accuracy": 0.8889927250769187
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 715,
+          "mean_probability": 0.27967999999999993,
+          "log_loss": 0.40938473712858214,
+          "brier": 0.09639999999999997,
+          "IoU": 0.7252747252747253,
+          "balanced_accuracy": 0.8641724034720144
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 477,
+          "mean_probability": 0.188,
+          "log_loss": 0.31403513982487175,
+          "brier": 0.07287999999999999,
+          "IoU": 0.6912065439672802,
+          "balanced_accuracy": 0.8503581010116027
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4445,
+          "H": 507,
+          "mean_probability": 0.019999999999999997,
+          "log_loss": 0.4641066198354244,
+          "brier": 0.10989831271091112,
+          "IoU": 0.0,
+          "balanced_accuracy": 0.5
+        },
+        {
+          "past_H": true,
+          "n": 1555,
+          "H": 1523,
+          "mean_probability": 0.9800000000000003,
+          "log_loss": 0.10029161377381532,
+          "brier": 0.020155627009646297,
+          "IoU": 0.9794212218649517,
+          "balanced_accuracy": 0.5
+        }
+      ]
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.25,
+      "model": "markov",
+      "metrics": {
+        "n": 6000,
+        "H": 2030,
+        "mean_probability": 0.31017988930233437,
+        "log_loss": 0.29908157333768265,
+        "brier": 0.08144631578955676,
+        "IoU": 0.7386032977691561,
+        "balanced_accuracy": 0.8710929260091077
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 838,
+          "mean_probability": 0.3771693103084498,
+          "log_loss": 0.30088559572899226,
+          "brier": 0.08441181153258696,
+          "IoU": 0.7775147928994083,
+          "balanced_accuracy": 0.8889927250769187
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 715,
+          "mean_probability": 0.3206038724337208,
+          "log_loss": 0.3269284129118107,
+          "brier": 0.0902431387547823,
+          "IoU": 0.7252747252747253,
+          "balanced_accuracy": 0.8641724034720144
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 477,
+          "mean_probability": 0.2327664851648327,
+          "log_loss": 0.269430711372245,
+          "brier": 0.069683997081301,
+          "IoU": 0.6912065439672802,
+          "balanced_accuracy": 0.8503581010116027
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4445,
+          "H": 507,
+          "mean_probability": 0.07180792210666075,
+          "log_loss": 0.36642584477939555,
+          "brier": 0.10283619027206728,
+          "IoU": 0.0,
+          "balanced_accuracy": 0.5
+        },
+        {
+          "past_H": true,
+          "n": 1555,
+          "H": 1523,
+          "mean_probability": 0.9915711395819284,
+          "log_loss": 0.10657656590461904,
+          "brier": 0.020302912526045998,
+          "IoU": 0.9794212218649517,
+          "balanced_accuracy": 0.5
+        }
+      ]
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.25,
+      "model": "markov_speed",
+      "metrics": {
+        "n": 6000,
+        "H": 2030,
+        "mean_probability": 0.3098441419391892,
+        "log_loss": 0.2983959427490037,
+        "brier": 0.08122134277869066,
+        "IoU": 0.7386032977691561,
+        "balanced_accuracy": 0.8710929260091077
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 838,
+          "mean_probability": 0.38056427440494317,
+          "log_loss": 0.2965345209970162,
+          "brier": 0.08379945415057644,
+          "IoU": 0.7775147928994083,
+          "balanced_accuracy": 0.8889927250769187
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 715,
+          "mean_probability": 0.3257093990652517,
+          "log_loss": 0.3267368680910034,
+          "brier": 0.08984480050850231,
+          "IoU": 0.7252747252747253,
+          "balanced_accuracy": 0.8641724034720144
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 477,
+          "mean_probability": 0.22325875234737289,
+          "log_loss": 0.2719164391589917,
+          "brier": 0.07001977367699319,
+          "IoU": 0.6912065439672802,
+          "balanced_accuracy": 0.8503581010116027
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4445,
+          "H": 507,
+          "mean_probability": 0.07171229967936504,
+          "log_loss": 0.3642835151865915,
+          "brier": 0.10251760646337911,
+          "IoU": 0.0,
+          "balanced_accuracy": 0.5
+        },
+        {
+          "past_H": true,
+          "n": 1555,
+          "H": 1523,
+          "mean_probability": 0.9905489900709697,
+          "log_loss": 0.11005493986470935,
+          "brier": 0.020345527937249995,
+          "IoU": 0.9794212218649517,
+          "balanced_accuracy": 0.5
+        }
+      ]
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.25,
+      "model": "hgb_controls",
+      "metrics": {
+        "n": 6000,
+        "H": 2030,
+        "mean_probability": 0.3312721302499874,
+        "log_loss": 0.30176730060341606,
+        "brier": 0.08903437734389857,
+        "IoU": 0.7022964509394573,
+        "balanced_accuracy": 0.8683159409859662
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 838,
+          "mean_probability": 0.4036729003595026,
+          "log_loss": 0.4340018858172267,
+          "brier": 0.13214550509712808,
+          "IoU": 0.6490528414755733,
+          "balanced_accuracy": 0.8174265421727824
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 715,
+          "mean_probability": 0.3537430535875538,
+          "log_loss": 0.2419520019679603,
+          "brier": 0.0721417756203176,
+          "IoU": 0.7557436517533253,
+          "balanced_accuracy": 0.893483170525972
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 477,
+          "mean_probability": 0.23640043680290584,
+          "log_loss": 0.22934801402506116,
+          "brier": 0.0628158513142501,
+          "IoU": 0.7185840707964601,
+          "balanced_accuracy": 0.8966861719187689
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4445,
+          "H": 507,
+          "mean_probability": 0.15544140904656664,
+          "log_loss": 0.2822006635282826,
+          "brier": 0.08571769294715731,
+          "IoU": 0.38134592680047225,
+          "balanced_accuracy": 0.7753713125436374
+        },
+        {
+          "past_H": true,
+          "n": 1555,
+          "H": 1523,
+          "mean_probability": 0.8338879217285758,
+          "log_loss": 0.3576989416316914,
+          "brier": 0.09851518901175389,
+          "IoU": 0.877906976744186,
+          "balanced_accuracy": 0.5555338969139856
+        }
+      ]
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.25,
+      "model": "logistic_snapshot",
+      "metrics": {
+        "n": 6000,
+        "H": 2030,
+        "mean_probability": 0.3127615191598114,
+        "log_loss": 0.14250408643375864,
+        "brier": 0.041701066364337847,
+        "IoU": 0.8349374398460058,
+        "balanced_accuracy": 0.9212945614274547
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 838,
+          "mean_probability": 0.397454647023149,
+          "log_loss": 0.15183642192379102,
+          "brier": 0.04621558841341048,
+          "IoU": 0.8440046565774156,
+          "balanced_accuracy": 0.923541421054145
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 715,
+          "mean_probability": 0.3236873583893777,
+          "log_loss": 0.14702198648366785,
+          "brier": 0.04390761344454453,
+          "IoU": 0.8395061728395061,
+          "balanced_accuracy": 0.9225245571549074
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 477,
+          "mean_probability": 0.21714255206690733,
+          "log_loss": 0.12865385089381706,
+          "brier": 0.03497999723505855,
+          "IoU": 0.8122448979591836,
+          "balanced_accuracy": 0.9129228833635479
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4445,
+          "H": 507,
+          "mean_probability": 0.07838264207512909,
+          "log_loss": 0.17168694096266007,
+          "brier": 0.05079510165742451,
+          "IoU": 0.4067796610169492,
+          "balanced_accuracy": 0.7099705193817785
+        },
+        {
+          "past_H": true,
+          "n": 1555,
+          "H": 1523,
+          "mean_probability": 0.9827384379002695,
+          "log_loss": 0.059084286831850796,
+          "brier": 0.015705576410787868,
+          "IoU": 0.9819004524886877,
+          "balanced_accuracy": 0.6236868023637557
+        }
+      ]
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.25,
+      "model": "logistic_history",
+      "metrics": {
+        "n": 6000,
+        "H": 2030,
+        "mean_probability": 0.3230974557097882,
+        "log_loss": 0.14053477019508587,
+        "brier": 0.03717011597449588,
+        "IoU": 0.8620037807183365,
+        "balanced_accuracy": 0.9384298494869154
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 838,
+          "mean_probability": 0.4148380231917057,
+          "log_loss": 0.14925845412058328,
+          "brier": 0.0421638872950366,
+          "IoU": 0.8762769580022701,
+          "balanced_accuracy": 0.9421179433040721
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 715,
+          "mean_probability": 0.3324175254645406,
+          "log_loss": 0.12878358074548163,
+          "brier": 0.037567989751331445,
+          "IoU": 0.8590785907859079,
+          "balanced_accuracy": 0.934407227014231
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 477,
+          "mean_probability": 0.22203681847311835,
+          "log_loss": 0.1435622757191927,
+          "brier": 0.03177847087711958,
+          "IoU": 0.8410462776659959,
+          "balanced_accuracy": 0.9315891480871226
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4445,
+          "H": 507,
+          "mean_probability": 0.09450039118940089,
+          "log_loss": 0.160212447716525,
+          "brier": 0.043877009771368464,
+          "IoU": 0.5486111111111112,
+          "balanced_accuracy": 0.8028762885875047
+        },
+        {
+          "past_H": true,
+          "n": 1555,
+          "H": 1523,
+          "mean_probability": 0.9765469423934678,
+          "log_loss": 0.08428571773026462,
+          "brier": 0.017998319879898653,
+          "IoU": 0.9792207792207792,
+          "balanced_accuracy": 0.729450508864084
+        }
+      ]
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.25,
+      "model": "hgb_snapshot",
+      "metrics": {
+        "n": 6000,
+        "H": 2030,
+        "mean_probability": 0.3182771135317437,
+        "log_loss": 0.14578789542436776,
+        "brier": 0.04219018219625365,
+        "IoU": 0.8392857142857143,
+        "balanced_accuracy": 0.927558908562991
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 838,
+          "mean_probability": 0.3958371225136958,
+          "log_loss": 0.16181664331187584,
+          "brier": 0.048630387226369046,
+          "IoU": 0.8470319634703196,
+          "balanced_accuracy": 0.926369644962393
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 715,
+          "mean_probability": 0.3303725770136452,
+          "log_loss": 0.14616724474956005,
+          "brier": 0.041309686430349955,
+          "IoU": 0.8513513513513513,
+          "balanced_accuracy": 0.9308318141002966
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 477,
+          "mean_probability": 0.22862164106788999,
+          "log_loss": 0.1293797982116674,
+          "brier": 0.036630472932041955,
+          "IoU": 0.80859375,
+          "balanced_accuracy": 0.9224717848338062
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4445,
+          "H": 507,
+          "mean_probability": 0.085554378263984,
+          "log_loss": 0.17364609816887014,
+          "brier": 0.05100770414630635,
+          "IoU": 0.4573913043478261,
+          "balanced_accuracy": 0.7507350120156309
+        },
+        {
+          "past_H": true,
+          "n": 1555,
+          "H": 1523,
+          "mean_probability": 0.9835199162746321,
+          "log_loss": 0.06615464063381275,
+          "brier": 0.016985111412984043,
+          "IoU": 0.9806825499034127,
+          "balanced_accuracy": 0.53125
+        }
+      ]
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.25,
+      "model": "hgb_history",
+      "metrics": {
+        "n": 6000,
+        "H": 2030,
+        "mean_probability": 0.32194310449721736,
+        "log_loss": 0.1425968543749199,
+        "brier": 0.03876096280152132,
+        "IoU": 0.8618889416231609,
+        "balanced_accuracy": 0.9375929073966076
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 838,
+          "mean_probability": 0.3998000697905293,
+          "log_loss": 0.17005368035080623,
+          "brier": 0.04785097595851176,
+          "IoU": 0.8582857142857143,
+          "balanced_accuracy": 0.932169865962315
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 715,
+          "mean_probability": 0.3339048251367255,
+          "log_loss": 0.14597084401259466,
+          "brier": 0.038986215318300134,
+          "IoU": 0.8698630136986302,
+          "balanced_accuracy": 0.9382193681804577
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 477,
+          "mean_probability": 0.23212441856439728,
+          "log_loss": 0.11176603876135875,
+          "brier": 0.02944569712775206,
+          "IoU": 0.8565737051792829,
+          "balanced_accuracy": 0.9425262673940185
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4445,
+          "H": 507,
+          "mean_probability": 0.09074790161107264,
+          "log_loss": 0.17079384316286755,
+          "brier": 0.04690416527399515,
+          "IoU": 0.5319148936170213,
+          "balanced_accuracy": 0.7886208119340908
+        },
+        {
+          "past_H": true,
+          "n": 1555,
+          "H": 1523,
+          "mean_probability": 0.9828194240013416,
+          "log_loss": 0.061995172598439265,
+          "brier": 0.015483448338404805,
+          "IoU": 0.9825016202203499,
+          "balanced_accuracy": 0.6852019041365726
+        }
+      ]
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.25,
+      "model": "hgb_history_two_heads",
+      "metrics": {
+        "n": 6000,
+        "H": 2030,
+        "mean_probability": 0.321546872473326,
+        "log_loss": 0.15350765760033983,
+        "brier": 0.04120135696470995,
+        "IoU": 0.8520432127759512,
+        "balanced_accuracy": 0.934329515702746
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 838,
+          "mean_probability": 0.39879728528012715,
+          "log_loss": 0.17825210313873857,
+          "brier": 0.04986736929739261,
+          "IoU": 0.8513053348467651,
+          "balanced_accuracy": 0.928991451657294
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 715,
+          "mean_probability": 0.3363262766980087,
+          "log_loss": 0.16052908809020322,
+          "brier": 0.04203978072194942,
+          "IoU": 0.8588709677419355,
+          "balanced_accuracy": 0.9355691001605398
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 477,
+          "mean_probability": 0.22951705544184198,
+          "log_loss": 0.1217417815720777,
+          "brier": 0.03169692087478781,
+          "IoU": 0.8432539682539683,
+          "balanced_accuracy": 0.9366285784291458
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4445,
+          "H": 507,
+          "mean_probability": 0.08799506723685527,
+          "log_loss": 0.1824494420447747,
+          "brier": 0.04982692117640428,
+          "IoU": 0.5095320623916811,
+          "balanced_accuracy": 0.7810530681179585
+        },
+        {
+          "past_H": true,
+          "n": 1555,
+          "H": 1523,
+          "mean_probability": 0.9891595890496039,
+          "log_loss": 0.07077696187332193,
+          "brier": 0.0165450013885162,
+          "IoU": 0.979381443298969,
+          "balanced_accuracy": 0.5458901017728168
+        }
+      ]
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.3,
+      "model": "fixed_persistence",
+      "metrics": {
+        "n": 6000,
+        "H": 2110,
+        "mean_probability": 0.2688,
+        "log_loss": 0.4152224675757481,
+        "brier": 0.09784,
+        "IoU": 0.7150210575573234,
+        "balanced_accuracy": 0.8586148710388772
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 874,
+          "mean_probability": 0.33872,
+          "log_loss": 0.452194760407799,
+          "brier": 0.10695999999999999,
+          "IoU": 0.7477272727272727,
+          "balanced_accuracy": 0.8737659075482358
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 744,
+          "mean_probability": 0.27967999999999993,
+          "log_loss": 0.4541406705568543,
+          "brier": 0.10743999999999997,
+          "IoU": 0.7042440318302388,
+          "balanced_accuracy": 0.8528739469899322
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 492,
+          "mean_probability": 0.188,
+          "log_loss": 0.3393319717625908,
+          "brier": 0.07912,
+          "IoU": 0.6739562624254473,
+          "balanced_accuracy": 0.8408649802678398
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4445,
+          "H": 582,
+          "mean_probability": 0.019999999999999997,
+          "log_loss": 0.5297728790836354,
+          "brier": 0.12609628796400446,
+          "IoU": 0.0,
+          "balanced_accuracy": 0.5
+        },
+        {
+          "past_H": true,
+          "n": 1555,
+          "H": 1528,
+          "mean_probability": 0.9800000000000003,
+          "log_loss": 0.08777772214001907,
+          "brier": 0.017068810289389065,
+          "IoU": 0.9826366559485531,
+          "balanced_accuracy": 0.5
+        }
+      ]
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.3,
+      "model": "markov",
+      "metrics": {
+        "n": 6000,
+        "H": 2110,
+        "mean_probability": 0.31713181131130813,
+        "log_loss": 0.319836337895384,
+        "brier": 0.09040330338567598,
+        "IoU": 0.7150210575573234,
+        "balanced_accuracy": 0.8586148710388772
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 874,
+          "mean_probability": 0.3828411318540121,
+          "log_loss": 0.3346148700434331,
+          "brier": 0.09762361367772329,
+          "IoU": 0.7477272727272727,
+          "balanced_accuracy": 0.8737659075482358
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 744,
+          "mean_probability": 0.3273566026085709,
+          "log_loss": 0.34390782769439904,
+          "brier": 0.09872953596743761,
+          "IoU": 0.7042440318302388,
+          "balanced_accuracy": 0.8528739469899322
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 492,
+          "mean_probability": 0.2411976994713413,
+          "log_loss": 0.2809863159483201,
+          "brier": 0.07485676051186699,
+          "IoU": 0.6739562624254473,
+          "balanced_accuracy": 0.8408649802678398
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4445,
+          "H": 582,
+          "mean_probability": 0.08331489267537065,
+          "log_loss": 0.4009880116514769,
+          "brier": 0.11605756142606836,
+          "IoU": 0.0,
+          "balanced_accuracy": 0.5
+        },
+        {
+          "past_H": true,
+          "n": 1555,
+          "H": 1528,
+          "mean_probability": 0.985502360080917,
+          "log_loss": 0.08786258236751733,
+          "brier": 0.017070070594972276,
+          "IoU": 0.9826366559485531,
+          "balanced_accuracy": 0.5
+        }
+      ]
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.3,
+      "model": "markov_speed",
+      "metrics": {
+        "n": 6000,
+        "H": 2110,
+        "mean_probability": 0.3167742916266396,
+        "log_loss": 0.31883090955652715,
+        "brier": 0.09011054821804565,
+        "IoU": 0.7150210575573234,
+        "balanced_accuracy": 0.8586148710388772
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 874,
+          "mean_probability": 0.38305745665334073,
+          "log_loss": 0.3331484392069897,
+          "brier": 0.09722519360813181,
+          "IoU": 0.7477272727272727,
+          "balanced_accuracy": 0.8737659075482358
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 744,
+          "mean_probability": 0.33576810572897325,
+          "log_loss": 0.3393652882565427,
+          "brier": 0.09791257301941356,
+          "IoU": 0.7042440318302388,
+          "balanced_accuracy": 0.8528739469899322
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 492,
+          "mean_probability": 0.23149731249760472,
+          "log_loss": 0.283979001206049,
+          "brier": 0.07519387802659157,
+          "IoU": 0.6739562624254473,
+          "balanced_accuracy": 0.8408649802678398
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4445,
+          "H": 582,
+          "mean_probability": 0.08329655111845007,
+          "log_loss": 0.3983765579019077,
+          "brier": 0.11562353143959182,
+          "IoU": 0.0,
+          "balanced_accuracy": 0.5
+        },
+        {
+          "past_H": true,
+          "n": 1555,
+          "H": 1528,
+          "mean_probability": 0.984175292629149,
+          "log_loss": 0.09144801123162911,
+          "brier": 0.017181152449703054,
+          "IoU": 0.9826366559485531,
+          "balanced_accuracy": 0.5
+        }
+      ]
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.3,
+      "model": "hgb_controls",
+      "metrics": {
+        "n": 6000,
+        "H": 2110,
+        "mean_probability": 0.3398834718825033,
+        "log_loss": 0.3066998708812205,
+        "brier": 0.09047732063315414,
+        "IoU": 0.7023857662757784,
+        "balanced_accuracy": 0.8649532767212076
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 874,
+          "mean_probability": 0.40973823775689233,
+          "log_loss": 0.42630528965730585,
+          "brier": 0.12951166455996746,
+          "IoU": 0.6588693957115009,
+          "balanced_accuracy": 0.819232129284521
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 744,
+          "mean_probability": 0.36698961606514957,
+          "log_loss": 0.26785029086468104,
+          "brier": 0.07888040137560638,
+          "IoU": 0.7433831990794016,
+          "balanced_accuracy": 0.8843786384494212
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 492,
+          "mean_probability": 0.24292256182546806,
+          "log_loss": 0.2259440321216747,
+          "brier": 0.0630398959638885,
+          "IoU": 0.7179930795847751,
+          "balanced_accuracy": 0.8932333786202584
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4445,
+          "H": 582,
+          "mean_probability": 0.1646888351268301,
+          "log_loss": 0.2963776143893358,
+          "brier": 0.08998466270140394,
+          "IoU": 0.40216216216216216,
+          "balanced_accuracy": 0.7751920813640378
+        },
+        {
+          "past_H": true,
+          "n": 1555,
+          "H": 1528,
+          "mean_probability": 0.8406810026728362,
+          "log_loss": 0.33620625680175276,
+          "brier": 0.0918855936277712,
+          "IoU": 0.8817829457364341,
+          "balanced_accuracy": 0.5762919332945511
+        }
+      ]
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.3,
+      "model": "logistic_snapshot",
+      "metrics": {
+        "n": 6000,
+        "H": 2110,
+        "mean_probability": 0.3253328365450348,
+        "log_loss": 0.15140428212900423,
+        "brier": 0.04384913823805439,
+        "IoU": 0.8357933579335793,
+        "balanced_accuracy": 0.9219288734024538
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 874,
+          "mean_probability": 0.4085539998459774,
+          "log_loss": 0.16462047541589173,
+          "brier": 0.04954890376013496,
+          "IoU": 0.8445190156599552,
+          "balanced_accuracy": 0.9230412021249355
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 744,
+          "mean_probability": 0.3392527116788192,
+          "log_loss": 0.15582152166723223,
+          "brier": 0.04530670643451684,
+          "IoU": 0.841688654353562,
+          "balanced_accuracy": 0.9231901924525717
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 492,
+          "mean_probability": 0.2281917981103078,
+          "log_loss": 0.1337708493038887,
+          "brier": 0.03669180451951138,
+          "IoU": 0.812015503875969,
+          "balanced_accuracy": 0.9178554484483837
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4445,
+          "H": 582,
+          "mean_probability": 0.09759714818443908,
+          "log_loss": 0.18641776503880492,
+          "brier": 0.05477017875344892,
+          "IoU": 0.4646302250803859,
+          "balanced_accuracy": 0.7431044636177392
+        },
+        {
+          "past_H": true,
+          "n": 1555,
+          "H": 1528,
+          "mean_probability": 0.9763200614729113,
+          "log_loss": 0.05131750943828781,
+          "brier": 0.01263111567154078,
+          "IoU": 0.9851228978007762,
+          "balanced_accuracy": 0.6650305410122164
+        }
+      ]
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.3,
+      "model": "logistic_history",
+      "metrics": {
+        "n": 6000,
+        "H": 2110,
+        "mean_probability": 0.3406630473747001,
+        "log_loss": 0.15622815691767883,
+        "brier": 0.04142159080717561,
+        "IoU": 0.8524368231046932,
+        "balanced_accuracy": 0.9340056530903154
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 874,
+          "mean_probability": 0.43484955708381073,
+          "log_loss": 0.19304643483060985,
+          "brier": 0.05114872959512984,
+          "IoU": 0.853448275862069,
+          "balanced_accuracy": 0.9291105592384699
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 744,
+          "mean_probability": 0.3549268322012437,
+          "log_loss": 0.1386994682944316,
+          "brier": 0.03960149216653857,
+          "IoU": 0.8619354838709677,
+          "balanced_accuracy": 0.9365839668515855
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 492,
+          "mean_probability": 0.23221275283904572,
+          "log_loss": 0.13693856762799514,
+          "brier": 0.03351455065985842,
+          "IoU": 0.8362573099415205,
+          "balanced_accuracy": 0.9290127450346122
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4445,
+          "H": 582,
+          "mean_probability": 0.12187438235225735,
+          "log_loss": 0.1813692403432906,
+          "brier": 0.049137834542010254,
+          "IoU": 0.5710059171597633,
+          "balanced_accuracy": 0.8194484104638864
+        },
+        {
+          "past_H": true,
+          "n": 1555,
+          "H": 1528,
+          "mean_probability": 0.9660750190948015,
+          "log_loss": 0.08436184448884006,
+          "brier": 0.01936454681917562,
+          "IoU": 0.9759740259740259,
+          "balanced_accuracy": 0.7695971495055265
+        }
+      ]
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.3,
+      "model": "hgb_snapshot",
+      "metrics": {
+        "n": 6000,
+        "H": 2110,
+        "mean_probability": 0.32183244002966915,
+        "log_loss": 0.16668946044581345,
+        "brier": 0.04773626603689927,
+        "IoU": 0.8286363636363636,
+        "balanced_accuracy": 0.9204223979336981
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 874,
+          "mean_probability": 0.4038311432887043,
+          "log_loss": 0.18252558955357198,
+          "brier": 0.05468248925174163,
+          "IoU": 0.8360836083608361,
+          "balanced_accuracy": 0.9192408680206965
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 744,
+          "mean_probability": 0.33202164588891414,
+          "log_loss": 0.17579415210518712,
+          "brier": 0.048340825333099274,
+          "IoU": 0.8442408376963351,
+          "balanced_accuracy": 0.9255059584959935
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 492,
+          "mean_probability": 0.229644530911389,
+          "log_loss": 0.14174863967868126,
+          "brier": 0.040185483525856915,
+          "IoU": 0.793168880455408,
+          "balanced_accuracy": 0.9131919734316707
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4445,
+          "H": 582,
+          "mean_probability": 0.09399266175698394,
+          "log_loss": 0.20273442558388377,
+          "brier": 0.058531678144184106,
+          "IoU": 0.46511627906976744,
+          "balanced_accuracy": 0.7495776745278361
+        },
+        {
+          "past_H": true,
+          "n": 1555,
+          "H": 1528,
+          "mean_probability": 0.973117208146766,
+          "log_loss": 0.06365417424727805,
+          "brier": 0.016877354900641316,
+          "IoU": 0.9794212218649517,
+          "balanced_accuracy": 0.49836387434554974
+        }
+      ]
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.3,
+      "model": "hgb_history",
+      "metrics": {
+        "n": 6000,
+        "H": 2110,
+        "mean_probability": 0.32719040768605107,
+        "log_loss": 0.15241285760669554,
+        "brier": 0.04225514679378076,
+        "IoU": 0.8509857863365429,
+        "balanced_accuracy": 0.9306844625300016
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 874,
+          "mean_probability": 0.40555671600887366,
+          "log_loss": 0.17465932092094377,
+          "brier": 0.04965657480062834,
+          "IoU": 0.8560267857142857,
+          "balanced_accuracy": 0.9290180912161475
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 744,
+          "mean_probability": 0.33934642466753523,
+          "log_loss": 0.16255611763982974,
+          "brier": 0.043542740442042635,
+          "IoU": 0.8530183727034121,
+          "balanced_accuracy": 0.9296623518937059
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 492,
+          "mean_probability": 0.23666808238174422,
+          "log_loss": 0.12002313425931312,
+          "brier": 0.03356612513867129,
+          "IoU": 0.8393881453154876,
+          "balanced_accuracy": 0.9358596967932544
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4445,
+          "H": 582,
+          "mean_probability": 0.10017781982793621,
+          "log_loss": 0.18774934228952797,
+          "brier": 0.05202430562483706,
+          "IoU": 0.5330188679245284,
+          "balanced_accuracy": 0.7842477269148758
+        },
+        {
+          "past_H": true,
+          "n": 1555,
+          "H": 1528,
+          "mean_probability": 0.9761106347145528,
+          "log_loss": 0.05140277759692704,
+          "brier": 0.014329802096645554,
+          "IoU": 0.9818770226537217,
+          "balanced_accuracy": 0.6815857087453946
+        }
+      ]
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.3,
+      "model": "hgb_history_two_heads",
+      "metrics": {
+        "n": 6000,
+        "H": 2110,
+        "mean_probability": 0.32821769048542637,
+        "log_loss": 0.1619538836257727,
+        "brier": 0.043956016242953484,
+        "IoU": 0.8494967978042086,
+        "balanced_accuracy": 0.9302787558327952
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 874,
+          "mean_probability": 0.40786793503138447,
+          "log_loss": 0.17495803227159237,
+          "brier": 0.05026183809437156,
+          "IoU": 0.8568257491675916,
+          "balanced_accuracy": 0.9296582544476103
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 744,
+          "mean_probability": 0.3440307049757927,
+          "log_loss": 0.17505329657205965,
+          "brier": 0.04561561212532706,
+          "IoU": 0.8511749347258486,
+          "balanced_accuracy": 0.9294140812273132
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 492,
+          "mean_probability": 0.23275443144910185,
+          "log_loss": 0.13585032203366604,
+          "brier": 0.03599059850916186,
+          "IoU": 0.8342967244701349,
+          "balanced_accuracy": 0.9310883957645943
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4445,
+          "H": 582,
+          "mean_probability": 0.09762951482565797,
+          "log_loss": 0.19427466241674887,
+          "brier": 0.053579012896970424,
+          "IoU": 0.526813880126183,
+          "balanced_accuracy": 0.7802110604350196
+        },
+        {
+          "past_H": true,
+          "n": 1555,
+          "H": 1528,
+          "mean_probability": 0.9873588099758895,
+          "log_loss": 0.06956426193709803,
+          "brier": 0.01644847918372181,
+          "IoU": 0.9813144329896907,
+          "balanced_accuracy": 0.5539194299011053
+        }
+      ]
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.25,
+      "model": "fixed_persistence",
+      "metrics": {
+        "n": 6000,
+        "H": 1794,
+        "mean_probability": 0.25711999999999996,
+        "log_loss": 0.23814464401171456,
+        "brier": 0.054159999999999986,
+        "IoU": 0.813953488372093,
+        "balanced_accuracy": 0.9082724631319806
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 656,
+          "mean_probability": 0.28303999999999996,
+          "log_loss": 0.25760374550226767,
+          "brier": 0.05895999999999998,
+          "IoU": 0.8159879336349924,
+          "balanced_accuracy": 0.909743394308943
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 657,
+          "mean_probability": 0.2825599999999999,
+          "log_loss": 0.2420364643098252,
+          "brier": 0.05511999999999999,
+          "IoU": 0.8270106221547799,
+          "balanced_accuracy": 0.9140194775095172
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 481,
+          "mean_probability": 0.20576,
+          "log_loss": 0.21479372222305076,
+          "brier": 0.048399999999999985,
+          "IoU": 0.7933884297520661,
+          "balanced_accuracy": 0.8981809073974973
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4518,
+          "H": 324,
+          "mean_probability": 0.019999999999999997,
+          "log_loss": 0.29929739005055245,
+          "brier": 0.06924462151394421,
+          "IoU": 0.0,
+          "balanced_accuracy": 0.5
+        },
+        {
+          "past_H": true,
+          "n": 1482,
+          "H": 1470,
+          "mean_probability": 0.9800000000000002,
+          "log_loss": 0.05171542228197797,
+          "brier": 0.008173279352226719,
+          "IoU": 0.9919028340080972,
+          "balanced_accuracy": 0.5
+        }
+      ]
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.25,
+      "model": "markov",
+      "metrics": {
+        "n": 6000,
+        "H": 1794,
+        "mean_probability": 0.32779404221697206,
+        "log_loss": 0.21482518388338182,
+        "brier": 0.05350761005637126,
+        "IoU": 0.813953488372093,
+        "balanced_accuracy": 0.9082724631319806
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 656,
+          "mean_probability": 0.35114811239587995,
+          "log_loss": 0.22506556416097184,
+          "brier": 0.05730589473207364,
+          "IoU": 0.8159879336349924,
+          "balanced_accuracy": 0.909743394308943
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 657,
+          "mean_probability": 0.350715629614789,
+          "log_loss": 0.2124232110104396,
+          "brier": 0.05375906852477105,
+          "IoU": 0.8270106221547799,
+          "balanced_accuracy": 0.9140194775095172
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 481,
+          "mean_probability": 0.2815183846402473,
+          "log_loss": 0.206986776478734,
+          "brier": 0.04945786691226908,
+          "IoU": 0.7933884297520661,
+          "balanced_accuracy": 0.8981809073974973
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4518,
+          "H": 324,
+          "mean_probability": 0.11414754835807472,
+          "log_loss": 0.26814931023372657,
+          "brier": 0.06837105028265027,
+          "IoU": 0.0,
+          "balanced_accuracy": 0.5
+        },
+        {
+          "past_H": true,
+          "n": 1482,
+          "H": 1470,
+          "mean_probability": 0.9791131105398458,
+          "log_loss": 0.052262159017755966,
+          "brier": 0.00819517892119675,
+          "IoU": 0.9919028340080972,
+          "balanced_accuracy": 0.5
+        }
+      ]
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.25,
+      "model": "markov_speed",
+      "metrics": {
+        "n": 6000,
+        "H": 1794,
+        "mean_probability": 0.32806910807127565,
+        "log_loss": 0.2158365915236606,
+        "brier": 0.053714136281057326,
+        "IoU": 0.813953488372093,
+        "balanced_accuracy": 0.9082724631319806
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 656,
+          "mean_probability": 0.36946549620123614,
+          "log_loss": 0.23111944151564048,
+          "brier": 0.05872356635559445,
+          "IoU": 0.8159879336349924,
+          "balanced_accuracy": 0.909743394308943
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 657,
+          "mean_probability": 0.35998824432593635,
+          "log_loss": 0.2176632318307923,
+          "brier": 0.05471838767370859,
+          "IoU": 0.8270106221547799,
+          "balanced_accuracy": 0.9140194775095172
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 481,
+          "mean_probability": 0.2547535836866545,
+          "log_loss": 0.198727101224549,
+          "brier": 0.04770045481386893,
+          "IoU": 0.7933884297520661,
+          "balanced_accuracy": 0.8981809073974973
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4518,
+          "H": 324,
+          "mean_probability": 0.11509554882313244,
+          "log_loss": 0.2683549277890396,
+          "brier": 0.06858259050745479,
+          "IoU": 0.0,
+          "balanced_accuracy": 0.5
+        },
+        {
+          "past_H": true,
+          "n": 1482,
+          "H": 1470,
+          "mean_probability": 0.9773366793824169,
+          "log_loss": 0.05573008460936763,
+          "brier": 0.008386419550380069,
+          "IoU": 0.9919028340080972,
+          "balanced_accuracy": 0.5
+        }
+      ]
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.25,
+      "model": "hgb_controls",
+      "metrics": {
+        "n": 6000,
+        "H": 1794,
+        "mean_probability": 0.32744398846727535,
+        "log_loss": 0.28947903928069124,
+        "brier": 0.0910439669846404,
+        "IoU": 0.6523090586145648,
+        "balanced_accuracy": 0.8549742603733796
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 656,
+          "mean_probability": 0.433626042010292,
+          "log_loss": 0.32234444777212,
+          "brier": 0.10293191476424883,
+          "IoU": 0.6799116997792495,
+          "balanced_accuracy": 0.8765062427409989
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 657,
+          "mean_probability": 0.3838741211406989,
+          "log_loss": 0.23779530055089385,
+          "brier": 0.07161477779264475,
+          "IoU": 0.7545565006075334,
+          "balanced_accuracy": 0.9108008037617683
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 481,
+          "mean_probability": 0.1648318022508351,
+          "log_loss": 0.30829736951906,
+          "brier": 0.09858520839702764,
+          "IoU": 0.4435946462715105,
+          "balanced_accuracy": 0.7273393563716144
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4518,
+          "H": 324,
+          "mean_probability": 0.16902201620652654,
+          "log_loss": 0.2727647653661685,
+          "brier": 0.08632615997720179,
+          "IoU": 0.28165374677002586,
+          "balanced_accuracy": 0.7827716844168919
+        },
+        {
+          "past_H": true,
+          "n": 1482,
+          "H": 1470,
+          "mean_probability": 0.8104065192864811,
+          "log_loss": 0.34043389052617956,
+          "brier": 0.10542659320569822,
+          "IoU": 0.8464140730717186,
+          "balanced_accuracy": 0.5921768707482993
+        }
+      ]
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.25,
+      "model": "logistic_snapshot",
+      "metrics": {
+        "n": 6000,
+        "H": 1794,
+        "mean_probability": 0.3392794141344496,
+        "log_loss": 0.12972566697301646,
+        "brier": 0.04061807775533381,
+        "IoU": 0.8289855072463768,
+        "balanced_accuracy": 0.9454505985238479
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 656,
+          "mean_probability": 0.34953547947627805,
+          "log_loss": 0.11167894003513333,
+          "brier": 0.03424560161088547,
+          "IoU": 0.8670360110803325,
+          "balanced_accuracy": 0.9525805749128919
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 657,
+          "mean_probability": 0.39472052254327467,
+          "log_loss": 0.1638273609551204,
+          "brier": 0.0536911153897484,
+          "IoU": 0.7942643391521197,
+          "balanced_accuracy": 0.9307956810838317
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 481,
+          "mean_probability": 0.27358224038379614,
+          "log_loss": 0.11367069992879576,
+          "brier": 0.03391751626536758,
+          "IoU": 0.8296703296703297,
+          "balanced_accuracy": 0.9494983158577628
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4518,
+          "H": 324,
+          "mean_probability": 0.1258577169974846,
+          "log_loss": 0.16273380901030748,
+          "brier": 0.051561641820151494,
+          "IoU": 0.4200680272108844,
+          "balanced_accuracy": 0.8496993058867165
+        },
+        {
+          "past_H": true,
+          "n": 1482,
+          "H": 1470,
+          "mean_probability": 0.9899131709932945,
+          "log_loss": 0.029097606430182006,
+          "brier": 0.00725571443222567,
+          "IoU": 0.9912280701754386,
+          "balanced_accuracy": 0.4996598639455782
+        }
+      ]
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.25,
+      "model": "logistic_history",
+      "metrics": {
+        "n": 6000,
+        "H": 1794,
+        "mean_probability": 0.3558752451002416,
+        "log_loss": 0.47222324696448537,
+        "brier": 0.052725919708276864,
+        "IoU": 0.8054909260120986,
+        "balanced_accuracy": 0.940239854833913
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 656,
+          "mean_probability": 0.37954496197958315,
+          "log_loss": 0.839193719990315,
+          "brier": 0.05978314917191818,
+          "IoU": 0.8119325551232166,
+          "balanced_accuracy": 0.9343514082462253
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 657,
+          "mean_probability": 0.4015299606444687,
+          "log_loss": 0.1760915657741864,
+          "brier": 0.05511597797906329,
+          "IoU": 0.8032581453634086,
+          "balanced_accuracy": 0.9353290243905203
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 481,
+          "mean_probability": 0.2865508126766729,
+          "log_loss": 0.401384455128955,
+          "brier": 0.04327863197384913,
+          "IoU": 0.8,
+          "balanced_accuracy": 0.9497412538887193
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4518,
+          "H": 324,
+          "mean_probability": 0.14791291155860908,
+          "log_loss": 0.6185507935594969,
+          "brier": 0.06760740645576535,
+          "IoU": 0.3970149253731343,
+          "balanced_accuracy": 0.8692444232501457
+        },
+        {
+          "past_H": true,
+          "n": 1482,
+          "H": 1470,
+          "mean_probability": 0.9898656789336394,
+          "log_loss": 0.026131576575644556,
+          "brier": 0.007358472255407144,
+          "IoU": 0.9905341446923597,
+          "balanced_accuracy": 0.6232993197278911
+        }
+      ]
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.25,
+      "model": "hgb_snapshot",
+      "metrics": {
+        "n": 6000,
+        "H": 1794,
+        "mean_probability": 0.3223732101347647,
+        "log_loss": 0.11334461914392475,
+        "brier": 0.034147114731394916,
+        "IoU": 0.8569246435845214,
+        "balanced_accuracy": 0.9488543202337161
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 656,
+          "mean_probability": 0.34802235668486226,
+          "log_loss": 0.11977351498149247,
+          "brier": 0.03666078838220877,
+          "IoU": 0.8579387186629527,
+          "balanced_accuracy": 0.946446718931475
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 657,
+          "mean_probability": 0.36671891991562594,
+          "log_loss": 0.13232809010189425,
+          "brier": 0.040440653710424775,
+          "IoU": 0.853625170998632,
+          "balanced_accuracy": 0.9473355841382851
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 481,
+          "mean_probability": 0.2523783538038061,
+          "log_loss": 0.08793225234838753,
+          "brier": 0.025339902101551216,
+          "IoU": 0.8601941747572815,
+          "balanced_accuracy": 0.9493073870954055
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4518,
+          "H": 324,
+          "mean_probability": 0.10227498066367723,
+          "log_loss": 0.140512286690255,
+          "brier": 0.04299284026881724,
+          "IoU": 0.4409937888198758,
+          "balanced_accuracy": 0.8097480527738039
+        },
+        {
+          "past_H": true,
+          "n": 1482,
+          "H": 1470,
+          "mean_probability": 0.9933609299393351,
+          "log_loss": 0.030521729822521097,
+          "brier": 0.007180186271156019,
+          "IoU": 0.9925725860904794,
+          "balanced_accuracy": 0.5416666666666666
+        }
+      ]
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.25,
+      "model": "hgb_history",
+      "metrics": {
+        "n": 6000,
+        "H": 1794,
+        "mean_probability": 0.3192048350102559,
+        "log_loss": 0.10465119047837264,
+        "brier": 0.03112014152449409,
+        "IoU": 0.8703229113275244,
+        "balanced_accuracy": 0.9545803335575711
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 656,
+          "mean_probability": 0.3414329291781513,
+          "log_loss": 0.10758515225499903,
+          "brier": 0.03327538128971428,
+          "IoU": 0.8667601683029453,
+          "balanced_accuracy": 0.9498312282229965
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 657,
+          "mean_probability": 0.36082945518058157,
+          "log_loss": 0.12202750416834979,
+          "brier": 0.03675187107775519,
+          "IoU": 0.8608815426997245,
+          "balanced_accuracy": 0.9499581232412044
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 481,
+          "mean_probability": 0.2553521206720348,
+          "log_loss": 0.08434091501176907,
+          "brier": 0.02333317220601281,
+          "IoU": 0.888671875,
+          "balanced_accuracy": 0.9627688913403198
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4518,
+          "H": 324,
+          "mean_probability": 0.09809856538710009,
+          "log_loss": 0.13122170137310257,
+          "brier": 0.03922957352957431,
+          "IoU": 0.48936170212765956,
+          "balanced_accuracy": 0.8375324537699359
+        },
+        {
+          "past_H": true,
+          "n": 1482,
+          "H": 1470,
+          "mean_probability": 0.9932656488816581,
+          "log_loss": 0.023648782770957062,
+          "brier": 0.006397865006982323,
+          "IoU": 0.9912221471978393,
+          "balanced_accuracy": 0.5409863945578232
+        }
+      ]
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.25,
+      "model": "hgb_history_two_heads",
+      "metrics": {
+        "n": 6000,
+        "H": 1794,
+        "mean_probability": 0.31477253249500264,
+        "log_loss": 0.10000527792238956,
+        "brier": 0.029650521368519315,
+        "IoU": 0.8734504132231405,
+        "balanced_accuracy": 0.9544125528588718
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 656,
+          "mean_probability": 0.33785039492541996,
+          "log_loss": 0.1031753148216076,
+          "brier": 0.031270076678172734,
+          "IoU": 0.8709219858156029,
+          "balanced_accuracy": 0.9497586382113821
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 657,
+          "mean_probability": 0.3573117400767893,
+          "log_loss": 0.11999885762068488,
+          "brier": 0.03662228075630239,
+          "IoU": 0.8581267217630854,
+          "balanced_accuracy": 0.9484360532259838
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 481,
+          "mean_probability": 0.24915546248279868,
+          "log_loss": 0.07684166132487612,
+          "brier": 0.02105920667108282,
+          "IoU": 0.899009900990099,
+          "balanced_accuracy": 0.9640335377662567
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4518,
+          "H": 324,
+          "mean_probability": 0.0917014186844927,
+          "log_loss": 0.12427384101073778,
+          "brier": 0.03703166530740257,
+          "IoU": 0.4934210526315789,
+          "balanced_accuracy": 0.831485455412494
+        },
+        {
+          "past_H": true,
+          "n": 1482,
+          "H": 1470,
+          "mean_probability": 0.9948233369456666,
+          "log_loss": 0.02602054915507687,
+          "brier": 0.0071484914657699615,
+          "IoU": 0.9905405405405405,
+          "balanced_accuracy": 0.5819727891156463
+        }
+      ]
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.3,
+      "model": "fixed_persistence",
+      "metrics": {
+        "n": 6000,
+        "H": 1837,
+        "mean_probability": 0.25711999999999996,
+        "log_loss": 0.27771148370917254,
+        "brier": 0.06391999999999998,
+        "IoU": 0.7863293864370291,
+        "balanced_accuracy": 0.8951370074473375
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 663,
+          "mean_probability": 0.28303999999999996,
+          "log_loss": 0.290684218036208,
+          "brier": 0.06711999999999997,
+          "IoU": 0.794074074074074,
+          "balanced_accuracy": 0.8997355688147188
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 677,
+          "mean_probability": 0.2825599999999999,
+          "log_loss": 0.2926301281852633,
+          "brier": 0.06759999999999998,
+          "IoU": 0.7947214076246334,
+          "balanced_accuracy": 0.8984057762281017
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 497,
+          "mean_probability": 0.20576,
+          "log_loss": 0.24982010490604636,
+          "brier": 0.05703999999999998,
+          "IoU": 0.7644710578842315,
+          "balanced_accuracy": 0.8839811992380096
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4518,
+          "H": 376,
+          "mean_probability": 0.019999999999999997,
+          "log_loss": 0.3440903638225207,
+          "brier": 0.08029375830013277,
+          "IoU": 0.0,
+          "balanced_accuracy": 0.5
+        },
+        {
+          "past_H": true,
+          "n": 1482,
+          "H": 1461,
+          "mean_probability": 0.9800000000000002,
+          "log_loss": 0.07534995850532185,
+          "brier": 0.014003238866396756,
+          "IoU": 0.9858299595141701,
+          "balanced_accuracy": 0.5
+        }
+      ]
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.3,
+      "model": "markov",
+      "metrics": {
+        "n": 6000,
+        "H": 1837,
+        "mean_probability": 0.3412901731662556,
+        "log_loss": 0.24277697531212322,
+        "brier": 0.06262486743191845,
+        "IoU": 0.7863293864370291,
+        "balanced_accuracy": 0.8951370074473375
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 663,
+          "mean_probability": 0.3642755386835687,
+          "log_loss": 0.25108808890765144,
+          "brier": 0.0651964408751172,
+          "IoU": 0.794074074074074,
+          "balanced_accuracy": 0.8997355688147188
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 677,
+          "mean_probability": 0.36384988376658145,
+          "log_loss": 0.2446548907089539,
+          "brier": 0.06478044887851525,
+          "IoU": 0.7947214076246334,
+          "balanced_accuracy": 0.8984057762281017
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 497,
+          "mean_probability": 0.29574509704861657,
+          "log_loss": 0.2325879463197644,
+          "brier": 0.057897712542122934,
+          "IoU": 0.7644710578842315,
+          "balanced_accuracy": 0.8839811992380096
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4518,
+          "H": 376,
+          "mean_probability": 0.13101664417453887,
+          "log_loss": 0.2978885560055503,
+          "brier": 0.07858091739886458,
+          "IoU": 0.0,
+          "balanced_accuracy": 0.5
+        },
+        {
+          "past_H": true,
+          "n": 1482,
+          "H": 1461,
+          "mean_probability": 0.9823264781491001,
+          "log_loss": 0.0747647475301371,
+          "brier": 0.013981524820135293,
+          "IoU": 0.9858299595141701,
+          "balanced_accuracy": 0.5
+        }
+      ]
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.3,
+      "model": "markov_speed",
+      "metrics": {
+        "n": 6000,
+        "H": 1837,
+        "mean_probability": 0.3418220887791898,
+        "log_loss": 0.24463854005364077,
+        "brier": 0.06304314042436684,
+        "IoU": 0.7863293864370291,
+        "balanced_accuracy": 0.8951370074473375
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 663,
+          "mean_probability": 0.38888276187851833,
+          "log_loss": 0.2630408023424193,
+          "brier": 0.06788042333858174,
+          "IoU": 0.794074074074074,
+          "balanced_accuracy": 0.8997355688147188
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 677,
+          "mean_probability": 0.3744397531971896,
+          "log_loss": 0.24911950012503586,
+          "brier": 0.06579985846965357,
+          "IoU": 0.7947214076246334,
+          "balanced_accuracy": 0.8984057762281017
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 497,
+          "mean_probability": 0.2621437512618615,
+          "log_loss": 0.22175531769346712,
+          "brier": 0.055449139464865245,
+          "IoU": 0.7644710578842315,
+          "balanced_accuracy": 0.8839811992380096
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4518,
+          "H": 376,
+          "mean_probability": 0.1322632302569066,
+          "log_loss": 0.29886580335909874,
+          "brier": 0.07907839617671246,
+          "IoU": 0.0,
+          "balanced_accuracy": 0.5
+        },
+        {
+          "past_H": true,
+          "n": 1482,
+          "H": 1461,
+          "mean_probability": 0.980679661521211,
+          "log_loss": 0.07932222722364127,
+          "brier": 0.014158332402033865,
+          "IoU": 0.9858299595141701,
+          "balanced_accuracy": 0.5
+        }
+      ]
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.3,
+      "model": "hgb_controls",
+      "metrics": {
+        "n": 6000,
+        "H": 1837,
+        "mean_probability": 0.34195860968650654,
+        "log_loss": 0.297122150071235,
+        "brier": 0.09381899786144783,
+        "IoU": 0.6531223267750214,
+        "balanced_accuracy": 0.8554503466588976
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 663,
+          "mean_probability": 0.4504386623183651,
+          "log_loss": 0.3471924070216521,
+          "brier": 0.11098267588467539,
+          "IoU": 0.6716259298618491,
+          "balanced_accuracy": 0.8726573190693918
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 677,
+          "mean_probability": 0.39528828740176325,
+          "log_loss": 0.24748840140776365,
+          "brier": 0.07500600187043115,
+          "IoU": 0.7461988304093568,
+          "balanced_accuracy": 0.9039251019626626
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 497,
+          "mean_probability": 0.1801488793393911,
+          "log_loss": 0.29668564178428913,
+          "brier": 0.09546831582923695,
+          "IoU": 0.474169741697417,
+          "balanced_accuracy": 0.7435812479668429
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4518,
+          "H": 376,
+          "mean_probability": 0.18453638572323092,
+          "log_loss": 0.2898810570578585,
+          "brier": 0.09221362604840178,
+          "IoU": 0.31206496519721577,
+          "balanced_accuracy": 0.7990454554794169
+        },
+        {
+          "past_H": true,
+          "n": 1482,
+          "H": 1461,
+          "mean_probability": 0.8218733248458041,
+          "log_loss": 0.3191972231039171,
+          "brier": 0.09871310707287971,
+          "IoU": 0.8523035230352304,
+          "balanced_accuracy": 0.5733841791336658
+        }
+      ]
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.3,
+      "model": "logistic_snapshot",
+      "metrics": {
+        "n": 6000,
+        "H": 1837,
+        "mean_probability": 0.35121994044713406,
+        "log_loss": 0.1401880260935722,
+        "brier": 0.04297817096949891,
+        "IoU": 0.8236397748592871,
+        "balanced_accuracy": 0.9425220051021055
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 663,
+          "mean_probability": 0.362519331279319,
+          "log_loss": 0.12874737870692757,
+          "brier": 0.03682231628807918,
+          "IoU": 0.8616010854816825,
+          "balanced_accuracy": 0.951209964452958
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 677,
+          "mean_probability": 0.4097385670011258,
+          "log_loss": 0.1733906789385077,
+          "brier": 0.05650444834827846,
+          "IoU": 0.7879518072289157,
+          "balanced_accuracy": 0.9251901646921693
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 497,
+          "mean_probability": 0.2814019230609574,
+          "log_loss": 0.1184260206352812,
+          "brier": 0.03560774827213907,
+          "IoU": 0.8265486725663717,
+          "balanced_accuracy": 0.9471974896618567
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4518,
+          "H": 376,
+          "mean_probability": 0.14116025777352073,
+          "log_loss": 0.1711375022145896,
+          "brier": 0.05299636396711601,
+          "IoU": 0.45622119815668205,
+          "balanced_accuracy": 0.861750285092
+        },
+        {
+          "past_H": true,
+          "n": 1482,
+          "H": 1461,
+          "mean_probability": 0.9916043171808623,
+          "log_loss": 0.04583597945743402,
+          "brier": 0.012436878146803824,
+          "IoU": 0.9851451721809588,
+          "balanced_accuracy": 0.5231250611127408
+        }
+      ]
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.3,
+      "model": "logistic_history",
+      "metrics": {
+        "n": 6000,
+        "H": 1837,
+        "mean_probability": 0.4037382446669807,
+        "log_loss": 0.9099488655162359,
+        "brier": 0.08802072133723145,
+        "IoU": 0.7280522662311147,
+        "balanced_accuracy": 0.9117974389046466
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 663,
+          "mean_probability": 0.4414815820256406,
+          "log_loss": 1.7740356543738554,
+          "brier": 0.10810700654768096,
+          "IoU": 0.7194163860830527,
+          "balanced_accuracy": 0.8981432282941368
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 677,
+          "mean_probability": 0.45050483524026697,
+          "log_loss": 0.32155721712682017,
+          "brier": 0.09073289216165983,
+          "IoU": 0.7256830601092896,
+          "balanced_accuracy": 0.9004517283690106
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 497,
+          "mean_probability": 0.31922831673503466,
+          "log_loss": 0.6342537250480323,
+          "brier": 0.06522226530235357,
+          "IoU": 0.7433903576982893,
+          "balanced_accuracy": 0.9323157842597836
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4518,
+          "H": 376,
+          "mean_probability": 0.210978303118822,
+          "log_loss": 1.1887048451573052,
+          "brier": 0.11255157286469168,
+          "IoU": 0.3364293085655315,
+          "balanced_accuracy": 0.8619268623442268
+        },
+        {
+          "past_H": true,
+          "n": 1482,
+          "H": 1461,
+          "mean_probability": 0.9913829247712865,
+          "log_loss": 0.06013812596269243,
+          "brier": 0.013236384494407387,
+          "IoU": 0.9844594594594595,
+          "balanced_accuracy": 0.5462501222254816
+        }
+      ]
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.3,
+      "model": "hgb_snapshot",
+      "metrics": {
+        "n": 6000,
+        "H": 1837,
+        "mean_probability": 0.3375248366263045,
+        "log_loss": 0.13066816500795703,
+        "brier": 0.03836751740451503,
+        "IoU": 0.8464912280701754,
+        "balanced_accuracy": 0.946958985311538
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 663,
+          "mean_probability": 0.3685082645338273,
+          "log_loss": 0.14891148756202247,
+          "brier": 0.04222161339547122,
+          "IoU": 0.8512064343163539,
+          "balanced_accuracy": 0.9478442202495174
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 677,
+          "mean_probability": 0.38095643389521444,
+          "log_loss": 0.14148424581805585,
+          "brier": 0.043049014980840745,
+          "IoU": 0.8374512353706112,
+          "balanced_accuracy": 0.9408583062307476
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 497,
+          "mean_probability": 0.26310981144987167,
+          "log_loss": 0.10160876164379269,
+          "brier": 0.029831923837233123,
+          "IoU": 0.8528864059590316,
+          "balanced_accuracy": 0.9474578676316047
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4518,
+          "H": 376,
+          "mean_probability": 0.12186528148366989,
+          "log_loss": 0.1542849630919785,
+          "brier": 0.046765234964091365,
+          "IoU": 0.4842105263157895,
+          "balanced_accuracy": 0.8436026382567781
+        },
+        {
+          "past_H": true,
+          "n": 1482,
+          "H": 1461,
+          "mean_probability": 0.9949808893485872,
+          "log_loss": 0.05867039595019106,
+          "brier": 0.012766378447588,
+          "IoU": 0.9858299595141701,
+          "balanced_accuracy": 0.5
+        }
+      ]
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.3,
+      "model": "hgb_history",
+      "metrics": {
+        "n": 6000,
+        "H": 1837,
+        "mean_probability": 0.3348221978145677,
+        "log_loss": 0.12519868687471863,
+        "brier": 0.03703613577269297,
+        "IoU": 0.8508557457212714,
+        "balanced_accuracy": 0.9486162738833472
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 663,
+          "mean_probability": 0.3555551618177849,
+          "log_loss": 0.1276023397140389,
+          "brier": 0.03621409572718317,
+          "IoU": 0.869684499314129,
+          "balanced_accuracy": 0.9534475892652672
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 677,
+          "mean_probability": 0.38095691434094253,
+          "log_loss": 0.14782389958220604,
+          "brier": 0.04499811479939318,
+          "IoU": 0.8305304010349288,
+          "balanced_accuracy": 0.9378694855588715
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 497,
+          "mean_probability": 0.26795451728497555,
+          "log_loss": 0.100169821327911,
+          "brier": 0.029896196791502568,
+          "IoU": 0.85451197053407,
+          "balanced_accuracy": 0.9514980769513957
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4518,
+          "H": 376,
+          "mean_probability": 0.11849621885546688,
+          "log_loss": 0.1494630186595925,
+          "brier": 0.04519629213378221,
+          "IoU": 0.49734513274336284,
+          "balanced_accuracy": 0.850855147580057
+        },
+        {
+          "past_H": true,
+          "n": 1482,
+          "H": 1461,
+          "mean_probability": 0.9943098988518265,
+          "log_loss": 0.05122685758722876,
+          "brier": 0.012159221845971539,
+          "IoU": 0.9858108108108108,
+          "balanced_accuracy": 0.5469345849222647
+        }
+      ]
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.3,
+      "model": "hgb_history_two_heads",
+      "metrics": {
+        "n": 6000,
+        "H": 1837,
+        "mean_probability": 0.33576576510056294,
+        "log_loss": 0.12941212859413562,
+        "brier": 0.03759426792319931,
+        "IoU": 0.8498293515358362,
+        "balanced_accuracy": 0.9487121884460284
+      },
+      "by_speed": [
+        {
+          "speed_index": 0,
+          "n": 2000,
+          "H": 663,
+          "mean_probability": 0.35770353790002757,
+          "log_loss": 0.12973541835402322,
+          "brier": 0.03628015124130678,
+          "IoU": 0.8674863387978142,
+          "balanced_accuracy": 0.9530798223437583
+        },
+        {
+          "speed_index": 1,
+          "n": 2000,
+          "H": 677,
+          "mean_probability": 0.3833722723138876,
+          "log_loss": 0.1559526811612844,
+          "brier": 0.04706555966187378,
+          "IoU": 0.8277634961439588,
+          "balanced_accuracy": 0.93745694568653
+        },
+        {
+          "speed_index": 2,
+          "n": 2000,
+          "H": 497,
+          "mean_probability": 0.26622148508777366,
+          "log_loss": 0.10254828626709922,
+          "brier": 0.02943709286641737,
+          "IoU": 0.8576709796672828,
+          "balanced_accuracy": 0.952163412946073
+        }
+      ],
+      "by_past_H": [
+        {
+          "past_H": false,
+          "n": 4518,
+          "H": 376,
+          "mean_probability": 0.11911393602357298,
+          "log_loss": 0.152071360653973,
+          "brier": 0.045916622246610465,
+          "IoU": 0.4956063268892794,
+          "balanced_accuracy": 0.8517020762916465
+        },
+        {
+          "past_H": true,
+          "n": 1482,
+          "H": 1461,
+          "mean_probability": 0.9962468472664473,
+          "log_loss": 0.06033357903519812,
+          "brier": 0.012222880046565318,
+          "IoU": 0.9858299595141701,
+          "balanced_accuracy": 0.5
+        }
+      ]
+    }
+  ],
+  "paired": [
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.25,
+      "baseline": "hgb_snapshot",
+      "candidate": "hgb_history",
+      "candidate_minus_baseline_log_loss": -0.003191041049447885,
+      "position_cluster_percentile95": [
+        -0.012223893671498735,
+        0.00559091892289765
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.25,
+      "baseline": "logistic_snapshot",
+      "candidate": "logistic_history",
+      "candidate_minus_baseline_log_loss": -0.001969316238672789,
+      "position_cluster_percentile95": [
+        -0.012547423086426833,
+        0.009005462805715422
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.25,
+      "baseline": "markov_speed",
+      "candidate": "hgb_snapshot",
+      "candidate_minus_baseline_log_loss": -0.15260804732463604,
+      "position_cluster_percentile95": [
+        -0.1799149954957371,
+        -0.12614289127280967
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.25,
+      "baseline": "markov_speed",
+      "candidate": "hgb_history",
+      "candidate_minus_baseline_log_loss": -0.15579908837408388,
+      "position_cluster_percentile95": [
+        -0.18418036848506159,
+        -0.12973374064370627
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.25,
+      "baseline": "hgb_history",
+      "candidate": "hgb_history_two_heads",
+      "candidate_minus_baseline_log_loss": 0.010910803225419952,
+      "position_cluster_percentile95": [
+        0.0046006514070952385,
+        0.017788634989276457
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.3,
+      "baseline": "hgb_snapshot",
+      "candidate": "hgb_history",
+      "candidate_minus_baseline_log_loss": -0.014276602839117913,
+      "position_cluster_percentile95": [
+        -0.023195521693964417,
+        -0.005908986065565152
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.3,
+      "baseline": "logistic_snapshot",
+      "candidate": "logistic_history",
+      "candidate_minus_baseline_log_loss": 0.004823874788674627,
+      "position_cluster_percentile95": [
+        -0.006369816327943154,
+        0.01774228706025325
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.3,
+      "baseline": "markov_speed",
+      "candidate": "hgb_snapshot",
+      "candidate_minus_baseline_log_loss": -0.1521414491107137,
+      "position_cluster_percentile95": [
+        -0.17557511234151327,
+        -0.13016853939119355
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.3,
+      "baseline": "markov_speed",
+      "candidate": "hgb_history",
+      "candidate_minus_baseline_log_loss": -0.1664180519498316,
+      "position_cluster_percentile95": [
+        -0.1928148495223665,
+        -0.14179145149395697
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    },
+    {
+      "train": "A1",
+      "test": "A2",
+      "target_start": 0.3,
+      "baseline": "hgb_history",
+      "candidate": "hgb_history_two_heads",
+      "candidate_minus_baseline_log_loss": 0.009541026019077137,
+      "position_cluster_percentile95": [
+        0.0011911280145392707,
+        0.01866448775262598
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.25,
+      "baseline": "hgb_snapshot",
+      "candidate": "hgb_history",
+      "candidate_minus_baseline_log_loss": -0.00869342866555212,
+      "position_cluster_percentile95": [
+        -0.017489027081526786,
+        -0.00016274416869606703
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.25,
+      "baseline": "logistic_snapshot",
+      "candidate": "logistic_history",
+      "candidate_minus_baseline_log_loss": 0.3424975799914689,
+      "position_cluster_percentile95": [
+        0.21549620189262297,
+        0.4737382738844035
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.25,
+      "baseline": "markov_speed",
+      "candidate": "hgb_snapshot",
+      "candidate_minus_baseline_log_loss": -0.10249197237973584,
+      "position_cluster_percentile95": [
+        -0.11730560851810079,
+        -0.08512782265347679
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.25,
+      "baseline": "markov_speed",
+      "candidate": "hgb_history",
+      "candidate_minus_baseline_log_loss": -0.11118540104528798,
+      "position_cluster_percentile95": [
+        -0.12868976611051874,
+        -0.0947945691107555
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.25,
+      "baseline": "hgb_history",
+      "candidate": "hgb_history_two_heads",
+      "candidate_minus_baseline_log_loss": -0.004645912555983088,
+      "position_cluster_percentile95": [
+        -0.011464935140071464,
+        0.0004284228519339811
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.3,
+      "baseline": "hgb_snapshot",
+      "candidate": "hgb_history",
+      "candidate_minus_baseline_log_loss": -0.005469478133238363,
+      "position_cluster_percentile95": [
+        -0.012274308613652503,
+        0.0009389572155005556
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.3,
+      "baseline": "logistic_snapshot",
+      "candidate": "logistic_history",
+      "candidate_minus_baseline_log_loss": 0.7697608394226637,
+      "position_cluster_percentile95": [
+        0.5427346344258691,
+        0.9998869083017474
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.3,
+      "baseline": "markov_speed",
+      "candidate": "hgb_snapshot",
+      "candidate_minus_baseline_log_loss": -0.11397037504568379,
+      "position_cluster_percentile95": [
+        -0.1289932837777366,
+        -0.09735179818639937
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.3,
+      "baseline": "markov_speed",
+      "candidate": "hgb_history",
+      "candidate_minus_baseline_log_loss": -0.11943985317892215,
+      "position_cluster_percentile95": [
+        -0.13528574170751057,
+        -0.10321175643816577
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    },
+    {
+      "train": "A2",
+      "test": "A1",
+      "target_start": 0.3,
+      "baseline": "hgb_history",
+      "candidate": "hgb_history_two_heads",
+      "candidate_minus_baseline_log_loss": 0.004213441719416962,
+      "position_cluster_percentile95": [
+        0.0008607431350019553,
+        0.007824892182235154
+      ],
+      "scope": "Conditional on these measured specimens/sessions; not population inference."
+    }
+  ],
+  "predictions_sha256_before_evaluation": "d5fdbaa8a2620d0741f8072a686d74888ae0165001bf8996002b69a008442adc",
+  "model_sha256": {
+    "models/A1_to_A2_0.25/hgb_controls.joblib": "7fbfa267af9b33bdf12b0b6edcf70beedc967f58b9728e37a227a981b96b2c7f",
+    "models/A1_to_A2_0.25/hgb_history.joblib": "b4cc2d940054a635a2a05d4ee4cac1a7d62e57d87070fd57db0ea6f1ebb4d4e8",
+    "models/A1_to_A2_0.25/hgb_history_two_heads_0.joblib": "ec7a007148f7e1cb4f78ceb41db625a099ab458ccd8a6bc71a13a44bed540fb7",
+    "models/A1_to_A2_0.25/hgb_history_two_heads_1.joblib": "be90451d124ebdc2bdf2e631efce0883fc6da0d4e687e6bbd6d7d0402d6ad47a",
+    "models/A1_to_A2_0.25/hgb_snapshot.joblib": "c1ff0896579e9345a6fa41f5e8e571ae9ad4feb9496185dead23a9d3e12515df",
+    "models/A1_to_A2_0.25/logistic_history.joblib": "ccf3f640c4629df45cfbf0c7e32a64a7bfd3c9c54fc75479a8dfe0ced920e84b",
+    "models/A1_to_A2_0.25/logistic_snapshot.joblib": "87839260e33890a138fcd92eaff4729e2f0b96f74a385abb8bd1ec0faccefe7d",
+    "models/A1_to_A2_0.30/hgb_controls.joblib": "4d21d6430263e7ccf9d6ab68f9876396ddaf30c18f44545f6278f3cd641cef12",
+    "models/A1_to_A2_0.30/hgb_history.joblib": "121921b758df92d7a77e833dd2b1d6abc42a8475d95a75860487dd1b0e59ad9d",
+    "models/A1_to_A2_0.30/hgb_history_two_heads_0.joblib": "5b79a1d052084037859a2bd1b245634c902c04f52536dd6652402c9b3652d99b",
+    "models/A1_to_A2_0.30/hgb_history_two_heads_1.joblib": "736ab93a796426bcd70c4773c021f21e821e1a585802fdf2b8e47750b879094e",
+    "models/A1_to_A2_0.30/hgb_snapshot.joblib": "35b35910993b7aaaf1436b82f26173909e750fbcaa93e9954481e478f1f96bfd",
+    "models/A1_to_A2_0.30/logistic_history.joblib": "f4246af5812308078d525fcb73b592ba51a6c5cc14da6e2a820e151548e2b4c9",
+    "models/A1_to_A2_0.30/logistic_snapshot.joblib": "8e87058768bb92bdc88675614ebd9fa4c49c6373f9805857f4fc2b0e07badb0e",
+    "models/A2_to_A1_0.25/hgb_controls.joblib": "9369ba4995fa72417d458dddd2af7f7d3eb01e9d1aaa9e84ffee2df55ff82de0",
+    "models/A2_to_A1_0.25/hgb_history.joblib": "780bf6182cf85d75d80de70ead7f1000fac0bbda4dfd2ff4493e10b9f859bd4b",
+    "models/A2_to_A1_0.25/hgb_history_two_heads_0.joblib": "cd4393e520a964f93c47b2dcb07f4e27e52088dce4b2d06208166b34d26b9e88",
+    "models/A2_to_A1_0.25/hgb_history_two_heads_1.joblib": "923fbcd158025ca3e7e6e46a4de3c549524d0ead837dddcd9b73b85f61a393a9",
+    "models/A2_to_A1_0.25/hgb_snapshot.joblib": "8fd9801f868f7a7a4d1f021c9a562ae503e623ab2cb7404a4a2a58f7ede780a1",
+    "models/A2_to_A1_0.25/logistic_history.joblib": "b572e9c613fc1656c5de33be06e58acc770400a53e06018dc3a6237901dc0208",
+    "models/A2_to_A1_0.25/logistic_snapshot.joblib": "b4cfb9d42b83256b0e0821ea37aeaf5b703bf3cef444c9e3d25d979ad6e98d2f",
+    "models/A2_to_A1_0.30/hgb_controls.joblib": "88ccb9852a8cb7004ab4e7d80a983ba061da5350b9232823a7907d3a7f04eefa",
+    "models/A2_to_A1_0.30/hgb_history.joblib": "533a140846ba21753e8b1012e1c3af407242660a523f973a9cfe14ccc0ed2b7e",
+    "models/A2_to_A1_0.30/hgb_history_two_heads_0.joblib": "481b8d9754137f287ff63115e843471c6cea4e814e3377dcda73ea8b519c3fdb",
+    "models/A2_to_A1_0.30/hgb_history_two_heads_1.joblib": "2848aadecff7ed0a922efbc95e0b78d8a82f25ce9b4f3139b6aa37ee54ea3aed",
+    "models/A2_to_A1_0.30/hgb_snapshot.joblib": "8e4a14f04f2e5eba278a78eee8f9ff2d912c5727d22bc8fd0b0fdf92a4c36167",
+    "models/A2_to_A1_0.30/logistic_history.joblib": "75366e1be7dc2a9de7331cf8178aebc47ddf35c44b1b56fd289be9860693939b",
+    "models/A2_to_A1_0.30/logistic_snapshot.joblib": "84f01a1836e24507276d9547d229dc6ad4a328f0225e6828b1e02ffb4686f81e"
+  },
+  "posthoc_correction": {
+    "reason": "쌍대 손실 계산의 확률 절단값을 본문 sklearn 로그손실과 통일했다. 포화 예측이 많은 로지스틱 이력 모델의 차이가 정정됐다.",
+    "fitting": "재학습 없음. 기존 예측·본문 점수 불변.",
+    "original_results_sha256": "2043fd1129acf9f84d411ad49090fcf8cc62bba6d2c16d18233ad4f8f4c43087",
+    "corrected_code_sha256": "7671f1e7f066af365e199f1bd405d2670fe11cc72a78ef11408e28bfe9082b68"
+  }
+}

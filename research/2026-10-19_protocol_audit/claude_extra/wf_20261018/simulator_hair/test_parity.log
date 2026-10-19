@@ -1,0 +1,15 @@
+[PASS] baseline vs bowed_string_cpu: max |bridge diff| 0 N, slip-flag mismatches 0 of 360000
+[PASS] baseline (Matusiak-equivalent hyperbola) vs bowed_string_cpu: max |bridge diff| 0 N
+[PASS] torsion(gain) vs bowed_string_torsion: max |bridge diff| 0 N, slip mismatches 0
+[PASS] ep vs elastoplastic.py: max |bridge diff| 0 N, slip mismatches 0
+[PASS] transverse FIR passivity (dispersion=False): max|H| bridge 0.99843 (len 48, rms err 9.79e-13), nut 0.98599 (len 116, rms err 5.66e-10)
+     realised/target Q: k1 98Hz Q 180/180, k2 196Hz Q 275/275, k5 490Hz Q 260/260, k10 981Hz Q 162/162, k20 1962Hz Q 86/86, k30 2942Hz Q 58/58, k40 3923Hz Q 44/44
+[PASS] transverse FIR passivity (dispersion=True): max|H| bridge 0.99973 (len 162, rms err 5.83e-03), nut 0.98514 (len 442, rms err 2.01e-03)
+     realised/target Q: k1 98Hz Q 191/180, k2 196Hz Q 295/275, k5 491Hz Q 253/261, k10 985Hz Q 162/162, k20 1997Hz Q 87/88, k30 3061Hz Q 61/60, k40 4200Hz Q 47/47
+     baseline one-pole loop Q (Q1 2000, corner 6 kHz, incl. linear-interp loss): k1 Q 1990, k2 Q 2624, k5 Q 1943, k10 Q 1116, k20 Q 600, k30 Q 426, k40 Q 344
+[PASS] torsion FIR passivity: max|H| 0.98673/0.97265, lengths 30/122; realised Q (target 29.0): k1 607Hz Q 30.5, k2 1213Hz Q 28.5, k4 2427Hz Q 29.5, k8 4855Hz Q 28.8
+[PASS] hair kv energy balance / dissipation: max |dH - dt(f u - r u^2)| / max H = 4.22e-16; min friction power 0.00e+00 W; bow work - friction dissipation (energy into string+hair+torsion) min 5.808e-06 J; Y_contact 0.8961
+[PASS] hair msd energy balance / dissipation: max |dH - dt(f u - r u^2)| / max H = 4.71e-16; min friction power 0.00e+00 W; bow work - friction dissipation (energy into string+hair+torsion) min 6.024e-06 J; Y_contact 0.8797
+     free decay, baseline one-pole: k1: sigma 0.15 (Matusiak 1.71) 1/s; k3: sigma 0.37 (Matusiak 3.11) 1/s; k5: sigma 0.79 (Matusiak 5.92) 1/s; k9: sigma 2.27 (Matusiak 15.73) 1/s; k15: sigma 5.97 (Matusiak 40.97) 1/s; k25: sigma 15.59 (Matusiak 111.06) 1/s
+     free decay, physical damping: k1: sigma 1.71 (Matusiak 1.71) 1/s; k3: sigma 3.11 (Matusiak 3.11) 1/s; k5: sigma 5.92 (Matusiak 5.92) 1/s; k9: sigma 15.66 (Matusiak 15.73) 1/s; k15: sigma 41.00 (Matusiak 40.97) 1/s; k25: sigma 113.41 (Matusiak 111.06) 1/s
+ALL PASS

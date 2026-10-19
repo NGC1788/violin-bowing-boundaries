@@ -1,0 +1,234 @@
+
+================ 반응변수: 최소 활 힘 수준 (base)
+ A. 도표 단위, 메타데이터 있는 7장 (A1, A2, C1, D1, A_T2, B_T2s1, C_T2)
+   [세션] desc_b   r -0.99  LODO-CV R² +0.97  perm p 0.000  slope -3.037
+   [세션] dec10    r +0.93  LODO-CV R² +0.75  perm p 0.002  slope +3.641
+   [세션] acc_b    r +0.88  LODO-CV R² +0.63  perm p 0.004  slope +2.449
+   [세션] cal_low  r -0.86  LODO-CV R² +0.50  perm p 0.015  slope -0.524
+   [세션] cens     r -0.85  LODO-CV R² +0.46  perm p 0.022  slope -1.595
+   [세션] d0       r -0.80  LODO-CV R² +0.21  perm p 0.040  slope -2.028
+   [세션] fmin     r -0.74  LODO-CV R² -0.10  perm p 0.062  slope -0.299
+   [물성] Zto      r +0.29  LODO-CV R² -0.41  perm p 0.554  slope +0.251
+   [물성] d        r -0.61  LODO-CV R² -0.45  perm p 0.145  slope -2.250
+   [세션] floor    r +0.22  LODO-CV R² -0.54  perm p 0.643  slope +1.123
+   [물성] T        r -0.37  LODO-CV R² -0.57  perm p 0.423  slope -1.628
+   [물성] Z        r -0.37  LODO-CV R² -0.57  perm p 0.416  slope -1.623
+   [물성] EI       r -0.12  LODO-CV R² -0.90  perm p 0.777  slope -0.093
+ A'. 도표 단위, 10장 전부 (특징 기반 세션 기술자)
+   [세션] dec5_pl  r +0.88  LODO-CV R² +0.71  perm p 0.000  slope +7.672
+   [세션] cens     r -0.50  LODO-CV R² -0.31  perm p 0.139  slope -0.755
+   [물성] d        r -0.52  LODO-CV R² -0.34  perm p 0.122  slope -1.709
+   [물성] Zto      r +0.29  LODO-CV R² -0.34  perm p 0.409  slope +0.222
+   [세션] cal_pl   r -0.43  LODO-CV R² -0.47  perm p 0.215  slope -0.213
+   [물성] T        r -0.19  LODO-CV R² -0.48  perm p 0.596  slope -0.726
+   [물성] Z        r -0.19  LODO-CV R² -0.48  perm p 0.602  slope -0.723
+   [세션] fmin     r -0.41  LODO-CV R² -0.57  perm p 0.245  slope -0.130
+   [물성] EI       r +0.02  LODO-CV R² -0.60  perm p 0.944  slope +0.015
+ B. 폴더 단위 21개 + 속도 고정효과, 도표 하나씩 빼는 교차검증
+   속도만: CV RMSE 0.298
+   [세션] desc_b   CV RMSE 0.130 (-0.168)  slope -2.752
+   [세션] dec10    CV RMSE 0.173 (-0.125)  slope +3.521
+   [세션] cal_low  CV RMSE 0.199 (-0.099)  slope -0.497
+   [세션] acc_b    CV RMSE 0.223 (-0.075)  slope +1.142
+   [세션] cens     CV RMSE 0.224 (-0.074)  slope -1.266
+   [세션] d0       CV RMSE 0.235 (-0.063)  slope -1.886
+   [세션] fmin     CV RMSE 0.284 (-0.014)  slope -0.107
+   [물성] Zto      CV RMSE 0.302 (+0.004)  slope +0.228
+   [물성] d        CV RMSE 0.304 (+0.006)  slope -2.206
+   [세션] floor    CV RMSE 0.308 (+0.010)  slope +0.845
+   [물성] T        CV RMSE 0.316 (+0.018)  slope -1.518
+   [물성] Z        CV RMSE 0.316 (+0.018)  slope -1.514
+   [물성] EI       CV RMSE 0.342 (+0.044)  slope -0.092
+ B'. 폴더 단위 30개
+   속도만: CV RMSE 0.251
+   [세션] dec5_pl  CV RMSE 0.153 (-0.097)  slope +7.500
+   [세션] fmin     CV RMSE 0.251 (+0.001)  slope -0.061
+   [세션] cens     CV RMSE 0.254 (+0.003)  slope -0.624
+   [물성] Zto      CV RMSE 0.256 (+0.006)  slope +0.224
+   [물성] d        CV RMSE 0.257 (+0.006)  slope -1.707
+   [세션] cal_pl   CV RMSE 0.267 (+0.016)  slope -0.194
+   [물성] Z        CV RMSE 0.270 (+0.020)  slope -0.525
+   [물성] T        CV RMSE 0.270 (+0.020)  slope -0.528
+   [물성] EI       CV RMSE 0.277 (+0.027)  slope +0.038
+
+================ 반응변수: 최소 활 힘 수준 (c=0.2)
+ A. 도표 단위, 메타데이터 있는 7장 (A1, A2, C1, D1, A_T2, B_T2s1, C_T2)
+   [세션] desc_b   r -0.96  LODO-CV R² +0.87  perm p 0.002  slope -2.812
+   [세션] cal_low  r -0.88  LODO-CV R² +0.60  perm p 0.007  slope -0.515
+   [세션] cens     r -0.87  LODO-CV R² +0.57  perm p 0.013  slope -1.573
+   [세션] acc_b    r +0.85  LODO-CV R² +0.53  perm p 0.001  slope +2.274
+   [세션] dec10    r +0.84  LODO-CV R² +0.52  perm p 0.013  slope +3.158
+   [세션] d0       r -0.86  LODO-CV R² +0.46  perm p 0.018  slope -2.079
+   [세션] fmin     r -0.81  LODO-CV R² +0.22  perm p 0.032  slope -0.316
+   [물성] d        r -0.74  LODO-CV R² -0.12  perm p 0.066  slope -2.597
+   [물성] Zto      r +0.23  LODO-CV R² -0.39  perm p 0.612  slope +0.196
+   [세션] floor    r +0.04  LODO-CV R² -0.52  perm p 0.935  slope +0.210
+   [물성] Z        r -0.16  LODO-CV R² -0.74  perm p 0.714  slope -0.687
+   [물성] T        r -0.16  LODO-CV R² -0.74  perm p 0.710  slope -0.691
+   [물성] EI       r -0.01  LODO-CV R² -1.13  perm p 0.970  slope -0.011
+ A'. 도표 단위, 10장 전부 (특징 기반 세션 기술자)
+   [세션] dec5_pl  r +0.80  LODO-CV R² +0.51  perm p 0.005  slope +6.528
+   [물성] d        r -0.65  LODO-CV R² -0.11  perm p 0.039  slope -2.032
+   [세션] cens     r -0.57  LODO-CV R² -0.16  perm p 0.094  slope -0.797
+   [세션] cal_pl   r -0.52  LODO-CV R² -0.28  perm p 0.119  slope -0.241
+   [물성] Zto      r +0.25  LODO-CV R² -0.30  perm p 0.494  slope +0.180
+   [세션] fmin     r -0.51  LODO-CV R² -0.33  perm p 0.135  slope -0.153
+   [물성] Z        r -0.06  LODO-CV R² -0.50  perm p 0.869  slope -0.203
+   [물성] T        r -0.06  LODO-CV R² -0.50  perm p 0.874  slope -0.206
+   [물성] EI       r +0.07  LODO-CV R² -0.59  perm p 0.839  slope +0.042
+ B. 폴더 단위 21개 + 속도 고정효과, 도표 하나씩 빼는 교차검증
+   속도만: CV RMSE 0.287
+   [세션] desc_b   CV RMSE 0.145 (-0.142)  slope -2.555
+   [세션] cal_low  CV RMSE 0.179 (-0.109)  slope -0.494
+   [세션] dec10    CV RMSE 0.188 (-0.099)  slope +3.143
+   [세션] d0       CV RMSE 0.208 (-0.079)  slope -1.921
+   [세션] cens     CV RMSE 0.211 (-0.077)  slope -1.271
+   [세션] acc_b    CV RMSE 0.213 (-0.075)  slope +1.113
+   [세션] fmin     CV RMSE 0.272 (-0.016)  slope -0.114
+   [물성] d        CV RMSE 0.272 (-0.016)  slope -2.457
+   [물성] Zto      CV RMSE 0.289 (+0.001)  slope +0.204
+   [세션] floor    CV RMSE 0.298 (+0.011)  slope +0.295
+   [물성] Z        CV RMSE 0.318 (+0.031)  slope -0.724
+   [물성] T        CV RMSE 0.318 (+0.031)  slope -0.727
+   [물성] EI       CV RMSE 0.345 (+0.058)  slope -0.007
+ B'. 폴더 단위 30개
+   속도만: CV RMSE 0.240
+   [세션] dec5_pl  CV RMSE 0.167 (-0.073)  slope +6.551
+   [물성] d        CV RMSE 0.231 (-0.009)  slope -1.974
+   [세션] cens     CV RMSE 0.238 (-0.002)  slope -0.649
+   [세션] fmin     CV RMSE 0.238 (-0.001)  slope -0.069
+   [물성] Zto      CV RMSE 0.242 (+0.002)  slope +0.206
+   [세션] cal_pl   CV RMSE 0.246 (+0.006)  slope -0.216
+   [물성] Z        CV RMSE 0.259 (+0.019)  slope -0.105
+   [물성] T        CV RMSE 0.259 (+0.019)  slope -0.107
+   [물성] EI       CV RMSE 0.264 (+0.024)  slope +0.067
+
+================ 반응변수: 최소 활 힘 수준 (c=0.3)
+ A. 도표 단위, 메타데이터 있는 7장 (A1, A2, C1, D1, A_T2, B_T2s1, C_T2)
+   [세션] desc_b   r -0.90  LODO-CV R² +0.67  perm p 0.008  slope -2.156
+   [세션] cal_low  r -0.82  LODO-CV R² +0.45  perm p 0.023  slope -0.394
+   [세션] cens     r -0.81  LODO-CV R² +0.41  perm p 0.031  slope -1.199
+   [세션] d0       r -0.83  LODO-CV R² +0.38  perm p 0.025  slope -1.633
+   [세션] acc_b    r +0.76  LODO-CV R² +0.31  perm p 0.035  slope +1.657
+   [세션] dec10    r +0.74  LODO-CV R² +0.31  perm p 0.043  slope +2.290
+   [세션] fmin     r -0.77  LODO-CV R² +0.15  perm p 0.046  slope -0.246
+   [물성] d        r -0.73  LODO-CV R² -0.13  perm p 0.076  slope -2.116
+   [물성] Zto      r +0.30  LODO-CV R² -0.38  perm p 0.501  slope +0.210
+   [세션] floor    r -0.01  LODO-CV R² -0.53  perm p 0.990  slope -0.031
+   [물성] Z        r -0.02  LODO-CV R² -0.87  perm p 0.965  slope -0.064
+   [물성] T        r -0.02  LODO-CV R² -0.87  perm p 0.963  slope -0.067
+   [물성] EI       r +0.15  LODO-CV R² -1.17  perm p 0.746  slope +0.095
+ A'. 도표 단위, 10장 전부 (특징 기반 세션 기술자)
+   [세션] dec5_pl  r +0.70  LODO-CV R² +0.32  perm p 0.023  slope +4.687
+   [물성] d        r -0.68  LODO-CV R² -0.08  perm p 0.033  slope -1.711
+   [세션] cens     r -0.53  LODO-CV R² -0.16  perm p 0.121  slope -0.605
+   [물성] Zto      r +0.32  LODO-CV R² -0.23  perm p 0.365  slope +0.190
+   [세션] cal_pl   r -0.50  LODO-CV R² -0.23  perm p 0.139  slope -0.189
+   [세션] fmin     r -0.49  LODO-CV R² -0.26  perm p 0.152  slope -0.120
+   [물성] Z        r +0.06  LODO-CV R² -0.49  perm p 0.868  slope +0.171
+   [물성] T        r +0.06  LODO-CV R² -0.49  perm p 0.870  slope +0.169
+   [물성] EI       r +0.20  LODO-CV R² -0.53  perm p 0.571  slope +0.093
+ B. 폴더 단위 21개 + 속도 고정효과, 도표 하나씩 빼는 교차검증
+   속도만: CV RMSE 0.230
+   [세션] desc_b   CV RMSE 0.136 (-0.094)  slope -1.927
+   [세션] cal_low  CV RMSE 0.152 (-0.078)  slope -0.379
+   [세션] d0       CV RMSE 0.167 (-0.063)  slope -1.515
+   [세션] dec10    CV RMSE 0.171 (-0.059)  slope +2.268
+   [세션] cens     CV RMSE 0.184 (-0.046)  slope -0.947
+   [세션] acc_b    CV RMSE 0.189 (-0.041)  slope +0.775
+   [물성] d        CV RMSE 0.216 (-0.014)  slope -2.021
+   [세션] fmin     CV RMSE 0.219 (-0.011)  slope -0.092
+   [물성] Zto      CV RMSE 0.231 (+0.001)  slope +0.216
+   [세션] floor    CV RMSE 0.242 (+0.012)  slope +0.014
+   [물성] Z        CV RMSE 0.265 (+0.035)  slope -0.047
+   [물성] T        CV RMSE 0.266 (+0.035)  slope -0.049
+   [물성] EI       CV RMSE 0.283 (+0.052)  slope +0.104
+ B'. 폴더 단위 30개
+   속도만: CV RMSE 0.192
+   [세션] dec5_pl  CV RMSE 0.148 (-0.044)  slope +4.724
+   [물성] d        CV RMSE 0.184 (-0.008)  slope -1.628
+   [세션] cens     CV RMSE 0.188 (-0.004)  slope -0.515
+   [물성] Zto      CV RMSE 0.190 (-0.002)  slope +0.197
+   [세션] fmin     CV RMSE 0.191 (-0.001)  slope -0.057
+   [세션] cal_pl   CV RMSE 0.192 (+0.000)  slope -0.176
+   [물성] Z        CV RMSE 0.207 (+0.015)  slope +0.216
+   [물성] T        CV RMSE 0.207 (+0.015)  slope +0.214
+   [물성] EI       CV RMSE 0.209 (+0.017)  slope +0.103
+
+================ C. 같은 현 안의 세션 변동 (도표 고정효과 + 속도 고정효과)
+ 반응 base
+   cal_low          기울기 -0.399 ± 0.249 (자유도 11), 순열 p 0.228, 도표 안 x 표준편차 0.122
+   d0               기울기 -1.110 ± 1.075 (자유도 11), 순열 p 0.265, 도표 안 x 표준편차 0.030
+   dec10            기울기 +7.116 ± 5.376 (자유도 11), 순열 p 0.345, 도표 안 x 표준편차 0.006
+   desc_b           기울기 -1.581 ± 1.015 (자유도 11), 순열 p 0.006, 도표 안 x 표준편차 0.030
+   floor            기울기 -0.419 ± 1.891 (자유도 11), 순열 p 0.704, 도표 안 x 표준편차 0.018
+   acc_b            기울기 +0.590 ± 0.195 (자유도 11), 순열 p 0.000, 도표 안 x 표준편차 0.128
+   fmin             기울기 -0.059 ± 0.036 (자유도 11), 순열 p 0.141, 도표 안 x 표준편차 0.839
+   cens             기울기 -0.557 ± 0.391 (자유도 11), 순열 p 0.000, 도표 안 x 표준편차 0.079
+   cal_pl (10장)     기울기 -0.196 ± 0.140 (자유도 17), 순열 p 0.265, 도표 안 x 표준편차 0.173
+   dec5_pl (10장)    기울기 +14.113 ± 6.189 (자유도 17), 순열 p 0.015, 도표 안 x 표준편차 0.004
+   fmin (10장)       기울기 -0.046 ± 0.033 (자유도 17), 순열 p 0.239, 도표 안 x 표준편차 0.742
+   cens (10장)       기울기 -0.465 ± 0.290 (자유도 17), 순열 p 0.000, 도표 안 x 표준편차 0.082
+ 반응 c=0.2
+   cal_low          기울기 -0.443 ± 0.224 (자유도 11), 순열 p 0.202, 도표 안 x 표준편차 0.122
+   d0               기울기 -1.100 ± 1.010 (자유도 11), 순열 p 0.316, 도표 안 x 표준편차 0.030
+   dec10            기울기 +5.521 ± 5.205 (자유도 11), 순열 p 0.455, 도표 안 x 표준편차 0.006
+   desc_b           기울기 -1.200 ± 0.995 (자유도 11), 순열 p 0.059, 도표 안 x 표준편차 0.030
+   floor            기울기 -0.173 ± 1.789 (자유도 11), 순열 p 0.909, 도표 안 x 표준편차 0.018
+   acc_b            기울기 +0.613 ± 0.167 (자유도 11), 순열 p 0.000, 도표 안 x 표준편차 0.128
+   fmin             기울기 -0.059 ± 0.033 (자유도 11), 순열 p 0.056, 도표 안 x 표준편차 0.839
+   cens             기울기 -0.663 ± 0.349 (자유도 11), 순열 p 0.000, 도표 안 x 표준편차 0.079
+   cal_pl (10장)     기울기 -0.221 ± 0.132 (자유도 17), 순열 p 0.165, 도표 안 x 표준편차 0.173
+   dec5_pl (10장)    기울기 +12.648 ± 6.056 (자유도 17), 순열 p 0.018, 도표 안 x 표준편차 0.004
+   fmin (10장)       기울기 -0.045 ± 0.031 (자유도 17), 순열 p 0.137, 도표 안 x 표준편차 0.742
+   cens (10장)       기울기 -0.470 ± 0.276 (자유도 17), 순열 p 0.000, 도표 안 x 표준편차 0.082
+
+================ 결합 모델 (도표 7장, base): 수준 = a + b·세션 + c·물성
+   cal_low  + T   : b -0.501, c -1.010, LODO-CV R² +0.34
+   cal_low  + Z   : b -0.501, c -1.009, LODO-CV R² +0.34
+   cal_low  + EI  : b -0.568, c +0.162, LODO-CV R² -0.42
+   cal_low  + d   : b -0.774, c +1.755, LODO-CV R² +0.37
+   cal_low  + Zto : b -0.546, c +0.327, LODO-CV R² +0.51
+   dec10    + T   : b +4.223, c +1.133, LODO-CV R² +0.49
+   dec10    + Z   : b +4.222, c +1.131, LODO-CV R² +0.49
+   dec10    + EI  : b +4.057, c +0.217, LODO-CV R² +0.81
+   dec10    + d   : b +3.241, c -0.769, LODO-CV R² +0.59
+   dec10    + Zto : b +3.552, c +0.121, LODO-CV R² +0.64
+   desc_b   + T   : b -3.035, c -0.006, LODO-CV R² +0.93
+   desc_b   + Z   : b -3.035, c -0.006, LODO-CV R² +0.93
+   desc_b   + EI  : b -3.074, c +0.052, LODO-CV R² +0.95
+   desc_b   + d   : b -3.015, c -0.042, LODO-CV R² +0.96
+   desc_b   + Zto : b -2.978, c +0.088, LODO-CV R² +0.97
+   fmin     + T   : b -0.307, c -1.777, LODO-CV R² -0.00
+   fmin     + Z   : b -0.307, c -1.776, LODO-CV R² -0.00
+   fmin     + EI  : b -0.322, c +0.123, LODO-CV R² -0.84
+   fmin     + d   : b -0.726, c +4.039, LODO-CV R² +0.01
+   fmin     + Zto : b -0.365, c +0.482, LODO-CV R² +0.21
+
+================ D. 같은 물성 반복 vs 다른 물성
+ base           : 반복 내 SD 0.121 (자유도 3; A_T1 [0.115, -0.118], B_T2 [-0.26, -0.318, -0.139]) | 물성 그룹 평균의 SD 0.211 | F 4.40, 순열 p 0.096
+ c=0.2          : 반복 내 SD 0.105 (자유도 3; A_T1 [0.095, -0.106], B_T2 [-0.151, -0.289, -0.155]) | 물성 그룹 평균의 SD 0.201 | F 5.31, 순열 p 0.080
+ c=0.3          : 반복 내 SD 0.095 (자유도 3; A_T1 [0.079, -0.089], B_T2 [-0.016, -0.177, -0.109]) | 물성 그룹 평균의 SD 0.164 | F 4.16, 순열 p 0.109
+ zero_corrected : 반복 내 SD 0.083 (자유도 1; A_T1 [0.058, -0.059]) | 물성 그룹 평균의 SD 0.344 | F 22.62, 순열 p 0.136
+
+================ 장력 쌍 (T1 → T2), 최소 활 힘 수준 차이와 세션 기술자 차이
+ A1 →A_T2    Z비 1.122: base Δ-0.654 (Z지수 -5.7); c=0.2 Δ-0.515 (Z지수 -4.5); c=0.3 Δ-0.367 (Z지수 -3.2); 영점보정 Δ-0.504; | Δlog cal_low +0.98, Δdec10 -0.200, Δdesc_b +0.202, Δlog cal_pl +0.68, Δdec5_pl -0.088, Δlog fmin +0.97
+ A2 →A_T2    Z비 1.122: base Δ-0.421 (Z지수 -3.7); c=0.2 Δ-0.314 (Z지수 -2.7); c=0.3 Δ-0.199 (Z지수 -1.7); 영점보정 Δ-0.387; | Δlog cal_low +0.57, Δdec10 -0.110, Δdesc_b +0.116, Δlog cal_pl +0.61, Δdec5_pl -0.058, Δlog fmin +0.56
+ B1 →B_T2s1  Z비 1.082: base Δ+0.097 (Z지수 +1.2); c=0.2 Δ+0.133 (Z지수 +1.7); c=0.3 Δ+0.156 (Z지수 +2.0); | Δlog cal_low +nan, Δdec10 +nan, Δdesc_b +nan, Δlog cal_pl -0.37, Δdec5_pl +0.013, Δlog fmin -0.07
+ B1 →B_T2r1  Z비 1.082: base Δ+0.039 (Z지수 +0.5); c=0.2 Δ-0.006 (Z지수 -0.1); c=0.3 Δ-0.005 (Z지수 -0.1); | Δlog cal_low +nan, Δdec10 +nan, Δdesc_b +nan, Δlog cal_pl +0.40, Δdec5_pl +0.015, Δlog fmin +0.93
+ B1 →B_T2r2  Z비 1.082: base Δ+0.218 (Z지수 +2.8); c=0.2 Δ+0.129 (Z지수 +1.6); c=0.3 Δ+0.063 (Z지수 +0.8); | Δlog cal_low +nan, Δdec10 +nan, Δdesc_b +nan, Δlog cal_pl +0.66, Δdec5_pl +0.013, Δlog fmin +1.31
+ C1 →C_T2    Z비 1.060: base Δ+0.005 (Z지수 +0.1); c=0.2 Δ-0.033 (Z지수 -0.6); c=0.3 Δ-0.028 (Z지수 -0.5); 영점보정 Δ-0.167; | Δlog cal_low +0.15, Δdec10 -0.025, Δdesc_b -0.007, Δlog cal_pl +0.15, Δdec5_pl -0.010, Δlog fmin +0.17
+
+================ 세션 기술자와 물성의 상관 (도표 7장 / 10장)
+   cal_low  T +0.17 Z +0.17 EI +0.35 d +0.86 Zto +0.10
+   d0       T +0.04 Z +0.04 EI +0.27 d +0.92 Zto +0.10
+   dec10    T -0.58 Z -0.58 EI -0.38 d -0.49 Zto +0.16
+   desc_b   T +0.37 Z +0.37 EI +0.18 d +0.61 Zto -0.19
+   floor    T -0.58 Z -0.59 EI +0.08 d +0.60 Zto +0.49
+   acc_b    T -0.32 Z -0.32 EI -0.48 d -0.74 Zto -0.17
+   fmin     T -0.04 Z -0.05 EI +0.35 d +0.96 Zto +0.29
+   cens     T +0.28 Z +0.28 EI +0.36 d +0.83 Zto +0.03
+   cal_pl  (10) T +0.36 Z +0.36 EI +0.58 d +0.44 Zto +0.41
+   dec5_pl (10) T -0.52 Z -0.52 EI -0.30 d -0.26 Zto +0.10
+   fmin    (10) T +0.34 Z +0.34 EI +0.62 d +0.51 Zto +0.47
+   cens    (10) T +0.54 Z +0.54 EI +0.63 d +0.42 Zto +0.31

@@ -1,0 +1,24 @@
+== t=0.0
+  A1      cols 120 | lower finite 111 left 0 right(no run) 9 | upper finite 59 right 52 none 9 | own fit lower v +0.57 b -0.67 s 0.47 | upper v +0.59 b -1.13
+  A2      cols 120 | lower finite 108 left 2 right(no run) 10 | upper finite 63 right 47 none 10 | own fit lower v +1.04 b -0.65 s 0.59 | upper v +0.70 b -1.09
+  B1      cols 120 | lower finite 97 left 15 right(no run) 8 | upper finite 63 right 49 none 8 | own fit lower v +1.02 b -1.22 s 0.71 | upper v +0.59 b -1.05
+  C1      cols 120 | lower finite 92 left 21 right(no run) 7 | upper finite 67 right 46 none 7 | own fit lower v +1.12 b -1.25 s 0.56 | upper v +0.76 b -1.03
+  D1      cols 120 | lower finite 87 left 23 right(no run) 10 | upper finite 66 right 44 none 10 | own fit lower v +1.05 b -1.34 s 0.56 | upper v +0.71 b -1.04
+  B_T2r1  cols 120 | lower finite 70 left 39 right(no run) 11 | upper finite 58 right 51 none 11 | own fit lower v +1.36 b -1.76 s 0.45 | upper v +0.63 b -1.00
+  B_T2r2  cols 120 | lower finite 59 left 49 right(no run) 12 | upper finite 64 right 44 none 12 | own fit lower v +1.35 b -1.79 s 0.47 | upper v +0.57 b -0.85
+== t=0.2
+  A1      cols 120 | lower finite 112 left 0 right(no run) 8 | upper finite 59 right 53 none 8 | own fit lower v +0.67 b -0.97 s 0.38 | upper v +0.62 b -1.11
+  A2      cols 120 | lower finite 110 left 1 right(no run) 9 | upper finite 59 right 52 none 9 | own fit lower v +0.94 b -1.09 s 0.68 | upper v +0.71 b -1.12
+  B1      cols 120 | lower finite 91 left 21 right(no run) 8 | upper finite 48 right 64 none 8 | own fit lower v +1.09 b -1.66 s 0.60 | upper v +0.77 b -0.92
+  C1      cols 120 | lower finite 86 left 27 right(no run) 7 | upper finite 61 right 52 none 7 | own fit lower v +1.12 b -1.61 s 0.49 | upper v +0.80 b -1.07
+  D1      cols 120 | lower finite 78 left 33 right(no run) 9 | upper finite 60 right 51 none 9 | own fit lower v +1.13 b -1.64 s 0.45 | upper v +0.75 b -1.04
+  B_T2r1  cols 120 | lower finite 63 left 46 right(no run) 11 | upper finite 43 right 66 none 11 | own fit lower v +1.42 b -2.18 s 0.33 | upper v +0.86 b -1.29
+  B_T2r2  cols 120 | lower finite 58 left 51 right(no run) 11 | upper finite 47 right 62 none 11 | own fit lower v +1.22 b -1.82 s 0.42 | upper v +0.70 b -0.97
+== t=0.3
+  A1      cols 120 | lower finite 112 left 0 right(no run) 8 | upper finite 58 right 54 none 8 | own fit lower v +0.65 b -1.09 s 0.40 | upper v +0.67 b -1.15
+  A2      cols 120 | lower finite 110 left 1 right(no run) 9 | upper finite 58 right 53 none 9 | own fit lower v +0.97 b -1.29 s 0.66 | upper v +0.69 b -1.12
+  B1      cols 120 | lower finite 93 left 21 right(no run) 6 | upper finite 49 right 65 none 6 | own fit lower v +1.04 b -1.79 s 0.62 | upper v +0.71 b -0.87
+  C1      cols 120 | lower finite 86 left 28 right(no run) 6 | upper finite 58 right 56 none 6 | own fit lower v +1.00 b -1.65 s 0.61 | upper v +0.76 b -1.01
+  D1      cols 120 | lower finite 74 left 37 right(no run) 9 | upper finite 59 right 52 none 9 | own fit lower v +1.19 b -1.78 s 0.46 | upper v +0.72 b -1.11
+  B_T2r1  cols 120 | lower finite 62 left 48 right(no run) 10 | upper finite 42 right 68 none 10 | own fit lower v +1.44 b -2.25 s 0.34 | upper v +0.76 b -1.18
+  B_T2r2  cols 120 | lower finite 56 left 52 right(no run) 12 | upper finite 44 right 64 none 12 | own fit lower v +1.22 b -1.92 s 0.46 | upper v +0.76 b -1.04

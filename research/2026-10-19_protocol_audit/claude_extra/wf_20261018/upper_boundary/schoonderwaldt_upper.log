@@ -1,0 +1,19 @@
+== Table I of Schoonderwaldt 2008 (c_upper with the beta slope fixed at -1): implied speed exponent
+   OLS slope of log c_upper on log v: +0.658; pairwise 5->10 +0.38, 10->20 +0.95
+
+== D4, K=2: column status per speed 0.05: int 11, right 0, none 0; 0.1: int 11, right 0, none 0; 0.15: int 11, right 0, none 0; 0.2: int 7, right 4, none 0
+D4 upper K=2: cols 44 (right-censored 4, left 0)  a +0.619 [+0.53,+0.71]  b -0.649 [-0.73,-0.57]  sigma 0.16  p(a=1,b=-1) 6.0e-11  p(a=1) 2.9e-09  p(b=-1) 4.2e-08  p(a=0) 1.4e-16
+    v 0.05: beta slope -0.48 [-0.71,-0.31]  F(beta 0.1) 0.767 N  (n 11, right 0)
+    v 0.10: beta slope -0.49 [-0.60,-0.38]  F(beta 0.1) 0.989 N  (n 11, right 0)
+    v 0.15: beta slope -0.77 [-0.93,-0.65]  F(beta 0.1) 1.270 N  (n 11, right 0)
+    v 0.20: beta slope -1.04 [-1.15,-0.87]  F(beta 0.1) 1.676 N  (n 11, right 4)
+D4 lower K=2 (same code; cf. claude_extra/schoonderwaldt_fmin.py -0.09): cols 44 (right-censored 0, left 18)  a -0.085 [-0.24,+0.09]  b -2.179 [-2.52,-1.94]  sigma 0.23  p(a=1,b=-1) 8.9e-19  p(a=1) 5.1e-13  p(b=-1) 2.0e-14  p(a=0) 3.3e-01
+
+== D4, K=1: column status per speed 0.05: int 11, right 0, none 0; 0.1: int 11, right 0, none 0; 0.15: int 11, right 0, none 0; 0.2: int 7, right 4, none 0
+D4 upper K=1: cols 44 (right-censored 4, left 0)  a +0.619 [+0.53,+0.71]  b -0.649 [-0.73,-0.57]  sigma 0.16  p(a=1,b=-1) 6.0e-11  p(a=1) 2.9e-09  p(b=-1) 4.2e-08  p(a=0) 1.4e-16
+
+== D4, K=3: column status per speed 0.05: int 11, right 0, none 0; 0.1: int 11, right 0, none 0; 0.15: int 11, right 0, none 0; 0.2: int 7, right 4, none 0
+D4 upper K=3: cols 44 (right-censored 4, left 0)  a +0.619 [+0.53,+0.71]  b -0.649 [-0.73,-0.57]  sigma 0.16  p(a=1,b=-1) 6.0e-11  p(a=1) 2.9e-09  p(b=-1) 4.2e-08  p(a=0) 1.4e-16
+
+== E5 (2 speeds, sparse systematic analysis): status 0.1: ['right', 'interval', 'interval', 'interval', 'interval', 'interval', 'interval', 'none', 'interval', 'interval']; 0.2: ['right', 'right', 'right', 'right', 'right', 'right', 'interval', 'none', 'interval', 'interval']
+E5 upper K=2: cols 18 (right-censored 7, left 0)  a +0.878 [+0.73,+1.14]  b -0.896 [-1.11,-0.83]  sigma 0.05  p(a=1,b=-1) 1.7e-01  p(a=1) 9.8e-02  p(b=-1) 9.3e-02  p(a=0) 1.1e-08

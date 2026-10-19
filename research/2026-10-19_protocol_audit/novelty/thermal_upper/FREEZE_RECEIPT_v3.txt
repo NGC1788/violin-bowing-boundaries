@@ -1,0 +1,13 @@
+FROZEN_v3.json (addendum to v2)  "created_kst": "2026-10-19T10:39:15.836210+09:00",
+ac30d1179975101f53f7fa3fd85179361110c28242655a4e806b0d4ea895a7ac  FROZEN_v3.json
+d3039f6b0eaaf71fb415d691d813660920798e783a2cd0f415aa4b810042d749  freeze3.py
+7bc818cab477934c6a4f021b897ffd6f97aa759d789796695c0ff1985dda379e  score_target.py
+692341c72db59b7769e0c7d0f3a96cd6f82552a23224d31b03d292fc82093c4b  analysis2.py
+91db45a1a5afe4d9d510f37a3d2c7a82f561a825d827cc235613b5b91321ff6c  analysis2b.py
+de86866fb5c049434d1364589971f987ec0dfc02fe8ed6ff4f7da9b0e35b7bb8  analysis2.json
+91e99a6e25cbd742ca819c31053f7a383b64413169d9825c426c64c56d7d3fa3  analysis2b.json
+f3d67d546b50a4757b2aa441c9b5d15ecd2436cb6633d98c836f4d5dbc874cd9  thermal_law2.py
+fbcec76de56621e641e89daf88d803382494684cba08e70d400c5cc2204696bf  rows.py
+replicate.log at 2026-10-19 10:39:15 KST:
+  parallel: 219/219 chunks to fetch over 16 connections
+NOTE: A3 'done' at 10:39:05; A4 download started 10:39:05, FROZEN_v3 created 10:39:15 (A4 archive not yet downloaded, no A4 features exist). A3/A4 NOT scored by this agent.

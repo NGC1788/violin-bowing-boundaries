@@ -1,0 +1,27 @@
+A1 {0.05: (20, 0.9740775903819993, 0.9), 0.1: (26, 0.9985753635296793, 0.6153846153846154), 0.2: (25, 1.0, 0.44)}
+A2 {0.05: (19, 0.6459282146470232, 1.0), 0.1: (19, 0.9629954258405523, 0.9473684210526315), 0.2: (8, 0.9942670881094324, 0.875)}
+
+A2 v1: strokes 2000, floor 901, ramp_s floor median 1.920, n windows median 38.0, t max median 1.85
+floor ranks per column (min..max):
+ col  0 beta 0.020 floor n=50 ranks 1-50 entered 20 tEntry med 0.05 tLow med 1.62 ratio 0.94 lowfrac 0.15
+ col  1 beta 0.021 floor n=50 ranks 1-50 entered 25 tEntry med 0.05 tLow med 1.70 ratio 0.89 lowfrac 0.16
+ col  2 beta 0.022 floor n=50 ranks 1-50 entered 22 tEntry med 0.05 tLow med 1.65 ratio 0.92 lowfrac 0.14
+ col  3 beta 0.024 floor n=50 ranks 1-50 entered 23 tEntry med 0.05 tLow med 1.60 ratio 0.86 lowfrac 0.17
+ col  4 beta 0.025 floor n=50 ranks 1-50 entered 25 tEntry med 0.05 tLow med 1.55 ratio 0.80 lowfrac 0.16
+ col  5 beta 0.027 floor n=50 ranks 1-50 entered 28 tEntry med 0.05 tLow med 1.55 ratio 0.83 lowfrac 0.18
+ col  6 beta 0.028 floor n=50 ranks 1-50 entered 30 tEntry med 0.05 tLow med 1.48 ratio 0.67 lowfrac 0.17
+ col  7 beta 0.030 floor n=50 ranks 1-50 entered 32 tEntry med 0.05 tLow med 1.42 ratio 0.84 lowfrac 0.16
+ col  8 beta 0.032 floor n=50 ranks 1-50 entered 33 tEntry med 0.05 tLow med 1.75 ratio 0.62 lowfrac 0.18
+ col  9 beta 0.034 floor n=50 ranks 1-50 entered 32 tEntry med 0.05 tLow med 1.75 ratio 0.52 lowfrac 0.12
+ col 10 beta 0.036 floor n=50 ranks 1-50 entered 41 tEntry med 0.05 tLow med 1.70 ratio 0.65 lowfrac 0.20
+ col 11 beta 0.038 floor n=50 ranks 1-50 entered 36 tEntry med 0.05 tLow med 1.65 ratio 0.56 lowfrac 0.19
+ col 12 beta 0.041 floor n=50 ranks 1-50 entered 39 tEntry med 0.05 tLow med 1.55 ratio 0.65 lowfrac 0.15
+ col 13 beta 0.043 floor n=50 ranks 1-50 entered 42 tEntry med 0.05 tLow med 1.45 ratio 0.64 lowfrac 0.14
+ col 14 beta 0.046 floor n=50 ranks 1-50 entered 39 tEntry med 0.05 tLow med 1.45 ratio 0.59 lowfrac 0.23
+ col 15 beta 0.048 floor n=50 ranks 1-50 entered 40 tEntry med 0.05 tLow med 1.85 ratio 0.41 lowfrac 0.25
+ col 16 beta 0.051 floor n=50 ranks 1-50 entered 39 tEntry med 0.05 tLow med 1.80 ratio 0.39 lowfrac 0.28
+ col 17 beta 0.055 floor n=24 ranks 1-24 entered 15 tEntry med 0.05 tLow med 1.80 ratio 0.41 lowfrac 0.40
+ col 18 beta 0.058 floor n=14 ranks 1-14 entered  8 tEntry med 0.05 tLow med 1.85 ratio 0.21 lowfrac 1.00
+ col 19 beta 0.061 floor n= 8 ranks 1-8 entered  4 tEntry med 0.08 tLow med 1.80 (not used)
+ col 20 beta 0.065 floor n= 4 ranks 1-4 entered  2 tEntry med 0.05 tLow med 1.80 (not used)
+ col 21 beta 0.069 floor n= 1 ranks 1-1 entered  1 tEntry med 0.40 tLow med 2.00 (not used)

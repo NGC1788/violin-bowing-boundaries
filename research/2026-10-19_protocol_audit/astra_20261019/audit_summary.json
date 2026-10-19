@@ -1,0 +1,397 @@
+{
+  "scope": "기존 자료 사후 감사. D_T2 미열람. 새로운 적합 없음.",
+  "source_sha256": {
+    "/Users/jeongjihoon/violin-rne/astra_20261019/protocol_results/results.json": "bb7a65b3704ec691ada6ae74bad58e1f88c97f1c54539e29445bcd60811af547",
+    "/Users/jeongjihoon/violin-rne/astra_20261019/nested_protocol_results.json": "38a2caf4548d70599bf3536252dce43643affb24f07d7a136e83d7c2ed1c144c",
+    "/Users/jeongjihoon/violin-rne/astra_20261019/compare_fixed_results/results.json": "cd30e3e5cc7f9c83d6892d448b9a2f453ea9d66c1cbd618d202de295c1b992ea",
+    "/Users/jeongjihoon/violin-rne/astra_20261018/forecast/results/results_paired_corrected.json": "e57239e550b10a14ecea71a1992d0e6cc4a0dfc9d75ad60c29594243c3012d8c"
+  },
+  "comparison": {
+    "P-Sch-publishedZ": {
+      "lower": {
+        "conditional_error": 0.6467947691170266,
+        "finite_n": 376,
+        "point_hits": 173,
+        "all_available_denominator": 600,
+        "common_point_error": 0.6274409772662928,
+        "counts": {
+          "observation_finite_interval": 376,
+          "prediction_point": 600,
+          "observations_available": 600,
+          "point_predictions_available": 600,
+          "point_hits": 173,
+          "observation_left_censored": 178,
+          "observation_right_censored": 46,
+          "no_detected_observed_band": 46,
+          "observation_unavailable": 0,
+          "prediction_left_censored": 0,
+          "prediction_right_censored": 0,
+          "prediction_empty": 0,
+          "prediction_invalid": 0,
+          "support_censored_predictions_available": 0,
+          "censor_interval_overlaps": 0,
+          "censor_interval_contained": 0,
+          "prediction_failures_available": 0
+        }
+      },
+      "upper": {
+        "conditional_error": 0.1948657353851641,
+        "finite_n": 259,
+        "point_hits": 329,
+        "all_available_denominator": 554,
+        "common_point_error": 0.18773217523053282,
+        "counts": {
+          "observation_right_censored": 295,
+          "prediction_point": 600,
+          "observations_available": 554,
+          "point_predictions_available": 554,
+          "point_hits": 329,
+          "observation_finite_interval": 259,
+          "observation_unavailable": 46,
+          "no_detected_observed_band": 46,
+          "observation_left_censored": 0,
+          "prediction_left_censored": 0,
+          "prediction_right_censored": 0,
+          "prediction_empty": 0,
+          "prediction_invalid": 0,
+          "support_censored_predictions_available": 0,
+          "censor_interval_overlaps": 0,
+          "censor_interval_contained": 0,
+          "prediction_failures_available": 0
+        }
+      }
+    },
+    "P-Beigi-publishedZ": {
+      "lower": {
+        "conditional_error": 0.30631077162991727,
+        "finite_n": 376,
+        "point_hits": 146,
+        "all_available_denominator": 600,
+        "common_point_error": 0.30165981546530357,
+        "counts": {
+          "observation_finite_interval": 376,
+          "prediction_point": 600,
+          "observations_available": 600,
+          "point_predictions_available": 600,
+          "point_hits": 146,
+          "observation_left_censored": 178,
+          "observation_right_censored": 46,
+          "no_detected_observed_band": 46,
+          "observation_unavailable": 0,
+          "prediction_left_censored": 0,
+          "prediction_right_censored": 0,
+          "prediction_empty": 0,
+          "prediction_invalid": 0,
+          "support_censored_predictions_available": 0,
+          "censor_interval_overlaps": 0,
+          "censor_interval_contained": 0,
+          "prediction_failures_available": 0
+        }
+      },
+      "upper": {
+        "conditional_error": 0.1948657353851641,
+        "finite_n": 259,
+        "point_hits": 329,
+        "all_available_denominator": 554,
+        "common_point_error": 0.18773217523053282,
+        "counts": {
+          "observation_right_censored": 295,
+          "prediction_point": 600,
+          "observations_available": 554,
+          "point_predictions_available": 554,
+          "point_hits": 329,
+          "observation_finite_interval": 259,
+          "observation_unavailable": 46,
+          "no_detected_observed_band": 46,
+          "observation_left_censored": 0,
+          "prediction_left_censored": 0,
+          "prediction_right_censored": 0,
+          "prediction_empty": 0,
+          "prediction_invalid": 0,
+          "support_censored_predictions_available": 0,
+          "censor_interval_overlaps": 0,
+          "censor_interval_contained": 0,
+          "prediction_failures_available": 0
+        }
+      }
+    },
+    "P-free-publishedZ": {
+      "lower": {
+        "conditional_error": 0.2678783691037376,
+        "finite_n": 376,
+        "point_hits": 149,
+        "all_available_denominator": 600,
+        "common_point_error": 0.2680261403881087,
+        "counts": {
+          "observation_finite_interval": 376,
+          "prediction_point": 600,
+          "observations_available": 600,
+          "point_predictions_available": 600,
+          "point_hits": 149,
+          "observation_left_censored": 178,
+          "observation_right_censored": 46,
+          "no_detected_observed_band": 46,
+          "observation_unavailable": 0,
+          "prediction_left_censored": 0,
+          "prediction_right_censored": 0,
+          "prediction_empty": 0,
+          "prediction_invalid": 0,
+          "support_censored_predictions_available": 0,
+          "censor_interval_overlaps": 0,
+          "censor_interval_contained": 0,
+          "prediction_failures_available": 0
+        }
+      },
+      "upper": {
+        "conditional_error": 0.15522123843358138,
+        "finite_n": 259,
+        "point_hits": 347,
+        "all_available_denominator": 554,
+        "common_point_error": 0.1804079367626874,
+        "counts": {
+          "observation_right_censored": 295,
+          "prediction_point": 600,
+          "observations_available": 554,
+          "point_predictions_available": 554,
+          "point_hits": 347,
+          "observation_finite_interval": 259,
+          "observation_unavailable": 46,
+          "no_detected_observed_band": 46,
+          "observation_left_censored": 0,
+          "prediction_left_censored": 0,
+          "prediction_right_censored": 0,
+          "prediction_empty": 0,
+          "prediction_invalid": 0,
+          "support_censored_predictions_available": 0,
+          "censor_interval_overlaps": 0,
+          "censor_interval_contained": 0,
+          "prediction_failures_available": 0
+        }
+      }
+    },
+    "Triv-5-finite": {
+      "lower": {
+        "conditional_error": 0.2687316486445761,
+        "finite_n": 376,
+        "point_hits": 136,
+        "all_available_denominator": 600,
+        "common_point_error": 0.2683323999227008,
+        "counts": {
+          "observation_finite_interval": 376,
+          "prediction_point": 600,
+          "observations_available": 600,
+          "point_predictions_available": 600,
+          "point_hits": 136,
+          "observation_left_censored": 178,
+          "observation_right_censored": 46,
+          "no_detected_observed_band": 46,
+          "observation_unavailable": 0,
+          "prediction_left_censored": 0,
+          "prediction_right_censored": 0,
+          "prediction_empty": 0,
+          "prediction_invalid": 0,
+          "support_censored_predictions_available": 0,
+          "censor_interval_overlaps": 0,
+          "censor_interval_contained": 0,
+          "prediction_failures_available": 0
+        }
+      },
+      "upper": {
+        "conditional_error": 0.18816303568618603,
+        "finite_n": 259,
+        "point_hits": 80,
+        "all_available_denominator": 554,
+        "common_point_error": 0.20363988952797749,
+        "counts": {
+          "observation_right_censored": 295,
+          "prediction_point": 600,
+          "observations_available": 554,
+          "point_predictions_available": 554,
+          "point_hits": 80,
+          "observation_finite_interval": 259,
+          "observation_unavailable": 46,
+          "no_detected_observed_band": 46,
+          "observation_left_censored": 0,
+          "prediction_left_censored": 0,
+          "prediction_right_censored": 0,
+          "prediction_empty": 0,
+          "prediction_invalid": 0,
+          "support_censored_predictions_available": 0,
+          "censor_interval_overlaps": 0,
+          "censor_interval_contained": 0,
+          "prediction_failures_available": 0
+        }
+      }
+    },
+    "D-logit": {
+      "lower": {
+        "conditional_error": 0.3066526173571362,
+        "finite_n": 363,
+        "point_hits": 85,
+        "all_available_denominator": 600,
+        "common_point_error": 0.30443496736428566,
+        "counts": {
+          "observation_finite_interval": 376,
+          "prediction_point": 480,
+          "observations_available": 600,
+          "point_predictions_available": 480,
+          "point_hits": 85,
+          "observation_left_censored": 178,
+          "prediction_empty": 68,
+          "prediction_failures_available": 68,
+          "observation_right_censored": 46,
+          "no_detected_observed_band": 46,
+          "observation_unavailable": 0,
+          "prediction_left_censored": 52,
+          "prediction_right_censored": 0,
+          "prediction_invalid": 0,
+          "support_censored_predictions_available": 52,
+          "censor_interval_overlaps": 52,
+          "censor_interval_contained": 46
+        }
+      },
+      "upper": {
+        "conditional_error": 0.2580209059837463,
+        "finite_n": 181,
+        "point_hits": 45,
+        "all_available_denominator": 554,
+        "common_point_error": 0.2580209059837463,
+        "counts": {
+          "observation_right_censored": 295,
+          "prediction_right_censored": 333,
+          "observations_available": 554,
+          "support_censored_predictions_available": 323,
+          "censor_interval_overlaps": 292,
+          "censor_interval_contained": 275,
+          "observation_finite_interval": 259,
+          "prediction_point": 199,
+          "point_predictions_available": 199,
+          "point_hits": 45,
+          "prediction_empty": 68,
+          "prediction_failures_available": 32,
+          "observation_unavailable": 46,
+          "no_detected_observed_band": 46,
+          "observation_left_censored": 0,
+          "prediction_left_censored": 0,
+          "prediction_invalid": 0
+        }
+      }
+    },
+    "D-gbm": {
+      "lower": {
+        "conditional_error": 0.28778256087621756,
+        "finite_n": 364,
+        "point_hits": 86,
+        "all_available_denominator": 600,
+        "common_point_error": 0.2870104984297927,
+        "counts": {
+          "observation_finite_interval": 376,
+          "prediction_point": 507,
+          "observations_available": 600,
+          "point_predictions_available": 507,
+          "point_hits": 86,
+          "observation_left_censored": 178,
+          "observation_right_censored": 46,
+          "prediction_empty": 43,
+          "no_detected_observed_band": 46,
+          "prediction_failures_available": 43,
+          "observation_unavailable": 0,
+          "prediction_left_censored": 50,
+          "prediction_right_censored": 0,
+          "prediction_invalid": 0,
+          "support_censored_predictions_available": 50,
+          "censor_interval_overlaps": 47,
+          "censor_interval_contained": 41
+        }
+      },
+      "upper": {
+        "conditional_error": 0.16923856113430497,
+        "finite_n": 241,
+        "point_hits": 93,
+        "all_available_denominator": 554,
+        "common_point_error": 0.17618280877472758,
+        "counts": {
+          "observation_right_censored": 295,
+          "prediction_right_censored": 279,
+          "observations_available": 554,
+          "support_censored_predictions_available": 273,
+          "censor_interval_overlaps": 264,
+          "censor_interval_contained": 256,
+          "prediction_point": 278,
+          "point_predictions_available": 278,
+          "point_hits": 93,
+          "observation_finite_interval": 259,
+          "observation_unavailable": 46,
+          "prediction_empty": 43,
+          "no_detected_observed_band": 46,
+          "prediction_failures_available": 3,
+          "observation_left_censored": 0,
+          "prediction_left_censored": 0,
+          "prediction_invalid": 0
+        }
+      }
+    }
+  },
+  "protocol_sensitivity": {
+    "measured_K2_t0.1": {
+      "r": 0.8769365325602071,
+      "fixed_reference_lodo_mae": 0.09868441120075487,
+      "fixed_reference_type_holdout_mae": 0.12009753735358752
+    },
+    "measured_K2_t0.2": {
+      "r": 0.8797594374390031,
+      "fixed_reference_lodo_mae": 0.0815837324122224,
+      "fixed_reference_type_holdout_mae": 0.12899054183592273
+    },
+    "measured_K2_t0.3": {
+      "r": 0.8602414718041032,
+      "fixed_reference_lodo_mae": 0.0981511283695244,
+      "fixed_reference_type_holdout_mae": 0.15190664714587454
+    },
+    "measured_K3_t0.1": {
+      "r": 0.8147577233847503,
+      "fixed_reference_lodo_mae": 0.12675305608338808,
+      "fixed_reference_type_holdout_mae": 0.139905467422787
+    },
+    "measured_K3_t0.2": {
+      "r": 0.8532646961154524,
+      "fixed_reference_lodo_mae": 0.11401095336408269,
+      "fixed_reference_type_holdout_mae": 0.164097615992649
+    },
+    "measured_K3_t0.3": {
+      "r": 0.8369062667500275,
+      "fixed_reference_lodo_mae": 0.12845236894433326,
+      "fixed_reference_type_holdout_mae": 0.1815036757742607
+    },
+    "nominal_rank_K2_t0.1": {
+      "r": 0.7072423341944338,
+      "fixed_reference_lodo_mae": 0.36405871215983343,
+      "fixed_reference_type_holdout_mae": 0.42714540298770143
+    },
+    "nominal_rank_K2_t0.2": {
+      "r": 0.7014659450371993,
+      "fixed_reference_lodo_mae": 0.3695745264813581,
+      "fixed_reference_type_holdout_mae": 0.42849074569701456
+    },
+    "nominal_rank_K2_t0.3": {
+      "r": 0.7032982948736123,
+      "fixed_reference_lodo_mae": 0.36202509936722754,
+      "fixed_reference_type_holdout_mae": 0.41896269779608525
+    },
+    "nominal_rank_K3_t0.1": {
+      "r": 0.6750840355651837,
+      "fixed_reference_lodo_mae": 0.3499619894486762,
+      "fixed_reference_type_holdout_mae": 0.3950126194315679
+    },
+    "nominal_rank_K3_t0.2": {
+      "r": 0.692317218416607,
+      "fixed_reference_lodo_mae": 0.35304899002573514,
+      "fixed_reference_type_holdout_mae": 0.39592602052416404
+    },
+    "nominal_rank_K3_t0.3": {
+      "r": 0.692996070551966,
+      "fixed_reference_lodo_mae": 0.3487250302864447,
+      "fixed_reference_type_holdout_mae": 0.39819793695649264
+    }
+  }
+}

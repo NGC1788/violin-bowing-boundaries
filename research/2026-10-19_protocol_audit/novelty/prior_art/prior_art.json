@@ -1,0 +1,155 @@
+{
+  "created": "2026-10-19 KST, Claude (workflow wf_86e6341e-880, prior_art track)",
+  "scope": "Literature check only (web search + reading of open-access full texts already on disk or fetched as literature). No dataset download, no future archive opened, no scoring. 'Not found' means not found in the sources listed under searched_sources; it is not proof of absence.",
+  "searched_sources": {
+    "full_text_read": [
+      "Schoonderwaldt, Guettler & Askenfelt 2008, Acta Acust. united Ac. 94, 604-622 (texts/Schoonderwaldt2008_ActaAcust.txt)",
+      "Schoonderwaldt, Guettler & Askenfelt 2007, ISMA 'Schelleng in retrospect' (texts/Schoonderwaldt2007_retrospect.txt)",
+      "Woodhouse 2003, Acta Acust. united Ac. 89, 355-368 thermal friction (texts/Woodhouse2003_thermal.txt)",
+      "Woodhouse & Galluzzo 2025, Tribology Letters 73, 128 (accepted MS, texts/WoodhouseGalluzzo2025_TribolLett.txt)",
+      "Mansour, Woodhouse & Scavone 2016, Acta Acust. united Ac. 102, 1094-1107 (texts/Mansour2016_part2.txt; grep-level reading)",
+      "van Walstijn, Chatziioannou, Lampis & Matusiak 2026, Acta Acustica 10, 47 (papers/)",
+      "Lampis, Mayer & Chatziioannou 2024, Acta Acustica 8, 44 (papers/)",
+      "Lampis, Mayer & Chatziioannou 2024, JASA Express Lett. 4, 113201 (papers/)",
+      "Lampis, Chatziioannou & Scavone 2025, POMA 58, 035013 (papers/)",
+      "Matusiak & Chatziioannou 2024, JASA 156, 1135 (papers/; abstract-level)"
+    ],
+    "abstract_or_secondary_only": [
+      "Mores 2016, JASA 140, 1162-1171 'Maximum bow force revisited' (publisher abstract)",
+      "Mores 2017, JASA 142, 728-736 'Complementary empirical data on minimum bow force' (publisher abstract)",
+      "Schumacher 1994, JASA 96, 1985-1998 (as described by Schoonderwaldt 2008)",
+      "Galluzzo 2003 PhD thesis, Cambridge (repository abstract; PDF fetch failed; content via Schoonderwaldt 2008 and earlier audit in ASTRA_HANDOFF_PROMPT.md 10.16)",
+      "Galluzzo, Woodhouse & Mansour 2017, Acta Acust. united Ac. 103, 1080-1099 (repository abstract)",
+      "Mansour, Woodhouse & Scavone 2017, 'On minimum bow force for bowed strings' (abstract)",
+      "Smith & Woodhouse 2000, J. Mech. Phys. Solids 48, 1633-1681 (citation only)",
+      "Beigi & Conneely 2026, arXiv:2609.14990v3 (abstract)",
+      "Lampis, Matusiak, Mayer & Chatziioannou 2025, JASA 157(4_Suppl) A203 'Friction force reconstruction in bowed cello strings' (title only; abstract not retrievable)",
+      "Fruend, Haenel & Wichmann 2011 J. Vision 11(6):16; Doll, Veltink & Buitenweg 2015 Atten. Percept. Psychophys.; Wallis et al. 2013 Vision Res. (abstracts, generic drift-covariate threshold estimation)"
+    ],
+    "unread_risks": [
+      "Lampis et al. 2025 JASA abstract on friction reconstruction (the source of Zenodo 15879128) may already report a force/speed dependence of the reconstructed friction coefficient.",
+      "Lampis PhD thesis (mdw, in progress per mdw Magazin 2025-09-26) may analyse bow-force limits of this dataset against Z/tension.",
+      "Mores 2016 full text: exact form of 'Schumacher's velocity term' and whether it implies a sublinear speed dependence.",
+      "Galluzzo 2003 thesis and Schoonderwaldt 2009 KTH thesis full texts.",
+      "Woodhouse, 'The science of musical instruments' (euphonics.org, 2026 online book) may discuss thermal-friction consequences for maximum bow force."
+    ]
+  },
+  "claims": [
+    {
+      "id": 1,
+      "claim": "Maximum bow force scales with string impedance across tensions, confirmed prospectively on held-out strings.",
+      "verdict": "partially preempted (Z scaling itself is classical theory with prior multi-string tests); the prospective element is new in form but the present evidence does not discriminate Z scaling from a T1/T2 batch offset",
+      "closest_work": [
+        {"ref": "Schelleng 1973, JASA 53, 26-41", "link": "https://doi.org/10.1121/1.1913322", "point": "F_max = 2 Z v_B / ((mu_s - mu_d) beta): proportional to Z by derivation (not re-read in this round)."},
+        {"ref": "Schoonderwaldt, Guettler & Askenfelt 2008, Acta Acust. united Ac. 94, 604", "link": "https://knutsacoustics.com/files/schoonderwaldt-et-al.-empirical-schelleng.pdf",
+         "quote": "Taking torsion into account explains the difference.",
+         "point": "Two violin strings (D, E). Upper limit of E was 19% lower although Z0 was 28% lower; Z scaling held only with torsional impedance (predicted 16%). Post hoc, two strings, one session design."},
+        {"ref": "Schumacher 1994, JASA 96, 1985 (via Schoonderwaldt 2008 sec. 1, 6.2)", "point": "Maximum bow force measured for a number of violin D strings of different types; reasonable agreement with a generalized Schelleng equation including torsion."},
+        {"ref": "Mores 2016, JASA 140, 1162 'Maximum bow force revisited'", "link": "https://doi.org/10.1121/1.4960626",
+         "quote": "Schelleng's model combined with Schumacher's velocity term yields the best fit",
+         "point": "Two cellos, all strings, three bow-bridge distances, bowing pendulum with measured friction coefficients. Cross-string test on cello, post hoc fit."},
+        {"ref": "Lampis, Chatziioannou & Scavone 2025, POMA 58, 035013 (same dataset)", "link": "local copy papers/Lampis2025_POMA_58_035013.pdf (POMA DOI not checked)",
+         "quote": "Although playability differences across tension groups were minor",
+         "point": "Same IWK cello G2 strings; compared playability areas against a same-day repeat baseline; no Z-scaling test of the upper limit; upper limit at 0.2 m/s not computed."},
+        {"ref": "Beigi & Conneely 2026, arXiv:2609.14990v3 (simulation, unreviewed)", "link": "https://arxiv.org/abs/2609.14990", "point": "Finite-difference simulation over four strings reports that Schelleng's maximum bow force is recovered on every string; simulation, not measurement."},
+        {"ref": "Mansour, Woodhouse & Scavone 2016/2017", "point": "Simulations: maximum bow force depends on the effective impedance at the bow (torsion) and rosin friction, almost not on the body."}
+      ],
+      "not_found": "A frozen (locally time-stamped) prediction of the upper-boundary level of a held-out string from constants calibrated on other strings, scored once, within one dataset where pitch is fixed and tension/construction vary.",
+      "post_hoc_leverage_check": {
+        "file": "novelty/prior_art/z_leverage.json (script z_leverage.py; post hoc, D_T2 already spent)",
+        "findings": [
+          "The 'no-Z' comparator in confirm_d_t2.py (error 0.182) drops log Z without recalibrating the constant; a fair no-Z model recalibrated on the same T1 pool has error 0.122, i.e. at the 0.12 tolerance.",
+          "D_T2's ln Z differs from the T1 calibration mean by only 0.124. Any Z exponent between about 0.02 and 1.95 passes the 0.12 tolerance; the conditional bootstrap level interval [-0.078, 0.091] maps to exponents 0.37-1.74.",
+          "A constant T2 offset without Z, learned from A_T2, B_T2 (3 diagrams averaged) and C_T2, predicts D_T2 within 0.010 log, as well as the Z law (0.002). Z and the T1/T2 session batch are not separable here.",
+          "Within T1 the strict-law residual SD across diagrams is 0.118 log while the T1 Z range is 0.056 in ln Z; Z explains none of the T1 spread (B1 residual +0.16)."
+        ]
+      },
+      "allowed_wording_en": "For one held-out string (D_T2) a locally frozen strict Schelleng prediction, F = cZv/beta with c calibrated on five T1 diagrams and the published Z, matched the fitted upper-boundary level within 0.002 log (conditional bootstrap [-0.08, 0.09]). This is consistent with, but does not establish, impedance scaling: the string's Z differed from the calibration mean by 12%, exponents of roughly 0.4-1.7 are equally compatible, and a tension-group offset without Z fits as well. Impedance scaling of the maximum bow force across strings has been examined before (Schumacher 1994; Schoonderwaldt et al. 2008; Mores 2016).",
+      "allowed_wording_ko": "보지 않은 D_T2 한 도표에서, T1 다섯 도표로 상수를 정하고 공개 Z를 넣은 엄격한 Schelleng 식 F=cZv/β의 사전 고정 예측은 적합된 위 경계 수준과 0.002 log 이내로 맞았다(조건부 부트스트랩 [−0.08, 0.09]). 이는 임피던스 비례와 모순되지 않는다는 뜻이며 이를 입증하지는 않는다. D_T2의 Z는 보정 평균과 12%만 달라 Z 지수 약 0.4~1.7이 모두 같은 정도로 맞고, Z 없이 장력군 상수만 둔 모형도 같은 정도로 맞는다. 현 사이 최대 활 힘의 임피던스 비례는 이미 검토되었다(Schumacher 1994, Schoonderwaldt 외 2008, Mores 2016).",
+      "forbidden_wording": ["confirmed Z scaling", "Z^1 law confirmed prospectively", "Z gain 0.18 log (use the fair no-Z comparison 0.12)", "first test of Schelleng's maximum-force law across strings", "held-out strings (plural) for the upper law: only D_T2 was prospective"]
+    },
+    {
+      "id": 2,
+      "claim": "Sublinear speed dependence of maximum bow force is explained by thermal friction (mu depending on F*v).",
+      "verdict": "partially preempted: the thermal (temperature/power-controlled) friction mechanism and the statement that the maximum bow force depends on limiting friction and hence temperature are published; velocity-dependent modifications of Schelleng's maximum-force law are published. Not found: an empirical power law mu_d(F*v) from reconstructed bowed-string friction used to predict the speed exponent of the measured upper boundary.",
+      "closest_work": [
+        {"ref": "Smith & Woodhouse 2000, J. Mech. Phys. Solids 48, 1633", "link": "https://doi.org/10.1016/S0022-5096(99)00067-8 (DOI from reference lists, not resolved)", "point": "Rosin friction governed by contact temperature, not sliding speed; temperature set by frictional heating (citation only)."},
+        {"ref": "Woodhouse 2003, Acta Acust. united Ac. 89, 355", "link": "https://euphonics.org/wp-content/uploads/2022/03/Thermal_bowing.pdf",
+         "quote": "to deduce a maximum bow force requires knowledge of the value of limiting friction, and hence again the temperature",
+         "point": "Simulated Schelleng diagrams with thermal vs friction-curve models; no speed exponent of F_max derived."},
+        {"ref": "Woodhouse & Galluzzo 2025, Tribology Letters 73, 128", "link": "https://doi.org/10.1007/s11249-025-02062-4",
+         "quote": "combines influences from the contact temperature and the sliding speed",
+         "point": "Rate-and-state rosin model with heat balance; validated on Guettler (attack) transients, not on Schelleng speed scaling."},
+        {"ref": "van Walstijn et al. 2026, Acta Acustica 10, 47", "link": "https://doi.org/10.1051/aacus/2026042",
+         "quote": "The results obtained with a specific steady bow velocity",
+         "point": "Thermal elasto-plastic model reproduces measured minimum and maximum bow force versus beta at one bow speed (0.1 m/s) on IWK data; speed dependence untested."},
+        {"ref": "Schoonderwaldt et al. 2008", "quote": "the slope of the upper bow-force limit in the Schelleng diagram increased with increasing bow velocity",
+         "point": "Attributed to velocity-dependent friction delta via a hyperbolic friction curve, F_max = 2Z0 (v_B + beta z0)/((mu_s - mu_d) beta); also found F_max approximately proportional to v_B on violin at 10-20 cm/s (deviation at 5 cm/s). No thermal attribution."},
+        {"ref": "Mores 2016", "point": "Best fit = Schelleng's model plus Schumacher's velocity term (form not read)."},
+        {"ref": "Lampis, Mayer & Chatziioannou 2024, Acta Acustica 8, 44", "link": "https://doi.org/10.1051/aacus/2024034",
+         "quote": "exhibits strong dependence on bow force but minimal dependence on bow acceleration",
+         "point": "Measured friction coefficients inserted into Guettler-limit conditions: analogous use of measured friction to explain playability limits, but for attacks; load-dependent friction is a competing explanation to power dependence."},
+        {"ref": "Galluzzo, Woodhouse & Mansour 2017, Acta Acust. united Ac. 103, 1080", "link": "https://www.repository.cam.ac.uk/handle/1810/273462", "point": "Temperature-based friction models outperform sliding-speed models on measured transients."}
+      ],
+      "own_evidence_status": "post hoc, one string (B_T2 friction reconstruction, Zenodo 15879128), 31 steady Helmholtz windows of which 20 are at 0.05 m/s; free fit mu_d ~ F^-0.182 v^-0.180 beta^-0.004 (equal F and v exponents, no slip-speed effect); power model AIC -194 vs force-only -146 vs slip speed -142. Predicted upper speed exponent 0.48-0.94 depending on force subset vs measured 0.49-0.86 across 10 diagrams. Temperature was not measured.",
+      "allowed_wording_en": "In a public friction reconstruction for one string, the mean dynamic friction coefficient during Helmholtz motion scaled as (F v)^-0.18, with equal exponents on force and speed and no dependence on slip speed v/beta. This pattern is consistent with power-controlled (thermal) rosin friction (Smith & Woodhouse 2000; Woodhouse 2003). Inserted into Schelleng's maximum-force condition it implies speed exponents of 0.48-0.94, overlapping the measured 0.49-0.86. This is a post hoc consistency check on one string, not a test of mechanism; velocity-dependent modifications of the maximum-force law were proposed earlier (Schumacher 1994; Schoonderwaldt et al. 2008; Mores 2016).",
+      "allowed_wording_ko": "한 현의 공개 마찰 재구성 자료에서, 헬름홀츠 운동 중 평균 동마찰계수는 (F·v)^−0.18로 변했고 힘과 속도의 지수가 같았으며 미끄럼 속도 v/β에는 의존하지 않았다. 이는 마찰 일률(열)이 지배하는 송진 마찰 모형(Smith & Woodhouse 2000, Woodhouse 2003)과 부합하는 양상이다. 이 의존성을 Schelleng 최대 힘 조건에 넣으면 속도 지수 0.48~0.94가 나오며, 측정값 0.49~0.86과 겹친다. 한 현에 대한 사후 정합성 확인이며 기전의 검증이 아니다. 최대 힘 식의 속도 의존 수정은 이미 제안되었다(Schumacher 1994, Schoonderwaldt 외 2008, Mores 2016).",
+      "forbidden_wording": ["explained by thermal friction", "thermal mechanism demonstrated", "first explanation of the sublinear speed dependence", "agreement shows mu depends on temperature"]
+    },
+    {
+      "id": 3,
+      "claim": "Audit: between-string minimum-force differences in a public robotic bowing dataset are predicted by a session load-decrease covariate rather than string properties.",
+      "verdict": "novel as a specific quantitative audit of this dataset (not found), but only at association level; the 'predicted ... rather than string properties' wording is not supported after nested re-fitting and the D_T2 confirmation",
+      "closest_work": [
+        {"ref": "Lampis, Mayer & Chatziioannou 2024, Acta Acustica 8, 44", "quote": "systematic effects arising from changes during the measurement session",
+         "point": "Lists rosin depletion, string tension variation and bow-hair tension; uses order-alternating repeats and remounting. Qualitative; not linked to Schelleng minimum-force levels."},
+        {"ref": "Lampis, Chatziioannou & Scavone 2025, POMA 58, 035013", "quote": "no clear trend was peaking out",
+         "point": "Judges string differences against a same-day consecutive repeat (B T2), which cannot capture between-session variation."},
+        {"ref": "Lampis, Mayer & Chatziioannou 2024, JASA-EL 4, 113201", "quote": "the bending stiffness B of string D decreased by 29% after remounting",
+         "point": "Session/remount changes of string properties are documented, for attacks."},
+        {"ref": "Schoonderwaldt et al. 2008, sec. 6.1", "quote": "related to unsatisfactory control of bow force",
+         "point": "Considered whether force-control fluctuations bias the measured minimum force and concluded they did not; closest precedent of a protocol explanation of minimum-force results."},
+        {"ref": "Mores 2017, JASA 142, 728", "link": "https://doi.org/10.1121/1.4996141", "point": "Minimum bow force has a baseline even at very low bow speed and depends on bridge resistance; a physical (not protocol) account."},
+        {"ref": "Beigi & Conneely 2026 (simulation)", "point": "Proposes F_min = C Z v/beta from simulated strings; our audit cautions against reading between-string measured minimum-force levels as string physics in this dataset."},
+        {"ref": "Leek et al. 2010, Nat. Rev. Genet. 11, 733 (batch effects, generic)", "link": "https://doi.org/10.1038/nrg2825"}
+      ],
+      "own_evidence_status": "Post hoc over 10 exposed diagrams: r = +0.88 between lower level and dec5_pl (several session descriptors were screened: desc_b, dec10, acc_b, cal_low, cens, d0, fmin, floor, dec5_pl), string properties |r| 0.19-0.37 with negative LODO R^2. Association weakens on the nominal-force axis. Nested re-fit: level MAE 0.213 -> 0.101 but finite-column error 0.294 -> 0.316. D_T2 (pre-registered): primary level fit failed (zero-width interval, untestable); secondary column medians protocol 0.286 < mean 0.328 < log Z 0.376, all differences below the frozen 0.23 margin (indistinguishable).",
+      "allowed_wording_en": "Across the 10 analysed diagrams, between-diagram differences in the lower-boundary level were strongly associated with a session-level descriptor of the low-force load decrease (r = 0.88, post hoc), and more weakly with published string properties. The association weakens when the nominal force axis is used, it did not improve column-level boundary errors, and the one pre-registered test (D_T2) was not testable for the primary level fit. Lower-boundary differences between strings in this dataset should therefore not be interpreted as string physics without accounting for session protocol. We did not find a previous quantitative audit of this kind for this dataset.",
+      "allowed_wording_ko": "분석한 10개 도표에서 아래 경계 수준의 도표 간 차이는 낮은 힘 구간 하중 감소를 나타내는 세션 기술자와 강하게 연관되었고(r=0.88, 사후 분석), 공개 현 물성과의 연관은 약했다. 공칭 힘 축에서는 연관이 약해지고, 열별 경계 오차는 개선되지 않았으며, 사전 고정한 D_T2 검증의 주 수준 적합은 검증 불가였다. 따라서 이 자료의 현 사이 아래 경계 차이를 세션 절차를 고려하지 않고 현 물성의 효과로 해석해서는 안 된다. 찾아본 범위에서 이 자료에 대한 같은 종류의 정량 감사는 발견하지 못했다.",
+      "forbidden_wording": ["minimum force is determined by protocol", "predicted by the protocol rather than string properties", "maximum = physics, minimum = protocol", "first audit (without 'within the searched literature')", "A_T2 -42% caused by the session"]
+    },
+    {
+      "id": 4,
+      "claim": "Protocol-aware (session-covariate) estimation of playability boundaries.",
+      "verdict": "partially preempted as a method (covariate/batch adjustment and drift terms in threshold estimation are standard); application to censored Schelleng-boundary estimation not found; performance gain not established",
+      "closest_work": [
+        {"ref": "Johnson, Li & Rabinovic 2007, Biostatistics 8, 118 (ComBat)", "link": "https://doi.org/10.1093/biostatistics/kxj037", "point": "Location/scale batch adjustment with covariates."},
+        {"ref": "Doll, Veltink & Buitenweg 2015, Atten. Percept. Psychophys.", "link": "https://doi.org/10.3758/s13414-015-0865-x", "point": "Threshold estimation with a linear time term or tracking to handle drifting thresholds."},
+        {"ref": "Fruend, Haenel & Wichmann 2011, J. Vision 11(6):16", "link": "https://doi.org/10.1167/11.6.16", "point": "Nonstationary behaviour makes psychometric-function confidence intervals too narrow; correction proposed."},
+        {"ref": "Wallis et al. 2013, Vision Res. (Aston record)", "link": "https://publications.aston.ac.uk/id/eprint/17687", "point": "Pooling sessions with drifting thresholds biases slope estimates."},
+        {"ref": "Missoum, Vergez & Doc 2014; Maugeais & Terrien 2025 (pyEDSD); Colinot et al. 2025", "point": "Regime-boundary / playability-map estimation for wind-instrument models without session covariates (from earlier audit, ASTRA_HANDOFF_PROMPT.md item 1)."}
+      ],
+      "allowed_wording_en": "We applied a session-covariate adjustment to censored lower-boundary levels, following standard batch-adjustment practice. It reduced the level error in nested leave-one-diagram-out validation (0.213 -> 0.101 log) but not the column-level error (0.294 -> 0.316), and its pre-registered test on D_T2 was inconclusive.",
+      "allowed_wording_ko": "검열된 아래 경계 수준에 세션 공변량 보정을 적용했다. 이는 일반적인 배치 보정의 응용이다. 기준 형상까지 다시 적합한 도표 제외 검증에서 수준 오차는 0.213에서 0.101 log로 줄었으나 열별 오차는 0.294에서 0.316으로 커졌고, D_T2 사전 고정 검증은 판정되지 않았다.",
+      "forbidden_wording": ["new estimator", "protocol-aware method improves boundary prediction", "ICML-level method"]
+    }
+  ],
+  "reviewer_demands": [
+    "Z vs batch: at least two further held-out strings whose Z differs from the calibration mean by more than the session scatter (~0.12 log), or a within-session design varying Z; report the fair recalibrated no-Z comparator and an interval for the Z exponent, not a single pass/fail.",
+    "Torsion: compare Z0 with the torsion-corrected Ztot (Schoonderwaldt 2008; Mansour 2016) using the POMA table's torsional entries; justify which impedance enters F_max.",
+    "Censoring: on D_T2, 63 of 111 scored upper columns were right-censored at the 4 N force ceiling; show sensitivity of the level fit to the censoring model and use the high-force parts (4-12 N) where finite upper boundaries exist.",
+    "Speed-session confound: every speed was recorded in its own session, so speed exponents (upper 0.49-0.86, lower) are confounded with session; need within-session speed variation or a session-adjusted exponent.",
+    "Friction: replicate the mu_d(F v) law on other strings; add an independent temperature or heat-flux proxy; test force-only (load-dependent) and slip-speed alternatives with held-out windows; note that 20 of 31 windows are at 0.05 m/s; propagate uncertainty to a predicted exponent with CI and compare per diagram.",
+    "Compare the thermal account against established alternatives on the same data: modified Schelleng with hyperbolic friction (v_B + beta z0), Schumacher's velocity term, and thermal-model simulations (Woodhouse 2003; Woodhouse & Galluzzo 2025; van Walstijn 2026) at the three speeds.",
+    "Shared force channel: the load-decrease descriptor and the measured-force boundary use the same sensor; demonstrate the association with an independent force reference or on the nominal axis, and model zero-offset drift (tens of mN up to 0.16 N).",
+    "Forking paths: several session descriptors were screened post hoc; fix one descriptor and its sign/slope and test it on unseen archives (B_T2 sample2, A3, A4, D2) with an external time-stamped registration (e.g. OSF), not only a local hash.",
+    "Independence and uncertainty: count independent strings and sessions, use session-level (cluster) resampling, and state that conditional bootstraps omit training, descriptor and new-session uncertainty.",
+    "Label validity: the H label is a bridge-force proxy; validate against the dataset authors' classification or a manual subset and report sensitivity to K, window start and amplitude threshold.",
+    "Novelty claims phrased as 'not found in the searched literature', with the unread_risks above checked (especially the Lampis et al. 2025 friction-reconstruction abstract and the Lampis thesis).",
+    "No violin generalisation: cello G2 monochord only."
+  ],
+  "report_corrections_suggested": [
+    "Do not quote the D_T2 'no-Z error 0.18 / gain 0.18' as the Z effect; the fair recalibrated no-Z error is 0.122 (z_leverage.json).",
+    "The reference list states that no new web search was made; replace with this prior-art check (date 2026-10-19) and add Schumacher 1994, Mores 2016/2017, Woodhouse 2003 (quote), Woodhouse & Galluzzo 2025, Smith & Woodhouse 2000, Galluzzo-Woodhouse-Mansour 2017."
+  ]
+}

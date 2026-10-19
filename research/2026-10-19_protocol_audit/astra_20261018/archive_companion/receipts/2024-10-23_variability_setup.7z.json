@@ -1,0 +1,21 @@
+{
+  "archive": "2024-10-23_variability_setup.7z",
+  "started_utc": "2026-10-18T05:17:22.509597+00:00",
+  "status": "failed",
+  "pin": "/Users/jeongjihoon/violin-rne/astra_20261018/archive_companion/pins/2024-10-23_variability_setup.7z",
+  "stage": "/Users/jeongjihoon/violin-rne/astra_20261018/archive_companion/staging/2024-10-23_variability_setup-b1a8d7bad7324df3a177b371253f6c24",
+  "commands": [],
+  "extractor_sha256": {
+    "ramp_meta": "d0734cd7840749f6017c1bd3d8326d50dc39e482f080bb66a8a3d06dc4266760",
+    "stroke_blocks": "7b6c1bf4c892a3504dee22b30439801b2423bcb57a502b2d4c86df56b56334cb"
+  },
+  "companion_sha256": "f53440ebfb07c618b7469d7109bfa091be3871845730451e559056c1a1168397",
+  "archive_integrity": {
+    "bytes": 28218620427,
+    "md5": "bddef0d9cf48a6dccbc27021116274a5",
+    "metadata_path": "/Users/jeongjihoon/violin-rne/data/manifests/zenodo_17795326_20261018T031735.564420Z.json",
+    "metadata_sha256": "0d080765e53ee56dca6f72d04b541e1953dbdd130ccad8114bd68cc40fed265f"
+  },
+  "ended_utc": "2026-10-18T05:18:11.010388+00:00",
+  "error": "ValueError: ambiguous folder basename in unchanged stroke_blocks.py"
+}

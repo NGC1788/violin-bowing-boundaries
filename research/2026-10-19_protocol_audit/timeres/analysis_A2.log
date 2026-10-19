@@ -1,0 +1,16 @@
+== 2024-04-19_TypeA_sample2
+/Users/jeongjihoon/violin-rne/timeres/analysis_multi.py:222: RuntimeWarning: invalid value encountered in log
+  dist = np.log(np.mean([r["force"] for r in seq])) - bound[key]
+  2024-04-19_TypeA_sample2 w0.1_base: t0.0 v^+0.47; t0.1 v^+0.85; t0.2 v^+0.84; t0.3 v^+0.82
+  2024-04-19_TypeA_sample2 w0.2_base: t0.0 v^+0.81; t0.1 v^+0.85; t0.2 v^+0.82; t0.3 v^+0.92
+  2024-04-19_TypeA_sample2 w0.2_run1: t0.0 v^+0.87; t0.1 v^+0.93; t0.2 v^+0.88; t0.3 v^+0.94
+  2024-04-19_TypeA_sample2 w0.2_run3: t0.0 v^+0.96; t0.1 v^+0.88; t0.2 v^+0.89; t0.3 v^+0.83
+  2024-04-19_TypeA_sample2 w0.2_per0.7: t0.0 v^+0.85; t0.1 v^+0.87; t0.2 v^+0.85; t0.3 v^+0.92
+  2024-04-19_TypeA_sample2 w0.2_per0.9: t0.0 v^+0.31; t0.1 v^+0.68; t0.2 v^+0.77; t0.3 v^+0.79
+  2024-04-19_TypeA_sample2 w0.4_base: t0.0 v^+0.88; t0.1 v^+0.84; t0.2 v^+0.52; t0.3 v^+0.47
+   정상상태 β le2/v1: p∞=-2.48 τ=1.76s 관측 3.75s 식별 불가
+   정상상태 β le2/v2: p∞=-4.92 τ=2.51s 관측 1.75s 식별 불가
+   정상상태 β le2/v3: p∞=-2.17 τ=0.43s 관측 0.75s 식별 불가
+   임계감속 le2/v1: ρ=-0.30 p=2.0e-10 n=444
+   임계감속 le2/v2: ρ=-0.38 p=5.0e-09 n=216
+   임계감속 le2/v3: ρ=-0.29 p=2.2e-05 n=210

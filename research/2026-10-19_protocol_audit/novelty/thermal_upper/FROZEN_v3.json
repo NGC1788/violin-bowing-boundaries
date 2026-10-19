@@ -1,0 +1,212 @@
+{
+ "version": "v3",
+ "addendum_to": "FROZEN_v2.json",
+ "v2_sha256": "bf9a14c98806d1f922d223fdb9e5188d8c4a3a7fa9e67bfd4be0d58ae5259aad",
+ "created_kst": "2026-10-19T10:39:15.836210+09:00",
+ "status": "UNSEEN: A4, D2, B_T2 sample2, HighBowForceRange_1/2, coldwarm not processed; A3 in processing (v1 governs A3).",
+ "empirical": {
+  "per_diagram_curvature": {
+   "A1": -0.3112032889925123,
+   "A2": -0.3550853209717616,
+   "B1": -0.3026261024031238,
+   "C1": 0.08246409472419469,
+   "D1": -0.43083352812254117,
+   "A_T2": -0.6271850277021824,
+   "B_T2s1": -0.23218094744977524,
+   "B_T2r1": -0.32398589189846716,
+   "B_T2r2": -0.46425010291523955,
+   "C_T2": 0.09092683288271342,
+   "D_T2": -0.545561361574151
+  },
+  "between_diagram_sd": 0.22750635198002886,
+  "pooled_curvature": -0.3169928308123344,
+  "pooled_ci": [
+   -0.45132226605592124,
+   -0.20792763981646595
+  ],
+  "interaction_g": 0.4807347435517211,
+  "interaction_g_ci": [
+   0.3814540037668399,
+   0.5610797063857685
+  ]
+ },
+ "targets": {
+  "2024-04-22_TypeA_sample3": {
+   "models": {
+    "S1_strict": {
+     "e12": 1.0000002604930058,
+     "e23": 1.0000002604930065,
+     "curvature": 6.661338147750939e-16
+    },
+    "T1k_break": {
+     "e12": 0.8245579599389008,
+     "e23": 0.8607858903764258,
+     "curvature": 0.036227930437525036
+    },
+    "T1k_peak": {
+     "e12": 0.543866015914429,
+     "e23": 0.6553501835215981,
+     "curvature": 0.11148416760716917
+    },
+    "T1mu": {
+     "e12": 0.7788555040239716,
+     "e23": 0.8262540409885404,
+     "curvature": 0.04739853696456875
+    },
+    "T2km_break": {
+     "e12": 0.8266858889156752,
+     "e23": 0.859901740472287,
+     "curvature": 0.033215851556611775
+    },
+    "E3_free_Z": {
+     "e12": 0.6980128654474861,
+     "e23": 0.6980128654474893,
+     "curvature": 3.219646771412954e-15
+    }
+   },
+   "empirical_curvature": -0.3169928308123344,
+   "empirical_curvature_pi90": [
+    -0.691240779819482,
+    0.05725511819481305
+   ],
+   "governed_by": "FROZEN_v1 (no curvature prediction was frozen for A3 before its processing)"
+  },
+  "2024-04-24_TypeA_sample4": {
+   "models": {
+    "S1_strict": {
+     "e12": 1.0000002604930058,
+     "e23": 1.0000002604930065,
+     "curvature": 6.661338147750939e-16
+    },
+    "T1k_break": {
+     "e12": 0.8245579599389008,
+     "e23": 0.8607858903764258,
+     "curvature": 0.036227930437525036
+    },
+    "T1k_peak": {
+     "e12": 0.543866015914429,
+     "e23": 0.6553501835215981,
+     "curvature": 0.11148416760716917
+    },
+    "T1mu": {
+     "e12": 0.7788555040239716,
+     "e23": 0.8262540409885404,
+     "curvature": 0.04739853696456875
+    },
+    "T2km_break": {
+     "e12": 0.8266858889156752,
+     "e23": 0.859901740472287,
+     "curvature": 0.033215851556611775
+    },
+    "E3_free_Z": {
+     "e12": 0.6980128654474861,
+     "e23": 0.6980128654474893,
+     "curvature": 3.219646771412954e-15
+    }
+   },
+   "empirical_curvature": -0.3169928308123344,
+   "empirical_curvature_pi90": [
+    -0.691240779819482,
+    0.05725511819481305
+   ],
+   "governed_by": "v3"
+  },
+  "2024-04-26_TypeD_sample2": {
+   "models": {
+    "S1_strict": {
+     "e12": 1.000000260493004,
+     "e23": 1.0000002604930063,
+     "curvature": 2.220446049250313e-15
+    },
+    "T1k_break": {
+     "e12": 0.8231847992138245,
+     "e23": 0.8613669889488396,
+     "curvature": 0.03818218973501508
+    },
+    "T1k_peak": {
+     "e12": 0.539501119659824,
+     "e23": 0.6571847613910237,
+     "curvature": 0.11768364173119972
+    },
+    "T1mu": {
+     "e12": 0.7770438604286879,
+     "e23": 0.8270191594236093,
+     "curvature": 0.04997529899492137
+    },
+    "T2km_break": {
+     "e12": 0.8251295070497997,
+     "e23": 0.8607680416586267,
+     "curvature": 0.035638534608827044
+    },
+    "E3_free_Z": {
+     "e12": 0.6980128654474852,
+     "e23": 0.6980128654474879,
+     "curvature": 2.6645352591003757e-15
+    }
+   },
+   "empirical_curvature": -0.3169928308123344,
+   "empirical_curvature_pi90": [
+    -0.691240779819482,
+    0.05725511819481305
+   ],
+   "governed_by": "v3"
+  },
+  "2024-07-03_TypeB_T2_sample2": {
+   "models": {
+    "S1_strict": {
+     "e12": 1.0000002604930058,
+     "e23": 1.0000002604930067,
+     "curvature": 8.881784197001252e-16
+    },
+    "T1k_break": {
+     "e12": 0.8292440245744884,
+     "e23": 0.8623083294569581,
+     "curvature": 0.0330643048824697
+    },
+    "T1k_peak": {
+     "e12": 0.5587580357953256,
+     "e23": 0.6598481880064002,
+     "curvature": 0.10109015221107465
+    },
+    "T1mu": {
+     "e12": 0.7850382249090048,
+     "e23": 0.8282272635324147,
+     "curvature": 0.04318903862340995
+    },
+    "T2km_break": {
+     "e12": 0.8313152806733664,
+     "e23": 0.8610337169539232,
+     "curvature": 0.029718436280556815
+    },
+    "E3_free_Z": {
+     "e12": 0.6980128654474878,
+     "e23": 0.698012865447487,
+     "curvature": -7.771561172376096e-16
+    }
+   },
+   "empirical_curvature": -0.3169928308123344,
+   "empirical_curvature_pi90": [
+    -0.691240779819482,
+    0.05725511819481305
+   ],
+   "governed_by": "v3"
+  }
+ },
+ "hypotheses": {
+  "H_curv_empirical": "speed curvature e(v2->v3) - e(v1->v2) < 0 (concave in log v), pooled over the new T1/T2 targets A4, D2, B_T2 sample2 (predicted mean -0.32; single-diagram 90 % PI -0.69..+0.06)",
+  "H_curv_thermal": "curvature > 0 (thermal T1k_break about +0.04, T1k_peak about +0.11: more power -> smaller contrast elasticity)",
+  "H_int": "interaction g(lv*lb) in the pooled-over-new-targets censored fit (analysis2b form, target offsets): empirical > 0 (11-diagram value +0.48); thermal < 0 (-0.03..-0.13)",
+  "high_force": "if a high-force archive has >= 3 speeds: same curvature test with the ceiling lifted; ceiling censoring at 0.2 m/s is the main alternative explanation of the concave pattern in the 11 diagrams, so a concave result with the ceiling lifted would remove that alternative; a convex result would favour a ceiling artefact plus thermal contrast.",
+  "decision": "per hypothesis: sign of the point estimate and whether the 95 % bootstrap CI excludes 0"
+ },
+ "code_sha256": {
+  "freeze3.py": "d3039f6b0eaaf71fb415d691d813660920798e783a2cd0f415aa4b810042d749",
+  "score_target.py": "7bc818cab477934c6a4f021b897ffd6f97aa759d789796695c0ff1985dda379e",
+  "analysis2.py": "692341c72db59b7769e0c7d0f3a96cd6f82552a23224d31b03d292fc82093c4b",
+  "analysis2b.py": "91db45a1a5afe4d9d510f37a3d2c7a82f561a825d827cc235613b5b91321ff6c",
+  "analysis2.json": "de86866fb5c049434d1364589971f987ec0dfc02fe8ed6ff4f7da9b0e35b7bb8",
+  "analysis2b.json": "91e99a6e25cbd742ca819c31053f7a383b64413169d9825c426c64c56d7d3fa3",
+  "thermal_law2.py": "f3d67d546b50a4757b2aa441c9b5d15ecd2436cb6633d98c836f4d5dbc874cd9",
+  "rows.py": "fbcec76de56621e641e89daf88d803382494684cba08e70d400c5cc2204696bf"
+ }
+}

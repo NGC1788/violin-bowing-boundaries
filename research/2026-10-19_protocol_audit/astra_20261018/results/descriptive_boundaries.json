@@ -1,0 +1,520 @@
+{
+  "scope": "Descriptive operational force-grid boundaries, conditional on the full protocol; not equilibrium or causal exponents",
+  "censoring_assumption": "Absent K2 run is treated as right-censored; no proof of a physical single threshold above the grid.",
+  "settings": [
+    {
+      "specimen": "A1",
+      "window_start_s": 0.0,
+      "decision_end_s": 0.2,
+      "summary": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 0,
+            "right": 1,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 46,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 8,
+            "finite": 32,
+            "forces_min": 50,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 77,
+        "columns_with_H_before_accepted_run": 50
+      },
+      "fit": {
+        "success": true,
+        "intercept": -0.656480881853813,
+        "speed_exp": 0.5737252154669213,
+        "beta_exp": -0.6719612060422888,
+        "sigma": 0.4704256211269073,
+        "nll": 348.5780777211818,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683778145576e-05,
+        "objective_spread_converged": 6.627942639170215e-11
+      },
+      "position_cluster_sensitivity": {
+        "reps": 200,
+        "successful": 200,
+        "failed": 0,
+        "speed_percentile_95": [
+          0.3424379511111037,
+          0.7660452440323938
+        ],
+        "beta_percentile_95": [
+          -0.786560841558717,
+          -0.5364042689962459
+        ],
+        "scope": "Position-cluster resampling conditional on A2, fixed classifier and grid; not across-specimen confidence."
+      },
+      "feature_sha256": "e7961c8d86b514090967a288f1bd173190ee48021e01cab89303486ef55fe483"
+    },
+    {
+      "specimen": "A1",
+      "window_start_s": 0.1,
+      "decision_end_s": 0.30000000000000004,
+      "summary": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 42,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 8,
+            "finite": 32,
+            "forces_min": 50,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 81,
+        "columns_with_H_before_accepted_run": 60
+      },
+      "fit": {
+        "success": true,
+        "intercept": -1.0655070604324088,
+        "speed_exp": 0.6394294931453601,
+        "beta_exp": -0.8311532610543916,
+        "sigma": 0.37053053180443246,
+        "nll": 321.3803825182328,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683715036703e-05,
+        "objective_spread_converged": 1.4210854715202004e-12
+      },
+      "position_cluster_sensitivity": {
+        "reps": 200,
+        "successful": 200,
+        "failed": 0,
+        "speed_percentile_95": [
+          0.46852659878465364,
+          0.8108183637203876
+        ],
+        "beta_percentile_95": [
+          -0.9108648028970622,
+          -0.737926504778953
+        ],
+        "scope": "Position-cluster resampling conditional on A2, fixed classifier and grid; not across-specimen confidence."
+      },
+      "feature_sha256": "e7961c8d86b514090967a288f1bd173190ee48021e01cab89303486ef55fe483"
+    },
+    {
+      "specimen": "A1",
+      "window_start_s": 0.2,
+      "decision_end_s": 0.4,
+      "summary": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 40,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 8,
+            "finite": 32,
+            "forces_min": 50,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 84,
+        "columns_with_H_before_accepted_run": 66
+      },
+      "fit": {
+        "success": true,
+        "intercept": -1.4925772636192844,
+        "speed_exp": 0.6659047881434224,
+        "beta_exp": -0.970646439239341,
+        "sigma": 0.37763778756649,
+        "nll": 320.61732056958334,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683715036703e-05,
+        "objective_spread_converged": 1.4210854715202004e-12
+      },
+      "position_cluster_sensitivity": {
+        "reps": 200,
+        "successful": 200,
+        "failed": 0,
+        "speed_percentile_95": [
+          0.49285644778743476,
+          0.8391475032439948
+        ],
+        "beta_percentile_95": [
+          -1.0545666781499752,
+          -0.8901410754782167
+        ],
+        "scope": "Position-cluster resampling conditional on A2, fixed classifier and grid; not across-specimen confidence."
+      },
+      "feature_sha256": "e7961c8d86b514090967a288f1bd173190ee48021e01cab89303486ef55fe483"
+    },
+    {
+      "specimen": "A1",
+      "window_start_s": 0.3,
+      "decision_end_s": 0.5,
+      "summary": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 39,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 8,
+            "finite": 32,
+            "forces_min": 50,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 83,
+        "columns_with_H_before_accepted_run": 54
+      },
+      "fit": {
+        "success": true,
+        "intercept": -1.966406534789919,
+        "speed_exp": 0.6548092409460722,
+        "beta_exp": -1.0877421273563506,
+        "sigma": 0.40422615813210294,
+        "nll": 330.37904987943904,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.136868384125445e-05,
+        "objective_spread_converged": 2.3135271476348862e-11
+      },
+      "position_cluster_sensitivity": {
+        "reps": 200,
+        "successful": 200,
+        "failed": 0,
+        "speed_percentile_95": [
+          0.4610146773537228,
+          0.8290449529816185
+        ],
+        "beta_percentile_95": [
+          -1.1663579200270735,
+          -1.0121274616164646
+        ],
+        "scope": "Position-cluster resampling conditional on A2, fixed classifier and grid; not across-specimen confidence."
+      },
+      "feature_sha256": "e7961c8d86b514090967a288f1bd173190ee48021e01cab89303486ef55fe483"
+    },
+    {
+      "specimen": "A2",
+      "window_start_s": 0.0,
+      "decision_end_s": 0.2,
+      "summary": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 10,
+            "finite": 30,
+            "forces_min": 49,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 94,
+        "columns_with_H_before_accepted_run": 69
+      },
+      "fit": {
+        "success": true,
+        "intercept": 0.3964347499600116,
+        "speed_exp": 1.0407104932687512,
+        "beta_exp": -0.6541880181410367,
+        "sigma": 0.5903483308768249,
+        "nll": 373.75329306919303,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683715036703e-05,
+        "objective_spread_converged": 2.1941559680271894e-11
+      },
+      "position_cluster_sensitivity": {
+        "reps": 200,
+        "successful": 200,
+        "failed": 0,
+        "speed_percentile_95": [
+          0.799797352268981,
+          1.3243555988444373
+        ],
+        "beta_percentile_95": [
+          -0.7520251037358497,
+          -0.5435629322832184
+        ],
+        "scope": "Position-cluster resampling conditional on A2, fixed classifier and grid; not across-specimen confidence."
+      },
+      "feature_sha256": "3345934e53c0eafdbca0a89717a22a43cfac2fd3c294a813673a43b8c960c272"
+    },
+    {
+      "specimen": "A2",
+      "window_start_s": 0.1,
+      "decision_end_s": 0.30000000000000004,
+      "summary": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 44,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 95,
+        "columns_with_H_before_accepted_run": 71
+      },
+      "fit": {
+        "success": true,
+        "intercept": -0.6375529619111463,
+        "speed_exp": 0.9451809276492207,
+        "beta_exp": -0.8801483543921775,
+        "sigma": 0.585444091930766,
+        "nll": 368.6502987849477,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 5.684341889072788e-06,
+        "objective_spread_converged": 1.3642420526593924e-12
+      },
+      "position_cluster_sensitivity": {
+        "reps": 200,
+        "successful": 200,
+        "failed": 0,
+        "speed_percentile_95": [
+          0.692523767280843,
+          1.209150013773445
+        ],
+        "beta_percentile_95": [
+          -0.9683194565221658,
+          -0.7824562597578251
+        ],
+        "scope": "Position-cluster resampling conditional on A2, fixed classifier and grid; not across-specimen confidence."
+      },
+      "feature_sha256": "3345934e53c0eafdbca0a89717a22a43cfac2fd3c294a813673a43b8c960c272"
+    },
+    {
+      "specimen": "A2",
+      "window_start_s": 0.2,
+      "decision_end_s": 0.4,
+      "summary": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 70
+      },
+      "fit": {
+        "success": true,
+        "intercept": -1.4133919772602013,
+        "speed_exp": 0.9404618843749359,
+        "beta_exp": -1.088790248343896,
+        "sigma": 0.6814901337314528,
+        "nll": 383.39528885171796,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683715036703e-05,
+        "objective_spread_converged": 1.7621459846850485e-11
+      },
+      "position_cluster_sensitivity": {
+        "reps": 200,
+        "successful": 200,
+        "failed": 0,
+        "speed_percentile_95": [
+          0.6608449722522524,
+          1.2473311985696804
+        ],
+        "beta_percentile_95": [
+          -1.2370288368966633,
+          -0.9601867126116489
+        ],
+        "scope": "Position-cluster resampling conditional on A2, fixed classifier and grid; not across-specimen confidence."
+      },
+      "feature_sha256": "3345934e53c0eafdbca0a89717a22a43cfac2fd3c294a813673a43b8c960c272"
+    },
+    {
+      "specimen": "A2",
+      "window_start_s": 0.3,
+      "decision_end_s": 0.5,
+      "summary": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 69
+      },
+      "fit": {
+        "success": true,
+        "intercept": -2.0819641578249595,
+        "speed_exp": 0.9680051331864371,
+        "beta_exp": -1.2949062070840671,
+        "sigma": 0.6619984651790549,
+        "nll": 376.4959874168885,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.136868384125445e-05,
+        "objective_spread_converged": 9.947598300641403e-12
+      },
+      "position_cluster_sensitivity": {
+        "reps": 200,
+        "successful": 200,
+        "failed": 0,
+        "speed_percentile_95": [
+          0.6768342852970557,
+          1.268880437937655
+        ],
+        "beta_percentile_95": [
+          -1.4125543571478048,
+          -1.1587774262163346
+        ],
+        "scope": "Position-cluster resampling conditional on A2, fixed classifier and grid; not across-specimen confidence."
+      },
+      "feature_sha256": "3345934e53c0eafdbca0a89717a22a43cfac2fd3c294a813673a43b8c960c272"
+    }
+  ],
+  "source_sha256": "bdc36fe6c50023545254bfd072d8e8a3edbb88a7db493b0e88208d988749c8f6",
+  "likelihood_implementation_sha256": "7e46535c92e243c134a4fdfadb80a71aa44a2f84e600d7768a8add0218dd4f0e"
+}

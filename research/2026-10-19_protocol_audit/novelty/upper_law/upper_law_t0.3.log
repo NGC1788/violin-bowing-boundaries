@@ -1,0 +1,83 @@
+t = 0.3: A1+A2 upper law log F = -0.165 +0.681 log v -1.132 log beta, sigma 0.227
+A1      v-exp +0.67 [+0.52,+0.82]  b-exp -1.15 [-1.33,-0.97] | v1v2 +0.83 v2v3 +0.48 | level +0.003 [-0.040,+0.057] | Sch-shape level +0.950 | ref-pt +0.002 | fin/right per v: 26/14 18/22 14/18
+A2      v-exp +0.69 [+0.56,+0.85]  b-exp -1.12 [-1.28,-0.97] | v1v2 +0.79 v2v3 +0.57 | level -0.003 [-0.052,+0.050] | Sch-shape level +0.950 | ref-pt -0.002 | fin/right per v: 28/12 18/22 12/19
+B1      v-exp +0.71 [+0.52,+0.97]  b-exp -0.87 [-1.10,-0.72] | v1v2 +0.78 v2v3 +0.62 | level +0.286 [+0.212,+0.376] | Sch-shape level +1.221 | ref-pt +0.279 | fin/right per v: 25/15 16/24 8/26
+C1      v-exp +0.76 [+0.58,+0.95]  b-exp -1.01 [-1.21,-0.83] | v1v2 +0.88 v2v3 +0.62 | level +0.052 [-0.038,+0.114] | Sch-shape level +0.997 | ref-pt +0.071 | fin/right per v: 29/11 18/22 11/23
+D1      v-exp +0.72 [+0.64,+0.85]  b-exp -1.11 [-1.29,-0.98] | v1v2 +0.88 v2v3 +0.53 | level +0.154 [+0.118,+0.197] | Sch-shape level +1.099 | ref-pt +0.161 | fin/right per v: 29/11 17/22 13/19
+A_T2    v-exp +0.60 [+0.45,+0.86]  b-exp -1.13 [-1.41,-0.97] | v1v2 +0.85 v2v3 +0.32 | level +0.223 [+0.141,+0.294] | Sch-shape level +1.183 | ref-pt +0.211 | fin/right per v: 24/16 12/28 13/21
+B_T2s1  v-exp +0.83 [+0.66,+1.02]  b-exp -1.42 [-1.69,-1.19] | v1v2 +0.94 v2v3 +0.68 | level +0.303 [+0.239,+0.370] | Sch-shape level +1.275 | ref-pt +0.357 | fin/right per v: 25/15 13/27 5/26
+B_T2r1  v-exp +0.76 [+0.52,+1.03]  b-exp -1.18 [-1.56,-0.97] | v1v2 +1.01 v2v3 +0.44 | level +0.267 [+0.183,+0.348] | Sch-shape level +1.232 | ref-pt +0.284 | fin/right per v: 24/16 12/28 6/24
+B_T2r2  v-exp +0.76 [+0.52,+0.93]  b-exp -1.04 [-1.29,-0.85] | v1v2 +0.96 v2v3 +0.51 | level +0.274 [+0.199,+0.344] | Sch-shape level +1.221 | ref-pt +0.281 | fin/right per v: 25/15 12/28 7/21
+C_T2    v-exp +0.65 [+0.48,+0.87]  b-exp -1.13 [-1.50,-0.93] | v1v2 +0.65 v2v3 +0.65 | level +0.174 [+0.075,+0.229] | Sch-shape level +1.133 | ref-pt +0.170 | fin/right per v: 23/17 17/23 11/25
+yardstick B_T2r1-B_T2r2: level diff -0.007 (boot SE 0.060); Schelleng-shape level diff +0.011
+yardstick B_T2s1-B_T2p6: level diff +0.033 (boot SE 0.041); Schelleng-shape level diff +0.049
+yardstick A1-A2: level diff +0.007 (boot SE 0.036); Schelleng-shape level diff +0.000
+
+(1) tension pairs T1 -> T2 (upper level shift; Schelleng exponent 1)
+  A         dlnZ +0.115 dlnEI +0.269 | dlevel +0.223 [+0.136,+0.299] -> Z exponent +1.94 [+1.18,+2.60] | EI exponent +0.83 | Sch-shape dlevel +0.233 (Z exp +2.03)
+  A(A1)     dlnZ +0.115 dlnEI +0.269 | dlevel +0.220 [+0.119,+0.310] -> Z exponent +1.91 [+1.04,+2.70] | EI exponent +0.82 | Sch-shape dlevel +0.233 (Z exp +2.03)
+  A(A2)     dlnZ +0.115 dlnEI +0.269 | dlevel +0.226 [+0.140,+0.312] -> Z exponent +1.96 [+1.22,+2.71] | EI exponent +0.84 | Sch-shape dlevel +0.234 (Z exp +2.03)
+  B         dlnZ +0.079 dlnEI +0.506 | dlevel +0.001 [-0.111,+0.098] -> Z exponent +0.01 [-1.41,+1.24] | EI exponent +0.00 | Sch-shape dlevel +0.029 (Z exp +0.37)
+  B(s1)     dlnZ +0.079 dlnEI +0.506 | dlevel +0.017 [-0.087,+0.129] -> Z exponent +0.22 [-1.11,+1.64] | EI exponent +0.03 | Sch-shape dlevel +0.054 (Z exp +0.68)
+  B(Part6)  dlnZ +0.079 dlnEI +0.506 | dlevel -0.015 [-0.141,+0.079] -> Z exponent -0.19 [-1.79,+1.00] | EI exponent -0.03 | Sch-shape dlevel +0.005 (Z exp +0.06)
+  C         dlnZ +0.058 dlnEI +0.234 | dlevel +0.123 [+0.014,+0.223] -> Z exponent +2.11 [+0.24,+3.84] | EI exponent +0.52 | Sch-shape dlevel +0.136 (Z exp +2.34)
+  pooled A,B,C (through origin, weights 1/var): Z exponent +1.54 [+0.92,+2.13], chi2(common slope) 6.6 on 2 dof; chi2 for g=1 9.6 on 3 dof | EI exponent +0.28, chi2 19.5
+  with between-recording SD tau 0.014: Z exponent +1.53 +- 0.34, chi2(common) 5.8/2 dof, chi2(g=1) 8.2/3 dof
+
+(2) cross-string regression (n8: ['A1', 'A2', 'B1', 'C1', 'D1', 'A_T2', 'B_T2', 'C_T2'])
+    levels A1 +0.003 A2 -0.003 B1 +0.286 C1 +0.052 D1 +0.154 A_T2 +0.223 B_T2 +0.287 C_T2 +0.174
+    null                         coef +0.147±0.042 | R2 +0.00 adjR2 +0.00 AICc -28.8 | in 0.110 LOSO 0.126 LOGO 0.136
+    Schelleng Z^1 (slope fixed)  coef +0.052±0.031 | R2 +0.45 adjR2 +0.45 AICc -33.6 | in 0.082 LOSO 0.094 LOGO 0.101
+    lnZ                          coef -0.002±0.066 +1.580±0.621 | R2 +0.52 adjR2 +0.44 AICc -29.1 | in 0.077 LOSO 0.097 LOGO 0.107
+    lnEI                         coef -0.290±0.135 +0.311±0.094 | R2 +0.65 adjR2 +0.59 AICc -31.5 | in 0.066 LOSO 0.088 LOGO 0.098
+    Zto                          coef -0.030±0.161 +3.906±3.422 | R2 +0.18 adjR2 +0.04 AICc -24.8 | in 0.100 LOSO 0.142 LOGO 0.152
+    d                            coef +0.209±0.655 -0.062±0.647 | R2 +0.00 adjR2 -0.16 AICc -23.3 | in 0.110 LOSO 0.143 LOGO 0.173
+    lnZ+lnEI                     coef -0.254±0.124 +0.880±0.576 +0.226±0.102 | R2 +0.76 adjR2 +0.66 AICc -25.3 | in 0.054 LOSO 0.091 LOGO 0.099
+    lnZ+Zto                      coef -0.238±0.104 +1.732±0.452 +4.866±1.906 | R2 +0.79 adjR2 +0.71 AICc -26.4 | in 0.050 LOSO 0.102 LOGO 0.109
+    lnZ+d                        coef -0.257±0.523 +1.666±0.687 +0.244±0.496 | R2 +0.54 adjR2 +0.36 AICc -20.1 | in 0.075 LOSO 0.118 LOGO 0.157
+    lnEI+Zto                     coef -0.282±0.135 +0.413±0.138 -3.326±3.301 | R2 +0.71 adjR2 +0.59 AICc -23.7 | in 0.060 LOSO 0.098 LOGO 0.106
+    lnEI+d                       coef -0.081±0.426 +0.317±0.101 -0.215±0.414 | R2 +0.66 adjR2 +0.53 AICc -22.6 | in 0.064 LOSO 0.111 LOGO 0.142
+    Zto+d                        coef +0.122±0.652 +4.032±3.763 -0.157±0.645 | R2 +0.19 adjR2 -0.14 AICc -15.6 | in 0.100 LOSO 0.159 LOGO 0.186
+    Schelleng Z^1 + lnEI         coef -0.249±0.112 +0.214±0.078 | R2 +0.76 adjR2 +0.72 AICc -34.5 | in 0.055 LOSO 0.087 LOGO 0.095
+    Schelleng Z^1 + Zto          coef -0.150±0.100 +4.461±2.130 | R2 +0.68 adjR2 +0.63 AICc -32.4 | in 0.062 LOSO 0.084 LOGO 0.091
+    Schelleng Z^1 + d            coef -0.070±0.484 +0.122±0.478 | R2 +0.46 adjR2 +0.36 AICc -28.1 | in 0.082 LOSO 0.112 LOGO 0.130
+    permutation (1000): best-of-10 LOSO 0.088, null median 0.118, p = 0.149; single lnZ p = 0.051, lnEI p = 0.017
+    permutation over all 14 non-null models: best LOSO 0.084, p = 0.130
+
+(2) cross-string regression (n9: ['A1', 'A2', 'B1', 'C1', 'D1', 'A_T2', 'B_T2s1', 'B_T2p6', 'C_T2'])
+    levels A1 +0.003 A2 -0.003 B1 +0.286 C1 +0.052 D1 +0.154 A_T2 +0.223 B_T2s1 +0.303 B_T2p6 +0.270 C_T2 +0.174
+    null                         coef +0.162±0.040 | R2 +0.00 adjR2 +0.00 AICc -33.2 | in 0.113 LOSO 0.127 LOGO 0.141
+    Schelleng Z^1 (slope fixed)  coef +0.059±0.028 | R2 +0.50 adjR2 +0.50 AICc -39.5 | in 0.080 LOSO 0.090 LOGO 0.097
+    lnZ                          coef -0.005±0.060 +1.619±0.512 | R2 +0.59 adjR2 +0.53 AICc -36.4 | in 0.073 LOSO 0.090 LOGO 0.100
+    lnEI                         coef -0.262±0.111 +0.289±0.074 | R2 +0.69 adjR2 +0.64 AICc -38.8 | in 0.063 LOSO 0.076 LOGO 0.100
+    Zto                          coef -0.059±0.147 +4.713±3.037 | R2 +0.26 adjR2 +0.15 AICc -31.1 | in 0.098 LOSO 0.136 LOGO 0.150
+    d                            coef +0.337±0.644 -0.174±0.639 | R2 +0.01 adjR2 -0.13 AICc -28.5 | in 0.113 LOSO 0.140 LOGO 0.171
+    lnZ+lnEI                     coef -0.215±0.107 +0.820±0.549 +0.199±0.091 | R2 +0.77 adjR2 +0.70 AICc -34.5 | in 0.054 LOSO 0.070 LOGO 0.116
+    lnZ+Zto                      coef -0.198±0.091 +1.554±0.391 +4.248±1.726 | R2 +0.79 adjR2 +0.73 AICc -35.5 | in 0.051 LOSO 0.075 LOGO 0.131
+    lnZ+d                        coef -0.256±0.481 +1.710±0.568 +0.241±0.456 | R2 +0.61 adjR2 +0.47 AICc -29.6 | in 0.071 LOSO 0.109 LOGO 0.147
+    lnEI+Zto                     coef -0.248±0.112 +0.379±0.116 -3.138±3.105 | R2 +0.73 adjR2 +0.64 AICc -33.1 | in 0.059 LOSO 0.084 LOGO 0.114
+    lnEI+d                       coef -0.088±0.401 +0.289±0.078 -0.173±0.382 | R2 +0.70 adjR2 +0.60 AICc -31.9 | in 0.062 LOSO 0.089 LOGO 0.148
+    Zto+d                        coef +0.165±0.607 +4.787±3.247 -0.226±0.592 | R2 +0.27 adjR2 +0.03 AICc -24.1 | in 0.097 LOSO 0.150 LOGO 0.180
+    Schelleng Z^1 + lnEI         coef -0.205±0.096 +0.180±0.063 | R2 +0.77 adjR2 +0.73 AICc -41.5 | in 0.055 LOSO 0.068 LOGO 0.110
+    Schelleng Z^1 + Zto          coef -0.148±0.089 +4.413±1.842 | R2 +0.73 adjR2 +0.69 AICc -40.1 | in 0.059 LOSO 0.078 LOGO 0.084
+    Schelleng Z^1 + d            coef -0.010±0.456 +0.069±0.452 | R2 +0.50 adjR2 +0.43 AICc -34.7 | in 0.080 LOSO 0.104 LOGO 0.121
+    permutation (1000): best-of-10 LOSO 0.070, null median 0.122, p = 0.036; single lnZ p = 0.023, lnEI p = 0.008
+    permutation over all 14 non-null models: best LOSO 0.068, p = 0.029
+
+(2b) calibrate on T1 strings (A1 A2 B1 C1 D1), predict T2 levels (A_T2, B_T2s1, B_T2 Part6, C_T2)
+    null                         coef +0.098 | obs-pred A_T2 +0.124 B_T2s1 +0.205 B_T2p6 +0.172 C_T2 +0.076 | RMSE(3 strings) 0.138
+    Schelleng Z^1 (slope fixed)  coef +0.038 | obs-pred A_T2 +0.012 B_T2s1 +0.091 B_T2p6 +0.058 C_T2 +0.027 | RMSE(3 strings) 0.046
+    lnZ                          coef -0.116 +3.576 | obs-pred A_T2 -0.278 B_T2s1 -0.202 B_T2p6 -0.235 C_T2 -0.100 | RMSE(3 strings) 0.212
+    lnEI                         coef -0.401 +0.384 | obs-pred A_T2 +0.094 B_T2s1 -0.059 B_T2p6 -0.091 C_T2 +0.046 | RMSE(3 strings) 0.075
+    Zto                          coef -0.283 +8.078 | obs-pred A_T2 +0.288 B_T2s1 +0.101 B_T2p6 +0.069 C_T2 +0.134 | RMSE(3 strings) 0.190
+    d                            coef +0.097 +0.001 | obs-pred A_T2 +0.124 B_T2s1 +0.205 B_T2p6 +0.172 C_T2 +0.076 | RMSE(3 strings) 0.138
+    Schelleng Z^1 + lnEI         coef -0.455 +0.379 | obs-pred A_T2 -0.018 B_T2s1 -0.170 B_T2p6 -0.202 C_T2 -0.003 | RMSE(3 strings) 0.108
+    Schelleng Z^1 + Zto          coef -0.340 +8.014 | obs-pred A_T2 +0.174 B_T2s1 -0.012 B_T2p6 -0.044 C_T2 +0.084 | RMSE(3 strings) 0.113
+    lnEI+Zto                     coef -1.161 +3.174 -60.774 | obs-pred A_T2 -1.351 B_T2s1 -1.198 B_T2p6 -1.230 C_T2 -0.610 | RMSE(3 strings) 1.106
+
+(3) strict Schelleng upper law F = c Z v / beta (one global constant)
+  [strict v/beta] ln c = +0.984; T1 residual levels A1 -0.091 A2 -0.092 B1 +0.142 C1 -0.038 D1 +0.076 (SD 0.105)
+     T2 residual levels (obs - pred): A_T2 +0.027 B_T2s1 +0.117 B_T2r1 +0.074 B_T2r2 +0.063 C_T2 +0.040 | column median |log err|: A_T2 0.242 B_T2s1 0.231 B_T2r1 0.170 B_T2r2 0.124 C_T2 0.233
+  [A1+A2 shape] ln c = +0.038; T1 residual levels A1 -0.093 A2 -0.099 B1 +0.152 C1 -0.038 D1 +0.077 (SD 0.111)
+     T2 residual levels (obs - pred): A_T2 +0.012 B_T2s1 +0.091 B_T2r1 +0.054 B_T2r2 +0.062 C_T2 +0.027 | column median |log err|: A_T2 0.112 B_T2s1 0.135 B_T2r1 0.159 B_T2r2 0.121 C_T2 0.215
+  repeat noise, column level: rep_1 vs rep_2 median |d log Fmax| 0.084 (n 41, mean -0.037, max |d log beta| 0.002); B_T2s1 vs Part 6 0.138 (n 40)

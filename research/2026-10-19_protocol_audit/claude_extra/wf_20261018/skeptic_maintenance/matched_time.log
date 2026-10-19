@@ -1,0 +1,30 @@
+A2 v=0.05 (19 columns; force / column F_E,cur)
+   t in [0.0,0.3): entries n=474 q10 1.61 min 0.36 median 4.86 | maintained strokes n=471 q10 1.56 min 0.34 | not-yet-entered strokes n=888, share with force above maintained q10 0.57, above F_E,cur 0.70
+   t in [0.3,0.8): entries n= 40 q10 0.50 min 0.16 median 1.14 | maintained strokes n=508 q10 1.19 min 0.14 | not-yet-entered strokes n=413, share with force above maintained q10 0.23, above F_E,cur 0.31
+   t in [0.8,1.3): entries n= 23 q10 0.35 min 0.14 median 0.84 | maintained strokes n=530 q10 0.92 min 0.13 | not-yet-entered strokes n=371, share with force above maintained q10 0.22, above F_E,cur 0.19
+   t in [1.3,2.5): entries n= 32 q10 0.11 min 0.08 median 0.45 | maintained strokes n=555 q10 0.63 min 0.06 | not-yet-entered strokes n=346, share with force above maintained q10 0.25, above F_E,cur 0.11
+A2 v=0.10 (19 columns; force / column F_E,cur)
+   t in [0.0,0.3): entries n=246 q10 1.08 min 0.26 median 1.94 | maintained strokes n=240 q10 1.08 min 0.24 | not-yet-entered strokes n=919, share with force above maintained q10 0.28, above F_E,cur 0.30
+   t in [0.3,0.8): entries n= 31 q10 0.75 min 0.13 median 1.00 | maintained strokes n=277 q10 0.92 min 0.11 | not-yet-entered strokes n=671, share with force above maintained q10 0.07, above F_E,cur 0.06
+   t in [0.8,1.3): entries n=  5 q10 0.81 min 0.80 median 1.00 | maintained strokes n=275 q10 0.94 min 0.49 | not-yet-entered strokes n=637, share with force above maintained q10 0.03, above F_E,cur 0.02
+   t in [1.3,2.5): entries n=  0 q10 nan min nan median nan | maintained strokes n=  0 q10 nan min nan | not-yet-entered strokes n=  0, share with force above maintained q10 nan, above F_E,cur nan
+A2 v=0.20 (8 columns; force / column F_E,cur)
+   t in [0.0,0.3): entries n= 65 q10 0.95 min 0.83 median 1.38 | maintained strokes n= 64 q10 0.94 min 0.81 | not-yet-entered strokes n=395, share with force above maintained q10 0.17, above F_E,cur 0.16
+   t in [0.3,0.8): entries n=  0 q10 nan min nan median nan | maintained strokes n= 65 q10 0.95 min 0.81 | not-yet-entered strokes n=330, share with force above maintained q10 0.02, above F_E,cur 0.02
+   t in [0.8,1.3): entries n=  0 q10 nan min nan median nan | maintained strokes n=  0 q10 nan min nan | not-yet-entered strokes n=  0, share with force above maintained q10 nan, above F_E,cur nan
+   t in [1.3,2.5): entries n=  0 q10 nan min nan median nan | maintained strokes n=  0 q10 nan min nan | not-yet-entered strokes n=  0, share with force above maintained q10 nan, above F_E,cur nan
+A1 v=0.05 (20 columns; force / column F_E,cur)
+   t in [0.0,0.3): entries n=372 q10 1.24 min 0.24 median 2.95 | maintained strokes n=368 q10 1.25 min 0.23 | not-yet-entered strokes n=896, share with force above maintained q10 0.41, above F_E,cur 0.46
+   t in [0.3,0.8): entries n= 25 q10 0.36 min 0.17 median 1.09 | maintained strokes n=388 q10 1.12 min 0.16 | not-yet-entered strokes n=523, share with force above maintained q10 0.08, above F_E,cur 0.10
+   t in [0.8,1.3): entries n= 22 q10 0.66 min 0.33 median 1.03 | maintained strokes n=408 q10 1.07 min 0.12 | not-yet-entered strokes n=493, share with force above maintained q10 0.06, above F_E,cur 0.07
+   t in [1.3,2.5): entries n= 22 q10 0.57 min 0.18 median 0.83 | maintained strokes n=429 q10 1.00 min 0.19 | not-yet-entered strokes n=476, share with force above maintained q10 0.05, above F_E,cur 0.05
+A1 v=0.10 (26 columns; force / column F_E,cur)
+   t in [0.0,0.3): entries n=335 q10 1.07 min 0.60 median 1.93 | maintained strokes n=332 q10 1.08 min 0.58 | not-yet-entered strokes n=1024, share with force above maintained q10 0.32, above F_E,cur 0.34
+   t in [0.3,0.8): entries n= 38 q10 0.68 min 0.19 median 0.97 | maintained strokes n=368 q10 0.98 min 0.22 | not-yet-entered strokes n=684, share with force above maintained q10 0.06, above F_E,cur 0.06
+   t in [0.8,1.3): entries n=  5 q10 0.71 min 0.67 median 0.83 | maintained strokes n=367 q10 1.04 min 0.61 | not-yet-entered strokes n=646, share with force above maintained q10 0.03, above F_E,cur 0.04
+   t in [1.3,2.5): entries n=  0 q10 nan min nan median nan | maintained strokes n=  0 q10 nan min nan | not-yet-entered strokes n=  0, share with force above maintained q10 nan, above F_E,cur nan
+A1 v=0.20 (25 columns; force / column F_E,cur)
+   t in [0.0,0.3): entries n=317 q10 0.96 min 0.48 median 1.67 | maintained strokes n=306 q10 0.97 min 0.49 | not-yet-entered strokes n=776, share with force above maintained q10 0.43, above F_E,cur 0.42
+   t in [0.3,0.8): entries n=  4 q10 0.91 min 0.90 median 1.14 | maintained strokes n=312 q10 0.98 min 0.50 | not-yet-entered strokes n=455, share with force above maintained q10 0.10, above F_E,cur 0.10
+   t in [0.8,1.3): entries n=  0 q10 nan min nan median nan | maintained strokes n=  0 q10 nan min nan | not-yet-entered strokes n=  0, share with force above maintained q10 nan, above F_E,cur nan
+   t in [1.3,2.5): entries n=  0 q10 nan min nan median nan | maintained strokes n=  0 q10 nan min nan | not-yet-entered strokes n=  0, share with force above maintained q10 nan, above F_E,cur nan

@@ -1,0 +1,46 @@
+=== A1: speeds [0.05, 0.1, 0.2]
+t=0.0 lower a=+0.574 b=-0.672 | upper a=+0.593 b=-1.127 sigma=0.20
+   v1: cols 40 strokes/col 50-50  upper: interval 27 right 12 none 1; top stroke H in 13/40; max force per col median 3.81 N (range 3.77-4.09)
+   v2: cols 40 strokes/col 50-50  upper: interval 18 right 22 none 0; top stroke H in 23/40; max force per col median 3.86 N (range 3.79-4.18)
+   v3: cols 40 strokes/col 50-50  upper: interval 14 right 18 none 8; top stroke H in 19/40; max force per col median 3.94 N (range 3.88-4.24)
+t=0.1 lower a=+0.639 b=-0.831 | upper a=+0.590 b=-1.117 sigma=0.21
+   v1: cols 40 strokes/col 50-50  upper: interval 27 right 13 none 0; top stroke H in 15/40; max force per col median 3.81 N (range 3.77-4.06)
+   v2: cols 40 strokes/col 50-50  upper: interval 18 right 22 none 0; top stroke H in 23/40; max force per col median 3.89 N (range 3.79-4.17)
+   v3: cols 40 strokes/col 50-50  upper: interval 14 right 18 none 8; top stroke H in 20/40; max force per col median 3.98 N (range 3.90-4.29)
+t=0.2 lower a=+0.666 b=-0.971 | upper a=+0.615 b=-1.106 sigma=0.21
+   v1: cols 40 strokes/col 50-50  upper: interval 27 right 13 none 0; top stroke H in 15/40; max force per col median 3.81 N (range 3.76-4.04)
+   v2: cols 40 strokes/col 50-50  upper: interval 18 right 22 none 0; top stroke H in 23/40; max force per col median 3.91 N (range 3.80-4.17)
+   v3: cols 40 strokes/col 50-50  upper: interval 14 right 18 none 8; top stroke H in 20/40; max force per col median 4.05 N (range 3.96-4.35)
+t=0.3 lower a=+0.655 b=-1.088 | upper a=+0.671 b=-1.151 sigma=0.23
+   v1: cols 40 strokes/col 50-50  upper: interval 26 right 14 none 0; top stroke H in 15/40; max force per col median 3.82 N (range 3.75-4.03)
+   v2: cols 40 strokes/col 50-50  upper: interval 18 right 22 none 0; top stroke H in 23/40; max force per col median 3.95 N (range 3.81-4.21)
+   v3: cols 40 strokes/col 50-50  upper: interval 14 right 18 none 8; top stroke H in 20/40; max force per col median 4.16 N (range 4.02-4.44)
+  t=0.0 v1 above upper boundary: 251 windows: helmholtz 2, multiple_slip 33, aperiodic 73, ambiguous 33, subharmonic 4, no_oscillation 106 | 5 strokes below: helmholtz 126, multiple_slip 7, no_oscillation 2
+  t=0.0 v2 above upper boundary: 152 windows: helmholtz 4, multiple_slip 98, aperiodic 21, ambiguous 23, no_oscillation 6 | 5 strokes below: helmholtz 86, multiple_slip 4
+  t=0.0 v3 above upper boundary: 83 windows: helmholtz 11, multiple_slip 66, ambiguous 5, subharmonic 1 | 5 strokes below: helmholtz 65, multiple_slip 5
+  t=0.3 v1 above upper boundary: 264 windows: helmholtz 5, multiple_slip 41, aperiodic 74, ambiguous 29, subharmonic 11, no_oscillation 104 | 5 strokes below: helmholtz 129, multiple_slip 1
+  t=0.3 v2 above upper boundary: 141 windows: helmholtz 2, multiple_slip 95, aperiodic 27, ambiguous 13, subharmonic 2, no_oscillation 2 | 5 strokes below: helmholtz 88, multiple_slip 2
+  t=0.3 v3 above upper boundary: 73 windows: helmholtz 10, multiple_slip 54, aperiodic 3, ambiguous 5, subharmonic 1 | 5 strokes below: helmholtz 62, multiple_slip 8
+=== A2: speeds [0.05, 0.1, 0.2]
+t=0.0 lower a=+1.041 b=-0.653 | upper a=+0.700 b=-1.088 sigma=0.22
+   v1: cols 40 strokes/col 50-50  upper: interval 31 right 9 none 0; top stroke H in 9/40; max force per col median 4.21 N (range 3.92-4.29)
+   v2: cols 40 strokes/col 50-50  upper: interval 19 right 21 none 0; top stroke H in 21/40; max force per col median 4.19 N (range 3.99-4.29)
+   v3: cols 40 strokes/col 50-50  upper: interval 13 right 17 none 10; top stroke H in 18/40; max force per col median 3.96 N (range 3.80-4.21)
+t=0.1 lower a=+0.945 b=-0.880 | upper a=+0.698 b=-1.104 sigma=0.20
+   v1: cols 40 strokes/col 50-50  upper: interval 29 right 11 none 0; top stroke H in 11/40; max force per col median 4.16 N (range 3.91-4.25)
+   v2: cols 40 strokes/col 50-50  upper: interval 18 right 22 none 0; top stroke H in 22/40; max force per col median 4.13 N (range 3.98-4.24)
+   v3: cols 40 strokes/col 50-50  upper: interval 12 right 19 none 9; top stroke H in 21/40; max force per col median 3.88 N (range 3.78-4.13)
+t=0.2 lower a=+0.940 b=-1.089 | upper a=+0.707 b=-1.117 sigma=0.22
+   v1: cols 40 strokes/col 50-50  upper: interval 29 right 11 none 0; top stroke H in 11/40; max force per col median 4.12 N (range 3.88-4.21)
+   v2: cols 40 strokes/col 50-50  upper: interval 18 right 22 none 0; top stroke H in 22/40; max force per col median 4.07 N (range 3.97-4.18)
+   v3: cols 40 strokes/col 50-50  upper: interval 12 right 19 none 9; top stroke H in 21/40; max force per col median 3.84 N (range 3.77-4.06)
+t=0.3 lower a=+0.968 b=-1.295 | upper a=+0.690 b=-1.115 sigma=0.23
+   v1: cols 40 strokes/col 50-50  upper: interval 28 right 12 none 0; top stroke H in 12/40; max force per col median 4.10 N (range 3.87-4.19)
+   v2: cols 40 strokes/col 50-50  upper: interval 18 right 22 none 0; top stroke H in 22/40; max force per col median 4.04 N (range 3.97-4.13)
+   v3: cols 40 strokes/col 50-50  upper: interval 12 right 19 none 9; top stroke H in 21/40; max force per col median 3.86 N (range 3.80-4.04)
+  t=0.0 v1 above upper boundary: 327 windows: helmholtz 5, multiple_slip 2, aperiodic 156, ambiguous 44, subharmonic 2, no_oscillation 118 | 5 strokes below: helmholtz 147, multiple_slip 4, no_oscillation 4
+  t=0.0 v2 above upper boundary: 195 windows: helmholtz 10, multiple_slip 15, aperiodic 95, ambiguous 58, no_oscillation 17 | 5 strokes below: helmholtz 92, multiple_slip 2, ambiguous 1
+  t=0.0 v3 above upper boundary: 77 windows: helmholtz 7, multiple_slip 17, aperiodic 13, ambiguous 40 | 5 strokes below: helmholtz 57, multiple_slip 8
+  t=0.3 v1 above upper boundary: 288 windows: helmholtz 3, multiple_slip 18, aperiodic 135, ambiguous 32, subharmonic 12, no_oscillation 88 | 5 strokes below: helmholtz 139, subharmonic 1
+  t=0.3 v2 above upper boundary: 148 windows: helmholtz 5, multiple_slip 60, aperiodic 51, ambiguous 23, subharmonic 6, no_oscillation 3 | 5 strokes below: helmholtz 86, multiple_slip 4
+  t=0.3 v3 above upper boundary: 61 windows: helmholtz 8, multiple_slip 43, aperiodic 3, ambiguous 7 | 5 strokes below: helmholtz 53, multiple_slip 7

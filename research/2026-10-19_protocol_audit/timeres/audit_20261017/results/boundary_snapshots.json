@@ -1,0 +1,4304 @@
+{
+  "status": "exploratory correction of A2; no held-out confirmation or steady-state identification",
+  "feature_sha256": "3345934e53c0eafdbca0a89717a22a43cfac2fd3c294a813673a43b8c960c272",
+  "source_sha256": "7e46535c92e243c134a4fdfadb80a71aa44a2f84e600d7768a8add0218dd4f0e",
+  "audit_source_sha256": "94b29311d025c2aca4d3c000cea90b35c79f9ac0c0a70e3b54ac12b6b939cc48",
+  "grid": {
+    "2024-04-19_TypeA_sample2/v1": {
+      "trials": 2000,
+      "recovered_columns": 40,
+      "trials_per_column": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "gap_threshold": 0.00013037473257870473,
+      "gap_ratio": 81.68903065440679,
+      "legacy_prepare_columns": 363
+    },
+    "2024-04-19_TypeA_sample2/v2": {
+      "trials": 2000,
+      "recovered_columns": 40,
+      "trials_per_column": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "gap_threshold": 0.00015363805282405185,
+      "gap_ratio": 59.43305517121014,
+      "legacy_prepare_columns": 331
+    },
+    "2024-04-19_TypeA_sample2/v3": {
+      "trials": 2000,
+      "recovered_columns": 40,
+      "trials_per_column": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ],
+      "gap_threshold": 0.00011252774944210447,
+      "gap_ratio": 109.77913117409081,
+      "legacy_prepare_columns": 311
+    }
+  },
+  "original_acquisition_windows": {
+    "summary": {
+      "columns": 120,
+      "by_speed": {
+        "0": {
+          "columns": 40,
+          "left": 6,
+          "right": 0,
+          "finite": 34,
+          "forces_min": 43,
+          "forces_max": 50
+        },
+        "1": {
+          "columns": 40,
+          "left": 0,
+          "right": 0,
+          "finite": 40,
+          "forces_min": 50,
+          "forces_max": 50
+        },
+        "2": {
+          "columns": 40,
+          "left": 0,
+          "right": 9,
+          "finite": 31,
+          "forces_min": 42,
+          "forces_max": 50
+        }
+      },
+      "columns_with_multiple_H_blocks": 99,
+      "columns_with_H_before_accepted_run": 75
+    },
+    "fit": {
+      "success": true,
+      "intercept": -2.0250518975125256,
+      "speed_exp": 2.1167828334779126,
+      "beta_exp": -2.026815107522301,
+      "sigma": 0.6169422212376356,
+      "nll": 345.7892459031218,
+      "sigma_bound_hit": false,
+      "converged_starts": 3,
+      "starts": 3,
+      "gradient_max": 1.136868384125445e-05,
+      "objective_spread_converged": 2.467004378559068e-11
+    },
+    "cluster_sensitivity": {
+      "reps": 200,
+      "successful": 200,
+      "failed": 0,
+      "speed_percentile_95": [
+        1.861620322617951,
+        2.3733671204544677
+      ],
+      "beta_percentile_95": [
+        -2.221481663417175,
+        -1.7979916656540351
+      ],
+      "scope": "Position-cluster resampling conditional on A2, fixed classifier and grid; not across-specimen confidence."
+    }
+  },
+  "assumptions": [
+    "First K consecutive H labels defines an operational force-grid boundary.",
+    "No detected H run uses a right-censoring convention requiring an unverified physical single-band assumption.",
+    "Detected-only fits are selection-biased sensitivity analyses, not a replacement primary estimate.",
+    "Measured grid levels are paired by sorted position index across speeds; counts and beta ranges must remain comparable.",
+    "All three speeds and complete force support at each shared position are required.",
+    "Window start, center and end differ by a constant within each setting; decision availability is at window end.",
+    "Overlapping windows are separate descriptive snapshots, never independent replicates.",
+    "Window-length comparisons change the finite-window periodicity detector as well as observation horizon."
+  ],
+  "snapshots": [
+    {
+      "window_s": 0.1,
+      "decision_end_s": 0.1,
+      "window_start_s": 0.0,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 14,
+            "finite": 25,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 1,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 10,
+            "finite": 30,
+            "forces_min": 50,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 84,
+        "columns_with_H_before_accepted_run": 68
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 14,
+            "finite": 25,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 1,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 10,
+            "finite": 30,
+            "forces_min": 50,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 84,
+        "columns_with_H_before_accepted_run": 68
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": 1.085903983011213,
+        "speed_exp": 0.5611942578549702,
+        "beta_exp": -0.16539551440353167,
+        "sigma": 1.1522634580990294,
+        "nll": 409.17279329119594,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683778145576e-05,
+        "objective_spread_converged": 1.30569333123276e-10
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": 0.9933469010202775,
+        "speed_exp": 1.2632380115412865,
+        "beta_exp": -0.6033808994110751,
+        "sigma": 0.5392043312175873,
+        "nll": 310.69106301339826,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.7053025667218365e-05,
+        "objective_spread_converged": 1.028865881380625e-11
+      }
+    },
+    {
+      "window_s": 0.1,
+      "decision_end_s": 0.2,
+      "window_start_s": 0.1,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 10,
+            "finite": 30,
+            "forces_min": 43,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 95,
+        "columns_with_H_before_accepted_run": 74
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 10,
+            "finite": 30,
+            "forces_min": 43,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 95,
+        "columns_with_H_before_accepted_run": 74
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -0.10119519028241719,
+        "speed_exp": 0.9605817305694507,
+        "beta_exp": -0.7462575481224535,
+        "sigma": 0.5956802709622926,
+        "nll": 371.7230439217028,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 5.684341889072788e-06,
+        "objective_spread_converged": 1.9326762412674725e-12
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -0.1685317219992653,
+        "speed_exp": 0.7790287109807351,
+        "beta_exp": -0.5890888297464224,
+        "sigma": 0.5625887641964233,
+        "nll": 357.04189091402117,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683715036703e-05,
+        "objective_spread_converged": 1.6484591469634324e-12
+      }
+    },
+    {
+      "window_s": 0.1,
+      "decision_end_s": 0.3,
+      "window_start_s": 0.2,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 40,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 95,
+        "columns_with_H_before_accepted_run": 74
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 40,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 95,
+        "columns_with_H_before_accepted_run": 74
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -0.8499279116088704,
+        "speed_exp": 0.9793788217617598,
+        "beta_exp": -0.9623555117526907,
+        "sigma": 0.5653470519762678,
+        "nll": 369.40795187147927,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 5.684341889072788e-06,
+        "objective_spread_converged": 9.663381206337363e-13
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -0.8922627414540173,
+        "speed_exp": 0.8349357848801561,
+        "beta_exp": -0.8330583109777675,
+        "sigma": 0.5419766030843903,
+        "nll": 357.12253588045235,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 2.2737367430073406e-05,
+        "objective_spread_converged": 6.014033715473488e-11
+      }
+    },
+    {
+      "window_s": 0.1,
+      "decision_end_s": 0.4,
+      "window_start_s": 0.3,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 38,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 96,
+        "columns_with_H_before_accepted_run": 64
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 38,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 96,
+        "columns_with_H_before_accepted_run": 64
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -1.696594565296068,
+        "speed_exp": 0.956669621606634,
+        "beta_exp": -1.1775258909743642,
+        "sigma": 0.6529240487662002,
+        "nll": 376.84597495705304,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.136868384125445e-05,
+        "objective_spread_converged": 4.831690603168681e-12
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -1.7458313549994466,
+        "speed_exp": 0.7914062755004265,
+        "beta_exp": -1.0299997465333628,
+        "sigma": 0.6263130369517166,
+        "nll": 364.7688091134995,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 2.842170928759176e-05,
+        "objective_spread_converged": 1.1344241102051456e-09
+      }
+    },
+    {
+      "window_s": 0.1,
+      "decision_end_s": 0.5,
+      "window_start_s": 0.4,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 37,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 99,
+        "columns_with_H_before_accepted_run": 68
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 37,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 99,
+        "columns_with_H_before_accepted_run": 68
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -1.9294463755526003,
+        "speed_exp": 1.0940233767576752,
+        "beta_exp": -1.3255122634758147,
+        "sigma": 0.6038874584900352,
+        "nll": 382.63097110068253,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 2.2737367430073406e-05,
+        "objective_spread_converged": 1.9895196601282805e-12
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -1.9739033296985504,
+        "speed_exp": 0.9510407460806454,
+        "beta_exp": -1.1985426985202212,
+        "sigma": 0.5835021383253075,
+        "nll": 371.7287461944278,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 3.4106051145110115e-05,
+        "objective_spread_converged": 4.2234660213580355e-11
+      }
+    },
+    {
+      "window_s": 0.1,
+      "decision_end_s": 0.7,
+      "window_start_s": 0.6,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 101,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 21,
+            "left": 6,
+            "right": 0,
+            "finite": 15,
+            "forces_min": 7,
+            "forces_max": 38
+          }
+        },
+        "columns_with_multiple_H_blocks": 90,
+        "columns_with_H_before_accepted_run": 66
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.1,
+      "decision_end_s": 0.9,
+      "window_start_s": 0.8,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 97,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 48,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 17,
+            "left": 16,
+            "right": 0,
+            "finite": 1,
+            "forces_min": 6,
+            "forces_max": 26
+          }
+        },
+        "columns_with_multiple_H_blocks": 86,
+        "columns_with_H_before_accepted_run": 56
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.1,
+      "decision_end_s": 1.1,
+      "window_start_s": 1.0,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 63,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 23,
+            "left": 3,
+            "right": 0,
+            "finite": 20,
+            "forces_min": 11,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 59,
+        "columns_with_H_before_accepted_run": 39
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.2,
+      "window_start_s": 0.0,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 10,
+            "finite": 30,
+            "forces_min": 49,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 94,
+        "columns_with_H_before_accepted_run": 69
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 10,
+            "finite": 30,
+            "forces_min": 49,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 94,
+        "columns_with_H_before_accepted_run": 69
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": 0.3964347499600116,
+        "speed_exp": 1.0407104932687512,
+        "beta_exp": -0.6541880181410367,
+        "sigma": 0.5903483308768249,
+        "nll": 373.75329306919303,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683715036703e-05,
+        "objective_spread_converged": 2.1941559680271894e-11
+      },
+      "cluster_sensitivity": {
+        "reps": 200,
+        "successful": 200,
+        "failed": 0,
+        "speed_percentile_95": [
+          0.799797352268981,
+          1.3243555988444373
+        ],
+        "beta_percentile_95": [
+          -0.7520251037358497,
+          -0.5435629322832184
+        ],
+        "scope": "Position-cluster resampling conditional on A2, fixed classifier and grid; not across-specimen confidence."
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": 0.33249485226379377,
+        "speed_exp": 0.8656551517085517,
+        "beta_exp": -0.5022423654001724,
+        "sigma": 0.5604333678074571,
+        "nll": 359.7761208143966,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683715036703e-05,
+        "objective_spread_converged": 3.586819730116986e-11
+      },
+      "legacy_fragmented": {
+        "columns": 378,
+        "by_speed": {
+          "0": {
+            "columns": 119,
+            "left": 1,
+            "right": 32,
+            "finite": 86,
+            "forces_min": 6,
+            "forces_max": 39
+          },
+          "1": {
+            "columns": 122,
+            "left": 0,
+            "right": 29,
+            "finite": 93,
+            "forces_min": 6,
+            "forces_max": 37
+          },
+          "2": {
+            "columns": 137,
+            "left": 0,
+            "right": 75,
+            "finite": 62,
+            "forces_min": 6,
+            "forces_max": 40
+          }
+        },
+        "columns_with_multiple_H_blocks": 82,
+        "columns_with_H_before_accepted_run": 129
+      },
+      "legacy_fragmented_fit": {
+        "success": true,
+        "intercept": 0.6553084228605548,
+        "speed_exp": 0.8135664154144517,
+        "beta_exp": -0.5484482820127163,
+        "sigma": 1.0566608865176255,
+        "nll": 680.4532126929496,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 3.410605133443673e-05,
+        "objective_spread_converged": 3.979039320256561e-12
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.3,
+      "window_start_s": 0.1,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 44,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 95,
+        "columns_with_H_before_accepted_run": 71
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 44,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 95,
+        "columns_with_H_before_accepted_run": 71
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -0.6375529619111463,
+        "speed_exp": 0.9451809276492207,
+        "beta_exp": -0.8801483543921775,
+        "sigma": 0.585444091930766,
+        "nll": 368.6502987849477,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 5.684341889072788e-06,
+        "objective_spread_converged": 1.3642420526593924e-12
+      },
+      "cluster_sensitivity": {
+        "reps": 200,
+        "successful": 200,
+        "failed": 0,
+        "speed_percentile_95": [
+          0.692523767280843,
+          1.209150013773445
+        ],
+        "beta_percentile_95": [
+          -0.9683194565221658,
+          -0.7824562597578251
+        ],
+        "scope": "Position-cluster resampling conditional on A2, fixed classifier and grid; not across-specimen confidence."
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -0.6822448747603292,
+        "speed_exp": 0.7908186152492042,
+        "beta_exp": -0.7418694526425822,
+        "sigma": 0.5585985291546686,
+        "nll": 355.7690784499928,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.7053025572555057e-05,
+        "objective_spread_converged": 1.7962520360015333e-11
+      },
+      "legacy_fragmented": {
+        "columns": 373,
+        "by_speed": {
+          "0": {
+            "columns": 119,
+            "left": 2,
+            "right": 20,
+            "finite": 97,
+            "forces_min": 6,
+            "forces_max": 39
+          },
+          "1": {
+            "columns": 122,
+            "left": 0,
+            "right": 24,
+            "finite": 98,
+            "forces_min": 6,
+            "forces_max": 37
+          },
+          "2": {
+            "columns": 132,
+            "left": 0,
+            "right": 67,
+            "finite": 65,
+            "forces_min": 6,
+            "forces_max": 39
+          }
+        },
+        "columns_with_multiple_H_blocks": 89,
+        "columns_with_H_before_accepted_run": 124
+      },
+      "legacy_fragmented_fit": {
+        "success": true,
+        "intercept": -0.34798626091485635,
+        "speed_exp": 0.8464166186905474,
+        "beta_exp": -0.8267943369534861,
+        "sigma": 0.9374842602659538,
+        "nll": 673.7576862788048,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 2.2737367540513933e-05,
+        "objective_spread_converged": 2.2737367544323206e-12
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.4,
+      "window_start_s": 0.2,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 70
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 70
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -1.4133919772602013,
+        "speed_exp": 0.9404618843749359,
+        "beta_exp": -1.088790248343896,
+        "sigma": 0.6814901337314528,
+        "nll": 383.39528885171796,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683715036703e-05,
+        "objective_spread_converged": 1.7621459846850485e-11
+      },
+      "cluster_sensitivity": {
+        "reps": 200,
+        "successful": 200,
+        "failed": 0,
+        "speed_percentile_95": [
+          0.6608449722522524,
+          1.2473311985696804
+        ],
+        "beta_percentile_95": [
+          -1.2370288368966633,
+          -0.9601867126116489
+        ],
+        "scope": "Position-cluster resampling conditional on A2, fixed classifier and grid; not across-specimen confidence."
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -1.463588075468366,
+        "speed_exp": 0.76752250869559,
+        "beta_exp": -0.9339235991231973,
+        "sigma": 0.6534608668738928,
+        "nll": 371.28183801470846,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.7053025572555057e-05,
+        "objective_spread_converged": 2.8990143619012088e-12
+      },
+      "legacy_fragmented": {
+        "columns": 370,
+        "by_speed": {
+          "0": {
+            "columns": 119,
+            "left": 1,
+            "right": 17,
+            "finite": 101,
+            "forces_min": 6,
+            "forces_max": 39
+          },
+          "1": {
+            "columns": 122,
+            "left": 0,
+            "right": 21,
+            "finite": 101,
+            "forces_min": 6,
+            "forces_max": 37
+          },
+          "2": {
+            "columns": 129,
+            "left": 0,
+            "right": 60,
+            "finite": 69,
+            "forces_min": 6,
+            "forces_max": 35
+          }
+        },
+        "columns_with_multiple_H_blocks": 102,
+        "columns_with_H_before_accepted_run": 119
+      },
+      "legacy_fragmented_fit": {
+        "success": true,
+        "intercept": -1.026019439727449,
+        "speed_exp": 0.8176967009572139,
+        "beta_exp": -0.975731908246278,
+        "sigma": 0.9120338176460977,
+        "nll": 677.2895060157334,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 0.0,
+        "objective_spread_converged": 1.1368683772161603e-12
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.5,
+      "window_start_s": 0.3,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 69
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 69
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -2.0819641578249595,
+        "speed_exp": 0.9680051331864371,
+        "beta_exp": -1.2949062070840671,
+        "sigma": 0.6619984651790549,
+        "nll": 376.4959874168885,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.136868384125445e-05,
+        "objective_spread_converged": 9.947598300641403e-12
+      },
+      "cluster_sensitivity": {
+        "reps": 200,
+        "successful": 200,
+        "failed": 0,
+        "speed_percentile_95": [
+          0.6768342852970557,
+          1.268880437937655
+        ],
+        "beta_percentile_95": [
+          -1.4125543571478048,
+          -1.1587774262163346
+        ],
+        "scope": "Position-cluster resampling conditional on A2, fixed classifier and grid; not across-specimen confidence."
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -2.131501934300802,
+        "speed_exp": 0.804720833867647,
+        "beta_exp": -1.1494660006186803,
+        "sigma": 0.6369229510422328,
+        "nll": 364.8894282426116,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.7053025572555057e-05,
+        "objective_spread_converged": 1.7109869077103212e-11
+      },
+      "legacy_fragmented": {
+        "columns": 359,
+        "by_speed": {
+          "0": {
+            "columns": 119,
+            "left": 2,
+            "right": 11,
+            "finite": 106,
+            "forces_min": 6,
+            "forces_max": 39
+          },
+          "1": {
+            "columns": 122,
+            "left": 1,
+            "right": 17,
+            "finite": 104,
+            "forces_min": 6,
+            "forces_max": 37
+          },
+          "2": {
+            "columns": 118,
+            "left": 0,
+            "right": 50,
+            "finite": 68,
+            "forces_min": 6,
+            "forces_max": 33
+          }
+        },
+        "columns_with_multiple_H_blocks": 106,
+        "columns_with_H_before_accepted_run": 113
+      },
+      "legacy_fragmented_fit": {
+        "success": true,
+        "intercept": -1.401274754011559,
+        "speed_exp": 0.9192650908436734,
+        "beta_exp": -1.1280824799998586,
+        "sigma": 0.7924145639708459,
+        "nll": 643.1446520261015,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683778145576e-05,
+        "objective_spread_converged": 9.561063052387908e-11
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.6,
+      "window_start_s": 0.4,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 101,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 21,
+            "left": 3,
+            "right": 0,
+            "finite": 18,
+            "forces_min": 10,
+            "forces_max": 42
+          }
+        },
+        "columns_with_multiple_H_blocks": 88,
+        "columns_with_H_before_accepted_run": 60
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.8,
+      "window_start_s": 0.6,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 100,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 3,
+            "right": 0,
+            "finite": 37,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 49,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 20,
+            "left": 12,
+            "right": 0,
+            "finite": 8,
+            "forces_min": 6,
+            "forces_max": 34
+          }
+        },
+        "columns_with_multiple_H_blocks": 88,
+        "columns_with_H_before_accepted_run": 59
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 1.0,
+      "window_start_s": 0.8,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 80,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 46,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 75,
+        "columns_with_H_before_accepted_run": 53
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 1.2,
+      "window_start_s": 1.0,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 63,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 4,
+            "right": 0,
+            "finite": 36,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 23,
+            "left": 3,
+            "right": 0,
+            "finite": 20,
+            "forces_min": 10,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 59,
+        "columns_with_H_before_accepted_run": 42
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.4,
+      "decision_end_s": 0.4,
+      "window_start_s": 0.0,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 46,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 93,
+        "columns_with_H_before_accepted_run": 69
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 46,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 93,
+        "columns_with_H_before_accepted_run": 69
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -0.6535490580447942,
+        "speed_exp": 1.0426151178012497,
+        "beta_exp": -0.9441533672316598,
+        "sigma": 0.5880481043125588,
+        "nll": 378.34275496276234,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 2.842170928759176e-05,
+        "objective_spread_converged": 5.7411853049416095e-12
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -0.6960639864527767,
+        "speed_exp": 0.8976766344431271,
+        "beta_exp": -0.8144946835137009,
+        "sigma": 0.5662613982227231,
+        "nll": 366.81624339556106,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.7053025572555057e-05,
+        "objective_spread_converged": 6.480149750132114e-12
+      }
+    },
+    {
+      "window_s": 0.4,
+      "decision_end_s": 0.5,
+      "window_start_s": 0.1,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 41,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 74
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 41,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 74
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -1.183786831292219,
+        "speed_exp": 1.0269096109805962,
+        "beta_exp": -1.071327190789172,
+        "sigma": 0.5628559575652968,
+        "nll": 372.82975592569414,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 5.684341857518352e-06,
+        "objective_spread_converged": 1.8189894035458565e-12
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -1.2274096120216136,
+        "speed_exp": 0.8803771463302095,
+        "beta_exp": -0.940395710958316,
+        "sigma": 0.5379515601200704,
+        "nll": 360.112957262114,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 3.4106051145110115e-05,
+        "objective_spread_converged": 3.2230218494078144e-11
+      }
+    },
+    {
+      "window_s": 0.4,
+      "decision_end_s": 0.6,
+      "window_start_s": 0.2,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 101,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 21,
+            "left": 2,
+            "right": 0,
+            "finite": 19,
+            "forces_min": 10,
+            "forces_max": 42
+          }
+        },
+        "columns_with_multiple_H_blocks": 88,
+        "columns_with_H_before_accepted_run": 66
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.4,
+      "decision_end_s": 0.7,
+      "window_start_s": 0.3,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 101,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 3,
+            "right": 0,
+            "finite": 37,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 21,
+            "left": 3,
+            "right": 0,
+            "finite": 18,
+            "forces_min": 7,
+            "forces_max": 38
+          }
+        },
+        "columns_with_multiple_H_blocks": 87,
+        "columns_with_H_before_accepted_run": 62
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.4,
+      "decision_end_s": 0.8,
+      "window_start_s": 0.4,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 100,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 20,
+            "left": 10,
+            "right": 0,
+            "finite": 10,
+            "forces_min": 6,
+            "forces_max": 34
+          }
+        },
+        "columns_with_multiple_H_blocks": 88,
+        "columns_with_H_before_accepted_run": 59
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.4,
+      "decision_end_s": 1.0,
+      "window_start_s": 0.6,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 80,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 48,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 74,
+        "columns_with_H_before_accepted_run": 56
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.4,
+      "decision_end_s": 1.2,
+      "window_start_s": 0.8,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 63,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 4,
+            "right": 0,
+            "finite": 36,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 23,
+            "left": 3,
+            "right": 0,
+            "finite": 20,
+            "forces_min": 10,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 59,
+        "columns_with_H_before_accepted_run": 41
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.4,
+      "decision_end_s": 1.4,
+      "window_start_s": 1.0,
+      "min_periodicity": 0.8,
+      "force_run": 2,
+      "all_available": {
+        "columns": 63,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 4,
+            "right": 0,
+            "finite": 36,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 23,
+            "left": 4,
+            "right": 0,
+            "finite": 19,
+            "forces_min": 6,
+            "forces_max": 49
+          }
+        },
+        "columns_with_multiple_H_blocks": 59,
+        "columns_with_H_before_accepted_run": 38
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.2,
+      "window_start_s": 0.0,
+      "min_periodicity": 0.7,
+      "force_run": 2,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 10,
+            "finite": 30,
+            "forces_min": 49,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 92,
+        "columns_with_H_before_accepted_run": 69
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 10,
+            "finite": 30,
+            "forces_min": 49,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 92,
+        "columns_with_H_before_accepted_run": 69
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": 0.3964347499600116,
+        "speed_exp": 1.0407104932687512,
+        "beta_exp": -0.6541880181410367,
+        "sigma": 0.5903483308768249,
+        "nll": 373.75329306919303,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683715036703e-05,
+        "objective_spread_converged": 2.1941559680271894e-11
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": 0.33249485226379377,
+        "speed_exp": 0.8656551517085517,
+        "beta_exp": -0.5022423654001724,
+        "sigma": 0.5604333678074571,
+        "nll": 359.7761208143966,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683715036703e-05,
+        "objective_spread_converged": 3.586819730116986e-11
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.3,
+      "window_start_s": 0.1,
+      "min_periodicity": 0.7,
+      "force_run": 2,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 44,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 95,
+        "columns_with_H_before_accepted_run": 71
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 44,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 95,
+        "columns_with_H_before_accepted_run": 71
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -0.6375529619111463,
+        "speed_exp": 0.9451809276492207,
+        "beta_exp": -0.8801483543921775,
+        "sigma": 0.585444091930766,
+        "nll": 368.6502987849477,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 5.684341889072788e-06,
+        "objective_spread_converged": 1.3642420526593924e-12
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -0.6822448747603292,
+        "speed_exp": 0.7908186152492042,
+        "beta_exp": -0.7418694526425822,
+        "sigma": 0.5585985291546686,
+        "nll": 355.7690784499928,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.7053025572555057e-05,
+        "objective_spread_converged": 1.7962520360015333e-11
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.4,
+      "window_start_s": 0.2,
+      "min_periodicity": 0.7,
+      "force_run": 2,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 70
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 70
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -1.4133919772602013,
+        "speed_exp": 0.9404618843749359,
+        "beta_exp": -1.088790248343896,
+        "sigma": 0.6814901337314528,
+        "nll": 383.39528885171796,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683715036703e-05,
+        "objective_spread_converged": 1.7621459846850485e-11
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -1.463588075468366,
+        "speed_exp": 0.76752250869559,
+        "beta_exp": -0.9339235991231973,
+        "sigma": 0.6534608668738928,
+        "nll": 371.28183801470846,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.7053025572555057e-05,
+        "objective_spread_converged": 2.8990143619012088e-12
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.5,
+      "window_start_s": 0.3,
+      "min_periodicity": 0.7,
+      "force_run": 2,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 69
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 69
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -2.0819641578249595,
+        "speed_exp": 0.9680051331864371,
+        "beta_exp": -1.2949062070840671,
+        "sigma": 0.6619984651790549,
+        "nll": 376.4959874168885,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.136868384125445e-05,
+        "objective_spread_converged": 9.947598300641403e-12
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -2.131501934300802,
+        "speed_exp": 0.804720833867647,
+        "beta_exp": -1.1494660006186803,
+        "sigma": 0.6369229510422328,
+        "nll": 364.8894282426116,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.7053025572555057e-05,
+        "objective_spread_converged": 1.7109869077103212e-11
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.6,
+      "window_start_s": 0.4,
+      "min_periodicity": 0.7,
+      "force_run": 2,
+      "all_available": {
+        "columns": 101,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 21,
+            "left": 3,
+            "right": 0,
+            "finite": 18,
+            "forces_min": 10,
+            "forces_max": 42
+          }
+        },
+        "columns_with_multiple_H_blocks": 88,
+        "columns_with_H_before_accepted_run": 60
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.8,
+      "window_start_s": 0.6,
+      "min_periodicity": 0.7,
+      "force_run": 2,
+      "all_available": {
+        "columns": 100,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 3,
+            "right": 0,
+            "finite": 37,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 49,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 20,
+            "left": 12,
+            "right": 0,
+            "finite": 8,
+            "forces_min": 6,
+            "forces_max": 34
+          }
+        },
+        "columns_with_multiple_H_blocks": 88,
+        "columns_with_H_before_accepted_run": 59
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 1.0,
+      "window_start_s": 0.8,
+      "min_periodicity": 0.7,
+      "force_run": 2,
+      "all_available": {
+        "columns": 80,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 46,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 75,
+        "columns_with_H_before_accepted_run": 53
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 1.2,
+      "window_start_s": 1.0,
+      "min_periodicity": 0.7,
+      "force_run": 2,
+      "all_available": {
+        "columns": 63,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 4,
+            "right": 0,
+            "finite": 36,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 23,
+            "left": 3,
+            "right": 0,
+            "finite": 20,
+            "forces_min": 10,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 59,
+        "columns_with_H_before_accepted_run": 42
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.2,
+      "window_start_s": 0.0,
+      "min_periodicity": 0.9,
+      "force_run": 2,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 12,
+            "finite": 26,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 10,
+            "finite": 30,
+            "forces_min": 49,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 84,
+        "columns_with_H_before_accepted_run": 69
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 12,
+            "finite": 26,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 10,
+            "finite": 30,
+            "forces_min": 49,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 84,
+        "columns_with_H_before_accepted_run": 69
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": 0.5129881568926946,
+        "speed_exp": 0.5527277994077303,
+        "beta_exp": -0.30509776977181974,
+        "sigma": 1.115983380922635,
+        "nll": 411.3894560563082,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 3.410605133443673e-05,
+        "objective_spread_converged": 5.60476109967567e-11
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": 0.3559804598308195,
+        "speed_exp": 1.109190083970692,
+        "beta_exp": -0.6710014137547672,
+        "sigma": 0.5353948746983784,
+        "nll": 316.2732036051355,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683778145576e-05,
+        "objective_spread_converged": 2.0179413695586845e-11
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.3,
+      "window_start_s": 0.1,
+      "min_periodicity": 0.9,
+      "force_run": 2,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 1,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 44,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 92,
+        "columns_with_H_before_accepted_run": 70
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 1,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 44,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 92,
+        "columns_with_H_before_accepted_run": 70
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -0.588039111793859,
+        "speed_exp": 0.8695110014623153,
+        "beta_exp": -0.8149033052930259,
+        "sigma": 0.6853535229412222,
+        "nll": 384.6148845961814,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683715036703e-05,
+        "objective_spread_converged": 6.0822458181064576e-12
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -0.6963939988171663,
+        "speed_exp": 0.7604333735636769,
+        "beta_exp": -0.7253155186278943,
+        "sigma": 0.5771368191630072,
+        "nll": 356.08965818098073,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683715036703e-05,
+        "objective_spread_converged": 1.4210854715202004e-12
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.4,
+      "window_start_s": 0.2,
+      "min_periodicity": 0.9,
+      "force_run": 2,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 94,
+        "columns_with_H_before_accepted_run": 69
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 94,
+        "columns_with_H_before_accepted_run": 69
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -1.3899507351961256,
+        "speed_exp": 0.9089052360560481,
+        "beta_exp": -1.059488870457664,
+        "sigma": 0.7000167828791514,
+        "nll": 386.68635070820096,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683778145576e-05,
+        "objective_spread_converged": 2.4215296434704214e-11
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -1.442255888651824,
+        "speed_exp": 0.7267960870935563,
+        "beta_exp": -0.8962152261154513,
+        "sigma": 0.6689730890341885,
+        "nll": 374.07369555192133,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 3.4106051145110115e-05,
+        "objective_spread_converged": 8.702727427589707e-11
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.5,
+      "window_start_s": 0.3,
+      "min_periodicity": 0.9,
+      "force_run": 2,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 67
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 9,
+            "finite": 31,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 67
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -2.0370538303180443,
+        "speed_exp": 0.9121314674816903,
+        "beta_exp": -1.2419177773581755,
+        "sigma": 0.6981662404926026,
+        "nll": 382.30113388702796,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.136868384125445e-05,
+        "objective_spread_converged": 8.697043085703626e-11
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -2.0905653442833976,
+        "speed_exp": 0.7319688584804787,
+        "beta_exp": -1.0810370334583261,
+        "sigma": 0.6678855180980307,
+        "nll": 369.8268198594457,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 2.27373676825089e-05,
+        "objective_spread_converged": 7.241851562866941e-11
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.6,
+      "window_start_s": 0.4,
+      "min_periodicity": 0.9,
+      "force_run": 2,
+      "all_available": {
+        "columns": 101,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 21,
+            "left": 3,
+            "right": 0,
+            "finite": 18,
+            "forces_min": 10,
+            "forces_max": 42
+          }
+        },
+        "columns_with_multiple_H_blocks": 88,
+        "columns_with_H_before_accepted_run": 62
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.8,
+      "window_start_s": 0.6,
+      "min_periodicity": 0.9,
+      "force_run": 2,
+      "all_available": {
+        "columns": 100,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 3,
+            "right": 0,
+            "finite": 37,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 49,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 20,
+            "left": 12,
+            "right": 0,
+            "finite": 8,
+            "forces_min": 6,
+            "forces_max": 34
+          }
+        },
+        "columns_with_multiple_H_blocks": 86,
+        "columns_with_H_before_accepted_run": 54
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 1.0,
+      "window_start_s": 0.8,
+      "min_periodicity": 0.9,
+      "force_run": 2,
+      "all_available": {
+        "columns": 80,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 46,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 75,
+        "columns_with_H_before_accepted_run": 51
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 1.2,
+      "window_start_s": 1.0,
+      "min_periodicity": 0.9,
+      "force_run": 2,
+      "all_available": {
+        "columns": 63,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 23,
+            "left": 3,
+            "right": 0,
+            "finite": 20,
+            "forces_min": 10,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 59,
+        "columns_with_H_before_accepted_run": 40
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.2,
+      "window_start_s": 0.0,
+      "min_periodicity": 0.8,
+      "force_run": 1,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 8,
+            "finite": 32,
+            "forces_min": 49,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 94,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 8,
+            "finite": 32,
+            "forces_min": 49,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 94,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -2.1337585658715135,
+        "speed_exp": 0.7612262622292905,
+        "beta_exp": -1.1658545334047765,
+        "sigma": 0.9767591066670868,
+        "nll": 440.33014387084353,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 0.00010800249649191727,
+        "objective_spread_converged": 7.02016222930979e-11
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -2.17378448635593,
+        "speed_exp": 0.5481673754662115,
+        "beta_exp": -0.9674983287022795,
+        "sigma": 0.9430458858349997,
+        "nll": 429.86934209805713,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 9.094947016205573e-05,
+        "objective_spread_converged": 1.9099388737231493e-11
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.3,
+      "window_start_s": 0.1,
+      "min_periodicity": 0.8,
+      "force_run": 1,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 3,
+            "right": 0,
+            "finite": 37,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 3,
+            "right": 0,
+            "finite": 37,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 1,
+            "right": 8,
+            "finite": 31,
+            "forces_min": 44,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 95,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 3,
+            "right": 0,
+            "finite": 37,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 3,
+            "right": 0,
+            "finite": 37,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 1,
+            "right": 8,
+            "finite": 31,
+            "forces_min": 44,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 95,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -2.8812136805483433,
+        "speed_exp": 0.8525715833218647,
+        "beta_exp": -1.4272048126868082,
+        "sigma": 1.1544907212593034,
+        "nll": 434.2214120678104,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 3.410605133443673e-05,
+        "objective_spread_converged": 4.524736141320318e-11
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -2.9212103888099756,
+        "speed_exp": 0.6215722728908571,
+        "beta_exp": -1.2114302099167737,
+        "sigma": 1.122829725587481,
+        "nll": 425.15132472153414,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 2.27373676825089e-05,
+        "objective_spread_converged": 3.490185918053612e-11
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.4,
+      "window_start_s": 0.2,
+      "min_periodicity": 0.8,
+      "force_run": 1,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 8,
+            "finite": 32,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 8,
+            "finite": 32,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -3.0103254194101403,
+        "speed_exp": 0.8703468514277534,
+        "beta_exp": -1.4679168559361575,
+        "sigma": 0.7587519363347729,
+        "nll": 405.14675046403966,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 2.27373676825089e-05,
+        "objective_spread_converged": 8.86757334228605e-12
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -3.045346820298864,
+        "speed_exp": 0.703011070767662,
+        "beta_exp": -1.3132529781184077,
+        "sigma": 0.7312973505451699,
+        "nll": 394.3581784677267,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 2.27373676825089e-05,
+        "objective_spread_converged": 1.645048541831784e-10
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.5,
+      "window_start_s": 0.3,
+      "min_periodicity": 0.8,
+      "force_run": 1,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 8,
+            "finite": 32,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 8,
+            "finite": 32,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -3.4695181279109306,
+        "speed_exp": 0.9220934393221994,
+        "beta_exp": -1.6180307178409654,
+        "sigma": 0.7442480719813522,
+        "nll": 396.62533480229035,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.136868384125445e-05,
+        "objective_spread_converged": 1.8758328224066645e-11
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -3.504665482355159,
+        "speed_exp": 0.7576660387999972,
+        "beta_exp": -1.4664481324144476,
+        "sigma": 0.7162641723993466,
+        "nll": 385.791027565076,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.136868384125445e-05,
+        "objective_spread_converged": 1.3358203432289883e-10
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.6,
+      "window_start_s": 0.4,
+      "min_periodicity": 0.8,
+      "force_run": 1,
+      "all_available": {
+        "columns": 101,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 3,
+            "right": 0,
+            "finite": 37,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 3,
+            "right": 0,
+            "finite": 37,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 21,
+            "left": 4,
+            "right": 0,
+            "finite": 17,
+            "forces_min": 10,
+            "forces_max": 42
+          }
+        },
+        "columns_with_multiple_H_blocks": 88,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.8,
+      "window_start_s": 0.6,
+      "min_periodicity": 0.8,
+      "force_run": 1,
+      "all_available": {
+        "columns": 100,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 5,
+            "right": 0,
+            "finite": 35,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 3,
+            "right": 0,
+            "finite": 37,
+            "forces_min": 49,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 20,
+            "left": 14,
+            "right": 0,
+            "finite": 6,
+            "forces_min": 6,
+            "forces_max": 34
+          }
+        },
+        "columns_with_multiple_H_blocks": 88,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 1.0,
+      "window_start_s": 0.8,
+      "min_periodicity": 0.8,
+      "force_run": 1,
+      "all_available": {
+        "columns": 80,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 4,
+            "right": 0,
+            "finite": 36,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 2,
+            "right": 0,
+            "finite": 38,
+            "forces_min": 46,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 75,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 1.2,
+      "window_start_s": 1.0,
+      "min_periodicity": 0.8,
+      "force_run": 1,
+      "all_available": {
+        "columns": 63,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 6,
+            "right": 0,
+            "finite": 34,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 23,
+            "left": 7,
+            "right": 0,
+            "finite": 16,
+            "forces_min": 10,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 59,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.2,
+      "window_start_s": 0.0,
+      "min_periodicity": 0.8,
+      "force_run": 3,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 12,
+            "finite": 28,
+            "forces_min": 49,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 94,
+        "columns_with_H_before_accepted_run": 81
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 12,
+            "finite": 28,
+            "forces_min": 49,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 94,
+        "columns_with_H_before_accepted_run": 81
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": 0.33820093300576415,
+        "speed_exp": 0.9443849719606745,
+        "beta_exp": -0.6440639742719387,
+        "sigma": 0.5569473079221313,
+        "nll": 363.80741704611455,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683715036703e-05,
+        "objective_spread_converged": 4.843059286940843e-11
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": 0.1591178269970689,
+        "speed_exp": 0.7292622629104201,
+        "beta_exp": -0.4934688550985756,
+        "sigma": 0.5119771805878406,
+        "nll": 344.2679787853883,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 2.273736755629115e-05,
+        "objective_spread_converged": 4.036451173305977e-10
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.3,
+      "window_start_s": 0.1,
+      "min_periodicity": 0.8,
+      "force_run": 3,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 11,
+            "finite": 29,
+            "forces_min": 44,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 95,
+        "columns_with_H_before_accepted_run": 82
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 11,
+            "finite": 29,
+            "forces_min": 44,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 95,
+        "columns_with_H_before_accepted_run": 82
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -0.148731111127453,
+        "speed_exp": 0.9918641688227045,
+        "beta_exp": -0.7906415705922663,
+        "sigma": 0.5410502692363706,
+        "nll": 358.3438763846792,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683715036703e-05,
+        "objective_spread_converged": 3.410605131648481e-13
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -0.23312078177094925,
+        "speed_exp": 0.8077618460872463,
+        "beta_exp": -0.6368619195799713,
+        "sigma": 0.508357025923586,
+        "nll": 342.20598637343437,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.1368683715036703e-05,
+        "objective_spread_converged": 3.694822225952521e-12
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.4,
+      "window_start_s": 0.2,
+      "min_periodicity": 0.8,
+      "force_run": 3,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 10,
+            "finite": 30,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 86
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 10,
+            "finite": 30,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 86
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -0.5243721652623377,
+        "speed_exp": 1.0252929908008643,
+        "beta_exp": -0.9012675678419677,
+        "sigma": 0.5550482237154182,
+        "nll": 358.1297525475572,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 5.684341889072788e-06,
+        "objective_spread_converged": 7.770495358272456e-11
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -0.5911578272522652,
+        "speed_exp": 0.8593427890869025,
+        "beta_exp": -0.7593906967178355,
+        "sigma": 0.5257084743535374,
+        "nll": 343.7442143241238,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 5.684341857518352e-06,
+        "objective_spread_converged": 5.275069270282984e-10
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.5,
+      "window_start_s": 0.3,
+      "min_periodicity": 0.8,
+      "force_run": 3,
+      "all_available": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 10,
+            "finite": 30,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 89
+      },
+      "complete_common": {
+        "columns": 120,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 40,
+            "left": 0,
+            "right": 10,
+            "finite": 30,
+            "forces_min": 39,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 97,
+        "columns_with_H_before_accepted_run": 89
+      },
+      "fit_common": {
+        "success": true,
+        "intercept": -1.2100803643021663,
+        "speed_exp": 1.0010624389290326,
+        "beta_exp": -1.0741780049251186,
+        "sigma": 0.5603737539120572,
+        "nll": 356.3982453565986,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 5.684341920627225e-06,
+        "objective_spread_converged": 8.242295734817162e-11
+      },
+      "fit_detected_only": {
+        "success": true,
+        "intercept": -1.2812660530322306,
+        "speed_exp": 0.8286454194952572,
+        "beta_exp": -0.9274487070284548,
+        "sigma": 0.5275735632984289,
+        "nll": 341.2121292309726,
+        "sigma_bound_hit": false,
+        "converged_starts": 3,
+        "starts": 3,
+        "gradient_max": 1.7053025572555057e-05,
+        "objective_spread_converged": 5.267679625831079e-10
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.6,
+      "window_start_s": 0.4,
+      "min_periodicity": 0.8,
+      "force_run": 3,
+      "all_available": {
+        "columns": 101,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 21,
+            "left": 1,
+            "right": 0,
+            "finite": 20,
+            "forces_min": 10,
+            "forces_max": 42
+          }
+        },
+        "columns_with_multiple_H_blocks": 88,
+        "columns_with_H_before_accepted_run": 83
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 0.8,
+      "window_start_s": 0.6,
+      "min_periodicity": 0.8,
+      "force_run": 3,
+      "all_available": {
+        "columns": 100,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 49,
+            "forces_max": 50
+          },
+          "2": {
+            "columns": 20,
+            "left": 12,
+            "right": 0,
+            "finite": 8,
+            "forces_min": 6,
+            "forces_max": 34
+          }
+        },
+        "columns_with_multiple_H_blocks": 88,
+        "columns_with_H_before_accepted_run": 73
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 1.0,
+      "window_start_s": 0.8,
+      "min_periodicity": 0.8,
+      "force_run": 3,
+      "all_available": {
+        "columns": 80,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 40,
+            "left": 0,
+            "right": 0,
+            "finite": 40,
+            "forces_min": 46,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 75,
+        "columns_with_H_before_accepted_run": 67
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    },
+    {
+      "window_s": 0.2,
+      "decision_end_s": 1.2,
+      "window_start_s": 1.0,
+      "min_periodicity": 0.8,
+      "force_run": 3,
+      "all_available": {
+        "columns": 63,
+        "by_speed": {
+          "0": {
+            "columns": 40,
+            "left": 1,
+            "right": 0,
+            "finite": 39,
+            "forces_min": 50,
+            "forces_max": 50
+          },
+          "1": {
+            "columns": 23,
+            "left": 3,
+            "right": 0,
+            "finite": 20,
+            "forces_min": 10,
+            "forces_max": 50
+          }
+        },
+        "columns_with_multiple_H_blocks": 59,
+        "columns_with_H_before_accepted_run": 51
+      },
+      "complete_common": {
+        "columns": 0,
+        "by_speed": {},
+        "columns_with_multiple_H_blocks": 0,
+        "columns_with_H_before_accepted_run": 0
+      },
+      "fit_common": {
+        "success": false,
+        "reason": "three speeds with >=8 complete shared positions unavailable"
+      }
+    }
+  ]
+}

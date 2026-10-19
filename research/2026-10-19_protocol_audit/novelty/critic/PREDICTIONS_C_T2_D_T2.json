@@ -1,0 +1,100 @@
+{
+ "created": "2026-10-19T00:02:52+09:00",
+ "statistic": "final/tension_pairs.py level (offset from A1+A2 P-free law without Z, t=0.2 s, K=2); prediction = level(X_T2) - level(X1)",
+ "predictions": {
+  "C1->C_T2": {
+   "upper": {
+    "Z (Schelleng slope fixed: upper 1, lower 2)": {
+     "delta": 0.058,
+     "slope": 1.0,
+     "loo_rmse": 0.097
+    },
+    "log EI (fitted slope)": {
+     "delta": 0.064,
+     "slope": 0.274,
+     "loo_rmse": 0.127
+    },
+    "high-mode damping log zeta 7-11 (fitted)": {
+     "delta": 0.046,
+     "slope": 0.355,
+     "loo_rmse": 0.13
+    },
+    "low-mode damping log zeta 1-5 (fitted)": {
+     "delta": 0.054,
+     "slope": 0.195,
+     "loo_rmse": 0.185
+    }
+   },
+   "lower": {
+    "Z (Schelleng slope fixed: upper 1, lower 2)": {
+     "delta": 0.116,
+     "slope": 2.0,
+     "loo_rmse": 0.281
+    },
+    "log EI (fitted slope)": {
+     "delta": -0.007,
+     "slope": -0.03,
+     "loo_rmse": 0.371
+    },
+    "high-mode damping log zeta 7-11 (fitted)": {
+     "delta": -0.02,
+     "slope": -0.159,
+     "loo_rmse": 0.405
+    },
+    "low-mode damping log zeta 1-5 (fitted)": {
+     "delta": -0.198,
+     "slope": -0.707,
+     "loo_rmse": 0.26
+    }
+   }
+  },
+  "D1->D_T2": {
+   "upper": {
+    "Z (Schelleng slope fixed: upper 1, lower 2)": {
+     "delta": 0.145,
+     "slope": 1.0,
+     "loo_rmse": 0.097
+    },
+    "log EI (fitted slope)": {
+     "delta": 0.026,
+     "slope": 0.274,
+     "loo_rmse": 0.127
+    },
+    "high-mode damping log zeta 7-11 (fitted)": {
+     "delta": -0.117,
+     "slope": 0.355,
+     "loo_rmse": 0.13
+    },
+    "low-mode damping log zeta 1-5 (fitted)": {
+     "delta": 0.019,
+     "slope": 0.195,
+     "loo_rmse": 0.185
+    }
+   },
+   "lower": {
+    "Z (Schelleng slope fixed: upper 1, lower 2)": {
+     "delta": 0.29,
+     "slope": 2.0,
+     "loo_rmse": 0.281
+    },
+    "log EI (fitted slope)": {
+     "delta": -0.003,
+     "slope": -0.03,
+     "loo_rmse": 0.371
+    },
+    "high-mode damping log zeta 7-11 (fitted)": {
+     "delta": 0.052,
+     "slope": -0.159,
+     "loo_rmse": 0.405
+    },
+    "low-mode damping log zeta 1-5 (fitted)": {
+     "delta": -0.07,
+     "slope": -0.707,
+     "loo_rmse": 0.26
+    }
+   }
+  }
+ },
+ "decision_rule": "Upper boundary (primary): for each pair compute observed delta. A hypothesis is SUPPORTED for a pair if |obs - pred| <= 0.07 (approx. 2x the largest same-type between-sample/repeat upper difference seen so far, 0.009, plus cross-session allowance) and REJECTED if |obs - pred| > 0.15. The decisive pair is D: Z and EI predict a RISE, high-mode damping predicts a FALL. Lower boundary: report only, no decision (same-type repeat yardstick 0.18-0.23 log).",
+ "note": "Damping values are digitized from a raster figure (POMA Fig.1, +-3 px ~ +-4 % in zeta); C T2 lacks modes 7,10 and D T2 lacks mode 11 in the figure, so the 7-11 averages use the available modes. Same-type replicate controls to score with the same statistic once processed: A3, A4 (expect upper within +-0.03 of 0), D2 (within +-0.03 of D1 +0.172), B_T2 sample2 (within +-0.03 of +0.245)."
+}

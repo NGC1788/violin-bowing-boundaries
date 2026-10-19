@@ -1,0 +1,5 @@
+wrote v3 ac30d1179975101f53f7fa3fd85179361110c28242655a4e806b0d4ea895a7ac 2026-10-19T10:39:15.836210+09:00 | between-diagram SD 0.228
+2024-04-22_TypeA_sample3 {'S1_strict': 0.0, 'T1k_break': 0.036, 'T1k_peak': 0.111, 'T1mu': 0.047, 'T2km_break': 0.033, 'E3_free_Z': 0.0} empirical -0.317 [-0.69  0.06]
+2024-04-24_TypeA_sample4 {'S1_strict': 0.0, 'T1k_break': 0.036, 'T1k_peak': 0.111, 'T1mu': 0.047, 'T2km_break': 0.033, 'E3_free_Z': 0.0} empirical -0.317 [-0.69  0.06]
+2024-04-26_TypeD_sample2 {'S1_strict': 0.0, 'T1k_break': 0.038, 'T1k_peak': 0.118, 'T1mu': 0.05, 'T2km_break': 0.036, 'E3_free_Z': 0.0} empirical -0.317 [-0.69  0.06]
+2024-07-03_TypeB_T2_sample2 {'S1_strict': 0.0, 'T1k_break': 0.033, 'T1k_peak': 0.101, 'T1mu': 0.043, 'T2km_break': 0.03, 'E3_free_Z': -0.0} empirical -0.317 [-0.69  0.06]

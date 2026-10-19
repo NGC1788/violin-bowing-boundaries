@@ -1,0 +1,104 @@
+
+=== K=2 t=0.2  (B=4000; columns resampled by beta index within specimen)
+  [lower] point: P-Sch 0.525 [0.488,0.568], P-Beigi 0.323 [0.290,0.376], P-free 0.322 [0.293,0.373], D-logit 0.310 [0.274,0.349], D-gbm 0.297 [0.259,0.344], Triv-nn 0.292 [0.249,0.339], Triv-5 0.265 [0.242,0.315]
+   D-gbm    - P-free  : -0.025  CI95 cols [-0.070,+0.012] P(<0) 0.913 | two-level CI [-0.107,+0.027] P(<0) 0.810
+   D-gbm    - P-Beigi : -0.026  CI95 cols [-0.075,+0.012] P(<0) 0.913 | two-level CI [-0.102,+0.025] P(<0) 0.835
+   P-free   - P-Beigi : -0.001  CI95 cols [-0.033,+0.030] P(<0) 0.558 | two-level CI [-0.034,+0.032] P(<0) 0.560
+   D-logit  - P-free  : -0.012  CI95 cols [-0.055,+0.021] P(<0) 0.797 | two-level CI [-0.099,+0.043] P(<0) 0.667
+   P-Sch    - P-free  : +0.203  CI95 cols [+0.138,+0.257] P(<0) 0.000 | two-level CI [+0.047,+0.399] P(<0) 0.003
+   P-Sch    - P-Beigi : +0.202  CI95 cols [+0.136,+0.257] P(<0) 0.000 | two-level CI [+0.037,+0.398] P(<0) 0.004
+   P-Sch    - D-gbm   : +0.228  CI95 cols [+0.169,+0.284] P(<0) 0.000 | two-level CI [+0.055,+0.472] P(<0) 0.002
+   Triv-5   - P-free  : -0.056  CI95 cols [-0.094,-0.014] P(<0) 0.997 | two-level CI [-0.124,-0.006] P(<0) 0.988
+   Triv-5   - D-gbm   : -0.031  CI95 cols [-0.055,+0.005] P(<0) 0.947 | two-level CI [-0.063,+0.011] P(<0) 0.904
+   Triv-nn  - D-gbm   : -0.005  CI95 cols [-0.041,+0.028] P(<0) 0.652 | two-level CI [-0.041,+0.031] P(<0) 0.644
+   Triv-5   - Triv-nn : -0.026  CI95 cols [-0.050,+0.013] P(<0) 0.856 | two-level CI [-0.051,+0.014] P(<0) 0.853
+  [upper] point: P-Sch 0.254 [0.230,0.280], P-Beigi 0.254 [0.230,0.280], P-free 0.202 [0.181,0.228], D-logit 0.356 [0.309,0.390], D-gbm 0.180 [0.155,0.210], Triv-nn 0.159 [0.137,0.186], Triv-5 0.176 [0.148,0.204]
+   D-gbm    - P-free  : -0.022  CI95 cols [-0.044,+0.001] P(<0) 0.966 | two-level CI [-0.058,+0.023] P(<0) 0.784
+   D-gbm    - P-Beigi : -0.075  CI95 cols [-0.106,-0.037] P(<0) 1.000 | two-level CI [-0.137,+0.011] P(<0) 0.948
+   P-free   - P-Beigi : -0.053  CI95 cols [-0.080,-0.020] P(<0) 1.000 | two-level CI [-0.092,+0.008] P(<0) 0.956
+   D-logit  - P-free  : +0.154  CI95 cols [+0.104,+0.191] P(<0) 0.000 | two-level CI [+0.092,+0.210] P(<0) 0.000
+   P-Sch    - P-free  : +0.053  CI95 cols [+0.020,+0.080] P(<0) 0.001 | two-level CI [-0.008,+0.092] P(<0) 0.044
+   P-Sch    - P-Beigi : +0.000  CI95 cols [+0.000,+0.000] P(<0) 0.000 | two-level CI [+0.000,+0.000] P(<0) 0.000
+   P-Sch    - D-gbm   : +0.075  CI95 cols [+0.037,+0.106] P(<0) 0.000 | two-level CI [-0.011,+0.137] P(<0) 0.052
+   Triv-5   - P-free  : -0.026  CI95 cols [-0.051,-0.004] P(<0) 0.991 | two-level CI [-0.054,+0.003] P(<0) 0.967
+   Triv-5   - D-gbm   : -0.004  CI95 cols [-0.031,+0.018] P(<0) 0.669 | two-level CI [-0.046,+0.028] P(<0) 0.628
+   Triv-nn  - D-gbm   : -0.021  CI95 cols [-0.047,+0.002] P(<0) 0.962 | two-level CI [-0.057,+0.009] P(<0) 0.909
+   Triv-5   - Triv-nn : +0.017  CI95 cols [-0.005,+0.036] P(<0) 0.069 | two-level CI [-0.007,+0.037] P(<0) 0.092
+
+=== K=2 t=0.0  (B=4000; columns resampled by beta index within specimen)
+  [lower] point: P-Sch 0.704 [0.662,0.743], P-Beigi 0.353 [0.315,0.406], P-free 0.392 [0.356,0.436], D-logit 0.360 [0.318,0.419], D-gbm 0.338 [0.304,0.381], Triv-nn 0.299 [0.265,0.352], Triv-5 0.315 [0.278,0.360]
+   D-gbm    - P-free  : -0.053  CI95 cols [-0.095,-0.012] P(<0) 0.993 | two-level CI [-0.122,+0.039] P(<0) 0.882
+   D-gbm    - P-Beigi : -0.015  CI95 cols [-0.065,+0.034] P(<0) 0.742 | two-level CI [-0.188,+0.098] P(<0) 0.600
+   P-free   - P-Beigi : +0.038  CI95 cols [-0.004,+0.078] P(<0) 0.036 | two-level CI [-0.097,+0.146] P(<0) 0.333
+   D-logit  - P-free  : -0.031  CI95 cols [-0.071,+0.018] P(<0) 0.890 | two-level CI [-0.095,+0.060] P(<0) 0.744
+   P-Sch    - P-free  : +0.313  CI95 cols [+0.250,+0.363] P(<0) 0.000 | two-level CI [+0.125,+0.534] P(<0) 0.000
+   P-Sch    - P-Beigi : +0.351  CI95 cols [+0.277,+0.406] P(<0) 0.000 | two-level CI [+0.247,+0.478] P(<0) 0.000
+   P-Sch    - D-gbm   : +0.366  CI95 cols [+0.299,+0.420] P(<0) 0.000 | two-level CI [+0.185,+0.621] P(<0) 0.000
+   Triv-5   - P-free  : -0.076  CI95 cols [-0.115,-0.038] P(<0) 1.000 | two-level CI [-0.146,-0.001] P(<0) 0.976
+   Triv-5   - D-gbm   : -0.023  CI95 cols [-0.051,+0.003] P(<0) 0.955 | two-level CI [-0.060,+0.006] P(<0) 0.939
+   Triv-nn  - D-gbm   : -0.040  CI95 cols [-0.069,-0.002] P(<0) 0.982 | two-level CI [-0.079,-0.001] P(<0) 0.979
+   Triv-5   - Triv-nn : +0.016  CI95 cols [-0.014,+0.041] P(<0) 0.172 | two-level CI [-0.014,+0.039] P(<0) 0.164
+  [upper] point: P-Sch 0.185 [0.166,0.198], P-Beigi 0.185 [0.166,0.198], P-free 0.149 [0.135,0.164], D-logit 0.410 [0.380,0.446], D-gbm 0.126 [0.100,0.143], Triv-nn 0.119 [0.101,0.139], Triv-5 0.099 [0.085,0.117]
+   D-gbm    - P-free  : -0.024  CI95 cols [-0.050,-0.006] P(<0) 0.992 | two-level CI [-0.065,+0.016] P(<0) 0.857
+   D-gbm    - P-Beigi : -0.059  CI95 cols [-0.088,-0.033] P(<0) 1.000 | two-level CI [-0.096,-0.010] P(<0) 0.990
+   P-free   - P-Beigi : -0.035  CI95 cols [-0.053,-0.011] P(<0) 0.999 | two-level CI [-0.064,-0.004] P(<0) 0.986
+   D-logit  - P-free  : +0.260  CI95 cols [+0.229,+0.298] P(<0) 0.000 | two-level CI [+0.214,+0.322] P(<0) 0.000
+   P-Sch    - P-free  : +0.035  CI95 cols [+0.011,+0.053] P(<0) 0.001 | two-level CI [+0.004,+0.064] P(<0) 0.014
+   P-Sch    - P-Beigi : +0.000  CI95 cols [+0.000,+0.000] P(<0) 0.000 | two-level CI [+0.000,+0.000] P(<0) 0.000
+   P-Sch    - D-gbm   : +0.059  CI95 cols [+0.033,+0.088] P(<0) 0.000 | two-level CI [+0.010,+0.096] P(<0) 0.010
+   Triv-5   - P-free  : -0.050  CI95 cols [-0.065,-0.033] P(<0) 1.000 | two-level CI [-0.081,-0.005] P(<0) 0.987
+   Triv-5   - D-gbm   : -0.026  CI95 cols [-0.043,+0.001] P(<0) 0.969 | two-level CI [-0.056,+0.004] P(<0) 0.944
+   Triv-nn  - D-gbm   : -0.006  CI95 cols [-0.025,+0.022] P(<0) 0.566 | two-level CI [-0.041,+0.029] P(<0) 0.518
+   Triv-5   - Triv-nn : -0.020  CI95 cols [-0.034,-0.003] P(<0) 0.992 | two-level CI [-0.038,-0.001] P(<0) 0.985
+
+=== K=2 t=0.3  (B=4000; columns resampled by beta index within specimen)
+  [lower] point: P-Sch 0.475 [0.435,0.526], P-Beigi 0.362 [0.326,0.420], P-free 0.337 [0.300,0.375], D-logit 0.319 [0.284,0.362], D-gbm 0.287 [0.263,0.336], Triv-nn 0.285 [0.260,0.324], Triv-5 0.286 [0.250,0.318]
+   D-gbm    - P-free  : -0.050  CI95 cols [-0.080,+0.001] P(<0) 0.972 | two-level CI [-0.140,+0.031] P(<0) 0.826
+   D-gbm    - P-Beigi : -0.075  CI95 cols [-0.120,-0.029] P(<0) 0.999 | two-level CI [-0.127,-0.017] P(<0) 0.996
+   P-free   - P-Beigi : -0.026  CI95 cols [-0.071,+0.005] P(<0) 0.957 | two-level CI [-0.091,+0.067] P(<0) 0.787
+   D-logit  - P-free  : -0.017  CI95 cols [-0.056,+0.028] P(<0) 0.729 | two-level CI [-0.122,+0.059] P(<0) 0.588
+   P-Sch    - P-free  : +0.139  CI95 cols [+0.083,+0.208] P(<0) 0.000 | two-level CI [-0.019,+0.356] P(<0) 0.046
+   P-Sch    - P-Beigi : +0.113  CI95 cols [+0.043,+0.177] P(<0) 0.001 | two-level CI [-0.093,+0.404] P(<0) 0.180
+   P-Sch    - D-gbm   : +0.188  CI95 cols [+0.127,+0.240] P(<0) 0.000 | two-level CI [-0.004,+0.465] P(<0) 0.031
+   Triv-5   - P-free  : -0.051  CI95 cols [-0.093,-0.012] P(<0) 0.995 | two-level CI [-0.140,+0.006] P(<0) 0.949
+   Triv-5   - D-gbm   : -0.001  CI95 cols [-0.041,+0.015] P(<0) 0.791 | two-level CI [-0.059,+0.027] P(<0) 0.712
+   Triv-nn  - D-gbm   : -0.002  CI95 cols [-0.037,+0.026] P(<0) 0.598 | two-level CI [-0.054,+0.039] P(<0) 0.607
+   Triv-5   - Triv-nn : +0.001  CI95 cols [-0.031,+0.018] P(<0) 0.729 | two-level CI [-0.035,+0.027] P(<0) 0.659
+  [upper] point: P-Sch 0.277 [0.249,0.299], P-Beigi 0.277 [0.249,0.299], P-free 0.211 [0.187,0.240], D-logit 0.310 [0.274,0.355], D-gbm 0.201 [0.167,0.227], Triv-nn 0.203 [0.172,0.236], Triv-5 0.194 [0.166,0.227]
+   D-gbm    - P-free  : -0.009  CI95 cols [-0.040,+0.009] P(<0) 0.889 | two-level CI [-0.054,+0.032] P(<0) 0.711
+   D-gbm    - P-Beigi : -0.075  CI95 cols [-0.114,-0.041] P(<0) 1.000 | two-level CI [-0.133,-0.007] P(<0) 0.989
+   P-free   - P-Beigi : -0.066  CI95 cols [-0.093,-0.029] P(<0) 1.000 | two-level CI [-0.099,-0.013] P(<0) 0.993
+   D-logit  - P-free  : +0.099  CI95 cols [+0.058,+0.146] P(<0) 0.000 | two-level CI [+0.038,+0.188] P(<0) 0.001
+   P-Sch    - P-free  : +0.066  CI95 cols [+0.029,+0.093] P(<0) 0.000 | two-level CI [+0.013,+0.099] P(<0) 0.007
+   P-Sch    - P-Beigi : +0.000  CI95 cols [+0.000,+0.000] P(<0) 0.000 | two-level CI [+0.000,+0.000] P(<0) 0.000
+   P-Sch    - D-gbm   : +0.075  CI95 cols [+0.041,+0.114] P(<0) 0.000 | two-level CI [+0.007,+0.133] P(<0) 0.011
+   Triv-5   - P-free  : -0.017  CI95 cols [-0.044,+0.007] P(<0) 0.920 | two-level CI [-0.042,+0.010] P(<0) 0.889
+   Triv-5   - D-gbm   : -0.008  CI95 cols [-0.028,+0.025] P(<0) 0.545 | two-level CI [-0.044,+0.033] P(<0) 0.564
+   Triv-nn  - D-gbm   : +0.001  CI95 cols [-0.023,+0.035] P(<0) 0.317 | two-level CI [-0.031,+0.038] P(<0) 0.393
+   Triv-5   - Triv-nn : -0.009  CI95 cols [-0.029,+0.013] P(<0) 0.772 | two-level CI [-0.034,+0.014] P(<0) 0.769
+
+=== K=3 t=0.2  (B=4000; columns resampled by beta index within specimen)
+  [lower] point: P-Sch 0.596 [0.555,0.633], P-Beigi 0.292 [0.253,0.328], P-free 0.305 [0.267,0.332], D-logit 0.328 [0.289,0.366], D-gbm 0.330 [0.278,0.360], Triv-nn 0.294 [0.253,0.336], Triv-5 0.273 [0.245,0.323]
+   D-gbm    - P-free  : +0.025  CI95 cols [-0.024,+0.064] P(<0) 0.177 | two-level CI [-0.089,+0.094] P(<0) 0.319
+   D-gbm    - P-Beigi : +0.038  CI95 cols [-0.021,+0.078] P(<0) 0.108 | two-level CI [-0.103,+0.118] P(<0) 0.299
+   P-free   - P-Beigi : +0.013  CI95 cols [-0.017,+0.035] P(<0) 0.242 | two-level CI [-0.030,+0.042] P(<0) 0.343
+   D-logit  - P-free  : +0.023  CI95 cols [-0.012,+0.064] P(<0) 0.088 | two-level CI [-0.093,+0.102] P(<0) 0.293
+   P-Sch    - P-free  : +0.291  CI95 cols [+0.241,+0.346] P(<0) 0.000 | two-level CI [+0.134,+0.504] P(<0) 0.000
+   P-Sch    - P-Beigi : +0.304  CI95 cols [+0.247,+0.361] P(<0) 0.000 | two-level CI [+0.160,+0.495] P(<0) 0.000
+   P-Sch    - D-gbm   : +0.266  CI95 cols [+0.212,+0.338] P(<0) 0.000 | two-level CI [+0.066,+0.564] P(<0) 0.001
+   Triv-5   - P-free  : -0.032  CI95 cols [-0.054,+0.018] P(<0) 0.851 | two-level CI [-0.083,+0.029] P(<0) 0.767
+   Triv-5   - D-gbm   : -0.057  CI95 cols [-0.076,-0.002] P(<0) 0.980 | two-level CI [-0.088,+0.019] P(<0) 0.912
+   Triv-nn  - D-gbm   : -0.036  CI95 cols [-0.066,+0.010] P(<0) 0.931 | two-level CI [-0.076,+0.032] P(<0) 0.850
+   Triv-5   - Triv-nn : -0.021  CI95 cols [-0.043,+0.021] P(<0) 0.752 | two-level CI [-0.041,+0.020] P(<0) 0.760
+  [upper] point: P-Sch 0.274 [0.250,0.301], P-Beigi 0.274 [0.250,0.301], P-free 0.198 [0.176,0.228], D-logit 0.347 [0.305,0.381], D-gbm 0.180 [0.154,0.204], Triv-nn 0.176 [0.149,0.203], Triv-5 0.187 [0.161,0.215]
+   D-gbm    - P-free  : -0.018  CI95 cols [-0.048,+0.002] P(<0) 0.968 | two-level CI [-0.059,+0.019] P(<0) 0.843
+   D-gbm    - P-Beigi : -0.094  CI95 cols [-0.130,-0.065] P(<0) 1.000 | two-level CI [-0.168,-0.007] P(<0) 0.985
+   P-free   - P-Beigi : -0.076  CI95 cols [-0.107,-0.042] P(<0) 1.000 | two-level CI [-0.128,+0.002] P(<0) 0.972
+   D-logit  - P-free  : +0.150  CI95 cols [+0.096,+0.189] P(<0) 0.000 | two-level CI [+0.086,+0.208] P(<0) 0.000
+   P-Sch    - P-free  : +0.076  CI95 cols [+0.042,+0.107] P(<0) 0.000 | two-level CI [-0.002,+0.128] P(<0) 0.028
+   P-Sch    - P-Beigi : +0.000  CI95 cols [+0.000,+0.000] P(<0) 0.000 | two-level CI [+0.000,+0.000] P(<0) 0.000
+   P-Sch    - D-gbm   : +0.094  CI95 cols [+0.065,+0.130] P(<0) 0.000 | two-level CI [+0.007,+0.168] P(<0) 0.015
+   Triv-5   - P-free  : -0.011  CI95 cols [-0.040,+0.011] P(<0) 0.845 | two-level CI [-0.047,+0.016] P(<0) 0.801
+   Triv-5   - D-gbm   : +0.007  CI95 cols [-0.014,+0.033] P(<0) 0.179 | two-level CI [-0.033,+0.046] P(<0) 0.343
+   Triv-nn  - D-gbm   : -0.004  CI95 cols [-0.027,+0.021] P(<0) 0.573 | two-level CI [-0.046,+0.030] P(<0) 0.560
+   Triv-5   - Triv-nn : +0.011  CI95 cols [-0.011,+0.035] P(<0) 0.138 | two-level CI [-0.015,+0.036] P(<0) 0.158

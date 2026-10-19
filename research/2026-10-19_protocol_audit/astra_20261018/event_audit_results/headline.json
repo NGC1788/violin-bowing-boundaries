@@ -1,0 +1,90 @@
+{
+  "rows": [
+    {
+      "archive": "A1",
+      "speed": 0.05,
+      "n": 2000,
+      "multiple": 179,
+      "K2detected": 1050,
+      "K2later_nonH": 169,
+      "K2censored": 950,
+      "suffix_changed": 47,
+      "prefix_n": 2000,
+      "legacy_changed": 3,
+      "legacy_n": 2000,
+      "legacy_gaps": 96
+    },
+    {
+      "archive": "A1",
+      "speed": 0.1,
+      "n": 2000,
+      "multiple": 67,
+      "K2detected": 958,
+      "K2later_nonH": 63,
+      "K2censored": 1042,
+      "suffix_changed": 26,
+      "prefix_n": 2000,
+      "legacy_changed": 0,
+      "legacy_n": 1954,
+      "legacy_gaps": 35
+    },
+    {
+      "archive": "A1",
+      "speed": 0.2,
+      "n": 2000,
+      "multiple": 17,
+      "K2detected": 540,
+      "K2later_nonH": 27,
+      "K2censored": 1460,
+      "suffix_changed": 13,
+      "prefix_n": 2000,
+      "legacy_changed": 1,
+      "legacy_n": 2000,
+      "legacy_gaps": 15
+    },
+    {
+      "archive": "A2",
+      "speed": 0.05,
+      "n": 2000,
+      "multiple": 215,
+      "K2detected": 1329,
+      "K2later_nonH": 204,
+      "K2censored": 671,
+      "suffix_changed": 55,
+      "prefix_n": 2000,
+      "legacy_changed": 39,
+      "legacy_n": 2000,
+      "legacy_gaps": 88
+    },
+    {
+      "archive": "A2",
+      "speed": 0.1,
+      "n": 2000,
+      "multiple": 72,
+      "K2detected": 956,
+      "K2later_nonH": 66,
+      "K2censored": 1044,
+      "suffix_changed": 25,
+      "prefix_n": 2000,
+      "legacy_changed": 3,
+      "legacy_n": 2000,
+      "legacy_gaps": 30
+    },
+    {
+      "archive": "A2",
+      "speed": 0.2,
+      "n": 2000,
+      "multiple": 22,
+      "K2detected": 536,
+      "K2later_nonH": 27,
+      "K2censored": 1464,
+      "suffix_changed": 14,
+      "prefix_n": 2000,
+      "legacy_changed": 2,
+      "legacy_n": 1943,
+      "legacy_gaps": 7
+    }
+  ],
+  "causal_prefix_comparisons": 1134756,
+  "causal_prefix_changes": 0
+}

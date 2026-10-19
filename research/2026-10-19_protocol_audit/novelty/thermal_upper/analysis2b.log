@@ -1,0 +1,8 @@
+(b1) pooled speed-category exponents (diagram offsets, common beta slope): e12 +0.840 [0.777 0.891] e23 +0.523 [0.395 0.61 ] curvature -0.317 [-0.451 -0.208]
+(b2) measured g(lv*lb) +0.481 [0.381 0.561] q(lb^2) -0.344 [-0.398 -0.267] | local e_v +0.68 e_b -1.06 at v=beta=0.1
+   S1_strict   e12 +1.000 e23 +1.000 curvature -0.000 | g -0.000 q +0.000
+   T1k_break   e12 +0.827 e23 +0.863 curvature +0.036 | g -0.032 q +0.008
+   T1k_peak    e12 +0.551 e23 +0.662 curvature +0.111 | g -0.098 q +0.025
+   T2km_break  e12 +0.829 e23 +0.862 curvature +0.033 | g -0.039 q +0.012
+   T2km_peak   e12 +0.558 e23 +0.656 curvature +0.098 | g -0.132 q +0.046
+   E3_free_Z   e12 +0.698 e23 +0.698 curvature -0.000 | g -0.000 q +0.000

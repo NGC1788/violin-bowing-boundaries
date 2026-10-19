@@ -1,0 +1,481 @@
+{
+  "scope": "Exposed A1/A2 development; no superiority or novelty claim",
+  "protocol_sha256": "45747a3ca14edc63e65fdf84b3cab14190450161f0ef5d0dd527471fe8d3a075",
+  "code_sha256": "73eacac9fb05004546063728d024376644566ab215386378da63e90cfeb879a5",
+  "inputs": {
+    "A1": {
+      "strokes": 6000,
+      "grid": {
+        "2024-03-25_TypeA_sample1/2024-03-27_r_v1": {
+          "trials": 2000,
+          "recovered_columns": 40,
+          "trials_per_column": [
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50
+          ],
+          "gap_threshold": 0.00016897363157793806,
+          "gap_ratio": 49.43332713295724,
+          "legacy_prepare_columns": 366
+        },
+        "2024-03-25_TypeA_sample1/2024-03-27_r_v2": {
+          "trials": 2000,
+          "recovered_columns": 40,
+          "trials_per_column": [
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50
+          ],
+          "gap_threshold": 0.00016704329967918882,
+          "gap_ratio": 48.216459534990854,
+          "legacy_prepare_columns": 343
+        },
+        "2024-03-25_TypeA_sample1/2024-03-27_r_v3": {
+          "trials": 2000,
+          "recovered_columns": 40,
+          "trials_per_column": [
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50
+          ],
+          "gap_threshold": 0.00013242985229641786,
+          "gap_ratio": 78.58709784313783,
+          "legacy_prepare_columns": 313
+        }
+      },
+      "input_dimensions": 64,
+      "snapshot_dimensions": 16,
+      "past_windows": [
+        [
+          0.2,
+          0.0
+        ],
+        [
+          0.1,
+          0.0
+        ],
+        [
+          0.1,
+          0.05
+        ],
+        [
+          0.1,
+          0.1
+        ]
+      ],
+      "origin_s": 0.2,
+      "target_windows": [
+        [
+          0.25,
+          0.45
+        ],
+        [
+          0.3,
+          0.5
+        ]
+      ],
+      "minimum_input_target_gap_s": 0.04999999999999999,
+      "past_H_count": 1482,
+      "coverage": [
+        {
+          "start": 0.25,
+          "speed": 0.05,
+          "n": 2000,
+          "future_H": 656,
+          "nonH_to_H": 115,
+          "H_to_nonH": 7
+        },
+        {
+          "start": 0.25,
+          "speed": 0.1,
+          "n": 2000,
+          "future_H": 657,
+          "nonH_to_H": 112,
+          "H_to_nonH": 2
+        },
+        {
+          "start": 0.25,
+          "speed": 0.2,
+          "n": 2000,
+          "future_H": 481,
+          "nonH_to_H": 97,
+          "H_to_nonH": 3
+        },
+        {
+          "start": 0.3,
+          "speed": 0.05,
+          "n": 2000,
+          "future_H": 663,
+          "nonH_to_H": 127,
+          "H_to_nonH": 12
+        },
+        {
+          "start": 0.3,
+          "speed": 0.1,
+          "n": 2000,
+          "future_H": 677,
+          "nonH_to_H": 135,
+          "H_to_nonH": 5
+        },
+        {
+          "start": 0.3,
+          "speed": 0.2,
+          "n": 2000,
+          "future_H": 497,
+          "nonH_to_H": 114,
+          "H_to_nonH": 4
+        }
+      ],
+      "sha256": "e7961c8d86b514090967a288f1bd173190ee48021e01cab89303486ef55fe483"
+    },
+    "A2": {
+      "strokes": 6000,
+      "grid": {
+        "2024-04-19_TypeA_sample2/v1": {
+          "trials": 2000,
+          "recovered_columns": 40,
+          "trials_per_column": [
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50
+          ],
+          "gap_threshold": 0.00013037473257870473,
+          "gap_ratio": 81.68903065440679,
+          "legacy_prepare_columns": 363
+        },
+        "2024-04-19_TypeA_sample2/v2": {
+          "trials": 2000,
+          "recovered_columns": 40,
+          "trials_per_column": [
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50
+          ],
+          "gap_threshold": 0.00015363805282405185,
+          "gap_ratio": 59.43305517121014,
+          "legacy_prepare_columns": 331
+        },
+        "2024-04-19_TypeA_sample2/v3": {
+          "trials": 2000,
+          "recovered_columns": 40,
+          "trials_per_column": [
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50,
+            50
+          ],
+          "gap_threshold": 0.00011252774944210447,
+          "gap_ratio": 109.77913117409081,
+          "legacy_prepare_columns": 311
+        }
+      },
+      "input_dimensions": 64,
+      "snapshot_dimensions": 16,
+      "past_windows": [
+        [
+          0.2,
+          0.0
+        ],
+        [
+          0.1,
+          0.0
+        ],
+        [
+          0.1,
+          0.05
+        ],
+        [
+          0.1,
+          0.1
+        ]
+      ],
+      "origin_s": 0.2,
+      "target_windows": [
+        [
+          0.25,
+          0.45
+        ],
+        [
+          0.3,
+          0.5
+        ]
+      ],
+      "minimum_input_target_gap_s": 0.04999999999999999,
+      "past_H_count": 1555,
+      "coverage": [
+        {
+          "start": 0.25,
+          "speed": 0.05,
+          "n": 2000,
+          "future_H": 838,
+          "nonH_to_H": 181,
+          "H_to_nonH": 7
+        },
+        {
+          "start": 0.25,
+          "speed": 0.1,
+          "n": 2000,
+          "future_H": 715,
+          "nonH_to_H": 187,
+          "H_to_nonH": 13
+        },
+        {
+          "start": 0.25,
+          "speed": 0.2,
+          "n": 2000,
+          "future_H": 477,
+          "nonH_to_H": 139,
+          "H_to_nonH": 12
+        },
+        {
+          "start": 0.3,
+          "speed": 0.05,
+          "n": 2000,
+          "future_H": 874,
+          "nonH_to_H": 216,
+          "H_to_nonH": 6
+        },
+        {
+          "start": 0.3,
+          "speed": 0.1,
+          "n": 2000,
+          "future_H": 744,
+          "nonH_to_H": 213,
+          "H_to_nonH": 10
+        },
+        {
+          "start": 0.3,
+          "speed": 0.2,
+          "n": 2000,
+          "future_H": 492,
+          "nonH_to_H": 153,
+          "H_to_nonH": 11
+        }
+      ],
+      "sha256": "3345934e53c0eafdbca0a89717a22a43cfac2fd3c294a813673a43b8c960c272"
+    }
+  },
+  "fits": [],
+  "paired": []
+}

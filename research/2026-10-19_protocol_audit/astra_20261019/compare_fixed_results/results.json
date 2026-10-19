@@ -1,0 +1,3872 @@
+{
+  "results": {
+    "B1": {
+      "P-Sch-publishedZ": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.6836608124207965,
+          "n_finite_observation_and_point_prediction": 91,
+          "point_hit_rate_all_available": 0.2,
+          "point_hit_rate_point_predictions": 0.2,
+          "common_point_median_abs_log_error": 0.6768178041393642,
+          "n_common_point_errors": 88,
+          "counts": {
+            "observation_finite_interval": 91,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 24,
+            "observation_left_censored": 21,
+            "observation_right_censored": 8,
+            "no_detected_observed_band": 8,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.22889660597769468,
+          "n_finite_observation_and_point_prediction": 48,
+          "point_hit_rate_all_available": 0.5357142857142857,
+          "point_hit_rate_point_predictions": 0.5357142857142857,
+          "common_point_median_abs_log_error": 0.2189043499340002,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 64,
+            "prediction_point": 120,
+            "observations_available": 112,
+            "point_predictions_available": 112,
+            "point_hits": 60,
+            "observation_finite_interval": 48,
+            "observation_unavailable": 8,
+            "no_detected_observed_band": 8,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.5745540222147425,
+          "logloss_conditional": 0.42654361179218603,
+          "n_positive_observed": 2536,
+          "n_positive_predicted": 2142,
+          "union": 2971,
+          "slope_identified": true
+        }
+      },
+      "P-Beigi-publishedZ": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.2702856189880196,
+          "n_finite_observation_and_point_prediction": 91,
+          "point_hit_rate_all_available": 0.21666666666666667,
+          "point_hit_rate_point_predictions": 0.21666666666666667,
+          "common_point_median_abs_log_error": 0.2703498020300967,
+          "n_common_point_errors": 88,
+          "counts": {
+            "observation_finite_interval": 91,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 26,
+            "observation_left_censored": 21,
+            "observation_right_censored": 8,
+            "no_detected_observed_band": 8,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.22889660597769468,
+          "n_finite_observation_and_point_prediction": 48,
+          "point_hit_rate_all_available": 0.5357142857142857,
+          "point_hit_rate_point_predictions": 0.5357142857142857,
+          "common_point_median_abs_log_error": 0.2189043499340002,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 64,
+            "prediction_point": 120,
+            "observations_available": 112,
+            "point_predictions_available": 112,
+            "point_hits": 60,
+            "observation_finite_interval": 48,
+            "observation_unavailable": 8,
+            "no_detected_observed_band": 8,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6333563059958649,
+          "logloss_conditional": 0.44833825236151625,
+          "n_positive_observed": 2536,
+          "n_positive_predicted": 2204,
+          "union": 2902,
+          "slope_identified": true
+        }
+      },
+      "P-free-publishedZ": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.2734047490578092,
+          "n_finite_observation_and_point_prediction": 91,
+          "point_hit_rate_all_available": 0.20833333333333334,
+          "point_hit_rate_point_predictions": 0.20833333333333334,
+          "common_point_median_abs_log_error": 0.279111832962904,
+          "n_common_point_errors": 88,
+          "counts": {
+            "observation_finite_interval": 91,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 25,
+            "observation_left_censored": 21,
+            "observation_right_censored": 8,
+            "no_detected_observed_band": 8,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.16717292415177296,
+          "n_finite_observation_and_point_prediction": 48,
+          "point_hit_rate_all_available": 0.5982142857142857,
+          "point_hit_rate_point_predictions": 0.5982142857142857,
+          "common_point_median_abs_log_error": 0.17428882757316233,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 64,
+            "prediction_point": 120,
+            "observations_available": 112,
+            "point_predictions_available": 112,
+            "point_hits": 67,
+            "observation_finite_interval": 48,
+            "observation_unavailable": 8,
+            "no_detected_observed_band": 8,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6378947368421053,
+          "logloss_conditional": 0.45345043078837927,
+          "n_positive_observed": 2536,
+          "n_positive_predicted": 2132,
+          "union": 2850,
+          "slope_identified": true
+        }
+      },
+      "P-Sch-targetDerivedZ-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.6197499418576292,
+          "n_finite_observation_and_point_prediction": 91,
+          "point_hit_rate_all_available": 0.2,
+          "point_hit_rate_point_predictions": 0.2,
+          "common_point_median_abs_log_error": 0.6178222687105355,
+          "n_common_point_errors": 88,
+          "counts": {
+            "observation_finite_interval": 91,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 24,
+            "observation_left_censored": 21,
+            "observation_right_censored": 8,
+            "no_detected_observed_band": 8,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.26779128010063125,
+          "n_finite_observation_and_point_prediction": 48,
+          "point_hit_rate_all_available": 0.49107142857142855,
+          "point_hit_rate_point_predictions": 0.49107142857142855,
+          "common_point_median_abs_log_error": 0.2577990240569369,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 64,
+            "prediction_point": 120,
+            "observations_available": 112,
+            "point_predictions_available": 112,
+            "point_hits": 55,
+            "observation_finite_interval": 48,
+            "observation_unavailable": 8,
+            "no_detected_observed_band": 8,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.5778961384820239,
+          "logloss_conditional": 0.4243229752840277,
+          "n_positive_observed": 2536,
+          "n_positive_predicted": 2204,
+          "union": 3004,
+          "slope_identified": true
+        }
+      },
+      "P-Beigi-targetDerivedZ-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.2788196015682566,
+          "n_finite_observation_and_point_prediction": 91,
+          "point_hit_rate_all_available": 0.25,
+          "point_hit_rate_point_predictions": 0.25,
+          "common_point_median_abs_log_error": 0.2771196847135886,
+          "n_common_point_errors": 88,
+          "counts": {
+            "observation_finite_interval": 91,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 30,
+            "observation_left_censored": 21,
+            "observation_right_censored": 8,
+            "no_detected_observed_band": 8,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.26779128010063125,
+          "n_finite_observation_and_point_prediction": 48,
+          "point_hit_rate_all_available": 0.49107142857142855,
+          "point_hit_rate_point_predictions": 0.49107142857142855,
+          "common_point_median_abs_log_error": 0.2577990240569369,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 64,
+            "prediction_point": 120,
+            "observations_available": 112,
+            "point_predictions_available": 112,
+            "point_hits": 55,
+            "observation_finite_interval": 48,
+            "observation_unavailable": 8,
+            "no_detected_observed_band": 8,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6263661202185792,
+          "logloss_conditional": 0.4478178988681836,
+          "n_positive_observed": 2536,
+          "n_positive_predicted": 2226,
+          "union": 2928,
+          "slope_identified": true
+        }
+      },
+      "P-free-targetDerivedZ-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.2550382164159621,
+          "n_finite_observation_and_point_prediction": 91,
+          "point_hit_rate_all_available": 0.20833333333333334,
+          "point_hit_rate_point_predictions": 0.20833333333333334,
+          "common_point_median_abs_log_error": 0.252355566127142,
+          "n_common_point_errors": 88,
+          "counts": {
+            "observation_finite_interval": 91,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 25,
+            "observation_left_censored": 21,
+            "observation_right_censored": 8,
+            "no_detected_observed_band": 8,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.20611542637059216,
+          "n_finite_observation_and_point_prediction": 48,
+          "point_hit_rate_all_available": 0.5535714285714286,
+          "point_hit_rate_point_predictions": 0.5535714285714286,
+          "common_point_median_abs_log_error": 0.21323662111437847,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 64,
+            "prediction_point": 120,
+            "observations_available": 112,
+            "point_predictions_available": 112,
+            "point_hits": 62,
+            "observation_finite_interval": 48,
+            "observation_unavailable": 8,
+            "no_detected_observed_band": 8,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6355815554026153,
+          "logloss_conditional": 0.44689528355691,
+          "n_positive_observed": 2536,
+          "n_positive_predicted": 2217,
+          "union": 2906,
+          "slope_identified": true
+        }
+      },
+      "D-logit": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.27904047862110337,
+          "n_finite_observation_and_point_prediction": 89,
+          "point_hit_rate_all_available": 0.16666666666666666,
+          "point_hit_rate_point_predictions": 0.18691588785046728,
+          "common_point_median_abs_log_error": 0.2804982507982507,
+          "n_common_point_errors": 88,
+          "counts": {
+            "observation_finite_interval": 91,
+            "prediction_point": 107,
+            "observations_available": 120,
+            "point_predictions_available": 107,
+            "point_hits": 20,
+            "observation_left_censored": 21,
+            "prediction_empty": 13,
+            "prediction_failures_available": 13,
+            "observation_right_censored": 8,
+            "no_detected_observed_band": 8,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.2450873640856649,
+          "n_finite_observation_and_point_prediction": 34,
+          "point_hit_rate_all_available": 0.0625,
+          "point_hit_rate_point_predictions": 0.175,
+          "common_point_median_abs_log_error": 0.2450873640856649,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 64,
+            "prediction_right_censored": 67,
+            "observations_available": 112,
+            "support_censored_predictions_available": 66,
+            "censor_interval_overlaps": 61,
+            "censor_interval_contained": 58,
+            "observation_finite_interval": 48,
+            "prediction_point": 40,
+            "point_predictions_available": 40,
+            "point_hits": 7,
+            "prediction_empty": 13,
+            "prediction_failures_available": 6,
+            "observation_unavailable": 8,
+            "no_detected_observed_band": 8,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_invalid": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 107,
+            "empty": 13
+          },
+          "multi_component_hulls": 0,
+          "reasons": {
+            "no_band_within_support": 13
+          }
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6108308106289942,
+          "logloss_conditional": 0.6192499549272024,
+          "n_positive_observed": 2536,
+          "n_positive_predicted": 2253,
+          "union": 2973,
+          "slope_identified": true
+        },
+        "native_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6118951612903226,
+          "logloss_conditional": 0.4342468279685098,
+          "n_positive_observed": 2536,
+          "n_positive_predicted": 2261,
+          "union": 2976
+        }
+      },
+      "D-gbm": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.28426825674507133,
+          "n_finite_observation_and_point_prediction": 90,
+          "point_hit_rate_all_available": 0.15,
+          "point_hit_rate_point_predictions": 0.16216216216216217,
+          "common_point_median_abs_log_error": 0.2826866344049894,
+          "n_common_point_errors": 88,
+          "counts": {
+            "observation_finite_interval": 91,
+            "prediction_point": 111,
+            "observations_available": 120,
+            "point_predictions_available": 111,
+            "point_hits": 18,
+            "observation_left_censored": 21,
+            "observation_right_censored": 8,
+            "prediction_empty": 9,
+            "no_detected_observed_band": 8,
+            "prediction_failures_available": 9,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.20530711903774118,
+          "n_finite_observation_and_point_prediction": 44,
+          "point_hit_rate_all_available": 0.14285714285714285,
+          "point_hit_rate_point_predictions": 0.2857142857142857,
+          "common_point_median_abs_log_error": 0.1952968320769855,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 64,
+            "prediction_right_censored": 55,
+            "observations_available": 112,
+            "support_censored_predictions_available": 55,
+            "censor_interval_overlaps": 53,
+            "censor_interval_contained": 52,
+            "prediction_point": 56,
+            "point_predictions_available": 56,
+            "point_hits": 16,
+            "observation_finite_interval": 48,
+            "observation_unavailable": 8,
+            "prediction_empty": 9,
+            "no_detected_observed_band": 8,
+            "prediction_failures_available": 1,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_invalid": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 111,
+            "empty": 9
+          },
+          "multi_component_hulls": 6,
+          "reasons": {
+            "no_band_within_support": 9
+          }
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6545970891018814,
+          "logloss_conditional": 0.4202092679172689,
+          "n_positive_observed": 2536,
+          "n_positive_predicted": 2125,
+          "union": 2817,
+          "slope_identified": true
+        },
+        "native_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6534513274336283,
+          "logloss_conditional": 0.413519514446203,
+          "n_positive_observed": 2536,
+          "n_positive_predicted": 2135,
+          "union": 2825
+        }
+      },
+      "Triv-5-finite": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.2315852672288043,
+          "n_finite_observation_and_point_prediction": 91,
+          "point_hit_rate_all_available": 0.18333333333333332,
+          "point_hit_rate_point_predictions": 0.18333333333333332,
+          "common_point_median_abs_log_error": 0.23006242881374445,
+          "n_common_point_errors": 88,
+          "counts": {
+            "observation_finite_interval": 91,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 22,
+            "observation_left_censored": 21,
+            "observation_right_censored": 8,
+            "no_detected_observed_band": 8,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.1997843205344083,
+          "n_finite_observation_and_point_prediction": 48,
+          "point_hit_rate_all_available": 0.125,
+          "point_hit_rate_point_predictions": 0.125,
+          "common_point_median_abs_log_error": 0.20239348717508,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 64,
+            "prediction_point": 120,
+            "observations_available": 112,
+            "point_predictions_available": 112,
+            "point_hits": 14,
+            "observation_finite_interval": 48,
+            "observation_unavailable": 8,
+            "no_detected_observed_band": 8,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.5857041251778093,
+          "logloss_conditional": 0.47781261777661166,
+          "n_positive_observed": 2536,
+          "n_positive_predicted": 1923,
+          "union": 2812,
+          "slope_identified": true
+        }
+      },
+      "Triv-5-legacy-edge-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.221421974930259,
+          "n_finite_observation_and_point_prediction": 91,
+          "point_hit_rate_all_available": 0.15833333333333333,
+          "point_hit_rate_point_predictions": 0.168141592920354,
+          "common_point_median_abs_log_error": 0.21950207731276158,
+          "n_common_point_errors": 88,
+          "counts": {
+            "observation_finite_interval": 91,
+            "prediction_point": 113,
+            "observations_available": 120,
+            "point_predictions_available": 113,
+            "point_hits": 19,
+            "observation_left_censored": 21,
+            "observation_right_censored": 8,
+            "prediction_invalid": 7,
+            "no_detected_observed_band": 8,
+            "prediction_failures_available": 7,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.18900959162575454,
+          "n_finite_observation_and_point_prediction": 48,
+          "point_hit_rate_all_available": 0.39285714285714285,
+          "point_hit_rate_point_predictions": 0.39285714285714285,
+          "common_point_median_abs_log_error": 0.20105424616672363,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 64,
+            "prediction_point": 113,
+            "observations_available": 112,
+            "point_predictions_available": 112,
+            "point_hits": 44,
+            "observation_finite_interval": 48,
+            "observation_unavailable": 8,
+            "prediction_invalid": 7,
+            "no_detected_observed_band": 8,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 113,
+            "invalid": 7
+          },
+          "multi_component_hulls": 0,
+          "reasons": {
+            "nonfinite_endpoint": 6,
+            "crossed_or_inverted_endpoint": 1
+          }
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 5650,
+          "n_prediction_failures": 350,
+          "iou_conditional": 0.6425035360678925,
+          "logloss_conditional": 0.453489522586698,
+          "n_positive_observed": 2532,
+          "n_positive_predicted": 2113,
+          "union": 2828,
+          "slope_identified": true
+        }
+      }
+    },
+    "C1": {
+      "P-Sch-publishedZ": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.7585892557132297,
+          "n_finite_observation_and_point_prediction": 86,
+          "point_hit_rate_all_available": 0.2,
+          "point_hit_rate_point_predictions": 0.2,
+          "common_point_median_abs_log_error": 0.7491467581361626,
+          "n_common_point_errors": 83,
+          "counts": {
+            "observation_finite_interval": 86,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 24,
+            "observation_left_censored": 27,
+            "observation_right_censored": 7,
+            "no_detected_observed_band": 7,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.15355826889134683,
+          "n_finite_observation_and_point_prediction": 61,
+          "point_hit_rate_all_available": 0.672566371681416,
+          "point_hit_rate_point_predictions": 0.672566371681416,
+          "common_point_median_abs_log_error": 0.14478290401209543,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 52,
+            "prediction_point": 120,
+            "observations_available": 113,
+            "point_predictions_available": 113,
+            "point_hits": 76,
+            "observation_finite_interval": 61,
+            "observation_unavailable": 7,
+            "no_detected_observed_band": 7,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.5761072988147224,
+          "logloss_conditional": 0.45835164135948675,
+          "n_positive_observed": 2772,
+          "n_positive_predicted": 2281,
+          "union": 3206,
+          "slope_identified": true
+        }
+      },
+      "P-Beigi-publishedZ": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.4035639958377789,
+          "n_finite_observation_and_point_prediction": 86,
+          "point_hit_rate_all_available": 0.20833333333333334,
+          "point_hit_rate_point_predictions": 0.20833333333333334,
+          "common_point_median_abs_log_error": 0.39990779419386824,
+          "n_common_point_errors": 83,
+          "counts": {
+            "observation_finite_interval": 86,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 25,
+            "observation_left_censored": 27,
+            "observation_right_censored": 7,
+            "no_detected_observed_band": 7,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.15355826889134683,
+          "n_finite_observation_and_point_prediction": 61,
+          "point_hit_rate_all_available": 0.672566371681416,
+          "point_hit_rate_point_predictions": 0.672566371681416,
+          "common_point_median_abs_log_error": 0.14478290401209543,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 52,
+            "prediction_point": 120,
+            "observations_available": 113,
+            "point_predictions_available": 113,
+            "point_hits": 76,
+            "observation_finite_interval": 61,
+            "observation_unavailable": 7,
+            "no_detected_observed_band": 7,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6277208706786171,
+          "logloss_conditional": 0.46511111338200284,
+          "n_positive_observed": 2772,
+          "n_positive_predicted": 2313,
+          "union": 3124,
+          "slope_identified": true
+        }
+      },
+      "P-free-publishedZ": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.34808428217804716,
+          "n_finite_observation_and_point_prediction": 86,
+          "point_hit_rate_all_available": 0.175,
+          "point_hit_rate_point_predictions": 0.175,
+          "common_point_median_abs_log_error": 0.3534515129085537,
+          "n_common_point_errors": 83,
+          "counts": {
+            "observation_finite_interval": 86,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 21,
+            "observation_left_censored": 27,
+            "observation_right_censored": 7,
+            "no_detected_observed_band": 7,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.15545654378853824,
+          "n_finite_observation_and_point_prediction": 61,
+          "point_hit_rate_all_available": 0.6194690265486725,
+          "point_hit_rate_point_predictions": 0.6194690265486725,
+          "common_point_median_abs_log_error": 0.1652037681590225,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 52,
+            "prediction_point": 120,
+            "observations_available": 113,
+            "point_predictions_available": 113,
+            "point_hits": 70,
+            "observation_finite_interval": 61,
+            "observation_unavailable": 7,
+            "no_detected_observed_band": 7,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6310897435897436,
+          "logloss_conditional": 0.46458594214965343,
+          "n_positive_observed": 2772,
+          "n_positive_predicted": 2317,
+          "union": 3120,
+          "slope_identified": true
+        }
+      },
+      "P-Sch-targetDerivedZ-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.817995755010432,
+          "n_finite_observation_and_point_prediction": 86,
+          "point_hit_rate_all_available": 0.20833333333333334,
+          "point_hit_rate_point_predictions": 0.20833333333333334,
+          "common_point_median_abs_log_error": 0.8085532574333649,
+          "n_common_point_errors": 83,
+          "counts": {
+            "observation_finite_interval": 86,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 25,
+            "observation_left_censored": 27,
+            "observation_right_censored": 7,
+            "no_detected_observed_band": 7,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.1424109983246179,
+          "n_finite_observation_and_point_prediction": 61,
+          "point_hit_rate_all_available": 0.7079646017699115,
+          "point_hit_rate_point_predictions": 0.7079646017699115,
+          "common_point_median_abs_log_error": 0.14478290401209543,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 52,
+            "prediction_point": 120,
+            "observations_available": 113,
+            "point_predictions_available": 113,
+            "point_hits": 80,
+            "observation_finite_interval": 61,
+            "observation_unavailable": 7,
+            "no_detected_observed_band": 7,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.5666458072590739,
+          "logloss_conditional": 0.46724367794352867,
+          "n_positive_observed": 2772,
+          "n_positive_predicted": 2235,
+          "union": 3196,
+          "slope_identified": true
+        }
+      },
+      "P-Beigi-targetDerivedZ-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.4120405680900584,
+          "n_finite_observation_and_point_prediction": 86,
+          "point_hit_rate_all_available": 0.18333333333333332,
+          "point_hit_rate_point_predictions": 0.18333333333333332,
+          "common_point_median_abs_log_error": 0.4278311305971233,
+          "n_common_point_errors": 83,
+          "counts": {
+            "observation_finite_interval": 86,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 22,
+            "observation_left_censored": 27,
+            "observation_right_censored": 7,
+            "no_detected_observed_band": 7,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.1424109983246179,
+          "n_finite_observation_and_point_prediction": 61,
+          "point_hit_rate_all_available": 0.7079646017699115,
+          "point_hit_rate_point_predictions": 0.7079646017699115,
+          "common_point_median_abs_log_error": 0.14478290401209543,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 52,
+            "prediction_point": 120,
+            "observations_available": 113,
+            "point_predictions_available": 113,
+            "point_hits": 80,
+            "observation_finite_interval": 61,
+            "observation_unavailable": 7,
+            "no_detected_observed_band": 7,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6233183856502242,
+          "logloss_conditional": 0.47344711521023813,
+          "n_positive_observed": 2772,
+          "n_positive_predicted": 2296,
+          "union": 3122,
+          "slope_identified": true
+        }
+      },
+      "P-free-targetDerivedZ-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.40757191814709215,
+          "n_finite_observation_and_point_prediction": 86,
+          "point_hit_rate_all_available": 0.14166666666666666,
+          "point_hit_rate_point_predictions": 0.14166666666666666,
+          "common_point_median_abs_log_error": 0.41298083920994993,
+          "n_common_point_errors": 83,
+          "counts": {
+            "observation_finite_interval": 86,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 17,
+            "observation_left_censored": 27,
+            "observation_right_censored": 7,
+            "no_detected_observed_band": 7,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.1599106013245799,
+          "n_finite_observation_and_point_prediction": 61,
+          "point_hit_rate_all_available": 0.6017699115044248,
+          "point_hit_rate_point_predictions": 0.6017699115044248,
+          "common_point_median_abs_log_error": 0.1649994097489736,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 52,
+            "prediction_point": 120,
+            "observations_available": 113,
+            "point_predictions_available": 113,
+            "point_hits": 68,
+            "observation_finite_interval": 61,
+            "observation_unavailable": 7,
+            "no_detected_observed_band": 7,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6148148148148148,
+          "logloss_conditional": 0.48359815849810034,
+          "n_positive_observed": 2772,
+          "n_positive_predicted": 2242,
+          "union": 3105,
+          "slope_identified": true
+        }
+      },
+      "D-logit": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.27503826412014,
+          "n_finite_observation_and_point_prediction": 84,
+          "point_hit_rate_all_available": 0.11666666666666667,
+          "point_hit_rate_point_predictions": 0.1320754716981132,
+          "common_point_median_abs_log_error": 0.2733294077527799,
+          "n_common_point_errors": 83,
+          "counts": {
+            "observation_finite_interval": 86,
+            "prediction_point": 106,
+            "observations_available": 120,
+            "point_predictions_available": 106,
+            "point_hits": 14,
+            "observation_left_censored": 27,
+            "prediction_empty": 14,
+            "prediction_failures_available": 14,
+            "observation_right_censored": 7,
+            "no_detected_observed_band": 7,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.2864025173607596,
+          "n_finite_observation_and_point_prediction": 40,
+          "point_hit_rate_all_available": 0.07079646017699115,
+          "point_hit_rate_point_predictions": 0.2,
+          "common_point_median_abs_log_error": 0.2864025173607596,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 52,
+            "prediction_right_censored": 66,
+            "observations_available": 113,
+            "support_censored_predictions_available": 66,
+            "censor_interval_overlaps": 57,
+            "censor_interval_contained": 51,
+            "observation_finite_interval": 61,
+            "prediction_point": 40,
+            "point_predictions_available": 40,
+            "point_hits": 8,
+            "prediction_empty": 14,
+            "prediction_failures_available": 7,
+            "observation_unavailable": 7,
+            "no_detected_observed_band": 7,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_invalid": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 106,
+            "empty": 14
+          },
+          "multi_component_hulls": 0,
+          "reasons": {
+            "no_band_within_support": 14
+          }
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6231425861523869,
+          "logloss_conditional": 0.6168522373573284,
+          "n_positive_observed": 2772,
+          "n_positive_predicted": 2362,
+          "union": 3163,
+          "slope_identified": true
+        },
+        "native_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6225938781950142,
+          "logloss_conditional": 0.4309642957119862,
+          "n_positive_observed": 2772,
+          "n_positive_predicted": 2370,
+          "union": 3169
+        }
+      },
+      "D-gbm": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.2729281146694608,
+          "n_finite_observation_and_point_prediction": 84,
+          "point_hit_rate_all_available": 0.16666666666666666,
+          "point_hit_rate_point_predictions": 0.18018018018018017,
+          "common_point_median_abs_log_error": 0.2698465839199943,
+          "n_common_point_errors": 83,
+          "counts": {
+            "observation_finite_interval": 86,
+            "prediction_point": 111,
+            "observations_available": 120,
+            "point_predictions_available": 111,
+            "point_hits": 20,
+            "observation_left_censored": 27,
+            "prediction_left_censored": 1,
+            "support_censored_predictions_available": 1,
+            "censor_interval_overlaps": 1,
+            "censor_interval_contained": 0,
+            "observation_right_censored": 7,
+            "prediction_empty": 8,
+            "no_detected_observed_band": 7,
+            "prediction_failures_available": 8,
+            "observation_unavailable": 0,
+            "prediction_right_censored": 0,
+            "prediction_invalid": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.13787673573263848,
+          "n_finite_observation_and_point_prediction": 55,
+          "point_hit_rate_all_available": 0.23008849557522124,
+          "point_hit_rate_point_predictions": 0.4642857142857143,
+          "common_point_median_abs_log_error": 0.1552371606731786,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 52,
+            "prediction_right_censored": 56,
+            "observations_available": 113,
+            "support_censored_predictions_available": 56,
+            "censor_interval_overlaps": 53,
+            "censor_interval_contained": 50,
+            "observation_finite_interval": 61,
+            "prediction_point": 56,
+            "point_predictions_available": 56,
+            "point_hits": 26,
+            "observation_unavailable": 7,
+            "prediction_empty": 8,
+            "no_detected_observed_band": 7,
+            "prediction_failures_available": 1,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_invalid": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 112,
+            "empty": 8
+          },
+          "multi_component_hulls": 6,
+          "reasons": {
+            "no_band_within_support": 8
+          }
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6722827882391808,
+          "logloss_conditional": 0.4278154207468166,
+          "n_positive_observed": 2772,
+          "n_positive_predicted": 2290,
+          "union": 3027,
+          "slope_identified": true
+        },
+        "native_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.66864490603363,
+          "logloss_conditional": 0.4284782666073796,
+          "n_positive_observed": 2772,
+          "n_positive_predicted": 2289,
+          "union": 3033
+        }
+      },
+      "Triv-5-finite": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.2905763037154641,
+          "n_finite_observation_and_point_prediction": 86,
+          "point_hit_rate_all_available": 0.11666666666666667,
+          "point_hit_rate_point_predictions": 0.11666666666666667,
+          "common_point_median_abs_log_error": 0.28428817828332487,
+          "n_common_point_errors": 83,
+          "counts": {
+            "observation_finite_interval": 86,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 14,
+            "observation_left_censored": 27,
+            "observation_right_censored": 7,
+            "no_detected_observed_band": 7,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.14900848208129358,
+          "n_finite_observation_and_point_prediction": 61,
+          "point_hit_rate_all_available": 0.20353982300884957,
+          "point_hit_rate_point_predictions": 0.20353982300884957,
+          "common_point_median_abs_log_error": 0.15853693625047932,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 52,
+            "prediction_point": 120,
+            "observations_available": 113,
+            "point_predictions_available": 113,
+            "point_hits": 23,
+            "observation_finite_interval": 61,
+            "observation_unavailable": 7,
+            "no_detected_observed_band": 7,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.607620320855615,
+          "logloss_conditional": 0.47830762798960186,
+          "n_positive_observed": 2772,
+          "n_positive_predicted": 2038,
+          "union": 2992,
+          "slope_identified": true
+        }
+      },
+      "Triv-5-legacy-edge-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.27683053491824106,
+          "n_finite_observation_and_point_prediction": 85,
+          "point_hit_rate_all_available": 0.14166666666666666,
+          "point_hit_rate_point_predictions": 0.1504424778761062,
+          "common_point_median_abs_log_error": 0.27683053491824106,
+          "n_common_point_errors": 83,
+          "counts": {
+            "observation_finite_interval": 86,
+            "prediction_point": 113,
+            "observations_available": 120,
+            "point_predictions_available": 113,
+            "point_hits": 17,
+            "observation_left_censored": 27,
+            "observation_right_censored": 7,
+            "prediction_invalid": 7,
+            "no_detected_observed_band": 7,
+            "prediction_failures_available": 7,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.1147999017396743,
+          "n_finite_observation_and_point_prediction": 61,
+          "point_hit_rate_all_available": 0.6283185840707964,
+          "point_hit_rate_point_predictions": 0.6339285714285714,
+          "common_point_median_abs_log_error": 0.17038430694792467,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 52,
+            "prediction_point": 113,
+            "observations_available": 113,
+            "point_predictions_available": 112,
+            "point_hits": 71,
+            "observation_finite_interval": 61,
+            "observation_unavailable": 7,
+            "prediction_invalid": 7,
+            "no_detected_observed_band": 7,
+            "prediction_failures_available": 1,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 113,
+            "invalid": 7
+          },
+          "multi_component_hulls": 0,
+          "reasons": {
+            "nonfinite_endpoint": 6,
+            "crossed_or_inverted_endpoint": 1
+          }
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 5650,
+          "n_prediction_failures": 350,
+          "iou_conditional": 0.6583416583416584,
+          "logloss_conditional": 0.4555672467605587,
+          "n_positive_observed": 2763,
+          "n_positive_predicted": 2217,
+          "union": 3003,
+          "slope_identified": true
+        }
+      }
+    },
+    "D1": {
+      "P-Sch-publishedZ": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.47202925737063195,
+          "n_finite_observation_and_point_prediction": 78,
+          "point_hit_rate_all_available": 0.31666666666666665,
+          "point_hit_rate_point_predictions": 0.31666666666666665,
+          "common_point_median_abs_log_error": 0.39757260547327705,
+          "n_common_point_errors": 71,
+          "counts": {
+            "observation_finite_interval": 78,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 38,
+            "observation_left_censored": 33,
+            "observation_right_censored": 9,
+            "no_detected_observed_band": 9,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.2152332212254135,
+          "n_finite_observation_and_point_prediction": 60,
+          "point_hit_rate_all_available": 0.5045045045045045,
+          "point_hit_rate_point_predictions": 0.5045045045045045,
+          "common_point_median_abs_log_error": 0.2010392527481012,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 51,
+            "prediction_point": 120,
+            "observations_available": 111,
+            "point_predictions_available": 111,
+            "point_hits": 56,
+            "observation_finite_interval": 60,
+            "observation_unavailable": 9,
+            "no_detected_observed_band": 9,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6487681617182565,
+          "logloss_conditional": 0.40116402523539624,
+          "n_positive_observed": 2774,
+          "n_positive_predicted": 2446,
+          "union": 3166,
+          "slope_identified": true
+        }
+      },
+      "P-Beigi-publishedZ": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.2548158604698012,
+          "n_finite_observation_and_point_prediction": 78,
+          "point_hit_rate_all_available": 0.25,
+          "point_hit_rate_point_predictions": 0.25,
+          "common_point_median_abs_log_error": 0.22994730870903457,
+          "n_common_point_errors": 71,
+          "counts": {
+            "observation_finite_interval": 78,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 30,
+            "observation_left_censored": 33,
+            "observation_right_censored": 9,
+            "no_detected_observed_band": 9,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.2152332212254135,
+          "n_finite_observation_and_point_prediction": 60,
+          "point_hit_rate_all_available": 0.5045045045045045,
+          "point_hit_rate_point_predictions": 0.5045045045045045,
+          "common_point_median_abs_log_error": 0.2010392527481012,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 51,
+            "prediction_point": 120,
+            "observations_available": 111,
+            "point_predictions_available": 111,
+            "point_hits": 56,
+            "observation_finite_interval": 60,
+            "observation_unavailable": 9,
+            "no_detected_observed_band": 9,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6589977938859124,
+          "logloss_conditional": 0.40563531024379706,
+          "n_positive_observed": 2774,
+          "n_positive_predicted": 2490,
+          "union": 3173,
+          "slope_identified": true
+        }
+      },
+      "P-free-publishedZ": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.25828556189728646,
+          "n_finite_observation_and_point_prediction": 78,
+          "point_hit_rate_all_available": 0.23333333333333334,
+          "point_hit_rate_point_predictions": 0.23333333333333334,
+          "common_point_median_abs_log_error": 0.25028429008314157,
+          "n_common_point_errors": 71,
+          "counts": {
+            "observation_finite_interval": 78,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 28,
+            "observation_left_censored": 33,
+            "observation_right_censored": 9,
+            "no_detected_observed_band": 9,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.18260991187478542,
+          "n_finite_observation_and_point_prediction": 60,
+          "point_hit_rate_all_available": 0.5675675675675675,
+          "point_hit_rate_point_predictions": 0.5675675675675675,
+          "common_point_median_abs_log_error": 0.26479776824037293,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 51,
+            "prediction_point": 120,
+            "observations_available": 111,
+            "point_predictions_available": 111,
+            "point_hits": 63,
+            "observation_finite_interval": 60,
+            "observation_unavailable": 9,
+            "no_detected_observed_band": 9,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6652010050251256,
+          "logloss_conditional": 0.39616448338384913,
+          "n_positive_observed": 2774,
+          "n_positive_predicted": 2528,
+          "union": 3184,
+          "slope_identified": true
+        }
+      },
+      "P-Sch-targetDerivedZ-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.5035605431290129,
+          "n_finite_observation_and_point_prediction": 78,
+          "point_hit_rate_all_available": 0.3,
+          "point_hit_rate_point_predictions": 0.3,
+          "common_point_median_abs_log_error": 0.45884419652144115,
+          "n_common_point_errors": 71,
+          "counts": {
+            "observation_finite_interval": 78,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 36,
+            "observation_left_censored": 33,
+            "observation_right_censored": 9,
+            "no_detected_observed_band": 9,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.19480384468357997,
+          "n_finite_observation_and_point_prediction": 60,
+          "point_hit_rate_all_available": 0.5495495495495496,
+          "point_hit_rate_point_predictions": 0.5495495495495496,
+          "common_point_median_abs_log_error": 0.16889146503343866,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 51,
+            "prediction_point": 120,
+            "observations_available": 111,
+            "point_predictions_available": 111,
+            "point_hits": 61,
+            "observation_finite_interval": 60,
+            "observation_unavailable": 9,
+            "no_detected_observed_band": 9,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6415633937082936,
+          "logloss_conditional": 0.4034343926381512,
+          "n_positive_observed": 2774,
+          "n_positive_predicted": 2392,
+          "union": 3147,
+          "slope_identified": true
+        }
+      },
+      "P-Beigi-targetDerivedZ-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.24716311392518953,
+          "n_finite_observation_and_point_prediction": 78,
+          "point_hit_rate_all_available": 0.25,
+          "point_hit_rate_point_predictions": 0.25,
+          "common_point_median_abs_log_error": 0.24500249824351694,
+          "n_common_point_errors": 71,
+          "counts": {
+            "observation_finite_interval": 78,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 30,
+            "observation_left_censored": 33,
+            "observation_right_censored": 9,
+            "no_detected_observed_band": 9,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.19480384468357997,
+          "n_finite_observation_and_point_prediction": 60,
+          "point_hit_rate_all_available": 0.5495495495495496,
+          "point_hit_rate_point_predictions": 0.5495495495495496,
+          "common_point_median_abs_log_error": 0.16889146503343866,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 51,
+            "prediction_point": 120,
+            "observations_available": 111,
+            "point_predictions_available": 111,
+            "point_hits": 61,
+            "observation_finite_interval": 60,
+            "observation_unavailable": 9,
+            "no_detected_observed_band": 9,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6621236133122028,
+          "logloss_conditional": 0.4061936849784341,
+          "n_positive_observed": 2774,
+          "n_positive_predicted": 2470,
+          "union": 3155,
+          "slope_identified": true
+        }
+      },
+      "P-free-targetDerivedZ-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.245478748303955,
+          "n_finite_observation_and_point_prediction": 78,
+          "point_hit_rate_all_available": 0.24166666666666667,
+          "point_hit_rate_point_predictions": 0.24166666666666667,
+          "common_point_median_abs_log_error": 0.24158838903442736,
+          "n_common_point_errors": 71,
+          "counts": {
+            "observation_finite_interval": 78,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 29,
+            "observation_left_censored": 33,
+            "observation_right_censored": 9,
+            "no_detected_observed_band": 9,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.17215802954632015,
+          "n_finite_observation_and_point_prediction": 60,
+          "point_hit_rate_all_available": 0.6036036036036037,
+          "point_hit_rate_point_predictions": 0.6036036036036037,
+          "common_point_median_abs_log_error": 0.23266947150138098,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 51,
+            "prediction_point": 120,
+            "observations_available": 111,
+            "point_predictions_available": 111,
+            "point_hits": 67,
+            "observation_finite_interval": 60,
+            "observation_unavailable": 9,
+            "no_detected_observed_band": 9,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6606176376950016,
+          "logloss_conditional": 0.4000712576439084,
+          "n_positive_observed": 2774,
+          "n_positive_predicted": 2442,
+          "union": 3141,
+          "slope_identified": true
+        }
+      },
+      "D-logit": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.2596179562214097,
+          "n_finite_observation_and_point_prediction": 73,
+          "point_hit_rate_all_available": 0.18333333333333332,
+          "point_hit_rate_point_predictions": 0.22448979591836735,
+          "common_point_median_abs_log_error": 0.24944117901991758,
+          "n_common_point_errors": 71,
+          "counts": {
+            "observation_finite_interval": 78,
+            "prediction_point": 98,
+            "observations_available": 120,
+            "point_predictions_available": 98,
+            "point_hits": 22,
+            "observation_left_censored": 33,
+            "prediction_left_censored": 9,
+            "support_censored_predictions_available": 9,
+            "censor_interval_overlaps": 9,
+            "censor_interval_contained": 5,
+            "prediction_empty": 13,
+            "prediction_failures_available": 13,
+            "observation_right_censored": 9,
+            "no_detected_observed_band": 9,
+            "observation_unavailable": 0,
+            "prediction_right_censored": 0,
+            "prediction_invalid": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.2738111606583816,
+          "n_finite_observation_and_point_prediction": 40,
+          "point_hit_rate_all_available": 0.0990990990990991,
+          "point_hit_rate_point_predictions": 0.275,
+          "common_point_median_abs_log_error": 0.2738111606583816,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 51,
+            "prediction_right_censored": 67,
+            "observations_available": 111,
+            "support_censored_predictions_available": 65,
+            "censor_interval_overlaps": 56,
+            "censor_interval_contained": 51,
+            "observation_finite_interval": 60,
+            "prediction_point": 40,
+            "point_predictions_available": 40,
+            "point_hits": 11,
+            "prediction_empty": 13,
+            "prediction_failures_available": 6,
+            "observation_unavailable": 9,
+            "no_detected_observed_band": 9,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_invalid": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 107,
+            "empty": 13
+          },
+          "multi_component_hulls": 0,
+          "reasons": {
+            "no_band_within_support": 13
+          }
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6572039072039072,
+          "logloss_conditional": 0.6442569011260245,
+          "n_positive_observed": 2774,
+          "n_positive_predicted": 2655,
+          "union": 3276,
+          "slope_identified": true
+        },
+        "native_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6578225068618482,
+          "logloss_conditional": 0.37983315817076435,
+          "n_positive_observed": 2774,
+          "n_positive_predicted": 2662,
+          "union": 3279
+        }
+      },
+      "D-gbm": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.259433102167027,
+          "n_finite_observation_and_point_prediction": 76,
+          "point_hit_rate_all_available": 0.15833333333333333,
+          "point_hit_rate_point_predictions": 0.18269230769230768,
+          "common_point_median_abs_log_error": 0.2602359430244512,
+          "n_common_point_errors": 71,
+          "counts": {
+            "observation_finite_interval": 78,
+            "prediction_point": 104,
+            "observations_available": 120,
+            "point_predictions_available": 104,
+            "point_hits": 19,
+            "observation_left_censored": 33,
+            "prediction_left_censored": 8,
+            "support_censored_predictions_available": 8,
+            "censor_interval_overlaps": 7,
+            "censor_interval_contained": 6,
+            "observation_right_censored": 9,
+            "no_detected_observed_band": 9,
+            "prediction_empty": 8,
+            "prediction_failures_available": 8,
+            "observation_unavailable": 0,
+            "prediction_right_censored": 0,
+            "prediction_invalid": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.1612860695223438,
+          "n_finite_observation_and_point_prediction": 56,
+          "point_hit_rate_all_available": 0.16216216216216217,
+          "point_hit_rate_point_predictions": 0.32142857142857145,
+          "common_point_median_abs_log_error": 0.1734031503256045,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 51,
+            "prediction_right_censored": 56,
+            "observations_available": 111,
+            "support_censored_predictions_available": 55,
+            "censor_interval_overlaps": 53,
+            "censor_interval_contained": 51,
+            "observation_finite_interval": 60,
+            "prediction_point": 56,
+            "point_predictions_available": 56,
+            "point_hits": 18,
+            "observation_unavailable": 9,
+            "no_detected_observed_band": 9,
+            "prediction_empty": 8,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_invalid": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 112,
+            "empty": 8
+          },
+          "multi_component_hulls": 12,
+          "reasons": {
+            "no_band_within_support": 8
+          }
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6917221693625119,
+          "logloss_conditional": 0.38476879509765144,
+          "n_positive_observed": 2774,
+          "n_positive_predicted": 2560,
+          "union": 3153,
+          "slope_identified": true
+        },
+        "native_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6866286438529785,
+          "logloss_conditional": 0.3876479014056055,
+          "n_positive_observed": 2774,
+          "n_positive_predicted": 2549,
+          "union": 3156
+        }
+      },
+      "Triv-5-finite": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.19084875987954694,
+          "n_finite_observation_and_point_prediction": 78,
+          "point_hit_rate_all_available": 0.275,
+          "point_hit_rate_point_predictions": 0.275,
+          "common_point_median_abs_log_error": 0.19461125594179357,
+          "n_common_point_errors": 71,
+          "counts": {
+            "observation_finite_interval": 78,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 33,
+            "observation_left_censored": 33,
+            "observation_right_censored": 9,
+            "no_detected_observed_band": 9,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.18441775543079664,
+          "n_finite_observation_and_point_prediction": 60,
+          "point_hit_rate_all_available": 0.18018018018018017,
+          "point_hit_rate_point_predictions": 0.18018018018018017,
+          "common_point_median_abs_log_error": 0.22128273465343362,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 51,
+            "prediction_point": 120,
+            "observations_available": 111,
+            "point_predictions_available": 111,
+            "point_hits": 20,
+            "observation_finite_interval": 60,
+            "observation_unavailable": 9,
+            "no_detected_observed_band": 9,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6391917896087236,
+          "logloss_conditional": 0.410446661518747,
+          "n_positive_observed": 2774,
+          "n_positive_predicted": 2337,
+          "union": 3118,
+          "slope_identified": true
+        }
+      },
+      "Triv-5-legacy-edge-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.20431146678865553,
+          "n_finite_observation_and_point_prediction": 78,
+          "point_hit_rate_all_available": 0.25833333333333336,
+          "point_hit_rate_point_predictions": 0.2743362831858407,
+          "common_point_median_abs_log_error": 0.20243302023094967,
+          "n_common_point_errors": 71,
+          "counts": {
+            "observation_finite_interval": 78,
+            "prediction_point": 113,
+            "observations_available": 120,
+            "point_predictions_available": 113,
+            "point_hits": 31,
+            "observation_left_censored": 33,
+            "observation_right_censored": 9,
+            "no_detected_observed_band": 9,
+            "prediction_invalid": 7,
+            "prediction_failures_available": 7,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.15735112861665704,
+          "n_finite_observation_and_point_prediction": 60,
+          "point_hit_rate_all_available": 0.24324324324324326,
+          "point_hit_rate_point_predictions": 0.24324324324324326,
+          "common_point_median_abs_log_error": 0.22912487821388083,
+          "n_common_point_errors": 40,
+          "counts": {
+            "observation_right_censored": 51,
+            "prediction_point": 113,
+            "observations_available": 111,
+            "point_predictions_available": 111,
+            "point_hits": 27,
+            "observation_finite_interval": 60,
+            "observation_unavailable": 9,
+            "no_detected_observed_band": 9,
+            "prediction_invalid": 7,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 113,
+            "invalid": 7
+          },
+          "multi_component_hulls": 0,
+          "reasons": {
+            "nonfinite_endpoint": 6,
+            "crossed_or_inverted_endpoint": 1
+          }
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 5650,
+          "n_prediction_failures": 350,
+          "iou_conditional": 0.6928754813863928,
+          "logloss_conditional": 0.39056802633680926,
+          "n_positive_observed": 2771,
+          "n_positive_predicted": 2504,
+          "union": 3116,
+          "slope_identified": true
+        }
+      }
+    },
+    "B_T2r1": {
+      "P-Sch-publishedZ": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.7091137015290309,
+          "n_finite_observation_and_point_prediction": 63,
+          "point_hit_rate_all_available": 0.3416666666666667,
+          "point_hit_rate_point_predictions": 0.3416666666666667,
+          "common_point_median_abs_log_error": 0.7105593914692585,
+          "n_common_point_errors": 61,
+          "counts": {
+            "observation_finite_interval": 63,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 41,
+            "observation_left_censored": 46,
+            "observation_right_censored": 11,
+            "no_detected_observed_band": 11,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.19614454044700946,
+          "n_finite_observation_and_point_prediction": 43,
+          "point_hit_rate_all_available": 0.6238532110091743,
+          "point_hit_rate_point_predictions": 0.6238532110091743,
+          "common_point_median_abs_log_error": 0.19614454044700946,
+          "n_common_point_errors": 33,
+          "counts": {
+            "observation_right_censored": 66,
+            "prediction_point": 120,
+            "observations_available": 109,
+            "point_predictions_available": 109,
+            "point_hits": 68,
+            "observation_finite_interval": 43,
+            "observation_unavailable": 11,
+            "no_detected_observed_band": 11,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6316279069767442,
+          "logloss_conditional": 0.4084123905080351,
+          "n_positive_observed": 3016,
+          "n_positive_predicted": 2246,
+          "union": 3225,
+          "slope_identified": true
+        }
+      },
+      "P-Beigi-publishedZ": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.29023968545326934,
+          "n_finite_observation_and_point_prediction": 63,
+          "point_hit_rate_all_available": 0.275,
+          "point_hit_rate_point_predictions": 0.275,
+          "common_point_median_abs_log_error": 0.29511905887248785,
+          "n_common_point_errors": 61,
+          "counts": {
+            "observation_finite_interval": 63,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 33,
+            "observation_left_censored": 46,
+            "observation_right_censored": 11,
+            "no_detected_observed_band": 11,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.19614454044700946,
+          "n_finite_observation_and_point_prediction": 43,
+          "point_hit_rate_all_available": 0.6238532110091743,
+          "point_hit_rate_point_predictions": 0.6238532110091743,
+          "common_point_median_abs_log_error": 0.19614454044700946,
+          "n_common_point_errors": 33,
+          "counts": {
+            "observation_right_censored": 66,
+            "prediction_point": 120,
+            "observations_available": 109,
+            "point_predictions_available": 109,
+            "point_hits": 68,
+            "observation_finite_interval": 43,
+            "observation_unavailable": 11,
+            "no_detected_observed_band": 11,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6525037936267072,
+          "logloss_conditional": 0.4496016271040572,
+          "n_positive_observed": 3016,
+          "n_positive_predicted": 2429,
+          "union": 3295,
+          "slope_identified": true
+        }
+      },
+      "P-free-publishedZ": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.2324159232865095,
+          "n_finite_observation_and_point_prediction": 63,
+          "point_hit_rate_all_available": 0.3416666666666667,
+          "point_hit_rate_point_predictions": 0.3416666666666667,
+          "common_point_median_abs_log_error": 0.2324159232865095,
+          "n_common_point_errors": 61,
+          "counts": {
+            "observation_finite_interval": 63,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 41,
+            "observation_left_censored": 46,
+            "observation_right_censored": 11,
+            "no_detected_observed_band": 11,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.13048303517403384,
+          "n_finite_observation_and_point_prediction": 43,
+          "point_hit_rate_all_available": 0.6880733944954128,
+          "point_hit_rate_point_predictions": 0.6880733944954128,
+          "common_point_median_abs_log_error": 0.1584430492371107,
+          "n_common_point_errors": 33,
+          "counts": {
+            "observation_right_censored": 66,
+            "prediction_point": 120,
+            "observations_available": 109,
+            "point_predictions_available": 109,
+            "point_hits": 75,
+            "observation_finite_interval": 43,
+            "observation_unavailable": 11,
+            "no_detected_observed_band": 11,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6375505129002176,
+          "logloss_conditional": 0.48180778434784927,
+          "n_positive_observed": 3016,
+          "n_positive_predicted": 2252,
+          "union": 3217,
+          "slope_identified": true
+        }
+      },
+      "P-Sch-targetDerivedZ-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.4168276804543206,
+          "n_finite_observation_and_point_prediction": 63,
+          "point_hit_rate_all_available": 0.38333333333333336,
+          "point_hit_rate_point_predictions": 0.38333333333333336,
+          "common_point_median_abs_log_error": 0.4368975364381693,
+          "n_common_point_errors": 61,
+          "counts": {
+            "observation_finite_interval": 63,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 46,
+            "observation_left_censored": 46,
+            "observation_right_censored": 11,
+            "no_detected_observed_band": 11,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.32873510735147426,
+          "n_finite_observation_and_point_prediction": 43,
+          "point_hit_rate_all_available": 0.47706422018348627,
+          "point_hit_rate_point_predictions": 0.47706422018348627,
+          "common_point_median_abs_log_error": 0.34528846362186816,
+          "n_common_point_errors": 33,
+          "counts": {
+            "observation_right_censored": 66,
+            "prediction_point": 120,
+            "observations_available": 109,
+            "point_predictions_available": 109,
+            "point_hits": 52,
+            "observation_finite_interval": 43,
+            "observation_unavailable": 11,
+            "no_detected_observed_band": 11,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6839536302623551,
+          "logloss_conditional": 0.3749928503675025,
+          "n_positive_observed": 3016,
+          "n_positive_predicted": 2504,
+          "union": 3278,
+          "slope_identified": true
+        }
+      },
+      "P-Beigi-targetDerivedZ-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.35120584512159936,
+          "n_finite_observation_and_point_prediction": 63,
+          "point_hit_rate_all_available": 0.3,
+          "point_hit_rate_point_predictions": 0.3,
+          "common_point_median_abs_log_error": 0.40325551341620686,
+          "n_common_point_errors": 61,
+          "counts": {
+            "observation_finite_interval": 63,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 36,
+            "observation_left_censored": 46,
+            "observation_right_censored": 11,
+            "no_detected_observed_band": 11,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.32873510735147426,
+          "n_finite_observation_and_point_prediction": 43,
+          "point_hit_rate_all_available": 0.47706422018348627,
+          "point_hit_rate_point_predictions": 0.47706422018348627,
+          "common_point_median_abs_log_error": 0.34528846362186816,
+          "n_common_point_errors": 33,
+          "counts": {
+            "observation_right_censored": 66,
+            "prediction_point": 120,
+            "observations_available": 109,
+            "point_predictions_available": 109,
+            "point_hits": 52,
+            "observation_finite_interval": 43,
+            "observation_unavailable": 11,
+            "no_detected_observed_band": 11,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6621140142517815,
+          "logloss_conditional": 0.430404551269475,
+          "n_positive_observed": 3016,
+          "n_positive_predicted": 2582,
+          "union": 3368,
+          "slope_identified": true
+        }
+      },
+      "P-free-targetDerivedZ-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.36362909635271545,
+          "n_finite_observation_and_point_prediction": 63,
+          "point_hit_rate_all_available": 0.26666666666666666,
+          "point_hit_rate_point_predictions": 0.26666666666666666,
+          "common_point_median_abs_log_error": 0.3668960869329393,
+          "n_common_point_errors": 61,
+          "counts": {
+            "observation_finite_interval": 63,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 32,
+            "observation_left_censored": 46,
+            "observation_right_censored": 11,
+            "no_detected_observed_band": 11,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.21366120653781773,
+          "n_finite_observation_and_point_prediction": 43,
+          "point_hit_rate_all_available": 0.5229357798165137,
+          "point_hit_rate_point_predictions": 0.5229357798165137,
+          "common_point_median_abs_log_error": 0.21366120653781773,
+          "n_common_point_errors": 33,
+          "counts": {
+            "observation_right_censored": 66,
+            "prediction_point": 120,
+            "observations_available": 109,
+            "point_predictions_available": 109,
+            "point_hits": 57,
+            "observation_finite_interval": 43,
+            "observation_unavailable": 11,
+            "no_detected_observed_band": 11,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6729467176920813,
+          "logloss_conditional": 0.41204341990747406,
+          "n_positive_observed": 3016,
+          "n_positive_predicted": 2667,
+          "union": 3397,
+          "slope_identified": true
+        }
+      },
+      "D-logit": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.401424984384079,
+          "n_finite_observation_and_point_prediction": 62,
+          "point_hit_rate_all_available": 0.075,
+          "point_hit_rate_point_predictions": 0.10227272727272728,
+          "common_point_median_abs_log_error": 0.4007645958115309,
+          "n_common_point_errors": 61,
+          "counts": {
+            "observation_finite_interval": 63,
+            "prediction_point": 88,
+            "observations_available": 120,
+            "point_predictions_available": 88,
+            "point_hits": 9,
+            "observation_left_censored": 46,
+            "prediction_left_censored": 18,
+            "support_censored_predictions_available": 18,
+            "censor_interval_overlaps": 18,
+            "censor_interval_contained": 17,
+            "prediction_empty": 14,
+            "prediction_failures_available": 14,
+            "observation_right_censored": 11,
+            "no_detected_observed_band": 11,
+            "observation_unavailable": 0,
+            "prediction_right_censored": 0,
+            "prediction_invalid": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.28154175097562106,
+          "n_finite_observation_and_point_prediction": 33,
+          "point_hit_rate_all_available": 0.08256880733944955,
+          "point_hit_rate_point_predictions": 0.23076923076923078,
+          "common_point_median_abs_log_error": 0.28154175097562106,
+          "n_common_point_errors": 33,
+          "counts": {
+            "observation_right_censored": 66,
+            "prediction_right_censored": 67,
+            "observations_available": 109,
+            "support_censored_predictions_available": 64,
+            "censor_interval_overlaps": 62,
+            "censor_interval_contained": 60,
+            "observation_finite_interval": 43,
+            "prediction_point": 39,
+            "point_predictions_available": 39,
+            "point_hits": 9,
+            "prediction_empty": 14,
+            "prediction_failures_available": 6,
+            "observation_unavailable": 11,
+            "no_detected_observed_band": 11,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_invalid": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 106,
+            "empty": 14
+          },
+          "multi_component_hulls": 0,
+          "reasons": {
+            "no_band_within_support": 14
+          }
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6624314178457984,
+          "logloss_conditional": 0.6427182984391067,
+          "n_positive_observed": 3016,
+          "n_positive_predicted": 2741,
+          "union": 3463,
+          "slope_identified": true
+        },
+        "native_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6633006347374495,
+          "logloss_conditional": 0.4171662856084666,
+          "n_positive_observed": 3016,
+          "n_positive_predicted": 2749,
+          "union": 3466
+        }
+      },
+      "D-gbm": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.3249057402848152,
+          "n_finite_observation_and_point_prediction": 61,
+          "point_hit_rate_all_available": 0.09166666666666666,
+          "point_hit_rate_point_predictions": 0.11578947368421053,
+          "common_point_median_abs_log_error": 0.3249057402848152,
+          "n_common_point_errors": 61,
+          "counts": {
+            "observation_finite_interval": 63,
+            "prediction_point": 95,
+            "observations_available": 120,
+            "point_predictions_available": 95,
+            "point_hits": 11,
+            "prediction_left_censored": 16,
+            "support_censored_predictions_available": 16,
+            "censor_interval_overlaps": 15,
+            "censor_interval_contained": 14,
+            "observation_left_censored": 46,
+            "observation_right_censored": 11,
+            "prediction_empty": 9,
+            "no_detected_observed_band": 11,
+            "prediction_failures_available": 9,
+            "observation_unavailable": 0,
+            "prediction_right_censored": 0,
+            "prediction_invalid": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.1764486433845157,
+          "n_finite_observation_and_point_prediction": 42,
+          "point_hit_rate_all_available": 0.14678899082568808,
+          "point_hit_rate_point_predictions": 0.2909090909090909,
+          "common_point_median_abs_log_error": 0.18280676718559952,
+          "n_common_point_errors": 33,
+          "counts": {
+            "observation_right_censored": 66,
+            "prediction_right_censored": 56,
+            "observations_available": 109,
+            "support_censored_predictions_available": 54,
+            "censor_interval_overlaps": 54,
+            "censor_interval_contained": 53,
+            "prediction_point": 55,
+            "point_predictions_available": 55,
+            "point_hits": 16,
+            "observation_finite_interval": 43,
+            "observation_unavailable": 11,
+            "prediction_empty": 9,
+            "no_detected_observed_band": 11,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_invalid": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 111,
+            "empty": 9
+          },
+          "multi_component_hulls": 6,
+          "reasons": {
+            "no_band_within_support": 9
+          }
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.662474407721556,
+          "logloss_conditional": 0.48391385902023853,
+          "n_positive_observed": 3016,
+          "n_positive_predicted": 2668,
+          "union": 3419,
+          "slope_identified": true
+        },
+        "native_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6633518572682071,
+          "logloss_conditional": 0.4714821287491198,
+          "n_positive_observed": 3016,
+          "n_positive_predicted": 2671,
+          "union": 3419
+        }
+      },
+      "Triv-5-finite": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.3397911634694969,
+          "n_finite_observation_and_point_prediction": 63,
+          "point_hit_rate_all_available": 0.23333333333333334,
+          "point_hit_rate_point_predictions": 0.23333333333333334,
+          "common_point_median_abs_log_error": 0.33766687391816985,
+          "n_common_point_errors": 61,
+          "counts": {
+            "observation_finite_interval": 63,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 28,
+            "observation_left_censored": 46,
+            "observation_right_censored": 11,
+            "no_detected_observed_band": 11,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.21129772616485487,
+          "n_finite_observation_and_point_prediction": 43,
+          "point_hit_rate_all_available": 0.09174311926605505,
+          "point_hit_rate_point_predictions": 0.09174311926605505,
+          "common_point_median_abs_log_error": 0.21282142046468802,
+          "n_common_point_errors": 33,
+          "counts": {
+            "observation_right_censored": 66,
+            "prediction_point": 120,
+            "observations_available": 109,
+            "point_predictions_available": 109,
+            "point_hits": 10,
+            "observation_finite_interval": 43,
+            "observation_unavailable": 11,
+            "no_detected_observed_band": 11,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.614868804664723,
+          "logloss_conditional": 0.49151937346861374,
+          "n_positive_observed": 3016,
+          "n_positive_predicted": 2523,
+          "union": 3430,
+          "slope_identified": true
+        }
+      },
+      "Triv-5-legacy-edge-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.34248052580056637,
+          "n_finite_observation_and_point_prediction": 63,
+          "point_hit_rate_all_available": 0.25833333333333336,
+          "point_hit_rate_point_predictions": 0.2743362831858407,
+          "common_point_median_abs_log_error": 0.33562065973959454,
+          "n_common_point_errors": 61,
+          "counts": {
+            "observation_finite_interval": 63,
+            "prediction_point": 113,
+            "observations_available": 120,
+            "point_predictions_available": 113,
+            "point_hits": 31,
+            "observation_left_censored": 46,
+            "observation_right_censored": 11,
+            "prediction_invalid": 7,
+            "no_detected_observed_band": 11,
+            "prediction_failures_available": 7,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.21624401983008235,
+          "n_finite_observation_and_point_prediction": 43,
+          "point_hit_rate_all_available": 0.5871559633027523,
+          "point_hit_rate_point_predictions": 0.5871559633027523,
+          "common_point_median_abs_log_error": 0.2163495835601389,
+          "n_common_point_errors": 33,
+          "counts": {
+            "observation_right_censored": 66,
+            "prediction_point": 113,
+            "observations_available": 109,
+            "point_predictions_available": 109,
+            "point_hits": 64,
+            "observation_finite_interval": 43,
+            "observation_unavailable": 11,
+            "prediction_invalid": 7,
+            "no_detected_observed_band": 11,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 113,
+            "invalid": 7
+          },
+          "multi_component_hulls": 0,
+          "reasons": {
+            "nonfinite_endpoint": 6,
+            "crossed_or_inverted_endpoint": 1
+          }
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 5650,
+          "n_prediction_failures": 350,
+          "iou_conditional": 0.6608340624088656,
+          "logloss_conditional": 0.47565653585156364,
+          "n_positive_observed": 3016,
+          "n_positive_predicted": 2679,
+          "union": 3429,
+          "slope_identified": true
+        }
+      }
+    },
+    "B_T2r2": {
+      "P-Sch-publishedZ": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.6105808185514445,
+          "n_finite_observation_and_point_prediction": 58,
+          "point_hit_rate_all_available": 0.38333333333333336,
+          "point_hit_rate_point_predictions": 0.38333333333333336,
+          "common_point_median_abs_log_error": 0.6031083271134015,
+          "n_common_point_errors": 53,
+          "counts": {
+            "observation_finite_interval": 58,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 46,
+            "observation_left_censored": 51,
+            "observation_right_censored": 11,
+            "no_detected_observed_band": 11,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.18049604038435607,
+          "n_finite_observation_and_point_prediction": 47,
+          "point_hit_rate_all_available": 0.6330275229357798,
+          "point_hit_rate_point_predictions": 0.6330275229357798,
+          "common_point_median_abs_log_error": 0.17778982901145773,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 62,
+            "prediction_point": 120,
+            "observations_available": 109,
+            "point_predictions_available": 109,
+            "point_hits": 69,
+            "observation_finite_interval": 47,
+            "observation_unavailable": 11,
+            "no_detected_observed_band": 11,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6680289217227287,
+          "logloss_conditional": 0.39448575702886507,
+          "n_positive_observed": 2858,
+          "n_positive_predicted": 2448,
+          "union": 3181,
+          "slope_identified": true
+        }
+      },
+      "P-Beigi-publishedZ": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.3126486974007173,
+          "n_finite_observation_and_point_prediction": 58,
+          "point_hit_rate_all_available": 0.26666666666666666,
+          "point_hit_rate_point_predictions": 0.26666666666666666,
+          "common_point_median_abs_log_error": 0.31297511352103063,
+          "n_common_point_errors": 53,
+          "counts": {
+            "observation_finite_interval": 58,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 32,
+            "observation_left_censored": 51,
+            "observation_right_censored": 11,
+            "no_detected_observed_band": 11,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.18049604038435607,
+          "n_finite_observation_and_point_prediction": 47,
+          "point_hit_rate_all_available": 0.6330275229357798,
+          "point_hit_rate_point_predictions": 0.6330275229357798,
+          "common_point_median_abs_log_error": 0.17778982901145773,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 62,
+            "prediction_point": 120,
+            "observations_available": 109,
+            "point_predictions_available": 109,
+            "point_hits": 69,
+            "observation_finite_interval": 47,
+            "observation_unavailable": 11,
+            "no_detected_observed_band": 11,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6411800120409392,
+          "logloss_conditional": 0.42281339380091526,
+          "n_positive_observed": 2858,
+          "n_positive_predicted": 2594,
+          "union": 3322,
+          "slope_identified": true
+        }
+      },
+      "P-free-publishedZ": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.22720132909903545,
+          "n_finite_observation_and_point_prediction": 58,
+          "point_hit_rate_all_available": 0.2833333333333333,
+          "point_hit_rate_point_predictions": 0.2833333333333333,
+          "common_point_median_abs_log_error": 0.22486714269943486,
+          "n_common_point_errors": 53,
+          "counts": {
+            "observation_finite_interval": 58,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 34,
+            "observation_left_censored": 51,
+            "observation_right_censored": 11,
+            "no_detected_observed_band": 11,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.1403837771787764,
+          "n_finite_observation_and_point_prediction": 47,
+          "point_hit_rate_all_available": 0.6605504587155964,
+          "point_hit_rate_point_predictions": 0.6605504587155964,
+          "common_point_median_abs_log_error": 0.1393062706037685,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 62,
+            "prediction_point": 120,
+            "observations_available": 109,
+            "point_predictions_available": 109,
+            "point_hits": 72,
+            "observation_finite_interval": 47,
+            "observation_unavailable": 11,
+            "no_detected_observed_band": 11,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6430356027482823,
+          "logloss_conditional": 0.41756186905076903,
+          "n_positive_observed": 2858,
+          "n_positive_predicted": 2403,
+          "union": 3202,
+          "slope_identified": true
+        }
+      },
+      "P-Sch-targetDerivedZ-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.26744975256346115,
+          "n_finite_observation_and_point_prediction": 58,
+          "point_hit_rate_all_available": 0.5083333333333333,
+          "point_hit_rate_point_predictions": 0.5083333333333333,
+          "common_point_median_abs_log_error": 0.2579201922459755,
+          "n_common_point_errors": 53,
+          "counts": {
+            "observation_finite_interval": 58,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 61,
+            "observation_left_censored": 51,
+            "observation_right_censored": 11,
+            "no_detected_observed_band": 11,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.33806465371283734,
+          "n_finite_observation_and_point_prediction": 47,
+          "point_hit_rate_all_available": 0.44036697247706424,
+          "point_hit_rate_point_predictions": 0.44036697247706424,
+          "common_point_median_abs_log_error": 0.3363494001602992,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 62,
+            "prediction_point": 120,
+            "observations_available": 109,
+            "point_predictions_available": 109,
+            "point_hits": 48,
+            "observation_finite_interval": 47,
+            "observation_unavailable": 11,
+            "no_detected_observed_band": 11,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.7029492246883551,
+          "logloss_conditional": 0.39353588996387845,
+          "n_positive_observed": 2858,
+          "n_positive_predicted": 2743,
+          "union": 3289,
+          "slope_identified": true
+        }
+      },
+      "P-Beigi-targetDerivedZ-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.32649574081047483,
+          "n_finite_observation_and_point_prediction": 58,
+          "point_hit_rate_all_available": 0.26666666666666666,
+          "point_hit_rate_point_predictions": 0.26666666666666666,
+          "common_point_median_abs_log_error": 0.3399707902254462,
+          "n_common_point_errors": 53,
+          "counts": {
+            "observation_finite_interval": 58,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 32,
+            "observation_left_censored": 51,
+            "observation_right_censored": 11,
+            "no_detected_observed_band": 11,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.33806465371283734,
+          "n_finite_observation_and_point_prediction": 47,
+          "point_hit_rate_all_available": 0.44036697247706424,
+          "point_hit_rate_point_predictions": 0.44036697247706424,
+          "common_point_median_abs_log_error": 0.3363494001602992,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 62,
+            "prediction_point": 120,
+            "observations_available": 109,
+            "point_predictions_available": 109,
+            "point_hits": 48,
+            "observation_finite_interval": 47,
+            "observation_unavailable": 11,
+            "no_detected_observed_band": 11,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6302786555587475,
+          "logloss_conditional": 0.4399518036598487,
+          "n_positive_observed": 2858,
+          "n_positive_predicted": 2817,
+          "union": 3481,
+          "slope_identified": true
+        }
+      },
+      "P-free-targetDerivedZ-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.3367743713029301,
+          "n_finite_observation_and_point_prediction": 58,
+          "point_hit_rate_all_available": 0.3,
+          "point_hit_rate_point_predictions": 0.3,
+          "common_point_median_abs_log_error": 0.3363372552544064,
+          "n_common_point_errors": 53,
+          "counts": {
+            "observation_finite_interval": 58,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 36,
+            "observation_left_censored": 51,
+            "observation_right_censored": 11,
+            "no_detected_observed_band": 11,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.25711577170200745,
+          "n_finite_observation_and_point_prediction": 47,
+          "point_hit_rate_all_available": 0.48623853211009177,
+          "point_hit_rate_point_predictions": 0.48623853211009177,
+          "common_point_median_abs_log_error": 0.2858076472643003,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 62,
+            "prediction_point": 120,
+            "observations_available": 109,
+            "point_predictions_available": 109,
+            "point_hits": 53,
+            "observation_finite_interval": 47,
+            "observation_unavailable": 11,
+            "no_detected_observed_band": 11,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6572077185017026,
+          "logloss_conditional": 0.43442816766055,
+          "n_positive_observed": 2858,
+          "n_positive_predicted": 2982,
+          "union": 3524,
+          "slope_identified": true
+        }
+      },
+      "D-logit": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.3181414034389492,
+          "n_finite_observation_and_point_prediction": 55,
+          "point_hit_rate_all_available": 0.16666666666666666,
+          "point_hit_rate_point_predictions": 0.24691358024691357,
+          "common_point_median_abs_log_error": 0.3181414034389492,
+          "n_common_point_errors": 53,
+          "counts": {
+            "observation_finite_interval": 58,
+            "prediction_point": 81,
+            "observations_available": 120,
+            "point_predictions_available": 81,
+            "point_hits": 20,
+            "observation_left_censored": 51,
+            "prediction_left_censored": 25,
+            "support_censored_predictions_available": 25,
+            "censor_interval_overlaps": 25,
+            "censor_interval_contained": 24,
+            "prediction_empty": 14,
+            "prediction_failures_available": 14,
+            "observation_right_censored": 11,
+            "no_detected_observed_band": 11,
+            "observation_unavailable": 0,
+            "prediction_right_censored": 0,
+            "prediction_invalid": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.203261736838304,
+          "n_finite_observation_and_point_prediction": 34,
+          "point_hit_rate_all_available": 0.09174311926605505,
+          "point_hit_rate_point_predictions": 0.25,
+          "common_point_median_abs_log_error": 0.203261736838304,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 62,
+            "prediction_right_censored": 66,
+            "observations_available": 109,
+            "support_censored_predictions_available": 62,
+            "censor_interval_overlaps": 56,
+            "censor_interval_contained": 55,
+            "observation_finite_interval": 47,
+            "prediction_point": 40,
+            "point_predictions_available": 40,
+            "point_hits": 10,
+            "prediction_empty": 14,
+            "prediction_failures_available": 7,
+            "observation_unavailable": 11,
+            "no_detected_observed_band": 11,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_invalid": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 106,
+            "empty": 14
+          },
+          "multi_component_hulls": 0,
+          "reasons": {
+            "no_band_within_support": 14
+          }
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6484679665738161,
+          "logloss_conditional": 0.706207323662825,
+          "n_positive_observed": 2858,
+          "n_positive_predicted": 3060,
+          "union": 3590,
+          "slope_identified": true
+        },
+        "native_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6481223922114048,
+          "logloss_conditional": 0.43666634517365566,
+          "n_positive_observed": 2858,
+          "n_positive_predicted": 3067,
+          "union": 3595
+        }
+      },
+      "D-gbm": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.2973775905147136,
+          "n_finite_observation_and_point_prediction": 53,
+          "point_hit_rate_all_available": 0.15,
+          "point_hit_rate_point_predictions": 0.20930232558139536,
+          "common_point_median_abs_log_error": 0.2973775905147136,
+          "n_common_point_errors": 53,
+          "counts": {
+            "observation_finite_interval": 58,
+            "prediction_point": 86,
+            "observations_available": 120,
+            "point_predictions_available": 86,
+            "point_hits": 18,
+            "prediction_left_censored": 25,
+            "support_censored_predictions_available": 25,
+            "censor_interval_overlaps": 24,
+            "censor_interval_contained": 21,
+            "observation_left_censored": 51,
+            "observation_right_censored": 11,
+            "prediction_empty": 9,
+            "no_detected_observed_band": 11,
+            "prediction_failures_available": 9,
+            "observation_unavailable": 0,
+            "prediction_right_censored": 0,
+            "prediction_invalid": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.1652742379942856,
+          "n_finite_observation_and_point_prediction": 44,
+          "point_hit_rate_all_available": 0.1559633027522936,
+          "point_hit_rate_point_predictions": 0.3090909090909091,
+          "common_point_median_abs_log_error": 0.17417013361226974,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 62,
+            "prediction_right_censored": 56,
+            "observations_available": 109,
+            "support_censored_predictions_available": 53,
+            "censor_interval_overlaps": 51,
+            "censor_interval_contained": 50,
+            "prediction_point": 55,
+            "point_predictions_available": 55,
+            "point_hits": 17,
+            "observation_finite_interval": 47,
+            "observation_unavailable": 11,
+            "prediction_empty": 9,
+            "no_detected_observed_band": 11,
+            "prediction_failures_available": 1,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_invalid": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 111,
+            "empty": 9
+          },
+          "multi_component_hulls": 6,
+          "reasons": {
+            "no_band_within_support": 9
+          }
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.667425320056899,
+          "logloss_conditional": 0.5455286353391898,
+          "n_positive_observed": 2858,
+          "n_positive_predicted": 3003,
+          "union": 3515,
+          "slope_identified": true
+        },
+        "native_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6677098150782361,
+          "logloss_conditional": 0.47288997675421995,
+          "n_positive_observed": 2858,
+          "n_positive_predicted": 3004,
+          "union": 3515
+        }
+      },
+      "Triv-5-finite": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.2908567489295683,
+          "n_finite_observation_and_point_prediction": 58,
+          "point_hit_rate_all_available": 0.325,
+          "point_hit_rate_point_predictions": 0.325,
+          "common_point_median_abs_log_error": 0.2950332626564711,
+          "n_common_point_errors": 53,
+          "counts": {
+            "observation_finite_interval": 58,
+            "prediction_point": 120,
+            "observations_available": 120,
+            "point_predictions_available": 120,
+            "point_hits": 39,
+            "observation_left_censored": 51,
+            "observation_right_censored": 11,
+            "no_detected_observed_band": 11,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.19630689421957673,
+          "n_finite_observation_and_point_prediction": 47,
+          "point_hit_rate_all_available": 0.11926605504587157,
+          "point_hit_rate_point_predictions": 0.11926605504587157,
+          "common_point_median_abs_log_error": 0.22316486909620661,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 62,
+            "prediction_point": 120,
+            "observations_available": 109,
+            "point_predictions_available": 109,
+            "point_hits": 13,
+            "observation_finite_interval": 47,
+            "observation_unavailable": 11,
+            "no_detected_observed_band": 11,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "prediction_invalid": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0,
+            "prediction_failures_available": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 120
+          },
+          "multi_component_hulls": 0,
+          "reasons": {}
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 6000,
+          "n_prediction_failures": 0,
+          "iou_conditional": 0.6121694626101791,
+          "logloss_conditional": 0.4943685069682537,
+          "n_positive_observed": 2858,
+          "n_positive_predicted": 2812,
+          "union": 3517,
+          "slope_identified": true
+        }
+      },
+      "Triv-5-legacy-edge-diagnostic": {
+        "lower": {
+          "median_abs_log_error_conditional": 0.2866802352026655,
+          "n_finite_observation_and_point_prediction": 57,
+          "point_hit_rate_all_available": 0.3416666666666667,
+          "point_hit_rate_point_predictions": 0.36283185840707965,
+          "common_point_median_abs_log_error": 0.28058942707710216,
+          "n_common_point_errors": 53,
+          "counts": {
+            "observation_finite_interval": 58,
+            "prediction_point": 113,
+            "observations_available": 120,
+            "point_predictions_available": 113,
+            "point_hits": 41,
+            "observation_left_censored": 51,
+            "observation_right_censored": 11,
+            "prediction_invalid": 7,
+            "no_detected_observed_band": 11,
+            "prediction_failures_available": 7,
+            "observation_unavailable": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0
+          }
+        },
+        "upper": {
+          "median_abs_log_error_conditional": 0.20193290259535968,
+          "n_finite_observation_and_point_prediction": 47,
+          "point_hit_rate_all_available": 0.5229357798165137,
+          "point_hit_rate_point_predictions": 0.5277777777777778,
+          "common_point_median_abs_log_error": 0.23272226978294322,
+          "n_common_point_errors": 34,
+          "counts": {
+            "observation_right_censored": 62,
+            "prediction_point": 113,
+            "observations_available": 109,
+            "point_predictions_available": 108,
+            "point_hits": 57,
+            "observation_finite_interval": 47,
+            "observation_unavailable": 11,
+            "prediction_invalid": 7,
+            "no_detected_observed_band": 11,
+            "prediction_failures_available": 1,
+            "observation_left_censored": 0,
+            "prediction_left_censored": 0,
+            "prediction_right_censored": 0,
+            "prediction_empty": 0,
+            "support_censored_predictions_available": 0,
+            "censor_interval_overlaps": 0,
+            "censor_interval_contained": 0
+          }
+        },
+        "bands": {
+          "statuses": {
+            "band": 113,
+            "invalid": 7
+          },
+          "multi_component_hulls": 0,
+          "reasons": {
+            "nonfinite_endpoint": 6,
+            "crossed_or_inverted_endpoint": 1
+          }
+        },
+        "band_probability_score": {
+          "n_total": 6000,
+          "n_valid": 5650,
+          "n_prediction_failures": 350,
+          "iou_conditional": 0.6513083048919226,
+          "logloss_conditional": 0.5018984862445024,
+          "n_positive_observed": 2855,
+          "n_positive_predicted": 2951,
+          "union": 3516,
+          "slope_identified": true
+        }
+      }
+    }
+  },
+  "score_contract": {
+    "boundary_error": "median |predicted point - observed interval midpoint| on finite observed intervals and point predictions only",
+    "point_hit": "point lies within observation interval plus historical one nominal log-force step tolerance; empty/invalid/censored predictions are not point hits",
+    "censor_compatibility": "separate intersection/containment counts, never point accuracy",
+    "no_observed_band": "legacy lower right-censor convention preserved and counted; not proof the physical band lies above support",
+    "native_probability": "original model probabilities; not changed by boundary extraction",
+    "fewshot": "not rerun; old results cannot establish an unbiased adaptation comparison"
+  }
+}

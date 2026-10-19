@@ -1,0 +1,12 @@
+FROZEN_v2.json created 2026-10-19T10:31:51+09:00
+bf9a14c98806d1f922d223fdb9e5188d8c4a3a7fa9e67bfd4be0d58ae5259aad  FROZEN_v2.json
+6a8dc96aa9ed33d7839ecafd2d6f54c7e3c0c6e25dcb30b6af82095e492750ea  thermal_law.py
+f3d67d546b50a4757b2aa441c9b5d15ecd2436cb6633d98c836f4d5dbc874cd9  thermal_law2.py
+fbcec76de56621e641e89daf88d803382494684cba08e70d400c5cc2204696bf  rows.py
+1e02a4874c853aaaec6ea02f0329c8d9d1b671e7fc61041d4e6df8b11fad1fae  freeze2.py
+497e210c6644a1955568ca676ef43917f79da6354eec9de51755db7e2b8a4f03  analysis.py
+189ae149c7dd7d4dff7e8d448398fed6a0125369a23cdc82f596f2b80aede145  analysis.json
+replicate.log at 2026-10-19 10:32:03 KST:
+[2026-10-19 10:29:21]   추출 2024-04-22_TypeA_sample3/v3 (2000 긋기) · 여유 99 GB
+A3: v1 governs (processing started 10:10:53). A4, D2, B_T2 sample2, HighBowForceRange_1/2, coldwarm: not downloaded yet -> v2 is a pre-processing freeze for them.
+CAUTION B_T2 sample2 / high-force: friction-reconstruction session 030724 (= 2024-07-03, Helicore T2) was seen; 4 same-string upper brackets and 5 lower bounds visible in friction_offline.log [D]; the friction law itself was fitted on that session.

@@ -1,0 +1,17 @@
+{
+  "synthetic_tests": 23,
+  "accounting_assertions": 500,
+  "legacy_physics_parameter_max_tolerance": 1e-12,
+  "native_probability_score_max_tolerance": 1e-14,
+  "source_only_slope": true,
+  "all_12_physics_optimizers_success": true,
+  "code_and_legacy_hashes_match_frozen": true,
+  "test_tags": [
+    "B1",
+    "C1",
+    "D1",
+    "B_T2r1",
+    "B_T2r2"
+  ],
+  "new_fits_after_initial_run": 0
+}

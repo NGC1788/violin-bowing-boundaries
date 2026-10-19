@@ -1,0 +1,352 @@
+{
+  "A1": {
+    "dec5_pl_N": -0.03180687780641577,
+    "folders": {
+      "2024-03-25_TypeA_sample1/2024-03-27_r_v1": {
+        "dec5_pl_N": -0.029027559536936025,
+        "n": 800,
+        "selected_start_range_s": [
+          1.05,
+          1.05
+        ],
+        "speed_m_s": 0.04999085281805754
+      },
+      "2024-03-25_TypeA_sample1/2024-03-27_r_v2": {
+        "dec5_pl_N": -0.04061164626368761,
+        "n": 800,
+        "selected_start_range_s": [
+          0.55,
+          0.55
+        ],
+        "speed_m_s": 0.09996320991220936
+      },
+      "2024-03-25_TypeA_sample1/2024-03-27_r_v3": {
+        "dec5_pl_N": -0.025781427618623683,
+        "n": 800,
+        "selected_start_range_s": [
+          0.3,
+          0.3
+        ],
+        "speed_m_s": 0.19985213212140884
+      }
+    },
+    "scope": "부호 있는 힘 변화. 음수는 감소. 0.1초 창의 평균값 차이이며, 정확한 순간 5cm 힘 차이가 아니다.",
+    "legacy_difference_N": 0.0,
+    "feature_sha256": "e7961c8d86b514090967a288f1bd173190ee48021e01cab89303486ef55fe483"
+  },
+  "B1": {
+    "dec5_pl_N": -0.1041769382739347,
+    "folders": {
+      "2024-04-10_TypeB_sample1/2024-04-10/v1": {
+        "dec5_pl_N": -0.10838247216016925,
+        "n": 800,
+        "selected_start_range_s": [
+          1.05,
+          1.05
+        ],
+        "speed_m_s": 0.04986448400142861
+      },
+      "2024-04-10_TypeB_sample1/2024-04-10/v2": {
+        "dec5_pl_N": -0.10286260334664994,
+        "n": 800,
+        "selected_start_range_s": [
+          0.55,
+          0.55
+        ],
+        "speed_m_s": 0.0998001920076803
+      },
+      "2024-04-10_TypeB_sample1/2024-04-10/v3": {
+        "dec5_pl_N": -0.10128573931498493,
+        "n": 800,
+        "selected_start_range_s": [
+          0.3,
+          0.3
+        ],
+        "speed_m_s": 0.19980038403072245
+      }
+    },
+    "scope": "부호 있는 힘 변화. 음수는 감소. 0.1초 창의 평균값 차이이며, 정확한 순간 5cm 힘 차이가 아니다.",
+    "legacy_difference_N": 0.0,
+    "feature_sha256": "67e889a3e90070e0498b04cadecd27f52cfcea117d0ed19919d233189bb7d4b5"
+  },
+  "C1": {
+    "dec5_pl_N": -0.09621201527702421,
+    "folders": {
+      "2024-04-12_TypeC_sample1/2024-04-15/v1": {
+        "dec5_pl_N": -0.09677195414268684,
+        "n": 800,
+        "selected_start_range_s": [
+          1.05,
+          1.05
+        ],
+        "speed_m_s": 0.04986383500392411
+      },
+      "2024-04-12_TypeC_sample1/2024-04-15/v2": {
+        "dec5_pl_N": -0.09479334439130069,
+        "n": 800,
+        "selected_start_range_s": [
+          0.55,
+          0.55
+        ],
+        "speed_m_s": 0.0998001920076803
+      },
+      "2024-04-12_TypeC_sample1/2024-04-15/v3": {
+        "dec5_pl_N": -0.09707074729708506,
+        "n": 800,
+        "selected_start_range_s": [
+          0.3,
+          0.3
+        ],
+        "speed_m_s": 0.19980038403072245
+      }
+    },
+    "scope": "부호 있는 힘 변화. 음수는 감소. 0.1초 창의 평균값 차이이며, 정확한 순간 5cm 힘 차이가 아니다.",
+    "legacy_difference_N": 0.0,
+    "feature_sha256": "0a95128ff2132f7d16778bfdcd5ad31b0ed069b946d2b6ba0c314183170c33b9"
+  },
+  "D1": {
+    "dec5_pl_N": -0.07654164254318861,
+    "folders": {
+      "2024-04-15_TypeD_sample1/2024-04-17/v1": {
+        "dec5_pl_N": -0.08142412593130996,
+        "n": 800,
+        "selected_start_range_s": [
+          1.05,
+          1.05
+        ],
+        "speed_m_s": 0.04986430299710275
+      },
+      "2024-04-15_TypeD_sample1/2024-04-17/v2": {
+        "dec5_pl_N": -0.07771849989505607,
+        "n": 800,
+        "selected_start_range_s": [
+          0.55,
+          0.55
+        ],
+        "speed_m_s": 0.0998001920076803
+      },
+      "2024-04-15_TypeD_sample1/2024-04-17/v3": {
+        "dec5_pl_N": -0.07048230180319981,
+        "n": 800,
+        "selected_start_range_s": [
+          0.3,
+          0.3
+        ],
+        "speed_m_s": 0.19980038403072245
+      }
+    },
+    "scope": "부호 있는 힘 변화. 음수는 감소. 0.1초 창의 평균값 차이이며, 정확한 순간 5cm 힘 차이가 아니다.",
+    "legacy_difference_N": 0.0,
+    "feature_sha256": "625757e21a6c840c1c5f01cfa33e46535e4bd350f28003db7885064082da4843"
+  },
+  "A2": {
+    "dec5_pl_N": -0.0625719774152602,
+    "folders": {
+      "2024-04-19_TypeA_sample2/v1": {
+        "dec5_pl_N": -0.06784792617495337,
+        "n": 800,
+        "selected_start_range_s": [
+          1.05,
+          1.05
+        ],
+        "speed_m_s": 0.04986437997103027
+      },
+      "2024-04-19_TypeA_sample2/v2": {
+        "dec5_pl_N": -0.06099023091358215,
+        "n": 800,
+        "selected_start_range_s": [
+          0.55,
+          0.55
+        ],
+        "speed_m_s": 0.0998001920076803
+      },
+      "2024-04-19_TypeA_sample2/v3": {
+        "dec5_pl_N": -0.058877775157245085,
+        "n": 800,
+        "selected_start_range_s": [
+          0.3,
+          0.3
+        ],
+        "speed_m_s": 0.19980038403072245
+      }
+    },
+    "scope": "부호 있는 힘 변화. 음수는 감소. 0.1초 창의 평균값 차이이며, 정확한 순간 5cm 힘 차이가 아니다.",
+    "legacy_difference_N": 0.0,
+    "feature_sha256": "3345934e53c0eafdbca0a89717a22a43cfac2fd3c294a813673a43b8c960c272"
+  },
+  "C_T2": {
+    "dec5_pl_N": -0.10650972000769206,
+    "folders": {
+      "2024-06-11_TypeC_T2_sample1/v1": {
+        "dec5_pl_N": -0.10890976666238647,
+        "n": 800,
+        "selected_start_range_s": [
+          1.05,
+          1.05
+        ],
+        "speed_m_s": 0.04986334400408651
+      },
+      "2024-06-11_TypeC_T2_sample1/v2": {
+        "dec5_pl_N": -0.10349981955173353,
+        "n": 800,
+        "selected_start_range_s": [
+          0.55,
+          0.55
+        ],
+        "speed_m_s": 0.0998001920076803
+      },
+      "2024-06-11_TypeC_T2_sample1/v3": {
+        "dec5_pl_N": -0.10711957380895622,
+        "n": 800,
+        "selected_start_range_s": [
+          0.3,
+          0.3
+        ],
+        "speed_m_s": 0.19980038403072245
+      }
+    },
+    "scope": "부호 있는 힘 변화. 음수는 감소. 0.1초 창의 평균값 차이이며, 정확한 순간 5cm 힘 차이가 아니다.",
+    "legacy_difference_N": 0.0,
+    "feature_sha256": "274864ad30f94357e36045b07858aa7e16c68bd383bde04a37698bb8cde8d33e"
+  },
+  "B_T2s1": {
+    "dec5_pl_N": -0.09070433782542786,
+    "folders": {
+      "2024-06-13_TypeB_T2_sample1/v1": {
+        "dec5_pl_N": -0.09370784247410405,
+        "n": 800,
+        "selected_start_range_s": [
+          1.05,
+          1.05
+        ],
+        "speed_m_s": 0.04986313300316438
+      },
+      "2024-06-13_TypeB_T2_sample1/v2": {
+        "dec5_pl_N": -0.09525430708907659,
+        "n": 800,
+        "selected_start_range_s": [
+          0.55,
+          0.55
+        ],
+        "speed_m_s": 0.0998001920076803
+      },
+      "2024-06-13_TypeB_T2_sample1/v3": {
+        "dec5_pl_N": -0.08315086391310292,
+        "n": 800,
+        "selected_start_range_s": [
+          0.3,
+          0.3
+        ],
+        "speed_m_s": 0.19980038403072245
+      }
+    },
+    "scope": "부호 있는 힘 변화. 음수는 감소. 0.1초 창의 평균값 차이이며, 정확한 순간 5cm 힘 차이가 아니다.",
+    "legacy_difference_N": 0.0,
+    "feature_sha256": "785140f55333679ebfd3e91bfbe5283d5b452a5dff7a0ecfe13c65862295e5b2"
+  },
+  "A_T2": {
+    "dec5_pl_N": -0.12007354015283687,
+    "folders": {
+      "2024-06-19_TypeA_T2_sample1/v1": {
+        "dec5_pl_N": -0.1253604430097198,
+        "n": 800,
+        "selected_start_range_s": [
+          1.05,
+          1.05
+        ],
+        "speed_m_s": 0.04986372397738091
+      },
+      "2024-06-19_TypeA_T2_sample1/v2": {
+        "dec5_pl_N": -0.11424523771475883,
+        "n": 800,
+        "selected_start_range_s": [
+          0.55,
+          0.55
+        ],
+        "speed_m_s": 0.0998001920076803
+      },
+      "2024-06-19_TypeA_T2_sample1/v3": {
+        "dec5_pl_N": -0.12061493973403199,
+        "n": 800,
+        "selected_start_range_s": [
+          0.3,
+          0.3
+        ],
+        "speed_m_s": 0.19980038403072245
+      }
+    },
+    "scope": "부호 있는 힘 변화. 음수는 감소. 0.1초 창의 평균값 차이이며, 정확한 순간 5cm 힘 차이가 아니다.",
+    "legacy_difference_N": 0.0,
+    "feature_sha256": "f4035562019dda73d02e2d0a539151d8d079de3dca054199a9379bd6fe6c3336"
+  },
+  "B_T2r1": {
+    "dec5_pl_N": -0.08903251249650479,
+    "folders": {
+      "2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+        "dec5_pl_N": -0.08938672268527312,
+        "n": 800,
+        "selected_start_range_s": [
+          1.05,
+          1.05
+        ],
+        "speed_m_s": 0.04985953300265478
+      },
+      "2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2": {
+        "dec5_pl_N": -0.09102805528634725,
+        "n": 800,
+        "selected_start_range_s": [
+          0.55,
+          0.55
+        ],
+        "speed_m_s": 0.0998001920076803
+      },
+      "2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v3": {
+        "dec5_pl_N": -0.086682759517894,
+        "n": 800,
+        "selected_start_range_s": [
+          0.3,
+          0.3
+        ],
+        "speed_m_s": 0.19980038403072245
+      }
+    },
+    "scope": "부호 있는 힘 변화. 음수는 감소. 0.1초 창의 평균값 차이이며, 정확한 순간 5cm 힘 차이가 아니다.",
+    "legacy_difference_N": 0.0,
+    "feature_sha256": "01f9aa7ba423ee19af05ae5f830347379044396e2469f6fe747974925e8db502"
+  },
+  "B_T2r2": {
+    "dec5_pl_N": -0.09157693125425685,
+    "folders": {
+      "2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v1": {
+        "dec5_pl_N": -0.09989849496614422,
+        "n": 800,
+        "selected_start_range_s": [
+          1.05,
+          1.05
+        ],
+        "speed_m_s": 0.049858606993629526
+      },
+      "2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2": {
+        "dec5_pl_N": -0.09468268498961652,
+        "n": 800,
+        "selected_start_range_s": [
+          0.55,
+          0.55
+        ],
+        "speed_m_s": 0.0998001920076803
+      },
+      "2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v3": {
+        "dec5_pl_N": -0.08014961380700983,
+        "n": 800,
+        "selected_start_range_s": [
+          0.3,
+          0.3
+        ],
+        "speed_m_s": 0.19980038403072245
+      }
+    },
+    "scope": "부호 있는 힘 변화. 음수는 감소. 0.1초 창의 평균값 차이이며, 정확한 순간 5cm 힘 차이가 아니다.",
+    "legacy_difference_N": 0.0,
+    "feature_sha256": "01f9aa7ba423ee19af05ae5f830347379044396e2469f6fe747974925e8db502"
+  }
+}

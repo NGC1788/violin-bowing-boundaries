@@ -1,0 +1,1683 @@
+[2026-10-17 20:01:32]   추출 2024-04-19_TypeA_sample2/v1 (2000 긋기) · 여유 130 GB
+[2026-10-17 20:10:28]   2024-04-19_TypeA_sample2/v1: 창 338441개 저장, 추출본 삭제
+[2026-10-17 20:10:28]   추출 2024-04-19_TypeA_sample2/v2 (2000 긋기) · 여유 129 GB
+[2026-10-17 20:14:01]   2024-04-19_TypeA_sample2/v2: 창 142985개 저장, 추출본 삭제
+[2026-10-17 20:14:01]   추출 2024-04-19_TypeA_sample2/v3 (2000 긋기) · 여유 129 GB
+[2026-10-17 20:23:26]   2024-04-19_TypeA_sample2/v3: 창 50840개 저장, 추출본 삭제
+[2026-10-17 20:23:26] 2024-04-19_TypeA_sample2.7z: 완료
+[2026-10-17 20:23:26] 다운로드 시작 2024-03-25_TypeA_sample1.7z (record 17749110)
+
+A collection of bowed responses of cello strings (part 1)
+Requested ID 17749110; resolved version ID 17749111
+Manifest: /Users/jeongjihoon/violin-rne/data/manifests/zenodo_17749110_20261017T112328.677993Z.json
+  2024-04-12_TypeC_sample1.7z | 15,054,063,064 bytes | 14.020 GiB | md5:1197e7e4543368f0b18fdbec72c133ba
+  2024-03-25_TypeA_sample1.7z | 14,083,546,513 bytes | 13.116 GiB | md5:2709034cc10344f37f3488376ae3ebcd
+  2024-04-10_TypeB_sample1.7z | 14,856,184,074 bytes | 13.836 GiB | md5:abf26b782546c767bc4310f8c321f5d1
+Compressed total: 40.972 GiB. Extraction requires additional space.
+Explicit download: 2024-03-25_TypeA_sample1.7z; 13.116 GiB compressed; 13.116 GiB to fetch
+  parallel: 210/210 chunks to fetch over 4 connections
+  0.25 / 13.12 GiB
+[2026-10-17 20:35:09] 다운로드 시작 2024-03-25_TypeA_sample1.7z (record 17749110)
+ERROR: Download lock exists: /Users/jeongjihoon/violin-rne/data/raw/zenodo/17749111/2024-03-25_TypeA_sample1.7z.download.lock. Check for a running download before manually removing a stale lock.
+
+A collection of bowed responses of cello strings (part 1)
+Requested ID 17749110; resolved version ID 17749111
+Manifest: /Users/jeongjihoon/violin-rne/data/manifests/zenodo_17749110_20261017T113512.530436Z.json
+  2024-04-12_TypeC_sample1.7z | 15,054,063,064 bytes | 14.020 GiB | md5:1197e7e4543368f0b18fdbec72c133ba
+  2024-03-25_TypeA_sample1.7z | 14,083,546,513 bytes | 13.116 GiB | md5:2709034cc10344f37f3488376ae3ebcd
+  2024-04-10_TypeB_sample1.7z | 14,856,184,074 bytes | 13.836 GiB | md5:abf26b782546c767bc4310f8c321f5d1
+Compressed total: 40.972 GiB. Extraction requires additional space.
+[2026-10-17 20:35:12] 2024-03-25_TypeA_sample1.7z: 오류 — Command '['/Users/jeongjihoon/violin-bowing-boundaries/.venv-mac/bin/python', '/Users/jeongjihoon/violin-bowing-boundaries/scripts/zenodo_catalog.py', 'download', '--record', '17749110', '--file', '2024-03-25_TypeA_sample1.7z', '--max-gib', '40', '--connections', '8', '--retries', '12', '--data-dir', '/Users/jeongjihoon/violin-rne/data']' returned non-zero exit status 1.
+[2026-10-17 20:35:12] 다운로드 시작 2024-04-10_TypeB_sample1.7z (record 17749110)
+
+A collection of bowed responses of cello strings (part 1)
+Requested ID 17749110; resolved version ID 17749111
+Manifest: /Users/jeongjihoon/violin-rne/data/manifests/zenodo_17749110_20261017T113514.624691Z.json
+  2024-04-12_TypeC_sample1.7z | 15,054,063,064 bytes | 14.020 GiB | md5:1197e7e4543368f0b18fdbec72c133ba
+  2024-03-25_TypeA_sample1.7z | 14,083,546,513 bytes | 13.116 GiB | md5:2709034cc10344f37f3488376ae3ebcd
+  2024-04-10_TypeB_sample1.7z | 14,856,184,074 bytes | 13.836 GiB | md5:abf26b782546c767bc4310f8c321f5d1
+Compressed total: 40.972 GiB. Extraction requires additional space.
+Explicit download: 2024-04-10_TypeB_sample1.7z; 13.836 GiB compressed; 13.836 GiB to fetch
+  parallel: 222/222 chunks to fetch over 8 connections
+[2026-10-17 20:36:49] 다운로드 시작 2024-03-25_TypeA_sample1.7z (record 17749110)
+
+A collection of bowed responses of cello strings (part 1)
+Requested ID 17749110; resolved version ID 17749111
+Manifest: /Users/jeongjihoon/violin-rne/data/manifests/zenodo_17749110_20261017T113651.458577Z.json
+  2024-04-12_TypeC_sample1.7z | 15,054,063,064 bytes | 14.020 GiB | md5:1197e7e4543368f0b18fdbec72c133ba
+  2024-03-25_TypeA_sample1.7z | 14,083,546,513 bytes | 13.116 GiB | md5:2709034cc10344f37f3488376ae3ebcd
+  2024-04-10_TypeB_sample1.7z | 14,856,184,074 bytes | 13.836 GiB | md5:abf26b782546c767bc4310f8c321f5d1
+Compressed total: 40.972 GiB. Extraction requires additional space.
+Explicit download: 2024-03-25_TypeA_sample1.7z; 13.116 GiB compressed; 12.741 GiB to fetch
+  parallel: 204/210 chunks to fetch over 8 connections
+Chunk 13: PrematureEOF; retry 1/12 in 10s
+Chunk 10: PrematureEOF; retry 1/12 in 10s
+Chunk 11: PrematureEOF; retry 1/12 in 10s
+  0.62 / 13.12 GiB
+  0.88 / 13.12 GiB
+  1.12 / 13.12 GiB
+  1.38 / 13.12 GiB
+  1.62 / 13.12 GiB
+Chunk 28: PrematureEOF; retry 1/12 in 10s
+  1.88 / 13.12 GiB
+Chunk 28: PrematureEOF; retry 2/12 in 20s
+Chunk 39: PrematureEOF; retry 1/12 in 10s
+  2.12 / 13.12 GiB
+Chunk 38: PrematureEOF; retry 1/12 in 10s
+  2.38 / 13.12 GiB
+Chunk 38: PrematureEOF; retry 2/12 in 20s
+Chunk 45: PrematureEOF; retry 1/12 in 10s
+  2.62 / 13.12 GiB
+Chunk 50: PrematureEOF; retry 1/12 in 10s
+  2.88 / 13.12 GiB
+  3.12 / 13.12 GiB
+  3.38 / 13.12 GiB
+Chunk 54: PrematureEOF; retry 1/12 in 10s
+  3.62 / 13.12 GiB
+  3.88 / 13.12 GiB
+  4.12 / 13.12 GiB
+Chunk 54: PrematureEOF; retry 2/12 in 20s
+Chunk 70: PrematureEOF; retry 1/12 in 10s
+Chunk 72: PrematureEOF; retry 1/12 in 10s
+Chunk 54: PrematureEOF; retry 3/12 in 40s
+  4.38 / 13.12 GiB
+Chunk 70: PrematureEOF; retry 2/12 in 20s
+Chunk 78: PrematureEOF; retry 1/12 in 10s
+  4.62 / 13.12 GiB
+Chunk 76: PrematureEOF; retry 1/12 in 10s
+Chunk 54: PrematureEOF; retry 4/12 in 60s
+  4.88 / 13.12 GiB
+Chunk 81: PrematureEOF; retry 1/12 in 10s
+  5.12 / 13.12 GiB
+Chunk 76: PrematureEOF; retry 2/12 in 20s
+Chunk 90: PrematureEOF; retry 1/12 in 10s
+Chunk 85: PrematureEOF; retry 1/12 in 10s
+  5.38 / 13.12 GiB
+  5.62 / 13.12 GiB
+  5.88 / 13.12 GiB
+  6.12 / 13.12 GiB
+Chunk 103: PrematureEOF; retry 1/12 in 10s
+Chunk 104: PrematureEOF; retry 1/12 in 10s
+  6.38 / 13.12 GiB
+  6.62 / 13.12 GiB
+Chunk 103: PrematureEOF; retry 2/12 in 20s
+  6.88 / 13.12 GiB
+  7.12 / 13.12 GiB
+Chunk 116: PrematureEOF; retry 1/12 in 10s
+Chunk 114: PrematureEOF; retry 1/12 in 10s
+  7.38 / 13.12 GiB
+Chunk 116: PrematureEOF; retry 2/12 in 20s
+  7.62 / 13.12 GiB
+  7.88 / 13.12 GiB
+Chunk 116: PrematureEOF; retry 3/12 in 40s
+Chunk 132: PrematureEOF; retry 1/12 in 10s
+Chunk 133: TimeoutError; retry 1/12 in 10s
+Chunk 129: TimeoutError; retry 1/12 in 10s
+Chunk 132: TimeoutError; retry 2/12 in 20s
+Chunk 130: TimeoutError; retry 1/12 in 10s
+Chunk 116: TimeoutError; retry 4/12 in 60s
+Chunk 131: TimeoutError; retry 1/12 in 10s
+Chunk 134: TimeoutError; retry 1/12 in 10s
+Chunk 127: TimeoutError; retry 1/12 in 10s
+Chunk 132: PrematureEOF; retry 3/12 in 40s
+Chunk 116: PrematureEOF; retry 5/12 in 60s
+  8.12 / 13.12 GiB
+Chunk 132: PrematureEOF; retry 4/12 in 60s
+Chunk 133: PrematureEOF; retry 2/12 in 20s
+Chunk 137: PrematureEOF; retry 1/12 in 10s
+Chunk 139: PrematureEOF; retry 1/12 in 10s
+Chunk 135: PrematureEOF; retry 1/12 in 10s
+  8.38 / 13.12 GiB
+Chunk 133: PrematureEOF; retry 3/12 in 40s
+Chunk 139: PrematureEOF; retry 2/12 in 20s
+Chunk 116: PrematureEOF; retry 6/12 in 60s
+  8.62 / 13.12 GiB
+  8.88 / 13.12 GiB
+  9.12 / 13.12 GiB
+Chunk 144: PrematureEOF; retry 1/12 in 10s
+  9.38 / 13.12 GiB
+Chunk 152: PrematureEOF; retry 1/12 in 10s
+Chunk 144: PrematureEOF; retry 2/12 in 20s
+Chunk 158: PrematureEOF; retry 1/12 in 10s
+Chunk 156: PrematureEOF; retry 1/12 in 10s
+  9.62 / 13.12 GiB
+Chunk 152: PrematureEOF; retry 2/12 in 20s
+Chunk 157: PrematureEOF; retry 1/12 in 10s
+  9.88 / 13.12 GiB
+  10.12 / 13.12 GiB
+  10.38 / 13.12 GiB
+Chunk 174: PrematureEOF; retry 1/12 in 10s
+  10.62 / 13.12 GiB
+Chunk 170: PrematureEOF; retry 1/12 in 10s
+Chunk 176: PrematureEOF; retry 1/12 in 10s
+  10.88 / 13.12 GiB
+Chunk 180: PrematureEOF; retry 1/12 in 10s
+Chunk 170: PrematureEOF; retry 2/12 in 20s
+  11.12 / 13.12 GiB
+Chunk 176: PrematureEOF; retry 2/12 in 20s
+Chunk 183: PrematureEOF; retry 1/12 in 10s
+  11.38 / 13.12 GiB
+Chunk 187: PrematureEOF; retry 1/12 in 10s
+Chunk 186: PrematureEOF; retry 1/12 in 10s
+  11.62 / 13.12 GiB
+  11.88 / 13.12 GiB
+Chunk 189: PrematureEOF; retry 1/12 in 10s
+Chunk 196: PrematureEOF; retry 1/12 in 10s
+  12.12 / 13.12 GiB
+Chunk 197: PrematureEOF; retry 1/12 in 10s
+  12.38 / 13.12 GiB
+Chunk 201: PrematureEOF; retry 1/12 in 10s
+Chunk 199: PrematureEOF; retry 1/12 in 10s
+Chunk 198: PrematureEOF; retry 1/12 in 10s
+Chunk 198: PrematureEOF; retry 2/12 in 20s
+  12.62 / 13.12 GiB
+Chunk 205: PrematureEOF; retry 1/12 in 10s
+Chunk 209: PrematureEOF; retry 1/12 in 10s
+Chunk 201: PrematureEOF; retry 2/12 in 20s
+  12.88 / 13.12 GiB
+  13.12 / 13.12 GiB
+Checking MD5 (may take several minutes)...
+Downloaded and MD5 verified: /Users/jeongjihoon/violin-rne/data/raw/zenodo/17749111/2024-03-25_TypeA_sample1.7z
+[2026-10-18 00:49:55]   추출 2024-03-25_TypeA_sample1/2024-03-27_r_v1 (2000 긋기) · 여유 114 GB
+[2026-10-18 00:57:23]   2024-03-25_TypeA_sample1/2024-03-27_r_v1: 창 338495개 저장, 추출본 삭제
+[2026-10-18 00:57:23]   추출 2024-03-25_TypeA_sample1/2024-03-27_r_v2 (2000 긋기) · 여유 114 GB
+[2026-10-18 01:06:21]   2024-03-25_TypeA_sample1/2024-03-27_r_v2: 창 143039개 저장, 추출본 삭제
+[2026-10-18 01:06:21]   추출 2024-03-25_TypeA_sample1/2024-03-27_r_v3 (2000 긋기) · 여유 113 GB
+[2026-10-18 01:16:02]   2024-03-25_TypeA_sample1/2024-03-27_r_v3: 창 50843개 저장, 추출본 삭제
+[2026-10-18 01:16:02] 2024-03-25_TypeA_sample1.7z: 아카이브 삭제 (재다운로드 가능)
+[2026-10-18 01:16:02] 2024-03-25_TypeA_sample1.7z: 완료
+[2026-10-18 01:16:02] 다운로드 시작 2024-04-10_TypeB_sample1.7z (record 17749110)
+
+A collection of bowed responses of cello strings (part 1)
+Requested ID 17749110; resolved version ID 17749111
+Manifest: /Users/jeongjihoon/violin-rne/data/manifests/zenodo_17749110_20261017T161604.294707Z.json
+  2024-04-12_TypeC_sample1.7z | 15,054,063,064 bytes | 14.020 GiB | md5:1197e7e4543368f0b18fdbec72c133ba
+  2024-03-25_TypeA_sample1.7z | 14,083,546,513 bytes | 13.116 GiB | md5:2709034cc10344f37f3488376ae3ebcd
+  2024-04-10_TypeB_sample1.7z | 14,856,184,074 bytes | 13.836 GiB | md5:abf26b782546c767bc4310f8c321f5d1
+Compressed total: 40.972 GiB. Extraction requires additional space.
+Explicit download: 2024-04-10_TypeB_sample1.7z; 13.836 GiB compressed; 13.836 GiB to fetch
+  parallel: 222/222 chunks to fetch over 8 connections
+Chunk 1: PrematureEOF; retry 1/12 in 10s
+Chunk 4: PrematureEOF; retry 1/12 in 10s
+Chunk 5: PrematureEOF; retry 1/12 in 10s
+Chunk 0: PrematureEOF; retry 1/12 in 10s
+Chunk 2: PrematureEOF; retry 1/12 in 10s
+  0.25 / 13.84 GiB
+  0.50 / 13.84 GiB
+  0.75 / 13.84 GiB
+Chunk 15: PrematureEOF; retry 1/12 in 10s
+Chunk 11: PrematureEOF; retry 1/12 in 10s
+  1.00 / 13.84 GiB
+Chunk 18: PrematureEOF; retry 1/12 in 10s
+Chunk 19: PrematureEOF; retry 1/12 in 10s
+  1.25 / 13.84 GiB
+  1.50 / 13.84 GiB
+Chunk 30: PrematureEOF; retry 1/12 in 10s
+  1.75 / 13.84 GiB
+Chunk 31: PrematureEOF; retry 1/12 in 10s
+Chunk 34: PrematureEOF; retry 1/12 in 10s
+  2.00 / 13.84 GiB
+Chunk 39: PrematureEOF; retry 1/12 in 10s
+  2.25 / 13.84 GiB
+  2.50 / 13.84 GiB
+  2.75 / 13.84 GiB
+  3.00 / 13.84 GiB
+Chunk 43: PrematureEOF; retry 1/12 in 10s
+Chunk 43: TimeoutError; retry 2/12 in 20s
+Chunk 53: TimeoutError; retry 1/12 in 10s
+Chunk 55: TimeoutError; retry 1/12 in 10s
+Chunk 54: TimeoutError; retry 1/12 in 10s
+Chunk 49: TimeoutError; retry 1/12 in 10s
+Chunk 50: TimeoutError; retry 1/12 in 10s
+Chunk 51: TimeoutError; retry 1/12 in 10s
+Chunk 52: PrematureEOF; retry 1/12 in 10s
+Chunk 43: PrematureEOF; retry 3/12 in 40s
+Chunk 52: PrematureEOF; retry 2/12 in 20s
+  3.25 / 13.84 GiB
+Chunk 51: PrematureEOF; retry 2/12 in 20s
+Chunk 53: PrematureEOF; retry 2/12 in 20s
+Chunk 52: PrematureEOF; retry 3/12 in 40s
+  3.50 / 13.84 GiB
+Chunk 59: PrematureEOF; retry 1/12 in 10s
+Chunk 62: PrematureEOF; retry 1/12 in 10s
+Chunk 60: PrematureEOF; retry 1/12 in 10s
+Chunk 63: PrematureEOF; retry 1/12 in 10s
+  3.75 / 13.84 GiB
+Chunk 60: PrematureEOF; retry 2/12 in 20s
+Chunk 66: PrematureEOF; retry 1/12 in 10s
+Chunk 68: PrematureEOF; retry 1/12 in 10s
+Chunk 64: PrematureEOF; retry 1/12 in 10s
+Chunk 60: PrematureEOF; retry 3/12 in 40s
+Chunk 65: PrematureEOF; retry 1/12 in 10s
+Chunk 66: PrematureEOF; retry 2/12 in 20s
+Chunk 63: PrematureEOF; retry 2/12 in 20s
+  4.00 / 13.84 GiB
+Chunk 71: PrematureEOF; retry 1/12 in 10s
+  4.25 / 13.84 GiB
+Chunk 66: PrematureEOF; retry 3/12 in 40s
+Chunk 73: PrematureEOF; retry 1/12 in 10s
+Chunk 68: PrematureEOF; retry 2/12 in 20s
+  4.50 / 13.84 GiB
+  4.75 / 13.84 GiB
+  5.00 / 13.84 GiB
+Chunk 87: PrematureEOF; retry 1/12 in 10s
+  5.25 / 13.84 GiB
+  5.50 / 13.84 GiB
+Chunk 84: PrematureEOF; retry 1/12 in 10s
+Chunk 90: PrematureEOF; retry 1/12 in 10s
+  5.75 / 13.84 GiB
+Chunk 94: PrematureEOF; retry 1/12 in 10s
+Chunk 95: PrematureEOF; retry 1/12 in 10s
+Chunk 99: PrematureEOF; retry 1/12 in 10s
+Chunk 96: PrematureEOF; retry 1/12 in 10s
+Chunk 100: PrematureEOF; retry 1/12 in 10s
+  6.00 / 13.84 GiB
+Chunk 101: PrematureEOF; retry 1/12 in 10s
+  6.25 / 13.84 GiB
+Chunk 105: PrematureEOF; retry 1/12 in 10s
+Chunk 100: PrematureEOF; retry 2/12 in 20s
+  6.50 / 13.84 GiB
+Chunk 100: PrematureEOF; retry 3/12 in 40s
+Chunk 110: PrematureEOF; retry 1/12 in 10s
+  6.75 / 13.84 GiB
+Chunk 113: PrematureEOF; retry 1/12 in 10s
+Chunk 111: PrematureEOF; retry 1/12 in 10s
+Chunk 114: PrematureEOF; retry 1/12 in 10s
+Chunk 112: PrematureEOF; retry 1/12 in 10s
+  7.00 / 13.84 GiB
+Chunk 116: PrematureEOF; retry 1/12 in 10s
+  7.25 / 13.84 GiB
+Chunk 114: PrematureEOF; retry 2/12 in 20s
+Chunk 119: PrematureEOF; retry 1/12 in 10s
+Chunk 114: PrematureEOF; retry 3/12 in 40s
+Chunk 124: PrematureEOF; retry 1/12 in 10s
+  7.50 / 13.84 GiB
+Chunk 123: PrematureEOF; retry 1/12 in 10s
+Chunk 127: PrematureEOF; retry 1/12 in 10s
+Chunk 124: PrematureEOF; retry 2/12 in 20s
+  7.75 / 13.84 GiB
+Chunk 124: PrematureEOF; retry 3/12 in 40s
+Chunk 126: PrematureEOF; retry 1/12 in 10s
+  8.00 / 13.84 GiB
+Chunk 124: PrematureEOF; retry 4/12 in 60s
+  8.25 / 13.84 GiB
+Chunk 136: PrematureEOF; retry 1/12 in 10s
+Chunk 136: PrematureEOF; retry 2/12 in 20s
+  8.50 / 13.84 GiB
+Chunk 141: PrematureEOF; retry 1/12 in 10s
+  8.75 / 13.84 GiB
+Chunk 146: PrematureEOF; retry 1/12 in 10s
+Chunk 141: PrematureEOF; retry 2/12 in 20s
+Chunk 145: PrematureEOF; retry 1/12 in 10s
+Chunk 144: PrematureEOF; retry 1/12 in 10s
+Chunk 142: PrematureEOF; retry 1/12 in 10s
+Chunk 144: PrematureEOF; retry 2/12 in 20s
+  9.00 / 13.84 GiB
+  9.25 / 13.84 GiB
+  9.50 / 13.84 GiB
+  9.75 / 13.84 GiB
+Chunk 160: PrematureEOF; retry 1/12 in 10s
+  10.00 / 13.84 GiB
+Chunk 165: PrematureEOF; retry 1/12 in 10s
+Chunk 161: PrematureEOF; retry 1/12 in 10s
+Chunk 160: PrematureEOF; retry 2/12 in 20s
+Chunk 168: PrematureEOF; retry 1/12 in 10s
+Chunk 166: PrematureEOF; retry 1/12 in 10s
+  10.25 / 13.84 GiB
+Chunk 161: PrematureEOF; retry 2/12 in 20s
+  10.50 / 13.84 GiB
+Chunk 168: PrematureEOF; retry 2/12 in 20s
+  10.75 / 13.84 GiB
+  11.00 / 13.84 GiB
+Chunk 176: PrematureEOF; retry 1/12 in 10s
+Chunk 177: PrematureEOF; retry 1/12 in 10s
+Chunk 180: PrematureEOF; retry 1/12 in 10s
+  11.25 / 13.84 GiB
+  11.50 / 13.84 GiB
+Chunk 189: PrematureEOF; retry 1/12 in 10s
+  11.75 / 13.84 GiB
+Chunk 195: PrematureEOF; retry 1/12 in 10s
+  12.00 / 13.84 GiB
+Chunk 193: PrematureEOF; retry 1/12 in 10s
+Chunk 194: PrematureEOF; retry 1/12 in 10s
+  12.25 / 13.84 GiB
+Chunk 200: PrematureEOF; retry 1/12 in 10s
+Chunk 199: PrematureEOF; retry 1/12 in 10s
+  12.50 / 13.84 GiB
+  12.75 / 13.84 GiB
+Chunk 208: PrematureEOF; retry 1/12 in 10s
+Chunk 210: PrematureEOF; retry 1/12 in 10s
+  13.00 / 13.84 GiB
+Chunk 215: PrematureEOF; retry 1/12 in 10s
+Chunk 214: PrematureEOF; retry 1/12 in 10s
+Chunk 204: PrematureEOF; retry 1/12 in 10s
+  13.25 / 13.84 GiB
+Chunk 210: PrematureEOF; retry 2/12 in 20s
+Chunk 204: PrematureEOF; retry 2/12 in 20s
+  13.50 / 13.84 GiB
+Chunk 219: PrematureEOF; retry 1/12 in 10s
+  13.77 / 13.84 GiB
+  13.84 / 13.84 GiB
+Checking MD5 (may take several minutes)...
+Downloaded and MD5 verified: /Users/jeongjihoon/violin-rne/data/raw/zenodo/17749111/2024-04-10_TypeB_sample1.7z
+[2026-10-18 05:55:17]   추출 2024-04-10_TypeB_sample1/2024-04-10/v1 (2000 긋기) · 여유 113 GB
+[2026-10-18 06:03:43]   2024-04-10_TypeB_sample1/2024-04-10/v1: 창 338474개 저장, 추출본 삭제
+[2026-10-18 06:03:43]   추출 2024-04-10_TypeB_sample1/2024-04-10/v2 (2000 긋기) · 여유 112 GB
+[2026-10-18 06:07:05]   2024-04-10_TypeB_sample1/2024-04-10/v2: 창 143006개 저장, 추출본 삭제
+[2026-10-18 06:07:05]   추출 2024-04-10_TypeB_sample1/2024-04-10/v3 (2000 긋기) · 여유 112 GB
+[2026-10-18 06:16:19]   2024-04-10_TypeB_sample1/2024-04-10/v3: 창 50837개 저장, 추출본 삭제
+[2026-10-18 06:16:20] 2024-04-10_TypeB_sample1.7z: 아카이브 삭제 (재다운로드 가능)
+[2026-10-18 06:16:20] 2024-04-10_TypeB_sample1.7z: 완료
+[2026-10-18 06:16:20] 다운로드 시작 2024-04-12_TypeC_sample1.7z (record 17749110)
+
+A collection of bowed responses of cello strings (part 1)
+Requested ID 17749110; resolved version ID 17749111
+Manifest: /Users/jeongjihoon/violin-rne/data/manifests/zenodo_17749110_20261017T211622.441452Z.json
+  2024-04-12_TypeC_sample1.7z | 15,054,063,064 bytes | 14.020 GiB | md5:1197e7e4543368f0b18fdbec72c133ba
+  2024-03-25_TypeA_sample1.7z | 14,083,546,513 bytes | 13.116 GiB | md5:2709034cc10344f37f3488376ae3ebcd
+  2024-04-10_TypeB_sample1.7z | 14,856,184,074 bytes | 13.836 GiB | md5:abf26b782546c767bc4310f8c321f5d1
+Compressed total: 40.972 GiB. Extraction requires additional space.
+Explicit download: 2024-04-12_TypeC_sample1.7z; 14.020 GiB compressed; 14.020 GiB to fetch
+  parallel: 225/225 chunks to fetch over 8 connections
+Chunk 6: PrematureEOF; retry 1/12 in 10s
+Chunk 2: PrematureEOF; retry 1/12 in 10s
+Chunk 7: PrematureEOF; retry 1/12 in 10s
+  0.25 / 14.02 GiB
+Chunk 5: PrematureEOF; retry 1/12 in 10s
+Chunk 8: PrematureEOF; retry 1/12 in 10s
+  0.50 / 14.02 GiB
+Chunk 13: PrematureEOF; retry 1/12 in 10s
+Chunk 12: PrematureEOF; retry 1/12 in 10s
+Chunk 12: PrematureEOF; retry 2/12 in 20s
+Chunk 13: PrematureEOF; retry 2/12 in 20s
+  0.75 / 14.02 GiB
+Chunk 12: PrematureEOF; retry 3/12 in 40s
+Chunk 20: PrematureEOF; retry 1/12 in 10s
+Chunk 18: PrematureEOF; retry 1/12 in 10s
+  1.00 / 14.02 GiB
+Chunk 21: PrematureEOF; retry 1/12 in 10s
+Chunk 12: PrematureEOF; retry 4/12 in 60s
+  1.25 / 14.02 GiB
+Chunk 25: PrematureEOF; retry 1/12 in 10s
+  1.50 / 14.02 GiB
+  1.75 / 14.02 GiB
+Chunk 31: PrematureEOF; retry 1/12 in 10s
+  2.00 / 14.02 GiB
+Chunk 37: PrematureEOF; retry 1/12 in 10s
+Chunk 31: PrematureEOF; retry 2/12 in 20s
+  2.25 / 14.02 GiB
+Chunk 37: PrematureEOF; retry 2/12 in 20s
+  2.50 / 14.02 GiB
+Chunk 31: PrematureEOF; retry 3/12 in 40s
+Chunk 43: PrematureEOF; retry 1/12 in 10s
+  2.75 / 14.02 GiB
+Chunk 44: PrematureEOF; retry 1/12 in 10s
+Chunk 31: PrematureEOF; retry 4/12 in 60s
+Chunk 49: PrematureEOF; retry 1/12 in 10s
+Chunk 51: PrematureEOF; retry 1/12 in 10s
+Chunk 50: PrematureEOF; retry 1/12 in 10s
+Chunk 31: PrematureEOF; retry 5/12 in 60s
+  3.00 / 14.02 GiB
+Chunk 51: PrematureEOF; retry 2/12 in 20s
+Chunk 50: PrematureEOF; retry 2/12 in 20s
+Chunk 55: PrematureEOF; retry 1/12 in 10s
+Chunk 54: PrematureEOF; retry 1/12 in 10s
+  3.25 / 14.02 GiB
+  3.50 / 14.02 GiB
+  3.75 / 14.02 GiB
+Chunk 64: PrematureEOF; retry 1/12 in 10s
+  4.00 / 14.02 GiB
+Chunk 67: PrematureEOF; retry 1/12 in 10s
+  4.25 / 14.02 GiB
+Chunk 74: PrematureEOF; retry 1/12 in 10s
+  4.50 / 14.02 GiB
+  4.75 / 14.02 GiB
+Chunk 67: PrematureEOF; retry 2/12 in 20s
+  5.00 / 14.02 GiB
+Chunk 82: PrematureEOF; retry 1/12 in 10s
+Chunk 79: PrematureEOF; retry 1/12 in 10s
+Chunk 84: PrematureEOF; retry 1/12 in 10s
+Chunk 86: PrematureEOF; retry 1/12 in 10s
+Chunk 85: PrematureEOF; retry 1/12 in 10s
+  5.25 / 14.02 GiB
+Chunk 89: PrematureEOF; retry 1/12 in 10s
+Chunk 91: PrematureEOF; retry 1/12 in 10s
+Chunk 79: PrematureEOF; retry 2/12 in 20s
+Chunk 86: PrematureEOF; retry 2/12 in 20s
+  5.50 / 14.02 GiB
+  5.75 / 14.02 GiB
+  6.00 / 14.02 GiB
+Chunk 98: PrematureEOF; retry 1/12 in 10s
+Chunk 99: PrematureEOF; retry 1/12 in 10s
+  6.25 / 14.02 GiB
+Chunk 105: PrematureEOF; retry 1/12 in 10s
+Chunk 106: PrematureEOF; retry 1/12 in 10s
+  6.50 / 14.02 GiB
+Chunk 111: PrematureEOF; retry 1/12 in 10s
+Chunk 107: PrematureEOF; retry 1/12 in 10s
+Chunk 113: PrematureEOF; retry 1/12 in 10s
+Chunk 112: PrematureEOF; retry 1/12 in 10s
+  6.75 / 14.02 GiB
+Chunk 99: PrematureEOF; retry 2/12 in 20s
+  7.00 / 14.02 GiB
+  7.25 / 14.02 GiB
+Chunk 118: PrematureEOF; retry 1/12 in 10s
+Chunk 119: PrematureEOF; retry 1/12 in 10s
+Chunk 123: PrematureEOF; retry 1/12 in 10s
+  7.50 / 14.02 GiB
+Chunk 119: PrematureEOF; retry 2/12 in 20s
+Chunk 124: PrematureEOF; retry 1/12 in 10s
+Chunk 123: PrematureEOF; retry 2/12 in 20s
+Chunk 126: PrematureEOF; retry 1/12 in 10s
+  7.75 / 14.02 GiB
+  8.00 / 14.02 GiB
+  8.25 / 14.02 GiB
+Chunk 133: PrematureEOF; retry 1/12 in 10s
+  8.50 / 14.02 GiB
+  8.75 / 14.02 GiB
+Chunk 139: PrematureEOF; retry 1/12 in 10s
+  9.00 / 14.02 GiB
+Chunk 147: PrematureEOF; retry 1/12 in 10s
+Chunk 146: PrematureEOF; retry 1/12 in 10s
+Chunk 139: PrematureEOF; retry 2/12 in 20s
+Chunk 139: PrematureEOF; retry 3/12 in 40s
+  9.25 / 14.02 GiB
+  9.50 / 14.02 GiB
+  9.75 / 14.02 GiB
+Chunk 159: PrematureEOF; retry 1/12 in 10s
+Chunk 159: PrematureEOF; retry 2/12 in 20s
+  10.00 / 14.02 GiB
+Chunk 162: PrematureEOF; retry 1/12 in 10s
+  10.25 / 14.02 GiB
+Chunk 166: PrematureEOF; retry 1/12 in 10s
+Chunk 172: PrematureEOF; retry 1/12 in 10s
+  10.50 / 14.02 GiB
+  10.75 / 14.02 GiB
+  11.00 / 14.02 GiB
+  11.25 / 14.02 GiB
+  11.50 / 14.02 GiB
+  11.75 / 14.02 GiB
+Chunk 188: PrematureEOF; retry 1/12 in 10s
+Chunk 190: PrematureEOF; retry 1/12 in 10s
+  12.00 / 14.02 GiB
+Chunk 197: PrematureEOF; retry 1/12 in 10s
+Chunk 194: PrematureEOF; retry 1/12 in 10s
+  12.25 / 14.02 GiB
+Chunk 201: TimeoutError; retry 1/12 in 10s
+Chunk 202: TimeoutError; retry 1/12 in 10s
+Chunk 200: TimeoutError; retry 1/12 in 10s
+Chunk 188: PrematureEOF; retry 2/12 in 20s
+Chunk 203: PrematureEOF; retry 1/12 in 10s
+Chunk 197: PrematureEOF; retry 2/12 in 20s
+Chunk 202: PrematureEOF; retry 2/12 in 20s
+  12.50 / 14.02 GiB
+  12.75 / 14.02 GiB
+  13.00 / 14.02 GiB
+Chunk 214: PrematureEOF; retry 1/12 in 10s
+Chunk 218: PrematureEOF; retry 1/12 in 10s
+  13.25 / 14.02 GiB
+Chunk 213: PrematureEOF; retry 1/12 in 10s
+Chunk 218: PrematureEOF; retry 2/12 in 20s
+  13.50 / 14.02 GiB
+Chunk 219: PrematureEOF; retry 1/12 in 10s
+Chunk 216: PrematureEOF; retry 1/12 in 10s
+Chunk 218: PrematureEOF; retry 3/12 in 40s
+  13.75 / 14.02 GiB
+  14.02 / 14.02 GiB
+Checking MD5 (may take several minutes)...
+Downloaded and MD5 verified: /Users/jeongjihoon/violin-rne/data/raw/zenodo/17749111/2024-04-12_TypeC_sample1.7z
+[2026-10-18 10:48:52]   추출 2024-04-12_TypeC_sample1/2024-04-15/v1 (2000 긋기) · 여유 111 GB
+[2026-10-18 10:57:56]   2024-04-12_TypeC_sample1/2024-04-15/v1: 창 338420개 저장, 추출본 삭제
+[2026-10-18 10:57:56]   추출 2024-04-12_TypeC_sample1/2024-04-15/v2 (2000 긋기) · 여유 110 GB
+[2026-10-18 11:01:31]   2024-04-12_TypeC_sample1/2024-04-15/v2: 창 142985개 저장, 추출본 삭제
+[2026-10-18 11:01:31]   추출 2024-04-12_TypeC_sample1/2024-04-15/v3 (2000 긋기) · 여유 109 GB
+[2026-10-18 11:11:21]   2024-04-12_TypeC_sample1/2024-04-15/v3: 창 50834개 저장, 추출본 삭제
+[2026-10-18 11:11:21] 2024-04-12_TypeC_sample1.7z: 아카이브 삭제 (재다운로드 가능)
+[2026-10-18 11:11:21] 2024-04-12_TypeC_sample1.7z: 완료
+[2026-10-18 11:11:21] 다운로드 시작 2024-04-15_TypeD_sample1.7z (record 17782542)
+
+A collection of bowed responses of cello strings (part 2)
+Requested ID 17782542; resolved version ID 17782542
+Manifest: /Users/jeongjihoon/violin-rne/data/manifests/zenodo_17782542_20261018T021122.042296Z.json
+  2024-04-22_TypeA_sample3.7z | 14,416,522,615 bytes | 13.426 GiB | md5:c1c316576b956ff29dc7caa9d5ca03f5
+  2024-04-15_TypeD_sample1.7z | 14,399,592,100 bytes | 13.411 GiB | md5:ba582c0ecb1f47c9dcfa9be2d43d0f80
+  2024-04-19_TypeA_sample2.7z | 14,775,691,753 bytes | 13.761 GiB | md5:ec520fecf6c5011ef8491b335edc1cee
+Compressed total: 40.598 GiB. Extraction requires additional space.
+Explicit download: 2024-04-15_TypeD_sample1.7z; 13.411 GiB compressed; 13.411 GiB to fetch
+  parallel: 215/215 chunks to fetch over 8 connections
+[2026-10-18 11:12:02] 다운로드 시작 2024-10-23_variability_setup.7z (record 17795326)
+
+A collection of bowed responses of cello strings (part 6)
+Requested ID 17795326; resolved version ID 17795326
+Manifest: /Users/jeongjihoon/violin-rne/data/manifests/zenodo_17795326_20261018T021203.564636Z.json
+  2024-10-23_variability_setup.7z | 28,218,620,427 bytes | 26.281 GiB | md5:bddef0d9cf48a6dccbc27021116274a5
+Compressed total: 26.281 GiB. Extraction requires additional space.
+Explicit download: 2024-10-23_variability_setup.7z; 26.281 GiB compressed; 26.281 GiB to fetch
+  parallel: 421/421 chunks to fetch over 8 connections
+Chunk 4: PrematureEOF; retry 1/12 in 10s
+  0.25 / 26.28 GiB
+Chunk 11: PrematureEOF; retry 1/12 in 10s
+Chunk 7: PrematureEOF; retry 1/12 in 10s
+  0.50 / 26.28 GiB
+Chunk 14: PrematureEOF; retry 1/12 in 10s
+  0.75 / 26.28 GiB
+  1.00 / 26.28 GiB
+Chunk 19: PrematureEOF; retry 1/12 in 10s
+  1.25 / 26.28 GiB
+Chunk 24: PrematureEOF; retry 1/12 in 10s
+  1.50 / 26.28 GiB
+Chunk 19: PrematureEOF; retry 2/12 in 20s
+Chunk 29: PrematureEOF; retry 1/12 in 10s
+Chunk 27: PrematureEOF; retry 1/12 in 10s
+Chunk 28: PrematureEOF; retry 1/12 in 10s
+Chunk 29: PrematureEOF; retry 2/12 in 20s
+Chunk 31: PrematureEOF; retry 1/12 in 10s
+Chunk 29: URLError; retry 3/12 in 40s
+Chunk 19: TimeoutError; retry 3/12 in 40s
+Chunk 33: TimeoutError; retry 1/12 in 10s
+Chunk 32: TimeoutError; retry 1/12 in 10s
+Chunk 24: TimeoutError; retry 2/12 in 20s
+Chunk 33: URLError; retry 2/12 in 20s
+Chunk 32: URLError; retry 2/12 in 20s
+Chunk 24: URLError; retry 3/12 in 40s
+Chunk 29: URLError; retry 4/12 in 60s
+Chunk 33: URLError; retry 3/12 in 40s
+Chunk 32: URLError; retry 3/12 in 40s
+Chunk 28: TimeoutError; retry 2/12 in 20s
+Chunk 27: TimeoutError; retry 2/12 in 20s
+Chunk 19: URLError; retry 4/12 in 60s
+Chunk 28: URLError; retry 3/12 in 40s
+Chunk 27: URLError; retry 3/12 in 40s
+Chunk 24: URLError; retry 4/12 in 60s
+Chunk 31: PrematureEOF; retry 2/12 in 20s
+  1.75 / 26.28 GiB
+  2.00 / 26.28 GiB
+  2.25 / 26.28 GiB
+  2.50 / 26.28 GiB
+  2.75 / 26.28 GiB
+  3.00 / 26.28 GiB
+[2026-10-18 12:17:34] 다운로드 시작 2024-10-23_variability_setup.7z (record 17795326)
+
+A collection of bowed responses of cello strings (part 6)
+Requested ID 17795326; resolved version ID 17795326
+Manifest: /Users/jeongjihoon/violin-rne/data/manifests/zenodo_17795326_20261018T031735.564420Z.json
+  2024-10-23_variability_setup.7z | 28,218,620,427 bytes | 26.281 GiB | md5:bddef0d9cf48a6dccbc27021116274a5
+Compressed total: 26.281 GiB. Extraction requires additional space.
+Explicit download: 2024-10-23_variability_setup.7z; 26.281 GiB compressed; 23.281 GiB to fetch
+  parallel: 373/421 chunks to fetch over 16 connections
+  3.25 / 26.28 GiB
+  3.50 / 26.28 GiB
+  3.75 / 26.28 GiB
+  4.00 / 26.28 GiB
+Chunk 67: PrematureEOF; retry 1/12 in 10s
+  4.25 / 26.28 GiB
+  4.50 / 26.28 GiB
+  4.75 / 26.28 GiB
+  5.00 / 26.28 GiB
+Chunk 92: PrematureEOF; retry 1/12 in 10s
+  5.25 / 26.28 GiB
+Chunk 88: PrematureEOF; retry 1/12 in 10s
+  5.50 / 26.28 GiB
+Chunk 82: PrematureEOF; retry 1/12 in 10s
+  5.75 / 26.28 GiB
+  6.00 / 26.28 GiB
+  6.25 / 26.28 GiB
+  6.50 / 26.28 GiB
+  6.75 / 26.28 GiB
+  7.00 / 26.28 GiB
+  7.25 / 26.28 GiB
+Chunk 115: PrematureEOF; retry 1/12 in 10s
+  7.50 / 26.28 GiB
+  7.75 / 26.28 GiB
+  8.00 / 26.28 GiB
+  8.25 / 26.28 GiB
+Chunk 133: PrematureEOF; retry 1/12 in 10s
+  8.50 / 26.28 GiB
+  8.75 / 26.28 GiB
+  9.00 / 26.28 GiB
+Chunk 147: PrematureEOF; retry 1/12 in 10s
+Chunk 151: PrematureEOF; retry 1/12 in 10s
+  9.25 / 26.28 GiB
+Chunk 153: PrematureEOF; retry 1/12 in 10s
+  9.50 / 26.28 GiB
+  9.75 / 26.28 GiB
+  10.00 / 26.28 GiB
+  10.25 / 26.28 GiB
+  10.50 / 26.28 GiB
+  10.75 / 26.28 GiB
+Chunk 173: PrematureEOF; retry 1/12 in 10s
+  11.00 / 26.28 GiB
+  11.25 / 26.28 GiB
+Chunk 177: PrematureEOF; retry 1/12 in 10s
+  11.50 / 26.28 GiB
+  11.75 / 26.28 GiB
+  12.00 / 26.28 GiB
+  12.25 / 26.28 GiB
+Chunk 198: PrematureEOF; retry 1/12 in 10s
+Chunk 196: PrematureEOF; retry 1/12 in 10s
+  12.50 / 26.28 GiB
+  12.75 / 26.28 GiB
+Chunk 207: PrematureEOF; retry 1/12 in 10s
+  13.00 / 26.28 GiB
+  13.25 / 26.28 GiB
+  13.50 / 26.28 GiB
+Chunk 220: PrematureEOF; retry 1/12 in 10s
+  13.75 / 26.28 GiB
+  14.00 / 26.28 GiB
+Chunk 226: PrematureEOF; retry 1/12 in 10s
+  14.25 / 26.28 GiB
+  14.50 / 26.28 GiB
+Chunk 238: PrematureEOF; retry 1/12 in 10s
+  14.75 / 26.28 GiB
+  15.00 / 26.28 GiB
+  15.25 / 26.28 GiB
+Chunk 244: PrematureEOF; retry 1/12 in 10s
+  15.50 / 26.28 GiB
+  15.75 / 26.28 GiB
+Chunk 250: PrematureEOF; retry 1/12 in 10s
+  16.00 / 26.28 GiB
+Chunk 258: PrematureEOF; retry 1/12 in 10s
+  16.25 / 26.28 GiB
+Chunk 263: PrematureEOF; retry 1/12 in 10s
+  16.50 / 26.28 GiB
+Chunk 250: PrematureEOF; retry 2/12 in 20s
+Chunk 274: PrematureEOF; retry 1/12 in 10s
+  16.75 / 26.28 GiB
+  17.00 / 26.28 GiB
+  17.25 / 26.28 GiB
+  17.50 / 26.28 GiB
+  17.75 / 26.28 GiB
+  18.00 / 26.28 GiB
+  18.25 / 26.28 GiB
+  18.50 / 26.28 GiB
+  18.75 / 26.28 GiB
+  19.00 / 26.28 GiB
+  19.25 / 26.28 GiB
+  19.50 / 26.28 GiB
+Chunk 317: PrematureEOF; retry 1/12 in 10s
+  19.75 / 26.28 GiB
+  20.00 / 26.28 GiB
+  20.25 / 26.28 GiB
+  20.50 / 26.28 GiB
+Chunk 328: PrematureEOF; retry 1/12 in 10s
+  20.75 / 26.28 GiB
+  21.00 / 26.28 GiB
+Chunk 342: PrematureEOF; retry 1/12 in 10s
+  21.25 / 26.28 GiB
+  21.50 / 26.28 GiB
+  21.75 / 26.28 GiB
+  22.00 / 26.28 GiB
+Chunk 351: PrematureEOF; retry 1/12 in 10s
+  22.25 / 26.28 GiB
+  22.50 / 26.28 GiB
+  22.75 / 26.28 GiB
+  23.00 / 26.28 GiB
+  23.25 / 26.28 GiB
+  23.50 / 26.28 GiB
+  23.75 / 26.28 GiB
+  24.00 / 26.28 GiB
+  24.25 / 26.28 GiB
+  24.50 / 26.28 GiB
+  24.75 / 26.28 GiB
+  25.00 / 26.28 GiB
+  25.25 / 26.28 GiB
+  25.50 / 26.28 GiB
+  25.75 / 26.28 GiB
+  26.03 / 26.28 GiB
+Chunk 413: PrematureEOF; retry 1/12 in 10s
+  26.28 / 26.28 GiB
+Checking MD5 (may take several minutes)...
+Downloaded and MD5 verified: /Users/jeongjihoon/violin-rne/data/raw/zenodo/17795326/2024-10-23_variability_setup.7z
+[2026-10-18 14:17:20]   추출 2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1 (2000 긋기) · 여유 95 GB
+[2026-10-18 14:23:20]   2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1: 창 338090개 저장, 추출본 삭제
+[2026-10-18 14:23:20]   추출 2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2 (2000 긋기) · 여유 95 GB
+[2026-10-18 14:30:54]   2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2: 창 142856개 저장, 추출본 삭제
+[2026-10-18 14:30:54]   추출 2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v3 (2000 긋기) · 여유 95 GB
+[2026-10-18 14:40:06]   2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v3: 창 50792개 저장, 추출본 삭제
+[2026-10-18 14:40:06]   추출 2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v1 (2000 긋기) · 여유 94 GB
+[2026-10-18 14:54:54]   2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v1: 창 337946개 저장, 추출본 삭제
+[2026-10-18 14:54:54]   추출 2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2 (2000 긋기) · 여유 94 GB
+[2026-10-18 15:11:37]   2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2: 창 142781개 저장, 추출본 삭제
+[2026-10-18 15:11:37]   추출 2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v3 (2000 긋기) · 여유 93 GB
+[2026-10-18 15:29:38]   2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v3: 창 50786개 저장, 추출본 삭제
+[2026-10-18 15:29:38] 2024-10-23_variability_setup.7z: 아카이브 삭제 (재다운로드 가능)
+[2026-10-18 15:29:38] 2024-10-23_variability_setup.7z: 완료
+[2026-10-18 15:29:38] 다운로드 시작 2024-04-15_TypeD_sample1.7z (record 17782542)
+
+A collection of bowed responses of cello strings (part 2)
+Requested ID 17782542; resolved version ID 17782542
+Manifest: /Users/jeongjihoon/violin-rne/data/manifests/zenodo_17782542_20261018T062940.105590Z.json
+  2024-04-22_TypeA_sample3.7z | 14,416,522,615 bytes | 13.426 GiB | md5:c1c316576b956ff29dc7caa9d5ca03f5
+  2024-04-15_TypeD_sample1.7z | 14,399,592,100 bytes | 13.411 GiB | md5:ba582c0ecb1f47c9dcfa9be2d43d0f80
+  2024-04-19_TypeA_sample2.7z | 14,775,691,753 bytes | 13.761 GiB | md5:ec520fecf6c5011ef8491b335edc1cee
+Compressed total: 40.598 GiB. Extraction requires additional space.
+Explicit download: 2024-04-15_TypeD_sample1.7z; 13.411 GiB compressed; 13.411 GiB to fetch
+  parallel: 215/215 chunks to fetch over 16 connections
+  0.25 / 13.41 GiB
+  0.50 / 13.41 GiB
+  0.75 / 13.41 GiB
+  1.00 / 13.41 GiB
+  1.25 / 13.41 GiB
+  1.50 / 13.41 GiB
+  1.75 / 13.41 GiB
+  2.00 / 13.41 GiB
+  2.25 / 13.41 GiB
+  2.50 / 13.41 GiB
+  2.75 / 13.41 GiB
+  3.00 / 13.41 GiB
+  3.25 / 13.41 GiB
+  3.50 / 13.41 GiB
+  3.75 / 13.41 GiB
+  4.00 / 13.41 GiB
+  4.25 / 13.41 GiB
+  4.50 / 13.41 GiB
+  4.75 / 13.41 GiB
+  5.00 / 13.41 GiB
+  5.25 / 13.41 GiB
+  5.50 / 13.41 GiB
+  5.75 / 13.41 GiB
+  6.00 / 13.41 GiB
+  6.25 / 13.41 GiB
+  6.50 / 13.41 GiB
+  6.75 / 13.41 GiB
+  7.00 / 13.41 GiB
+  7.25 / 13.41 GiB
+  7.50 / 13.41 GiB
+  7.75 / 13.41 GiB
+  8.00 / 13.41 GiB
+  8.25 / 13.41 GiB
+  8.50 / 13.41 GiB
+  8.75 / 13.41 GiB
+  9.00 / 13.41 GiB
+  9.25 / 13.41 GiB
+  9.50 / 13.41 GiB
+  9.75 / 13.41 GiB
+  10.00 / 13.41 GiB
+  10.25 / 13.41 GiB
+  10.50 / 13.41 GiB
+  10.75 / 13.41 GiB
+  11.00 / 13.41 GiB
+  11.25 / 13.41 GiB
+  11.50 / 13.41 GiB
+  11.75 / 13.41 GiB
+  12.00 / 13.41 GiB
+  12.25 / 13.41 GiB
+  12.50 / 13.41 GiB
+  12.75 / 13.41 GiB
+  13.00 / 13.41 GiB
+  13.29 / 13.41 GiB
+  13.41 / 13.41 GiB
+Checking MD5 (may take several minutes)...
+Downloaded and MD5 verified: /Users/jeongjihoon/violin-rne/data/raw/zenodo/17782542/2024-04-15_TypeD_sample1.7z
+[2026-10-18 16:04:28]   추출 2024-04-15_TypeD_sample1/2024-04-17/v1 (2000 긋기) · 여유 79 GB
+[2026-10-18 16:13:19]   2024-04-15_TypeD_sample1/2024-04-17/v1: 창 338462개 저장, 추출본 삭제
+[2026-10-18 16:13:19]   추출 2024-04-15_TypeD_sample1/2024-04-17/v2 (2000 긋기) · 여유 78 GB
+[2026-10-18 16:16:45]   2024-04-15_TypeD_sample1/2024-04-17/v2: 창 143045개 저장, 추출본 삭제
+[2026-10-18 16:16:45]   추출 2024-04-15_TypeD_sample1/2024-04-17/v3 (2000 긋기) · 여유 78 GB
+[2026-10-18 16:26:25]   2024-04-15_TypeD_sample1/2024-04-17/v3: 창 50843개 저장, 추출본 삭제
+[2026-10-18 16:26:25] 2024-04-15_TypeD_sample1.7z: 아카이브 삭제 (재다운로드 가능)
+[2026-10-18 16:26:25] 2024-04-15_TypeD_sample1.7z: 완료
+[2026-10-18 16:26:25] 다운로드 시작 2024-06-19_TypeA_T2_sample1.7z (record 17782565)
+
+A collection of bowed responses of cello strings (part 4)
+Requested ID 17782565; resolved version ID 17782565
+Manifest: /Users/jeongjihoon/violin-rne/data/manifests/zenodo_17782565_20261018T072626.897006Z.json
+  2024-06-11_TypeC_T2_sample1.7z | 14,974,282,927 bytes | 13.946 GiB | md5:d2f75b921998cf5bff0b062b131e5bc5
+  2024-06-19_TypeA_T2_sample1.7z | 14,978,195,174 bytes | 13.950 GiB | md5:3e7b785530ac7b03f216e793de34deb8
+  2024-06-13_TypeB_T2_sample1.7z | 14,390,431,235 bytes | 13.402 GiB | md5:b0c24d75a1913bb04d37944fd84b2ff6
+Compressed total: 41.298 GiB. Extraction requires additional space.
+Explicit download: 2024-06-19_TypeA_T2_sample1.7z; 13.950 GiB compressed; 13.950 GiB to fetch
+  parallel: 224/224 chunks to fetch over 16 connections
+  0.25 / 13.95 GiB
+  0.50 / 13.95 GiB
+  0.75 / 13.95 GiB
+  1.00 / 13.95 GiB
+  1.25 / 13.95 GiB
+  1.50 / 13.95 GiB
+  1.75 / 13.95 GiB
+  2.00 / 13.95 GiB
+  2.25 / 13.95 GiB
+  2.50 / 13.95 GiB
+  2.75 / 13.95 GiB
+  3.00 / 13.95 GiB
+  3.25 / 13.95 GiB
+  3.50 / 13.95 GiB
+  3.75 / 13.95 GiB
+  4.00 / 13.95 GiB
+  4.25 / 13.95 GiB
+  4.50 / 13.95 GiB
+  4.75 / 13.95 GiB
+  5.00 / 13.95 GiB
+  5.25 / 13.95 GiB
+  5.50 / 13.95 GiB
+  5.75 / 13.95 GiB
+  6.00 / 13.95 GiB
+  6.25 / 13.95 GiB
+  6.50 / 13.95 GiB
+  6.75 / 13.95 GiB
+  7.00 / 13.95 GiB
+  7.25 / 13.95 GiB
+  7.50 / 13.95 GiB
+  7.75 / 13.95 GiB
+  8.00 / 13.95 GiB
+Chunk 139: TimeoutError; retry 1/12 in 10s
+Chunk 140: TimeoutError; retry 1/12 in 10s
+Chunk 142: TimeoutError; retry 1/12 in 10s
+Chunk 130: TimeoutError; retry 1/12 in 10s
+Chunk 136: TimeoutError; retry 1/12 in 10s
+Chunk 134: TimeoutError; retry 1/12 in 10s
+Chunk 143: TimeoutError; retry 1/12 in 10s
+Chunk 129: TimeoutError; retry 1/12 in 10s
+Chunk 137: TimeoutError; retry 1/12 in 10s
+Chunk 144: TimeoutError; retry 1/12 in 10s
+Chunk 127: TimeoutError; retry 1/12 in 10s
+Chunk 141: TimeoutError; retry 1/12 in 10s
+Chunk 132: TimeoutError; retry 1/12 in 10s
+Chunk 138: TimeoutError; retry 1/12 in 10s
+Chunk 128: TimeoutError; retry 1/12 in 10s
+Chunk 135: TimeoutError; retry 1/12 in 10s
+Chunk 138: TimeoutError; retry 2/12 in 20s
+Chunk 132: TimeoutError; retry 2/12 in 20s
+Chunk 144: TimeoutError; retry 2/12 in 20s
+Chunk 143: TimeoutError; retry 2/12 in 20s
+Chunk 134: TimeoutError; retry 2/12 in 20s
+Chunk 136: TimeoutError; retry 2/12 in 20s
+Chunk 140: TimeoutError; retry 2/12 in 20s
+Chunk 142: TimeoutError; retry 2/12 in 20s
+Chunk 141: TimeoutError; retry 2/12 in 20s
+Chunk 128: TimeoutError; retry 2/12 in 20s
+Chunk 129: TimeoutError; retry 2/12 in 20s
+Chunk 135: TimeoutError; retry 2/12 in 20s
+Chunk 127: TimeoutError; retry 2/12 in 20s
+Chunk 130: TimeoutError; retry 2/12 in 20s
+Chunk 137: TimeoutError; retry 2/12 in 20s
+Chunk 139: TimeoutError; retry 2/12 in 20s
+Chunk 138: URLError; retry 3/12 in 40s
+Chunk 137: URLError; retry 3/12 in 40s
+Chunk 142: URLError; retry 3/12 in 40s
+Chunk 135: URLError; retry 3/12 in 40s
+Chunk 140: URLError; retry 3/12 in 40s
+Chunk 136: URLError; retry 3/12 in 40s
+Chunk 130: URLError; retry 3/12 in 40s
+Chunk 144: URLError; retry 3/12 in 40s
+Chunk 128: URLError; retry 3/12 in 40s
+Chunk 127: URLError; retry 3/12 in 40s
+Chunk 139: URLError; retry 3/12 in 40s
+Chunk 132: URLError; retry 3/12 in 40s
+Chunk 129: URLError; retry 3/12 in 40s
+Chunk 143: URLError; retry 3/12 in 40s
+Chunk 141: URLError; retry 3/12 in 40s
+Chunk 134: URLError; retry 3/12 in 40s
+Chunk 135: URLError; retry 4/12 in 60s
+Chunk 144: URLError; retry 4/12 in 60s
+Chunk 137: URLError; retry 4/12 in 60s
+Chunk 134: URLError; retry 4/12 in 60s
+Chunk 128: URLError; retry 4/12 in 60s
+Chunk 132: URLError; retry 4/12 in 60s
+Chunk 130: URLError; retry 4/12 in 60s
+Chunk 139: URLError; retry 4/12 in 60s
+Chunk 140: URLError; retry 4/12 in 60s
+Chunk 129: URLError; retry 4/12 in 60s
+Chunk 143: URLError; retry 4/12 in 60s
+Chunk 127: URLError; retry 4/12 in 60s
+Chunk 141: URLError; retry 4/12 in 60s
+Chunk 136: URLError; retry 4/12 in 60s
+Chunk 138: URLError; retry 4/12 in 60s
+Chunk 142: URLError; retry 4/12 in 60s
+Chunk 127: TimeoutError; retry 5/12 in 60s
+Chunk 134: TimeoutError; retry 5/12 in 60s
+Chunk 137: TimeoutError; retry 5/12 in 60s
+Chunk 136: TimeoutError; retry 5/12 in 60s
+Chunk 143: TimeoutError; retry 5/12 in 60s
+Chunk 138: TimeoutError; retry 5/12 in 60s
+Chunk 132: TimeoutError; retry 5/12 in 60s
+Chunk 130: TimeoutError; retry 5/12 in 60s
+Chunk 135: TimeoutError; retry 5/12 in 60s
+Chunk 144: TimeoutError; retry 5/12 in 60s
+Chunk 128: TimeoutError; retry 5/12 in 60s
+Chunk 139: TimeoutError; retry 5/12 in 60s
+Chunk 141: TimeoutError; retry 5/12 in 60s
+Chunk 140: TimeoutError; retry 5/12 in 60s
+Chunk 129: TimeoutError; retry 5/12 in 60s
+Chunk 142: TimeoutError; retry 5/12 in 60s
+Chunk 144: PrematureEOF; retry 6/12 in 60s
+Chunk 127: PrematureEOF; retry 6/12 in 60s
+Chunk 130: PrematureEOF; retry 6/12 in 60s
+Chunk 134: PrematureEOF; retry 6/12 in 60s
+Chunk 139: PrematureEOF; retry 6/12 in 60s
+Chunk 142: PrematureEOF; retry 6/12 in 60s
+Chunk 128: PrematureEOF; retry 6/12 in 60s
+Chunk 129: PrematureEOF; retry 6/12 in 60s
+Chunk 137: PrematureEOF; retry 6/12 in 60s
+  8.25 / 13.95 GiB
+Chunk 130: PrematureEOF; retry 7/12 in 60s
+Chunk 127: PrematureEOF; retry 7/12 in 60s
+Chunk 149: PrematureEOF; retry 1/12 in 10s
+Chunk 128: PrematureEOF; retry 7/12 in 60s
+Chunk 147: PrematureEOF; retry 1/12 in 10s
+Chunk 134: PrematureEOF; retry 7/12 in 60s
+Chunk 139: PrematureEOF; retry 7/12 in 60s
+Chunk 142: PrematureEOF; retry 7/12 in 60s
+Chunk 137: PrematureEOF; retry 7/12 in 60s
+Chunk 150: PrematureEOF; retry 1/12 in 10s
+  8.50 / 13.95 GiB
+Chunk 142: PrematureEOF; retry 8/12 in 60s
+Chunk 147: PrematureEOF; retry 2/12 in 20s
+Chunk 134: PrematureEOF; retry 8/12 in 60s
+Chunk 138: PrematureEOF; retry 6/12 in 60s
+  8.75 / 13.95 GiB
+Chunk 130: PrematureEOF; retry 8/12 in 60s
+Chunk 150: PrematureEOF; retry 2/12 in 20s
+Chunk 147: PrematureEOF; retry 3/12 in 40s
+  9.00 / 13.95 GiB
+Chunk 153: PrematureEOF; retry 1/12 in 10s
+  9.25 / 13.95 GiB
+Chunk 154: PrematureEOF; retry 1/12 in 10s
+Chunk 134: PrematureEOF; retry 9/12 in 60s
+Chunk 162: PrematureEOF; retry 1/12 in 10s
+  9.50 / 13.95 GiB
+  9.75 / 13.95 GiB
+  10.00 / 13.95 GiB
+  10.25 / 13.95 GiB
+  10.50 / 13.95 GiB
+Chunk 134: PrematureEOF; retry 10/12 in 60s
+Chunk 182: PrematureEOF; retry 1/12 in 10s
+  10.75 / 13.95 GiB
+  11.00 / 13.95 GiB
+Chunk 186: PrematureEOF; retry 1/12 in 10s
+Chunk 188: PrematureEOF; retry 1/12 in 10s
+Chunk 188: URLError; retry 2/12 in 20s
+Chunk 182: TimeoutError; retry 2/12 in 20s
+Chunk 186: TimeoutError; retry 2/12 in 20s
+Chunk 183: TimeoutError; retry 1/12 in 10s
+Chunk 134: TimeoutError; retry 11/12 in 60s
+Chunk 176: TimeoutError; retry 1/12 in 10s
+Chunk 191: TimeoutError; retry 1/12 in 10s
+Chunk 193: TimeoutError; retry 1/12 in 10s
+Chunk 185: TimeoutError; retry 1/12 in 10s
+Chunk 189: TimeoutError; retry 1/12 in 10s
+Chunk 190: TimeoutError; retry 1/12 in 10s
+Chunk 178: TimeoutError; retry 1/12 in 10s
+Chunk 177: TimeoutError; retry 1/12 in 10s
+Chunk 187: TimeoutError; retry 1/12 in 10s
+Chunk 192: TimeoutError; retry 1/12 in 10s
+Chunk 184: TimeoutError; retry 1/12 in 10s
+Chunk 188: URLError; retry 3/12 in 40s
+Chunk 183: URLError; retry 2/12 in 20s
+Chunk 176: URLError; retry 2/12 in 20s
+Chunk 191: URLError; retry 2/12 in 20s
+Chunk 193: URLError; retry 2/12 in 20s
+Chunk 185: URLError; retry 2/12 in 20s
+Chunk 189: URLError; retry 2/12 in 20s
+Chunk 190: URLError; retry 2/12 in 20s
+Chunk 178: URLError; retry 2/12 in 20s
+Chunk 177: URLError; retry 2/12 in 20s
+Chunk 187: URLError; retry 2/12 in 20s
+Chunk 192: URLError; retry 2/12 in 20s
+Chunk 184: URLError; retry 2/12 in 20s
+Chunk 182: URLError; retry 3/12 in 40s
+Chunk 186: URLError; retry 3/12 in 40s
+Chunk 134: URLError; retry 12/12 in 60s
+Chunk 183: URLError; retry 3/12 in 40s
+Chunk 176: URLError; retry 3/12 in 40s
+Chunk 191: URLError; retry 3/12 in 40s
+Chunk 193: URLError; retry 3/12 in 40s
+Chunk 185: URLError; retry 3/12 in 40s
+Chunk 190: URLError; retry 3/12 in 40s
+Chunk 189: URLError; retry 3/12 in 40s
+Chunk 177: URLError; retry 3/12 in 40s
+Chunk 178: URLError; retry 3/12 in 40s
+Chunk 187: URLError; retry 3/12 in 40s
+Chunk 192: URLError; retry 3/12 in 40s
+Chunk 184: URLError; retry 3/12 in 40s
+Chunk 188: URLError; retry 4/12 in 60s
+Chunk 182: URLError; retry 4/12 in 60s
+Chunk 186: URLError; retry 4/12 in 60s
+Chunk 183: URLError; retry 4/12 in 60s
+Chunk 176: URLError; retry 4/12 in 60s
+Chunk 191: URLError; retry 4/12 in 60s
+Chunk 193: URLError; retry 4/12 in 60s
+Chunk 185: URLError; retry 4/12 in 60s
+Chunk 189: URLError; retry 4/12 in 60s
+Chunk 190: URLError; retry 4/12 in 60s
+Chunk 177: URLError; retry 4/12 in 60s
+Chunk 187: URLError; retry 4/12 in 60s
+Chunk 178: URLError; retry 4/12 in 60s
+Chunk 192: URLError; retry 4/12 in 60s
+Chunk 184: URLError; retry 4/12 in 60s
+Chunk 188: URLError; retry 5/12 in 60s
+Chunk 182: URLError; retry 5/12 in 60s
+Chunk 186: URLError; retry 5/12 in 60s
+Chunk 194: URLError; retry 1/12 in 10s
+Chunk 183: URLError; retry 5/12 in 60s
+Chunk 194: URLError; retry 2/12 in 20s
+Chunk 176: URLError; retry 5/12 in 60s
+Chunk 191: URLError; retry 5/12 in 60s
+Chunk 193: URLError; retry 5/12 in 60s
+Chunk 185: URLError; retry 5/12 in 60s
+Chunk 189: URLError; retry 5/12 in 60s
+Chunk 190: URLError; retry 5/12 in 60s
+Chunk 177: URLError; retry 5/12 in 60s
+Chunk 187: URLError; retry 5/12 in 60s
+Chunk 178: URLError; retry 5/12 in 60s
+Chunk 192: URLError; retry 5/12 in 60s
+Chunk 184: URLError; retry 5/12 in 60s
+Chunk 188: URLError; retry 6/12 in 60s
+Chunk 182: URLError; retry 6/12 in 60s
+Chunk 186: URLError; retry 6/12 in 60s
+Chunk 194: URLError; retry 3/12 in 40s
+Chunk 183: URLError; retry 6/12 in 60s
+Chunk 191: URLError; retry 6/12 in 60s
+Chunk 176: URLError; retry 6/12 in 60s
+Chunk 193: URLError; retry 6/12 in 60s
+Chunk 185: URLError; retry 6/12 in 60s
+Chunk 190: URLError; retry 6/12 in 60s
+Chunk 189: URLError; retry 6/12 in 60s
+Chunk 177: URLError; retry 6/12 in 60s
+Chunk 187: URLError; retry 6/12 in 60s
+Chunk 192: URLError; retry 6/12 in 60s
+Chunk 178: URLError; retry 6/12 in 60s
+Chunk 184: URLError; retry 6/12 in 60s
+Chunk 194: URLError; retry 4/12 in 60s
+Chunk 188: URLError; retry 7/12 in 60s
+Chunk 182: URLError; retry 7/12 in 60s
+Chunk 186: URLError; retry 7/12 in 60s
+Chunk 176: URLError; retry 7/12 in 60s
+Chunk 183: URLError; retry 7/12 in 60s
+Chunk 191: URLError; retry 7/12 in 60s
+Chunk 193: URLError; retry 7/12 in 60s
+Chunk 185: URLError; retry 7/12 in 60s
+Chunk 190: URLError; retry 7/12 in 60s
+Chunk 189: URLError; retry 7/12 in 60s
+Chunk 177: URLError; retry 7/12 in 60s
+Chunk 187: URLError; retry 7/12 in 60s
+Chunk 184: URLError; retry 7/12 in 60s
+Chunk 178: URLError; retry 7/12 in 60s
+Chunk 192: URLError; retry 7/12 in 60s
+Chunk 194: URLError; retry 5/12 in 60s
+Chunk 188: URLError; retry 8/12 in 60s
+Chunk 182: URLError; retry 8/12 in 60s
+Chunk 186: URLError; retry 8/12 in 60s
+Chunk 176: URLError; retry 8/12 in 60s
+Chunk 185: URLError; retry 8/12 in 60s
+Chunk 193: URLError; retry 8/12 in 60s
+Chunk 191: URLError; retry 8/12 in 60s
+Chunk 183: URLError; retry 8/12 in 60s
+Chunk 190: URLError; retry 8/12 in 60s
+Chunk 189: URLError; retry 8/12 in 60s
+Chunk 177: URLError; retry 8/12 in 60s
+Chunk 184: URLError; retry 8/12 in 60s
+Chunk 187: URLError; retry 8/12 in 60s
+Chunk 192: URLError; retry 8/12 in 60s
+Chunk 178: URLError; retry 8/12 in 60s
+Chunk 194: URLError; retry 6/12 in 60s
+Chunk 188: URLError; retry 9/12 in 60s
+Chunk 182: URLError; retry 9/12 in 60s
+Chunk 186: URLError; retry 9/12 in 60s
+Chunk 176: URLError; retry 9/12 in 60s
+Chunk 183: URLError; retry 9/12 in 60s
+Chunk 185: URLError; retry 9/12 in 60s
+Chunk 193: URLError; retry 9/12 in 60s
+Chunk 191: URLError; retry 9/12 in 60s
+Chunk 190: URLError; retry 9/12 in 60s
+Chunk 189: URLError; retry 9/12 in 60s
+Chunk 178: URLError; retry 9/12 in 60s
+Chunk 177: URLError; retry 9/12 in 60s
+Chunk 187: URLError; retry 9/12 in 60s
+Chunk 184: URLError; retry 9/12 in 60s
+Chunk 192: URLError; retry 9/12 in 60s
+Chunk 194: URLError; retry 7/12 in 60s
+Chunk 188: URLError; retry 10/12 in 60s
+Chunk 182: URLError; retry 10/12 in 60s
+Chunk 186: URLError; retry 10/12 in 60s
+Chunk 176: URLError; retry 10/12 in 60s
+Chunk 183: URLError; retry 10/12 in 60s
+Chunk 185: URLError; retry 10/12 in 60s
+Chunk 193: URLError; retry 10/12 in 60s
+Chunk 191: URLError; retry 10/12 in 60s
+Chunk 190: URLError; retry 10/12 in 60s
+Chunk 189: URLError; retry 10/12 in 60s
+Chunk 187: URLError; retry 10/12 in 60s
+Chunk 184: URLError; retry 10/12 in 60s
+Chunk 177: URLError; retry 10/12 in 60s
+Chunk 178: URLError; retry 10/12 in 60s
+Chunk 192: URLError; retry 10/12 in 60s
+Chunk 194: URLError; retry 8/12 in 60s
+Chunk 188: URLError; retry 11/12 in 60s
+Chunk 182: URLError; retry 11/12 in 60s
+Chunk 186: URLError; retry 11/12 in 60s
+Chunk 176: URLError; retry 11/12 in 60s
+Chunk 191: URLError; retry 11/12 in 60s
+Chunk 183: URLError; retry 11/12 in 60s
+Chunk 185: URLError; retry 11/12 in 60s
+Chunk 193: URLError; retry 11/12 in 60s
+Chunk 189: URLError; retry 11/12 in 60s
+Chunk 190: URLError; retry 11/12 in 60s
+Chunk 184: URLError; retry 11/12 in 60s
+Chunk 192: URLError; retry 11/12 in 60s
+Chunk 177: URLError; retry 11/12 in 60s
+Chunk 178: URLError; retry 11/12 in 60s
+Chunk 187: URLError; retry 11/12 in 60s
+Chunk 194: URLError; retry 9/12 in 60s
+Chunk 188: URLError; retry 12/12 in 60s
+Chunk 182: URLError; retry 12/12 in 60s
+Chunk 186: URLError; retry 12/12 in 60s
+Chunk 176: URLError; retry 12/12 in 60s
+Chunk 193: URLError; retry 12/12 in 60s
+Chunk 185: URLError; retry 12/12 in 60s
+Chunk 183: URLError; retry 12/12 in 60s
+Chunk 191: URLError; retry 12/12 in 60s
+Chunk 190: URLError; retry 12/12 in 60s
+Chunk 189: URLError; retry 12/12 in 60s
+Chunk 192: URLError; retry 12/12 in 60s
+Chunk 177: URLError; retry 12/12 in 60s
+Chunk 187: URLError; retry 12/12 in 60s
+Chunk 178: URLError; retry 12/12 in 60s
+Chunk 184: URLError; retry 12/12 in 60s
+Chunk 194: URLError; retry 10/12 in 60s
+Chunk 194: URLError; retry 11/12 in 60s
+Chunk 194: URLError; retry 12/12 in 60s
+Download: URLError; retry 1/12 in 10s
+Explicit download: 2024-06-19_TypeA_T2_sample1.7z; 13.950 GiB compressed; 2.825 GiB to fetch
+  parallel: 46/224 chunks to fetch over 16 connections
+Chunk 178: URLError; retry 1/12 in 10s
+Chunk 176: URLError; retry 1/12 in 10s
+Chunk 177: URLError; retry 1/12 in 10s
+Chunk 134: URLError; retry 1/12 in 10s
+Chunk 182: URLError; retry 1/12 in 10s
+Chunk 183: URLError; retry 1/12 in 10s
+Chunk 186: URLError; retry 1/12 in 10s
+Chunk 185: URLError; retry 1/12 in 10s
+Chunk 187: URLError; retry 1/12 in 10s
+Chunk 188: URLError; retry 1/12 in 10s
+Chunk 184: URLError; retry 1/12 in 10s
+Chunk 189: URLError; retry 1/12 in 10s
+Chunk 190: URLError; retry 1/12 in 10s
+Chunk 192: URLError; retry 1/12 in 10s
+Chunk 193: URLError; retry 1/12 in 10s
+Chunk 191: URLError; retry 1/12 in 10s
+Chunk 178: URLError; retry 2/12 in 20s
+Chunk 177: URLError; retry 2/12 in 20s
+Chunk 192: URLError; retry 2/12 in 20s
+Chunk 187: URLError; retry 2/12 in 20s
+Chunk 134: URLError; retry 2/12 in 20s
+Chunk 182: URLError; retry 2/12 in 20s
+Chunk 191: URLError; retry 2/12 in 20s
+Chunk 176: URLError; retry 2/12 in 20s
+Chunk 186: URLError; retry 2/12 in 20s
+Chunk 183: URLError; retry 2/12 in 20s
+Chunk 190: URLError; retry 2/12 in 20s
+Chunk 184: URLError; retry 2/12 in 20s
+Chunk 188: URLError; retry 2/12 in 20s
+Chunk 185: URLError; retry 2/12 in 20s
+Chunk 189: URLError; retry 2/12 in 20s
+Chunk 193: URLError; retry 2/12 in 20s
+Chunk 178: URLError; retry 3/12 in 40s
+Chunk 177: URLError; retry 3/12 in 40s
+Chunk 192: URLError; retry 3/12 in 40s
+Chunk 187: URLError; retry 3/12 in 40s
+Chunk 186: URLError; retry 3/12 in 40s
+Chunk 185: URLError; retry 3/12 in 40s
+Chunk 183: URLError; retry 3/12 in 40s
+Chunk 191: URLError; retry 3/12 in 40s
+Chunk 184: URLError; retry 3/12 in 40s
+Chunk 189: URLError; retry 3/12 in 40s
+Chunk 134: URLError; retry 3/12 in 40s
+Chunk 190: URLError; retry 3/12 in 40s
+Chunk 182: URLError; retry 3/12 in 40s
+Chunk 188: URLError; retry 3/12 in 40s
+Chunk 176: URLError; retry 3/12 in 40s
+Chunk 193: URLError; retry 3/12 in 40s
+Chunk 182: URLError; retry 4/12 in 60s
+Chunk 185: URLError; retry 4/12 in 60s
+Chunk 183: URLError; retry 4/12 in 60s
+Chunk 189: URLError; retry 4/12 in 60s
+Chunk 192: URLError; retry 4/12 in 60s
+Chunk 193: URLError; retry 4/12 in 60s
+Chunk 188: URLError; retry 4/12 in 60s
+Chunk 176: URLError; retry 4/12 in 60s
+Chunk 187: URLError; retry 4/12 in 60s
+Chunk 177: URLError; retry 4/12 in 60s
+Chunk 184: URLError; retry 4/12 in 60s
+Chunk 190: URLError; retry 4/12 in 60s
+Chunk 186: URLError; retry 4/12 in 60s
+Chunk 191: URLError; retry 4/12 in 60s
+Chunk 134: URLError; retry 4/12 in 60s
+Chunk 178: URLError; retry 4/12 in 60s
+  11.38 / 13.95 GiB
+  11.62 / 13.95 GiB
+  11.88 / 13.95 GiB
+  12.12 / 13.95 GiB
+  12.38 / 13.95 GiB
+  12.62 / 13.95 GiB
+  12.88 / 13.95 GiB
+  13.12 / 13.95 GiB
+  13.39 / 13.95 GiB
+  13.64 / 13.95 GiB
+  13.89 / 13.95 GiB
+  13.95 / 13.95 GiB
+Checking MD5 (may take several minutes)...
+Downloaded and MD5 verified: /Users/jeongjihoon/violin-rne/data/raw/zenodo/17782565/2024-06-19_TypeA_T2_sample1.7z
+[2026-10-18 21:29:03]   추출 2024-06-19_TypeA_T2_sample1/v1 (2000 긋기) · 여유 78 GB
+[2026-10-18 21:35:39]   2024-06-19_TypeA_T2_sample1/v1: 창 338393개 저장, 추출본 삭제
+[2026-10-18 21:35:39]   추출 2024-06-19_TypeA_T2_sample1/v2 (2000 긋기) · 여유 78 GB
+[2026-10-18 21:44:07]   2024-06-19_TypeA_T2_sample1/v2: 창 142985개 저장, 추출본 삭제
+[2026-10-18 21:44:07]   추출 2024-06-19_TypeA_T2_sample1/v3 (2000 긋기) · 여유 77 GB
+[2026-10-18 21:54:04]   2024-06-19_TypeA_T2_sample1/v3: 창 50831개 저장, 추출본 삭제
+[2026-10-18 21:54:04] 2024-06-19_TypeA_T2_sample1.7z: 아카이브 삭제 (재다운로드 가능)
+[2026-10-18 21:54:04] 2024-06-19_TypeA_T2_sample1.7z: 완료
+[2026-10-18 21:54:04] 다운로드 시작 2024-06-13_TypeB_T2_sample1.7z (record 17782565)
+
+A collection of bowed responses of cello strings (part 4)
+Requested ID 17782565; resolved version ID 17782565
+Manifest: /Users/jeongjihoon/violin-rne/data/manifests/zenodo_17782565_20261018T125405.331150Z.json
+  2024-06-11_TypeC_T2_sample1.7z | 14,974,282,927 bytes | 13.946 GiB | md5:d2f75b921998cf5bff0b062b131e5bc5
+  2024-06-19_TypeA_T2_sample1.7z | 14,978,195,174 bytes | 13.950 GiB | md5:3e7b785530ac7b03f216e793de34deb8
+  2024-06-13_TypeB_T2_sample1.7z | 14,390,431,235 bytes | 13.402 GiB | md5:b0c24d75a1913bb04d37944fd84b2ff6
+Compressed total: 41.298 GiB. Extraction requires additional space.
+Explicit download: 2024-06-13_TypeB_T2_sample1.7z; 13.402 GiB compressed; 13.402 GiB to fetch
+  parallel: 215/215 chunks to fetch over 16 connections
+  0.25 / 13.40 GiB
+  0.50 / 13.40 GiB
+  0.75 / 13.40 GiB
+  1.00 / 13.40 GiB
+  1.25 / 13.40 GiB
+  1.50 / 13.40 GiB
+  1.75 / 13.40 GiB
+  2.00 / 13.40 GiB
+  2.25 / 13.40 GiB
+  2.50 / 13.40 GiB
+  2.75 / 13.40 GiB
+  3.00 / 13.40 GiB
+  3.25 / 13.40 GiB
+  3.50 / 13.40 GiB
+  3.75 / 13.40 GiB
+  4.00 / 13.40 GiB
+  4.25 / 13.40 GiB
+  4.50 / 13.40 GiB
+  4.75 / 13.40 GiB
+  5.00 / 13.40 GiB
+  5.25 / 13.40 GiB
+  5.50 / 13.40 GiB
+  5.75 / 13.40 GiB
+  6.00 / 13.40 GiB
+  6.25 / 13.40 GiB
+  6.50 / 13.40 GiB
+  6.75 / 13.40 GiB
+  7.00 / 13.40 GiB
+  7.25 / 13.40 GiB
+  7.50 / 13.40 GiB
+  7.75 / 13.40 GiB
+  8.00 / 13.40 GiB
+  8.25 / 13.40 GiB
+  8.50 / 13.40 GiB
+  8.75 / 13.40 GiB
+  9.00 / 13.40 GiB
+  9.25 / 13.40 GiB
+  9.50 / 13.40 GiB
+  9.75 / 13.40 GiB
+  10.00 / 13.40 GiB
+  10.25 / 13.40 GiB
+  10.50 / 13.40 GiB
+  10.75 / 13.40 GiB
+  11.00 / 13.40 GiB
+  11.25 / 13.40 GiB
+  11.50 / 13.40 GiB
+  11.75 / 13.40 GiB
+  12.00 / 13.40 GiB
+  12.25 / 13.40 GiB
+  12.50 / 13.40 GiB
+  12.78 / 13.40 GiB
+  13.03 / 13.40 GiB
+  13.28 / 13.40 GiB
+Chunk 213: TimeoutError; retry 1/12 in 10s
+Chunk 212: TimeoutError; retry 1/12 in 10s
+  13.40 / 13.40 GiB
+Checking MD5 (may take several minutes)...
+Downloaded and MD5 verified: /Users/jeongjihoon/violin-rne/data/raw/zenodo/17782565/2024-06-13_TypeB_T2_sample1.7z
+[2026-10-18 22:27:53]   추출 2024-06-13_TypeB_T2_sample1/v1 (2000 긋기) · 여유 77 GB
+[2026-10-18 22:34:00]   2024-06-13_TypeB_T2_sample1/v1: 창 338387개 저장, 추출본 삭제
+[2026-10-18 22:34:00]   추출 2024-06-13_TypeB_T2_sample1/v2 (2000 긋기) · 여유 77 GB
+[2026-10-18 22:42:02]   2024-06-13_TypeB_T2_sample1/v2: 창 142979개 저장, 추출본 삭제
+[2026-10-18 22:42:02]   추출 2024-06-13_TypeB_T2_sample1/v3 (2000 긋기) · 여유 76 GB
+[2026-10-18 22:51:32]   2024-06-13_TypeB_T2_sample1/v3: 창 50828개 저장, 추출본 삭제
+[2026-10-18 22:51:32] 2024-06-13_TypeB_T2_sample1.7z: 아카이브 삭제 (재다운로드 가능)
+[2026-10-18 22:51:32] 2024-06-13_TypeB_T2_sample1.7z: 완료
+[2026-10-18 22:51:32] 다운로드 시작 2024-06-11_TypeC_T2_sample1.7z (record 17782565)
+
+A collection of bowed responses of cello strings (part 4)
+Requested ID 17782565; resolved version ID 17782565
+Manifest: /Users/jeongjihoon/violin-rne/data/manifests/zenodo_17782565_20261018T135133.435184Z.json
+  2024-06-11_TypeC_T2_sample1.7z | 14,974,282,927 bytes | 13.946 GiB | md5:d2f75b921998cf5bff0b062b131e5bc5
+  2024-06-19_TypeA_T2_sample1.7z | 14,978,195,174 bytes | 13.950 GiB | md5:3e7b785530ac7b03f216e793de34deb8
+  2024-06-13_TypeB_T2_sample1.7z | 14,390,431,235 bytes | 13.402 GiB | md5:b0c24d75a1913bb04d37944fd84b2ff6
+Compressed total: 41.298 GiB. Extraction requires additional space.
+Explicit download: 2024-06-11_TypeC_T2_sample1.7z; 13.946 GiB compressed; 13.946 GiB to fetch
+  parallel: 224/224 chunks to fetch over 16 connections
+  0.25 / 13.95 GiB
+  0.50 / 13.95 GiB
+  0.75 / 13.95 GiB
+  1.00 / 13.95 GiB
+  1.25 / 13.95 GiB
+  1.50 / 13.95 GiB
+  1.75 / 13.95 GiB
+  2.00 / 13.95 GiB
+  2.25 / 13.95 GiB
+  2.50 / 13.95 GiB
+  2.75 / 13.95 GiB
+  3.00 / 13.95 GiB
+  3.25 / 13.95 GiB
+  3.50 / 13.95 GiB
+  3.75 / 13.95 GiB
+  4.00 / 13.95 GiB
+  4.25 / 13.95 GiB
+  4.50 / 13.95 GiB
+  4.75 / 13.95 GiB
+  5.00 / 13.95 GiB
+  5.25 / 13.95 GiB
+  5.50 / 13.95 GiB
+  5.75 / 13.95 GiB
+  6.00 / 13.95 GiB
+  6.25 / 13.95 GiB
+  6.50 / 13.95 GiB
+  6.75 / 13.95 GiB
+  7.00 / 13.95 GiB
+  7.25 / 13.95 GiB
+  7.50 / 13.95 GiB
+  7.75 / 13.95 GiB
+  8.00 / 13.95 GiB
+  8.25 / 13.95 GiB
+  8.50 / 13.95 GiB
+  8.75 / 13.95 GiB
+  9.00 / 13.95 GiB
+  9.25 / 13.95 GiB
+  9.50 / 13.95 GiB
+  9.75 / 13.95 GiB
+  10.00 / 13.95 GiB
+Chunk 170: PrematureEOF; retry 1/12 in 10s
+Chunk 160: PrematureEOF; retry 1/12 in 10s
+Chunk 175: PrematureEOF; retry 1/12 in 10s
+Chunk 173: PrematureEOF; retry 1/12 in 10s
+Chunk 159: PrematureEOF; retry 1/12 in 10s
+Chunk 164: PrematureEOF; retry 1/12 in 10s
+  10.25 / 13.95 GiB
+Chunk 160: PrematureEOF; retry 2/12 in 20s
+  10.50 / 13.95 GiB
+  10.75 / 13.95 GiB
+  11.00 / 13.95 GiB
+  11.25 / 13.95 GiB
+  11.50 / 13.95 GiB
+  11.75 / 13.95 GiB
+  12.00 / 13.95 GiB
+  12.25 / 13.95 GiB
+  12.50 / 13.95 GiB
+  12.75 / 13.95 GiB
+  13.00 / 13.95 GiB
+  13.26 / 13.95 GiB
+  13.51 / 13.95 GiB
+  13.76 / 13.95 GiB
+  13.95 / 13.95 GiB
+Checking MD5 (may take several minutes)...
+Downloaded and MD5 verified: /Users/jeongjihoon/violin-rne/data/raw/zenodo/17782565/2024-06-11_TypeC_T2_sample1.7z
+[2026-10-18 23:28:28]   추출 2024-06-11_TypeC_T2_sample1/v1 (2000 긋기) · 여유 76 GB
+[2026-10-18 23:37:10]   2024-06-11_TypeC_T2_sample1/v1: 창 338372개 저장, 추출본 삭제
+[2026-10-18 23:37:10]   추출 2024-06-11_TypeC_T2_sample1/v2 (2000 긋기) · 여유 75 GB
+[2026-10-18 23:45:31]   2024-06-11_TypeC_T2_sample1/v2: 창 143018개 저장, 추출본 삭제
+[2026-10-18 23:45:31]   추출 2024-06-11_TypeC_T2_sample1/v3 (2000 긋기) · 여유 75 GB
+[2026-10-18 23:55:29]   2024-06-11_TypeC_T2_sample1/v3: 창 50837개 저장, 추출본 삭제
+[2026-10-18 23:55:29] 2024-06-11_TypeC_T2_sample1.7z: 아카이브 삭제 (재다운로드 가능)
+[2026-10-18 23:55:29] 2024-06-11_TypeC_T2_sample1.7z: 완료
+[2026-10-18 23:55:29] 다운로드 시작 2024-06-17_TypeD_T2_sample1.7z (record 17782538)
+
+A collection of bowed responses of cello strings (part 5)
+Requested ID 17782538; resolved version ID 17782538
+Manifest: /Users/jeongjihoon/violin-rne/data/manifests/zenodo_17782538_20261018T145530.326920Z.json
+  2024-07-03_TypeB_T2_sample2.7z | 13,566,750,802 bytes | 12.635 GiB | md5:7612e05ef9cb3b47e5785254ac1fdee7
+  2024-06-17_TypeD_T2_sample1.7z | 14,566,032,674 bytes | 13.566 GiB | md5:cf589879022fff8e417cdd6154f84777
+Compressed total: 26.201 GiB. Extraction requires additional space.
+Explicit download: 2024-06-17_TypeD_T2_sample1.7z; 13.566 GiB compressed; 13.566 GiB to fetch
+  parallel: 218/218 chunks to fetch over 16 connections
+Chunk 12: PrematureEOF; retry 1/12 in 10s
+Chunk 3: PrematureEOF; retry 1/12 in 10s
+Chunk 4: PrematureEOF; retry 1/12 in 10s
+  0.25 / 13.57 GiB
+Chunk 11: PrematureEOF; retry 1/12 in 10s
+Chunk 21: PrematureEOF; retry 1/12 in 10s
+Chunk 4: PrematureEOF; retry 2/12 in 20s
+  0.50 / 13.57 GiB
+  0.75 / 13.57 GiB
+Chunk 5: PrematureEOF; retry 1/12 in 10s
+  1.00 / 13.57 GiB
+Chunk 23: PrematureEOF; retry 1/12 in 10s
+Chunk 27: PrematureEOF; retry 1/12 in 10s
+Chunk 24: PrematureEOF; retry 1/12 in 10s
+Chunk 21: PrematureEOF; retry 2/12 in 20s
+Chunk 9: PrematureEOF; retry 1/12 in 10s
+Chunk 27: PrematureEOF; retry 2/12 in 20s
+Chunk 19: PrematureEOF; retry 1/12 in 10s
+Chunk 4: PrematureEOF; retry 3/12 in 40s
+  1.25 / 13.57 GiB
+Chunk 22: PrematureEOF; retry 1/12 in 10s
+  1.50 / 13.57 GiB
+Chunk 33: PrematureEOF; retry 1/12 in 10s
+Chunk 37: PrematureEOF; retry 1/12 in 10s
+  1.75 / 13.57 GiB
+Chunk 36: PrematureEOF; retry 1/12 in 10s
+  2.00 / 13.57 GiB
+  2.25 / 13.57 GiB
+  2.50 / 13.57 GiB
+  2.75 / 13.57 GiB
+[2026-10-19 08:42:37] 다운로드 시작 2024-06-17_TypeD_T2_sample1.7z (record 17782538)
+
+A collection of bowed responses of cello strings (part 5)
+Requested ID 17782538; resolved version ID 17782538
+Manifest: /Users/jeongjihoon/violin-rne/data/manifests/zenodo_17782538_20261018T234238.113244Z.json
+  2024-07-03_TypeB_T2_sample2.7z | 13,566,750,802 bytes | 12.635 GiB | md5:7612e05ef9cb3b47e5785254ac1fdee7
+  2024-06-17_TypeD_T2_sample1.7z | 14,566,032,674 bytes | 13.566 GiB | md5:cf589879022fff8e417cdd6154f84777
+Compressed total: 26.201 GiB. Extraction requires additional space.
+Explicit download: 2024-06-17_TypeD_T2_sample1.7z; 13.566 GiB compressed; 10.753 GiB to fetch
+  parallel: 173/218 chunks to fetch over 16 connections
+  3.06 / 13.57 GiB
+  3.31 / 13.57 GiB
+  3.56 / 13.57 GiB
+Chunk 33: PrematureEOF; retry 1/12 in 10s
+  3.81 / 13.57 GiB
+  4.06 / 13.57 GiB
+  4.31 / 13.57 GiB
+  4.56 / 13.57 GiB
+Chunk 82: PrematureEOF; retry 1/12 in 10s
+  4.81 / 13.57 GiB
+  5.06 / 13.57 GiB
+  5.31 / 13.57 GiB
+  5.56 / 13.57 GiB
+  5.81 / 13.57 GiB
+  6.06 / 13.57 GiB
+  6.31 / 13.57 GiB
+  6.56 / 13.57 GiB
+  6.81 / 13.57 GiB
+  7.06 / 13.57 GiB
+  7.31 / 13.57 GiB
+  7.56 / 13.57 GiB
+  7.81 / 13.57 GiB
+  8.06 / 13.57 GiB
+  8.31 / 13.57 GiB
+  8.56 / 13.57 GiB
+  8.81 / 13.57 GiB
+  9.06 / 13.57 GiB
+  9.31 / 13.57 GiB
+  9.56 / 13.57 GiB
+  9.81 / 13.57 GiB
+Chunk 157: PrematureEOF; retry 1/12 in 10s
+  10.06 / 13.57 GiB
+  10.31 / 13.57 GiB
+  10.56 / 13.57 GiB
+  10.81 / 13.57 GiB
+  11.06 / 13.57 GiB
+  11.31 / 13.57 GiB
+  11.56 / 13.57 GiB
+  11.81 / 13.57 GiB
+  12.06 / 13.57 GiB
+  12.31 / 13.57 GiB
+  12.56 / 13.57 GiB
+  12.82 / 13.57 GiB
+  13.07 / 13.57 GiB
+  13.32 / 13.57 GiB
+  13.57 / 13.57 GiB
+Checking MD5 (may take several minutes)...
+Downloaded and MD5 verified: /Users/jeongjihoon/violin-rne/data/raw/zenodo/17782538/2024-06-17_TypeD_T2_sample1.7z
+[2026-10-19 09:04:24]   추출 2024-06-17_TypeD_T2_sample1/v1 (2000 긋기) · 여유 75 GB
+[2026-10-19 09:18:45]   2024-06-17_TypeD_T2_sample1/v1: 창 338399개 저장, 추출본 삭제
+[2026-10-19 09:18:45]   추출 2024-06-17_TypeD_T2_sample1/v2 (2000 긋기) · 여유 73 GB
+[2026-10-19 09:34:25]   2024-06-17_TypeD_T2_sample1/v2: 창 142949개 저장, 추출본 삭제
+[2026-10-19 09:34:25]   추출 2024-06-17_TypeD_T2_sample1/v3 (2000 긋기) · 여유 73 GB
+[2026-10-19 09:51:14]   2024-06-17_TypeD_T2_sample1/v3: 창 50828개 저장, 추출본 삭제
+[2026-10-19 09:51:14] 2024-06-17_TypeD_T2_sample1.7z: 아카이브 삭제 (재다운로드 가능)
+[2026-10-19 09:51:14] 2024-06-17_TypeD_T2_sample1.7z: 완료
+[2026-10-19 09:51:14] 다운로드 시작 2024-04-22_TypeA_sample3.7z (record 17782542)
+
+A collection of bowed responses of cello strings (part 2)
+Requested ID 17782542; resolved version ID 17782542
+Manifest: /Users/jeongjihoon/violin-rne/data/manifests/zenodo_17782542_20261019T005115.420365Z.json
+  2024-04-22_TypeA_sample3.7z | 14,416,522,615 bytes | 13.426 GiB | md5:c1c316576b956ff29dc7caa9d5ca03f5
+  2024-04-15_TypeD_sample1.7z | 14,399,592,100 bytes | 13.411 GiB | md5:ba582c0ecb1f47c9dcfa9be2d43d0f80
+  2024-04-19_TypeA_sample2.7z | 14,775,691,753 bytes | 13.761 GiB | md5:ec520fecf6c5011ef8491b335edc1cee
+Compressed total: 40.598 GiB. Extraction requires additional space.
+Explicit download: 2024-04-22_TypeA_sample3.7z; 13.426 GiB compressed; 13.426 GiB to fetch
+  parallel: 215/215 chunks to fetch over 16 connections
+  0.25 / 13.43 GiB
+  0.50 / 13.43 GiB
+  0.75 / 13.43 GiB
+  1.00 / 13.43 GiB
+  1.25 / 13.43 GiB
+  1.50 / 13.43 GiB
+  1.75 / 13.43 GiB
+  2.00 / 13.43 GiB
+  2.25 / 13.43 GiB
+  2.50 / 13.43 GiB
+  2.75 / 13.43 GiB
+  3.00 / 13.43 GiB
+  3.25 / 13.43 GiB
+  3.50 / 13.43 GiB
+  3.75 / 13.43 GiB
+  4.00 / 13.43 GiB
+  4.25 / 13.43 GiB
+  4.50 / 13.43 GiB
+  4.75 / 13.43 GiB
+  5.00 / 13.43 GiB
+  5.25 / 13.43 GiB
+  5.50 / 13.43 GiB
+  5.75 / 13.43 GiB
+  6.00 / 13.43 GiB
+  6.25 / 13.43 GiB
+  6.50 / 13.43 GiB
+  6.75 / 13.43 GiB
+Chunk 115: PrematureEOF; retry 1/12 in 10s
+  7.00 / 13.43 GiB
+  7.25 / 13.43 GiB
+  7.50 / 13.43 GiB
+  7.75 / 13.43 GiB
+  8.00 / 13.43 GiB
+Chunk 126: TimeoutError; retry 1/12 in 10s
+  8.25 / 13.43 GiB
+Chunk 137: PrematureEOF; retry 1/12 in 10s
+  8.50 / 13.43 GiB
+  8.75 / 13.43 GiB
+  9.00 / 13.43 GiB
+  9.25 / 13.43 GiB
+  9.50 / 13.43 GiB
+  9.75 / 13.43 GiB
+  10.00 / 13.43 GiB
+  10.25 / 13.43 GiB
+  10.50 / 13.43 GiB
+  10.75 / 13.43 GiB
+  11.00 / 13.43 GiB
+  11.25 / 13.43 GiB
+  11.50 / 13.43 GiB
+  11.75 / 13.43 GiB
+  12.00 / 13.43 GiB
+  12.25 / 13.43 GiB
+  12.50 / 13.43 GiB
+  12.75 / 13.43 GiB
+  13.00 / 13.43 GiB
+  13.30 / 13.43 GiB
+  13.43 / 13.43 GiB
+Checking MD5 (may take several minutes)...
+Downloaded and MD5 verified: /Users/jeongjihoon/violin-rne/data/raw/zenodo/17782542/2024-04-22_TypeA_sample3.7z
+[2026-10-19 10:10:53]   추출 2024-04-22_TypeA_sample3/v1 (2000 긋기) · 여유 101 GB
+[2026-10-19 10:25:51]   2024-04-22_TypeA_sample3/v1: 창 338462개 저장, 추출본 삭제
+[2026-10-19 10:25:51]   추출 2024-04-22_TypeA_sample3/v2 (2000 긋기) · 여유 99 GB
+[2026-10-19 10:29:21]   2024-04-22_TypeA_sample3/v2: 창 143042개 저장, 추출본 삭제
+[2026-10-19 10:29:21]   추출 2024-04-22_TypeA_sample3/v3 (2000 긋기) · 여유 99 GB
+[2026-10-19 10:39:05]   2024-04-22_TypeA_sample3/v3: 창 50834개 저장, 추출본 삭제
+[2026-10-19 10:39:05] 2024-04-22_TypeA_sample3.7z: 아카이브 삭제 (재다운로드 가능)
+[2026-10-19 10:39:05] 2024-04-22_TypeA_sample3.7z: 완료
+[2026-10-19 10:39:05] 다운로드 시작 2024-04-24_TypeA_sample4.7z (record 17782552)
+
+A collection of bowed responses of cello strings (part 3)
+Requested ID 17782552; resolved version ID 17782552
+Manifest: /Users/jeongjihoon/violin-rne/data/manifests/zenodo_17782552_20261019T013907.079215Z.json
+  2024-03-25_TypeA_sample1_coldwarm.7z | 8,768,070,823 bytes | 8.166 GiB | md5:e3d01fb4a26a8588ef8000ff1b221bd2
+  2024-04-26_TypeD_sample2.7z | 14,388,913,034 bytes | 13.401 GiB | md5:05e6dd728abf75acb06e88ec47ba959d
+  2024-04-24_TypeA_sample4.7z | 14,688,771,984 bytes | 13.680 GiB | md5:90b14bfb1a5fa992e193895d1a7bdc49
+Compressed total: 35.247 GiB. Extraction requires additional space.
+Explicit download: 2024-04-24_TypeA_sample4.7z; 13.680 GiB compressed; 13.680 GiB to fetch
+  parallel: 219/219 chunks to fetch over 16 connections
+  0.25 / 13.68 GiB
+  0.50 / 13.68 GiB
+  0.75 / 13.68 GiB
+  1.00 / 13.68 GiB
+  1.25 / 13.68 GiB
+  1.50 / 13.68 GiB
+  1.75 / 13.68 GiB
+  2.00 / 13.68 GiB
+  2.25 / 13.68 GiB
+  2.50 / 13.68 GiB
+  2.75 / 13.68 GiB
+  3.00 / 13.68 GiB
+  3.25 / 13.68 GiB
+  3.50 / 13.68 GiB
+  3.75 / 13.68 GiB
+  4.00 / 13.68 GiB
+  4.25 / 13.68 GiB
+  4.50 / 13.68 GiB
+  4.75 / 13.68 GiB
+  5.00 / 13.68 GiB
+  5.25 / 13.68 GiB
+  5.50 / 13.68 GiB
+  5.75 / 13.68 GiB
+Chunk 109: TimeoutError; retry 1/12 in 10s
+Chunk 96: TimeoutError; retry 1/12 in 10s
+Chunk 100: TimeoutError; retry 1/12 in 10s
+Chunk 104: TimeoutError; retry 1/12 in 10s
+Chunk 95: TimeoutError; retry 1/12 in 10s
+Chunk 94: TimeoutError; retry 1/12 in 10s
+Chunk 105: TimeoutError; retry 1/12 in 10s
+Chunk 98: TimeoutError; retry 1/12 in 10s
+Chunk 106: TimeoutError; retry 1/12 in 10s
+Chunk 102: TimeoutError; retry 1/12 in 10s
+Chunk 99: TimeoutError; retry 1/12 in 10s
+Chunk 101: TimeoutError; retry 1/12 in 10s
+Chunk 91: TimeoutError; retry 1/12 in 10s
+Chunk 107: TimeoutError; retry 1/12 in 10s
+Chunk 108: TimeoutError; retry 1/12 in 10s
+Chunk 103: TimeoutError; retry 1/12 in 10s
+Chunk 98: TimeoutError; retry 2/12 in 20s
+Chunk 101: TimeoutError; retry 2/12 in 20s
+Chunk 99: TimeoutError; retry 2/12 in 20s
+Chunk 105: TimeoutError; retry 2/12 in 20s
+Chunk 107: TimeoutError; retry 2/12 in 20s
+Chunk 102: TimeoutError; retry 2/12 in 20s
+Chunk 94: TimeoutError; retry 2/12 in 20s
+Chunk 104: TimeoutError; retry 2/12 in 20s
+Chunk 108: TimeoutError; retry 2/12 in 20s
+Chunk 91: TimeoutError; retry 2/12 in 20s
+Chunk 100: TimeoutError; retry 2/12 in 20s
+Chunk 106: TimeoutError; retry 2/12 in 20s
+Chunk 95: TimeoutError; retry 2/12 in 20s
+Chunk 96: TimeoutError; retry 2/12 in 20s
+Chunk 103: TimeoutError; retry 2/12 in 20s
+Chunk 109: TimeoutError; retry 2/12 in 20s
+  6.00 / 13.68 GiB
+  6.25 / 13.68 GiB
+  6.50 / 13.68 GiB
+  6.75 / 13.68 GiB

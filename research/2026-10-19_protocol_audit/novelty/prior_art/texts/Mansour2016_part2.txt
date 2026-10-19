@@ -1,0 +1,1094 @@
+ACTA ACUSTICA UNITED WITH ACUSTICA
+Vol. 102 (2016) 1094 – 1107
+                                                                                                             DOI 10.3813/AAA.919026
+
+
+
+
+                      Enhanced Wave-Based Modelling of Musical
+                      Strings. Part 2: Bowed Strings
+
+                      Hossein Mansour1) , Jim Woodhouse2) , Gary P. Scavone1)
+                      1)
+                         Computational Acoustic Modeling Laboratory, Schulich School of Music, McGill University,
+                         555 Sherbrooke Street West, Montréal, Québec H3A 1E3, Canada
+                      2)
+                         Cambridge University Engineering Department, Trumpington Street, Cambridge CB2 1PZ, UK.
+                         jw12@cam.ac.uk
+
+
+                      Summary
+                      An enhanced model of a bowed string is developed, incorporating several new features: realistic damping, detailed
+                      coupling of body modes to both polarisations of string motion, coupling to transverse and longitudinal bow-hair
+                      motion, and coupling to vibration of the bow stick. The inﬂuence of these factors is then explored via simulations
+                      of the Schelleng diagram, to reveal trends of behaviour. The biggest inﬂuence on behaviour is found to come
+                      from the choice of model to describe the friction force at the bow, but the other factors all produce eﬀects that
+                      may be of musical signiﬁcance under certain circumstances.
+                      PACS no. 43.40.Cw, 43.75.De
+
+
+
+
+1. Introduction and historical background                             more sections of straightlines. The corners travel along
+                                                                      the string at speed c0 = T0 /ms , where T0 is the tension
+In an earlier paper [1], a review was presented of the phys-          and ms is the mass per unit length of the string. This leads
+ical ingredients necessary to give an accurate travelling-            to an expectation that the period of such bowed-string mo-
+wave model of the motion of a stretched string in the lin-            tion will usually be the same as that of the same string
+ear range, for example as required to synthesise the motion           when plucked.
+of a plucked string. That model is now further developed                 Helmholtz described the simplest case of bowed string
+to incorporate additional ingredients relevant to the same            motion, with only one travelling corner. Every time the
+string when excited by bowing, for example in a violin.               corner passes the bow it triggers a transition between stick
+A full model of a bowed string requires further aspects of            and slip: during the time that the corner is on the ﬁnger-
+linear-systems behaviour to be incorporated (such as the              side of the contact point, the bow and the element of the
+dynamics of bow vibration), and also requires an adequate             string beneath it are sticking while during the shorter jour-
+model of the process of dynamic friction at the bow-string            ney of the corner to the bridge and back, the string is slip-
+contact, a strongly non-linear phenomenon (see for exam-              ping across the bow hairs. This vibration regime, called
+ple [2]). The full landscape of extra features is too com-            Helmholtz motion, creates the normal “speaking” sound
+plicated to cover within the length constraints of a sin-             of the violin, and it is the goal of the vast majority of bow
+gle paper, and the discussion here is focussed primarily              strokes.
+on the additional linear-system features. Issues concern-                The ﬁrst systematic analysis of bowed string dynamics
+ing the friction model are mainly deferred to future work             was made by Raman [4]. He assumed a perfectly ﬂexi-
+(currently in progress), but two alternative models for fric-         ble string terminated at both ends by real reﬂection coef-
+tion from the existing literature will be included among the          ﬁcients with magnitude less than unity (physically speak-
+cases presented here. Some sample results of simulations              ing, dashpots). He also assumed a velocity-dependent fric-
+will be shown, to begin the process of assessing the rela-            tion force due to the bow-string interaction applied at a
+tive importance of the many ingredients of the model.                 single point dividing the string in a rational fraction. Work-
+   Helmholtz [3] was the ﬁrst to show that the usual vi-              ing in the pre-computer age he needed many simplifying
+bration of a bowed string is formed by a V-shaped corner              assumptions, but he was remarkably successful in predict-
+(or multiple corners) travelling back and forth between               ing and classifying the possible regimes of vibration for a
+the bridge and the ﬁnger. At each instant, the sounding               bowed string. Raman was also the ﬁrst to point out the ex-
+length of the string is divided by the corner(s) into two or          istence of a minimum bow force [5] as well as the geomet-
+                                                                      rical incompatibility of the ideal Helmholtz motion with
+                                                                      uniform velocity across a ﬁnite-width bow during episodes
+Received 15 June 2016,                                                of sticking [4], both of which were conﬁrmed later and are
+accepted 12 September 2016.                                           still topics of active research [6].
+
+
+
+1094                                                                                                          © S. Hirzel Verlag · EAA
+Mansour et al.: Enhanced modelling of musical strings. Part 2                 ACTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                                Vol. 102 (2016)
+
+
+   Using Raman’s simpliﬁed dynamical model, Friedlan-               The friction force F and the velocity v are thus found
+der [7] and Keller [8] published two independent but simi-          by simultaneously solving Equation (1) with the fric-
+lar studies. Their results indicated that if dissipation is not     tion curve F (v) [18].
+taken into account, all periodic motions are unstable, in-        4. The incoming waves then generate new outgoing
+cluding the Helmholtz motion. As explained later, [9, 10,            waves, each wave being modiﬁed by the amount F/2Z0
+11] any small perturbation to the Helmholtz motion pro-              while passing the bow.
+duces unstable subharmonic modulation of the Helmholtz
+motion. In reality, because of the energy losses in the sys-      This model was successful in describing, at least qualita-
+tem this instability is usually suppressed, but under certain     tively, a number of aspects of the behaviour of a bowed
+circumstances these subharmonics can be heard, or seen in         string [19]. However, the model used many approxima-
+measurements of bowed-string motion [9].                          tions: in particular, later results have cast considerable
+   The next major development in modelling bowed string           doubt on the “friction curve” model of dynamic friction.
+dynamics was introduced by Cremer and Lazarus in 1968.            This statement is not only true in the context of violin
+Acknowledging the fact that sharp corners are unlikely to         bowing: in many other areas featuring vibration driven by
+occur on any real string due to dissipation and dispersion,       friction, such as earthquake dynamics, researchers have re-
+they proposed a modiﬁcation of the Helmholtz motion by            ported that a better frictional constitutive model is needed,
+“rounding” the travelling corner [12]. Cremer then devel-         and a family of “rate and state” models have been devel-
+oped a model of periodic Helmholtz-like motion, which             oped based on a variety of empirical measurements (see
+revealed that when the normal force exerted by the bow on         for example [2]). In the speciﬁc context of friction me-
+the string is high the corner becomes quite sharp, but as         diated by violin rosin, Smith and Woodhouse [20], [21]
+bow force is reduced, the corner becomes progressively            argued that the temperature of the rosin plays a central
+more rounded [13, 14, 15]. Ideal Helmholtz motion is              role in the friction force exerted by the bow on the string:
+completely independent of the player’s actions, except that       rosin is a glassy material with a glass transition tempera-
+its amplitude is determined by the bow speed and posi-            ture only a little above room temperature, and partial melt-
+tion. Thus, this mechanism gave a ﬁrst indication of how          ing of rosin is possible under normal playing conditions.
+the player can exercise some control over the timbre of a            Preliminary eﬀorts have been made to develop a
+steady bowed note.                                                temperature-based friction model and apply it to simulate
+   In 1979, McIntyre and Woodhouse presented a compu-             the bowed string [22]. The thermal friction model proved
+tational model of the bowed string [16] which built on Cre-       to be more “benign” in that the desired Helmholtz motion
+mer’s insight and was a precursor to the wider family of          was established faster and more reliably than with the old
+“digital waveguide models” later developed by Smith [17].         friction-curve model, at least with the particular set of pa-
+This model extended Cremer’s corner-rounding concept to           rameters used in the study. Galluzzo compared predictions
+include transient motion of the string, by representing the       from both the friction-curve model and the thermal model
+motion of a string as the superposition of left- and right-       with results obtained experimentally using a bowing ma-
+going travelling components. The string motion could then         chine [23]. He concluded that neither model gave correct
+be simulated step-by-step in time, using the past history         predictions of all aspects of string motion, but that both
+plus a model of the frictional interaction between bow and        captured some elements of the observed behaviour.
+string.
+1. The incoming velocity waves arriving at the excitation            For the purpose of the present study the old friction-
+    point from the ﬁnger and bridge sides are calculated by       curve model will be taken as the base case, and the inﬂu-
+    convolving the history of the respective outgoing waves       ence of a range of model variations will be explored, in-
+    with appropriate impulse responses, known as “reﬂec-          cluding a case using the thermal friction model. This may
+    tion functions” (see [1] for details). These incoming         seem a rather backward-looking choice, but there is an
+    waves add together to form the unperturbed velocity at        important reason relating to comparisons with theoretical
+    the excitation point (called vh , because it depends only     work: although the present paper is concerned only with
+    on the past history of the string motion).                    simulations, parallel work [24] has examined a new formu-
+2. The instantaneous response to the friction force acting        lation of minimum bow force prediction. To date, all such
+    at the excitation point is added to vh to calculate the       predictions from Raman and Schelleng onwards have only
+    actual velocity at that point, v:                             been possible in the context of the friction-curve model.
+                                                                  To allow direct comparisons with the work reported here,
+                      F
+          v = vh +                                         (1)    it is useful to show a range of results based around the
+                     2Z0                                          friction-curve model. In any case, the main intention here
+   where F is the friction
+                       force exerted by the bow on the           is to reveal trends of behaviour: quantitative comparisons
+   string and Z0 = T0 ms is the string’s characteristic           with measurements are kept for future work (currently in
+   impedance.                                                     progress). As has been demonstrated previously by Guet-
+3. The early work used the same frictional model as Fried-        tler [25], one would expect the range of models studied
+   lander and Keller [7, 8], in which friction force is as-       here to reveal the main trends. However, it is clear that
+   sumed to depend only on the normal force and the in-           further research on friction models will be necessary in
+   stantaneous relative velocity between bow and string.          the future.
+
+
+
+                                                                                                                         1095
+ACTA ACUSTICA UNITED WITH ACUSTICA                         Mansour et al.: Enhanced modelling of musical strings. Part 2
+Vol. 102 (2016)
+
+
+2. Extending the model                                            purposes of musical synthesis, eﬀorts are already being
+                                                                  made to relax many of these restrictions: for example, re-
+2.1. Scope and limitations                                        cent work by Desvages and Bilbao [29] discusses a model
+                                                                  that allows bouncing-bow gestures.
+Expert violinists are concerned with rather subtle details
+of the transient response of their bowed strings. They may        2.2. Torsional motion
+ask, for example, why one brand of string is “easier to
+play” than another ﬁtted to the same violin, or how they          The friction force from the bow is applied tangentially on
+should set about performing a particular bowing gesture in        the surface of the string, so it excites torsional vibration
+order to achieve the best and most reliable sound. If the         of the string. Torsional waves are not eﬀectively coupled
+motion of a bowed string is to be understood in suﬃcient          to the body of the instrument, and so they are not likely
+detail to satisfy the demands of such experts, an accurate        to be responsible for a signiﬁcant portion of the radiated
+simulation model is needed. There are a number of physi-          sound (except for the rare case of “whistling” in the violin
+cal details that have not been included in previous models,       E5 string [30]). Torsional waves are, however, coupled to
+which might prove to be important.                                the transverse waves at the bowing point and can aﬀect the
+   The earlier paper [1] on plucked strings introduced            sound and the playability of the instrument by that route.
+several new factors, including: calibrated allowance for          Torsional waves on a normal over-wound string are much
+frequency-dependent string damping; inﬂuence of both              more heavily damped than the transverse waves, and so
+polarisations of string motion; and calibrated coupling to        their coupling to the transverse waves introduces signiﬁ-
+body modes (for a particular cello). These factors are all        cant extra damping: they have been suggested as a strong
+incorporated in the bowed-string simulations in this study.       candidate to suppress the Friedlander instability discussed
+Some extra features necessary for a bowed-string model            above [9, 10, 11].
+will now be introduced, and implemented in the simulation            Torsional waves at small amplitude satisfy the one-
+model. In Sec. 3 sample simulation results will be shown,         dimensional
+                                                                                wave equation with a torsional wave speed
+to explore the inﬂuence of the newly-added factors.               of cR = KR /IR and a characteristic torsional impedance
+   The major limitations of the current study are as fol-         of Z0R = KR cR /r2 , where KR is the torsional stiﬀness,
+lows: it is assumed that the bow remains in contact with          r is the string radius, and IR is the polar moment of iner-
+the string (i.e. it never bounces); that it is only in contact    tia per unit length of the string [31]. Most musical strings
+with one string at a time (excluding double or triple stops);     are over-wound, with a rather complicated distribution of
+that the bow is in contact with the string at a single point      stiﬀness and mass (see [32] or [33] for example). The sim-
+(ignoring the ﬁnite width of the bow), and that the contact       ple model suggests that torsional waves should be non-
+point of the string on the bow is not dynamically updated         dispersive, and with a propagation speed that is not di-
+(so that the string sees a non-changing bow impedance in          rectly inﬂuenced by the string’s tension. However, Loach
+both the transverse and longitudinal directions of the bow).      and Woodhouse found empirically that the natural fre-
+Finally, as has already been mentioned, there is consider-        quencies of torsional waves reduce to some extent when
+able uncertainty about the correct model for friction: the        the tension is increased, probably because the windings of
+friction-curve model will be used here for most cases. The        the string open up slightly and reduce the torsional stiﬀ-
+omission of ﬁnite-width bowing may cause some surprise,           ness [32]. Woodhouse and Loach also measured the Q
+but this is deliberate. The main qualitative consequences         factor for the ﬁrst few torsional modes of selected cello
+of ﬁnite-width bowing have been explored in earlier work          strings. The Q factors remained almost constant over dif-
+(see for example [9, 26, 27, 28]), and the next challenge in      ferent modes and were averaged to 45, 20, and 34 for
+that area would be to seek quantitative accuracy compared         nylon-, gut-, and steel-cored strings respectively.
+to experiments. However, in the view of the authors there            Once torsion is taken into account, the eﬀective charac-
+is little point in attempting that yet, until a better friction   teristic impedance of the string seen by the bow should be
+model has been established, and the best route for probing        modiﬁed from Z0 to Ztot deﬁned as
+and improving friction models is through the simpler case                 1     1   1
+with a single-point “bow”.                                                    =   +    .                                    (2)
+                                                                         Ztot   Z0 Z0R
+   Having established a model, with these restrictions, a
+further limitation is that attention is mainly directed here      Most of the transverse-to-torsional conversion happens
+at quasi-steady motion of the bowed string and the impli-         in the sticking phase, when rolling of the string on the
+cations for the Schelleng diagram: the model incorporates         bow can occur: it creates a mechanism for the otherwise-
+transient response, but attention is not directed explicitly      trapped waves on either side of the bow to pass to the other
+at transient bowing gestures. It is freely accepted that all      side. In this regard, the inclusion of the torsional motion is
+these restrictions limit the applicability of the models and      expected to aﬀect details such as the “Schelleng ripples”
+results presented here, and they all deserve more attention:      [14, 34]. Using the same argument, torsional motion may
+the decision on what to include in this particular paper is       be more inﬂuential during transients and when a high bow
+driven entirely by length constraints, and the desire to do       force is employed [35]. Torsional motion is not normally
+a thorough job on at least some aspects of the problem.           excited in the case of a plucked or struck string unless the
+Interestingly, in the parallel world of simulation for the        string has a discontinuity (such as a dent or a bend), or it
+
+
+
+1096
+Mansour et al.: Enhanced modelling of musical strings. Part 2                 ACTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                                       Vol. 102 (2016)
+
+
+is allowed to roll on the termination points, which breaks
+its rotational symmetry.
+   To implement torsional waves into the model they can
+be treated in the same way as transverse vibrations, with
+two travelling waves that are ﬁltered in each round trip to
+the ﬁnger or the bridge in a manner that reproduces the de-
+sired damping behaviour. There is no coupling to the body
+modes, and the values of torsional waves are modiﬁed by
+the amount F/2Z0R when passing to the other side of the                                                        Transverse vibrations
+bow. For friction calculation purposes, Z0 is replaced by                                                      of the bow hair (Y)
+
+Ztot deﬁned in Equation (2), and vh becomes the sum of                                               Perpendicular-to-bow
+                                                                                                     vibrations of the string (Y)
+four incoming wave terms, instead of two. Aside from the
+friction calculation part, Z0 remains in eﬀect in the mod-
+                                                                 Figure 1. The geometry of the bow and string illustrating diﬀer-
+elling of the transverse vibrations. For the open cello D3
+                                                                 ent polarisation directions of the string and the bow-hair ribbon
+string studied here the torsional fundamental frequency is
+                                                                 (after [39]).
+taken to be 758 Hz, the characteristic torsional impedance
+is 1.8 kg/s and a constant Q of 34 is assigned to all tor-
+sional modes.                                                    10, respectively [39]. In reality damping of the bow-hair
+                                                                 ribbon in both directions is dominated by the dry friction
+2.3. The ﬂexible bow                                             between individual strands, and so is likely to vary with
+Early bowed-string models ignored any ﬂexibility of the          amplitude.
+bow, as if the string were bowed with a rigid rod. The stick        The characteristic impedance of cello strings in their
+and hair ribbon of a real bow are, of course, far from rigid.    transverse direction ranges from 0.4 kg/s to 1.1 kg/s, which
+Some recent studies [28, 36] have made preliminary eﬀorts        is a relatively close match to the characteristic impedance
+to take into account the ﬂexibility of the bow-hair, but the     of the bow-hair ribbon in its transverse direction, but
+treatment was relatively crude. When a string is bowed, the      is an order of magnitude smaller than the characteristic
+time-varying friction force drives the string in the bowing      impedance of the bow-hair ribbon in its longitudinal direc-
+direction, but it also excites the bow-hair ribbon in its lon-   tion. This gives a guideline for the strength of the coupling
+gitudinal direction (see Figure 1 for the deﬁnition). Such       between the two systems. The strength of coupling at each
+vibrations of the bow-hairs change the eﬀective bow speed        particular frequency also depends on where that frequency
+at the bowing point. The bow-hair ribbon also has ﬂexibil-       falls with respect to the resonances of both systems, and
+ity in its transverse direction. Vibrations of the string and    on where the contact point falls with respect to the nodes
+the bow-hair in the direction of the player’s bow force can      and antinodes of the closest bow-hair mode shapes.
+act to modulate the eﬀective bow force, and thus inﬂuence           The bow-stick (i.e. the wooden part of the bow) also
+the detailed motion of the string. There is relatively little    has some degree of ﬂexibility, and is commonly regarded
+published literature about the mechanics of bows. Pitteroﬀ       by players as having a profound eﬀect on the sound and
+estimated some properties of bow-hair [31], while Ablitzer       playability of a bowed string. Little evidence was found to
+et al. [37, 38] have modelled the static deformations of a       support this claim in an experiment comparing the sounds
+bow in terms of its geometry, but they give little informa-      produced by bows ranging from excellent to very poor
+tion of direct relevance to this dynamical study. The most       qualities [41]. On theoretical grounds, too, it is hard to
+useful source here is the work of Gough [39].                    draw a direct link between the bow-stick properties and
+   A typical cello bow-hair ribbon consists of around 290        the string vibrations, given the weak coupling between the
+strands, of which around 50 are in immediate contact with        stick and the bow hair, and then from the bow hair to the
+the string. The diameter of each hair strand is in the range     string. This point was reinforced in a study by Gough [39],
+0.16–0.25 mm [31] and the typical length of the bow-hair         involving a thorough analysis on the modal properties of a
+bundle is around 59 cm. As reported in [31], the Young’s         bow-stick and its coupling to the bow hairs.
+modulus and density of the hair material are roughly 7 GPa          Perpendicular-to-bow vibrations of the string are cou-
+and 1100 kg/m3 respectively. Assuming 50 active hair             pled to the transverse vibrations of the bow-hair, so both
+strands, the characteristic impedance of the bow-hair rib-       eﬀects should be incorporated into the model together.
+bon in the longitudinal direction Zb0L becomes approxi-          It will be assumed that all individual hairs are active in
+mately 10 kg/s for a cello bow [31]. Wave speed in the lon-      the transverse vibrations of the ribbon. For simplicity, the
+gitudinal direction of the bow is approximately 2300 m/s         value of βbow (distance from the contact point to the frog
+[40], which results in the ﬁrst bow-hair longitudinal reso-      divided by the full length of the hair ribbon) will be con-
+nance around 1950 Hz. A typical bow-hair ribbon is pre-          sidered constant within the short period of simulation. To
+tensioned to 70 N, which results in a ﬁrst transverse natu-      model a more realistic time-varying βbow is straightforward
+ral frequency of 75 Hz, and a characteristic impedance of        in principle, but it would require the loop ﬁlters to be recal-
+0.79 kg/s. Gough estimated the Q factor of bow-hair vi-          culated at every time-step, or at least every few time-steps.
+brations in transverse and longitudinal directions at 20 and     For typical bowing speeds the variation in βbow is very
+
+
+
+                                                                                                                                    1097
+ACTA ACUSTICA UNITED WITH ACUSTICA                         Mansour et al.: Enhanced modelling of musical strings. Part 2
+Vol. 102 (2016)
+
+
+Table I. Summary of cello bow properties used in simulations.     longitudinal velocity waves, from the tip and the frog re-
+                                                                  spectively, arriving at the contact point. Since the friction
+ Hair strands       T0b        mb           f0bL       Zb0L       force is a function of bow speed, it needs to be recalculated
+     290           70 N    0.0089 kg/m    1950 Hz     10 kg/s     with vbE instead of vb at each time-step.
+     QbL           f0bT        Zb0          QbT
+                                                                     In a similar fashion as discussed for the modelling of
+     10           75 Hz     0.79 kg/s       20                    the body [1], the stick modes can be taken into account
+                                                                  using a set of independent resonators. Fourteen modes are
+                                                                  considered in this case, whose frequencies (ranging from
+small within a cycle of string vibration, but for detailed        50 Hz to 4221 Hz), modal masses, and mode angles were
+simulation of transient bowing gestures it might prove nec-       all extracted from [39]. The ﬂexibility of the bow-stick was
+essary to take this eﬀect into account.                           lumped at the tip side and the frog was assumed to be rigid
+   Transverse vibrations of the bow-hair and the bowed            as it is more heavily constrained by the grip of the player’s
+string are coupled at the contact point: they share a com-        hand. Stick modes are coupled to both transverse and lon-
+mon velocity and apply equal and opposite forces to one           gitudinal vibrations of the hair ribbon. The excitation of
+another (assuming they remain in contact). To ﬁnd the un-         the stick modes can be calculated from
+known common velocity and the mutual force, the sepa-
+                                                                        Fb,k = 2Zb0L vbL1 cos θbk + 2Zb0 vbT 1 sin θbk ,   (8)
+rate unperturbed velocities of the string and the bow are
+ﬁrst calculated: these are called vhY and vbh respectively.       where θbk is the spatial angle of the kth stick mode with
+It is then easy to show that the matched velocity (vM ) is        respect to the bowing direction (longitudinal direction of
+given by                                                          the bow), and vbL1 and vbT 1 are the incoming longitudinal
+                vhY Z0 + vbh Zb0                                  and transverse velocity waves coming from the tip respec-
+       vM =                      ,                         (3)    tively.
+                    Z0 + Zb0
+where Zb0 is the characteristic impedance of the bow-hair         2.4. Friction models
+ribbon in its transverse direction. The resulting ﬂuctuating      As discussed earlier, for most of the simulations to be re-
+force in the contact region (FNF ) is                             ported here the friction force between the bow and the
+                                                                string will be assumed to follow the friction-curve model:
+       FNF = 2Z0 vM − vhY .                              (4)
+                                                                  a function of the instantaneous relative sliding speed, and
+This force is used to modify the relevant incoming waves          proportional to normal force. Empirical friction curves for
+before they are passed to the other side of the bowing            violin rosin have been measured by Lazarus [42] and later
+point. Note that FNF is applied toward the centre-line of         by Smith and Woodhouse [21]. In both studies, two rosin-
+the string and does not excite its torsional motion, which is     coated surfaces were forced to rub against one another
+why Z0 rather than Ztot appears on the right-hand side of         with a constant speed, and the friction coeﬃcient was mea-
+Equation (4). This force is also added to the nominal value       sured as a function of the imposed sliding velocity. The
+of the bow force, supplied by the player (FN ), to give the       two studies found similar values. The ﬁtted function sug-
+eﬀective bow force,                                               gested by Smith and Woodhouse is
+
+       FNE = FN + FNF .                                    (5)          µ = 0.4e(v−vb )/0.01 + 0.45e(v−vb )/0.1 + 0.35,    (9)
+
+Since the bow force is being dynamically updated for each         where µ is the velocity-dependent friction coeﬃcient. This
+time-step, the friction force is re-scaled accordingly.           function will be used throughout the present work, except
+   Longitudinal vibrations of the bow-hair can also be            when the thermal friction model is used.
+modelled with the travelling-wave approach, using the                The thermal model is described in detail in Smith and
+framework already established for the transverse vibra-           Woodhouse [21]. It assumes that the friction force is gov-
+tions of the string. In the presence of bow-hair longitudinal     erned by a plastic yield process, with a yield strength that
+vibrations, the nominal bow velocity will be modulated by         is a function of contact temperature. The form of the tem-
+the velocity of the contact point on the bow hair relative to     perature dependence is ﬁxed by requiring that under con-
+the bow-stick. This relative velocity can be found from           ditions of steady sliding, the friction force corresponds ex-
+                                                                  actly to the friction-curve model of Equation 9. All param-
+                               F                                  eter values used here are identical to those used by Wood-
+       vbF = vbL1 + vbL2 +          ,                      (6)
+                              2Zb0L                               house [22].
+and the eﬀective bow speed can be calculated from
+                                                                  3. Simulation studies
+       vbE = vb − vbF ,                                    (7)
+                                                                  3.1. Methodology
+where, as before, F is the instantaneous friction force be-
+tween the bow and the string, vb is the nominal bow speed         The simulations to be shown within this study relate to
+provided by the player, and vbL1 and vbL2 are the incoming        the Schelleng diagram, which encapsulates the ability of
+
+
+
+1098
+Mansour et al.: Enhanced modelling of musical strings. Part 2                 ACTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                                Vol. 102 (2016)
+
+
+a bowed string to sustain the Helmholtz motion when the              The simulated data is processed by a waveform identiﬁ-
+bow force and the bow speed are kept constant. To address         cation algorithm that is a slightly enhanced version of the
+this question, “perfect” Helmholtz motion is initialised at       one introduced by Woodhouse [22] and further expanded
+the beginning of each simulation. The travelling waves            by Galluzzo [23]. It classiﬁes the resulting waveform into
+corresponding to the transverse vibrations of the string          a number of categories of possible motion. The options
+in the bowing direction were initialised by the expected          have been extensively discussed in previous literature: in
+sawtooth waves of appropriate magnitude and phase. The            addition to the original “Helmholtz motion” there is “dou-
+model uses recursive (IIR) ﬁlters, both for the string and        ble/multiple slip”, typically occurring at low bow force;
+for the body [1], which also need to be initialised prop-         “decaying motion” at even lower force; “Raucous” and
+erly. This has been achieved by imposing ideal Helmholtz          “Anomalous low frequency” (ALF) motions that typically
+motion on all ﬁlters for a few cycles before the actual sim-      occur at very high bow force; and “S-motion” which some-
+ulation starts.                                                   times occurs when the bow position is close to a simple in-
+   The detailed vibration of the bowed string will be dif-        teger subdivision of the string length. All these character-
+ferent from the ideal Helmholtz motion due to eﬀects such         istic bowed-string vibration regimes have been described
+as damping, dispersion, and Schelleng ripples. This incon-        in detail in previous works (see for example [23]). One
+sistency results in extra disturbances within the ﬁrst few        more regime has been discussed in earlier literature, “dou-
+periods of simulation, which may disrupt an otherwise-            ble ﬂyback motion”, but for the particular purpose here, to
+stable Helmholtz motion. Another source for such unin-            classify regimes initialised with Helmholtz motion, it was
+tended disturbances is that the body motion and the other         not necessary to take this into account because it never
+travelling waves in the model, aside from the two asso-           arose in this context. It is, however, an important regime
+ciated with the vibrations of the string in the bowing di-        when transient bowing gestures are considered [44].
+rection, start from zero in the current initialisation of the        The data points are spaced logarithmically on the β
+model.                                                            axis from 0.016 to 0.19, and on the bow force axis from
+   It is accepted that the transient response to these par-       1.28 × 10−4 /β 2 N to 5 N. In this way a triangle of double-
+ticular disturbances may have some inﬂuence on the pre-           slip and decaying occurrences is excluded from the anal-
+cise outcome of a given run, and that diﬀerent initial con-       ysed range, giving increased resolution around the more
+ditions might change things a little. However, two things         important Helmholtz region. Note that an actual player
+can be said in defence of what has been done. First, the ini-     cannot control, and thus utilise, a constant bow force be-
+tial conditions are entirely consistent over all cases, so that   low about 0.1 N [45], so that simulated cases with bow
+trends should be shown in a fair way. Second, under con-          forces below this limit are primarily of research interest.
+ditions when the string response is suﬃciently “twitchy”
+                                                                  3.2. The base case
+for such small eﬀects to make a diﬀerence, that sensi-
+tivity is probably pointing to an interesting physical phe-       The base case was chosen to be an open D3 cello string
+nomenon in its own right. For example, Galluzzo [43] has          which is only allowed to vibrate in a single transverse po-
+shown Guettler diagrams measured using a bowing ma-               larisation. Realistic damping, stiﬀness and torsional mo-
+chine, which seem to show a signiﬁcant degree of “twitch-         tion are included in the simulations. The string is termi-
+iness” in a real cello string, perhaps beyond the ability of      nated at a realistic multi-resonance bridge whose prop-
+a human player to control.                                        erties were discussed earlier [1]. This base case can be
+   The steady-state vibration of an open D3 cello string          thought of as representing a real cello string, bowed by a
+(146.8 Hz) is studied using a 100 × 100 grid of simulated         rosin-coated rod (as in Galluzzo’s experiments [23]). The
+data points in the β-FN plane, the Schelleng diagram. Each        friction-curve model is assumed. It is fully accepted that
+simulation is run for 1 s and outputs the force signal ap-        this base case, and the variations on it to be shown shortly,
+plied by the bowed string to the bridge, and also a time          can only give a snapshot of some possible eﬀects of the
+history of the slip/stick state at the bowed point. In addi-      various model ingredients. For example, in many cases it
+tion, three metrics are calculated for each simulation run,       may make a big diﬀerence whether there is or is not a coin-
+using only the last 0.5 s to allow transient eﬀects to settle     cidence of frequencies between components: a transverse
+ﬁrst:                                                             string frequency might or might not fall close to a torsional
+                                                                  frequency, a bow-stick frequency or a bow-hair frequency.
+1. the increase in the slip-to-stick ratio as a percentage of
+                                                                  To explore each of these possibilities in detail would re-
+   its theoretical value;
+                                                                  quire a prohibitive number of plots.
+2. the spectral centroid relative to the fundamental fre-
+                                                                     Figure 2 shows the Schelleng diagram calculated for the
+   quency;
+                                                                  base case. Only instances of Helmholtz motion, S-motion
+3. the amount of pitch ﬂattening as a percentage of the           and ALF are shown in the plot. Instances of decaying and
+   fundamental frequency.                                         double-slip regimes occur in the empty area below the
+The second and third metrics are directly relevant to the         Helmholtz regime, and instances of raucous regime occur
+experience of the listener; the ﬁrst metric does not have a       in the empty area above it. Those instances are omitted
+direct musical consequence, but sheds light on the under-         from the plot for clarity. As expected, the S-motion oc-
+lying mechanics of the string motion.                             currences appear as columns for relatively large β values,
+
+
+
+                                                                                                                         1099
+ACTA ACUSTICA UNITED WITH ACUSTICA                                                           Mansour et al.: Enhanced modelling of musical strings. Part 2
+Vol. 102 (2016)
+
+
+                                                                                                       Figure 3 shows the three metrics deﬁned in the previ-
+                    5                                                                               ous subsection, for this base case. The values are only
+                                                                                                    shown for the data points identiﬁed as corresponding to
+                                                                                                    Helmholtz motion. The contour lines of relative slip time
+                   0.8                                                                              are almost parallel to the minimum bow force limit (with a
+                                                                                                    slope of −2 on the log-log scale, according to Schelleng’s
+
+  Bow force (N)
+                                                                                                    formula [34]), with a slight tendency towards extension of
+                  0.13                                                                              the slipping phase for smaller β values making the slope
+                                                                                                    steeper than −2. The range of variation is relatively broad,
+                                                                                                    up to three times the theoretical value in the lower-left side
+                  0.02                   Helmholtz motion                                           of the Helmholtz region.
+                                         S-motion
+                                         ALF
+                                                                                                       The spectral centroid relative to the fundamental fre-
+                                                                                                    quency is plotted in Figure 3b: the centroid has been calcu-
+            0.0035
+                 0.016                  0.03                 0.06          0.1          0.19        lated here with a cutoﬀ frequency of 10 kHz. The contours
+                                                            β                                       are almost horizontal, and the values range from about
+                                                                                                    6 towards the bottom of the plot to about 30 at its top.
+Figure 2. Schelleng diagram calculated for the base case.                                           The overall appearance is more speckly than the two other
+                                                                                                    plots, which might be an artefact of the post-processing
+                                                                                                    routine. The strong dependence of the spectral centroid on
+                    5                                                                   300         the bow force is in accordance with experimental ﬁndings
+                                                             Slope of -1                            reported in [46].
+                   0.8                                                                                 The last plotted metric is the percentage of pitch ﬂatten-
+
+  Bow force (N)
+                                                                                                    ing. Signiﬁcant variations in this metric are concentrated
+                  0.13                                                                  150
+                               Slope of -2
+                                                                                                    near the maximum bow force limit, in accordance with the
+                                                                                                    experimental results reported in [46]. Interestingly, they
+                  0.02
+                         (a)                                                                        also observed the maximum amount of ﬂattening at some
+            0.0035                                                                      0           intermediate value of β. Note that the static increase of
+                 5                                                                      30          mean tension is also taken into account to calculate the
+                                                                                                    values shown in Figure 3c (see [24] for details). Without
+                   0.8
+                                                                                                    this, the instances in the top-left corner of the Helmholtz
+
+  Bow force (N)
+                  0.13                                                                  15          region would have an even larger amount of ﬂattening.
+                                                                                                       An interesting structure seen in Figures 3a and 3c is
+                  0.02                                                                              a rather regular modulation along the β axis, spaced by
+                         (b)                                                                        around 0.015 (note that the axis is plotted on a logarithmic
+            0.0035                                                                      0
+                                                                                        1.8
+                                                                                                    scale). A similar structure was reported in experimental
+                 5
+                                                                                                    results of [46] (see their Figure 8). Curiously, the mod-
+                   0.8                                                                              ulation was found to disappear if the torsional motion of
+
+  Bow force (N)
+                                                                                        1           the string or its stiﬀness (or both) was excluded from the
+                  0.13                                                                              model. This suggests that the modulation is caused by an
+                                                                                                    interaction between the string’s torsional motion and its
+                  0.02
+                         (c)
+                                                                                                    bending stiﬀness.
+            0.0035                                                                      -0.2
+                 0.016               0.03
+                                                 
+                                                     0.06           0.1          0.19               3.3. Eﬀects of model variations
+                                                                                                    Simulation can be used to investigate the inﬂuence of each
+Figure 3. Diﬀerent metrics of waveforms for the base case, in                                       physical detail of the model. Nine particular variations of
+the β-FN plane. (a) The increase in the slip-to-stick ratio as a                                    the model are shown here: the ﬁrst four represent additions
+percentage of its theoretical value (unit ×100 s/s), (b) the spec-                                  to the base case, the next four represent restrictions to it,
+tral centroid relative to the fundamental frequency (unit Hz/Hz),
+                                                                                                    and the ﬁnal case uses the thermal friction model in place
+and (c) the pitch ﬂattening as a percentage of the fundamental
+frequency (unit ×100 Hz/Hz). The theoretical slopes for the
+                                                                                                    of the friction-curve model.
+minimum and maximum bow force are shown in (a) by thick                                             • “Finger-stopped” is the same as the base case, except
+diagonal lines to guide the eye.                                                                       the intrinsic damping of the string is increased to reﬂect
+                                                                                                       the added damping by the ﬁnger of the player (see [1]
+                                                                                                       for the damping of a ﬁnger-stopped string).
+extending into the raucous territory. For all β values there                                        • “Hair long. vib.” is the same as the base case, but vi-
+are at least 10 simulated instances of double-slip/decaying                                            bration of the bow-hair in its longitudinal direction is
+below the ﬁrst instance of Helmholtz motion. This margin                                               included while the bow-stick is considered rigid. The
+was checked to make sure that the predicted minimum bow                                                string’s contact point on the bow is assumed ﬁxed, at a
+force is not aﬀected by the selected range for simulations.                                            relative position βbow = 0.31.
+
+
+
+1100
+Mansour et al.: Enhanced modelling of musical strings. Part 2                                         ACTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                                                Vol. 102 (2016)
+
+
+• “Flexible bow-stick” is the same as the previous case,
+  but now a ﬂexible bow-stick is included.
+                                                                                            1300
+
+                                                                      Max. bow force
+• “Dual-polarisations” is the same as the base case, but                                             200
+  perpendicular-to-bow vibration of the string, coupled                                              100
+
+                                                                      (occurrences)
+  to vibration of the bow-hair in its transverse direction,                                            0
+  is included. The bow-stick is considered rigid for this                                      -100
+                                                                                                            (a)
+  case, with βbow = 0.31 again.
+                                                                                              1650
+• “No torsion” is the same as the base case, but torsional
+                                                                      Min. bow force
+                                                                                              1500
+  motion of the string is excluded.
+                                                                                                      200                     N/A
+                                                                      (occurrences)
+• “No stiﬀness” is the same as the base case, but the                                                0
+  bending stiﬀness of the string is excluded.                                                    -200 (b)
+• “No torsion/stiﬀness” combines the previous two
+  cases.                                                                                               90
+
+
+
+                                                                                    Extended slip %
+                                                                                                       80
+• “Rigid terminations” is the same as the base case, but                                               10
+  both termination points of the string at the bridge and                                               0
+  the nut are considered rigid.
+                                                                                                            (c)
+• “Thermal” is the same as the base case, but the ther-                                               -20
+  mal friction model is used in place of the friction-curve
+
+                                                                            Relative
+  model.                                                                                                0
+Figure 4 summarises the inﬂuence of these variations on                                              -0.5
+
+                                                                         spectral centroid
+the three metrics discussed above, and also on the min-                                                -7
+imum and maximum bow forces. Note that most of the                                                          (d)
+plots have a broken vertical scale, to accommodate a large
+                                                                                                      0.2
+range of values. The minimum bow force is quantiﬁed by
+
+
+                                                                                Pitch flattening %
+the diﬀerence in the combined number of decaying and                                                  0.1
+double/multiple slip occurrences, while the maximum bow
+                                                                                                        0
+force shows the diﬀerence in the combined number of rau-
+cous and ALF occurrences. Only the instances for β ≤                                                        (e)
+                                                                                                     -0.1
+0.08 are used for this purpose: for larger β values, the dis-                                           D       F l
+                                                                                                          ua exib vib
+                                                                                                                          op
+                                                                                                                      on ed
+                                                                                                                          g  .
+                                                                                                                               p
+                                                                                                                                   .
+tinction between the Helmholtz and decaying regimes, and
+                                                                                                              lp ol e st
+                                                                                                                     ar   l      i
+                                                                                                      st                is ck
+                                                                                                                    N tion  a
+                                                                                                       N              o  to s
+                                                                                              er         o No rsio
+                                                                                                           rl
+between the Helmholtz and S-motion regimes, becomes                                                    ai to  rs stif
+                                                                                                         R ion fnes                n
+                                                                                   ng                 H    ig id      /s
+                                                                                                                 te ffne ti        s
+                                                                              Fi                                     rm sin        s
+highly sensitive to the parameters of the waveform identi-
+                                                                                                                     Th ion  at
+                                                                                                                          er  m al
+ﬁcation routine, and thus ambiguous. Positive numbers in
+Figures 4a and 4b correspond to larger maximum and min-         Figure 4. The variation of (a) maximum bow force; (b) minimum
+imum bow forces, respectively. The two plots are arranged       bow force; (c) increase in the slip-to-stick ratio as a percentage
+to make it immediately apparent how the Helmholtz re-           of its theoretical value; (d) spectral centroid relative to the funda-
+gion is shifted or expanded/contracted. The minimum bow         mental frequency; and (e) pitch ﬂattening as a percentage of the
+                                                                fundamental frequency, relative to their values for the base case.
+force could not be evaluated for the “Rigid terminations”
+                                                                Diﬀerent cases shown on the horizontal axis are deﬁned in the
+case (marked by N/A) as its actual value is very small,
+                                                                text. Note the broken vertical scales in cases (a)-(d).
+well below the limit of the grid of simulated data points.
+   Each bar in Figures 4c–e represents the average change
+in the value of that metric for the corresponding case, as      two, other than the modulation structure mentioned in the
+a percentage its value for the base case. Only β-FN com-        previous subsection.
+binations that led to Helmholtz motion, both in the target         The biggest change in every case, usually by a large
+case and the base case, are included: this prevents vari-       margin, is associated with the change of friction model. In
+ations in the size and position of the Helmholtz region         general terms, this is in accordance with expectations from
+from biasing the calculated trend. Averaging over the full      earlier studies. However, quantitative comparisons of the
+Helmholtz region obviously loses sight of any variation         kind shown here have not previously been made. The de-
+within that region, but the detailed plots of the pairwise      velopment of improved friction models for bowed-string
+diﬀerences were carefully reviewed to make sure that the        simulation is an area of active research that lies outside
+reported trend is not misleading. The only two observed         the scope of the present article, but the results shown here
+anomalies of this kind are reported below (see Figure 5).       suggest that any new models that may be proposed should
+As a side note, the trend and amplitude of change in all        be explored in a similar quantitative manner to assess their
+calculated metrics for the “No torsion/stiﬀness” case can       performance against a range of metrics.
+be approximated by adding the changes when the torsion             Turning to the details revealed by Figure 4, consider
+and stiﬀness are individually excluded from the model: no       ﬁrst how the playable range varies. Increasing the damp-
+evidence was seen for signiﬁcant interaction between the        ing of the string makes a minimal eﬀect on the maximum
+
+
+
+                                                                                                                                         1101
+ACTA ACUSTICA UNITED WITH ACUSTICA                        Mansour et al.: Enhanced modelling of musical strings. Part 2
+Vol. 102 (2016)
+
+
+bow force, but it signiﬁcantly increases the minimum bow         ing speed. Within the context of the friction-curve model,
+force. It seems that adding to the intrinsic damping of the      this was ﬁrst explored by McIntyre and Woodhouse [16]
+string acts in a similar way to increasing the resistive loss    who showed that the area of this loop depends on the mag-
+to the bridge. Adding the longitudinal vibrations of the         nitude of the jumps in friction force associated with re-
+bow-hair reduces both the minimum and maximum bow                solving an ambiguity ﬁrst highlighted by Friedlander [7].
+forces by a small amount. It is consistent with the ex-          The thermal friction model does not predict jumps of the
+pected reduction in the eﬀective characteristic impedance        same kind: change is always more gradual, leading to the
+of the string. The compliance of the bow-hair in the bow-        increased corner-rounding noted above.
+ing direction is arranged in parallel to the impedance of           Figure 4e shows that the inclusion of longitudinal bow-
+the string, in a similar way to the torsional motion. Adding     hair vibration results in more ﬂattening while removing the
+ﬂexibility to the bow-stick strengthens the eﬀect of the         torsional motion of the string results in less ﬂattening. This
+compliant bow hair by only a small amount. Adding the            is consistent with the earlier discussion: both the compli-
+second polarisation of the string motion signiﬁcantly re-        ance of the bow-hair in the bowing direction and the tor-
+duces the minimum bow force, accompanied by a small              sional motion of the string reduce the eﬀective impedance
+increase in the maximum bow force. Removing the tor-             at the bowing point, which creates larger frictional jumps
+sional motion of the string moves the Helmholtz region           and thus more ﬂattening. Exclusion of the ﬂexible body
+upward, and removing the bending stiﬀness expands it             from the model has also reduced the amount of ﬂattening,
+on both sides. The maximum bow force is aﬀected more             perhaps because ﬂexibility of the body adds to the corner
+strongly than the minimum bow force by the torsional             rounding. Somewhat unexpectedly, adding to the intrinsic
+motion. This result may be interpreted in the light of re-       damping of the string results in less ﬂattening.
+cent ﬁndings presented elsewhere [24]: the eﬀect of the             In absolute terms, the amount of pitch ﬂattening close
+string’s torsional motion on the impedance at the bow-           to the maximum bow force boundary of the thermal case
+ing point, which is closely related to both minimum and          (which is much higher than that of the base case) reaches
+maximum bow forces, only becomes noticeable at rela-             as high as 4% of the string’s nominal frequency, which
+tively high frequencies. The perturbation force that deﬁnes      compares to around 1.8% for all other cases. The mag-
+the minimum bow force mainly comes from the ﬂexible              nitude of this eﬀect is not fully reﬂected in the bar chart
+bridge and is usually dominated by low frequency modes           of Figure 4e. The chart only accounts for β-FN combina-
+of the body. On the contrary, the maximum bow force is           tions that led to Helmholtz motion both in the target case
+deﬁned by the V-shaped corner that is, in fact, relatively       and the base case. The cases with large ﬂattening in the
+sharp in the vicinity of the maximum bow force, and thus         thermal case typically fall above the maximum bow force
+has more high-frequency content. Together, these eﬀects          of the base case and thus are eliminated from the averag-
+make it more likely that the torsional motion inﬂuences the      ing. There is very little published data on pitch ﬂattening,
+maximum bow force more than the minimum bow force.               but for what it is worth, Schumacher [33] examined a case
+Finally, both minimum and maximum bow forces are in-             similar to Figure 3c and reported a maximum ﬂattening of
+creased considerably by switching to the thermal friction        the order of 1.8%, very close to the prediction of the base
+model.                                                           case here.
+   Looking at Figure 4c, two trends can be observed: any            Because the thermal friction model gave such a sig-
+factor that broadens the spread of the Helmholtz corner re-      niﬁcant increase in corner-rounding, it is no surprise that
+sults in a further extension of the slipping phase, and any      it also lowered the spectral centroid by a large amount.
+factor that decreases the eﬀective impedance at the bow-         Among the other model variations shown here, stiﬀness
+ing point (particularly at higher frequencies) allows the        and torsion are the major inﬂuences on pitch ﬂattening, as
+sticking phase to persist for a longer period of time, per-      seen in Figure 4e. Among those same variations, the stiﬀ-
+haps because it acts as a cushion against any disturbances       ness of the string is also the only thing to have a strong
+arriving at the bow ahead of the main Helmholtz corner.          eﬀect on the spectral centroid. In interpreting these results
+Factors that inﬂuence the spread of the Helmholtz corner         one may note that there are two competing mechanisms
+(the “corner rounding”, as it was called in earlier literature   aﬀecting the pitch of a bowed note. On the one hand, hys-
+[12]) are as follows: the thermal friction model and damp-       teresis in the frictional behaviour results in ﬂattening, as
+ing by the ﬁnger both lead to more rounding and a longer         mentioned above. On the other hand, eﬀects such as stiﬀ-
+slipping phase; while removing the string’s bending stiﬀ-        ness and coupling to body modes, which perturb the linear
+ness and turning the bridge to a rigid termination results in    resonant frequencies of the string, require the non-linear
+a sharper corner and shorter slipping phase. For the eﬀec-       self-excited system to seek a “compromise” pitch among
+tive impedance, adding the longitudinal vibration of the         these non-harmonic overtones, as ﬁrst emphasised in the
+bow-hair, with or without a ﬂexible bow-stick, shortens          context of wind instruments by Benade [47]. The system-
+the slipping phase, and removing the torsional vibrations        atic “stretching” of the frequencies by stiﬀness thus leads
+of the string further extends the slipping phase.                to an expectation of pitch sharpening, and indeed stiﬀ-
+  Pitch ﬂattening is associated with an interaction be-          ness is seen to decrease ﬂattening because it contributes
+tween the extent of corner rounding and a hysteresis             this compensatory sharpening eﬀect. With regard to the
+loop in the variation of friction force with relative slid-      spectral centroid, when the string frequencies are less har-
+
+
+
+1102
+Mansour et al.: Enhanced modelling of musical strings. Part 2                                       ACTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                                                     Vol. 102 (2016)
+
+
+monic, high-frequency string resonances are expected to
+be excited less strongly which leads to a lower centroid,                            5                                                        5
+which is consistent with what is observed (i.e. removing
+the bending stiﬀness has increased the spectral centroid).                        0.8
+
+
+
+                                                                 Bow force (N)
+   A detailed comparison of spectral centroid and ﬂatten-                                                                                     0
+                                                                                 0.13
+ing between the base case and the case with no bend-
+ing stiﬀness reveals the interesting patterns shown in Fig-                      0.02
+ures 5. For the reason mentioned above, the majority of                                            (a)
+data points in Figure 5b show positive values and thus                   0.0035                                                               -5
+                                                                              5                                                               0.7
+give a positive value for the average in the “No stiﬀness”
+case in Figure 4e. However, close to the maximum bow                              0.8
+
+
+
+                                                                 Bow force (N)
+force where pitch ﬂattening is strongest, many of the data
+points have negative values. The dark instances can be at-                       0.13                                                         0
+tributed to the modulation structure shown in Figure 3c,
+which disappears in the “No stiﬀness” case, but even the                         0.02
+                                                                                                   (b)
+data points between those dark instances mostly have neg-                0.0035                                                               -0.7
+ative values. This suggests that pitch ﬂattening caused by                   0.016                           0.03
+                                                                                                                    
+                                                                                                                        0.06   0.1    0.19
+
+the spatial spread of the corner on a stiﬀ string outweighs
+the pitch sharpening caused by the string’s inharmonicity.
+                                                               Figure 5. Spectral centroid relative to the fundamental frequency
+It also suggests that pitch ﬂattening becomes a more sen-      (a) and the percentage of pitch ﬂattening (b) for the “No stiﬀ-
+sitive function of the normal bow force when the bending       ness” case relative to the same metric for the base case.
+stiﬀness of the string increases. Musically, this might make
+the undesirable eﬀect of ﬂattening more conspicuous to the
+player.                                                                                            800
+   A similar observation can be made in Figure 5a: in ac-                                                   (a)
+
+                                                                                     S-motion
+                                                                                                   600
+cordance with our earlier explanation of weaker excitation
+                                                                                                   400
+of higher modes of a stiﬀ string, most of the β-FN com-
+                                                                                   (occurrences)
+binations in 5a show positive values. However, closer to                                           200
+
+the upper bow force limit, the majority of the instances                                             0
+show negative values. The explanation, at least in the con-
+                                                                                                  1000      (b)
+text of the friction-curve model, is that strong hysteresis
+always entails large jumps in friction force at stick/slip                            ALF
+
+                                                                                  (occurrences)
+                                                                                                   500
+transitions. This force jump results directly in signiﬁcant
+high-frequency content in the bridge force, and thus con-
+tributes to a higher centroid.                                                                         0
+                                                                                                                                    se
+                                                                                                                       r l ppe
+   Returning to the nine model variations, Figure 6 shows                                              ca          F ng
+                                                                                                            D lex . vi    o         d
+                                                                                                              ua  l p le
+                                                                                                                     ol  ib    s    b.
+                                                                                                   se      to           ar tick
+                                                                                                                           iz at
+                                                                                                                       N ion
+the eﬀect on the occurrence of the S-motion and ALF
+                                                                                                  Ba       rs
+                                                                                                           N o to    N  o
+                                                                                                                          o to s
+                                                                                                                               rs io
+                                                                                                       ge   ai
+                                                                                                             R  ig rs stif n
+                                                                                                                     io fn
+                                                                                                                        n/ es
+                                                                                                                           s
+                                                                                                   Fi       H      id tiff s
+                                                                                                                      te ne
+                                                                                                                         rm ss
+regimes. The base case is also included in this plot. The
+                                                                                                      n                      in
+                                                                                                                          Th n  at io
+                                                                                                                              er m  al
+vertical axis shows the total number of occurrences for the
+corresponding regime, and the dashed line shows the re-        Figure 6. Comparing the total number of S-motion (a) and ALF
+sult for the base case. It should be noted that the results    note (b) occurrences for diﬀerent cases deﬁned in the text.
+for the thermal friction model may be a little misleading
+here: because the maximum bow force was so much higher
+for that model, there are fewer available cases within the     a cushion against untimely disturbances, thus making the
+range of the simulations to give rise to S-motion or ALF,      ALF notes more stable. This is consistent with what Mari
+and that may be the main reason for the low numbers seen       Kimura, the violinist best-known for using ALF notes,
+in the ﬁgure. Otherwise, the most striking observation in      suggests:“The ﬁrst secret is maintaining loose bow hair
+Figure 6a is that the exclusion of torsional motion signif-    [. . . ]. You don’t want a lot of tension [. . . ]. You need
+icantly reduces the number of S-motion occurrences. The        enough elasticity on the bow hair that you can really grab
+eﬀect is even stronger if both torsional motion and bend-      the string” [48].
+ing stiﬀness are excluded. Conversely, turning the bridge
+to a rigid termination signiﬁcantly increases the number of    3.4. Fluctuations of the bow force and the bow
+S-motion occurrences.                                               speed
+   Looking at the number of ALF notes in Figure 6b, the        It was suggested earlier that the main eﬀect of the lon-
+most signiﬁcant deviation from the base case is for the “No    gitudinal and the transverse ﬂexibility of the bow-hair is
+torsion/stiﬀness” case with almost double the number of        to add a ﬂuctuating component to the nominal bow speed
+ALF notes. The longitudinal compliance of the bow-hair,        and bow force respectively. This section oﬀers a closer
+especially if coupled with the ﬂexible bow-stick, acts as      look at the amplitude of those ﬂuctuations, their frequency
+
+
+
+                                                                                                                                              1103
+ACTA ACUSTICA UNITED WITH ACUSTICA                         Mansour et al.: Enhanced modelling of musical strings. Part 2
+Vol. 102 (2016)
+
+
+content, and their distribution across the β-FN plane. Fig-
+ures 7a and 7b show the amplitude of ﬂuctuations as a                                           5                                                                         10
+
+percentage of the nominal values for the bow force and                                        0.8
+
+
+                                                                    Bow force (N)
+bow speed. The ﬁgure is calculated based on the data from
+the “Dual-polarisations” and “Hair long. vib.” cases from                                0.13                                                                             5
+
+above. Amplitude of ﬂuctuation is deﬁned here as half the                                0.02
+                                                                                                         (a)
+peak-to-peak value within the last period of the simulated                    0.0035                                                                                      0
+data.                                                                              5                                                                                      300
+
+   To interpret these results it is useful to look at the chain                               0.8
+
+
+                                                                    Bow force(N)
+of events leading to perpendicular-to-bow vibration of the                                                                                                                200
+
+string, with associated bow force ﬂuctuations. The force                                 0.13
+                                                                                                                                                                          100
+that a bowed string applies to the bridge is approximately a                             0.02
+                                                                                                         (b)
+sawtooth wave, which excites the body modes. The vibra-                        0.0035                                                                                     0
+tion of the string in the Y direction is primarily driven by                                   0.016           0.03
+                                                                                                                            
+                                                                                                                                 0.06     0.1              0.19
+
+the motion of the bridge notch in that direction. Suppose
+the mth harmonic falls close to the frequency of a strong         Figure 7. Region of the Schelleng diagram exhibiting Helmholtz
+body mode, with a spatial angle with respect to the bow-          motion, with colour scales indicating the amplitude of ﬂuc-
+ing direction θM . Note that the strength of the harmonic         tuations as a percentage of the nominal values for (a) the
+components in the bridge force is roughly inversely pro-          bow force (unit ×100 N/N) and (b) the bow speed (unit
+portional to the harmonic number, which gives the higher          ×100 (m/s)/(m/s), based on the data from the “Dual-
+harmonics a relative disadvantage.                                polarisations” and “Hair long. vib.” cases of an open D3 string.
+   The frequency of the mth harmonic in the bridge force          The stars indicate the instances plotted in Figure 8.
+will be close to the frequency of the mth string mode in
+the perpendicular-to-bow direction, so the string vibration
+                                                                                              3.7
+in the second polarisation is likely to occur predominantly                                             (a)                                    Effective bow force
+                                                                                                                                               Sticking history
+in that mode. Keeping the vibration pattern of the mth
+
+                                                                            Bow force (N)
+                                                                                                                                               Nominal bow force
+                                                                                              3.6
+string mode in mind, and given that m is likely to be small                                                                                                             stick
+
+enough that β < 1/2m, the farther the bow is placed from                                      3.5
+the bridge, the larger the amplitude of the perpendicular-                                                                                                              slip
+to-bow velocity of the string at the bowing point, and                                        3.4
+hence the amplitude of the bow force ﬂuctuation, is likely                                    0.4
+                                                                                                        (b)                                   Effective bow speed
+                                                                                                                                              Sticking history
+
+
+
+
+                                                                            Bow speed (m/s)
+to become. On the other hand, the initial excitation force                                                                                    Nominal bow speed
+                                                                                                                                                                        stick
+at the bridge is inversely proportional to β, and so keep-                                    0.2
+ing all other parameters the same, playing farther from the
+bridge would tend to result in a smaller bow force ﬂuctu-                                      0
+                                                                                                                                                                        slip
+ation. These two eﬀects tend to cancel each other out, but
+                                                                                                    0                 0.5                 1                       1.5
+the second eﬀect wins out so that increasing β while keep-                                                                      Periods
+ing the bow force the same reduces slightly the percentage
+of bow force ﬂuctuation. The exact physical properties of         Figure 8. A sample of the eﬀective bow force modulation for the
+the hair ribbon and the contact position on the bow also          “Dual-polarisations” case (a) and the eﬀective bow speed mod-
+aﬀect the magnitude of bow force ﬂuctuations, but in gen-         ulation for the “Hair long. vib.” case (b). The stick-slip history
+eral these eﬀects are of minor importance in comparison.          of the string is overlaid for relative phase comparison. For both
+                                                                  cases β = 0.016, FN = 3.5 N, and vb = 5 cm/s, the case shown
+   Figure 7a also shows that the relative amplitude of bow        by stars in Figure 7. The dashed lines show the nominal values
+force ﬂuctuations increases with reducing bow force. This         of the bow force and bow speed.
+is not unexpected: the absolute amplitude of the bridge
+force is independent of the bow force to the ﬁrst order
+of approximation, and so is the amplitude of bow force            spatial angle of θM = 19.27◦ , a Q factor of 53, and an
+ﬂuctuation. Percentage-wise, this results in an increase in       eﬀective mass of 180 g.
+the bow force ﬂuctuation with decreasing nominal bow                 The analysis of the ﬂuctuating bow speed is more
+force. The maximum ﬂuctuation amplitude obtained for              straightforward. The bow hair is excited in its longitudinal
+the simulated string is around 10% of its nominal value           direction by the ﬂuctuating friction force acting between
+(see colourbar of Figure 7a).                                     the string and the bow. The response of the bow-hair is a
+   Figure 8a shows the eﬀective bow force in the time do-         superposition of its forced and transient responses to the
+main for a sample from Figure 7a with β = 0.016 and               perturbation force at the bow. Figure 8b shows the eﬀec-
+FN = 3.5 N. It can be seen that the bow force ﬂuctua-             tive bow speed in the time domain for a sample from Fig-
+tion mostly corresponds to the 3rd harmonic of the bowed          ure 7b. The ﬂuctuation just after the stick-to-slip transition
+string (around 440 Hz). The coupling apparently happens           is indeed dominated by the transient response of the bow-
+through a relatively strong body mode at 433 Hz, with a           hair to the sudden drop in the friction force, with a dom-
+
+
+
+1104
+Mansour et al.: Enhanced modelling of musical strings. Part 2                ACTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                               Vol. 102 (2016)
+
+
+inant frequency around 1950 Hz. Based on the chosen β            rate account of the measured stiﬀness and frequency-
+for this particular simulation, the Schelleng ripples would      dependent damping of the string, its torsional motion, its
+be expected to appear at a frequency of 9176 Hz. The ﬂuc-        motion in two transverse polarisations, and its coupling
+tuations just before the stick-to-slip transition mostly arise   to a realistically-modelled instrument body. Coupling to
+from the precursor waves preceding the main Helmholtz            the three-dimensional dynamics of the bow-hair and bow-
+corner arriving from the ﬁnger side, a consequence of the        stick can be included. For the purposes of illustrative com-
+string’s bending stiﬀness.                                       putations, parameter values were either drawn from earlier
+   Looking at Figure 7b, the amplitude of ﬂuctuations gen-       literature, or were measured on a particular set of cello
+erally increases with increasing bow force. It is striking       strings and a cello body, as described in a previous pa-
+how large the ﬂuctuations are compared to the nominal            per [1].
+bow speed. Their amplitude is at least three times the nom-         A major restriction to the current version of the model is
+inal bow speed for any bow force larger than 4 N, and the        that it assumes the bow-string contact to occur at a single
+eﬀective bow speed experiences negative values within ev-        point (rather than through a ﬁnite width of the bow-hair
+ery cycle for virtually all instances with β < 0.03. It is       ribbon). More fundamentally, there is at present consider-
+somewhat surprising how small an impact this seems to            able uncertainty about the correct physical model to cap-
+have made on the Schelleng diagram of the “Hair long.            ture the dynamic friction force, even in this simplest case
+vib.” case, compared to the base case. The ﬂuctuations           with a point contact. The studies reported here use two
+of the eﬀective bow speed scale with the characteristic          well-studied models of friction drawn from earlier litera-
+impedance of the string, so one would expect even larger         ture. One is the “friction-curve model”, in which friction
+ﬂuctuations when a heavier string is bowed.                      force is assumed to be a nonlinear function of the instan-
+                                                                 taneous value of the relative sliding speed. The other is
+3.5. Eﬀect of the nominal bow speed                              a thermal model in which the yield strength of the rosin
+                                                                 interface is assumed to be a function of the contact tem-
+So far the nominal bow speed has been held at a constant
+                                                                 perature: a heat-ﬂow calculation is run in parallel with the
+value 5 cm/s, towards the low end of bow speeds used in
+                                                                 dynamic simulation to calculate the time-varying contact
+normal playing. Based on Schelleng’s argument [34], both
+                                                                 temperature. Both models make use of the same set of
+the minimum and the maximum bow forces would be ex-
+                                                                 measured values of the friction force from violin rosin as
+pected to scale proportional to the bow speed. A small de-
+                                                                 a function of steady sliding speed, so that they are directly
+viation from proportionality may be expected because of
+                                                                 comparable to each other in a certain sense.
+the variations in the dynamic friction behaviour, but this
+eﬀect would be expected to be very small, only becom-               Systematic simulations have been conducted to explore
+ing noticeable at large β values. However, in conﬂict with       the inﬂuence of various model details. The results shown
+that prediction, Schoonderwaldt et al. [49] found in exper-      here have concentrated on steady bowing, and the string’s
+iments on D4 and E5 violin strings that while the maxi-          behaviour in the Schelleng diagram. The regions where
+mum bow force scaled with bow speed, the minimum bow             diﬀerent regimes of string vibration occurred in that dia-
+force did not. If anything, their results suggested that the     gram have been mapped, and the variations of waveform
+minimum bow force remained almost unchanged for bow              within those regions explored by computing various met-
+speeds 5, 10, 15, and 20 cm/s.                                   rics relating to the physics and the sound associated with
+                                                                 the string motion. It should be emphasised that the use of
+   Simulations have been performed to investigate whether
+                                                                 the model is by no means restricted to this case of steady
+this surprising independence of the minimum bow force
+                                                                 bowing, initialised with ideal Helmholtz motion: it can be
+from the bow speed is captured by the bowed-string model
+                                                                 used to explore a wide range of transient behaviour [24].
+presented here. The simulated data, not reproduced here,
+gave bow force limits that scaled closely with the bow              The results show that by far the biggest variations in de-
+speed: there was no trace of the unexpected trend ob-            tailed behaviour are associated with the choice of friction
+served in experiments. This observation therefore remains        model. This is consistent with the impression from ear-
+an open question for future research: possibly the exper-        lier literature, but shown here in more quantitative detail.
+imental results were inﬂuenced in some way by aspects            Since the “true” friction model is still unknown, this points
+of the frictional behaviour of the rosin not included in the     towards a need for further research. Leaving this ques-
+model here? It should be noted that the experiments were         tion aside, the results indicate trends of variation with the
+performed with a real bow sitting on its full width over the     other new model features. The sound of a bowed string is
+strings, but it seems a little unlikely that the ﬂexibility of   strongly dependent on the “roundedness” of the Helmholtz
+the bow or its ﬁnite width could produce such a striking         corner, and this is inﬂuenced by many of the factors ex-
+eﬀect.                                                           plored here. Increased string damping, from construction
+                                                                 and material or from the presence of the player’s ﬁnger, in-
+4. Conclusion                                                    creases roundedness. There is also a signiﬁcant inﬂuence
+                                                                 from the string’s bending stiﬀness, and from coupling to
+A computational model of a bowed string has been pre-            torsional motion. In a similar way, inﬂuences on the mini-
+sented, incorporating a range of physical eﬀects not pre-        mum and maximum bow forces and on the degree of pitch
+viously explored in detail. The model can take accu-             ﬂattening have been mapped out.
+
+
+
+                                                                                                                        1105
+ACTA ACUSTICA UNITED WITH ACUSTICA                             Mansour et al.: Enhanced modelling of musical strings. Part 2
+Vol. 102 (2016)
+
+
+   One of the more complicated interactions to pin down               [17] J. O. Smith: Techniques for digital ﬁlter design and sys-
+concerns the inﬂuence of the second polarisation of the                    tem identiﬁcation with application to the violin. Disserta-
+                                                                           tion. Electrical Engineering Department, Stanford Univer-
+string vibration. Vibration in the plane of bowing excites
+                                                                           sity, Stanford, CA, 1983.
+modes of the instrument body, but these will in general in-
+                                                                      [18] M. E. McIntyre, R. T. Schumacher, J. Woodhouse: On the
+volve motion at the string notch in the bridge which does
+                                                                           oscillations of musical instruments. The Journal of the
+not lie in that plane. In consequence, string vibration in                 Acoustical Society of America 74 (1983) 1325–1345.
+the perpendicular plane is excited. This then interacts with          [19] J. Woodhouse, P. M. Galluzzo: The bowed string as we
+transverse vibration of the bow-hair, and via that with vi-                know it today. Acta Acustica united with Acustica 90
+bration of the bow-stick. The combined eﬀect is compli-                    (2004) 579–589.
+cated, beyond the reach of simple analytical investigations           [20] J. H. Smith: Stick-slip vibration and its constitutive laws.
+and requiring systematic simulation to explore it. Some                    Dissertation. Engineering Department, University of Cam-
+preliminary results have been shown here, but more re-                     bridge, Cambridge, UK, 1990.
+mains to be done on this question.                                    [21] J. H. Smith, J. Woodhouse: The tribology of rosin. Journal
+                                                                           of the Mechanics and Physics of Solids 48 (2000) 1633–
+                                                                           1681.
+References
+                                                                      [22] J. Woodhouse: Bowed string simulation using a thermal
+ [1] H. Mansour, J. Woodhouse, G. Scavone: Enhanced wave-                  friction model. Acta Acustica united with Acustica 89
+     based modelling of musical strings. Part 1: Plucked strings.          (2003) 355–368.
+     Acta Acustica united with Acustica 102 (2016) 1082–1093.         [23] P. M. Galluzzo: On the playability of stringed instruments.
+ [2] J. Woodhouse, T. Putelat, A. McKay: Are there reliable                Dissertation. Engineering Department, University of Cam-
+     constitutive laws for dynamic friction? Philosophical                 bridge, Cambridge, UK, 2003.
+     Transactions of the Royal Society A 373 (2015) 20140401.         [24] H. Mansour: The bowed string and its playability: Theory,
+ [3] H. Helmholtz: On the sensations of tone. Dover Publica-               simulation and analysis. Dissertation. Department of Music
+     tions (English translation of the German edition was pub-             Research, McGill University, Montreal, Canada, 2016.
+     lished in 1954), 1877.                                           [25] K. Guettler, A. Askenfelt: On the kinematics of spiccato
+ [4] C. V. Raman: On the mechanical theory of bowed strings                and ricochet bowing. Catgut Acoustical Society Journal 3
+     and of musical instruments of the violin family, with exper-          (1998) 9–15.
+     imental veriﬁcation of results: Part I. Bulletin of the Indian   [26] R. Pitteroﬀ, J. Woodhouse: Mechanics of the contact area
+     Association for the Cultivation of Science 15 (1918) 1–158.           between a violin bow and a string. Part II: Simulating
+ [5] C. V. Raman: Experiments with mechanically-played vio-                the bowed string. Acta Acustica united with Acustica 84
+     lins. Proceedings of the Indian Association for the Cultiva-          (1998) 744–757.
+     tion of Science 6 (1920) 19–36.                                  [27] R. Pitteroﬀ, J. Woodhouse: Mechanics of the contact area
+ [6] J. Woodhouse: The acoustics of the violin: a review. Re-              between a violin bow and a string. Part III: Parameter de-
+     ports on Progress in Physics 77 (2014) 1–42.                          pendence. Acta Acustica united with Acustica 84 (1998)
+ [7] F. G. Friedlander: On the oscillations of a bowed string.             929–946.
+     Mathematical Proceedings of the Cambridge Philosophical          [28] E. Maestre, C. Spa, J. O. Smith: A bowed string physical
+     Society, 1953, Cambridge University Press, 516–530.                   model including ﬁnite-width thermal friction and hair dy-
+ [8] J. B. Keller: Bowing of violin strings. Communications on             namics. In Proceedings of the International Computer Mu-
+     Pure and Applied Mathematics 6 (1953) 483–495.                        sic Conference, Athens, Greece, 2014.
+ [9] M. E. Mclntyre, R. T. Schumacher, J. Woodhouse: Aperi-           [29] C. Desvages, S. Bilbao: Two-polarisation physical model
+     odicity in bowed-string motion. Acustica 49 (1981) 13–32.             of bowed strings with nonlinear contact and friction forces,
+                                                                           and application to gesture-based sound synthesis. Applied
+[10] G. Weinreich, R. Causse: Elementary stability considera-              Sciences 6 (2016) 135.
+     tions for bowed-string motion. The Journal of the Acousti-
+     cal Society of America 89 (1991) 887–895.                        [30] B. Stough: E string whistles. Catgut Acoustical Society
+                                                                           Journal 3 (1999) 28–33.
+[11] J. Woodhouse: On the stability of bowed string motion.
+     Acta Acustica united with Acustica 80 (1994) 58–72.              [31] R. Pitteroﬀ, J. Woodhouse: Mechanics of the contact area
+                                                                           between a violin bow and a string. Part I: Reﬂection and
+[12] L. Cremer, H. Lazarus: Die Ermittlung der Richtcharakter-
+                                                                           transmission behaviour. Acta Acustica united with Acus-
+     istik von Streichinstrumenten bei Gegebener Schwinungs-
+                                                                           tica 84 (1998) 543–562.
+     form des Körpen. Proceedings of the 6th International
+     Congress on Acoustics, Tokyo, 1968, 3.                           [32] J. Woodhouse, A. R. Loach: Torsional behaviour of cello
+                                                                           strings. Acta Acustica united with Acustica 85 (1999) 734–
+[13] L. Cremer: Der Einﬂuss des ‘Bogendrucks’ auf die selb-
+                                                                           740.
+     sterregten Schwingungen der gestrichenen Saite. Acustica
+     30 (1974) 119–136.                                               [33] R. T. Schumacher: Measurements of some parameters of
+[14] L. Cremer: Das Schicksal der ‘Sekundärwellen’ bei der                 bowing. The Journal of the Acoustical Society of America
+     Selbsterregung von Streichinstrumenten (translated: The               96 (1994) 1985–1998.
+     fate of ‘secondary waves’ arising from self-excitation of        [34] J. C. Schelleng: The bowed string and the player. The Jour-
+     stringed instruments). Acta Acustica united with Acustica             nal of the Acoustical Society of America 53 (1973) 26–41.
+     42 (1979) 133–148.                                               [35] C. E. Gough: Musical acoustics. – In: Handbook of Acous-
+[15] L. Cremer: The physics of the violin. The MIT Press, Cam-             tics. T. D. Rossing (ed.). Springer, New York, 2007, 533–
+     bridge, MA, 1984.                                                     667.
+[16] M. E. McIntyre, J. Woodhouse: On the fundamentals of             [36] O. Inácio, J. Antunes, M. Wright: Computational modelling
+     bowed string dynamics. Acustica 43 (1979) 93–108.                     of string–body interaction for the violin family and simula-
+
+
+
+
+1106
+Mansour et al.: Enhanced modelling of musical strings. Part 2                   ACTA ACUSTICA UNITED WITH ACUSTICA
+                                                                                                                   Vol. 102 (2016)
+
+
+     tion of wolf notes. Journal of Sound and Vibration 310        [43] P. M. Galluzzo, J. Woodhouse: High-performance bowing
+     (2008) 260–286.                                                    machine tests of bowed-string transients. Acta Acustica
+[37] F. Ablitzer, N. Dauchez, J.-P. Dalmont: A predictive model         united with Acustica 100 (2014) 139–153.
+     for the adjustment of violin bows. Acta Acustica united       [44] M. E. McIntyre, J. Woodhouse: A parametric study of the
+     with Acustica 98 (2012) 640–650.                                   bowed string: the violinist’s menagerie. Catgut Acoustical
+[38] F. Ablitzer, J.-P. Dalmont, N. Dauchez: Static model of a          Society Journal 42 (1984) 18–21.
+     violin bow: inﬂuence of camber and hair tension on me-        [45] E. Schoonderwaldt: The player and the bowed string: Co-
+     chanical behavior. The Journal of the Acoustical Society of        ordination of bowing parameters in violin and viola perfor-
+     America 131 (2012) 773–782.                                        mance. The Journal of the Acoustical Society of America
+[39] C. E. Gough: Violin bow vibrations. The Journal of the             126 (2009) 2709–2720.
+     Acoustical Society of America 131 (2012) 4152–4163.           [46] E. Schoonderwaldt: The violinist’s sound palette: spectral
+[40] A. Askenfelt: Observations on the violin bow and the inter-        centroid, pitch ﬂattening and anomalous low frequencies.
+     action with the string. International Symposium on Musical         Acta Acustica united with Acustica 95 (2009) 901–914.
+     Acoustics (ISMA 1995), Dourdan, France, 1995.                 [47] A. H. Benade: Fundamentals of musical acoustics. Second
+[41] A. Askenfelt, K. Guettler: Bows and timbre - myth or               ed. Oxford University Press, London, 1976.
+     reality? International Symposium on Musical Acoustics         [48] J. Reel: Mari Kimura on subharmonics: The violinist con-
+     (ISMA 2001), Perugia, Italy, 2001, 273–276.                        tinues to explore the world below G. Strings, 2009.
+[42] H. Lazarus: Die Behandlung der selbsterregten Kipp-           [49] E. Schoonderwaldt, K. Guettler, A. Askenfelt: An empirical
+     schwingungen der gestrichenen Saite mit Hilfe der                  investigation of bow-force limits in the schelleng diagram.
+     endlichen Laplacetransformation. Dissertation. Technical           Acta Acustica united with Acustica 94 (2008) 604–622.
+     University of Berlin, 1972.
+
+
+
+
+                                                                                                                            1107
+

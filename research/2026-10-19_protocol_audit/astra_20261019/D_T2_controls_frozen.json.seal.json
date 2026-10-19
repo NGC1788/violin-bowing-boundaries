@@ -1,0 +1,17 @@
+{
+  "controls_receipt_sha256": "422dbbb938c409fe7faae2aa81db200ad572e6b76d6458a579e3105ffd22be7a",
+  "runner_sha256": "9f58d2b82089050ebc927a274c28c445bd0b07ec98b98b8bbccc1fc34677febd",
+  "original_manifest": {
+    "/Users/jeongjihoon/violin-rne/final/CONFIRM_PLAN_D_T2.md": "5606f6624fc1d80020ba4f82b3973701abe5564616382ea8279a2322ef3792e6",
+    "/Users/jeongjihoon/violin-rne/astra_20261019/d_t2_freeze/frozen_parameters.json": "1f2ec790d7785825c268826cbc70d92bdc050faf0ad460da9e94ef6c9207087a",
+    "/Users/jeongjihoon/violin-rne/astra_20261019/d_t2_freeze/freeze_receipt.json": "c8ed003002310dc3962a9846fb7993dd96cf49c933954d36ab3711a88868e09e",
+    "/Users/jeongjihoon/violin-rne/novelty/lower_protocol/descriptors.json": "d9f0d757020d844c9e976a3f86873180b009614eae790bbb9d90636f9b9278c1",
+    "/Users/jeongjihoon/violin-rne/novelty/upper_law/upper_law_t0.2.json": "f9e2b212be64b8ece2e08a21b46e250c66a626f5ac110ce8268136ffb1ae2a7a",
+    "/Users/jeongjihoon/violin-rne/novelty/lower_protocol/analysis.py": "44e5cd98816bd9139cec9ad3b61903c8d44c750719739e33cd483b7f86348f51",
+    "/Users/jeongjihoon/violin-rne/final/confirm_A_T2.py": "cd15414af8a4697c39ff4f2970d7322561bb928b038e6b0870e7ae799c293667",
+    "/Users/jeongjihoon/violin-rne/final/compare.py": "0967e96b1ce7c8d8572dc36560f610b8279b2aa7fefa2501d9619b4bce0150a6",
+    "/Users/jeongjihoon/violin-rne/final/data.py": "df6ed901fc6df82db2fb2e4a8f8d0c23808d8d6615e4288b6ba66ae30ab2283b",
+    "/Users/jeongjihoon/violin-rne/astra_20261019/descriptor_only.py": "15109af7ecb87191ad91426411dc67864bb27b0adeb15a66e9be015fc5b5223d",
+    "/Users/jeongjihoon/violin-rne/astra_20261019/freeze_confirmation.py": "d96403ce166de466e1f291f2a326709d14f8ddcef5e779320c55d5f308ae1446"
+  }
+}

@@ -1,0 +1,18 @@
+Matplotlib is building the font cache; this may take a moment.
+A1 t=0.0: speed exp +0.574 [0.43 0.72]  beta -0.672  F(beta 0.1) [0.458 0.592 1.015]  L/R cens 0/9
+A1 t=0.1: speed exp +0.639 [0.54 0.76]  beta -0.831  F(beta 0.1) [0.356 0.501 0.864]  L/R cens 0/8
+A1 t=0.2: speed exp +0.666 [0.56 0.78]  beta -0.971  F(beta 0.1) [0.296 0.423 0.745]  L/R cens 0/8
+A1 t=0.3: speed exp +0.655 [0.53 0.79]  beta -1.088  F(beta 0.1) [0.255 0.338 0.633]  L/R cens 0/8
+A2 t=0.0: speed exp +1.041 [0.83 1.31]  beta -0.653  F(beta 0.1) [0.29  0.638 1.226]  L/R cens 2/10
+A2 t=0.1: speed exp +0.945 [0.74 1.22]  beta -0.880  F(beta 0.1) [0.234 0.464 0.867]  L/R cens 1/9
+A2 t=0.2: speed exp +0.940 [0.69 1.25]  beta -1.089  F(beta 0.1) [0.172 0.367 0.633]  L/R cens 1/9
+A2 t=0.3: speed exp +0.968 [0.75 1.21]  beta -1.295  F(beta 0.1) [0.131 0.283 0.5  ]  L/R cens 1/9
+Font 'default' does not have a glyph for '\u2212' [U+2212], substituting with a dummy symbol.
+Font 'default' does not have a glyph for '\u2212' [U+2212], substituting with a dummy symbol.
+Font 'default' does not have a glyph for '\u2212' [U+2212], substituting with a dummy symbol.
+Font 'default' does not have a glyph for '\u2212' [U+2212], substituting with a dummy symbol.
+Font 'default' does not have a glyph for '\u2212' [U+2212], substituting with a dummy symbol.
+Font 'default' does not have a glyph for '\u2212' [U+2212], substituting with a dummy symbol.
+Font 'default' does not have a glyph for '\u2212' [U+2212], substituting with a dummy symbol.
+Font 'default' does not have a glyph for '\u2212' [U+2212], substituting with a dummy symbol.
+saved /Users/jeongjihoon/violin-rne/claude_extra/wf_20261018/report_draft/fig_matched_time_A1A2.png

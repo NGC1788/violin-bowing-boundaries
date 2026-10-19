@@ -1,0 +1,33 @@
+string  lower  upper |     logZ    logEI   logZto      lz1    lz1_5   lz7_11
+A T1   +0.000 +0.000 |   +0.058   +1.109   -3.244   -8.082   -7.833   -7.364
+B T1   -0.357 +0.299 |   +0.095   +1.482   -2.900   -8.095   -7.634   -6.883
+C T1   -0.561 -0.004 |   +0.051   +1.144   -3.244   -7.697   -7.380   -7.197
+D T1   -0.248 +0.172 |   +0.039   +1.658   -2.749   -8.007   -7.883   -7.233
+A T2   -0.539 +0.197 |   +0.173   +1.379   -3.612   -7.837   -7.521   -7.126
+B T2   -0.229 +0.244 |   +0.174   +1.988   -2.813   -7.829   -7.451   -6.666
+C T2   +nan +nan |   +0.109   +1.379   -3.219   -7.905   -7.101   -7.068
+D T2   +nan +nan |   +0.184   +1.753   -3.244   -7.984   -7.785   -7.562
+
+Pearson r across the 6 scored strings (n=6; no multiplicity correction):
+  lower vs logZ   : r = -0.24
+  upper vs logZ   : r = +0.58
+  lower vs logEI  : r = +0.12
+  upper vs logEI  : r = +0.74
+  lower vs logZto : r = +0.41
+  upper vs logZto : r = +0.40
+  lower vs lz1    : r = -0.68
+  upper vs lz1    : r = -0.25
+  lower vs lz1_5  : r = -0.69
+  upper vs lz1_5  : r = +0.06
+  lower vs lz7_11 : r = -0.12
+  upper vs lz7_11 : r = +0.76
+
+Within-type T1->T2 predictions from losses (R = 2 Z Q1/pi, Q1 = 1/(2 zeta1)); F_min ~ Z^2/R^k
+  A: k=1.0: pred dlogFmin (mode1) +0.36, (modes1-5) +0.43 | observed -0.54
+  A: k=2.3: pred dlogFmin (mode1) +0.53, (modes1-5) +0.68 | observed -0.54
+  B: k=1.0: pred dlogFmin (mode1) +0.34, (modes1-5) +0.26 | observed +0.13
+  B: k=2.3: pred dlogFmin (mode1) +0.59, (modes1-5) +0.40 | observed +0.13
+  C: k=1.0: pred dlogFmin (mode1) -0.15, (modes1-5) +0.34 | observed +nan
+  C: k=2.3: pred dlogFmin (mode1) -0.49, (modes1-5) +0.62 | observed +nan
+  D: k=1.0: pred dlogFmin (mode1) +0.17, (modes1-5) +0.24 | observed +nan
+  D: k=2.3: pred dlogFmin (mode1) +0.01, (modes1-5) +0.18 | observed +nan

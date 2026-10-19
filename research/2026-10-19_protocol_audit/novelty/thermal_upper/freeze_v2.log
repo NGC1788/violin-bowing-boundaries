@@ -1,0 +1,79 @@
+S1_strict    theta [0.9859] sigma 0.384 nll 1821.6 | in-sample level RMS 0.077 | PI90 level ±0.148 e_v ±0.51 e_b ±0.28
+T1k_peak     theta [-0.8424] sigma 0.359 nll 1858.9 | in-sample level RMS 0.076 | PI90 level ±0.148 e_v ±0.25 e_b ±0.54
+T1k_break    theta [0.258] sigma 0.350 nll 1793.5 | in-sample level RMS 0.075 | PI90 level ±0.145 e_v ±0.28 e_b ±0.37
+T1mu         theta [-0.0202] sigma 0.345 nll 1793.9 | in-sample level RMS 0.075 | PI90 level ±0.144 e_v ±0.23 e_b ±0.39
+T2_mu_k      theta [0.097  0.1516] sigma 0.348 nll 1793.2 | in-sample level RMS 0.075 | PI90 level ±0.144 e_v ±0.27 e_b ±0.38
+T0_break     theta [] sigma 0.382 nll 1970.1 | in-sample level RMS 0.247 | PI90 level ±0.407 e_v ±0.27 e_b ±0.37
+E3_free_Z    theta [ 0.0672  0.698  -1.0645] sigma 0.329 nll 1729.5 | in-sample level RMS 0.078 | PI90 level ±0.150 e_v ±0.19 e_b ±0.26
+T2km_peak    theta [-1.6196  1.3212] sigma 0.363 nll 1802.5 | in-sample level RMS 0.084 | PI90 level ±0.158 e_v ±0.19 e_b ±0.26
+T2km_break   theta [-0.2558  1.2161] sigma 0.355 nll 1759.1 | in-sample level RMS 0.082 | PI90 level ±0.154 e_v ±0.19 e_b ±0.26
+S2m          theta [0.5484 1.1852] sigma 0.391 nll 1797.0 | in-sample level RMS 0.083 | PI90 level ±0.157 e_v ±0.19 e_b ±0.26
+wrote /Users/jeongjihoon/violin-rne/novelty/thermal_upper/FROZEN_v2.json bf9a14c98806d1f922d223fdb9e5188d8c4a3a7fa9e67bfd4be0d58ae5259aad 2026-10-19T10:31:51.620944+09:00
+2024-04-22_TypeA_sample3 | type-mean {'level_A': 0.0, 'e_v': 0.661, 'e_beta': -1.112}
+   S1_strict    level_A +0.000 ±0.148 (donor err -0.102) e_v +1.00±0.51 e_b -1.00±0.28
+   T1k_peak     level_A +0.000 ±0.148 (donor err -0.125) e_v +0.60±0.25 e_b -0.79±0.54
+   T1k_break    level_A +0.000 ±0.145 (donor err -0.104) e_v +0.84±0.28 e_b -0.92±0.37
+   T1mu         level_A +0.000 ±0.144 (donor err -0.103) e_v +0.80±0.23 e_b -0.90±0.39
+   T2_mu_k      level_A +0.000 ±0.144 (donor err -0.104) e_v +0.83±0.27 e_b -0.91±0.38
+   T0_break     level_A +0.000 ±0.407 (donor err +0.130) e_v +0.83±0.27 e_b -0.91±0.37
+   E3_free_Z    level_A +0.000 ±0.150 (donor err -0.102) e_v +0.70±0.19 e_b -1.06±0.26
+   T2km_peak    level_A +0.000 ±0.158 (donor err -0.131) e_v +0.60±0.19 e_b -1.04±0.26
+   T2km_break   level_A +0.000 ±0.154 (donor err -0.108) e_v +0.84±0.19 e_b -1.12±0.26
+   S2m          level_A +0.000 ±0.157 (donor err -0.106) e_v +1.00±0.19 e_b -1.19±0.26
+2024-04-24_TypeA_sample4 | type-mean {'level_A': 0.0, 'e_v': 0.661, 'e_beta': -1.112}
+   S1_strict    level_A +0.000 ±0.148 (donor err -0.102) e_v +1.00±0.51 e_b -1.00±0.28
+   T1k_peak     level_A +0.000 ±0.148 (donor err -0.125) e_v +0.60±0.25 e_b -0.79±0.54
+   T1k_break    level_A +0.000 ±0.145 (donor err -0.104) e_v +0.84±0.28 e_b -0.92±0.37
+   T1mu         level_A +0.000 ±0.144 (donor err -0.103) e_v +0.80±0.23 e_b -0.90±0.39
+   T2_mu_k      level_A +0.000 ±0.144 (donor err -0.104) e_v +0.83±0.27 e_b -0.91±0.38
+   T0_break     level_A +0.000 ±0.407 (donor err +0.130) e_v +0.83±0.27 e_b -0.91±0.37
+   E3_free_Z    level_A +0.000 ±0.150 (donor err -0.102) e_v +0.70±0.19 e_b -1.06±0.26
+   T2km_peak    level_A +0.000 ±0.158 (donor err -0.131) e_v +0.60±0.19 e_b -1.04±0.26
+   T2km_break   level_A +0.000 ±0.154 (donor err -0.108) e_v +0.84±0.19 e_b -1.12±0.26
+   S2m          level_A +0.000 ±0.157 (donor err -0.106) e_v +1.00±0.19 e_b -1.19±0.26
+2024-04-26_TypeD_sample2 | type-mean {'level_A': 0.172, 'e_v': 0.755, 'e_beta': -1.035}
+   S1_strict    level_A +0.172 ±0.148 (donor err +0.074) e_v +1.00±0.51 e_b -1.00±0.28
+   T1k_peak     level_A +0.172 ±0.148 (donor err +0.037) e_v +0.60±0.25 e_b -0.79±0.54
+   T1k_break    level_A +0.172 ±0.145 (donor err +0.067) e_v +0.84±0.28 e_b -0.92±0.37
+   T1mu         level_A +0.172 ±0.144 (donor err +0.066) e_v +0.80±0.23 e_b -0.90±0.39
+   T2_mu_k      level_A +0.172 ±0.144 (donor err +0.066) e_v +0.83±0.27 e_b -0.91±0.38
+   T0_break     level_A +0.172 ±0.407 (donor err +0.301) e_v +0.83±0.27 e_b -0.91±0.37
+   E3_free_Z    level_A +0.172 ±0.150 (donor err +0.085) e_v +0.70±0.19 e_b -1.06±0.26
+   T2km_peak    level_A +0.172 ±0.158 (donor err +0.051) e_v +0.60±0.19 e_b -1.04±0.26
+   T2km_break   level_A +0.172 ±0.154 (donor err +0.079) e_v +0.84±0.19 e_b -1.12±0.26
+   S2m          level_A +0.172 ±0.157 (donor err +0.083) e_v +1.00±0.19 e_b -1.19±0.26
+2024-07-03_TypeB_T2_sample2 | type-mean {'level_A': 0.273, 'e_v': 0.841, 'e_beta': -1.402}
+   S1_strict    level_A +0.273 ±0.148 (donor err +0.072) e_v +1.00±0.51 e_b -1.00±0.28
+   T1k_peak     level_A +0.273 ±0.148 (donor err +0.054) e_v +0.61±0.25 e_b -0.79±0.54
+   T1k_break    level_A +0.273 ±0.145 (donor err +0.068) e_v +0.84±0.28 e_b -0.92±0.37
+   T1mu         level_A +0.273 ±0.144 (donor err +0.069) e_v +0.81±0.23 e_b -0.90±0.39
+   T2_mu_k      level_A +0.273 ±0.144 (donor err +0.068) e_v +0.83±0.27 e_b -0.91±0.38
+   T0_break     level_A +0.273 ±0.407 (donor err +0.302) e_v +0.84±0.27 e_b -0.91±0.37
+   E3_free_Z    level_A +0.273 ±0.150 (donor err +0.054) e_v +0.70±0.19 e_b -1.06±0.26
+   T2km_peak    level_A +0.273 ±0.158 (donor err +0.051) e_v +0.61±0.19 e_b -1.05±0.26
+   T2km_break   level_A +0.273 ±0.154 (donor err +0.066) e_v +0.85±0.19 e_b -1.12±0.26
+   S2m          level_A +0.273 ±0.157 (donor err +0.071) e_v +1.00±0.19 e_b -1.19±0.26
+
+high force, B T2 (Fmax N at v 0.05/0.10/0.20; beta 0.02 0.03 0.05 0.07) and exponents
+  S1_strict    v0.05: 8.0 5.3 3.2 2.3 | v0.10: 15.9 10.6 6.4 4.6 | v0.20: 31.9 21.3 12.8 9.1 | grid e_v +1.00 e_b -1.00 | 4-12N n 14 e_v 0.9999999999999997 e_b -0.9999999999999988
+  T1k_peak     v0.05: 7.0 5.0 3.4 2.6 | v0.10: 11.2 7.9 5.1 3.9 | v0.20: 19.2 13.3 8.5 6.3 | grid e_v +0.68 e_b -0.85 | 4-12N n 19 e_v 0.6826627424828289 e_b -0.8445179128756249
+  T1k_break    v0.05: 7.4 5.1 3.2 2.4 | v0.10: 13.6 9.3 5.8 4.2 | v0.20: 25.5 17.3 10.6 7.7 | grid e_v +0.87 e_b -0.94 | 4-12N n 16 e_v 0.8711546910385811 e_b -0.9371728904976441
+  T1mu         v0.05: 7.3 5.1 3.2 2.4 | v0.10: 13.1 9.0 5.6 4.1 | v0.20: 24.1 16.4 10.2 7.4 | grid e_v +0.83 e_b -0.92 | 4-12N n 16 e_v 0.8398236750339525 e_b -0.9219767581863038
+  T2_mu_k      v0.05: 7.4 5.1 3.2 2.4 | v0.10: 13.4 9.2 5.7 4.2 | v0.20: 24.9 17.0 10.4 7.6 | grid e_v +0.85 e_b -0.93 | 4-12N n 16 e_v 0.8588661575109975 e_b -0.9312093258120896
+  T0_break     v0.05: 5.9 4.1 2.5 1.9 | v0.10: 10.7 7.3 4.5 3.3 | v0.20: 19.9 13.5 8.3 6.1 | grid e_v +0.86 e_b -0.93 | 4-12N n 17 e_v 0.8662099979266462 e_b -0.9352727648963003
+  E3_free_Z    v0.05: 10.1 6.6 3.8 2.7 | v0.10: 16.4 10.7 6.2 4.3 | v0.20: 26.6 17.3 10.0 7.0 | grid e_v +0.70 e_b -1.06 | 4-12N n 16 e_v 0.6980126836200649 e_b -1.0645229375480403
+  T2km_peak    v0.05: 10.4 6.7 3.9 2.8 | v0.10: 17.1 10.7 6.0 4.1 | v0.20: 29.7 18.3 10.0 6.7 | grid e_v +0.70 e_b -1.13 | 4-12N n 16 e_v 0.6949590864280016 e_b -1.1202133444582216
+  T2km_break   v0.05: 10.1 6.4 3.6 2.5 | v0.10: 18.6 11.7 6.5 4.5 | v0.20: 35.0 21.8 12.1 8.2 | grid e_v +0.87 e_b -1.14 | 4-12N n 14 e_v 0.8683778539472301 e_b -1.1353836923242864
+  S2m          v0.05: 10.6 6.6 3.6 2.4 | v0.10: 21.2 13.1 7.2 4.8 | v0.20: 42.5 26.3 14.3 9.6 | grid e_v +1.00 e_b -1.19 | 4-12N n 13 e_v 1.0000000000000009 e_b -1.1852161299268535
+
+seen friction-session brackets (B T2 string, consistency only):
+  S1_strict    inside 2/4 brackets 3.94[5.26-6.7] 1.53[1.35-2.5] 3.05[2.66-3.33] 2.71[1.52-2.64] | lower bounds consistent 4/5
+  T1k_peak     inside 3/4 brackets 3.99[5.26-6.7] 1.99[1.35-2.5] 2.82[2.66-3.33] 2.56[1.52-2.64] | lower bounds consistent 2/5
+  T1k_break    inside 3/4 brackets 3.90[5.26-6.7] 1.66[1.35-2.5] 2.91[2.66-3.33] 2.61[1.52-2.64] | lower bounds consistent 4/5
+  T1mu         inside 3/4 brackets 3.89[5.26-6.7] 1.70[1.35-2.5] 2.88[2.66-3.33] 2.59[1.52-2.64] | lower bounds consistent 3/5
+  T2_mu_k      inside 3/4 brackets 3.90[5.26-6.7] 1.68[1.35-2.5] 2.90[2.66-3.33] 2.61[1.52-2.64] | lower bounds consistent 4/5
+  T0_break     inside 1/4 brackets 3.08[5.26-6.7] 1.32[1.35-2.5] 2.30[2.66-3.33] 2.06[1.52-2.64] | lower bounds consistent 2/5
+  E3_free_Z    inside 3/4 brackets 4.77[5.26-6.7] 1.74[1.35-2.5] 2.83[2.66-3.33] 2.49[1.52-2.64] | lower bounds consistent 4/5
+  T2km_peak    inside 3/4 brackets 4.86[5.26-6.7] 1.92[1.35-2.5] 2.70[2.66-3.33] 2.39[1.52-2.64] | lower bounds consistent 4/5
+  T2km_break   inside 3/4 brackets 4.59[5.26-6.7] 1.62[1.35-2.5] 2.85[2.66-3.33] 2.49[1.52-2.64] | lower bounds consistent 4/5
+  S2m          inside 3/4 brackets 4.60[5.26-6.7] 1.50[1.35-2.5] 3.00[2.66-3.33] 2.61[1.52-2.64] | lower bounds consistent 5/5

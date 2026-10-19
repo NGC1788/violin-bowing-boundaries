@@ -1,0 +1,187 @@
+A2 folder 0 v=0.050: floor strokes 901; observed: ratio=0.6459, frac_lt1=1.0000, ncols=19, lowent=0.9094, late_below_FM=0.4000, n_late=95, MT=2.8666, n_MT=15, loo=0.0721, pair=0.0893, n_pair=95, up=0.0100, down=0.0021, nostitch=0.8624, entered=0.6393
+marginal logistic: C=0.3, n features 60
+calibration obs/pred P(H) [rows rank bands 1-10, 11-20, 21-30, 31-50; cols t bins 0-.3, .3-.8, .8-1.3, 1.3+]
+   ranks 1 10 0.07/0.08 0.09/0.10 0.13/0.14 0.17/0.20
+   ranks 11 20 0.22/0.22 0.26/0.27 0.32/0.31 0.36/0.33
+   ranks 21 30 0.56/0.56 0.65/0.62 0.69/0.67 0.73/0.69
+   ranks 31 50 0.94/0.93 0.95/0.95 0.96/0.97 0.96/0.97
+[indep (no persistence)] n_sims=300
+   ratio          obs 0.6459  null median 0.7580 [2.5% 0.6838, 97.5% 0.8313]  P(null<=obs) 0.003  P(null>=obs) 0.997
+   frac_lt1       obs 1.0000  null median 1.0000 [2.5% 0.9500, 97.5% 1.0000]  P(null<=obs) 1.000  P(null>=obs) 0.783
+   lowent         obs 0.9094  null median 0.8975 [2.5% 0.8899, 97.5% 0.9020]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   loo            obs 0.0721  null median 0.0720 [2.5% 0.0571, 97.5% 0.0885]  P(null<=obs) 0.503  P(null>=obs) 0.497
+   late_below_FM  obs 0.4000  null median 0.2278 [2.5% 0.1863, 97.5% 0.2749]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   MT             obs 2.8666  null median 2.4296 [2.5% 2.1031, 97.5% 2.8550]  P(null<=obs) 0.980  P(null>=obs) 0.020
+   pair           obs 0.0893  null median 0.0546 [2.5% 0.0319, 97.5% 0.0850]  P(null<=obs) 0.987  P(null>=obs) 0.013
+   up             obs 0.0100  null median 0.1895 [2.5% 0.1852, 97.5% 0.1948]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   down           obs 0.0021  null median 0.1343 [2.5% 0.1307, 97.5% 0.1377]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   nostitch       obs 0.8624  null median 0.3696 [2.5% 0.3518, 97.5% 0.3873]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   entered        obs 0.6393  null median 0.7392 [2.5% 0.7303, 97.5% 0.7503]  P(null<=obs) 0.000  P(null>=obs) 1.000
+
+copula grid (w, rho): mean over sims of ratio / up / down / nostitch / entered
+   w=0.00 rho=0.000: ratio 0.749 up 0.1903 down 0.1347 nostitch 0.372 entered 0.740 late<FM 0.231 MT 2.45  fit-err 4199.505
+   w=0.00 rho=0.800: ratio 0.764 up 0.0872 down 0.0590 nostitch 0.482 entered 0.770 late<FM 0.214 MT 2.41  fit-err 773.449
+   w=0.00 rho=0.950: ratio 0.722 up 0.0456 down 0.0287 nostitch 0.645 entered 0.716 late<FM 0.212 MT 2.04  fit-err 167.971
+   w=0.00 rho=0.990: ratio 0.679 up 0.0229 down 0.0123 nostitch 0.796 entered 0.664 late<FM 0.210 MT 1.65  fit-err 24.422
+   w=0.00 rho=0.998: ratio 0.641 up 0.0125 down 0.0047 nostitch 0.868 entered 0.636 late<FM 0.179 MT 1.37  fit-err 1.475
+   w=0.50 rho=0.000: ratio 0.687 up 0.1344 down 0.0947 nostitch 0.547 entered 0.696 late<FM 0.213 MT 2.21  fit-err 2045.173
+   w=0.50 rho=0.800: ratio 0.664 up 0.0626 down 0.0414 nostitch 0.626 entered 0.717 late<FM 0.203 MT 2.08  fit-err 368.103
+   w=0.50 rho=0.950: ratio 0.701 up 0.0335 down 0.0201 nostitch 0.736 entered 0.682 late<FM 0.195 MT 1.73  fit-err 76.488
+   w=0.50 rho=0.990: ratio 0.643 up 0.0179 down 0.0086 nostitch 0.832 entered 0.644 late<FM 0.188 MT 1.61  fit-err 9.808
+   w=0.50 rho=0.998: ratio 0.621 up 0.0112 down 0.0036 nostitch 0.873 entered 0.632 late<FM 0.205 MT 1.35  fit-err 0.525
+   w=0.80 rho=0.000: ratio 0.668 up 0.0859 down 0.0573 nostitch 0.698 entered 0.669 late<FM 0.189 MT 1.70  fit-err 729.320
+   w=0.80 rho=0.800: ratio 0.658 up 0.0418 down 0.0261 nostitch 0.737 entered 0.681 late<FM 0.203 MT 1.76  fit-err 136.830
+   w=0.80 rho=0.950: ratio 0.667 up 0.0223 down 0.0118 nostitch 0.811 entered 0.657 late<FM 0.198 MT 1.55  fit-err 21.952
+   w=0.80 rho=0.990: ratio 0.647 up 0.0134 down 0.0051 nostitch 0.859 entered 0.636 late<FM 0.184 MT 1.41  fit-err 2.109
+   w=0.80 rho=0.998: ratio 0.654 up 0.0092 down 0.0024 nostitch 0.884 entered 0.623 late<FM 0.196 MT 1.35  fit-err 0.024
+   w=0.90 rho=0.000: ratio 0.648 up 0.0617 down 0.0405 nostitch 0.760 entered 0.652 late<FM 0.206 MT 1.62  fit-err 350.986
+   w=0.90 rho=0.800: ratio 0.651 up 0.0302 down 0.0180 nostitch 0.798 entered 0.658 late<FM 0.201 MT 1.67  fit-err 59.436
+   w=0.90 rho=0.950: ratio 0.638 up 0.0170 down 0.0080 nostitch 0.843 entered 0.639 late<FM 0.197 MT 1.55  fit-err 8.126
+   w=0.90 rho=0.990: ratio 0.637 up 0.0115 down 0.0037 nostitch 0.872 entered 0.636 late<FM 0.177 MT 1.40  fit-err 0.579
+   w=0.90 rho=0.998: ratio 0.642 up 0.0094 down 0.0022 nostitch 0.880 entered 0.630 late<FM 0.201 MT 1.50  fit-err 0.007
+   w=0.95 rho=0.000: ratio 0.640 up 0.0460 down 0.0288 nostitch 0.803 entered 0.643 late<FM 0.177 MT 1.51  fit-err 170.254
+   w=0.95 rho=0.800: ratio 0.649 up 0.0224 down 0.0121 nostitch 0.831 entered 0.640 late<FM 0.189 MT 1.54  fit-err 23.429
+   w=0.95 rho=0.950: ratio 0.638 up 0.0140 down 0.0057 nostitch 0.865 entered 0.635 late<FM 0.158 MT 1.37  fit-err 2.944
+   w=0.95 rho=0.990: ratio 0.640 up 0.0102 down 0.0026 nostitch 0.874 entered 0.633 late<FM 0.189 MT 1.46  fit-err 0.049
+   w=0.95 rho=0.998: ratio 0.625 up 0.0087 down 0.0017 nostitch 0.887 entered 0.629 late<FM 0.179 MT 1.41  fit-err 0.055
+   w=0.98 rho=0.000: ratio 0.643 up 0.0299 down 0.0176 nostitch 0.842 entered 0.631 late<FM 0.180 MT 1.45  fit-err 56.860
+   w=0.98 rho=0.800: ratio 0.645 up 0.0166 down 0.0073 nostitch 0.857 entered 0.639 late<FM 0.180 MT 1.36  fit-err 6.433
+   w=0.98 rho=0.950: ratio 0.650 up 0.0114 down 0.0036 nostitch 0.873 entered 0.633 late<FM 0.180 MT 1.31  fit-err 0.472
+   w=0.98 rho=0.990: ratio 0.635 up 0.0093 down 0.0021 nostitch 0.882 entered 0.629 late<FM 0.171 MT 1.20  fit-err 0.005
+   w=0.98 rho=0.998: ratio 0.634 up 0.0085 down 0.0017 nostitch 0.887 entered 0.629 late<FM 0.190 MT 1.33  fit-err 0.066
+   w=1.00 rho=0.000: ratio 0.643 up 0.0083 down 0.0015 nostitch 0.885 entered 0.626 late<FM 0.176 MT 1.37  fit-err 0.122
+[copula best-matching persistence w=0.98 rho=0.99] n_sims=1000
+   ratio          obs 0.6459  null median 0.6452 [2.5% 0.5769, 97.5% 0.7189]  P(null<=obs) 0.507  P(null>=obs) 0.493
+   frac_lt1       obs 1.0000  null median 1.0000 [2.5% 1.0000, 97.5% 1.0000]  P(null<=obs) 1.000  P(null>=obs) 0.989
+   lowent         obs 0.9094  null median 0.9024 [2.5% 0.8956, 97.5% 0.9100]  P(null<=obs) 0.957  P(null>=obs) 0.053
+   loo            obs 0.0721  null median 0.0972 [2.5% 0.0778, 97.5% 0.1202]  P(null<=obs) 0.006  P(null>=obs) 0.994
+   late_below_FM  obs 0.4000  null median 0.1795 [2.5% 0.1124, 97.5% 0.2501]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   MT             obs 2.8666  null median 1.3502 [2.5% 1.0034, 97.5% 1.9184]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   pair           obs 0.0893  null median 0.2172 [2.5% 0.1603, 97.5% 0.2755]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   up             obs 0.0100  null median 0.0091 [2.5% 0.0074, 97.5% 0.0108]  P(null<=obs) 0.859  P(null>=obs) 0.141
+   down           obs 0.0021  null median 0.0020 [2.5% 0.0013, 97.5% 0.0030]  P(null<=obs) 0.595  P(null>=obs) 0.405
+   nostitch       obs 0.8624  null median 0.8835 [2.5% 0.8646, 97.5% 0.9023]  P(null<=obs) 0.022  P(null>=obs) 0.983
+   entered        obs 0.6393  null median 0.6271 [2.5% 0.6093, 97.5% 0.6437]  P(null<=obs) 0.924  P(null>=obs) 0.094
+[settling-only null (b): copula w=1 (fixed per-stroke threshold, pi depends on F_now and t only)] n_sims=1000
+   ratio          obs 0.6459  null median 0.6456 [2.5% 0.5767, 97.5% 0.7149]  P(null<=obs) 0.504  P(null>=obs) 0.496
+   frac_lt1       obs 1.0000  null median 1.0000 [2.5% 1.0000, 97.5% 1.0000]  P(null<=obs) 1.000  P(null>=obs) 0.982
+   lowent         obs 0.9094  null median 0.9017 [2.5% 0.8947, 97.5% 0.9100]  P(null<=obs) 0.954  P(null>=obs) 0.054
+   loo            obs 0.0721  null median 0.0980 [2.5% 0.0789, 97.5% 0.1204]  P(null<=obs) 0.005  P(null>=obs) 0.995
+   late_below_FM  obs 0.4000  null median 0.1784 [2.5% 0.1059, 97.5% 0.2528]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   MT             obs 2.8666  null median 1.3476 [2.5% 0.9951, 97.5% 1.9003]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   pair           obs 0.0893  null median 0.2168 [2.5% 0.1633, 97.5% 0.2799]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   up             obs 0.0100  null median 0.0084 [2.5% 0.0069, 97.5% 0.0100]  P(null<=obs) 0.974  P(null>=obs) 0.026
+   down           obs 0.0021  null median 0.0015 [2.5% 0.0009, 97.5% 0.0023]  P(null<=obs) 0.948  P(null>=obs) 0.052
+   nostitch       obs 0.8624  null median 0.8868 [2.5% 0.8679, 97.5% 0.9046]  P(null<=obs) 0.009  P(null>=obs) 0.994
+   entered        obs 0.6393  null median 0.6260 [2.5% 0.6082, 97.5% 0.6459]  P(null<=obs) 0.932  P(null>=obs) 0.083
+
+Markov transition fits (C up/stay/init = (3.0, 3.0, 30.0))
+[markov (memory = previous window only)] n_sims=1000
+   ratio          obs 0.6459  null median 0.6675 [2.5% 0.5702, 97.5% 0.7788]  P(null<=obs) 0.324  P(null>=obs) 0.676
+   frac_lt1       obs 1.0000  null median 1.0000 [2.5% 0.9500, 97.5% 1.0000]  P(null<=obs) 1.000  P(null>=obs) 0.952
+   lowent         obs 0.9094  null median 0.9088 [2.5% 0.8992, 97.5% 0.9136]  P(null<=obs) 0.567  P(null>=obs) 0.460
+   loo            obs 0.0721  null median 0.0713 [2.5% 0.0543, 97.5% 0.0926]  P(null<=obs) 0.530  P(null>=obs) 0.471
+   late_below_FM  obs 0.4000  null median 0.3113 [2.5% 0.2400, 97.5% 0.3922]  P(null<=obs) 0.985  P(null>=obs) 0.015
+   MT             obs 2.8666  null median 2.8627 [2.5% 2.0093, 97.5% 4.1628]  P(null<=obs) 0.506  P(null>=obs) 0.494
+   pair           obs 0.0893  null median 0.1426 [2.5% 0.1058, 97.5% 0.1861]  P(null<=obs) 0.004  P(null>=obs) 0.996
+   up             obs 0.0100  null median 0.0102 [2.5% 0.0087, 97.5% 0.0118]  P(null<=obs) 0.398  P(null>=obs) 0.602
+   down           obs 0.0021  null median 0.0027 [2.5% 0.0020, 97.5% 0.0033]  P(null<=obs) 0.065  P(null>=obs) 0.935
+   nostitch       obs 0.8624  null median 0.8302 [2.5% 0.8080, 97.5% 0.8535]  P(null<=obs) 0.997  P(null>=obs) 0.004
+   entered        obs 0.6393  null median 0.6515 [2.5% 0.6315, 97.5% 0.6737]  P(null<=obs) 0.144  P(null>=obs) 0.882
+[POSITIVE CONTROL hysteresis delta=0.5 (w=1)] n_sims=300
+   ratio          obs 0.6459  null median 0.6370 [2.5% 0.5612, 97.5% 0.7133]  P(null<=obs) 0.630  P(null>=obs) 0.370
+   frac_lt1       obs 1.0000  null median 1.0000 [2.5% 1.0000, 97.5% 1.0000]  P(null<=obs) 1.000  P(null>=obs) 0.993
+   lowent         obs 0.9094  null median 0.8990 [2.5% 0.8914, 97.5% 0.9060]  P(null<=obs) 0.997  P(null>=obs) 0.003
+   loo            obs 0.0721  null median 0.0991 [2.5% 0.0757, 97.5% 0.1170]  P(null<=obs) 0.017  P(null>=obs) 0.983
+   late_below_FM  obs 0.4000  null median 0.1750 [2.5% 0.1150, 97.5% 0.2439]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   MT             obs 2.8666  null median 1.3231 [2.5% 0.9956, 97.5% 1.8439]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   pair           obs 0.0893  null median 0.2192 [2.5% 0.1652, 97.5% 0.2795]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   up             obs 0.0100  null median 0.0069 [2.5% 0.0058, 97.5% 0.0082]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   down           obs 0.0021  null median 0.0000 [2.5% 0.0000, 97.5% 0.0001]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   nostitch       obs 0.8624  null median 0.8923 [2.5% 0.8746, 97.5% 0.9107]  P(null<=obs) 0.003  P(null>=obs) 1.000
+   entered        obs 0.6393  null median 0.6271 [2.5% 0.6110, 97.5% 0.6448]  P(null<=obs) 0.917  P(null>=obs) 0.100
+[POSITIVE CONTROL hysteresis delta=1.0 (w=1)] n_sims=300
+   ratio          obs 0.6459  null median 0.6377 [2.5% 0.5696, 97.5% 0.7068]  P(null<=obs) 0.573  P(null>=obs) 0.427
+   frac_lt1       obs 1.0000  null median 1.0000 [2.5% 1.0000, 97.5% 1.0000]  P(null<=obs) 1.000  P(null>=obs) 0.987
+   lowent         obs 0.9094  null median 0.8990 [2.5% 0.8910, 97.5% 0.9072]  P(null<=obs) 0.987  P(null>=obs) 0.013
+   loo            obs 0.0721  null median 0.0997 [2.5% 0.0801, 97.5% 0.1221]  P(null<=obs) 0.007  P(null>=obs) 0.993
+   late_below_FM  obs 0.4000  null median 0.1716 [2.5% 0.1038, 97.5% 0.2468]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   MT             obs 2.8666  null median 1.3058 [2.5% 0.9194, 97.5% 1.8294]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   pair           obs 0.0893  null median 0.2222 [2.5% 0.1660, 97.5% 0.2772]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   up             obs 0.0100  null median 0.0070 [2.5% 0.0057, 97.5% 0.0084]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   down           obs 0.0021  null median 0.0000 [2.5% 0.0000, 97.5% 0.0000]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   nostitch       obs 0.8624  null median 0.8923 [2.5% 0.8724, 97.5% 0.9090]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   entered        obs 0.6393  null median 0.6271 [2.5% 0.6082, 97.5% 0.6471]  P(null<=obs) 0.910  P(null>=obs) 0.120
+[POSITIVE CONTROL hysteresis delta=2.0 (w=1)] n_sims=300
+   ratio          obs 0.6459  null median 0.6376 [2.5% 0.5810, 97.5% 0.6986]  P(null<=obs) 0.597  P(null>=obs) 0.403
+   frac_lt1       obs 1.0000  null median 1.0000 [2.5% 1.0000, 97.5% 1.0000]  P(null<=obs) 1.000  P(null>=obs) 0.983
+   lowent         obs 0.9094  null median 0.8990 [2.5% 0.8910, 97.5% 0.9072]  P(null<=obs) 0.997  P(null>=obs) 0.010
+   loo            obs 0.0721  null median 0.0980 [2.5% 0.0777, 97.5% 0.1210]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   late_below_FM  obs 0.4000  null median 0.1715 [2.5% 0.1058, 97.5% 0.2533]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   MT             obs 2.8666  null median 1.3072 [2.5% 0.9821, 97.5% 1.8488]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   pair           obs 0.0893  null median 0.2164 [2.5% 0.1645, 97.5% 0.2862]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   up             obs 0.0100  null median 0.0070 [2.5% 0.0058, 97.5% 0.0083]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   down           obs 0.0021  null median 0.0000 [2.5% 0.0000, 97.5% 0.0000]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   nostitch       obs 0.8624  null median 0.8912 [2.5% 0.8723, 97.5% 0.9096]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   entered        obs 0.6393  null median 0.6271 [2.5% 0.6071, 97.5% 0.6443]  P(null<=obs) 0.917  P(null>=obs) 0.117
+[POSITIVE CONTROL hysteresis delta=1.0 (w=0.98, rho=0.99)] n_sims=300
+   ratio          obs 0.6459  null median 0.6351 [2.5% 0.5668, 97.5% 0.7069]  P(null<=obs) 0.590  P(null>=obs) 0.410
+   frac_lt1       obs 1.0000  null median 1.0000 [2.5% 1.0000, 97.5% 1.0000]  P(null<=obs) 1.000  P(null>=obs) 0.990
+   lowent         obs 0.9094  null median 0.8987 [2.5% 0.8922, 97.5% 0.9086]  P(null<=obs) 0.987  P(null>=obs) 0.020
+   loo            obs 0.0721  null median 0.0986 [2.5% 0.0769, 97.5% 0.1218]  P(null<=obs) 0.003  P(null>=obs) 0.997
+   late_below_FM  obs 0.4000  null median 0.1736 [2.5% 0.1110, 97.5% 0.2412]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   MT             obs 2.8666  null median 1.2812 [2.5% 0.9971, 97.5% 1.7538]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   pair           obs 0.0893  null median 0.2254 [2.5% 0.1708, 97.5% 0.2785]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   up             obs 0.0100  null median 0.0071 [2.5% 0.0060, 97.5% 0.0083]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   down           obs 0.0021  null median 0.0000 [2.5% 0.0000, 97.5% 0.0000]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   nostitch       obs 0.8624  null median 0.8890 [2.5% 0.8696, 97.5% 0.9068]  P(null<=obs) 0.003  P(null>=obs) 0.997
+   entered        obs 0.6393  null median 0.6282 [2.5% 0.6110, 97.5% 0.6448]  P(null<=obs) 0.910  P(null>=obs) 0.100
+[NO-SETTLING world (pi(F_now, col) only, w=1), hysteresis delta=None] n_sims=300
+   ratio          obs 0.6459  null median 0.7033 [2.5% 0.6379, 97.5% 0.7729]  P(null<=obs) 0.047  P(null>=obs) 0.953
+   frac_lt1       obs 1.0000  null median 1.0000 [2.5% 0.9738, 97.5% 1.0000]  P(null<=obs) 1.000  P(null>=obs) 0.973
+   lowent         obs 0.9094  null median 0.9030 [2.5% 0.8951, 97.5% 0.9102]  P(null<=obs) 0.913  P(null>=obs) 0.097
+   loo            obs 0.0721  null median 0.1252 [2.5% 0.1018, 97.5% 0.1508]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   late_below_FM  obs 0.4000  null median 0.0000 [2.5% 0.0000, 97.5% 0.5000]  P(null<=obs) 0.966  P(null>=obs) 0.034
+   MT             obs 2.8666  null median 0.9156 [2.5% 0.4752, 97.5% 1.6210]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   pair           obs 0.0893  null median 0.3635 [2.5% 0.0524, 97.5% 0.6827]  P(null<=obs) 0.054  P(null>=obs) 0.946
+   up             obs 0.0100  null median 0.0016 [2.5% 0.0009, 97.5% 0.0023]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   down           obs 0.0021  null median 0.0051 [2.5% 0.0041, 97.5% 0.0061]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   nostitch       obs 0.8624  null median 0.8935 [2.5% 0.8757, 97.5% 0.9113]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   entered        obs 0.6393  null median 0.6393 [2.5% 0.6187, 97.5% 0.6587]  P(null<=obs) 0.527  P(null>=obs) 0.503
+[NO-SETTLING world (pi(F_now, col) only, w=1), hysteresis delta=0.5] n_sims=300
+   ratio          obs 0.6459  null median 0.5837 [2.5% 0.5100, 97.5% 0.6586]  P(null<=obs) 0.917  P(null>=obs) 0.083
+   frac_lt1       obs 1.0000  null median 1.0000 [2.5% 1.0000, 97.5% 1.0000]  P(null<=obs) 1.000  P(null>=obs) 0.993
+   lowent         obs 0.9094  null median 0.8803 [2.5% 0.8727, 97.5% 0.8871]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   loo            obs 0.0721  null median 0.1568 [2.5% 0.1300, 97.5% 0.1776]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   late_below_FM  obs 0.4000  null median 0.0000 [2.5% 0.0000, 97.5% 0.4000]  P(null<=obs) 0.980  P(null>=obs) 0.030
+   MT             obs 2.8666  null median 0.9053 [2.5% 0.5181, 97.5% 1.6608]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   pair           obs 0.0893  null median 0.3333 [2.5% 0.0308, 97.5% 0.6469]  P(null<=obs) 0.064  P(null>=obs) 0.936
+   up             obs 0.0100  null median 0.0007 [2.5% 0.0004, 97.5% 0.0010]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   down           obs 0.0021  null median 0.0018 [2.5% 0.0013, 97.5% 0.0023]  P(null<=obs) 0.877  P(null>=obs) 0.123
+   nostitch       obs 0.8624  null median 0.9501 [2.5% 0.9356, 97.5% 0.9612]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   entered        obs 0.6393  null median 0.6415 [2.5% 0.6232, 97.5% 0.6621]  P(null<=obs) 0.417  P(null>=obs) 0.610
+[NO-SETTLING world (pi(F_now, col) only, w=1), hysteresis delta=1.0] n_sims=300
+   ratio          obs 0.6459  null median 0.5277 [2.5% 0.4498, 97.5% 0.6218]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   frac_lt1       obs 1.0000  null median 1.0000 [2.5% 1.0000, 97.5% 1.0000]  P(null<=obs) 1.000  P(null>=obs) 0.983
+   lowent         obs 0.9094  null median 0.8803 [2.5% 0.8723, 97.5% 0.8888]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   loo            obs 0.0721  null median 0.1646 [2.5% 0.1415, 97.5% 0.1856]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   late_below_FM  obs 0.4000  null median 0.0000 [2.5% 0.0000, 97.5% 0.3333]  P(null<=obs) 0.990  P(null>=obs) 0.020
+   MT             obs 2.8666  null median 0.9601 [2.5% 0.4972, 97.5% 1.7075]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   pair           obs 0.0893  null median 0.3210 [2.5% 0.0656, 97.5% 0.6954]  P(null<=obs) 0.043  P(null>=obs) 0.957
+   up             obs 0.0100  null median 0.0007 [2.5% 0.0004, 97.5% 0.0011]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   down           obs 0.0021  null median 0.0003 [2.5% 0.0001, 97.5% 0.0006]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   nostitch       obs 0.8624  null median 0.9834 [2.5% 0.9734, 97.5% 0.9889]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   entered        obs 0.6393  null median 0.6426 [2.5% 0.6209, 97.5% 0.6648]  P(null<=obs) 0.387  P(null>=obs) 0.657
+[NO-SETTLING world (pi(F_now, col) only, w=1), hysteresis delta=2.0] n_sims=300
+   ratio          obs 0.6459  null median 0.5185 [2.5% 0.4218, 97.5% 0.6187]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   frac_lt1       obs 1.0000  null median 1.0000 [2.5% 1.0000, 97.5% 1.0000]  P(null<=obs) 1.000  P(null>=obs) 0.983
+   lowent         obs 0.9094  null median 0.8803 [2.5% 0.8715, 97.5% 0.8899]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   loo            obs 0.0721  null median 0.1646 [2.5% 0.1385, 97.5% 0.1888]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   late_below_FM  obs 0.4000  null median 0.0000 [2.5% 0.0000, 97.5% 0.5000]  P(null<=obs) 0.966  P(null>=obs) 0.034
+   MT             obs 2.8666  null median 0.9649 [2.5% 0.5258, 97.5% 1.7649]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   pair           obs 0.0893  null median 0.3318 [2.5% 0.0000, 97.5% 0.6667]  P(null<=obs) 0.060  P(null>=obs) 0.940
+   up             obs 0.0100  null median 0.0007 [2.5% 0.0004, 97.5% 0.0011]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   down           obs 0.0021  null median 0.0000 [2.5% 0.0000, 97.5% 0.0000]  P(null<=obs) 1.000  P(null>=obs) 0.000
+   nostitch       obs 0.8624  null median 0.9900 [2.5% 0.9845, 97.5% 0.9950]  P(null<=obs) 0.000  P(null>=obs) 1.000
+   entered        obs 0.6393  null median 0.6426 [2.5% 0.6204, 97.5% 0.6632]  P(null<=obs) 0.360  P(null>=obs) 0.680
+elapsed 510 s
