@@ -1,0 +1,63 @@
+{
+ "plan_sha256": "10ca6c76fdcd7856ee11cf4ddff157a6d852f59400332c3be39ba6358bdaa36a",
+ "n_pairs": 120,
+ "boundaries": {
+  "lower": {
+   "n_common": 48,
+   "common": {
+    "K2": 0.19915501309049022,
+    "K3": 0.24812550500796662,
+    "BAND": 0.19013930976232976
+   },
+   "own_set": {
+    "K2": {
+     "n": 52,
+     "median_abs_diff": 0.21305333178520308
+    },
+    "K3": {
+     "n": 51,
+     "median_abs_diff": 0.22749674198969116
+    },
+    "BAND": {
+     "n": 58,
+     "median_abs_diff": 0.19041960731321353
+    }
+   },
+   "band_minus_k2": -0.009015703328160457,
+   "band_minus_k2_ci": [
+    -0.07645219306541368,
+    0.05952980554600138
+   ],
+   "band_offset_vs_k2_signed_median": 0.0
+  },
+  "upper": {
+   "n_common": 41,
+   "common": {
+    "K2": 0.0821740317677736,
+    "K3": 0.07597442847558142,
+    "BAND": 0.083337073554612
+   },
+   "own_set": {
+    "K2": {
+     "n": 42,
+     "median_abs_diff": 0.0827555526611928
+    },
+    "K3": {
+     "n": 41,
+     "median_abs_diff": 0.07597442847558142
+    },
+    "BAND": {
+     "n": 42,
+     "median_abs_diff": 0.08400735955378716
+    }
+   },
+   "band_minus_k2": 0.0011630417868384035,
+   "band_minus_k2_ci": [
+    -0.024393667398198322,
+    0.04634887468978466
+   ],
+   "band_offset_vs_k2_signed_median": 0.0
+  }
+ },
+ "decision": "no consistent improvement -> method direction ends"
+}

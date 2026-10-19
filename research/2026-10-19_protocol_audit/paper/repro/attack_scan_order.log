@@ -1,0 +1,9 @@
+A1 2024-03-27_r_v1 v 0.05 | first trial beta 0.200, last trial beta 0.020 | within-column rho(accel, trial) median +1.00, rho(accel, onset force) median -1.00 | median attack, 20 lowest onset-force ranks 0.563 m/s2 | max 17.0
+A1 2024-03-27_r_v2 v 0.10 | first trial beta 0.200, last trial beta 0.020 | within-column rho(accel, trial) median +1.00, rho(accel, onset force) median -1.00 | median attack, 20 lowest onset-force ranks 0.563 m/s2 | max 18.9
+A1 2024-03-27_r_v3 v 0.20 | first trial beta 0.200, last trial beta 0.020 | within-column rho(accel, trial) median +0.98, rho(accel, onset force) median -0.98 | median attack, 20 lowest onset-force ranks 0.563 m/s2 | max 19.7
+A2 v1             v 0.05 | first trial beta 0.020, last trial beta 0.200 | within-column rho(accel, trial) median +1.00, rho(accel, onset force) median +1.00 | median attack, 20 lowest onset-force ranks 0.038 m/s2 | max 17.0
+A2 v2             v 0.10 | first trial beta 0.020, last trial beta 0.200 | within-column rho(accel, trial) median +1.00, rho(accel, onset force) median +1.00 | median attack, 20 lowest onset-force ranks 0.104 m/s2 | max 18.9
+A2 v3             v 0.20 | first trial beta 0.020, last trial beta 0.200 | within-column rho(accel, trial) median +0.98, rho(accel, onset force) median +0.98 | median attack, 20 lowest onset-force ranks 0.417 m/s2 | max 19.7
+A2 beta 0.020-0.043: median attack (20 lowest onset ranks) v1/v2/v3 = 0.026/0.104/0.417 m/s2; v3/v1 ratio 16.0
+A2 beta 0.043-0.093: median attack (20 lowest onset ranks) v1/v2/v3 = 0.038/0.104/0.417 m/s2; v3/v1 ratio 10.9
+A2 beta 0.093-0.200: median attack (20 lowest onset ranks) v1/v2/v3 = 0.304/0.325/0.417 m/s2; v3/v1 ratio 1.4

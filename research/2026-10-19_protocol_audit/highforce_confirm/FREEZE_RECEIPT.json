@@ -1,0 +1,28 @@
+{
+ "frozen_kst": "2026-10-19T21:39:37.292837+09:00",
+ "sha256": {
+  "/Users/jeongjihoon/violin-rne/highforce_confirm/PROTOCOL.md": "19b5f4efdeb8dea534a843ee2342a3ff02f72e8b3884f54e04366683887b2445",
+  "/Users/jeongjihoon/violin-rne/highforce_confirm/score_highforce.py": "f8d74c6881a0294716952d0cbf7d4bc8ae24b27b4ec5e2e3339720d5b9dae80a",
+  "/Users/jeongjihoon/violin-rne/highforce_confirm/test_score_highforce.py": "ae1cf84161fecd9c8053ba4e82863c5370746f07a2322adb819df58ad72ec4f5",
+  "/Users/jeongjihoon/violin-rne/highforce_confirm/controls_audit.py": "b148f8bde239d92a7cf732ee424460c55225b399c116f291e180b77fc6bf7397",
+  "/Users/jeongjihoon/violin-rne/highforce_confirm/controls_audit.json": "90185bc10aa9ab5944d0982115a0c6b7267f263426e83b6495b0a61c41d07391",
+  "/Users/jeongjihoon/violin-rne/novelty/thermal_upper/thermal_law.py": "6a8dc96aa9ed33d7839ecafd2d6f54c7e3c0c6e25dcb30b6af82095e492750ea",
+  "/Users/jeongjihoon/violin-rne/novelty/thermal_upper/thermal_law2.py": "f3d67d546b50a4757b2aa441c9b5d15ecd2436cb6633d98c836f4d5dbc874cd9",
+  "/Users/jeongjihoon/violin-rne/claude_extra/verify_astra_boundaries.py": "2dfd0572c8b4eca7865662136dccbaf6f2aa392936199860eaaa2f1af7ca926d",
+  "/Users/jeongjihoon/violin-bowing-boundaries/scripts/regime_map.py": "63afbfa6f479e30310eaab723d530cb043daf5ac7b84daefcb0d3b52ef75e1ce",
+  "/Users/jeongjihoon/violin-rne/novelty/thermal_upper/FROZEN_v2.json": "bf9a14c98806d1f922d223fdb9e5188d8c4a3a7fa9e67bfd4be0d58ae5259aad",
+  "/Users/jeongjihoon/violin-rne/novelty/thermal_upper/FROZEN_v3.json": "ac30d1179975101f53f7fa3fd85179361110c28242655a4e806b0d4ea895a7ac"
+ },
+ "inputs": {
+  "HighBowForceRange_1": {
+   "features_sha256": "f9df59da1c1386cb98d712ba6b61d39906f6cd50a6b3cca148f44d223aea4a3d",
+   "receipt_sha256": "f957168103a62675b58f7ae62c32baa5bad211abbbd33b5d6c2a2788643541cd"
+  },
+  "HighBowForceRange_2": {
+   "features_sha256": "fa13a7b7c387c91e305495ba771debd62c6bb0836d9be43ed8a26b21ac4ec37c",
+   "receipt_sha256": "df13011eba579fd8ac3e7894a0c0a3fd4889548a49bf3681939eb8c8f884d0d7"
+  }
+ },
+ "frozen_grid_identity_max_abs_log": 1.1102230246251565e-16,
+ "note": "label-free freeze: no classifier column of HighBowForceRange_1/2 parsed before this receipt"
+}

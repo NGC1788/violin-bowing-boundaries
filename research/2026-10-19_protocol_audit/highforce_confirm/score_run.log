@@ -1,0 +1,214 @@
+{
+ "HF_C": {
+  "P1": {
+   "c": 1.7541821056009597,
+   "e_v": 0.7929597254802443,
+   "e_v_ci": [
+    0.5915790489978892,
+    1.1116310548024608
+   ],
+   "e_beta": -0.7518586322727783,
+   "e_beta_ci": [
+    -1.2717884786784812,
+    -0.441994229768431
+   ],
+   "sigma": 0.24713963150732024,
+   "zone": "H_thermal",
+   "ci_zones": [
+    "H_steep",
+    "H_thermal"
+   ],
+   "decision": "not decidable",
+   "n_columns": 77
+  },
+  "S1": "not decidable",
+  "verdict": {
+   "T1k_break_vs_S1_level": "S1_strict",
+   "T1k_break_vs_S1_nll": 0.27234738966612015,
+   "T1mu_vs_S1_level": "S1_strict",
+   "T1mu_vs_S1_nll": 0.36032401411873494,
+   "T1k_peak_vs_S1_level": "S1_strict",
+   "T1k_peak_vs_S1_nll": 0.6626976372058184
+  }
+ },
+ "HF_A": {
+  "P1": {
+   "c": 1.7658302739350602,
+   "e_v": 0.9121841634965164,
+   "e_v_ci": [
+    0.7005550192656945,
+    1.2335859546316532
+   ],
+   "e_beta": -0.8173044228322277,
+   "e_beta_ci": [
+    -1.2972302102446645,
+    -0.47422673187460407
+   ],
+   "sigma": 0.2525615760312995,
+   "zone": "H_thermal",
+   "ci_zones": [
+    "H_steep",
+    "H_thermal"
+   ],
+   "decision": "not decidable",
+   "n_columns": 77
+  },
+  "S1": "not decidable",
+  "verdict": {
+   "T1k_break_vs_S1_level": "S1_strict",
+   "T1k_break_vs_S1_nll": 0.18203721289398045,
+   "T1mu_vs_S1_level": "S1_strict",
+   "T1mu_vs_S1_nll": 0.2480315781817728,
+   "T1k_peak_vs_S1_level": "S1_strict",
+   "T1k_peak_vs_S1_nll": 0.5262736447843768
+  }
+ },
+ "HF_D": {
+  "P1": {
+   "c": 2.5448824128123464,
+   "e_v": 0.793329773663386,
+   "e_v_ci": [
+    0.6673645788113003,
+    1.0058470099734902
+   ],
+   "e_beta": -0.47557093754698343,
+   "e_beta_ci": [
+    -0.7902105873191821,
+    -0.2430895795775383
+   ],
+   "sigma": 0.24086153579261663,
+   "zone": "H_thermal",
+   "ci_zones": [
+    "H_thermal"
+   ],
+   "decision": "supported: H_thermal",
+   "n_columns": 80
+  },
+  "S1": "supported: H_thermal",
+  "verdict": {
+   "T1k_break_vs_S1_level": "S1_strict",
+   "T1k_break_vs_S1_nll": 0.13734372575210285,
+   "T1mu_vs_S1_level": "S1_strict",
+   "T1mu_vs_S1_nll": 0.19222952920140957,
+   "T1k_peak_vs_S1_level": "S1_strict",
+   "T1k_peak_vs_S1_nll": 0.43879938598915125
+  }
+ },
+ "HF_B": {
+  "P1": {
+   "c": 2.3973299464105073,
+   "e_v": 0.5730188941274459,
+   "e_v_ci": [
+    0.45005888634206276,
+    0.7653133578543834
+   ],
+   "e_beta": -0.3945153935680418,
+   "e_beta_ci": [
+    -0.6776056856012995,
+    -0.16416154321364235
+   ],
+   "sigma": 0.2668189559633969,
+   "zone": "H_thermal",
+   "ci_zones": [
+    "H_thermal"
+   ],
+   "decision": "supported: H_thermal",
+   "n_columns": 81
+  },
+  "S1": "supported: H_thermal",
+  "verdict": {
+   "T1k_break_vs_S1_level": "S1_strict",
+   "T1k_break_vs_S1_nll": 0.20739007521357067,
+   "T1mu_vs_S1_level": "S1_strict",
+   "T1mu_vs_S1_nll": 0.27528914398508375,
+   "T1k_peak_vs_S1_level": "S1_strict",
+   "T1k_peak_vs_S1_nll": 0.48580029673040936
+  }
+ }
+}
+{
+ "P3": {
+  "e12": 0.8233489751819223,
+  "e23": 0.6335909847460178,
+  "curvature": -0.18975799043590447,
+  "ci_cluster": [
+   -0.46488857328042127,
+   0.16801116771072616
+  ],
+  "ci_stratified": [
+   -0.37688277255084135,
+   0.04189785542393763
+  ],
+  "decision_cluster": "concave point, CI includes 0",
+  "decision_stratified": "concave point, CI includes 0",
+  "per_target": {
+   "HF_A": {
+    "e12": 0.8621788367222478,
+    "e23": 0.9938115625624906,
+    "curvature": 0.13163272584024277,
+    "n": 77
+   },
+   "HF_B": {
+    "e12": 0.8136034294045076,
+    "e23": 0.2850864275385744,
+    "curvature": -0.5285170018659332,
+    "n": 81
+   },
+   "HF_C": {
+    "e12": 0.6988611361189069,
+    "e23": 0.9129291547970318,
+    "curvature": 0.21406801867812497,
+    "n": 77
+   },
+   "HF_D": {
+    "e12": 0.9861488439933223,
+    "e23": 0.5505749070031635,
+    "curvature": -0.4355739369901588,
+    "n": 80
+   }
+  },
+  "n_columns": 315
+ },
+ "S1_P3": {
+  "e12": 1.1072891938214016,
+  "e23": 0.6437508394291818,
+  "curvature": -0.4635383543922198,
+  "ci_cluster": [
+   -0.9157705959877477,
+   0.05682959064301807
+  ],
+  "ci_stratified": [
+   -0.7572934496073518,
+   -0.23609378220219873
+  ],
+  "decision_cluster": "concave point, CI includes 0",
+  "decision_stratified": "concave, CI excludes 0",
+  "per_target": {
+   "HF_A": {
+    "e12": 1.0522324555259264,
+    "e23": 1.0977636613545756,
+    "curvature": 0.045531205828649224,
+    "n": 90
+   },
+   "HF_B": {
+    "e12": 1.2557520522629777,
+    "e23": 0.057544300702990304,
+    "curvature": -1.1982077515599874,
+    "n": 90
+   },
+   "HF_C": {
+    "e12": 0.9974557823972124,
+    "e23": 1.0671629754278036,
+    "curvature": 0.06970719303059114,
+    "n": 90
+   },
+   "HF_D": {
+    "e12": 1.1171368086030171,
+    "e23": 0.5530380260681392,
+    "curvature": -0.5640987825348779,
+    "n": 90
+   }
+  },
+  "n_columns": 360
+ }
+}
