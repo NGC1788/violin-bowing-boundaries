@@ -1,0 +1,24 @@
+primary_all_speeds n 151 finite 85 right 66 obs {'e_v': 0.746, 'e_v_ci': [0.598, 0.884], 'e_beta': -0.981, 'e_beta_ci': [-1.2, -0.808], 'level_A': 0.402}
+  verdict {'T1k_break_vs_S1_level': 'S1_strict', 'T1k_break_vs_S1_nll': 0.03527986053553667, 'T1mu_vs_S1_level': 'S1_strict', 'T1mu_vs_S1_nll': 0.05215262732473236, 'T1k_peak_vs_S1_level': 'S1_strict', 'T1k_peak_vs_S1_nll': 0.12025242413752468, 'beta_exponent_zone': 'H_plain', 'beta_exponent_ci_zones': ['H_plain', 'H_steep', 'H_thermal'], 'beta_decidable': False}
+   S1_strict   lvl +0.129 (PI90 0.148 ok True) nll 1.848 med 0.221 hit 0.52
+   T1k_peak    lvl +0.224 (PI90 0.148 ok False) nll 1.969 med 0.313 hit 0.36
+   T1k_break   lvl +0.176 (PI90 0.145 ok False) nll 1.884 med 0.238 hit 0.48
+   T1mu        lvl +0.189 (PI90 0.144 ok False) nll 1.900 med 0.238 hit 0.46
+   T2_mu_k     lvl +0.180 (PI90 0.144 ok False) nll 1.889 med 0.238 hit 0.48
+   T0_break    lvl +0.413 (PI90 0.407 ok False) nll 2.202 med 0.433 hit 0.21
+   E3_free_Z   lvl +0.182 (PI90 0.150 ok False) nll 1.908 med 0.246 hit 0.50
+   T2km_peak   lvl +0.199 (PI90 0.158 ok False) nll 1.949 med 0.262 hit 0.45
+   T2km_break  lvl +0.156 (PI90 0.154 ok False) nll 1.889 med 0.225 hit 0.48
+   S2m         lvl +0.111 (PI90 0.157 ok True) nll 1.865 med 0.218 hit 0.51
+secondary_standard_speeds n 113 finite 67 right 46 obs {'e_v': 0.762, 'e_v_ci': [0.609, 0.912], 'e_beta': -1.072, 'e_beta_ci': [-1.292, -0.899], 'level_A': 0.371}
+  verdict {'T1k_break_vs_S1_level': 'not distinguishable', 'T1k_break_vs_S1_nll': 0.028621226820118473, 'T1mu_vs_S1_level': 'S1_strict', 'T1mu_vs_S1_nll': 0.044671665805783745, 'T1k_peak_vs_S1_level': 'S1_strict', 'T1k_peak_vs_S1_nll': 0.12260515730498023, 'beta_exponent_zone': 'H_steep', 'beta_exponent_ci_zones': ['H_steep', 'H_thermal'], 'beta_decidable': False}
+   S1_strict   lvl +0.145 (PI90 0.148 ok True) nll 1.832 med 0.212 hit 0.50
+   T1k_peak    lvl +0.196 (PI90 0.148 ok False) nll 1.954 med 0.288 hit 0.37
+   T1k_break   lvl +0.174 (PI90 0.145 ok False) nll 1.860 med 0.233 hit 0.49
+   T1mu        lvl +0.182 (PI90 0.144 ok False) nll 1.876 med 0.224 hit 0.46
+   T2_mu_k     lvl +0.176 (PI90 0.144 ok False) nll 1.865 med 0.230 hit 0.49
+   T0_break    lvl +0.410 (PI90 0.407 ok False) nll 2.223 med 0.411 hit 0.19
+   E3_free_Z   lvl +0.157 (PI90 0.150 ok False) nll 1.814 med 0.201 hit 0.53
+   T2km_peak   lvl +0.160 (PI90 0.158 ok False) nll 1.862 med 0.222 hit 0.48
+   T2km_break  lvl +0.147 (PI90 0.154 ok True) nll 1.805 med 0.190 hit 0.50
+   S2m         lvl +0.121 (PI90 0.157 ok True) nll 1.800 med 0.211 hit 0.50

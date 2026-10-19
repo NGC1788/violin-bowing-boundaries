@@ -1,0 +1,66 @@
+[
+ {
+  "target": "D_T2",
+  "freeze": "frozen plan (CONFIRM_PLAN_D_T2)",
+  "level_error": -0.001797528956085443,
+  "tolerance": 0.12,
+  "passed": true,
+  "force_ceiling_p95_N": 2.9854215093265473
+ },
+ {
+  "target": "A4",
+  "freeze": "FROZEN_v2",
+  "level_error": -0.17342750236373217,
+  "tolerance": 0.14848491606699896,
+  "passed": false,
+  "force_ceiling_p95_N": 3.529213131747135
+ },
+ {
+  "target": "D2",
+  "freeze": "FROZEN_v2",
+  "level_error": -0.12630845205197921,
+  "tolerance": 0.14848491606699896,
+  "passed": true,
+  "force_ceiling_p95_N": 3.284260971942113
+ },
+ {
+  "target": "B_T2s2",
+  "freeze": "FROZEN_v2 (partially contaminated)",
+  "level_error": 0.12942813979745976,
+  "tolerance": 0.14848491606699896,
+  "passed": true,
+  "force_ceiling_p95_N": 5.81004555932999
+ },
+ {
+  "target": "HF_C",
+  "freeze": "FROZEN_v2",
+  "level_error": 0.3636961876661767,
+  "tolerance": 0.14848491606699896,
+  "passed": false,
+  "force_ceiling_p95_N": 11.425894764258443
+ },
+ {
+  "target": "HF_A",
+  "freeze": "FROZEN_v2",
+  "level_error": 0.223707002357507,
+  "tolerance": 0.14848491606699896,
+  "passed": false,
+  "force_ceiling_p95_N": 11.300570354582073
+ },
+ {
+  "target": "HF_D",
+  "freeze": "FROZEN_v2",
+  "level_error": 0.16526579181545725,
+  "tolerance": 0.14848491606699896,
+  "passed": false,
+  "force_ceiling_p95_N": 11.462811946937093
+ },
+ {
+  "target": "HF_B",
+  "freeze": "FROZEN_v2",
+  "level_error": 0.35663609959799036,
+  "tolerance": 0.14848491606699896,
+  "passed": false,
+  "force_ceiling_p95_N": 11.132963124959996
+ }
+]

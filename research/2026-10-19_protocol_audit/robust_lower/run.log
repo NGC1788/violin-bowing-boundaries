@@ -1,0 +1,77 @@
+L5 compiled levels (left-censored n/120):
+diag           c=none         c=0.15          c=0.2         c=0.25          c=0.3          c=0.4             zc       zc_c=0.2       zc_c=0.3
+A1      +0.115 (  0)  +0.096 (  1)  +0.095 (  4)  +0.092 (  8)  +0.079 ( 17)  +0.060 ( 39)  +0.058 (  0)  +0.047 (  8)  +0.027 ( 26)
+A2      -0.118 (  1)  -0.102 ( 11)  -0.106 ( 21)  -0.104 ( 28)  -0.089 ( 35)  -0.065 ( 51)  -0.059 (  1)  -0.053 ( 20)  -0.031 ( 35)
+B1      -0.357 ( 21)  -0.335 ( 34)  -0.284 ( 41)  -0.236 ( 47)  -0.172 ( 50)  -0.063 ( 56)              —              —              —
+C1      -0.561 ( 27)  -0.553 ( 36)  -0.544 ( 50)  -0.498 ( 58)  -0.424 ( 62)  -0.304 ( 68)  -0.541 ( 27)  -0.509 ( 51)  -0.382 ( 63)
+D1      -0.248 ( 33)  -0.264 ( 33)  -0.280 ( 44)  -0.227 ( 46)  -0.190 ( 54)  -0.055 ( 58)  -0.928 ( 33)  -0.474 ( 55)  -0.284 ( 61)
+A_T2    -0.539 ( 32)  -0.475 ( 45)  -0.420 ( 50)  -0.354 ( 53)  -0.288 ( 56)  -0.175 ( 62)  -0.446 ( 32)  -0.360 ( 50)  -0.227 ( 56)
+B_T2s1  -0.260 ( 19)  -0.256 ( 40)  -0.151 ( 41)  -0.025 ( 42)  -0.016 ( 45)  +0.087 ( 53)  -0.153 ( 19)  -0.088 ( 41)  +0.057 ( 44)
+B_T2r1  -0.318 ( 46)  -0.338 ( 52)  -0.289 ( 53)  -0.238 ( 55)  -0.177 ( 56)  -0.038 ( 62)              —              —              —
+B_T2r2  -0.139 ( 51)  -0.158 ( 51)  -0.155 ( 51)  -0.137 ( 52)  -0.109 ( 55)  +0.020 ( 60)              —              —              —
+C_T2    -0.556 ( 43)  -0.572 ( 44)  -0.577 ( 54)  -0.522 ( 60)  -0.452 ( 64)  -0.324 ( 71)  -0.708 ( 43)  -0.607 ( 58)  -0.446 ( 65)
+r(dec5)  +0.880 (n10)  +0.859 (n10)  +0.795 (n10)  +0.729 (n10)  +0.701 (n10)  +0.530 (n10)  +0.561 (n 7)  +0.708 (n 7)  +0.607 (n 7) | c=none on same 7: +0.946
+L6 all             : n 10 r +0.880 [+0.56,+0.97] LODO R2 +0.71 slope +7.67/N
+L6 drop_A1         : n  9 r +0.772 [+0.22,+0.95]
+L6 drop_A2         : n  9 r +0.868 [+0.48,+0.97]
+L6 drop_B1         : n  9 r +0.887 [+0.54,+0.98]
+L6 drop_C1         : n  9 r +0.918 [+0.65,+0.98]
+L6 drop_D1         : n  9 r +0.880 [+0.52,+0.97]
+L6 drop_A_T2       : n  9 r +0.857 [+0.45,+0.97]
+L6 drop_B_T2s1     : n  9 r +0.886 [+0.54,+0.98]
+L6 drop_B_T2r1     : n  9 r +0.880 [+0.52,+0.97]
+L6 drop_B_T2r2     : n  9 r +0.929 [+0.69,+0.99]
+L6 drop_C_T2       : n  9 r +0.875 [+0.50,+0.97]
+L6 without_A1      : n  9 r +0.772 [+0.22,+0.95] LODO R2 +0.46 slope +7.94/N
+L6 without_A1_A2   : n  8 r +0.688 [-0.03,+0.94] LODO R2 +0.23 slope +8.39/N
+L6 condition_level : n  7 r +0.884 [+0.39,+0.98] LODO R2 +0.68 slope +7.81/N
+L4 onset_7       : n 7 r +0.818 [+0.17,+0.97] slope +3.46/N LODO R2 +0.44 level SD 0.125
+L4 current_same7 : n 7 r +0.946 [+0.67,+0.99] slope +8.26/N LODO R2 +0.83 level SD 0.258
+L4 plateau0_10   : n 10 r +0.788 [+0.31,+0.95] slope +5.88/N LODO R2 +0.50 level SD 0.187
+L4 current_10    : n 10 r +0.880 [+0.56,+0.97] slope +7.67/N LODO R2 +0.71 level SD 0.218
+L2 primary_9x3   : pairs 27, observed max |r| 0.880 (dec5_pl, base); null max|r| median 0.570, 95% 0.806; p_adj for |r| 0.880 = 0.0103
+L2 session_4x3   : pairs 12, observed max |r| 0.880 (dec5_pl, base); null max|r| median 0.437, 95% 0.752; p_adj for |r| 0.880 = 0.0056
+L2 extended_9x15 : pairs 135, observed max |r| 0.977 (cens, astra:nominal_rank_K2_t0.1); null max|r| median 0.653, 95% 0.854; p_adj for |r| 0.880 = 0.0277
+L2 unadjusted permutation p (dec5_pl, base) = 0.0009
+L1 onset_rank n 7: b +0.27 [-0.68,+1.21] r +0.31 LODO R2 -1.21 | slope-1 R2 -0.62 (c -0.235), c=0 -1.59 | implied slope +4.80/N vs observed same tags +8.26/N (ref +7.67) | r(dec5, L-m) +0.31
+     A1      level +0.115 mech +0.379 q -0.210 folders v1 -0.178(n800) v2 -0.171(n800) v3 -0.281(n800)
+     A2      level -0.118 mech -0.379 q -0.969 folders v1 -0.445(n800) v2 -0.572(n800) v3 -1.890(n800)
+     C1      level -0.561 mech -0.035 q -0.624 folders v1 -0.375(n800) v2 -0.534(n800) v3 -0.964(n800)
+     D1      level -0.248 mech +0.188 q -0.401 folders v1 -0.285(n800) v2 -0.430(n800) v3 -0.489(n800)
+     A_T2    level -0.539 mech -0.229 q -0.819 folders v1 -0.338(n800) v2 -1.004(n800) v3 -1.114(n800)
+     B_T2s1  level -0.260 mech -0.441 q -1.030 folders v1 -0.437(n800) v2 -0.788(n800) v3 -1.865(n800)
+     C_T2    level -0.556 mech -0.007 q -0.597 folders v1 -0.321(n800) v2 -0.732(n800) v3 -0.737(n800)
+L1 onset_band n 7: b +0.66 [-0.27,+1.59] r +0.63 LODO R2 -0.28 | slope-1 R2 +0.30 (c -0.125), c=0 +0.02 | implied slope +6.63/N vs observed same tags +8.26/N (ref +7.67) | r(dec5, L-m) +0.22
+     A1      level +0.115 mech +0.252 q -0.198 folders v1 -0.159(n456) v2 -0.202(n612) v3 -0.232(n625)
+     A2      level -0.118 mech -0.252 q -0.702 folders v1 -0.429(n768) v2 -0.520(n758) v3 -1.158(n708)
+     C1      level -0.561 mech -0.191 q -0.641 folders v1 -0.343(n710) v2 -0.575(n653) v3 -1.004(n706)
+     D1      level -0.248 mech +0.012 q -0.438 folders v1 -0.288(n550) v2 -0.467(n595) v3 -0.558(n375)
+     A_T2    level -0.539 mech -0.433 q -0.883 folders v1 -0.505(n643) v2 -0.962(n864) v3 -1.183(n608)
+     B_T2s1  level -0.260 mech -0.446 q -0.896 folders v1 -0.340(n921) v2 -0.746(n866) v3 -1.603(n932)
+     C_T2    level -0.556 mech -0.235 q -0.685 folders v1 -0.480(n571) v2 -0.766(n757) v3 -0.809(n369)
+L1 plateau0   n 10: b +0.29 [-1.23,+1.80] r +0.15 LODO R2 -0.48 | slope-1 R2 -0.12 (c -0.334), c=0 -2.73 | implied slope +0.78/N vs observed same tags +7.67/N (ref +7.67) | r(dec5, L-m) +0.75
+     A1      level +0.115 mech +0.129 q -0.130 folders v1 -0.117(n800) v2 -0.119(n800) v3 -0.152(n800)
+     A2      level -0.118 mech -0.129 q -0.388 folders v1 -0.127(n800) v2 -0.171(n800) v3 -0.865(n800)
+     B1      level -0.357 mech +0.019 q -0.239 folders v1 -0.122(n800) v2 -0.228(n800) v3 -0.367(n800)
+     C1      level -0.561 mech +0.045 q -0.214 folders v1 -0.101(n800) v2 -0.159(n800) v3 -0.381(n800)
+     D1      level -0.248 mech +0.147 q -0.112 folders v1 -0.071(n800) v2 -0.118(n800) v3 -0.146(n800)
+     A_T2    level -0.539 mech -0.043 q -0.302 folders v1 -0.109(n800) v2 -0.339(n800) v3 -0.457(n800)
+     B_T2s1  level -0.260 mech -0.165 q -0.424 folders v1 -0.140(n800) v2 -0.254(n800) v3 -0.878(n800)
+     B_T2r1  level -0.318 mech +0.125 q -0.134 folders v1 -0.060(n800) v2 -0.120(n800) v3 -0.223(n800)
+     B_T2r2  level -0.139 mech +0.166 q -0.093 folders v1 -0.067(n800) v2 -0.106(n800) v3 -0.105(n800)
+     C_T2    level -0.556 mech +0.069 q -0.189 folders v1 -0.091(n800) v2 -0.210(n800) v3 -0.268(n800)
+L1 analytic: mean 1/F_ref over 120 A1-grid columns = 2.22 /N (median F_ref 0.633 N)
+L3 no-band columns (of 120): A1 8 A2 9 B1 8 C1 7 D1 9 A_T2 6 B_T2s1 10 B_T2r1 11 B_T2r2 11 C_T2 5
+     A1      baseline +0.115  no-band missing (refit law) +0.134  (original law) +0.082
+     A2      baseline -0.118  no-band missing (refit law) -0.136  (original law) -0.186
+     B1      baseline -0.357  no-band missing (refit law) -0.380  (original law) -0.434
+     C1      baseline -0.561  no-band missing (refit law) -0.566  (original law) -0.627
+     D1      baseline -0.248  no-band missing (refit law) -0.265  (original law) -0.322
+     A_T2    baseline -0.539  no-band missing (refit law) -0.537  (original law) -0.605
+     B_T2s1  baseline -0.260  no-band missing (refit law) -0.310  (original law) -0.356
+     B_T2r1  baseline -0.318  no-band missing (refit law) -0.368  (original law) -0.425
+     B_T2r2  baseline -0.139  no-band missing (refit law) -0.173  (original law) -0.221
+     C_T2    baseline -0.556  no-band missing (refit law) -0.524  (original law) -0.601
+L3 assoc_baseline  : r +0.880 [+0.56,+0.97] slope +7.67/N LODO R2 +0.71
+L3 assoc_primary   : r +0.903 [+0.63,+0.98] slope +7.79/N LODO R2 +0.76
+L3 assoc_secondary : r +0.899 [+0.62,+0.98] slope +7.99/N LODO R2 +0.75

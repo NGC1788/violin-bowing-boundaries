@@ -1,0 +1,21 @@
+{
+ "frozen_kst": "2026-10-20T08:51:28.450615+09:00",
+ "sha256": {
+  "/Users/jeongjihoon/violin-rne/confirm_B_T2s2/PROTOCOL.md": "bd641c0f4414e7038916e0850ef81e945768064d594f34ccb5f4a0079e820dc8",
+  "/Users/jeongjihoon/violin-rne/confirm_B_T2s2/score_bt2s2.py": "6f43da107bba37fbb03ec313482854ce6de383af23959e56e0e1cf2814018ff9",
+  "/Users/jeongjihoon/violin-rne/confirm_B_T2s2/test_score_bt2s2.py": "db0df5d0d57628a829dcda863db05bbdc3bc1e281b9dc6e67bd812f71aec658f",
+  "/Users/jeongjihoon/violin-rne/confirm_B_T2s2/controls_audit.py": "209023e763560beeb5417a003f4802980b26252c691ebd53980d6527d10b2823",
+  "/Users/jeongjihoon/violin-rne/confirm_B_T2s2/controls_audit.json": "283ece037b884399eba6d28dfbd16cc2df48cbf43e763050c35ee4f3604328e4",
+  "/Users/jeongjihoon/violin-rne/novelty/thermal_upper/FROZEN_v2.json": "bf9a14c98806d1f922d223fdb9e5188d8c4a3a7fa9e67bfd4be0d58ae5259aad",
+  "/Users/jeongjihoon/violin-rne/novelty/thermal_upper/thermal_law.py": "6a8dc96aa9ed33d7839ecafd2d6f54c7e3c0c6e25dcb30b6af82095e492750ea",
+  "/Users/jeongjihoon/violin-rne/novelty/thermal_upper/thermal_law2.py": "f3d67d546b50a4757b2aa441c9b5d15ecd2436cb6633d98c836f4d5dbc874cd9",
+  "/Users/jeongjihoon/violin-rne/novelty/thermal_upper/score_target.py": "7bc818cab477934c6a4f021b897ffd6f97aa759d789796695c0ff1985dda379e",
+  "/Users/jeongjihoon/violin-rne/claude_extra/verify_astra_boundaries.py": "2dfd0572c8b4eca7865662136dccbaf6f2aa392936199860eaaa2f1af7ca926d",
+  "/Users/jeongjihoon/violin-bowing-boundaries/scripts/regime_map.py": "63afbfa6f479e30310eaab723d530cb043daf5ac7b84daefcb0d3b52ef75e1ce"
+ },
+ "inputs": {
+  "features_sha256": "83600bc546016861440d17d61f5bcf41f4c42911562febe7a9926035dac2a9b9",
+  "receipt_sha256": "3a7cd80c96338680c06883e0fe19dc4f07c4fcf299f29ac734bff5f46b276e6f"
+ },
+ "note": "label-free freeze; no classifier column parsed by this code"
+}

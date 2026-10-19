@@ -1,0 +1,352 @@
+dev columns {'A1': 112, 'A2': 111, 'B1': 112, 'C1': 113, 'D1': 111, 'A_T2': 114, 'B_T2s1': 110, 'B_T2r1': 109, 'B_T2r2': 109, 'C_T2': 115, 'D_T2': 111}
+HF upper columns {'HF_C': 77, 'HF_A': 77, 'HF_D': 80, 'HF_B': 81}
+{
+ "reproduction": {
+  "refit": {
+   "a": 1.7901337456346655,
+   "b": -1.5355758652831057,
+   "g": 0.4807347435517211,
+   "q": -0.3438213947202131,
+   "nll": 1581.6035858966825
+  },
+  "saved": {
+   "a": 1.7901337456346655,
+   "b": -1.5355758652831057,
+   "g": 0.4807347435517211,
+   "q": -0.3438213947202131,
+   "nll": 1581.6035858966825
+  },
+  "max_abs_diff": 0.0,
+  "n_columns": 1227,
+  "n_diagrams": 11
+ },
+ "linear_reference": {
+  "a": 0.6973500333961384,
+  "b": -1.0630145339657746,
+  "nll": 1707.5767817384276,
+  "sigma": 0.3184433343106102
+ },
+ "sigma_b2": 0.2462444736988043,
+ "offsets_b2": {
+  "C_T2": 0.9158589329487141,
+  "A_T2": 0.9330088267709187,
+  "D_T2": 0.9528462266307189,
+  "B_T2s1": 1.019341636084019
+ },
+ "offsets_linear": {
+  "C_T2": 0.16086441673336827,
+  "A_T2": 0.16440551540998624,
+  "D_T2": 0.22374043501911112,
+  "B_T2s1": 0.3087245626133427
+ },
+ "targets": {
+  "HF_C": {
+   "sample1": "C_T2",
+   "n_columns": 77,
+   "b2_local": {
+    "e_v": 0.12581576479077647,
+    "e_beta": -0.24775689859829778
+   },
+   "observed": {
+    "e_v": 0.7929597254802443,
+    "e_v_ci": [
+     0.5915790489978892,
+     1.1116310548024608
+    ],
+    "e_beta": -0.7518586322727783,
+    "e_beta_ci": [
+     -1.2717884786784812,
+     -0.441994229768431
+    ]
+   },
+   "b2_e_v_inside_obs_ci": false,
+   "b2_e_beta_inside_obs_ci": false,
+   "linear_ref_local": {
+    "e_v": 0.6973500333961384,
+    "e_beta": -1.0630145339657746
+   },
+   "level_error_b2": 0.6785698425817104,
+   "level_sigma_b2": 0.34838322433832636,
+   "level_error_linear_ref": 0.3555633154677305,
+   "level_sigma_linear_ref": 0.28324554545907904,
+   "level_error_S1_strict_frozen": 0.3636961876661767,
+   "b2_within_0p15": false
+  },
+  "HF_A": {
+   "sample1": "A_T2",
+   "n_columns": 77,
+   "b2_local": {
+    "e_v": 0.12600153304429326,
+    "e_beta": -0.24885869318943804
+   },
+   "observed": {
+    "e_v": 0.9121841634965164,
+    "e_v_ci": [
+     0.7005550192656945,
+     1.2335859546316532
+    ],
+    "e_beta": -0.8173044228322277,
+    "e_beta_ci": [
+     -1.2972302102446645,
+     -0.47422673187460407
+    ]
+   },
+   "b2_e_v_inside_obs_ci": false,
+   "b2_e_beta_inside_obs_ci": false,
+   "linear_ref_local": {
+    "e_v": 0.6973500333961384,
+    "e_beta": -1.0630145339657746
+   },
+   "level_error_b2": 0.6186465129459423,
+   "level_sigma_b2": 0.3946660996319285,
+   "level_error_linear_ref": 0.2824164420860597,
+   "level_sigma_linear_ref": 0.28728968682322187,
+   "level_error_S1_strict_frozen": 0.223707002357507,
+   "b2_within_0p15": false
+  },
+  "HF_D": {
+   "sample1": "D_T2",
+   "n_columns": 80,
+   "b2_local": {
+    "e_v": 0.13838516628980732,
+    "e_beta": -0.27146467423625337
+   },
+   "observed": {
+    "e_v": 0.793329773663386,
+    "e_v_ci": [
+     0.6673645788113003,
+     1.0058470099734902
+    ],
+    "e_beta": -0.47557093754698343,
+    "e_beta_ci": [
+     -0.7902105873191821,
+     -0.2430895795775383
+    ]
+   },
+   "b2_e_v_inside_obs_ci": false,
+   "b2_e_beta_inside_obs_ci": true,
+   "linear_ref_local": {
+    
+{
+ "HF_C": {
+  "delta": 0.45329466563770293,
+  "delta_ci": [
+   0.1397566800536323,
+   0.624759780367378
+  ],
+  "e_v": 0.5973602193721207,
+  "e_b": -0.5153446591263711,
+  "decision": "session-level offset (HF higher) consistent with the data",
+  "contradictions": {
+   "hf_upper_entirely_below_s1_lower": 0,
+   "denom_below": 36,
+   "hf_lower_above_s1_upper": 11,
+   "denom_above": 11,
+   "max_log_beta_distance": 0.29775005576805524,
+   "examples_below_v_beta_HFhi_S1lo": [],
+   "examples_above_v_beta_HFlo_S1hi": [
+    [
+     0.09999999999999998,
+     0.019919701671513596,
+     11.887058134560554,
+     3.6705199742497165
+    ],
+    [
+     0.19999999999999998,
+     0.0199178241014349,
+     12.297623909216007,
+     4.392610452069927
+    ],
+    [
+     0.19999999999999998,
+     0.0208098988665713,
+     12.01120951003402,
+     4.392610452069927
+    ],
+    [
+     0.19999999999999998,
+     0.021741502239952748,
+     12.310466860683997,
+     4.392610452069927
+    ],
+    [
+     0.19999999999999998,
+     0.022716284976667354,
+     12.285961307414567,
+     4.392610452069927
+    ],
+    [
+     0.19999999999999998,
+     0.023675203234806253,
+     12.30279198100913,
+     4.392610452069927
+    ]
+   ]
+  }
+ },
+ "HF_A": {
+  "delta": 0.5073390894062069,
+  "delta_ci": [
+   0.28057803264367853,
+   0.6514224037432246
+  ],
+  "e_v": 0.5733107596678031,
+  "e_b": -0.48067696653081093,
+  "decision": "session-level offset (HF higher) consistent with the data",
+  "contradictions": {
+   "hf_upper_entirely_below_s1_lower": 0,
+   "denom_below": 38,
+   "hf_lower_above_s1_upper": 7,
+   "denom_above": 7,
+   "max_log_beta_distance": 0.28917405836259036,
+   "examples_below_v_beta_HFhi_S1lo": [],
+   "examples_above_v_beta_HFlo_S1hi": [
+    [
+     0.09999999999999998,
+     0.01993213683805815,
+     11.99917070925556,
+     3.702838280795336
+    ],
+    [
+     0.19999999999999998,
+     0.028348734414703397,
+     11.69428687829933,
+     3.45766069302371
+    ],
+    [
+     0.19999999999999998,
+     0.0295747160837773,
+     11.689411481005749,
+     3.45766069302371
+    ],
+    [
+     0.19999999999999998,
+     0.03513251052995691,
+     11.653428195328996,
+     3.457636278763971
+    ],
+    [
+     0.19999999999999998,
+     0.03673258888515734,
+     11.622151992670538,
+     3.457636278763971
+    ],
+    [
+     0.19999999999999998,
+     0.03831242589092116,
+     11.58452752360109,
+     3.832795776351638
+    ]
+   ]
+  }
+ },
+ "HF_D": {
+  "delta": 0.39014406844941896,
+  "delta_ci": [
+   0.1470972396064031,
+   0.5482494268824547
+  ],
+  "e_v": 0.6750258436945151,
+  "e_b": -0.47817618526620537,
+  "decision": "session-level offset (HF higher) consistent with the data",
+  "contradictions": {
+   "hf_upper_entirely_below_s1_lower": 0,
+   "denom_below": 43,
+   "hf_lower_above_s1_upper": 3,
+   "denom_above": 3,
+   "max_log_beta_distance": 0.5337250392313835,
+   "examples_below_v_beta_HFhi_S1lo": [],
+   "examples_above_v_beta_HFlo_S1hi": [
+    [
+     0.19999999999999998,
+     0.03655787297486911,
+     12.02636129909805,
+     2.7823946073518715
+    ],
+    [
+     0.19999999999999998,
+     0.04734742013766955,
+     12.052159952944864,
+     3.584006741851597
+    ],
+    [
+     0.19999999999999998,
+     0.049460528602444244,
+     12.034363492904765,
+     3.584006741851597
+    ]
+   ]
+  }
+ },
+ "HF_B": {
+  "delta": 0.3834716835538562,
+  "delta_ci": [
+   0.2564069963583036,
+   0.4824218148363361
+  ],
+  "e_v": 0.5881486517858617,
+  "e_b": -0.48149108004653157,
+  "decision": "session-level offset (HF higher) consistent with the data",
+  "contradictions": {
+   "hf_upper_entirely_below_s1_lower": 0,
+   "denom_below": 39,
+   "hf_lower_above_s1_upper": 3,
+   "denom_above": 3,
+   "max_log_beta_distance": 0.5062838060589989,
+   "examples_below_v_beta_HFhi_S1lo": [],
+   "examples_above_v_beta_HFlo_S1hi": [
+    [
+     0.04999999999999998,
+     0.04737639396203895,
+     5.1064437362819275,
+     4.057166517717656
+    ],
+    [
+     0.04999999999999998,
+     0.04949142701830781,
+     4.785786317059269,
+     4.057166517717656
+    ],
+    [
+     0.04999999999999998,
+     0.05168921894874456,
+     4.713698352493407,
+     3.65233167513605
+    ]
+   ]
+  }
+ }
+}
+/Users/jeongjihoon/violin-rne/posthoc_hf/posthoc_hf.py:223: RuntimeWarning: invalid value encountered in log
+  r_on = np.log(fwin / fon); r_pl = np.log(fwin / f0)
+{
+ "HF_C": {
+  "sample1": "C_T2",
+  "delta_r": -0.022076521784493375,
+  "S1_level_error": 0.3636961876661767,
+  "residual_after_onset_axis": 0.38577270945067005,
+  "decision": "a force-reading shift of this kind is too small to explain the under-prediction"
+ },
+ "HF_A": {
+  "sample1": "A_T2",
+  "delta_r": -0.01078710469212081,
+  "S1_level_error": 0.223707002357507,
+  "residual_after_onset_axis": 0.2344941070496278,
+  "decision": "a force-reading shift of this kind is too small to explain the under-prediction"
+ },
+ "HF_D": {
+  "sample1": "D_T2",
+  "delta_r": -0.027420402075546017,
+  "S1_level_error": 0.16526579181545725,
+  "residual_after_onset_axis": 0.19268619389100328,
+  "decision": "a force-reading shift of this kind is too small to explain the under-prediction"
+ },
+ "HF_B": {
+  "sample1": "B_T2s1",
+  "delta_r": -0.029323432284444187,
+  "S1_level_error": 0.35663609959799036,
+  "residual_after_onset_axis": 0.38595953188243454,
+  "decision": "a force-reading shift of this kind is too small to explain the under-prediction"
+ }
+}
+wrote /Users/jeongjihoon/violin-rne/posthoc_hf/results.json

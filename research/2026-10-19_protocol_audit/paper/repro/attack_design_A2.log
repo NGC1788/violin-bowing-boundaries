@@ -1,0 +1,4 @@
+strokes 6000
+v1: v 0.050 m/s, n 2000, floor a=v^2/(2*0.048 m)=0.026 m/s^2, on floor 45% (ramp distance median 4.80 cm), off-floor fit log a = +6.22 +1.09 log F_onset +2.65 log beta (R2 0.95, n 1104), max a 17.0 m/s^2
+v2: v 0.100 m/s, n 2000, floor a=v^2/(2*0.048 m)=0.104 m/s^2, on floor 51% (ramp distance median 4.80 cm), off-floor fit log a = +5.57 +1.09 log F_onset +2.35 log beta (R2 0.95, n 972), max a 18.9 m/s^2
+v3: v 0.200 m/s, n 2000, floor a=v^2/(2*0.048 m)=0.417 m/s^2, on floor 67% (ramp distance median 4.80 cm), off-floor fit log a = +5.03 +1.00 log F_onset +2.04 log beta (R2 0.97, n 668), max a 19.7 m/s^2

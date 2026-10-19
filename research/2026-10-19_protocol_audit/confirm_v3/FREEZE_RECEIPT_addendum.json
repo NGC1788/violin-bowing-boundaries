@@ -1,0 +1,19 @@
+{
+ "frozen_kst": "2026-10-20T08:51:27.984020+09:00",
+ "sha256": {
+  "/Users/jeongjihoon/violin-rne/confirm_v3/PROTOCOL.md": "5fd2111d1f7e22de148326c72e78ed32d14b49f3dec1786340b08c60912f3790",
+  "/Users/jeongjihoon/violin-rne/confirm_v3/ADDENDUM_20261020.md": "416b607f2e8884501393ad0e1abf290d913f25022d1e18de4b8272086f705680",
+  "/Users/jeongjihoon/violin-rne/confirm_v3/score_v3.py": "64fa8341d8f215ed65a4814ba33d37863de364bd1c3b282afc126607f1060d66",
+  "/Users/jeongjihoon/violin-rne/confirm_v3/test_score_v3.py": "36887a16d878c4cb9a7e5e69a07b66839e8b9cbf2b616309851acf1032717806",
+  "/Users/jeongjihoon/violin-rne/novelty/thermal_upper/FROZEN_v3.json": "ac30d1179975101f53f7fa3fd85179361110c28242655a4e806b0d4ea895a7ac",
+  "/Users/jeongjihoon/violin-rne/novelty/thermal_upper/FROZEN_v2.json": "bf9a14c98806d1f922d223fdb9e5188d8c4a3a7fa9e67bfd4be0d58ae5259aad",
+  "/Users/jeongjihoon/violin-rne/novelty/thermal_upper/rows.py": "fbcec76de56621e641e89daf88d803382494684cba08e70d400c5cc2204696bf",
+  "/Users/jeongjihoon/violin-rne/novelty/thermal_upper/thermal_law.py": "6a8dc96aa9ed33d7839ecafd2d6f54c7e3c0c6e25dcb30b6af82095e492750ea",
+  "/Users/jeongjihoon/violin-rne/novelty/thermal_upper/analysis2b.py": "91db45a1a5afe4d9d510f37a3d2c7a82f561a825d827cc235613b5b91321ff6c"
+ },
+ "state_at_freeze": {
+  "2024-04-24_TypeA_sample4": "done",
+  "2024-04-26_TypeD_sample2": "done",
+  "2024-07-03_TypeB_T2_sample2": "done"
+ }
+}

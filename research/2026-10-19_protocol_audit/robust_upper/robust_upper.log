@@ -1,0 +1,79 @@
+check K=2 intervals vs final/compare.intervals: {'n_bounds': 1800, 'max_abs_diff': 0.0}
+  base: diagram bootstrap done (9 s)
+    canonical 250/2000 (21 s)
+    canonical 500/2000 (34 s)
+    canonical 750/2000 (47 s)
+    canonical 1000/2000 (59 s)
+    canonical 1250/2000 (70 s)
+    canonical 1500/2000 (82 s)
+    canonical 1750/2000 (94 s)
+    canonical 2000/2000 (106 s)
+
+== base: rows 1227 | law c -0.176 a +0.661 b -1.111 | ln c +0.9660
+   pooled e_v +0.697 diag[0.633 0.762] | e_b -1.063 diag[-1.144 -1.001] | canonical e_v [0.647 0.751] e_b [-1.129 -1.004]
+   pair A: dlevel +0.197 [0.115 0.29 ] -> g +1.71 [1.   2.52] (SE 0.39; 1 inside True)
+   pair B: dlevel -0.040 [-0.121  0.038] -> g -0.51 [-1.54  0.48] (SE 0.51; 1 inside False)
+   pair C: dlevel +0.189 [0.065 0.305] -> g +3.25 [1.13 5.26] (SE 1.09; 1 inside False)
+   pair D: dlevel +0.033 [-0.034  0.103] -> g +0.23 [-0.23  0.71] (SE 0.24; 1 inside False)
+   D_T2 strict err -0.0018 fixed-c [-0.081  0.093] joint [-0.086  0.094]
+   A_T2 shift +0.197 fixed-law [0.124 0.289] (g +1.71 [1.07 2.51]) | refit [0.115 0.29 ] (g [1.   2.52])
+   fails: canonical 0/2000, diagram boot 0/1000
+  U1_no020: diagram bootstrap done (115 s)
+    canonical 250/2000 (124 s)
+    canonical 500/2000 (133 s)
+    canonical 750/2000 (142 s)
+    canonical 1000/2000 (151 s)
+    canonical 1250/2000 (159 s)
+    canonical 1500/2000 (168 s)
+    canonical 1750/2000 (176 s)
+    canonical 2000/2000 (185 s)
+
+== U1_no020: rows 879 | law c +0.064 a +0.836 b -1.212 | ln c +1.0167
+   pooled e_v +0.863 diag[0.802 0.923] | e_b -1.191 diag[-1.254 -1.142]
+   pair A: dlevel +0.225 [0.155 0.293] -> g +1.95 [1.35 2.55] (SE 0.30; 1 inside False)
+   pair B: dlevel +0.003 [-0.055  0.055] -> g +0.04 [-0.7  0.7] (SE 0.36; 1 inside False)
+   pair C: dlevel +0.221 [0.101 0.338] -> g +3.81 [1.74 5.83] (SE 1.04; 1 inside False)
+   pair D: dlevel +0.048 [-0.017  0.123] -> g +0.33 [-0.12  0.85] (SE 0.24; 1 inside False)
+   D_T2 strict err -0.0015 fixed-c [-0.064  0.062] joint [-0.066  0.064]
+   A_T2 shift +0.225 fixed-law [0.16  0.287] (g +1.95 [1.39 2.49]) | refit [0.156 0.292] (g [1.35 2.54])
+   fails: canonical 0/2000, diagram boot 0/1000
+   [U1_no020, frozen BASE_A law] A g +1.93 B g +0.06 C g +3.69 D g +0.28 | A_T2 shift +0.226
+  U2_K3: diagram bootstrap done (194 s)
+    canonical 250/2000 (202 s)
+    canonical 500/2000 (210 s)
+    canonical 750/2000 (218 s)
+    canonical 1000/2000 (226 s)
+    canonical 1250/2000 (234 s)
+    canonical 1500/2000 (242 s)
+    canonical 1750/2000 (250 s)
+    canonical 2000/2000 (258 s)
+
+== U2_K3: rows 1208 | law c -0.287 a +0.581 b -1.062 | ln c +0.9396
+   pooled e_v +0.691 diag[0.618 0.76 ] | e_b -1.105 diag[-1.187 -1.048]
+   pair A: dlevel +0.210 [0.121 0.312] -> g +1.83 [1.05 2.71] (SE 0.42; 1 inside False)
+   pair B: dlevel -0.018 [-0.105  0.061] -> g -0.23 [-1.33  0.77] (SE 0.53; 1 inside False)
+   pair C: dlevel +0.210 [0.082 0.334] -> g +3.62 [1.42 5.76] (SE 1.11; 1 inside False)
+   pair D: dlevel +0.014 [-0.052  0.085] -> g +0.10 [-0.36  0.58] (SE 0.25; 1 inside False)
+   D_T2 strict err -0.0133 fixed-c [-0.094  0.089] joint [-0.103  0.089]
+   A_T2 shift +0.210 fixed-law [0.128 0.308] (g +1.82 [1.12 2.67]) | refit [0.12  0.311] (g [1.04 2.7 ])
+   fails: canonical 0/2000, diagram boot 0/1000
+   [U2_K3, frozen BASE_A law] A g +1.86 B g -0.22 C g +3.67 D g +0.14 | A_T2 shift +0.183
+
+U4 torsion: absolute interpretations (Z_R/Z0, T1 strings):
+   K_R = Zto x 1e-3 N m^2 (g->kg, unit missing one m): A T1 0.77 B T1 0.92 C T1 0.68 D T1 0.84 A T2 0.57 B T2 0.88 C T2 0.67 D T2 0.57 | T1 in 1-4: False
+   K_R = Zto N m^2 (number taken as N m^2): A T1 24.47 B T1 29.13 C T1 21.58 D T1 26.67 A T2 18.18 B T2 27.87 C T2 21.11 D T2 18.11 | T1 in 1-4: False
+   Zto = rotational impedance sqrt(K_R I_R) in g m^2/s (s^2 a typo): A T1 164.23 B T1 232.78 C T1 127.78 D T1 195.22 A T2 90.70 B T2 213.05 C T2 122.30 D T2 89.97 | T1 in 1-4: False
+   bracket k=1.25: A dlnZ0 +0.115 dlnZtot -0.0278 g_tot -7.1 [-10.4  -4.1] | B dlnZ0 +0.079 dlnZtot +0.0588 g_tot -0.7 [-2.1  0.6] | C dlnZ0 +0.058 dlnZtot +0.0482 g_tot +3.9 [1.4 6.3] | D dlnZ0 +0.145 dlnZtot -0.0456 g_tot -0.7 [-2.2  0.7]
+   bracket k=2.0: A dlnZ0 +0.115 dlnZtot +0.0060 not identified | B dlnZ0 +0.079 dlnZtot +0.0638 g_tot -0.6 [-1.9  0.6] | C dlnZ0 +0.058 dlnZtot +0.0507 g_tot +3.7 [1.3 6. ] | D dlnZ0 +0.145 dlnZtot -0.0012 not identified
+   bracket k=4.0: A dlnZ0 +0.115 dlnZtot +0.0482 g_tot +4.1 [2.4 6. ] | B dlnZ0 +0.079 dlnZtot +0.0697 g_tot -0.6 [-1.7  0.5] | C dlnZ0 +0.058 dlnZtot +0.0536 g_tot +3.5 [1.2 5.7] | D dlnZ0 +0.145 dlnZtot +0.0547 g_tot +0.6 [-0.6  1.9]
+
+U5 A,B,C: fixed +1.08 ± 0.30; Q 16.2/2 (p 0.0003); chi2(g=1) 16.3/3 (p 0.0010)
+   PM: tau 1.72 g +1.35 normal [-0.75  3.44] HKSJ [-3.25  5.94] (q 1.00) HKSJ-trunc [-3.25  5.94]
+   DL: tau 1.54 g +1.32 normal [-0.58  3.22] HKSJ [-3.25  5.89] (q 1.20) HKSJ-trunc [-3.25  5.89]
+
+U5 A,B,C,D: fixed +0.56 ± 0.19; Q 21.2/3 (p 0.0001); chi2(g=1) 26.6/4 (p 0.0000)
+   PM: tau 1.45 g +1.00 normal [-0.53  2.54] HKSJ [-1.49  3.5 ] (q 1.00) HKSJ-trunc [-1.49  3.5 ]
+   DL: tau 1.07 g +0.93 normal [-0.25  2.11] HKSJ [-1.47  3.32] (q 1.57) HKSJ-trunc [-1.47  3.32]
+
+wrote results.json, canonical_draws.npz [258 s]
+EXIT 0
