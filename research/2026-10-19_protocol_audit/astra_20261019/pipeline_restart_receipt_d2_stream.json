@@ -1,0 +1,9 @@
+{
+ "old_pid": 95452,
+ "new_pid": 61732,
+ "recovery_resumed_pid": 33979,
+ "time_local": "2026-10-19 22:13:49",
+ "reason": "D2 (and B_T2s2) via bounded stream path; legacy per-folder extraction needed 100.6 GB free",
+ "reviewed_by": "workflow wf_514750b5-8c2 (no blocking issues)",
+ "tests": "astra_20261019 test_stream_features+test_disk_guard 21 passed"
+}

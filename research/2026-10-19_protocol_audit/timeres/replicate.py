@@ -14,6 +14,7 @@ Run:  nohup caffeinate -i ~/violin-bowing-boundaries/.venv-mac/bin/python replic
 """
 
 import csv
+import fcntl
 import gzip
 import json
 import math
@@ -34,6 +35,9 @@ FEATURES = HERE / "features"
 STATE = HERE / "replicate_state.json"
 SEVEN = REPO / ".local-tools/7zip-26.03/7zz"
 PY = REPO / ".venv-mac/bin/python"
+sys.path.insert(0, str(HERE.parent / "astra_20261019"))
+import disk_guard as DG
+ARCHIVE_FOLDER_BYTES = {}
 RECORD = {1: "17749110", 2: "17782542", 3: "17782552", 4: "17782565",
           5: "17782538", 6: "17795326", 7: "17822016", 8: "17822037"}
 # Priority: the A2 archive already on disk, the four string types, replicates of A and D,
@@ -48,11 +52,16 @@ QUEUE = [
     # tension-2 set next: string impedance changes -> decisive Z vs Z^2 test between Beigi and Schelleng
     (4, "2024-06-19_TypeA_T2_sample1.7z"), (4, "2024-06-13_TypeB_T2_sample1.7z"), (4, "2024-06-11_TypeC_T2_sample1.7z"),
     (5, "2024-06-17_TypeD_T2_sample1.7z"),
-    (2, "2024-04-22_TypeA_sample3.7z"), (3, "2024-04-24_TypeA_sample4.7z"), (3, "2024-04-26_TypeD_sample2.7z"),
+    (2, "2024-04-22_TypeA_sample3.7z"), (3, "2024-04-24_TypeA_sample4.7z"),
+    # 2026-10-19: high-force parts moved up (lift the 4 N ceiling of the upper boundary; frozen predictions exist)
+    (7, "HighBowForceRange_1.7z"), (8, "HighBowForceRange_2.7z"), (3, "2024-04-26_TypeD_sample2.7z"),
     (5, "2024-07-03_TypeB_T2_sample2.7z"),
-    (7, "HighBowForceRange_1.7z"), (8, "HighBowForceRange_2.7z"),
     (3, "2024-03-25_TypeA_sample1_coldwarm.7z"),
 ]
+# 2026-10-19 22h (Claude, user-approved): D2 waited 17:05-22:00 for 100.6 GB free to extract one 38.6 GB folder.
+# These archives use the bounded one-pass stream (astra_20261019/stream_features.py) instead, but only when their
+# listing passes stream_features.inventory (member order/size checks); otherwise the legacy folder path is kept.
+STREAM_ARCHIVES = {"2024-04-26_TypeD_sample2.7z", "2024-07-03_TypeB_T2_sample2.7z"}
 # Archives that must never be deleted by this script (someone else downloaded them).
 KEEP = {"2024-04-19_TypeA_sample2.7z": REPO / "data/raw/zenodo/17782542/2024-04-19_TypeA_sample2.7z"}
 WINDOWS_S = (0.1, 0.2, 0.4)
@@ -81,6 +90,22 @@ def free_gb() -> float:
     return shutil.disk_usage(Path.home()).free / 1e9
 
 
+def wait_for_budget(required_bytes: int, phase: str) -> None:
+    """Stay alive while blocked so the B1 recovery waiter does not start.
+
+    Recheck at each download/extraction boundary. Existing archives and companion
+    hard links already count against disk free space and are never deleted here.
+    """
+    last_log = 0.0
+    while shutil.disk_usage(Path.home()).free < required_bytes:
+        now = time.monotonic()
+        if now - last_log >= 300 or last_log == 0:
+            log(f"공간 대기 ({phase}): 필요 {required_bytes / 1e9:.2f} GB, "
+                f"현재 {free_gb():.2f} GB. 60 GB 보존 + 2 GB 여유; 파일 삭제 없음")
+            last_log = now
+        time.sleep(60)
+
+
 def archive_path(part: int, name: str) -> Path:
     return KEEP.get(name, DATA / "raw/zenodo" / RECORD[part] / name)
 
@@ -89,6 +114,21 @@ def download(part: int, name: str) -> Path:
     path = archive_path(part, name)
     if path.exists() and not Path(str(path) + ".part").exists():
         return path
+    # Exact metadata preflight: max-gib alone does not protect the 60 GB reserve.
+    sys.path.insert(0, str(REPO / "scripts"))
+    import zenodo_catalog as catalog
+    metadata = catalog.fetch_record(RECORD[part])
+    catalog.file_spec(metadata, name)  # checksum, exact filename and URL validation
+    catalog.save_manifest(RECORD[part], metadata, DATA / "manifests")
+    actual = DATA / "raw/zenodo" / str(metadata["id"]) / name
+    intermediate = Path(str(actual) + ".part")
+    if intermediate.is_symlink():
+        raise ValueError("Refusing symlink partial in disk budget")
+    stat = intermediate.stat() if intermediate.exists() else None
+    remaining = DG.remaining_download_bytes(metadata, name,
+        allocated_bytes=stat.st_blocks * 512 if stat else 0,
+        logical_bytes=stat.st_size if stat else 0)
+    wait_for_budget(remaining + DG.RESERVE_BYTES + DG.MARGIN_BYTES, f"다운로드 {name}")
     log(f"다운로드 시작 {name} (record {RECORD[part]})")
     subprocess.run([str(PY), str(REPO / "scripts/zenodo_catalog.py"), "download", "--record", RECORD[part],
                     "--file", name, "--max-gib", "40", "--connections", "16", "--retries", "12",
@@ -104,6 +144,8 @@ def download(part: int, name: str) -> Path:
 def folders_of(archive: Path) -> dict:
     """folder -> sorted trial numbers, from the archive listing."""
     listing = subprocess.run([str(SEVEN), "l", "-slt", str(archive)], capture_output=True, text=True, check=True).stdout
+    # Keep full folder paths; repeated leaf names (v1, v2, v3) are valid.
+    ARCHIVE_FOLDER_BYTES[str(archive.resolve())] = DG.parse_slt_listing(listing)
     folders: dict = {}
     for line in listing.splitlines():
         if not line.startswith("Path = "):
@@ -159,6 +201,9 @@ def process_folder(archive: Path, name: str, folder: str, trials: list[int], wri
     scratch = DATA / "extract" / name.replace(".7z", "")
     if scratch.exists():
         shutil.rmtree(scratch)
+    size = ARCHIVE_FOLDER_BYTES[str(archive.resolve())][folder]
+    wait_for_budget(size + DG.RESERVE_BYTES + DG.MARGIN_BYTES, f"추출 {folder}")
+    log(f"  공간 확인: 이 폴더 {size / 1e9:.2f} GB; 추출 후 예상 {free_gb() - size / 1e9:.2f} GB")
     log(f"  추출 {folder} ({len(trials)} 긋기) · 여유 {free_gb():.0f} GB")
     subprocess.run([str(SEVEN), "x", str(archive), f"-o{scratch}", f"-ir!{folder}/whole_*.csv",
                     f"-ir!{folder}/beta_*.csv", "-y", "-bso0", "-bsp0"], check=True)
@@ -172,6 +217,17 @@ def process_folder(archive: Path, name: str, folder: str, trials: list[int], wri
     shutil.rmtree(scratch)
     log(f"  {folder}: 창 {count}개 저장, 추출본 삭제")
     return count
+
+
+def stream_compatible(archive: Path) -> bool:
+    import stream_features
+    try:
+        listing = subprocess.run([str(SEVEN), "l", "-slt", str(archive)], capture_output=True, text=True, check=True).stdout
+        stream_features.inventory(listing)
+        return True
+    except ValueError as error:
+        log(f"{archive.name}: stream listing check failed ({error}); legacy folder extraction kept")
+        return False
 
 
 def main() -> None:
@@ -192,6 +248,29 @@ def main() -> None:
             entry["folders"] = {k: len(v) for k, v in folders.items()}
             save_state(state)
             out = FEATURES / name.replace(".7z", ".csv.gz")
+            highforce = name.startswith("HighBowForceRange_")
+            if highforce or (name in STREAM_ARCHIVES and stream_compatible(archive)):
+                import stream_features
+                if not highforce and out.exists() and not entry["folders_done"] and out.stat().st_size == 0:
+                    stale = out.with_name(out.name + ".stale_legacy_empty")
+                    out.rename(stale)
+                    log(f"{name}: empty legacy output moved aside to {stale.name}")
+                log(f"{name}: bounded one-pass stream; rechecking archive MD5")
+                integrity = stream_features.verify_archive(archive)
+                receipt = stream_features.run(archive, out, folders, log=log, integrity=integrity)
+                # A failed legacy companion cannot represent duplicate v1/v2/v3 leaves.
+                # Validated full-path ramp/blocks now replace it; original still exists.
+                released = stream_features.release_redundant_pin(archive, receipt) if highforce else False
+                if released:
+                    log(f"{name}: full-path metadata validated; redundant companion link released")
+                entry["folders_done"] = sorted(folders)
+                entry["status"] = "done"
+                entry["stream_receipt"] = str(HERE.parent / "astra_20261019/highforce_stream" / archive.stem / "receipt.json")
+                save_state(state)
+                if name not in KEEP:
+                    archive.unlink(missing_ok=True)
+                log(f"{name}: 완료 (single stream, metadata retained)" + ("" if highforce else " [STREAM_ARCHIVES]"))
+                continue
             mode = "at" if out.exists() and entry["folders_done"] else "wt"
             with gzip.open(out, mode, newline="") as handle:
                 writer = csv.DictWriter(handle, fieldnames=FIELDS, extrasaction="ignore")
@@ -218,4 +297,7 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    # A second launch exits before downloading, extracting, or touching state.
+    with (HERE / "replicate.instance.lock").open("a+") as instance_lock:
+        fcntl.flock(instance_lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        main()

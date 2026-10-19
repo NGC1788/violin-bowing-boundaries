@@ -1,0 +1,7 @@
+[2026-10-19 22:13:40] recover_B1 후보: 33979 33980  → STOP 33979
+[2026-10-19 22:13:41] 기존 replicate: 95452 
+[2026-10-19 22:13:44] 95452 남음? no / 95454 남음? no / zenodo 다운로드: 0
+[2026-10-19 22:13:44] D2 features 크기: 0 bytes
+[2026-10-19 22:13:56] 새 replicate(caffeinate 포함): 61732 61734 
+python3.1 61732
+[2026-10-19 22:14:05] recover_B1 33979 SIGCONT; pipeline 61732 holds replicate.instance.lock
