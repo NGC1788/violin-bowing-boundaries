@@ -1,0 +1,190 @@
+{
+ "onset": {
+  "n_cols_with_nonH": 1216,
+  "share_gt": {
+   "1": 1.0,
+   "2": 0.9991776315789473,
+   "4": 0.9120065789473685,
+   "8": 0.5024671052631579
+  },
+  "median": 8.0379493873019,
+  "q10": 4.130701832211209,
+  "sessions": {
+   "A1": {
+    "n_cols": 120,
+    "n_left_censored": 0,
+    "median_ratio": 12.487921337441204,
+    "share_gt8": 0.725
+   },
+   "A2": {
+    "n_cols": 120,
+    "n_left_censored": 1,
+    "median_ratio": 11.729317484398653,
+    "share_gt8": 0.6722689075630253
+   },
+   "A3": {
+    "n_cols": 120,
+    "n_left_censored": 8,
+    "median_ratio": 12.885489913479269,
+    "share_gt8": 0.7053571428571429
+   },
+   "A4": {
+    "n_cols": 120,
+    "n_left_censored": 21,
+    "median_ratio": 9.90348979472342,
+    "share_gt8": 0.6363636363636364
+   },
+   "B1": {
+    "n_cols": 120,
+    "n_left_censored": 22,
+    "median_ratio": 8.115550915906915,
+    "share_gt8": 0.5102040816326531
+   },
+   "C1": {
+    "n_cols": 120,
+    "n_left_censored": 27,
+    "median_ratio": 7.649538163510597,
+    "share_gt8": 0.4731182795698925
+   },
+   "D1": {
+    "n_cols": 120,
+    "n_left_censored": 35,
+    "median_ratio": 7.656250607272984,
+    "share_gt8": 0.4470588235294118
+   },
+   "D2": {
+    "n_cols": 120,
+    "n_left_censored": 5,
+    "median_ratio": 9.45414832958512,
+    "share_gt8": 0.5565217391304348
+   },
+   "A_T2": {
+    "n_cols": 120,
+    "n_left_censored": 32,
+    "median_ratio": 6.207754684632271,
+    "share_gt8": 0.2727272727272727
+   },
+   "B_T2s1": {
+    "n_cols": 120,
+    "n_left_censored": 15,
+    "median_ratio": 5.3181676811410235,
+    "share_gt8": 0.2761904761904762
+   },
+   "B_T2s2": {
+    "n_cols": 120,
+    "n_left_censored": 13,
+    "median_ratio": 7.3143449796301905,
+    "share_gt8": 0.4485981308411215
+   },
+   "C_T2": {
+    "n_cols": 120,
+    "n_left_censored": 45,
+    "median_ratio": 4.3479897386952135,
+    "share_gt8": 0.06666666666666667
+   }
+  }
+ },
+ "window": {
+  "n_cols_with_nonH": 1471,
+  "share_gt": {
+   "1": 0.9986403806934059,
+   "2": 0.981645139360979,
+   "4": 0.7131203263086335,
+   "8": 0.34262406526172673
+  },
+  "median": 5.6078275519799465,
+  "q10": 2.8793678817675192,
+  "sessions": {
+   "A1": {
+    "n_cols": 120,
+    "n_left_censored": 0,
+    "median_ratio": 11.008224245611231,
+    "share_gt8": 0.6666666666666666
+   },
+   "A2": {
+    "n_cols": 120,
+    "n_left_censored": 1,
+    "median_ratio": 9.277329786632269,
+    "share_gt8": 0.5630252100840336
+   },
+   "A3": {
+    "n_cols": 120,
+    "n_left_censored": 8,
+    "median_ratio": 9.880087049425182,
+    "share_gt8": 0.6071428571428571
+   },
+   "A4": {
+    "n_cols": 120,
+    "n_left_censored": 27,
+    "median_ratio": 7.873934784032042,
+    "share_gt8": 0.46236559139784944
+   },
+   "B1": {
+    "n_cols": 120,
+    "n_left_censored": 21,
+    "median_ratio": 5.670776419576278,
+    "share_gt8": 0.31313131313131315
+   },
+   "C1": {
+    "n_cols": 120,
+    "n_left_censored": 27,
+    "median_ratio": 5.29864757693001,
+    "share_gt8": 0.17204301075268819
+   },
+   "D1": {
+    "n_cols": 120,
+    "n_left_censored": 33,
+    "median_ratio": 6.090189737328335,
+    "share_gt8": 0.20689655172413793
+   },
+   "D2": {
+    "n_cols": 120,
+    "n_left_censored": 7,
+    "median_ratio": 6.8977481510614975,
+    "share_gt8": 0.46017699115044247
+   },
+   "A_T2": {
+    "n_cols": 120,
+    "n_left_censored": 32,
+    "median_ratio": 4.109995897293086,
+    "share_gt8": 0.11363636363636363
+   },
+   "B_T2s1": {
+    "n_cols": 120,
+    "n_left_censored": 19,
+    "median_ratio": 3.908451413201031,
+    "share_gt8": 0.15841584158415842
+   },
+   "B_T2s2": {
+    "n_cols": 120,
+    "n_left_censored": 14,
+    "median_ratio": 6.069583013715395,
+    "share_gt8": 0.3867924528301887
+   },
+   "B_T2r1": {
+    "n_cols": 120,
+    "n_left_censored": 46,
+    "median_ratio": 3.6058400255186136,
+    "share_gt8": 0.04054054054054054
+   },
+   "B_T2r2": {
+    "n_cols": 120,
+    "n_left_censored": 51,
+    "median_ratio": 4.121095214643051,
+    "share_gt8": 0.028985507246376812
+   },
+   "C_T2": {
+    "n_cols": 120,
+    "n_left_censored": 43,
+    "median_ratio": 3.1015547288039746,
+    "share_gt8": 0.025974025974025976
+   },
+   "D_T2": {
+    "n_cols": 120,
+    "n_left_censored": 0,
+    "median_ratio": 6.585536700872753,
+    "share_gt8": 0.4583333333333333
+   }
+  }
+ }
+}
