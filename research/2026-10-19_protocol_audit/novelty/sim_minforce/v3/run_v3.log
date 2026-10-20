@@ -1,0 +1,39 @@
+C0b β 0.02: F_min 0.4523678621174643 {'n_H': 9, 'n_classifier_only': 2, 'median_slip_frac_H': 0.02044989775051125}
+C0b β 0.03: F_min 0.1837330970368343 {'n_H': 12, 'n_classifier_only': 1, 'median_slip_frac_H': 0.03067484662576687}
+C0b β 0.05: F_min 0.07462477725259142 {'n_H': 15, 'n_classifier_only': 2, 'median_slip_frac_H': 0.05112474437627812}
+C0b β 0.08: F_min 0.030309494967487853 {'n_H': 17, 'n_classifier_only': 1, 'median_slip_frac_H': 0.081799591002045}
+C0b β 0.12: F_min 0.016622989661354698 {'n_H': 18, 'n_classifier_only': 1, 'median_slip_frac_H': 0.12269938650306748}
+C0b β 0.2: F_min 0.005 {'n_H': 20, 'n_classifier_only': 2, 'median_slip_frac_H': 0.20449897750511248}
+C0b β 0.1: F_min 0.016622989661354698 {'n_H': 18, 'n_classifier_only': 1, 'median_slip_frac_H': 0.10224948875255624}
+C1b β 0.02: F_min None {'n_H': 0, 'n_classifier_only': 0, 'median_slip_frac_H': None}
+C1b β 0.03: F_min None {'n_H': 0, 'n_classifier_only': 0, 'median_slip_frac_H': None}
+C1b β 0.05: F_min None {'n_H': 0, 'n_classifier_only': 0, 'median_slip_frac_H': None}
+C1b β 0.08: F_min None {'n_H': 1, 'n_classifier_only': 0, 'median_slip_frac_H': 0.07492331288343558}
+C1b β 0.12: F_min None {'n_H': 1, 'n_classifier_only': 1, 'median_slip_frac_H': 0.1191717791411043}
+C1b β 0.2: F_min None {'n_H': 1, 'n_classifier_only': 1, 'median_slip_frac_H': 0.20449897750511248}
+C1b β 0.1: F_min None {'n_H': 1, 'n_classifier_only': 1, 'median_slip_frac_H': 0.09519427402862986}
+C1b-flat β 0.02: F_min None {'n_H': 0, 'n_classifier_only': 0, 'median_slip_frac_H': None}
+C1b-flat β 0.03: F_min None {'n_H': 0, 'n_classifier_only': 0, 'median_slip_frac_H': None}
+C1b-flat β 0.05: F_min None {'n_H': 0, 'n_classifier_only': 0, 'median_slip_frac_H': None}
+C1b-flat β 0.08: F_min 3.702842346131212 {'n_H': 2, 'n_classifier_only': 0, 'median_slip_frac_H': 0.07271855828220858}
+C1b-flat β 0.12: F_min 2.0307929941884866 {'n_H': 2, 'n_classifier_only': 1, 'median_slip_frac_H': 0.11607873210633947}
+C1b-flat β 0.2: F_min None {'n_H': 1, 'n_classifier_only': 2, 'median_slip_frac_H': 0.20449897750511248}
+C1b-flat β 0.1: F_min 2.7422082880605054 {'n_H': 2, 'n_classifier_only': 0, 'median_slip_frac_H': 0.09368609406952966}
+{
+ "validation_pass": true,
+ "C0b_over_FS": 2.082197891744067,
+ "C0b_b_beta": -1.898640974335639,
+ "r": null,
+ "r_reading": null,
+ "Q_C1b": null,
+ "b_beta_C1b": null,
+ "b_beta_C1b_flat": null,
+ "measured": {
+  "Q_onset": 20.2,
+  "Q_window": 13.7,
+  "b_onset": -1.23,
+  "b_window": -1.54
+ }
+}
+speed {'fmin': {'0.05': None, '0.1': None, '0.2': None}, 'b_v': None} conv {'0.03': None, '0.12': None}
+FIR {'C1b': {'max_log_err_n_le_100': 0.315056114923571, 'max_log_err_n_le_30': 0.1864440644288678, 'dc_gain': 0.8285980123310797}, 'C1b-flat': {'max_log_err_n_le_100': 0.2980332852033463, 'max_log_err_n_le_30': 0.2980332852033463, 'dc_gain': 0.7417856084154593}}
