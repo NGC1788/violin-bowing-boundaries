@@ -34,3 +34,7 @@ b_β −0.97/−1.09. Speed is confounded with recording block (each speed is it
 Reading (post hoc, axis chosen after seeing the data): on the onset-force axis the sessions agree on F_min ∝ v^0.95 β^−1.2,
 far from Schelleng's v/β² and close to the simulated v/β form; the travel-affected window-force axis steepens the β
 exponent and doubles its between-session scatter. Speed remains confounded with recording block.
+
+## Robustness of the onset-axis result (onset_sensitivity.json; post hoc; 10 sessions with cached data, B_T2 s2 only in LOO)
+RE β exponent: t = 0.1 s and t = 0.3 s −1.25 [−1.39, −1.12] (SD 0.16); K = 3 −1.14 [−1.29, −0.99] (SD 0.22; interval reaches −1);
+leave-one-session-out mean −1.19…−1.25. The onset-axis β ≈ −1.1 to −1.3 is stable across these choices; none approaches −2.
