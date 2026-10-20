@@ -33,3 +33,13 @@ next to ω. Reported for upper and lower separately, with and without B_T2 s2 (�
 - ω ≥ τ (point) with the ω = 0 test rejecting → "session variation is at least as large as string variation".
 - ω ≫ |r1 − r2|/√2 → "same-day repeats understate session variability".
 Anything else is reported as found. No other groupings, references or rules are tried.
+
+## RESULTS (2026-10-20; run.log, results.json)
+Upper (vs strict cZv/β): τ_type 0.058 [0, 0.145] (p τ=0 0.13); ω_session 0.069 [0.04, 0.13] (p ω=0 < 0.001); same-day
+|r1 − r2|/√2 = 0.002. With B_T2 s2 (≤ 4 N): τ 0.065, ω 0.066 [0.04, 0.12].
+Lower (vs A1+A2 law): τ 0.114 [0, 0.32] (p 0.23); ω 0.158 [0.09, 0.30] (p < 0.001); same-day 0.127.
+A_T1 four samples: upper −0.100/−0.104/−0.066/−0.173, lower +0.115/−0.118/−0.196/−0.367.
+Reading per plan: ω ≥ τ (point) with ω = 0 rejected for both boundaries → "session (specimen + day) variation is at least
+as large as string-type variation"; for the upper boundary ω ≫ same-day yardstick. Specimen and day are confounded.
+Simulation check of reml() with this layout and these SEs (sim_check_reml.py, 200 reps each): recovers τ and ω (median
+0.057/0.064 for 0.06/0.07); false rejection of ω = 0 when ω = 0: 4 %; power at ω = 0.07: 0.82–0.83; ω CI coverage 0.93–0.98.

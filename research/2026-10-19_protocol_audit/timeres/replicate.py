@@ -61,7 +61,7 @@ QUEUE = [
 # 2026-10-19 22h (Claude, user-approved): D2 waited 17:05-22:00 for 100.6 GB free to extract one 38.6 GB folder.
 # These archives use the bounded one-pass stream (astra_20261019/stream_features.py) instead, but only when their
 # listing passes stream_features.inventory (member order/size checks); otherwise the legacy folder path is kept.
-STREAM_ARCHIVES = {"2024-04-26_TypeD_sample2.7z", "2024-07-03_TypeB_T2_sample2.7z"}
+STREAM_ARCHIVES = {"2024-04-26_TypeD_sample2.7z", "2024-07-03_TypeB_T2_sample2.7z", "2024-03-25_TypeA_sample1_coldwarm.7z"}  # coldwarm 2026-10-20 (disk stall)
 # Archives that must never be deleted by this script (someone else downloaded them).
 KEEP = {"2024-04-19_TypeA_sample2.7z": REPO / "data/raw/zenodo/17782542/2024-04-19_TypeA_sample2.7z"}
 WINDOWS_S = (0.1, 0.2, 0.4)
@@ -255,6 +255,14 @@ def main() -> None:
                     stale = out.with_name(out.name + ".stale_legacy_empty")
                     out.rename(stale)
                     log(f"{name}: empty legacy output moved aside to {stale.name}")
+                elif not highforce and out.exists() and entry["folders_done"]:
+                    # 2026-10-20: partial legacy output (some folders done) is kept aside, never deleted; the stream redoes all folders
+                    stale = out.with_name(out.name + f".legacy_partial_{len(entry['folders_done'])}folders")
+                    out.rename(stale)
+                    entry["legacy_partial_output"] = str(stale)
+                    entry["folders_done"] = []
+                    save_state(state)
+                    log(f"{name}: partial legacy output moved aside to {stale.name}; stream will process every folder")
                 log(f"{name}: bounded one-pass stream; rechecking archive MD5")
                 integrity = stream_features.verify_archive(archive)
                 receipt = stream_features.run(archive, out, folders, log=log, integrity=integrity)

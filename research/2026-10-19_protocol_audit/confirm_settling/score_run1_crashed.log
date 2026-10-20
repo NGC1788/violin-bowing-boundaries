@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/jeongjihoon/violin-rne/confirm_settling/score_settling.py", line 102, in <module>
+    main()
+  File "/Users/jeongjihoon/violin-rne/confirm_settling/score_settling.py", line 93, in main
+    res = dict(primary={w: diff(cw["COLD"], cw["WARM"], w) for w in ("upper", "lower")},
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jeongjihoon/violin-rne/confirm_settling/score_settling.py", line 93, in <dictcomp>
+    res = dict(primary={w: diff(cw["COLD"], cw["WARM"], w) for w in ("upper", "lower")},
+                                            ~~^^^^^^^^
+KeyError: 'WARM'

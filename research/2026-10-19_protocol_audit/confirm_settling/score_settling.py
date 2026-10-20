@@ -51,7 +51,8 @@ def coldwarm_rows(V):
             else:
                 lower, upper = (f[-1], np.inf), (np.nan, np.nan)
             rows.append(dict(lv=np.log(v), lb=float(np.median(lbm[c])), lower=lower, upper=upper))
-        out["COLD" if "cold" in folder else "WARM"] = rows
+        leaf = folder.rstrip("/").split("/")[-2]  # e.g. 2024-03-25_cold / 2024-03-26_warm (the archive name itself contains "coldwarm")
+        out["COLD" if leaf.endswith("_cold") else "WARM" if leaf.endswith("_warm") else leaf] = rows
     return out
 
 
@@ -83,11 +84,11 @@ def main():
         assert not STREAM.exists(), "coldwarm already processed: cannot freeze as a prospective test"
         write_excl(HERE / "FREEZE_RECEIPT.json", dict(frozen_kst=dt.datetime.now(KST).isoformat(), sha256={str(p): sha(p) for p in CODE},
                                                       coldwarm_processed_at_freeze=False)); print("frozen"); return
-    rec = json.loads((HERE / "FREEZE_RECEIPT.json").read_text())
+    rec = json.loads((HERE / "FREEZE_RECEIPT_run2.json").read_text())
     for p in CODE:
         assert sha(p) == rec["sha256"][str(p)], ("changed", p)
     sr = json.loads((STREAM / "receipt.json").read_text()); assert sr["status"] == "validated" and sha(STREAM / "features.csv.gz") == sr["outputs"]["features.csv.gz"]
-    write_excl(HERE / "SCORE_CLAIM.json", dict(claimed_kst=dt.datetime.now(KST).isoformat(), receipt_sha256=sha(HERE / "FREEZE_RECEIPT.json")))
+    write_excl(HERE / "SCORE_CLAIM.json", dict(claimed_kst=dt.datetime.now(KST).isoformat(), receipt_sha256=sha(HERE / "FREEZE_RECEIPT_run2.json")))
     sys.path.insert(0, str(HOME / "violin-rne/claude_extra")); import verify_astra_boundaries as V
     cw = coldwarm_rows(V); main_v2 = a1_main_v2()
     res = dict(primary={w: diff(cw["COLD"], cw["WARM"], w) for w in ("upper", "lower")},

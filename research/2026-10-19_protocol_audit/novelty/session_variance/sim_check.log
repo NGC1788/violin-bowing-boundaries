@@ -1,0 +1,3 @@
+true tau 0.06 omega 0.07: median tau 0.057 omega 0.064 | P(reject omega=0) 0.83 | omega CI coverage 0.93
+true tau 0.0 omega 0.07: median tau 0.000 omega 0.058 | P(reject omega=0) 0.82 | omega CI coverage 0.93
+true tau 0.1 omega 0.0: median tau 0.096 omega 0.000 | P(reject omega=0) 0.04 | omega CI coverage 0.98

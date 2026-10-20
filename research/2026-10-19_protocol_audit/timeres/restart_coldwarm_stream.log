@@ -1,0 +1,6 @@
+[2026-10-20 09:32:09] recover_B1 33979 STOP: Ts  
+[2026-10-20 09:32:09] old replicate: 61732 61734 
+[2026-10-20 09:32:12] 61732 alive? no / 61734 alive? no / downloads 0
+[2026-10-20 09:32:12] coldwarm legacy output size: 8475033
+[2026-10-20 09:32:23] new replicate holding lock: 77736
+[2026-10-20 09:32:27] recover_B1 33979 CONT; pipeline 77736 holds the lock

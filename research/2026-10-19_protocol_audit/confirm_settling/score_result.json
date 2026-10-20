@@ -1,0 +1,72 @@
+{
+ "primary": {
+  "upper": {
+   "level_A": -0.0416985886301792,
+   "level_B": -0.08275403641886668,
+   "diff": -0.04105544778868748,
+   "ci": [
+    -0.09862740360021943,
+    0.013503291137622766
+   ],
+   "threshold": 0.035,
+   "decision": "not decided",
+   "n_keys": 29
+  },
+  "lower": {
+   "level_A": -0.32264240464289284,
+   "level_B": -0.06670126346313872,
+   "diff": 0.25594114117975414,
+   "ci": [
+    0.002561484528264093,
+    0.5422453766298295
+   ],
+   "threshold": 0.079,
+   "decision": "matters",
+   "n_keys": 29
+  }
+ },
+ "secondary_day": {
+  "upper": {
+   "level_A": -0.08275403641886668,
+   "level_B": -0.1290311272321982,
+   "diff": -0.04627709081333152,
+   "ci": [
+    -0.13926398646509575,
+    0.026424699469643688
+   ],
+   "threshold": 0.035,
+   "decision": "not decided",
+   "n_keys": 33
+  },
+  "lower": {
+   "level_A": -0.06670126346313872,
+   "level_B": 0.04221474018032305,
+   "diff": 0.10891600364346177,
+   "ci": [
+    -0.0012231155729198705,
+    0.2732209113222078
+   ],
+   "threshold": 0.079,
+   "decision": "not decided",
+   "n_keys": 33
+  }
+ },
+ "counts": {
+  "COLD": {
+   "upper_finite": 18.0,
+   "lower_finite": 23.0,
+   "no_band": 0
+  },
+  "WARM": {
+   "upper_finite": 18.0,
+   "lower_finite": 38.0,
+   "no_band": 0
+  },
+  "A1main_v2": {
+   "upper_finite": 18.0,
+   "lower_finite": 40.0,
+   "no_band": 0
+  }
+ },
+ "finished_kst": "2026-10-20T09:47:33.768846+09:00"
+}

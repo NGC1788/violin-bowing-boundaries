@@ -1,0 +1,140 @@
+{
+ "stem": "2024-04-22_TypeA_sample3",
+ "frozen": "FROZEN_v1.json",
+ "frozen_sha256": "374b885d5f970cd8a44bbd3b4e499ed0881bed27cfb99950e500b723f75555eb",
+ "frozen_created": "2026-10-19T10:25:51.998457+09:00",
+ "group": "A T1",
+ "Z": 1.0592,
+ "scored_kst": "2026-10-20T09:25:19.275323+09:00",
+ "n_columns": 110,
+ "n_finite": 57,
+ "n_right": 53,
+ "n_left": 0,
+ "models": {
+  "S1_strict": {
+   "level_error": -0.06643432598428718,
+   "level_within_pi90": null,
+   "nll_per_col": 1.4728217859819956,
+   "med_abs_finite": 0.1685298462005419,
+   "hit": 0.6454545454545455,
+   "e_v_pred": 0.999999999999997,
+   "e_beta_pred": -0.9999999999999991,
+   "e_v_err": 0.23094709035465644,
+   "e_beta_err": 0.18915594633518595
+  },
+  "S0_dmu_steady": {
+   "level_error": -0.9742700697890317,
+   "level_within_pi90": null,
+   "nll_per_col": 2.0665389408617387,
+   "med_abs_finite": 1.025311479038765,
+   "hit": 0.4818181818181818,
+   "e_v_pred": 0.999999999999995,
+   "e_beta_pred": -0.9999999999999978,
+   "e_v_err": 0.23094709035465444,
+   "e_beta_err": 0.18915594633518729
+  },
+  "T0_peak": {
+   "level_error": -0.7599869003737337,
+   "level_within_pi90": null,
+   "nll_per_col": 1.9857084392132063,
+   "med_abs_finite": 0.836405124740246,
+   "hit": 0.4818181818181818,
+   "e_v_pred": 0.6766325692883528,
+   "e_beta_pred": -0.8286451094244687,
+   "e_v_err": -0.09242034035698776,
+   "e_beta_err": 0.3605108369107164
+  },
+  "T0_break": {
+   "level_error": 0.16653304888059298,
+   "level_within_pi90": null,
+   "nll_per_col": 1.5858176332688823,
+   "med_abs_finite": 0.16909317118800649,
+   "hit": 0.5727272727272728,
+   "e_v_pred": 0.830932725735482,
+   "e_beta_pred": -0.9111609774212188,
+   "e_v_err": 0.06187981609014148,
+   "e_beta_err": 0.27799496891396624
+  },
+  "T1k_peak": {
+   "level_error": -0.08141930117757167,
+   "level_within_pi90": null,
+   "nll_per_col": 1.5501315956948925,
+   "med_abs_finite": 0.21540015769849763,
+   "hit": 0.6363636363636364,
+   "e_v_pred": 0.5934589096108294,
+   "e_beta_pred": -0.7838717014631768,
+   "e_v_err": -0.1755940000345112,
+   "e_beta_err": 0.4052842448720083
+  },
+  "T1k_break": {
+   "level_error": -0.067544420498994,
+   "level_within_pi90": null,
+   "nll_per_col": 1.4450785590954764,
+   "med_abs_finite": 0.1888098094563384,
+   "hit": 0.6363636363636364,
+   "e_v_pred": 0.8406559542118881,
+   "e_beta_pred": -0.9163224667684188,
+   "e_v_err": 0.07160304456654754,
+   "e_beta_err": 0.2728334795667663
+  },
+  "T1mu": {
+   "level_error": -0.06654986643605035,
+   "level_within_pi90": null,
+   "nll_per_col": 1.447953556796556,
+   "med_abs_finite": 0.18845510423126838,
+   "hit": 0.6363636363636364,
+   "e_v_pred": 0.7999226217911328,
+   "e_beta_pred": -0.8946639605750524,
+   "e_v_err": 0.03086971214579226,
+   "e_beta_err": 0.2944919857601327
+  },
+  "T2_mu_k": {
+   "level_error": -0.06786208212943601,
+   "level_within_pi90": null,
+   "nll_per_col": 1.4458414898673668,
+   "med_abs_finite": 0.19232430116607135,
+   "hit": 0.6363636363636364,
+   "e_v_pred": 0.8247643495732603,
+   "e_beta_pred": -0.9078837122463055,
+   "e_v_err": 0.055711439927919715,
+   "e_beta_err": 0.2812722340888796
+  },
+  "E3_free_Z": {
+   "level_error": -0.06358486861470475,
+   "level_within_pi90": null,
+   "nll_per_col": 1.3481719676003119,
+   "med_abs_finite": 0.13459497495862838,
+   "hit": 0.7090909090909091,
+   "e_v_pred": 0.6980126836200641,
+   "e_beta_pred": -1.0645229375480403,
+   "e_v_err": -0.07104022602527649,
+   "e_beta_err": 0.12463300878714478
+  }
+ },
+ "observed": {
+  "e_v": 0.7690529096453406,
+  "e_v_ci": [
+   0.6702057203621306,
+   0.8614490293571699
+  ],
+  "e_beta": -1.189155946335185,
+  "e_beta_ci": [
+   -1.3033250465238513,
+   -1.0744328285653506
+  ],
+  "level_A": 0.0404666578364858
+ },
+ "verdict": {
+  "T1k_break_vs_S1_level": "not distinguishable",
+  "T1k_break_vs_S1_nll": -0.0277432268865192,
+  "T1mu_vs_S1_level": "not distinguishable",
+  "T1mu_vs_S1_nll": -0.024868229185439628,
+  "T1k_peak_vs_S1_level": "not distinguishable",
+  "T1k_peak_vs_S1_nll": 0.0773098097128968,
+  "beta_exponent_zone": "H_steep",
+  "beta_exponent_ci_zones": [
+   "H_steep"
+  ],
+  "beta_decidable": true
+ }
+}
