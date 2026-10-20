@@ -27,3 +27,8 @@ work/
 *.zip
 *.hwp
 *.hwpx
+
+# derived caches from research snapshots
+research/**/*.pkl
+research/**/*.npz
+research/**/*.npy
