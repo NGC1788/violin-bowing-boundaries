@@ -29,3 +29,24 @@ mounting and the end of the play-in, not between day 2 and day 3. The dataset pa
 differences for the same comparison. One string and one speed: this is a single prospective observation, not a law,
 and settling is confounded with everything else that changed between 03-25 and 03-26 (rosin state, room conditions,
 force calibration).
+
+## Adversarial verification (workflow wf_7f5846d0-4a8, independent re-run; post hoc) — supersedes the "Reading" above
+- Reproduced exactly. **Erratum:** the bootstrap paired β columns by round(log β, 2), which matched only 29 of 40 columns
+  (cold/warm β differ by 0.0005–0.0066 in log). Index pairing: warm − cold lower +0.256 [+0.071, +0.466] (frozen decision
+  unchanged: "matters"); main − warm lower +0.109 [+0.002, +0.229] (would read "matters"); upper unchanged (not decided).
+  The frozen outputs are kept as computed.
+- Direction supported: 19 vs 6 β columns with non-overlapping intervals; Helmholtz fraction at 0.30–0.60 N 0.50 (cold) →
+  0.29 (warm). Classifier thresholds cannot explain it (f0 reference and min_amplitude cannot flip a Helmholtz label at
+  all; periodicity thresholds only flip windows above 1 N).
+- Size NOT established: 17 of 40 cold lower boundaries are left-censored, so the cold level is a censored-normal
+  extrapolation (cold high-β half −1.13). Complete case +0.10 [−0.04, +0.26]; onset-force axis +0.12 [+0.02, +0.22];
+  t = 0.3 s +0.09 [−0.16, +0.36]; column-wise sign tests not significant on any physical axis; adding −0.05 N to warm forces
+  removes it (warm has 31 negative-force windows, which argues for the opposite correction). The floor-matched check did
+  not remove the cold censoring, so "not a censoring artefact" was overstated.
+- Corrected reading: for this one string the minimum-force boundary probably moved up during play-in, by roughly
+  +0.1 to +0.3 ln; the shift is confounded with the changed elevation-to-force mapping, with β/time order inside each
+  session and with the force zero offset. The upper boundary showed no change in any variant.
+- Prior art (prior-art agent): Lampis, Mayer & Chatziioannou, JASA-EL 4, 113201 (2024) saw a string's transient playable
+  region change after remounting one month later; Schoonderwaldt et al. 2008 §3.6 found the minimum force ≈20 % lower in
+  a diagram repeated five months later. A controlled new-vs-played-in comparison of steady-state F_min/F_max with a
+  bowing machine was not found.

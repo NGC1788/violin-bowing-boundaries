@@ -1,0 +1,21 @@
+(a) complete-case (23 cols finite in both) warm-cold lower level +0.103 CI [-0.044, 0.262]
+(b) per-column warm-cold intervals: surely up 19, surely down 6, straddle 0 15; median shift bounded in [-0.024, +0.629]
+(c) add constant c (N) to every WARM window force (sensor zero offset sensitivity), measured K2 t0.2
+    windows with negative measured force at t=0.2: cold 0 warm 31 main 69
+    c=-0.05: +0.107 [-0.123,+0.325] not decided
+    c=+0.00: +0.256 [+0.067,+0.463] matters
+    c=+0.03: +0.326 [+0.141,+0.534] matters
+    c=+0.05: +0.368 [+0.187,+0.574] matters
+    c=+0.08: +0.425 [+0.249,+0.629] matters
+    c=+0.10: +0.461 [+0.286,+0.663] matters
+    c=+0.15: +0.542 [+0.363,+0.754] matters
+    COLD finite lower-boundary upper edge (N): median 0.862 IQR [0.642, 1.665]
+    WARM finite lower-boundary upper edge (N): median 0.646 IQR [0.359, 1.181]
+    MAIN finite lower-boundary upper edge (N): median 0.615 IQR [0.433, 1.219]
+(d) min_amp_x2   helmholtz-label flips {'COLD': 0, 'WARM': 0} -> +0.256 [+0.067,+0.463] matters
+(d) min_amp_x0.5 helmholtz-label flips {'COLD': 0, 'WARM': 0} -> +0.256 [+0.067,+0.463] matters
+(d) min_per_0.85 helmholtz-label flips {'COLD': 11, 'WARM': 6} -> +0.256 [+0.067,+0.463] matters
+(d) min_per_0.9  helmholtz-label flips {'COLD': 22, 'WARM': 20} -> +0.256 [+0.067,+0.463] matters
+(d) f0 ref 88.3: helmholtz flips {'COLD': 0, 'WARM': 0} (subharmonic gate = f0 < 0.75*ref)
+(d) f0 ref 107.9: helmholtz flips {'COLD': 0, 'WARM': 0} (subharmonic gate = f0 < 0.75*ref)
+(d) f0 ref 130.0: helmholtz flips {'COLD': 78, 'WARM': 62} (subharmonic gate = f0 < 0.75*ref)

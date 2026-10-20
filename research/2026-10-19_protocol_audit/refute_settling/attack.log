@@ -1,0 +1,64 @@
+[0] reproduce frozen: lower +0.256 CI [0.002561484528264093, 0.5422453766298295] n_keys 29 (expected +0.256 [+0.003,+0.542], 29)
+    rounded-lb keys: cold 40 warm 40 shared 29 -> bootstrap resamples only shared keys; point uses all 40
+    per-column log-beta offset warm-cold: median +0.0019, range [+0.0005,+0.0066]
+    index-paired bootstrap (lower): +0.256 [+0.071,+0.466] matters
+    index-paired bootstrap (upper): -0.041 [-0.108,+0.017] not decided
+    index-paired main-warm lower: +0.109 [+0.002,+0.229] matters
+    finite lower cols: cold 23 warm 38 main 40; left-censored: cold 17 warm 2 main 0
+[1] classifier: windows near the lower boundary (t=0.2)
+    COLD: near n=134 amp [0.634, 0.911, 1.255] per [0.945, 0.946, 0.947] f0 [98.108, 98.163, 98.238] fpp {2: 58, 1: 76}
+        3 strokes below boundary labels {'multiple_slip': 54, 'helmholtz': 11} | helmholtz f0 median 98.09 amp 0.643 per 0.946 | near: amp<min_amp&per>=0.8 4, below with per in [0.75,0.8) 0, f0<0.75*ref 0
+    WARM: near n=228 amp [0.318, 0.585, 0.986] per [0.94, 0.945, 0.947] f0 [97.957, 98.034, 98.115] fpp {2: 101, 1: 122, 3: 4, 4: 1}
+        3 strokes below boundary labels {'multiple_slip': 100, 'helmholtz': 14} | helmholtz f0 median 97.96 amp 0.655 per 0.944 | near: amp<min_amp&per>=0.8 78, below with per in [0.75,0.8) 0, f0<0.75*ref 0
+    MAIN: near n=240 amp [0.323, 0.588, 0.966] per [0.938, 0.946, 0.947] f0 [98.067, 98.123, 98.179] fpp {2: 97, 1: 132, 3: 6, 4: 3, 5: 1, 6: 1}
+        3 strokes below boundary labels {'multiple_slip': 102, 'helmholtz': 18} | helmholtz f0 median 98.09 amp 0.733 per 0.946 | near: amp<min_amp&per>=0.8 81, below with per in [0.75,0.8) 0, f0<0.75*ref 0
+    common force band 0.30-0.60 N (t=0.2), all windows:
+      COLD: n 773 helmholtz frac 0.495 labels {'multiple_slip': 390, 'helmholtz': 383} amp med 0.470 per med 0.945 f0 med 98.11
+      WARM: n 411 helmholtz frac 0.285 labels {'multiple_slip': 294, 'helmholtz': 117} amp med 0.346 per med 0.942 f0 med 98.04
+      MAIN: n 295 helmholtz frac 0.342 labels {'helmholtz': 101, 'multiple_slip': 194} amp med 0.383 per med 0.943 f0 med 98.10
+    sens f0_ref_own_session  : label flips {'COLD': 0, 'WARM': 0} | lower warm-cold +0.256 [+0.063,+0.466] matters | finite (23, 38)
+    sens min_amp_scaled      : label flips {'COLD': 0, 'WARM': 0} | lower warm-cold +0.256 [+0.063,+0.466] matters | finite (23, 38)
+    sens min_amp_x2          : label flips {'COLD': 83, 'WARM': 64} | lower warm-cold +0.256 [+0.063,+0.466] matters | finite (23, 38)
+    sens min_per_0.75        : label flips {'COLD': 15, 'WARM': 10} | lower warm-cold +0.256 [+0.063,+0.466] matters | finite (23, 38)
+    sens min_per_0.85        : label flips {'COLD': 22, 'WARM': 26} | lower warm-cold +0.256 [+0.063,+0.466] matters | finite (23, 38)
+[2/3] axis, K, t (index-paired bootstrap B=1000; frozen-style rounded-lb bootstrap in brackets)
+    measured K2 t0.1: lower +0.329 [+0.135,+0.556] matters | upper -0.007 [-0.073,+0.054] not decided | finite lower 23/39 left-cens 17/1
+    measured K2 t0.2: lower +0.256 [+0.063,+0.466] matters | upper -0.041 [-0.112,+0.016] not decided | finite lower 23/38 left-cens 17/2
+    measured K2 t0.3: lower +0.087 [-0.159,+0.355] not decided | upper -0.027 [-0.127,+0.063] not decided | finite lower 21/37 left-cens 19/3
+    measured K3 t0.1: lower +0.306 [+0.102,+0.525] matters | upper -0.027 [-0.112,+0.064] not decided | finite lower 26/39 left-cens 14/1
+    measured K3 t0.2: lower +0.301 [+0.109,+0.527] matters | upper -0.014 [-0.093,+0.067] not decided | finite lower 23/39 left-cens 17/1
+    measured K3 t0.3: lower +0.263 [+0.078,+0.478] matters | upper -0.019 [-0.108,+0.067] not decided | finite lower 22/39 left-cens 18/1
+    onset    K2 t0.1: lower +0.148 [+0.038,+0.262] matters | upper -0.012 [-0.075,+0.044] not decided | finite lower 24/38 left-cens 16/2
+    onset    K2 t0.2: lower +0.119 [+0.015,+0.218] matters | upper -0.042 [-0.107,+0.011] not decided | finite lower 23/38 left-cens 17/2
+    onset    K2 t0.3: lower +0.079 [-0.021,+0.177] not decided | upper -0.030 [-0.128,+0.053] not decided | finite lower 21/38 left-cens 19/2
+    onset    K3 t0.1: lower +0.197 [+0.073,+0.330] matters | upper -0.034 [-0.120,+0.052] not decided | finite lower 24/39 left-cens 16/1
+    onset    K3 t0.2: lower +0.172 [+0.069,+0.276] matters | upper -0.020 [-0.095,+0.055] not decided | finite lower 23/39 left-cens 17/1
+    onset    K3 t0.3: lower +0.144 [+0.059,+0.233] matters | upper -0.023 [-0.107,+0.058] not decided | finite lower 21/39 left-cens 19/1
+    nominal  K2 t0.1: lower +1.295 [+0.831,+1.819] matters | upper +0.142 [+0.078,+0.197] matters | finite lower 23/38 left-cens 17/2
+    nominal  K2 t0.2: lower +1.267 [+0.838,+1.777] matters | upper +0.112 [+0.044,+0.169] matters | finite lower 23/39 left-cens 17/1
+    nominal  K2 t0.3: lower +1.197 [+0.819,+1.706] matters | upper +0.115 [+0.028,+0.189] matters | finite lower 22/39 left-cens 18/1
+    nominal  K3 t0.1: lower +1.199 [+0.786,+1.678] matters | upper +0.124 [+0.047,+0.209] matters | finite lower 25/38 left-cens 15/2
+    nominal  K3 t0.2: lower +1.258 [+0.870,+1.744] matters | upper +0.139 [+0.068,+0.216] matters | finite lower 24/39 left-cens 16/1
+    nominal  K3 t0.3: lower +1.258 [+0.863,+1.783] matters | upper +0.130 [+0.046,+0.209] matters | finite lower 22/39 left-cens 18/1
+    floor (measured) COLD: median 0.290 N
+    floor (measured) WARM: median 0.038 N
+    floor (measured) MAIN: median 0.084 N
+    floor (onset) COLD: median 0.425 N
+    floor (onset) WARM: median 0.109 N
+    floor (onset) MAIN: median 0.095 N
+    onset axis, floor-matched: +0.177 [+0.080,+0.279] matters
+[4] column-wise lower shifts (midpoints of finite intervals)
+    measured_K2_t0.2  : n 23 up 15 down 8 median +0.037 sign p 0.210 | cold-censored cols: warm finite above cold floor 9, below 5
+    onset_K2_t0.2     : n 23 up 13 down 10 median +0.081 sign p 0.678 | cold-censored cols: warm finite above cold floor 6, below 8
+    nominal_K2_t0.2   : n 23 up 22 down 1 median +0.376 sign p 0.000 | cold-censored cols: warm finite above cold floor 16, below 0
+    measured_K3_t0.2  : n 23 up 15 down 8 median +0.027 sign p 0.210 | cold-censored cols: warm finite above cold floor 10, below 6
+    measured_K2_t0.1  : n 23 up 15 down 8 median +0.033 sign p 0.210 | cold-censored cols: warm finite above cold floor 12, below 4
+    measured_K2_t0.3  : n 21 up 12 down 9 median +0.049 sign p 0.664 | cold-censored cols: warm finite above cold floor 9, below 7
+[5] within-session drift (column index = time order; strokes ascend in force within column)
+    COLD: resid-vs-time rho -0.49 (p 0.018, n 23) | floor force first10/last10 cols 0.182/0.319 N (rho +0.48) | level 1st/2nd half (time) -0.115/-1.126
+    WARM: resid-vs-time rho -0.35 (p 0.031, n 38) | floor force first10/last10 cols -0.042/0.070 N (rho +0.77) | level 1st/2nd half (time) -0.011/-0.125
+    MAIN: resid-vs-time rho -0.15 (p 0.344, n 40) | floor force first10/last10 cols 0.093/-0.035 N (rho -0.78) | level 1st/2nd half (time) +0.119/-0.035
+    warm[first half] - cold[first half] lower level: +0.104 (different beta columns when halves differ)
+    warm[second half] - cold[second half] lower level: +1.001 (different beta columns when halves differ)
+    warm[first half] - cold[second half] lower level: +1.115 (different beta columns when halves differ)
+written results.json

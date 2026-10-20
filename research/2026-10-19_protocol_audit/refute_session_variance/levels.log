@@ -1,0 +1,67 @@
+U_S1 A1 -0.100 se 0.035 block5 0.077
+U_S1 A2 -0.104 se 0.034 block5 0.075
+U_S1 A3 -0.066 se 0.034 block5 0.069
+U_S1 A4 -0.173 se 0.036 block5 0.062
+U_S1 B1 +0.139 se 0.031 block5 0.077
+U_S1 C1 -0.109 se 0.041 block5 0.074
+U_S1 D1 +0.074 se 0.019 block5 0.033
+U_S1 D2 -0.126 se 0.020 block5 0.039
+U_S1 A_T2 -0.013 se 0.054 block5 0.147
+U_S1 B_T2s1 +0.072 se 0.045 block5 0.091
+U_S1 B_T2r1 +0.028 se 0.040 block5 0.106
+U_S1 B_T2r2 +0.025 se 0.034 block5 0.092
+U_S1 C_T2 +0.032 se 0.062 block5 0.177
+U_S1 D_T2 -0.022 se 0.043 block5 0.137
+U_E3 A1 -0.100 se 0.023
+U_E3 A2 -0.105 se 0.023
+U_E3 A3 -0.064 se 0.026
+U_E3 A4 -0.170 se 0.031
+U_E3 B1 +0.153 se 0.030
+U_E3 C1 -0.099 se 0.036
+U_E3 D1 +0.085 se 0.016
+U_E3 D2 -0.114 se 0.013
+U_E3 A_T2 -0.020 se 0.043
+U_E3 B_T2s1 +0.054 se 0.040
+U_E3 B_T2r1 +0.019 se 0.035
+U_E3 B_T2r2 +0.026 se 0.030
+U_E3 C_T2 +0.031 se 0.051
+U_E3 D_T2 -0.027 se 0.032
+L_A12 A1 +0.115 se 0.030 block5 0.046
+L_A12 A2 -0.118 se 0.048 block5 0.073
+L_A12 A3 -0.197 se 0.044 block5 0.071
+L_A12 A4 -0.367 se 0.051 block5 0.102
+L_A12 B1 -0.357 se 0.079 block5 0.161
+L_A12 C1 -0.561 se 0.064 block5 0.138
+L_A12 D1 -0.248 se 0.065 block5 0.140
+L_A12 D2 -0.150 se 0.036 block5 0.058
+L_A12 A_T2 -0.539 se 0.094 block5 0.232
+L_A12 B_T2s1 -0.260 se 0.083 block5 0.195
+L_A12 B_T2r1 -0.318 se 0.102 block5 0.234
+L_A12 B_T2r2 -0.139 se 0.084 block5 0.183
+L_A12 C_T2 -0.556 se 0.072 block5 0.173
+L_A12 D_T2 -0.118 se 0.067 block5 0.104
+L_c02 A1 +0.095 se 0.030
+L_c02 A2 -0.106 se 0.045
+L_c02 A3 -0.176 se 0.040
+L_c02 A4 -0.380 se 0.055
+L_c02 B1 -0.284 se 0.070
+L_c02 C1 -0.544 se 0.064
+L_c02 D1 -0.280 se 0.074
+L_c02 D2 -0.159 se 0.039
+L_c02 A_T2 -0.420 se 0.076
+L_c02 B_T2s1 -0.151 se 0.072
+L_c02 B_T2r1 -0.289 se 0.100
+L_c02 B_T2r2 -0.155 se 0.086
+L_c02 C_T2 -0.577 se 0.080
+L_c02 D_T2 -0.110 se 0.061
+L_onset A1 +0.048 se 0.026
+L_onset A2 -0.049 se 0.031
+L_onset A3 -0.117 se 0.028
+L_onset A4 -0.194 se 0.032
+L_onset C1 -0.295 se 0.035
+L_onset D1 -0.121 se 0.047
+L_onset D2 -0.071 se 0.027
+L_onset A_T2 -0.189 se 0.047
+L_onset B_T2s1 -0.068 se 0.055
+L_onset C_T2 -0.275 se 0.043
+L_onset D_T2 -0.071 se 0.054

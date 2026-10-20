@@ -1,0 +1,146 @@
+== Claim reproduction and alternative references / SEs
+U_S1 (claim)                       n13 REML tau 0.058 [0.000,0.145] p0.132 | omega 0.069 [0.040,0.130] p0.0000 | MoM tau 0.043 omega 0.066 
+U_S1 block5 SE                     n13 REML tau 0.046 [0.000,0.160] p0.282 | omega 0.070 [0.030,0.145] p0.0015 | MoM tau 0.000 omega 0.029 
+U_S1 no Z (raw type diff)          n13 REML tau 0.104 [0.025,0.220] p0.021 | omega 0.070 [0.040,0.140] p0.0000 | MoM tau 0.095 omega 0.066 
+U_E3_free_Z                        n13 REML tau 0.057 [0.000,0.145] p0.124 | omega 0.069 [0.045,0.130] p0.0000 | MoM tau 0.048 omega 0.068 
+L_A12 (claim)                      n13 REML tau 0.115 [0.000,0.320] p0.232 | omega 0.158 [0.090,0.295] p0.0000 | MoM tau 0.121 omega 0.149 
+L_A12 block5 SE                    n13 REML tau 0.073 [0.000,0.310] p0.367 | omega 0.155 [0.075,0.295] p0.0000 | MoM tau 0.074 omega 0.115 
+L_c02 (censor <0.2 N)              n13 REML tau 0.091 [0.000,0.295] p0.317 | omega 0.159 [0.090,0.285] p0.0000 | MoM tau 0.109 omega 0.149 
+L_onset axis (11 sessions)         n11 REML tau 0.044 [0.000,0.175] p0.378 | omega 0.089 [0.045,0.165] p0.0000 | MoM tau 0.047 omega 0.085 
+
+== Bayesian grid posterior (REML likelihood x half-normal(0,0.25) priors; and flat priors on [0,0.6])
+   U_S1 (claim)                 halfnormal tau median 0.059 [0.003,0.168]  omega 0.077 [0.041,0.145]  P(omega>=tau) 0.65
+   U_S1 (claim)                 flat       tau median 0.061 [0.003,0.182]  omega 0.078 [0.041,0.149]  P(omega>=tau) 0.63
+   L_A12 (claim)                halfnormal tau median 0.113 [0.004,0.308]  omega 0.170 [0.097,0.296]  P(omega>=tau) 0.71
+   L_A12 (claim)                flat       tau median 0.127 [0.005,0.383]  omega 0.176 [0.098,0.326]  P(omega>=tau) 0.66
+   U_S1 block5 SE               halfnormal tau median 0.056 [0.003,0.185]  omega 0.075 [0.029,0.156]  P(omega>=tau) 0.64
+   U_S1 block5 SE               flat       tau median 0.059 [0.003,0.206]  omega 0.076 [0.029,0.162]  P(omega>=tau) 0.62
+   L_A12 block5 SE              halfnormal tau median 0.097 [0.003,0.303]  omega 0.157 [0.079,0.292]  P(omega>=tau) 0.73
+   L_A12 block5 SE              flat       tau median 0.112 [0.003,0.383]  omega 0.165 [0.081,0.325]  P(omega>=tau) 0.68
+   L_onset axis (11 sessions)   halfnormal tau median 0.061 [0.003,0.204]  omega 0.093 [0.048,0.181]  P(omega>=tau) 0.70
+   L_onset axis (11 sessions)   flat       tau median 0.064 [0.003,0.235]  omega 0.094 [0.048,0.190]  P(omega>=tau) 0.68
+
+== Influence (claim references, column SEs)
+ -- U_S1 (claim)
+   drop A1       tau 0.051 omega 0.076 p_om0 0.0000 omega>=tau True
+   drop A2       tau 0.050 omega 0.076 p_om0 0.0000 omega>=tau True
+   drop A3       tau 0.058 omega 0.073 p_om0 0.0000 omega>=tau True
+   drop A4       tau 0.042 omega 0.072 p_om0 0.0000 omega>=tau True
+   drop B1       tau 0.042 omega 0.065 p_om0 0.0000 omega>=tau True
+   drop C1       tau 0.061 omega 0.068 p_om0 0.0000 omega>=tau True
+   drop D1       tau 0.087 omega 0.020 p_om0 0.3373 omega>=tau False
+   drop D2       tau 0.082 omega 0.019 p_om0 0.3467 omega>=tau False
+   drop A_T2     tau 0.063 omega 0.071 p_om0 0.0000 omega>=tau True
+   drop B_T2s1   tau 0.051 omega 0.074 p_om0 0.0000 omega>=tau True
+   drop B_T2p6   tau 0.056 omega 0.074 p_om0 0.0000 omega>=tau True
+   drop C_T2     tau 0.061 omega 0.071 p_om0 0.0000 omega>=tau True
+   drop D_T2     tau 0.064 omega 0.071 p_om0 0.0000 omega>=tau True
+   drop A1+A4    tau 0.000 omega 0.083 p_om0 0.0000 omega>=tau True
+   drop D2       tau 0.082 omega 0.019 p_om0 0.3467 omega>=tau False
+   drop D1+D2    tau 0.084 omega 0.020 p_om0 0.3428 omega>=tau False
+   drop group A T1: tau 0.000 omega 0.084 p_om0 0.0000 omega>=tau True
+   drop group A T2: tau 0.063 omega 0.071 p_om0 0.0000 omega>=tau True
+   drop group B T1: tau 0.042 omega 0.065 p_om0 0.0000 omega>=tau True
+   drop group B T2: tau 0.053 omega 0.077 p_om0 0.0000 omega>=tau True
+   drop group C T1: tau 0.061 omega 0.068 p_om0 0.0000 omega>=tau True
+   drop group C T2: tau 0.061 omega 0.071 p_om0 0.0000 omega>=tau True
+   drop group D T1: tau 0.084 omega 0.020 p_om0 0.3428 omega>=tau False
+   drop group D T2: tau 0.064 omega 0.071 p_om0 0.0000 omega>=tau True
+   B_T2 Part6 = B_T2r1 only: tau 0.058 omega 0.070 p_om0 0.0000
+   B_T2 Part6 = B_T2r2 only: tau 0.057 omega 0.069 p_om0 0.0000
+ -- L_A12 (claim)
+   drop A1       tau 0.141 omega 0.091 p_om0 0.0052 omega>=tau False
+   drop A2       tau 0.075 omega 0.181 p_om0 0.0000 omega>=tau True
+   drop A3       tau 0.101 omega 0.174 p_om0 0.0000 omega>=tau True
+   drop A4       tau 0.165 omega 0.120 p_om0 0.0000 omega>=tau False
+   drop B1       tau 0.126 omega 0.162 p_om0 0.0000 omega>=tau True
+   drop C1       tau 0.077 omega 0.162 p_om0 0.0000 omega>=tau True
+   drop D1       tau 0.112 omega 0.169 p_om0 0.0000 omega>=tau True
+   drop D2       tau 0.113 omega 0.164 p_om0 0.0000 omega>=tau True
+   drop A_T2     tau 0.092 omega 0.163 p_om0 0.0000 omega>=tau True
+   drop B_T2s1   tau 0.114 omega 0.168 p_om0 0.0000 omega>=tau True
+   drop B_T2p6   tau 0.116 omega 0.166 p_om0 0.0000 omega>=tau True
+   drop C_T2     tau 0.082 omega 0.163 p_om0 0.0000 omega>=tau True
+   drop D_T2     tau 0.130 omega 0.153 p_om0 0.0000 omega>=tau True
+   drop A1+A4    tau 0.176 omega 0.030 p_om0 0.3550 omega>=tau False
+   drop D2       tau 0.113 omega 0.164 p_om0 0.0000 omega>=tau True
+   drop D1+D2    tau 0.130 omega 0.166 p_om0 0.0000 omega>=tau True
+   drop group A T1: tau 0.176 omega 0.030 p_om0 0.3891 omega>=tau False
+   drop group A T2: tau 0.092 omega 0.163 p_om0 0.0000 omega>=tau True
+   drop group B T1: tau 0.126 omega 0.162 p_om0 0.0000 omega>=tau True
+   drop group B T2: tau 0.133 omega 0.169 p_om0 0.0000 omega>=tau True
+   drop group C T1: tau 0.077 omega 0.162 p_om0 0.0000 omega>=tau True
+   drop group C T2: tau 0.082 omega 0.163 p_om0 0.0000 omega>=tau True
+   drop group D T1: tau 0.130 omega 0.166 p_om0 0.0000 omega>=tau True
+   drop group D T2: tau 0.130 omega 0.153 p_om0 0.0000 omega>=tau True
+   B_T2 Part6 = B_T2r1 only: tau 0.116 omega 0.158 p_om0 0.0000
+   B_T2 Part6 = B_T2r2 only: tau 0.114 omega 0.163 p_om0 0.0000
+ -- U_S1 block5 SE
+   drop A1       tau 0.036 omega 0.077 p_om0 0.0010 omega>=tau True
+   drop A2       tau 0.034 omega 0.077 p_om0 0.0010 omega>=tau True
+   drop A3       tau 0.045 omega 0.075 p_om0 0.0012 omega>=tau True
+   drop A4       tau 0.000 omega 0.072 p_om0 0.0014 omega>=tau True
+   drop B1       tau 0.030 omega 0.067 p_om0 0.0017 omega>=tau True
+   drop C1       tau 0.055 omega 0.070 p_om0 0.0016 omega>=tau True
+   drop D1       tau 0.081 omega 0.000 p_om0 0.5000 omega>=tau False
+   drop D2       tau 0.082 omega 0.000 p_om0 0.4998 omega>=tau False
+   drop A_T2     tau 0.050 omega 0.071 p_om0 0.0015 omega>=tau True
+   drop B_T2s1   tau 0.036 omega 0.074 p_om0 0.0012 omega>=tau True
+   drop B_T2p6   tau 0.041 omega 0.075 p_om0 0.0011 omega>=tau True
+   drop C_T2     tau 0.048 omega 0.071 p_om0 0.0015 omega>=tau True
+   drop D_T2     tau 0.050 omega 0.071 p_om0 0.0015 omega>=tau True
+   drop A1+A4    tau 0.000 omega 0.074 p_om0 0.0010 omega>=tau True
+   drop D2       tau 0.082 omega 0.000 p_om0 0.4998 omega>=tau False
+   drop D1+D2    tau 0.082 omega 0.000 p_om0 0.4999 omega>=tau False
+   drop group A T1: tau 0.000 omega 0.080 p_om0 0.0007 omega>=tau True
+   drop group A T2: tau 0.050 omega 0.071 p_om0 0.0015 omega>=tau True
+   drop group B T1: tau 0.030 omega 0.067 p_om0 0.0017 omega>=tau True
+   drop group B T2: tau 0.035 omega 0.077 p_om0 0.0010 omega>=tau True
+   drop group C T1: tau 0.055 omega 0.070 p_om0 0.0016 omega>=tau True
+   drop group C T2: tau 0.048 omega 0.071 p_om0 0.0015 omega>=tau True
+   drop group D T1: tau 0.082 omega 0.000 p_om0 0.4999 omega>=tau False
+   drop group D T2: tau 0.050 omega 0.071 p_om0 0.0015 omega>=tau True
+   B_T2 Part6 = B_T2r1 only: tau 0.045 omega 0.071 p_om0 0.0014
+   B_T2 Part6 = B_T2r2 only: tau 0.045 omega 0.071 p_om0 0.0014
+ -- L_A12 block5 SE
+   drop A1       tau 0.065 omega 0.084 p_om0 0.2627 omega>=tau True
+   drop A2       tau 0.000 omega 0.175 p_om0 0.0000 omega>=tau True
+   drop A3       tau 0.053 omega 0.172 p_om0 0.0001 omega>=tau True
+   drop A4       tau 0.132 omega 0.124 p_om0 0.0007 omega>=tau False
+   drop B1       tau 0.072 omega 0.160 p_om0 0.0000 omega>=tau True
+   drop C1       tau 0.000 omega 0.148 p_om0 0.0000 omega>=tau True
+   drop D1       tau 0.076 omega 0.163 p_om0 0.0000 omega>=tau True
+   drop D2       tau 0.090 omega 0.159 p_om0 0.0000 omega>=tau True
+   drop A_T2     tau 0.050 omega 0.158 p_om0 0.0000 omega>=tau True
+   drop B_T2s1   tau 0.078 omega 0.160 p_om0 0.0000 omega>=tau True
+   drop B_T2p6   tau 0.084 omega 0.160 p_om0 0.0000 omega>=tau True
+   drop C_T2     tau 0.018 omega 0.156 p_om0 0.0000 omega>=tau True
+   drop D_T2     tau 0.103 omega 0.153 p_om0 0.0000 omega>=tau True
+   drop A1+A4    tau 0.131 omega 0.000 p_om0 0.4999 omega>=tau False
+   drop D2       tau 0.090 omega 0.159 p_om0 0.0000 omega>=tau True
+   drop D1+D2    tau 0.107 omega 0.164 p_om0 0.0000 omega>=tau True
+   drop group A T1: tau 0.145 omega 0.000 p_om0 0.5000 omega>=tau False
+   drop group A T2: tau 0.050 omega 0.158 p_om0 0.0000 omega>=tau True
+   drop group B T1: tau 0.072 omega 0.160 p_om0 0.0000 omega>=tau True
+   drop group B T2: tau 0.098 omega 0.164 p_om0 0.0000 omega>=tau True
+   drop group C T1: tau 0.000 omega 0.148 p_om0 0.0000 omega>=tau True
+   drop group C T2: tau 0.018 omega 0.156 p_om0 0.0000 omega>=tau True
+   drop group D T1: tau 0.107 omega 0.164 p_om0 0.0000 omega>=tau True
+   drop group D T2: tau 0.103 omega 0.153 p_om0 0.0000 omega>=tau True
+   B_T2 Part6 = B_T2r1 only: tau 0.083 omega 0.156 p_om0 0.0000
+   B_T2 Part6 = B_T2r2 only: tau 0.068 omega 0.158 p_om0 0.0000
+
+== Where omega comes from: within-group pairs (level diff, z of diff using column SEs)
+   U_S1 (claim)   A T1: levels [-0.1   -0.104 -0.066 -0.173]  within-SS 0.0061 vs expected from SEs 0.0036  -> group-only omega 0.029
+   U_S1 (claim)   D T1: levels [ 0.074 -0.126]  within-SS 0.0200 vs expected from SEs 0.0004  -> group-only omega 0.140
+   U_S1 (claim)   B T2: levels [0.072 0.027]  within-SS 0.0010 vs expected from SEs 0.0014  -> group-only omega 0.000
+   L_A12 (claim)  A T1: levels [ 0.115 -0.118 -0.197 -0.367]  within-SS 0.1200 vs expected from SEs 0.0058  -> group-only omega 0.195
+   L_A12 (claim)  D T1: levels [-0.248 -0.15 ]  within-SS 0.0047 vs expected from SEs 0.0028  -> group-only omega 0.044
+   L_A12 (claim)  B T2: levels [-0.26  -0.229]  within-SS 0.0005 vs expected from SEs 0.0056  -> group-only omega 0.000
+
+== Same-day repeat B_T2 Part 6 r1 vs r2
+   U_S1 se       : r1-r2 +0.003, SD of diff from SEs alone 0.052 (z +0.07); |d|/sqrt2 0.002; 95% CI for a 1-df SD: [0.001, 0.08]
+   U_S1 se_block5: r1-r2 +0.003, SD of diff from SEs alone 0.140 (z +0.02); |d|/sqrt2 0.002; 95% CI for a 1-df SD: [0.001, 0.08]
+   L_A12 se       : r1-r2 -0.179, SD of diff from SEs alone 0.132 (z -1.36); |d|/sqrt2 0.127; 95% CI for a 1-df SD: [0.056, 4.04]
+   L_A12 se_block5: r1-r2 -0.179, SD of diff from SEs alone 0.297 (z -0.60); |d|/sqrt2 0.127; 95% CI for a 1-df SD: [0.056, 4.04]
+   L_c02 se       : r1-r2 -0.135, SD of diff from SEs alone 0.132 (z -1.02); |d|/sqrt2 0.095; 95% CI for a 1-df SD: [0.042, 3.04]

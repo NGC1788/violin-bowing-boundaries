@@ -24,6 +24,14 @@
   "force_ceiling_p95_N": 3.284260971942113
  },
  {
+  "target": "A3",
+  "freeze": "FROZEN_v1 (level_A rule: 0.040 vs 0.123 \u00b1 0.127 \u2192 inside)",
+  "level_error": -0.06643432598428718,
+  "tolerance": 0.148,
+  "passed": true,
+  "force_ceiling_p95_N": 3.368052227971729
+ },
+ {
   "target": "B_T2s2",
   "freeze": "FROZEN_v2 (partially contaminated)",
   "level_error": 0.12942813979745976,

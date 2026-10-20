@@ -1,0 +1,9 @@
+U_S1 true tau 0.06 omega 0.07: median tau_hat 0.055 (10-90% 0.000-0.105, P tau_hat=0 0.24) omega_hat 0.061 | P(omega_hat>=tau_hat) 0.53 | P(rule 'session>=type' fires) 0.51
+U_S1 true tau 0.1 omega 0.05: median tau_hat 0.089 (10-90% 0.028-0.137, P tau_hat=0 0.08) omega_hat 0.047 | P(omega_hat>=tau_hat) 0.19 | P(rule 'session>=type' fires) 0.18
+U_S1 true tau 0.12 omega 0.04: median tau_hat 0.110 (10-90% 0.067-0.164, P tau_hat=0 0.01) omega_hat 0.036 | P(omega_hat>=tau_hat) 0.04 | P(rule 'session>=type' fires) 0.04
+U_S1 true tau 0.15 omega 0.07: median tau_hat 0.136 (10-90% 0.065-0.200, P tau_hat=0 0.04) omega_hat 0.066 | P(omega_hat>=tau_hat) 0.16 | P(rule 'session>=type' fires) 0.16
+U_S1 true tau 0.1 omega 0.07: median tau_hat 0.095 (10-90% 0.000-0.149, P tau_hat=0 0.14) omega_hat 0.065 | P(omega_hat>=tau_hat) 0.30 | P(rule 'session>=type' fires) 0.29
+L_A12 true tau 0.114 omega 0.158: median tau_hat 0.099 (10-90% 0.000-0.196, P tau_hat=0 0.31) omega_hat 0.146 | P(omega_hat>=tau_hat) 0.63 | P(rule 'session>=type' fires) 0.63
+L_A12 true tau 0.2 omega 0.1: median tau_hat 0.189 (10-90% 0.082-0.289, P tau_hat=0 0.06) omega_hat 0.094 | P(omega_hat>=tau_hat) 0.14 | P(rule 'session>=type' fires) 0.14
+L_A12 true tau 0.25 omega 0.12: median tau_hat 0.235 (10-90% 0.124-0.338, P tau_hat=0 0.05) omega_hat 0.117 | P(omega_hat>=tau_hat) 0.13 | P(rule 'session>=type' fires) 0.13
+L_A12 true tau 0.2 omega 0.158: median tau_hat 0.190 (10-90% 0.000-0.283, P tau_hat=0 0.15) omega_hat 0.144 | P(omega_hat>=tau_hat) 0.36 | P(rule 'session>=type' fires) 0.36

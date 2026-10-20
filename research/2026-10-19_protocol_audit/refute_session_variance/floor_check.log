@@ -1,0 +1,3 @@
+L_A12: Spearman(level, floor) all 14 runs rho -0.43 p 0.122; A_T1 floors [0.038, 0.057, 0.115, 0.157] levels [0.115, -0.118, -0.197, -0.367] rho -1.00
+L_c02: Spearman(level, floor) all 14 runs rho -0.58 p 0.030; A_T1 floors [0.038, 0.057, 0.115, 0.157] levels [0.095, -0.106, -0.176, -0.38] rho -1.00
+U_S1: Spearman(level, floor) all 14 runs rho +0.17 p 0.553; A_T1 floors [0.038, 0.057, 0.115, 0.157] levels [-0.1, -0.104, -0.066, -0.173] rho -0.40
