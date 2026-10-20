@@ -1,6 +1,6 @@
 # Which ingredient lifts the minimum bow force above Schelleng? (simulation ablation, pre-registered)
 
-Claude, written 2026-10-20 ≈23:30 KST, before any simulation exists or has been run. Post hoc with respect to the
+Claude, written 2026-10-20 ≈23:22 KST (first commit 6094756 at 23:24:26), before any simulation exists or has been run. Post hoc with respect to the
 measured boundaries (seen). Builder and verifier are separate workflow agents; this file is not edited after launch
 (results go to RESULT.md and verify/).
 
