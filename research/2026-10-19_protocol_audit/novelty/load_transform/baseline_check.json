@@ -1,0 +1,12 @@
+{
+ "r_onset_window_beta": 0.9631655025002624,
+ "baseline_loo_mae_beta": 0.1482731264954042,
+ "transform_mae_beta": 0.11387842708110577,
+ "r_shift_beta": 0.7834080474089781,
+ "r_onset_window_v": 0.9476085968969593,
+ "baseline_loo_mae_v": 0.05852585624094002,
+ "transform_mae_v": 0.047924696792346774,
+ "r_shift_v": 0.7015033587623623,
+ "loo_scaled_mae_beta": 0.10468394853092491,
+ "loo_scale_mean": 0.6955584701640514
+}
