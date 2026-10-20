@@ -14,3 +14,10 @@
 - C0b values reused from v3 (same code, unaffected by K).
 - Readings as PLAN_v3 at β = 0.1 (r, Q, speed exponent from v = 0.05/0.1/0.2); b_β only over 0.08–0.2 ("large-β
   exponent", 4 points), compared with C0b over the same 4 β. Convergence: D = 8000, K = 600 at β = 0.12.
+
+## v3b result (run once, `run_v3b.log`, `results_v3b.json`)
+- **FIR gate failed again** (C1b: max log error n ≤ 30 = 0.196, DC gain 0.989; C1b-flat: 0.074 but DC gain 0.990).
+  A DC gain of 0.989 is a per-period fundamental loss of 1.1 % against the measured 0.18 % (6×), so the C1b minimum
+  forces (2.0 N at β 0.1, r ≈ 120, b_β −3.4) are dominated by filter error. Not interpreted.
+- Likely cause: the digitized ζ_n are bumpy from mode to mode (e.g. mode 3 = 6.7e-4, mode 4 = 3.6e-4), so the target
+  response needs a long impulse response, which does not fit into the bridge-side loop even at β = 0.08.
