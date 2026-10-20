@@ -20,3 +20,10 @@ choices move single sessions between β −0.9 and −1.6, but no variant approa
 travel the exponent steepens by ≈0.2 and the scatter roughly doubles. Not done by this check: the within-scan
 β/time-order confound test and the prior-art search (item 7 of the plan). Speed remains confounded with recording block;
 the onset axis was chosen after seeing the data.
+
+## Prior art (Astra, literature/README.md) — changes the reading
+v/β was already proposed from simulations together with a window-dependence of the fitted β exponent (Beigi & Conneely
+2026 v3, Eq. 8–9); the load decrease and the use of the window-averaged force are in van Walstijn et al. 2026 §3.2;
+establishment vs maintenance thresholds were measured by Galluzzo (≈4×); Schoonderwaldt et al. 2008 measured lower slopes
+not different from −2. Remaining contribution: a quantified sensitivity of the minimum-force exponent and its
+between-session scatter to the time at which the force coordinate is read, on the same real sessions — not a new law.
