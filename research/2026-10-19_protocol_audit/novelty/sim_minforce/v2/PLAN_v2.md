@@ -1,6 +1,6 @@
 # Simulation ablation v2 — maintenance test with a corner-exact waveguide (pre-registered)
 
-Claude, 2026-10-21 ≈00:12 KST, before any v2 code exists. Post hoc w.r.t. the measured boundaries.
+Claude, 2026-10-21 ≈00:08 KST (commit b44ca66 at 00:09:32), before any v2 code exists. Post hoc w.r.t. the measured boundaries.
 
 ## Why a v2
 v1 (`../PLAN.md`) failed its own validation: under the ramp-from-rest protocol the nearly lossless C0 string locks into

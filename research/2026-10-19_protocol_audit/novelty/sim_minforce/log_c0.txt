@@ -1,0 +1,60 @@
+C0|v=0.1 beta=0.02: N=300 Fmin_plan=None (cens False) Fmin_ext=None F_S=0.1996 Q_plan=None eps0:None wall=1.609s
+   labels: ................................
+C0|v=0.1 beta=0.03: N=300 Fmin_plan=None (cens False) Fmin_ext=None F_S=0.0887 Q_plan=None eps0:None wall=0.837s
+   labels: ...................H............
+C0|v=0.1 beta=0.05: N=300 Fmin_plan=None (cens False) Fmin_ext=None F_S=0.03193 Q_plan=None eps0:None wall=0.833s
+   labels: ................................
+C0|v=0.1 beta=0.08: N=300 Fmin_plan=None (cens False) Fmin_ext=None F_S=0.01247 Q_plan=None eps0:None wall=0.828s
+   labels: ................................
+C0|v=0.1 beta=0.12: N=300 Fmin_plan=None (cens False) Fmin_ext=None F_S=0.005544 Q_plan=None eps0:None wall=0.818s
+   labels: ................................
+C0|v=0.1 beta=0.2: N=300 Fmin_plan=None (cens False) Fmin_ext=None F_S=0.001996 Q_plan=None eps0:None wall=0.857s
+   labels: ................................
+C0|v=0.1 beta=0.1: N=300 Fmin_plan=None (cens False) Fmin_ext=None F_S=0.007983 Q_plan=None eps0:None wall=0.858s
+   labels: ................................
+{
+ "Fmin_plan": [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null
+ ],
+ "Fmin_ext": [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null
+ ],
+ "censored_plan": [
+  false,
+  false,
+  false,
+  false,
+  false,
+  false
+ ],
+ "Q_plan": [
+  null,
+  null,
+  null,
+  null,
+  null,
+  null
+ ],
+ "b_beta_plan": null,
+ "b_beta_ext": null,
+ "b_beta_plan_uncensored": null,
+ "Fmin_01": null,
+ "Fmin_01_ext": null,
+ "Q_01": null,
+ "Q_01_interp": null,
+ "F_S_01": 0.007983386078366999,
+ "pass_Q": false,
+ "pass_b_plan": false,
+ "pass_b_ext": false
+}
+[stage c0 done in 6.8 s]
