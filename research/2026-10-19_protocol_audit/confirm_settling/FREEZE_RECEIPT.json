@@ -1,0 +1,13 @@
+{
+ "frozen_kst": "2026-10-20T09:30:37.481911+09:00",
+ "sha256": {
+  "/Users/jeongjihoon/violin-rne/confirm_settling/PROTOCOL.md": "a96e8a15add14931d69c185c465c319cbefc2012d59e53b35ad5a7ff40e9f5b4",
+  "/Users/jeongjihoon/violin-rne/confirm_settling/score_settling.py": "0533833a4ee47a94455e64e8ddabf719aa17e154a4c6eacb4ed7b7c1f162dafb",
+  "/Users/jeongjihoon/violin-rne/novelty/session_variance/session_variance.py": "866f1ba967590b73bfcdc6ab7c9e869230fb50d3f069fd513c191900545aba92",
+  "/Users/jeongjihoon/violin-rne/novelty/thermal_upper/FROZEN_v2.json": "bf9a14c98806d1f922d223fdb9e5188d8c4a3a7fa9e67bfd4be0d58ae5259aad",
+  "/Users/jeongjihoon/violin-rne/claude_extra/verify_astra_boundaries.py": "2dfd0572c8b4eca7865662136dccbaf6f2aa392936199860eaaa2f1af7ca926d",
+  "/Users/jeongjihoon/violin-bowing-boundaries/scripts/regime_map.py": "63afbfa6f479e30310eaab723d530cb043daf5ac7b84daefcb0d3b52ef75e1ce",
+  "/Users/jeongjihoon/violin-rne/final/compare.py": "0967e96b1ce7c8d8572dc36560f610b8279b2aa7fefa2501d9619b4bce0150a6"
+ },
+ "coldwarm_processed_at_freeze": false
+}
