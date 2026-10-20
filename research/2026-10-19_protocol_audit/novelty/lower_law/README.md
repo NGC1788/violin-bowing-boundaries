@@ -38,3 +38,7 @@ exponent and doubles its between-session scatter. Speed remains confounded with 
 ## Robustness of the onset-axis result (onset_sensitivity.json; post hoc; 10 sessions with cached data, B_T2 s2 only in LOO)
 RE β exponent: t = 0.1 s −1.16 [−1.32, −0.99] (SD 0.22); t = 0.3 s −1.25 [−1.39, −1.12] (SD 0.16); K = 3 −1.14 [−1.29, −0.99] (SD 0.22; interval reaches −1);
 leave-one-session-out mean −1.19…−1.25. The onset-axis β ≈ −1.1 to −1.3 is stable across these choices; none approaches −2.
+
+## B1 added after its recovery (2026-10-20, onset_with_B1.json; post hoc)
+B1 onset axis: v +0.99 [+0.84, +1.15], β −1.32 [−1.40, −1.25] (window axis v +1.09, β −1.66). Random effects over 12
+sessions: β −1.23 [−1.35, −1.11], SD 0.18; v +0.96 [+0.87, +1.04], SD 0.12 — unchanged.
