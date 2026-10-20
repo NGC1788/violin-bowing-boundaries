@@ -42,3 +42,11 @@ leave-one-session-out mean −1.19…−1.25. The onset-axis β ≈ −1.1 to �
 ## B1 added after its recovery (2026-10-20, onset_with_B1.json; post hoc)
 B1 onset axis: v +0.99 [+0.84, +1.15], β −1.32 [−1.40, −1.25] (window axis v +1.09, β −1.66). Random effects over 12
 sessions: β −1.23 [−1.35, −1.11], SD 0.18; v +0.96 [+0.87, +1.04], SD 0.12 — unchanged.
+
+## Scan-order check (post hoc, 2026-10-20 23:26; `scan_order_check.py`)
+Only A1 was scanned in descending β. Assuming A1 shares the true exponent of A2–A4 (all A T1), the time-order bias of
+ascending scans is δ = (mean ascending − A1)/2 = −0.06 ± 0.06 (onset axis, 95 % [−0.19, +0.06]) and −0.12 ± 0.10
+(window axis, [−0.32, +0.07]). If anything, ascending scans read slightly *steeper* (more negative), so scan order cannot
+produce the shallow (≈ −1.2) exponent; correcting for it would flatten it further. Caveats: one reversed session; A1's
+attack schedule also differs (attack follows recording order); sample-to-sample differences within A T1 are absorbed
+only through the A2–A4 spread.
