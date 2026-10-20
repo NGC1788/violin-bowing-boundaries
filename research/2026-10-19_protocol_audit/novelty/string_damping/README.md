@@ -1,6 +1,6 @@
 # String damping → minimum bow force (zero-parameter Schelleng test)
 
-Claude, plan written 2026-10-20 23:08 KST, **before** the damping values were digitized and before any
+Claude, plan written 2026-10-20 ≈23:07 KST (commit b2886c4, 23:07:34), **before** the damping values were digitized and before any
 damping–boundary association was computed. The boundary data themselves have been seen many times, so every
 result here is **post hoc** with respect to the boundaries. The plan fixes the damping summary, the constants and
 the reading bands in advance so that no variant can be picked after looking.
@@ -80,7 +80,7 @@ window axis.
 No result is called confirmatory. Everything goes into the paper/report as a post hoc, zero-fitted-parameter
 comparison.
 
-## Addendum 1 — digitization calibration (2026-10-20 23:20 KST, before any ζ value was extracted)
+## Addendum 1 — digitization calibration (2026-10-20 ≈23:08 KST, before any ζ value was extracted; digitize.py was first saved 23:09:33)
 Inspection of grid-line pixel rows showed two facts that contradict the calibration written above:
 1. The horizontal grid lines are **not** equally spaced in log ζ. Their spacings (A T1 panel: 50, 49.5, 50.5, 52,
    44, 55 px) are proportional to the log-differences of the labels themselves (0.018 → … → 0.0004), at
@@ -92,7 +92,7 @@ grid-line rows, match them to a contiguous run of the label sequence (0.018, 0.0
 0.0008, 0.0004) by the alignment with the smallest residual of a straight-line fit of row against log10(value),
 and use that fit. The fit residual is reported as the calibration error. Everything else in the plan is unchanged.
 
-## RESULTS (2026-10-20 ~23:55 KST; run once with the fixed constants; all post hoc w.r.t. the boundary data)
+## RESULTS (2026-10-20 23:12 KST, results.json written 23:12:14; run once with the fixed constants; all post hoc w.r.t. the boundary data)
 
 Digitization: all 8 panels calibrated with grid-line fit residuals 0.09–0.24 px; every visible marker found (overlay checked by eye; the overlay contains the publisher's figure and is kept local only). POMA text checks, recomputed from the digitized values over all shared modes: material differences 44 % vs tension 34 % (text ~30 % vs ~20 %, same order); mode 1 tension 24 % vs material 22 % (text 27 % vs 17 %, same order, smaller gap); largest material variation at mode 4 (64 %; text: modes 4 and 9, 50–60 %).
 
@@ -115,7 +115,7 @@ Digitization: all 8 panels calibrated with grid-line fit residuals 0.09–0.24 p
 
 ### Post hoc additions (not in the plan; labelled as such)
 - **Direct, model-light check** (`posthoc_direct.py`): in every (speed, β) column with an observed non-Helmholtz stroke, that stroke's force exceeded the type's F_S(v, β): onset axis 1216 columns, ratio median 8.0, >4× in 91 %, >8× in 50 %; window axis 1471 columns, median 5.6, >4× in 71 %. So Helmholtz motion failed at forces several times the pluck-loss maintenance minimum; this does not depend on the censored-fit model. Left-censored columns (no non-H stroke seen; 0–51 of 120 per session) carry no information on this and are excluded.
-- **Regime check (corrected 2026-10-21 00:15).** The analysis window starts 0.2 s after the plateau onset. A first version of this bullet used the acceleration of the first ramp_meta row only (0.026 m/s²) and concluded that Guettler's attack conditions cannot matter; that was wrong. Per-stroke acceleration spans 0.03–3.4 m/s² (C1: 10th/50th/90th percentiles 0.026/0.088/3.37 at 0.05 m/s; 0.104/0.104/3.37 at 0.1 m/s; 0.42/0.42/3.37 at 0.2 m/s — the attack schedule found in the protocol audit). Guettler-type limits scale as a·T₀·Z/[β(1−β)] (bracketed friction terms O(1)), i.e. ≈ 0.001–0.4 N at β = 0.1 over this range, so for the fastest attacks establishment conditions are of the same order as the measured boundary.
+- **Regime check (corrected 2026-10-20 ≈23:17).** The analysis window starts 0.2 s after the plateau onset. A first version of this bullet used the acceleration of the first ramp_meta row only (0.026 m/s²) and concluded that Guettler's attack conditions cannot matter; that was wrong. Per-stroke acceleration spans 0.03–3.4 m/s² (C1: 10th/50th/90th percentiles 0.026/0.088/3.37 at 0.05 m/s; 0.104/0.104/3.37 at 0.1 m/s; 0.42/0.42/3.37 at 0.2 m/s — the attack schedule found in the protocol audit). Guettler-type limits scale as a·T₀·Z/[β(1−β)] (bracketed friction terms O(1)), i.e. ≈ 0.001–0.4 N at β = 0.1 over this range, so for the fastest attacks establishment conditions are of the same order as the measured boundary.
 - **Attack-split direct check** (`posthoc_accel.py`; stroke level, onset force, 11 sessions; acceleration classes fixed before computing rates). Share of strokes not Helmholtz at t = 0.2 s:
 
   | F_onset / F_S | slow attack < 0.15 m/s² | medium 0.15–1 | fast ≥ 1 |
@@ -128,6 +128,8 @@ Digitization: all 8 panels calibrated with grid-line fit residuals 0.09–0.24 p
 - **Same convention as Schoonderwaldt et al. 2008** (Z/R = π ζ₁, i.e. R = 2Z f₁ τ₁ from the fundamental only): Q at β = 0.1 becomes A T1 50, A T2 28, B T1 42, B T2 31, C T1 34, C T2 28, D T1 31 (onset) and A T1 34, A T2 14, B T1 24, B T2 18, C T1 18, C T2 15, D T1 20, D T2 19 (window). They reported a factor 6–11 on a violin D/E string (monochord and violin, slope ≈ −2). Our ratio is of the same order at small β and larger at large β.
 - **Within-type vs between-type spread** of session levels (descriptive only; the formal variance-decomposition claim was refuted earlier, `refute_session_variance/`): onset 0.163 (df 5) vs 0.164; window 0.263 (df 6) vs 0.245. Same-type sessions differ as much as types do, so an across-type damping effect of the predicted size (type SD of log(Z·S₁₀) ≈ 0.2) could not have been resolved; T2 has little power.
 
-## Addendum 2 — prior art found after the result (2026-10-21 00:00 KST)
+## Addendum 2 — prior art found after the result (2026-10-20 ≈23:15 KST)
 The 'Why' section above says no quantitative prediction had been made. That is true for this collection (POMA reports only that damping correlations were inconsistent), but **not in general**: Schoonderwaldt, Guettler & Askenfelt (Acta Acust. united Acust. 94, 604–622, 2008, §5, Tables VI–VII; full text read at knutsacoustics.com/files/schoonderwaldt-et-al.-empirical-schelleng.pdf) computed Schelleng's c_lower from pluck-decay R on a violin and a monochord and found the measured lower limit 'almost one order of magnitude larger (a factor 6-11)'. They also found, within one string with added damping, c_lower ∝ R^−2.3. So T1 is a **replication** on a different instrument (cello G strings), rig, lab and damping estimate (multi-mode, digitized), not a new finding. What is new here: (i) the replication across 8 string types and 12–15 sessions with a column-level direct check; (ii) the excess grows with β because the cello exponent is −1.2 to −1.5 rather than −2; (iii) across string types the pluck damping does not order the minimum force (slope +0.2 vs +1 predicted, and vs +2.3 implied by their within-string damping law), with the caveat that within-type session spread equals between-type spread.
 - (iv) the excess persists for slow, quasi-static attacks (57 % non-H at 4–8 × F_S), so on this rig it is not only an establishment effect; Schoonderwaldt et al. varied force gradually during sustained strokes, so both rigs point to a maintenance-side discrepancy.
+
+Note on times (2026-10-20 23:22): an earlier version of this file carried guessed clock times (23:20, ~23:55, 00:00, 00:15). They were wrong; the times above are now taken from the commit log and file modification times.

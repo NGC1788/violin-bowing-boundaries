@@ -3,7 +3,7 @@ establishment limits of the same order as the measured boundary for the fastest 
 Question: do strokes fail to be Helmholtz at t = 0.2 s at forces well above the pluck-loss Schelleng minimum F_S also
 when the attack was slow? If non-H at F >= 4 F_S occurs only for fast attacks, the order-of-magnitude excess (T1) would be
 an establishment effect; if it occurs at slow attacks too, it is not.
-Stroke level, onset force, sessions with ramp metadata (B_T2 s2 skipped: different loader). Claude, 2026-10-21."""
+Stroke level, onset force, sessions with ramp metadata (B_T2 s2 skipped: different loader). Claude, 2026-10-20."""
 import csv, json, sys
 from pathlib import Path
 

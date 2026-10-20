@@ -1,5 +1,5 @@
 """POST HOC: T1 ratio Q in the convention of Schoonderwaldt et al. 2008 (R = 2 Z f1 tau1, i.e. Z/R = pi*zeta_1, fundamental only)
-instead of the plan's energy-weighted S10. Q_SW = Q * S10 / (pi^2 zeta_1 / 6). Also within- vs between-type spread. Claude, 2026-10-21."""
+instead of the plan's energy-weighted S10. Q_SW = Q * S10 / (pi^2 zeta_1 / 6). Also within- vs between-type spread. Claude, 2026-10-20."""
 import json, math, statistics as st
 from pathlib import Path
 HERE = Path(__file__).resolve().parent
