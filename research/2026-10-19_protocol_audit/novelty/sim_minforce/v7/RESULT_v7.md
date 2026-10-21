@@ -1,4 +1,4 @@
-# Simulation v7 — result (run once; Claude, 2026-10-21 ≈12:25 KST)
+# Simulation v7 — result (run once; Claude, 2026-10-21 ≈12:17 KST)
 - Code gates passed: the chain code with one contact point reproduces v6 exactly (P0 = H0m, P1 = H1m at every β).
 - **W1 (10 mm, 8 contacts, measured damping): no Helmholtz run at any β → reading "undefined".** The same for W0
   (frequency-independent loss), 5 mm / 5 contacts, Coulomb friction and the ramp start.
