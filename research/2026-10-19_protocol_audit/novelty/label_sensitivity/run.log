@@ -1,0 +1,39 @@
+A1      base window β -0.971 (stored -0.971) onset β -0.953 (stored -0.953) | per0.7:-0.97 per0.75:-0.97 per0.85:-0.97 per0.9:-0.97 fly0.3:-0.88 fly0.4:-0.93 fly0.6:-1.09 fly0.7:-1.15 amp1x:+0.02 amp2x:+0.69
+A2      base window β -1.089 (stored -1.089) onset β -0.968 (stored -0.968) | per0.7:-1.09 per0.75:-1.09 per0.85:-1.09 per0.9:-1.06 fly0.3:-0.91 fly0.4:-0.98 fly0.6:-1.37 fly0.7:-1.64 amp1x:+0.09 amp2x:+0.81
+B1      base window β -1.663 (stored -1.663) onset β -1.323 (stored -1.323) | per0.7:-1.66 per0.75:-1.66 per0.85:-1.66 per0.9:-1.63 fly0.3:-1.35 fly0.4:-1.60 fly0.6:-1.70 fly0.7:-1.67 amp1x:-0.18 amp2x:+0.65
+C1      base window β -1.607 (stored -1.607) onset β -1.261 (stored -1.261) | per0.7:-1.61 per0.75:-1.61 per0.85:-1.61 per0.9:-1.61 fly0.3:-1.40 fly0.4:-1.48 fly0.6:-1.68 fly0.7:-1.61 amp1x:-0.15 amp2x:+0.86
+D1      base window β -1.640 (stored -1.640) onset β -1.430 (stored -1.430) | per0.7:-1.64 per0.75:-1.64 per0.85:-1.64 per0.9:-1.61 fly0.3:-1.42 fly0.4:-1.56 fly0.6:-1.73 fly0.7:-1.75 amp1x:-0.15 amp2x:+0.59
+A3      base window β -1.222 (stored -1.222) onset β -1.119 (stored -1.119) | per0.7:-1.22 per0.75:-1.22 per0.85:-1.22 per0.9:-1.20 fly0.3:-1.08 fly0.4:-1.17 fly0.6:-1.31 fly0.7:-1.56 amp1x:+0.05 amp2x:+0.85
+A4      base window β -1.417 (stored -1.417) onset β -1.163 (stored -1.163) | per0.7:-1.42 per0.75:-1.42 per0.85:-1.42 per0.9:-1.42 fly0.3:-1.24 fly0.4:-1.33 fly0.6:-1.46 fly0.7:-1.44 amp1x:-0.06 amp2x:+0.81
+D2      base window β -1.105 (stored -1.105) onset β -1.028 (stored -1.028) | per0.7:-1.11 per0.75:-1.11 per0.85:-1.11 per0.9:-1.07 fly0.3:-0.96 fly0.4:-1.06 fly0.6:-1.25 fly0.7:-1.47 amp1x:+0.02 amp2x:+0.71
+A_T2    base window β -1.950 (stored -1.950) onset β -1.412 (stored -1.412) | per0.7:-1.95 per0.75:-1.95 per0.85:-1.95 per0.9:-1.95 fly0.3:-1.93 fly0.4:-1.95 fly0.6:-2.05 fly0.7:-2.40 amp1x:-0.32 amp2x:+0.77
+B_T2s1  base window β -1.848 (stored -1.848) onset β -1.500 (stored -1.500) | per0.7:-1.85 per0.75:-1.85 per0.85:-1.85 per0.9:-1.85 fly0.3:-1.53 fly0.4:-1.67 fly0.6:-2.18 fly0.7:-2.26 amp1x:-0.19 amp2x:+0.56
+C_T2    base window β -1.822 (stored -1.822) onset β -1.443 (stored -1.443) | per0.7:-1.82 per0.75:-1.82 per0.85:-1.82 per0.9:-1.82 fly0.3:-1.69 fly0.4:-1.79 fly0.6:-1.77 fly0.7:-1.76 amp1x:-0.27 amp2x:+0.74
+D_T2    base window β -1.118 (stored +nan) | per0.7:-1.11 per0.75:-1.11 per0.85:-1.13 per0.9:-1.13 fly0.3:-0.98 fly0.4:-1.07 fly0.6:-1.24 fly0.7:-1.42 amp1x:-0.10 amp2x:+0.63
+B_T2r1  base window β -2.175 (stored -2.175) | per0.7:-2.18 per0.75:-2.18 per0.85:-2.18 per0.9:-2.18 fly0.3:-1.89 fly0.4:-2.10 fly0.6:-2.12 fly0.7:-1.99 amp1x:-0.27 amp2x:+0.61
+B_T2r2  base window β -1.816 (stored -1.816) | per0.7:-1.82 per0.75:-1.82 per0.85:-1.82 per0.9:-1.82 fly0.3:-1.81 fly0.4:-1.83 fly0.6:-1.84 fly0.7:-1.70 amp1x:-0.38 amp2x:+0.59
+gate 0.0 0.0 True
+== window (n 14): S = 2.408 → label-dependent (S>=0.3)
+   base    mean -1.532 (SD 0.38) shift +0.000 [+0.000, +0.000] labels changed 0.0% toward −2: 0
+   per0.7  mean -1.531 (SD 0.38) shift +0.001 [-0.001, +0.003] labels changed 0.3% toward −2: 0
+   per0.75 mean -1.531 (SD 0.38) shift +0.000 [-0.001, +0.001] labels changed 0.2% toward −2: 0
+   per0.85 mean -1.532 (SD 0.38) shift -0.001 [-0.002, +0.001] labels changed 0.4% toward −2: 1
+   per0.9  mean -1.521 (SD 0.38) shift +0.011 [+0.002, +0.020] labels changed 1.4% toward −2: 1
+   fly0.3  mean -1.362 (SD 0.37) shift +0.169 [+0.114, +0.225] labels changed 4.7% toward −2: 1
+   fly0.4  mean -1.466 (SD 0.38) shift +0.066 [+0.037, +0.094] labels changed 2.6% toward −2: 3
+   fly0.6  mean -1.627 (SD 0.35) shift -0.095 [-0.157, -0.034] labels changed 3.5% toward −2: 11
+   fly0.7  mean -1.703 (SD 0.33) shift -0.171 [-0.305, -0.037] labels changed 8.9% toward −2: 10
+   amp1x   mean -0.136 (SD 0.15) shift +1.396 [+1.246, +1.546] labels changed 12.3% toward −2: 0
+   amp2x   mean +0.705 (SD 0.10) shift +2.237 [+2.031, +2.442] labels changed 27.2% toward −2: 0
+== onset (n 11): S = 1.925 → label-dependent (S>=0.3)
+   base    mean -1.236 (SD 0.20) shift +0.000 [+0.000, +0.000] labels changed 0.0% toward −2: 0
+   per0.7  mean -1.236 (SD 0.20) shift +0.000 [+0.000, +0.000] labels changed 0.3% toward −2: 0
+   per0.75 mean -1.236 (SD 0.20) shift +0.000 [+0.000, +0.000] labels changed 0.2% toward −2: 0
+   per0.85 mean -1.234 (SD 0.20) shift +0.002 [-0.002, +0.006] labels changed 0.4% toward −2: 0
+   per0.9  mean -1.215 (SD 0.21) shift +0.021 [+0.003, +0.040] labels changed 1.5% toward −2: 0
+   fly0.3  mean -1.124 (SD 0.20) shift +0.112 [+0.083, +0.142] labels changed 4.7% toward −2: 0
+   fly0.4  mean -1.187 (SD 0.20) shift +0.049 [+0.027, +0.070] labels changed 2.6% toward −2: 1
+   fly0.6  mean -1.280 (SD 0.18) shift -0.044 [-0.079, -0.009] labels changed 3.5% toward −2: 9
+   fly0.7  mean -1.295 (SD 0.15) shift -0.058 [-0.142, +0.025] labels changed 9.0% toward −2: 7
+   amp1x   mean -0.068 (SD 0.08) shift +1.168 [+1.083, +1.254] labels changed 11.9% toward −2: 0
+   amp2x   mean +0.630 (SD 0.09) shift +1.867 [+1.755, +1.979] labels changed 26.5% toward −2: 0
