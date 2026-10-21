@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "fixtures": 3016,
+  "feasible": 2286,
+  "enumerated_combinations": 218318,
+  "seed": 20261021,
+  "elapsed_seconds": 0.5046770572662354,
+  "oracle": "Full Cartesian choice enumeration, closed interval intersection and nonintersection"
+}

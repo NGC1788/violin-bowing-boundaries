@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "input_sha256": "df926dbacbec45a01a50aa71e6f4172b34d68d9346a30f291655cbfa9de03167",
+  "sessions": 13,
+  "folders": 39,
+  "columns": 1560,
+  "unique_windows": 78000,
+  "duplicated_force_columns": 0,
+  "nonpositive_force_windows": 510,
+  "columns_per_folder": {
+    "40": 39
+  },
+  "eligibility": {
+    "1": {
+      "eligible_columns": 1078,
+      "eligible_windows": 53900,
+      "positive_endpoint_below_legacy_1mN_floor": 0,
+      "original_left_censored": 402,
+      "no_original_run": 78,
+      "original_nonpositive_or_zero_width": 2
+    },
+    "2": {
+      "eligible_columns": 1132,
+      "eligible_windows": 56600,
+      "positive_endpoint_below_legacy_1mN_floor": 0,
+      "no_original_run": 113,
+      "original_left_censored": 315
+    },
+    "3": {
+      "eligible_columns": 1154,
+      "eligible_windows": 57700,
+      "positive_endpoint_below_legacy_1mN_floor": 0,
+      "no_original_run": 135,
+      "original_left_censored": 271
+    }
+  },
+  "scope": "Checks exported derived inputs; classifier truth and original signal extraction are not independently revalidated.",
+  "dependency_sha256": {},
+  "threshold_summary_candidates": null,
+  "external_dependency_mode": "skip",
+  "missing_external_dependencies": []
+}

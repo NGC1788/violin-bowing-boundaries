@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "cases": 540,
+  "target_label_combinations": 107742,
+  "seed": 20261021,
+  "elapsed_seconds": 0.18161225318908691,
+  "interpretation": "Exact minimum label flips for finite first-run interval compatibility or incompatibility; not MLE rejection"
+}

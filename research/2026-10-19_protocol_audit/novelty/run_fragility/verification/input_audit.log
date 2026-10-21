@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "input_sha256": "df926dbacbec45a01a50aa71e6f4172b34d68d9346a30f291655cbfa9de03167",
+  "sessions": 13,
+  "folders": 39,
+  "columns": 1560,
+  "unique_windows": 78000,
+  "duplicated_force_columns": 0,
+  "nonpositive_force_windows": 510,
+  "columns_per_folder": {
+    "40": 39
+  },
+  "eligibility": {
+    "1": {
+      "eligible_columns": 1078,
+      "eligible_windows": 53900,
+      "positive_endpoint_below_legacy_1mN_floor": 0,
+      "original_left_censored": 402,
+      "no_original_run": 78,
+      "original_nonpositive_or_zero_width": 2
+    },
+    "2": {
+      "eligible_columns": 1132,
+      "eligible_windows": 56600,
+      "positive_endpoint_below_legacy_1mN_floor": 0,
+      "no_original_run": 113,
+      "original_left_censored": 315
+    },
+    "3": {
+      "eligible_columns": 1154,
+      "eligible_windows": 57700,
+      "positive_endpoint_below_legacy_1mN_floor": 0,
+      "no_original_run": 135,
+      "original_left_censored": 271
+    }
+  },
+  "scope": "Checks exported derived inputs; classifier truth and original signal extraction are not independently revalidated.",
+  "dependency_sha256": {
+    "violin-rne/final/data.py": "df6ed901fc6df82db2fb2e4a8f8d0c23808d8d6615e4288b6ba66ae30ab2283b",
+    "violin-rne/final/compare.py": "0967e96b1ce7c8d8572dc36560f610b8279b2aa7fefa2501d9619b4bce0150a6",
+    "violin-rne/claude_extra/verify_astra_boundaries.py": "2dfd0572c8b4eca7865662136dccbaf6f2aa392936199860eaaa2f1af7ca926d",
+    "violin-rne/novelty/label_sensitivity/label_sweep.py": "5bf6a58421e042cbf64f532641cec14d4d270313ea55621c5e5b53e652a171db",
+    "violin-rne/novelty/tilt_principle/tilt.py": "8f0925f6d38e7386bf08897953269e97e2751ef41437bb5450d05182fc427f98",
+    "violin-bowing-boundaries/scripts/regime_map.py": "63afbfa6f479e30310eaab723d530cb043daf5ac7b84daefcb0d3b52ef75e1ce",
+    "violin-bowing-boundaries/reports/research_20261013/lockbox_A2_preprocess/2024-04-19_TypeA_sample2/regime_map/20261014T064041Z_5403c150/summary.json": "b7fd8afacbebd0a20805125b41c3f908a750b487f4c7953fef5ff575e9f916f9"
+  },
+  "threshold_summary_candidates": 1,
+  "external_dependency_mode": "required",
+  "missing_external_dependencies": []
+}

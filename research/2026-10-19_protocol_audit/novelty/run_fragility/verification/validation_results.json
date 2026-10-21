@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "invalid_cases_rejected": 20,
+  "valid_dtype_cases": 3,
+  "deterministic_repetitions": 5,
+  "input_mutation_check": "unchanged",
+  "note": "Labels are ordered inputs: force sorting and force ties belong to the caller, not this core."
+}

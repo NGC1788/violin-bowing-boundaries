@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "invalid_cases_rejected": 16,
+  "extreme_unbounded_cases": [
+    {
+      "upper": -1e+308,
+      "intercept": -1e+308
+    },
+    {
+      "upper": -1.7976931348623157e+308,
+      "intercept": -1.7976931348623157e+308
+    }
+  ]
+}

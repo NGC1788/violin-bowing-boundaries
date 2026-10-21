@@ -1,0 +1,302 @@
+{
+  "status": "passed",
+  "source": "/Users/jeongjihoon/violin-rne/novelty/run_fragility",
+  "output": "/Users/jeongjihoon/violin-rne/reproduction_runs/run_fragility_20261021",
+  "steps": [
+    {
+      "script": "verification/exhaustive.py",
+      "arguments": [],
+      "exit_code": 0,
+      "duration_seconds": 3.8964307501446456,
+      "log": "logs/01_exhaustive.log"
+    },
+    {
+      "script": "verification/validation_cases.py",
+      "arguments": [],
+      "exit_code": 0,
+      "duration_seconds": 0.12827820819802582,
+      "log": "logs/02_validation_cases.log"
+    },
+    {
+      "script": "verification/global_oracle.py",
+      "arguments": [],
+      "exit_code": 0,
+      "duration_seconds": 2.295444958843291,
+      "log": "logs/03_global_oracle.log"
+    },
+    {
+      "script": "verification/global_validation.py",
+      "arguments": [],
+      "exit_code": 0,
+      "duration_seconds": 0.0775365000590682,
+      "log": "logs/04_global_validation.log"
+    },
+    {
+      "script": "verification/end_to_end.py",
+      "arguments": [],
+      "exit_code": 0,
+      "duration_seconds": 0.2382767079398036,
+      "log": "logs/05_end_to_end.log"
+    },
+    {
+      "script": "verification/input_audit.py",
+      "arguments": [
+        "--external-dependencies",
+        "skip"
+      ],
+      "exit_code": 0,
+      "duration_seconds": 0.18767950008623302,
+      "log": "logs/06_input_audit.log"
+    },
+    {
+      "script": "synthetic.py",
+      "arguments": [],
+      "exit_code": 0,
+      "duration_seconds": 0.6781377091538161,
+      "log": "logs/07_synthetic.log"
+    },
+    {
+      "script": "empirical.py",
+      "arguments": [],
+      "exit_code": 0,
+      "duration_seconds": 8.286741917021573,
+      "log": "logs/08_empirical.log"
+    },
+    {
+      "script": "diagnose_results.py",
+      "arguments": [],
+      "exit_code": 0,
+      "duration_seconds": 0.18781437491998076,
+      "log": "logs/09_diagnose_results.log"
+    },
+    {
+      "script": "verification/empirical_witness_audit.py",
+      "arguments": [],
+      "exit_code": 0,
+      "duration_seconds": 0.4066135410685092,
+      "log": "logs/10_empirical_witness_audit.log"
+    },
+    {
+      "script": "figures.py",
+      "arguments": [],
+      "exit_code": 0,
+      "duration_seconds": 17.134524666937068,
+      "log": "logs/11_figures.log"
+    }
+  ],
+  "comparisons": {
+    "verification/exhaustive_results.json": {
+      "passed": true,
+      "compared": {
+        "numbers": 60,
+        "other_values": 5
+      },
+      "ignored_top_level_metadata": [
+        "elapsed_seconds"
+      ],
+      "provenance_differences": [
+        "elapsed_seconds"
+      ],
+      "mismatch_count": 0,
+      "first_mismatches": []
+    },
+    "verification/validation_results.json": {
+      "passed": true,
+      "compared": {
+        "numbers": 3,
+        "other_values": 3
+      },
+      "ignored_top_level_metadata": [],
+      "provenance_differences": [],
+      "mismatch_count": 0,
+      "first_mismatches": []
+    },
+    "verification/global_results.json": {
+      "passed": true,
+      "compared": {
+        "numbers": 4,
+        "other_values": 2
+      },
+      "ignored_top_level_metadata": [
+        "elapsed_seconds"
+      ],
+      "provenance_differences": [
+        "elapsed_seconds"
+      ],
+      "mismatch_count": 0,
+      "first_mismatches": []
+    },
+    "verification/global_validation_results.json": {
+      "passed": true,
+      "compared": {
+        "numbers": 5,
+        "other_values": 1
+      },
+      "ignored_top_level_metadata": [],
+      "provenance_differences": [],
+      "mismatch_count": 0,
+      "first_mismatches": []
+    },
+    "verification/end_to_end_results.json": {
+      "passed": true,
+      "compared": {
+        "numbers": 3,
+        "other_values": 2
+      },
+      "ignored_top_level_metadata": [
+        "elapsed_seconds"
+      ],
+      "provenance_differences": [
+        "elapsed_seconds"
+      ],
+      "mismatch_count": 0,
+      "first_mismatches": []
+    },
+    "verification/input_audit_results.json": {
+      "passed": true,
+      "compared": {
+        "numbers": 23,
+        "other_values": 3
+      },
+      "ignored_top_level_metadata": [
+        "dependency_sha256",
+        "external_dependency_mode",
+        "missing_external_dependencies",
+        "threshold_summary_candidates"
+      ],
+      "provenance_differences": [
+        "dependency_sha256",
+        "external_dependency_mode",
+        "threshold_summary_candidates"
+      ],
+      "mismatch_count": 0,
+      "first_mismatches": []
+    },
+    "verification/empirical_witness_results.json": {
+      "passed": true,
+      "compared": {
+        "numbers": 12,
+        "other_values": 2
+      },
+      "ignored_top_level_metadata": [
+        "source_sha256"
+      ],
+      "provenance_differences": [
+        "source_sha256"
+      ],
+      "mismatch_count": 0,
+      "first_mismatches": []
+    },
+    "synthetic_results.json": {
+      "passed": true,
+      "compared": {
+        "numbers": 14909,
+        "other_values": 1867
+      },
+      "ignored_top_level_metadata": [
+        "source_sha256"
+      ],
+      "provenance_differences": [],
+      "mismatch_count": 0,
+      "first_mismatches": []
+    },
+    "results.json": {
+      "passed": true,
+      "compared": {
+        "numbers": 79643,
+        "other_values": 17107
+      },
+      "ignored_top_level_metadata": [
+        "duration_seconds",
+        "source_sha256"
+      ],
+      "provenance_differences": [
+        "duration_seconds"
+      ],
+      "mismatch_count": 0,
+      "first_mismatches": []
+    },
+    "diagnostics.json": {
+      "passed": true,
+      "compared": {
+        "numbers": 1137,
+        "other_values": 172
+      },
+      "ignored_top_level_metadata": [],
+      "provenance_differences": [],
+      "mismatch_count": 0,
+      "first_mismatches": []
+    },
+    "figure_selection.json": {
+      "passed": true,
+      "compared": {
+        "numbers": 4,
+        "other_values": 3
+      },
+      "ignored_top_level_metadata": [],
+      "provenance_differences": [],
+      "mismatch_count": 0,
+      "first_mismatches": []
+    }
+  },
+  "snapshot_sha256": {
+    "core.py": "fc64f196ba697cc8584a979d0268710ee1a82c89b52916390a52b04f8fffacf6",
+    "global_profile.py": "db6a19da27750492b5363c48340cb02ba487fa429dfcd05de6448741097a8c43",
+    "synthetic.py": "34e75c66bf656f7d39c95908b591db7ca4441f2e6d518d89a6d7ba8eeb11503f",
+    "empirical.py": "c8c8a726752a59dddc0f74ae3b267448f001d29b2907f50e2867a0785533085b",
+    "diagnose_results.py": "c24fc231a8ec97574b753cec8367451ffcf3d08ed4bee44d1062ab86444ead34",
+    "PLAN.md": "62cf2dfebd37cb2324869f7ed1e79fc2e7195324573bad57da760b2559466f14",
+    "SYNTHETIC.md": "17e729e64130075b477fa2744e1d0d79282b4e07fbd824c912c4f28d8e23ec54",
+    "input_columns.json.gz": "df926dbacbec45a01a50aa71e6f4172b34d68d9346a30f291655cbfa9de03167",
+    "verification/exhaustive.py": "9fb096d7b85ca747f639e8042038267321549f90cfb9f4fb64068bad954b65b6",
+    "verification/validation_cases.py": "4964ec84b2ba12e79305c5cb708c5838ced544f5b13860db5860ca954c8d9f89",
+    "verification/global_oracle.py": "9528889f60581a4d24ac6bb2bac4fd4c0a2dc8c6c384c9e7859644bdcf0d402e",
+    "verification/global_validation.py": "42285aeee4c943a7a9213ce634fae16451f9884580f42f48f9d938b313ca15e1",
+    "verification/end_to_end.py": "e0d7475471eeb01cc6fb9ecc4b4c61dd75b0f3644b5e8b71b5061b247f6338e2",
+    "verification/input_audit.py": "5e83b7e4fa20c174db27dd8f89696b25dfbe47f9ecfd8b2059ae2893e63e8e6b",
+    "verification/empirical_witness_audit.py": "a5ee9c7ebf8501a1c9e77798fe03515794803d7abab9f39727a91973c317fafa",
+    "figures.py": "1d991c312f704a9f174885a5b21fb4e09675981c754d1de20b1b5f9e79a331bc",
+    "verification/exhaustive_results.json": "f86c849a894b2ecd448fd10494154351a131b1d4b6312b3cb44f711d7df8ab26",
+    "verification/validation_results.json": "6f3d0776cb77a679ed767934d51edab5dde76f44c000ae4536de11af4c0e3e32",
+    "verification/global_results.json": "adc54660fa35b31db3a7856385a75a38cb5f442bab785420b11f42a3b63ae68e",
+    "verification/global_validation_results.json": "2e7815fc8cdf9556937dab77a128b4f6824ddc29b3a7e421e47e855cfcd245c2",
+    "verification/end_to_end_results.json": "2d68e1b64b56a936d873ceee944dcca7266b4544251a3cce61f1dfee169c1985",
+    "verification/input_audit_results.json": "f8fbff70577a197f35a68a400f6cff735fc0fcd8441ff6c743299df87c48838e",
+    "verification/empirical_witness_results.json": "8f49c8ee7380b859644aaa3b91bc7e688c7218984cfd8e49789c3a3c9364658b",
+    "synthetic_results.json": "97a47aafd133fb27e988bf7f195873374053e523f31de6cb6ddbf8147e896338",
+    "results.json": "650711cd8749df6d0ebacde1c67351b5c05509b345a700fdf8bc795953b4c7f2",
+    "diagnostics.json": "864bac1e7b652386371f3cfa296928fe570bf78740da26b9e8811b47ad2b73b3",
+    "figure_selection.json": "6d9ba93abb8ca85388ce3c087e5c363935bdca94009758229c61851bea3fd3fd"
+  },
+  "raw_export_performed": false,
+  "runtime": {
+    "python": "3.11.15 (main, Jul 23 2026, 14:34:23) [Clang 22.1.3 ]",
+    "executable": "/var/folders/0z/30l8kgzx48v822q6d0j0c4h00000gn/T/run-fragility-minimal-env-nliquugv/bin/python",
+    "packages": {
+      "kiwisolver": "1.5.1",
+      "fonttools": "4.66.1",
+      "packaging": "26.3",
+      "contourpy": "1.3.3",
+      "numpy": "2.4.6",
+      "python-dateutil": "2.9.0.post0",
+      "matplotlib": "3.11.2",
+      "cycler": "0.12.1",
+      "pillow": "12.3.0",
+      "pyparsing": "3.3.3",
+      "six": "1.17.0"
+    }
+  },
+  "duration_seconds": 33.67477887496352,
+  "regenerated_figure_sha256": {
+    "fig_costs.png": "393eb3beb0089b29b4a30f1bd76fb980ac98e83d5172b18aa2d09817818c21ec",
+    "fig_witness.png": "e24e52b50391848e400decb41323dd879870a2047ee3571de6eba983c001439d"
+  },
+  "source_files_unchanged": true,
+  "copied_fixture_unchanged": true,
+  "numerical_tolerance": {
+    "integer": "exact",
+    "float_absolute": 1e-12,
+    "float_relative": 1e-12
+  },
+  "all_scientific_comparisons_passed": true
+}

@@ -1,0 +1,249 @@
+{
+  "eligibility": {
+    "total_columns": 1560,
+    "kept_columns": 1132,
+    "kept_windows": 56600,
+    "excluded": {
+      "no_original_run": 113,
+      "original_left_censored": 315
+    }
+  },
+  "primary": {
+    "-2.0": {
+      "changed_columns": {
+        "n": 14,
+        "median": 10.5,
+        "range": [
+          2.0,
+          15.0
+        ]
+      },
+      "changed_column_fraction": {
+        "n": 14,
+        "median": 0.3832035595105673,
+        "range": [
+          0.06896551724137931,
+          0.5384615384615384
+        ]
+      },
+      "additions": {
+        "n": 14,
+        "median": 8.5,
+        "range": [
+          0.0,
+          15.0
+        ]
+      },
+      "deletions": {
+        "n": 14,
+        "median": 4.0,
+        "range": [
+          1.0,
+          16.0
+        ]
+      },
+      "endpoint_only_witnesses": 0,
+      "by_speed": {
+        "0.05": {
+          "n": 2,
+          "median": 9.5,
+          "range": [
+            3.0,
+            16.0
+          ]
+        },
+        "0.1": {
+          "n": 1,
+          "median": 5.0,
+          "range": [
+            5.0,
+            5.0
+          ]
+        },
+        "0.2": {
+          "n": 11,
+          "median": 15.0,
+          "range": [
+            2.0,
+            20.0
+          ]
+        }
+      }
+    },
+    "-1.2": {
+      "changed_columns": {
+        "n": 39,
+        "median": 15.0,
+        "range": [
+          3.0,
+          32.0
+        ]
+      },
+      "changed_column_fraction": {
+        "n": 39,
+        "median": 0.4827586206896552,
+        "range": [
+          0.2,
+          1.0
+        ]
+      },
+      "additions": {
+        "n": 39,
+        "median": 6.0,
+        "range": [
+          0.0,
+          41.0
+        ]
+      },
+      "deletions": {
+        "n": 39,
+        "median": 15.0,
+        "range": [
+          0.0,
+          161.0
+        ]
+      },
+      "endpoint_only_witnesses": 0,
+      "by_speed": {
+        "0.05": {
+          "n": 13,
+          "median": 63.0,
+          "range": [
+            5.0,
+            163.0
+          ]
+        },
+        "0.1": {
+          "n": 13,
+          "median": 15.0,
+          "range": [
+            9.0,
+            46.0
+          ]
+        },
+        "0.2": {
+          "n": 13,
+          "median": 24.0,
+          "range": [
+            6.0,
+            39.0
+          ]
+        }
+      }
+    }
+  },
+  "paired_supported_folders": {
+    "n": 14,
+    "p2_cheaper": 10,
+    "p12_cheaper": 4,
+    "equal": 0,
+    "difference": {
+      "n": 14,
+      "median": -9.0,
+      "range": [
+        -24.0,
+        8.0
+      ]
+    },
+    "rows": [
+      {
+        "session": "A1",
+        "speed": 0.19999999999999998,
+        "p2_cost": 17.0,
+        "p12_cost": 9.0,
+        "difference_p2_minus_p12": 8.0
+      },
+      {
+        "session": "A2",
+        "speed": 0.19999999999999998,
+        "p2_cost": 19.0,
+        "p12_cost": 14.0,
+        "difference_p2_minus_p12": 5.0
+      },
+      {
+        "session": "B1",
+        "speed": 0.19999999999999998,
+        "p2_cost": 16.0,
+        "p12_cost": 20.0,
+        "difference_p2_minus_p12": -4.0
+      },
+      {
+        "session": "C1",
+        "speed": 0.19999999999999998,
+        "p2_cost": 11.0,
+        "p12_cost": 30.0,
+        "difference_p2_minus_p12": -19.0
+      },
+      {
+        "session": "D1",
+        "speed": 0.19999999999999998,
+        "p2_cost": 9.0,
+        "p12_cost": 26.0,
+        "difference_p2_minus_p12": -17.0
+      },
+      {
+        "session": "A3",
+        "speed": 0.19999999999999998,
+        "p2_cost": 20.0,
+        "p12_cost": 18.0,
+        "difference_p2_minus_p12": 2.0
+      },
+      {
+        "session": "A4",
+        "speed": 0.19999999999999998,
+        "p2_cost": 2.0,
+        "p12_cost": 25.0,
+        "difference_p2_minus_p12": -23.0
+      },
+      {
+        "session": "D2",
+        "speed": 0.19999999999999998,
+        "p2_cost": 11.0,
+        "p12_cost": 17.0,
+        "difference_p2_minus_p12": -6.0
+      },
+      {
+        "session": "A_T2",
+        "speed": 0.19999999999999998,
+        "p2_cost": 15.0,
+        "p12_cost": 39.0,
+        "difference_p2_minus_p12": -24.0
+      },
+      {
+        "session": "B_T2s1",
+        "speed": 0.19999999999999998,
+        "p2_cost": 12.0,
+        "p12_cost": 24.0,
+        "difference_p2_minus_p12": -12.0
+      },
+      {
+        "session": "C_T2",
+        "speed": 0.049999999999999996,
+        "p2_cost": 16.0,
+        "p12_cost": 11.0,
+        "difference_p2_minus_p12": 5.0
+      },
+      {
+        "session": "B_T2r1",
+        "speed": 0.049999999999999996,
+        "p2_cost": 3.0,
+        "p12_cost": 5.0,
+        "difference_p2_minus_p12": -2.0
+      },
+      {
+        "session": "B_T2r1",
+        "speed": 0.09999999999999999,
+        "p2_cost": 5.0,
+        "p12_cost": 20.0,
+        "difference_p2_minus_p12": -15.0
+      },
+      {
+        "session": "B_T2r1",
+        "speed": 0.19999999999999998,
+        "p2_cost": 15.0,
+        "p12_cost": 33.0,
+        "difference_p2_minus_p12": -18.0
+      }
+    ]
+  }
+}

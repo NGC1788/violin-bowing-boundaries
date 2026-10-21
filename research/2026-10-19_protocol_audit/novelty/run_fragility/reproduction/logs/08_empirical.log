@@ -1,0 +1,72 @@
+A1 2024-03-27_r_v1
+A1 2024-03-27_r_v2
+A1 2024-03-27_r_v3
+A2 v1
+A2 v2
+A2 v3
+B1 v1
+B1 v2
+B1 v3
+C1 v1
+C1 v2
+C1 v3
+D1 v1
+D1 v2
+D1 v3
+A3 v1
+A3 v2
+A3 v3
+A4 v1
+A4 v2
+A4 v3
+D2 v2
+D2 v1
+D2 v3
+A_T2 v1
+A_T2 v2
+A_T2 v3
+B_T2s1 v1
+B_T2s1 v2
+B_T2s1 v3
+C_T2 v1
+C_T2 v2
+C_T2 v3
+B_T2r1 v1
+B_T2r1 v2
+B_T2r1 v3
+B_T2r2 v1
+B_T2r2 v2
+B_T2r2 v3
+{
+  "-2.0": {
+    "n_folders": 39,
+    "baseline_compatible": 0,
+    "n_finite_restorations": 14,
+    "n_finite_exclusions": 0,
+    "grid_infeasible": 25,
+    "flip_count_median": 13.5,
+    "flip_count_range": [
+      2.0,
+      20.0
+    ],
+    "median_flip_fraction_eligible": 0.008838709677419355,
+    "restore_cost_median": 13.5,
+    "exclude_cost_median": null
+  },
+  "-1.2": {
+    "n_folders": 39,
+    "baseline_compatible": 0,
+    "n_finite_restorations": 39,
+    "n_finite_exclusions": 0,
+    "grid_infeasible": 0,
+    "flip_count_median": 26.0,
+    "flip_count_range": [
+      5.0,
+      163.0
+    ],
+    "median_flip_fraction_eligible": 0.0168,
+    "restore_cost_median": 26.0,
+    "exclude_cost_median": null
+  }
+}
+seconds 8.09

@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "max_n": 9,
+  "k_values": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "modes": [
+    "both",
+    "delete",
+    "add"
+  ],
+  "counts": {
+    "source_configurations": 12276,
+    "endpoint_costs": 92238,
+    "finite_witnesses": 55132,
+    "impossible_witnesses": 37106,
+    "enumerated_source_target_mode_pairs": 4194300
+  },
+  "rows": [
+    {
+      "n": 0,
+      "source_configurations": 12,
+      "endpoint_costs": 12,
+      "finite_witnesses": 12,
+      "impossible_witnesses": 0
+    },
+    {
+      "n": 1,
+      "source_configurations": 24,
+      "endpoint_costs": 30,
+      "finite_witnesses": 28,
+      "impossible_witnesses": 2
+    },
+    {
+      "n": 2,
+      "source_configurations": 48,
+      "endpoint_costs": 84,
+      "finite_witnesses": 71,
+      "impossible_witnesses": 13
+    },
+    {
+      "n": 3,
+      "source_configurations": 96,
+      "endpoint_costs": 240,
+      "finite_witnesses": 184,
+      "impossible_witnesses": 56
+    },
+    {
+      "n": 4,
+      "source_configurations": 192,
+      "endpoint_costs": 672,
+      "finite_witnesses": 476,
+      "impossible_witnesses": 196
+    },
+    {
+      "n": 5,
+      "source_configurations": 384,
+      "endpoint_costs": 1728,
+      "finite_witnesses": 1149,
+      "impossible_witnesses": 579
+    },
+    {
+      "n": 6,
+      "source_configurations": 768,
+      "endpoint_costs": 4224,
+      "finite_witnesses": 2688,
+      "impossible_witnesses": 1536
+    },
+    {
+      "n": 7,
+      "source_configurations": 1536,
+      "endpoint_costs": 9984,
+      "finite_witnesses": 6142,
+      "impossible_witnesses": 3842
+    },
+    {
+      "n": 8,
+      "source_configurations": 3072,
+      "endpoint_costs": 23040,
+      "finite_witnesses": 13799,
+      "impossible_witnesses": 9241
+    },
+    {
+      "n": 9,
+      "source_configurations": 6144,
+      "endpoint_costs": 52224,
+      "finite_witnesses": 30583,
+      "impossible_witnesses": 21641
+    }
+  ],
+  "elapsed_seconds": 3.793328285217285,
+  "oracle": "Full binary target enumeration with pairwise Hamming distance"
+}

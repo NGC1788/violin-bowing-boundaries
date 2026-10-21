@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "standalone_default": "optional passed with 5 missing research dependency paths",
+  "standalone_skip": "passed, no external probes",
+  "scientific_fields_match_required_reference": true,
+  "metadata_excluded": [
+    "dependency_sha256",
+    "external_dependency_mode",
+    "missing_external_dependencies",
+    "threshold_summary_candidates"
+  ]
+}

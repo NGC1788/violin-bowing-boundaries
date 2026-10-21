@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "counts": {
+    "primary_directional_records": 234,
+    "infeasible_witness_entries": 113,
+    "feasible_witnesses_checked": 355,
+    "listed_flips_checked": 4901
+  },
+  "primary_both": {
+    "finite_decision_changes": 53,
+    "restorations": 53
+  },
+  "primary_restore_witness_intersection": {
+    "count": 53,
+    "endpoint_only": 0,
+    "minimum_width": 0.00011925462890749472
+  },
+  "all_directional_restore_intersections": {
+    "count": 121,
+    "endpoint_only": 0,
+    "minimum_width": 0.00011925462890749472
+  },
+  "source_sha256": {
+    "input_columns.json.gz": "df926dbacbec45a01a50aa71e6f4172b34d68d9346a30f291655cbfa9de03167",
+    "results.json": "e3ed4ab1459f6f075be9b52d518293f891459f093894e4f7860daceabed76031"
+  },
+  "interpretation": "Witnesses establish attainable exact stated decisions; minimality relies on separately verified combinatorial solvers."
+}

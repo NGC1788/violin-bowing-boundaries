@@ -1,0 +1,155 @@
+{
+  "checks": {
+    "cases": 26,
+    "law_mode_comparisons": 156,
+    "verified_global_witnesses": 286,
+    "all_clean_generating_laws_compatible": true,
+    "all_original_boundary_restoration_costs_bounded_by_injected_changes": true
+  },
+  "summary": {
+    "clean": {
+      "cases": 2,
+      "injected_label_changes": {
+        "min": 0,
+        "max": 0,
+        "mean": 0.0
+      },
+      "clean_boundary_restoration": {
+        "min": 0,
+        "max": 0,
+        "mean": 0.0
+      },
+      "generating_law_currently_compatible": 2,
+      "generating_law_restoration": {
+        "min": 0,
+        "max": 0,
+        "mean": 0.0
+      },
+      "generating_law_reversal": {
+        "min": 2,
+        "max": 2,
+        "mean": 2.0
+      },
+      "alternative_law_currently_compatible": 0,
+      "alternative_law_restoration": {
+        "min": 5,
+        "max": 6,
+        "mean": 5.5
+      },
+      "alternative_law_reversal": {
+        "min": 5,
+        "max": 6,
+        "mean": 5.5
+      }
+    },
+    "random_sparse": {
+      "cases": 8,
+      "injected_label_changes": {
+        "min": 3,
+        "max": 3,
+        "mean": 3.0
+      },
+      "clean_boundary_restoration": {
+        "min": 0,
+        "max": 1,
+        "mean": 0.125
+      },
+      "generating_law_currently_compatible": 8,
+      "generating_law_restoration": {
+        "min": 0,
+        "max": 0,
+        "mean": 0.0
+      },
+      "generating_law_reversal": {
+        "min": 1,
+        "max": 1,
+        "mean": 1.0
+      },
+      "alternative_law_currently_compatible": 0,
+      "alternative_law_restoration": {
+        "min": 5,
+        "max": 6,
+        "mean": 5.25
+      },
+      "alternative_law_reversal": {
+        "min": 5,
+        "max": 6,
+        "mean": 5.25
+      }
+    },
+    "boundary_adjacent": {
+      "cases": 8,
+      "injected_label_changes": {
+        "min": 2,
+        "max": 2,
+        "mean": 2.0
+      },
+      "clean_boundary_restoration": {
+        "min": 2,
+        "max": 2,
+        "mean": 2.0
+      },
+      "generating_law_currently_compatible": 8,
+      "generating_law_restoration": {
+        "min": 0,
+        "max": 0,
+        "mean": 0.0
+      },
+      "generating_law_reversal": {
+        "min": 1,
+        "max": 2,
+        "mean": 1.375
+      },
+      "alternative_law_currently_compatible": 0,
+      "alternative_law_restoration": {
+        "min": 5,
+        "max": 6,
+        "mean": 5.5
+      },
+      "alternative_law_reversal": {
+        "min": 5,
+        "max": 6,
+        "mean": 5.5
+      }
+    },
+    "boundary_burst": {
+      "cases": 8,
+      "injected_label_changes": {
+        "min": 4,
+        "max": 4,
+        "mean": 4.0
+      },
+      "clean_boundary_restoration": {
+        "min": 2,
+        "max": 2,
+        "mean": 2.0
+      },
+      "generating_law_currently_compatible": 0,
+      "generating_law_restoration": {
+        "min": 1,
+        "max": 2,
+        "mean": 1.5
+      },
+      "generating_law_reversal": {
+        "min": 1,
+        "max": 2,
+        "mean": 1.5
+      },
+      "alternative_law_currently_compatible": 0,
+      "alternative_law_restoration": {
+        "min": 4,
+        "max": 6,
+        "mean": 5.25
+      },
+      "alternative_law_reversal": {
+        "min": 4,
+        "max": 6,
+        "mean": 5.25
+      }
+    }
+  },
+  "support": {
+    "-2.0": "grid_support_infeasible",
+    "-1.2": "grid_support_infeasible"
+  }
+}
