@@ -1,0 +1,9 @@
+# Extension: audit the whole minimum-certificate family
+
+2026-10-21. This extension is specified after baseline reconstruction, the two predeclared coherent-rule replays, and inspection of one selected deletion (A1 v1, p=-2), but before inspecting or comparing the full control results. It is explicitly post hoc, not part of the initial primary plan.
+
+Rationale: the earlier obstruction procedure chose a lexicographically first minimum subset. Its influence alone cannot establish that every minimum obstruction is (un)informative for MLE. The previous frozen geometric artifact already lists ALL 7,718 certifying minimum pairs and 24 certifying minimum triples. The primary exhaustive size-matched refits already cover them, so this extension adds a deterministic join, not an adaptive refit search or a new classifier.
+
+For each of the 77 incompatible folder-slope cases, join the complete minimum-certificate family to the exhaustive deletion controls using exact IDs. Report its size and the minimum/median/maximum absolute beta shift, toward-target change, T reduction, and descriptive rank among all size-matched deletions. Separately identify a minimum-cardinality geometric certificate with maximum T reduction (tie-break lexicographic IDs), and compare the previous fixed choice and all-deletion maximum. Report how many family members move away from target or increase T. Keep 52 classifier-specific and 25 force-grid-infeasible cases separate. Include both triples, never only favorable cases.
+
+This is a criterion for choosing a likelihood-relevant explanation among exact geometric certificates, NOT a minimum MLE-reversal set, new p-value, significance test, physical causal explanation or globally optimal deletion across all120 rows. The maximizer is outcome-selected and its descriptive rank has no inferential calibration. No new inferential cutoffs or claimed confidence levels will be introduced.
