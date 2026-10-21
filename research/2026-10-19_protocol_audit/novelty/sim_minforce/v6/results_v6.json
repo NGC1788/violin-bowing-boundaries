@@ -1,0 +1,161 @@
+{
+ "H0m": {
+  "rows": {
+   "0.02": {
+    "fmin": 0.13606693841876527,
+    "labels": "...................HHHHHHHHHHHHH"
+   },
+   "0.03": {
+    "fmin": 0.05526475705630105,
+    "labels": "................HHHHHHHHHHHHHHHH"
+   },
+   "0.05": {
+    "fmin": 0.022446256291093016,
+    "labels": ".............HHHHHHHHHHHHHHHHHHH"
+   },
+   "0.08": {
+    "fmin": 0.009116740004342204,
+    "labels": "..........HHHHHHHHHHHHHHHHHHHH.."
+   },
+   "0.12": {
+    "fmin": 0.0037028423461312188,
+    "labels": ".......HHHHHHHHHHHHHHHHHHHHHH..."
+   },
+   "0.2": {
+    "fmin": 0.0011137714759997793,
+    "labels": "...HHHHHHHHHHHHHHHHHHHHHHHH....."
+   },
+   "0.1": {
+    "fmin": 0.005,
+    "labels": "........HHHHHHHHHHHHHHHHHHHHH..."
+   }
+  },
+  "b_beta": -2.04589777782553,
+  "n_beta_defined": 6
+ },
+ "H1m": {
+  "rows": {
+   "0.02": {
+    "fmin": null,
+    "labels": "ccccccccc......................."
+   },
+   "0.03": {
+    "fmin": null,
+    "labels": "ccccccc........................H"
+   },
+   "0.05": {
+    "fmin": null,
+    "labels": "cccccc..c....c................H."
+   },
+   "0.08": {
+    "fmin": 0.4523678621174643,
+    "labels": "ccccccc..cccccc........HHHH.HH.."
+   },
+   "0.12": {
+    "fmin": 0.012310462007473127,
+    "labels": "ccc.cccccccHHHHH...HHHHHHHHH...."
+   },
+   "0.2": {
+    "fmin": 0.0011137714759997793,
+    "labels": "cccHHHHHHHHHHHHHHHHHHHH........."
+   },
+   "0.1": {
+    "fmin": 0.022446256291093016,
+    "labels": "ccccc.cccccccHHHHHHHHHHH...HH..."
+   }
+  },
+  "b_beta": -6.476702677986597,
+  "n_beta_defined": 3
+ },
+ "H1r": {
+  "rows": {
+   "0.02": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.03": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.05": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.08": {
+    "fmin": null,
+    "labels": ".........................H......"
+   },
+   "0.12": {
+    "fmin": null,
+    "labels": ".......................H...H...."
+   },
+   "0.2": {
+    "fmin": null,
+    "labels": ".................H.............."
+   },
+   "0.1": {
+    "fmin": null,
+    "labels": "..........c....................."
+   }
+  },
+  "b_beta": null,
+  "n_beta_defined": 0
+ },
+ "H0r": {
+  "rows": {
+   "0.02": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.03": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.05": {
+    "fmin": null,
+    "labels": ".........................H......"
+   },
+   "0.08": {
+    "fmin": null,
+    "labels": "...........................H...."
+   },
+   "0.12": {
+    "fmin": null,
+    "labels": ".........c......................"
+   },
+   "0.2": {
+    "fmin": null,
+    "labels": ".........c......................"
+   },
+   "0.1": {
+    "fmin": null,
+    "labels": "................................"
+   }
+  },
+  "b_beta": null,
+  "n_beta_defined": 0
+ },
+ "readings": {
+  "gate": true,
+  "H0m_over_FS": 1.1733247133005147,
+  "H0m_b_beta": -2.04589777782553,
+  "dmu_eff": 0.7727272727272727,
+  "establishment": "smooth friction does not restore establishment",
+  "H1r_b_beta": null,
+  "H1r_F_min_beta0p1": null,
+  "H1r_level": null,
+  "r_maintenance": 4.489251258218603,
+  "r_reading": "substantial (r>=3)",
+  "H1m_b_beta": -6.476702677986597,
+  "measured": {
+   "b_onset": -1.23,
+   "b_window": -1.54,
+   "F_onset": 0.4,
+   "F_window": 0.27
+  },
+  "v4_maintenance_coulomb": {
+   "b_beta": -4.12,
+   "F": 0.335
+  }
+ }
+}

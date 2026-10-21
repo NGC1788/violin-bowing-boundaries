@@ -1,4 +1,4 @@
-# Simulation v5 — result (run once, `run_v5.log`, `results_v5.json`; Claude, 2026-10-21 ≈12:10 KST)
+# Simulation v5 — result (run once, `run_v5.log`, `results_v5.json`; Claude, 2026-10-21 ≈12:05 KST)
 
 - **Reading: undefined.** Started from rest with the measured ramp (0.104 m/s²), the v4 damped string (R1) gave no
   K = 2 Helmholtz run at any β or force; only isolated single Helmholtz labels (β 0.08: 2 of 32 forces, β 0.12: 1,
