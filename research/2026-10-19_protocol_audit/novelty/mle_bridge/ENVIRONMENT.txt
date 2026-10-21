@@ -1,0 +1,3 @@
+Python 3.11.15
+macOS-26.6.2-arm64-arm-64bit
+BLAS threads=1; at most2production workers

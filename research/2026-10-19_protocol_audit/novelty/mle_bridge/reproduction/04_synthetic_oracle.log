@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "scope": "synthetic; no empirical scores",
+  "high_precision_interval_cases": 201,
+  "max_log_mass_absolute_error": 2.7217197384743486e-09,
+  "gradient_fixtures": 30,
+  "gradient_max_absolute_error": 4.588287083606701e-09,
+  "diagnostic_edge_fixtures": 9,
+  "invalid_interval_rejections": 6,
+  "dense_grid_objective_evaluations": 8181,
+  "dense_grid_fit": {
+    "params": [
+      0.12107439356412496,
+      -0.11051182293198082
+    ],
+    "nll": 28.52343079696983,
+    "dense_min": 28.52413296840686
+  },
+  "geometric_contradiction_has_finite_gaussian_nll": 10.443047255365368,
+  "fixed_scale_pair_bound_checks": 6480,
+  "fixed_scale_pair_bound_midpoint_max_error": 3.552713678800501e-15,
+  "seconds": 0.4267634579446167
+}

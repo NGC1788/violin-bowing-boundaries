@@ -1,0 +1,28 @@
+{
+  "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1",
+  "session": "B_T2r1",
+  "k": 2,
+  "p": [
+    -1.2
+  ],
+  "number": 19,
+  "eligible_indices": [
+    0,
+    1,
+    2,
+    3,
+    8,
+    12,
+    23,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "n_controls": 78,
+  "fit_count": 156,
+  "seconds": 0.17625858401879668,
+  "failures": []
+}

@@ -1,0 +1,3132 @@
+{
+  "post_hoc": true,
+  "no_threshold_optimization": true,
+  "input_sha256": "85ab696054670f80bc9690873291c39bb119b56670b4513da59bae994a2b0d70",
+  "rules": {
+    "baseline": {
+      "thresholds": [
+        0.8,
+        0.5
+      ],
+      "sessions": {
+        "A1": {
+          "fit": {
+            "params": [
+              -1.492571576290044,
+              0.6659046363164978,
+              -0.9706438189670309,
+              -0.9738203140300359
+            ],
+            "nll": 320.61728491597927,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 5.448846378541816e-07,
+            "scale_hit": false,
+            "sigma": 0.37763758465543545,
+            "iterations": 8,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -4.010996642204423,
+                0.7826322370747967,
+                -2.0,
+                -0.21679087873600975
+              ],
+              "nll": 399.554178730049,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 1.2819302250555165e-06,
+              "scale_hit": false,
+              "sigma": 0.8050983148793123,
+              "iterations": 16,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -2.0897755377370255,
+                0.6788675947068319,
+                -1.2,
+                -0.8777247379773525
+              ],
+              "nll": 329.4105261467362,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 2.9195956681160595e-06,
+              "scale_hit": false,
+              "sigma": 0.415727725930569,
+              "iterations": 11,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 157.87378762813944,
+            "-1.2": 17.58648246151381
+          },
+          "delta_beta": 0.0,
+          "delta_speed": 0.0,
+          "counts": {
+            "finite": 112,
+            "right": 8,
+            "n": 120
+          },
+          "label_changes": 0,
+          "interval_changes": 0,
+          "original_eligible_boundary_losses": 0
+        },
+        "A2": {
+          "fit": {
+            "params": [
+              -1.413392680028789,
+              0.940461585449027,
+              -1.0887901902814412,
+              -0.3834736191964623
+            ],
+            "nll": 383.39527738789275,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 3.993361854526256e-07,
+            "scale_hit": false,
+            "sigma": 0.6814900560669009,
+            "iterations": 6,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.6513228750559956,
+                1.0419916714988087,
+                -2.0,
+                -0.05558401791724865
+              ],
+              "nll": 415.1331317324108,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 2.542717156828189e-07,
+              "scale_hit": false,
+              "sigma": 0.9459325450493745,
+              "iterations": 13,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.7024778044949356,
+                0.9469923161338444,
+                -1.2,
+                -0.37156814261892424
+              ],
+              "nll": 384.08724413605535,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 3.332096310019554e-09,
+              "scale_hit": false,
+              "sigma": 0.6896520095338451,
+              "iterations": 8,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+            }
+          },
+          "T": {
+            "-2.0": 63.47570868903608,
+            "-1.2": 1.3839334963251986
+          },
+          "delta_beta": 0.0,
+          "delta_speed": 0.0,
+          "counts": {
+            "finite": 110,
+            "left": 1,
+            "right": 9,
+            "n": 120
+          },
+          "label_changes": 0,
+          "interval_changes": 0,
+          "original_eligible_boundary_losses": 0
+        },
+        "A3": {
+          "fit": {
+            "params": [
+              -1.5484016512471084,
+              1.0741844598366825,
+              -1.2218389042460132,
+              -0.4974083342219037
+            ],
+            "nll": 382.22681116048693,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 1.861312575179852e-07,
+            "scale_hit": false,
+            "sigma": 0.6081046231794125,
+            "iterations": 8,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.4192435365465577,
+                1.1831290415685338,
+                -2.0,
+                -0.16794629500510677
+              ],
+              "nll": 410.1576006915043,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 1.2852720480077275e-06,
+              "scale_hit": false,
+              "sigma": 0.8453992356271512,
+              "iterations": 13,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.4914429235376634,
+                1.0729236135279534,
+                -1.2,
+                -0.49872021343961936
+              ],
+              "nll": 382.26034596725475,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 1.1556240098187232e-07,
+              "scale_hit": false,
+              "sigma": 0.6073073864155765,
+              "iterations": 6,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 55.86157906203471,
+            "-1.2": 0.06706961353563656
+          },
+          "delta_beta": 0.0,
+          "delta_speed": 0.0,
+          "counts": {
+            "finite": 102,
+            "left": 8,
+            "right": 10,
+            "n": 120
+          },
+          "label_changes": 0,
+          "interval_changes": 0,
+          "original_eligible_boundary_losses": 0
+        },
+        "A4": {
+          "fit": {
+            "params": [
+              -2.2491653521429154,
+              1.0928046644486977,
+              -1.416872750005381,
+              -0.5697889687500165
+            ],
+            "nll": 337.0693483940461,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 1.4464024494564853e-05,
+            "scale_hit": false,
+            "sigma": 0.5656447948332575,
+            "iterations": 8,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.5207383712434863,
+                1.2645944959671347,
+                -2.0,
+                -0.3028581323904218
+              ],
+              "nll": 353.17738751083186,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 2.371530162137425e-06,
+              "scale_hit": false,
+              "sigma": 0.73870388709175,
+              "iterations": 13,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.7182575033844358,
+                1.0577547176955948,
+                -1.2,
+                -0.5626477307964202
+              ],
+              "nll": 340.45294673370665,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 3.166894897432826e-07,
+              "scale_hit": false,
+              "sigma": 0.5696986564777136,
+              "iterations": 10,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 32.21607823357158,
+            "-1.2": 6.7671966793211595
+          },
+          "delta_beta": 0.0,
+          "delta_speed": 0.0,
+          "counts": {
+            "finite": 85,
+            "left": 27,
+            "right": 8,
+            "n": 120
+          },
+          "label_changes": 0,
+          "interval_changes": 0,
+          "original_eligible_boundary_losses": 0
+        },
+        "A_T2": {
+          "fit": {
+            "params": [
+              -3.7606468564644437,
+              1.1876944681356982,
+              -1.9504984843271005,
+              -0.7055714747823033
+            ],
+            "nll": 281.163643099002,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 1.5859947470886482e-06,
+            "scale_hit": false,
+            "sigma": 0.49382628433470277,
+            "iterations": 12,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.8583138281219513,
+                1.2085011333015863,
+                -2.0,
+                -0.6963691876892477
+              ],
+              "nll": 281.3313820666653,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 3.140865025841322e-07,
+              "scale_hit": false,
+              "sigma": 0.49839158898268465,
+              "iterations": 7,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -2.065813913792129,
+                0.9833258016215496,
+                -1.2,
+                -0.4031817145960071
+              ],
+              "nll": 314.9159159734433,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 5.044880744264901e-07,
+              "scale_hit": false,
+              "sigma": 0.6681906682936545,
+              "iterations": 12,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 0.335477935326594,
+            "-1.2": 67.5045457488826
+          },
+          "delta_beta": 0.0,
+          "delta_speed": 0.0,
+          "counts": {
+            "finite": 82,
+            "left": 32,
+            "right": 6,
+            "n": 120
+          },
+          "label_changes": 0,
+          "interval_changes": 0,
+          "original_eligible_boundary_losses": 0
+        },
+        "B1": {
+          "fit": {
+            "params": [
+              -2.918510021218707,
+              1.0884143539843545,
+              -1.6629420012220661,
+              -0.5038423151308002
+            ],
+            "nll": 354.82133900321,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 6.881041336725957e-08,
+            "scale_hit": false,
+            "sigma": 0.6042046492757218,
+            "iterations": 8,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.6737321602645476,
+                1.1721751094953041,
+                -2.0,
+                -0.39932778014062775
+              ],
+              "nll": 360.7268698844972,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 4.793655596913027e-07,
+              "scale_hit": false,
+              "sigma": 0.6707707999686187,
+              "iterations": 10,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.753235045078068,
+                1.0336250865551588,
+                -1.2,
+                -0.41381145844150535
+              ],
+              "nll": 367.73781091952793,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 1.1467887111038522e-06,
+              "scale_hit": false,
+              "sigma": 0.6611255891647732,
+              "iterations": 11,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 11.811061762574354,
+            "-1.2": 25.832943832635806
+          },
+          "delta_beta": 0.0,
+          "delta_speed": 0.0,
+          "counts": {
+            "finite": 91,
+            "left": 21,
+            "right": 8,
+            "n": 120
+          },
+          "label_changes": 0,
+          "interval_changes": 0,
+          "original_eligible_boundary_losses": 0
+        },
+        "B_T2r1": {
+          "fit": {
+            "params": [
+              -3.72292104775509,
+              1.422851547641697,
+              -2.1752006790750316,
+              -1.1032118450311743
+            ],
+            "nll": 220.65720303416893,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 1.8651375066625064e-07,
+            "scale_hit": false,
+            "sigma": 0.33180366846565407,
+            "iterations": 11,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.4570874386574677,
+                1.3051819122884507,
+                -2.0,
+                -1.1134414694798132
+              ],
+              "nll": 223.12789140755658,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 4.016724730604437e-09,
+              "scale_hit": false,
+              "sigma": 0.328426743332724,
+              "iterations": 10,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+            },
+            "-1.2": {
+              "params": [
+                -1.7440820863837088,
+                1.0284913393563726,
+                -1.2,
+                -0.4908785384216562
+              ],
+              "nll": 280.8527379714552,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 1.33932802626191e-08,
+              "scale_hit": false,
+              "sigma": 0.6120884147114253,
+              "iterations": 16,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+            }
+          },
+          "T": {
+            "-2.0": 4.9413767467752905,
+            "-1.2": 120.39106987457257
+          },
+          "delta_beta": 0.0,
+          "delta_speed": 0.0,
+          "counts": {
+            "finite": 63,
+            "left": 46,
+            "right": 11,
+            "n": 120
+          },
+          "label_changes": 0,
+          "interval_changes": 0,
+          "original_eligible_boundary_losses": 0
+        },
+        "B_T2r2": {
+          "fit": {
+            "params": [
+              -2.942030227602635,
+              1.2169760813855584,
+              -1.8161856491636024,
+              -0.8653020483307965
+            ],
+            "nll": 233.8576617156003,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 1.0883525605187572e-06,
+            "scale_hit": false,
+            "sigma": 0.4209243939136762,
+            "iterations": 12,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.3214953145464037,
+                1.2980623890999128,
+                -2.0,
+                -0.7786747857954959
+              ],
+              "nll": 235.47469992184628,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 2.3800116106392766e-06,
+              "scale_hit": false,
+              "sigma": 0.45901390016534727,
+              "iterations": 10,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.520915169373442,
+                1.044088900769401,
+                -1.2,
+                -0.692277130254981
+              ],
+              "nll": 261.1344987811815,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 9.7520232726412e-06,
+              "scale_hit": false,
+              "sigma": 0.5004352144542621,
+              "iterations": 14,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 3.2340764124919588,
+            "-1.2": 54.55367413116238
+          },
+          "delta_beta": 0.0,
+          "delta_speed": 0.0,
+          "counts": {
+            "finite": 58,
+            "left": 51,
+            "right": 11,
+            "n": 120
+          },
+          "label_changes": 0,
+          "interval_changes": 0,
+          "original_eligible_boundary_losses": 0
+        },
+        "B_T2s1": {
+          "fit": {
+            "params": [
+              -2.7864769504065543,
+              1.3248252209425795,
+              -1.847524887548935,
+              -0.5816651090454708
+            ],
+            "nll": 315.5516193894217,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 1.5364560530528593e-06,
+            "scale_hit": false,
+            "sigma": 0.5589668504838422,
+            "iterations": 8,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.1099159723960415,
+                1.3698201414283269,
+                -2.0,
+                -0.5465234511616772
+              ],
+              "nll": 316.9445899868513,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 2.7821990264571564e-07,
+              "scale_hit": false,
+              "sigma": 0.5789590952382546,
+              "iterations": 8,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.191917160290393,
+                1.23446602498092,
+                -1.2,
+                -0.3943648678637603
+              ],
+              "nll": 341.18678602365407,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 5.37213674308211e-07,
+              "scale_hit": false,
+              "sigma": 0.6741080509989583,
+              "iterations": 14,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 2.7859411948592196,
+            "-1.2": 51.2703332684647
+          },
+          "delta_beta": 0.0,
+          "delta_speed": 0.0,
+          "counts": {
+            "finite": 91,
+            "left": 19,
+            "right": 10,
+            "n": 120
+          },
+          "label_changes": 0,
+          "interval_changes": 0,
+          "original_eligible_boundary_losses": 0
+        },
+        "C1": {
+          "fit": {
+            "params": [
+              -2.9248440961542626,
+              1.1205209040909794,
+              -1.606636135157707,
+              -0.7110061018740218
+            ],
+            "nll": 319.0345580395053,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 8.687852348643332e-08,
+            "scale_hit": false,
+            "sigma": 0.49114980206032116,
+            "iterations": 8,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.7790740791692072,
+                1.243014909635052,
+                -2.0,
+                -0.541203649740384
+              ],
+              "nll": 329.06238761530733,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 2.611704586252911e-07,
+              "scale_hit": false,
+              "sigma": 0.5820472495568727,
+              "iterations": 11,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.9323193090827937,
+                1.049212820961958,
+                -1.2,
+                -0.6157350990774234
+              ],
+              "nll": 332.7112028524796,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 4.2500084074248434e-07,
+              "scale_hit": false,
+              "sigma": 0.5402436167234081,
+              "iterations": 12,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 20.055659151604004,
+            "-1.2": 27.35328962594849
+          },
+          "delta_beta": 0.0,
+          "delta_speed": 0.0,
+          "counts": {
+            "finite": 86,
+            "left": 27,
+            "right": 7,
+            "n": 120
+          },
+          "label_changes": 0,
+          "interval_changes": 0,
+          "original_eligible_boundary_losses": 0
+        },
+        "C_T2": {
+          "fit": {
+            "params": [
+              -3.5416411388393856,
+              1.1607068216515366,
+              -1.8223197497478065,
+              -1.1849977635599216
+            ],
+            "nll": 254.15376970653557,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 4.0879485219136313e-07,
+            "scale_hit": false,
+            "sigma": 0.305746863282486,
+            "iterations": 13,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.9229454018109866,
+                1.2329566826117824,
+                -2.0,
+                -1.0969459777150805
+              ],
+              "nll": 257.56728792520425,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 1.405508195106986e-07,
+              "scale_hit": false,
+              "sigma": 0.3338892333401859,
+              "iterations": 10,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -2.1890492686623246,
+                0.9392208530096063,
+                -1.2,
+                -0.7829950260829979
+              ],
+              "nll": 295.89169665852324,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 3.1023010999030094e-05,
+              "scale_hit": false,
+              "sigma": 0.4570351272862146,
+              "iterations": 17,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 6.8270364373373695,
+            "-1.2": 83.47585390397535
+          },
+          "delta_beta": 0.0,
+          "delta_speed": 0.0,
+          "counts": {
+            "finite": 72,
+            "left": 43,
+            "right": 5,
+            "n": 120
+          },
+          "label_changes": 0,
+          "interval_changes": 0,
+          "original_eligible_boundary_losses": 0
+        },
+        "D1": {
+          "fit": {
+            "params": [
+              -2.6874947892666263,
+              1.13151322539709,
+              -1.640450101200072,
+              -0.8050660005622459
+            ],
+            "nll": 294.85487524497375,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 6.486140513572991e-09,
+            "scale_hit": false,
+            "sigma": 0.4470584194785829,
+            "iterations": 9,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.4480550262800107,
+                1.2562825273130593,
+                -2.0,
+                -0.6270286521569166
+              ],
+              "nll": 303.2467060044795,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 8.349152539909442e-07,
+              "scale_hit": false,
+              "sigma": 0.5341766699384486,
+              "iterations": 11,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.6335402829204253,
+                1.0430301553188157,
+                -1.2,
+                -0.6871152956016597
+              ],
+              "nll": 312.32521389895766,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 5.284479256850716e-06,
+              "scale_hit": false,
+              "sigma": 0.5030250567042844,
+              "iterations": 12,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 16.783661519011503,
+            "-1.2": 34.9406773079678
+          },
+          "delta_beta": 0.0,
+          "delta_speed": 0.0,
+          "counts": {
+            "finite": 78,
+            "left": 33,
+            "right": 9,
+            "n": 120
+          },
+          "label_changes": 0,
+          "interval_changes": 0,
+          "original_eligible_boundary_losses": 0
+        },
+        "D2": {
+          "fit": {
+            "params": [
+              -1.052206550809053,
+              1.1304343369716807,
+              -1.1054704689312007,
+              -0.45786209222397883
+            ],
+            "nll": 368.3539305898564,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 7.379480315705678e-08,
+            "scale_hit": false,
+            "sigma": 0.6326347154383809,
+            "iterations": 8,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.1391350765272157,
+                1.2802074653894133,
+                -2.0,
+                -0.08291222151797628
+              ],
+              "nll": 400.15285069484366,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 2.4754398086912488e-08,
+              "scale_hit": false,
+              "sigma": 0.9204319377925415,
+              "iterations": 15,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+            },
+            "-1.2": {
+              "params": [
+                -1.292302412946392,
+                1.1384724726539768,
+                -1.2,
+                -0.44445820456175517
+              ],
+              "nll": 368.9153225018792,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 8.561426988032018e-07,
+              "scale_hit": false,
+              "sigma": 0.641171565773293,
+              "iterations": 7,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 63.59784020997449,
+            "-1.2": 1.1227838240455412
+          },
+          "delta_beta": 0.0,
+          "delta_speed": 0.0,
+          "counts": {
+            "finite": 102,
+            "left": 7,
+            "right": 11,
+            "n": 120
+          },
+          "label_changes": 0,
+          "interval_changes": 0,
+          "original_eligible_boundary_losses": 0
+        }
+      },
+      "global_label_changes": 0,
+      "original_eligible_boundary_losses": 0,
+      "lost_boundary_groups": []
+    },
+    "hard_restore_with_loss": {
+      "thresholds": [
+        0.8,
+        0.33218555281080747
+      ],
+      "sessions": {
+        "A1": {
+          "fit": {
+            "params": [
+              -1.219427054399789,
+              0.6576079389478245,
+              -0.8952043531570862,
+              -1.066136809414661
+            ],
+            "nll": 309.12155566291165,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 1.4848502294384502e-06,
+            "scale_hit": false,
+            "sigma": 0.3443361875640873,
+            "iterations": 7,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.906503547672953,
+                0.7886627945127431,
+                -2.0,
+                -0.18265720194403573
+              ],
+              "nll": 401.71574669658065,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 1.3465804874470687e-08,
+              "scale_hit": false,
+              "sigma": 0.8330536759770422,
+              "iterations": 17,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+            },
+            "-1.2": {
+              "params": [
+                -2.0060377046169604,
+                0.6773727761928083,
+                -1.2,
+                -0.8885968707084014
+              ],
+              "nll": 326.13576007957977,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 2.929387576955378e-08,
+              "scale_hit": false,
+              "sigma": 0.41123236030066546,
+              "iterations": 12,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+            }
+          },
+          "T": {
+            "-2.0": 185.188382067338,
+            "-1.2": 34.02840883333624
+          },
+          "delta_beta": 0.07543946580994465,
+          "delta_speed": -0.008296697368673223,
+          "counts": {
+            "finite": 112,
+            "right": 8,
+            "n": 120
+          },
+          "label_changes": 152,
+          "interval_changes": 42,
+          "original_eligible_boundary_losses": 0
+        },
+        "A2": {
+          "fit": {
+            "params": [
+              -0.7356584106926561,
+              1.001647777361295,
+              -0.9505785376764234,
+              -0.5333269359310905
+            ],
+            "nll": 365.34158268984584,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 2.482081686849824e-07,
+            "scale_hit": false,
+            "sigma": 0.5866499725338771,
+            "iterations": 7,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.241556795059191,
+                1.1433603353841564,
+                -2.0,
+                -0.059374481843505314
+              ],
+              "nll": 412.4453585869952,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 2.1232816238558883e-07,
+              "scale_hit": false,
+              "sigma": 0.9423538086810705,
+              "iterations": 13,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.369712752041306,
+                1.0214203322024367,
+                -1.2,
+                -0.47801582340342785
+              ],
+              "nll": 369.761869746764,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 5.09210416055339e-08,
+              "scale_hit": false,
+              "sigma": 0.620012386198257,
+              "iterations": 10,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+            }
+          },
+          "T": {
+            "-2.0": 94.20755179429875,
+            "-1.2": 8.840574113836283
+          },
+          "delta_beta": 0.13821165260501778,
+          "delta_speed": 0.06118619191226804,
+          "counts": {
+            "finite": 110,
+            "right": 10,
+            "n": 120
+          },
+          "label_changes": 191,
+          "interval_changes": 49,
+          "original_eligible_boundary_losses": 1
+        },
+        "A3": {
+          "fit": {
+            "params": [
+              -1.084179756295733,
+              1.0672940703476865,
+              -1.1023603992830997,
+              -0.5624605405011112
+            ],
+            "nll": 378.3215160199984,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 1.2464026255543104e-08,
+            "scale_hit": false,
+            "sigma": 0.5698053085192589,
+            "iterations": 8,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.186076865138495,
+                1.2082024188820066,
+                -2.0,
+                -0.14107081983054728
+              ],
+              "nll": 416.5879285678054,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 1.8898390183365985e-05,
+              "scale_hit": false,
+              "sigma": 0.8684278076096615,
+              "iterations": 14,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.333154629819144,
+                1.0748761953746444,
+                -1.2,
+                -0.5478584030398087
+              ],
+              "nll": 379.07043592669163,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 2.7101537494189643e-06,
+              "scale_hit": false,
+              "sigma": 0.5781867283577167,
+              "iterations": 7,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 76.53282509561404,
+            "-1.2": 1.497839813386463
+          },
+          "delta_beta": 0.11947850496291346,
+          "delta_speed": -0.006890389488996007,
+          "counts": {
+            "finite": 105,
+            "left": 4,
+            "right": 11,
+            "n": 120
+          },
+          "label_changes": 234,
+          "interval_changes": 51,
+          "original_eligible_boundary_losses": 1
+        },
+        "A4": {
+          "fit": {
+            "params": [
+              -1.6523628660785885,
+              1.1044958785073986,
+              -1.270003942861316,
+              -0.697697732946282
+            ],
+            "nll": 350.39984954047895,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 7.075135354916995e-06,
+            "scale_hit": false,
+            "sigma": 0.4977298928449549,
+            "iterations": 8,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.174258579548802,
+                1.3346787686340034,
+                -2.0,
+                -0.30212805582041824
+              ],
+              "nll": 380.0104946662451,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 1.6970088753164016e-07,
+              "scale_hit": false,
+              "sigma": 0.7392433944087484,
+              "iterations": 13,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.4844785087751697,
+                1.0922123705143807,
+                -1.2,
+                -0.7015960446656808
+              ],
+              "nll": 350.8675429057368,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 1.3704075207954247e-06,
+              "scale_hit": false,
+              "sigma": 0.4957933636202935,
+              "iterations": 8,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 59.22129025153231,
+            "-1.2": 0.9353867305156882
+          },
+          "delta_beta": 0.14686880714406514,
+          "delta_speed": 0.011691214058700883,
+          "counts": {
+            "finite": 92,
+            "left": 19,
+            "right": 9,
+            "n": 120
+          },
+          "label_changes": 264,
+          "interval_changes": 46,
+          "original_eligible_boundary_losses": 1
+        },
+        "A_T2": {
+          "fit": {
+            "params": [
+              -3.5600360609684287,
+              1.2046112057960048,
+              -1.933489099861131,
+              -0.6553319714989152
+            ],
+            "nll": 286.95768317488137,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 6.07649861095183e-07,
+            "scale_hit": false,
+            "sigma": 0.5192696512463405,
+            "iterations": 12,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.6873106748735323,
+                1.2337063384231444,
+                -2.0,
+                -0.6420338428915348
+              ],
+              "nll": 287.2252621570517,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 4.880855835327898e-07,
+              "scale_hit": false,
+              "sigma": 0.5262210839326837,
+              "iterations": 7,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.9158669925689247,
+                1.002157283942119,
+                -1.2,
+                -0.39922215251179993
+              ],
+              "nll": 317.5590294987966,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 6.811418242769207e-07,
+              "scale_hit": false,
+              "sigma": 0.6708416556397986,
+              "iterations": 11,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 0.5351579643406694,
+            "-1.2": 61.20269264783042
+          },
+          "delta_beta": 0.017009384465969557,
+          "delta_speed": 0.016916737660306547,
+          "counts": {
+            "finite": 82,
+            "left": 30,
+            "right": 8,
+            "n": 120
+          },
+          "label_changes": 205,
+          "interval_changes": 27,
+          "original_eligible_boundary_losses": 2
+        },
+        "B1": {
+          "fit": {
+            "params": [
+              -2.2981262102186006,
+              0.9842875642680086,
+              -1.447754261827772,
+              -0.39932841163279736
+            ],
+            "nll": 389.6922837733116,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 1.0537668225785168e-05,
+            "scale_hit": false,
+            "sigma": 0.6707703763822446,
+            "iterations": 8,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.577387197522832,
+                1.0912727152607768,
+                -2.0,
+                -0.21945303469467387
+              ],
+              "nll": 402.4756322067178,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 5.101887019520746e-07,
+              "scale_hit": false,
+              "sigma": 0.8029578679689197,
+              "iterations": 11,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.665936295492898,
+                0.9617017216445611,
+                -1.2,
+                -0.3862288832958726
+              ],
+              "nll": 393.05799826260153,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 2.61459154608919e-06,
+              "scale_hit": false,
+              "sigma": 0.6796149553663685,
+              "iterations": 9,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 25.566696866812435,
+            "-1.2": 6.7314289785798564
+          },
+          "delta_beta": 0.21518773939429425,
+          "delta_speed": -0.10412678971634592,
+          "counts": {
+            "finite": 97,
+            "left": 14,
+            "right": 9,
+            "n": 120
+          },
+          "label_changes": 317,
+          "interval_changes": 49,
+          "original_eligible_boundary_losses": 1
+        },
+        "B_T2r1": {
+          "fit": {
+            "params": [
+              -3.0563160390965622,
+              1.2582635626163554,
+              -1.8883038905615614,
+              -0.8138647532685113
+            ],
+            "nll": 264.0889350964419,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 5.389932056232283e-09,
+            "scale_hit": false,
+            "sigma": 0.44314211755242794,
+            "iterations": 12,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.240966663274089,
+                1.3223676271653595,
+                -2.0,
+                -0.7770902745680988
+              ],
+              "nll": 264.85960446949457,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 9.00904450454491e-07,
+              "scale_hit": false,
+              "sigma": 0.45974178936570453,
+              "iterations": 9,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.5855949136695688,
+                1.0316161660285725,
+                -1.2,
+                -0.5503111207315396
+              ],
+              "nll": 296.60353304765215,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 4.0626403396970545e-07,
+              "scale_hit": false,
+              "sigma": 0.5767703372537724,
+              "iterations": 14,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 1.541338746105339,
+            "-1.2": 65.0291959024205
+          },
+          "delta_beta": 0.2868967885134701,
+          "delta_speed": -0.16458798502534155,
+          "counts": {
+            "finite": 69,
+            "left": 40,
+            "right": 11,
+            "n": 120
+          },
+          "label_changes": 239,
+          "interval_changes": 42,
+          "original_eligible_boundary_losses": 0
+        },
+        "B_T2r2": {
+          "fit": {
+            "params": [
+              -2.904767927869501,
+              1.182832420804069,
+              -1.8196564863817772,
+              -0.8623183933466148
+            ],
+            "nll": 238.99594660384759,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 2.950422465453073e-06,
+            "scale_hit": false,
+            "sigma": 0.42218216252025115,
+            "iterations": 12,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.259373014102599,
+                1.2667403468473477,
+                -2.0,
+                -0.776992364448152
+              ],
+              "nll": 240.5897866996437,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 4.307965910818612e-06,
+              "scale_hit": false,
+              "sigma": 0.4597868049431502,
+              "iterations": 10,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.5093776591928,
+                1.0024382739524071,
+                -1.2,
+                -0.6873459484812635
+              ],
+              "nll": 267.4385961638804,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 1.6503849898236715e-06,
+              "scale_hit": false,
+              "sigma": 0.5029090459060693,
+              "iterations": 15,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 3.1876801915922215,
+            "-1.2": 56.88529912006561
+          },
+          "delta_beta": -0.0034708372181748715,
+          "delta_speed": -0.03414366058148932,
+          "counts": {
+            "finite": 60,
+            "left": 48,
+            "right": 12,
+            "n": 120
+          },
+          "label_changes": 284,
+          "interval_changes": 29,
+          "original_eligible_boundary_losses": 1
+        },
+        "B_T2s1": {
+          "fit": {
+            "params": [
+              -2.269539086425876,
+              1.1604362209515013,
+              -1.6045285655062222,
+              -0.6110280918159536
+            ],
+            "nll": 357.60226171024834,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 4.523534011369179e-06,
+            "scale_hit": false,
+            "sigma": 0.5427925415479714,
+            "iterations": 8,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.171287524397008,
+                1.2360413759588584,
+                -2.0,
+                -0.47585882940083074
+              ],
+              "nll": 368.12310631267883,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 4.2692299995206184e-06,
+              "scale_hit": false,
+              "sigma": 0.6213511925764067,
+              "iterations": 10,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.2332524045441713,
+                1.1286061480821126,
+                -1.2,
+                -0.5230220649885295
+              ],
+              "nll": 370.5115973619106,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 1.3926197550951783e-05,
+              "scale_hit": false,
+              "sigma": 0.5927265803459264,
+              "iterations": 10,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 21.041689204860972,
+            "-1.2": 25.81867130332455
+          },
+          "delta_beta": 0.2429963220427127,
+          "delta_speed": -0.16438899999107814,
+          "counts": {
+            "finite": 102,
+            "left": 7,
+            "right": 11,
+            "n": 120
+          },
+          "label_changes": 272,
+          "interval_changes": 48,
+          "original_eligible_boundary_losses": 1
+        },
+        "C1": {
+          "fit": {
+            "params": [
+              -2.257291506971652,
+              1.1072553928303417,
+              -1.4346493503952913,
+              -0.6396978649352242
+            ],
+            "nll": 348.76228039053495,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 8.690202975447647e-06,
+            "scale_hit": false,
+            "sigma": 0.5274517616432686,
+            "iterations": 8,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.5030580051839637,
+                1.2612493650424166,
+                -2.0,
+                -0.38289290761796685
+              ],
+              "nll": 367.0563632159776,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 3.5844600837497964e-06,
+              "scale_hit": false,
+              "sigma": 0.6818859201633961,
+              "iterations": 13,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.676330317409494,
+                1.0736018068802569,
+                -1.2,
+                -0.6186436816899006
+              ],
+              "nll": 353.32018388784667,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 3.600445630524973e-08,
+              "scale_hit": false,
+              "sigma": 0.5386745565100999,
+              "iterations": 10,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+            }
+          },
+          "T": {
+            "-2.0": 36.588165650885344,
+            "-1.2": 9.115806994623426
+          },
+          "delta_beta": 0.1719867847624157,
+          "delta_speed": -0.013265511260637686,
+          "counts": {
+            "finite": 92,
+            "left": 21,
+            "right": 7,
+            "n": 120
+          },
+          "label_changes": 312,
+          "interval_changes": 52,
+          "original_eligible_boundary_losses": 0
+        },
+        "C_T2": {
+          "fit": {
+            "params": [
+              -3.3337245069178474,
+              1.1281204902414752,
+              -1.7675652319135422,
+              -1.133043707961661
+            ],
+            "nll": 264.42593221308664,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 3.4011695806412945e-06,
+            "scale_hit": false,
+            "sigma": 0.32205153232642636,
+            "iterations": 13,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.818425784580236,
+                1.224352934331548,
+                -2.0,
+                -1.0101380787414924
+              ],
+              "nll": 270.2081359760752,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 4.512556649771682e-05,
+              "scale_hit": false,
+              "sigma": 0.3641686921450886,
+              "iterations": 11,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -2.1021513321456236,
+                0.9329099452695636,
+                -1.2,
+                -0.7953428804853683
+              ],
+              "nll": 301.1999644668273,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 3.4017784318329802e-06,
+              "scale_hit": false,
+              "sigma": 0.4514264230720767,
+              "iterations": 15,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 11.564407525977117,
+            "-1.2": 73.54806450748129
+          },
+          "delta_beta": 0.05475451783426433,
+          "delta_speed": -0.0325863314100614,
+          "counts": {
+            "finite": 76,
+            "left": 39,
+            "right": 5,
+            "n": 120
+          },
+          "label_changes": 216,
+          "interval_changes": 32,
+          "original_eligible_boundary_losses": 0
+        },
+        "D1": {
+          "fit": {
+            "params": [
+              -2.0687450045700877,
+              1.077786350476043,
+              -1.4557769631668278,
+              -0.7169034325072353
+            ],
+            "nll": 319.3241916975393,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 5.384848122957919e-09,
+            "scale_hit": false,
+            "sigma": 0.4882618532514973,
+            "iterations": 10,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.2214966533435696,
+                1.2497126019641671,
+                -2.0,
+                -0.42819291482572636
+              ],
+              "nll": 335.79235873988375,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 8.528199577639839e-06,
+              "scale_hit": false,
+              "sigma": 0.6516856828414088,
+              "iterations": 13,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.4489860828954355,
+                1.0346758045359659,
+                -1.2,
+                -0.6977430197003321
+              ],
+              "nll": 325.24529939287794,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 3.3765084497261455e-06,
+              "scale_hit": false,
+              "sigma": 0.49770735278410116,
+              "iterations": 11,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 32.93633408468895,
+            "-1.2": 11.842215390677325
+          },
+          "delta_beta": 0.18467313803324426,
+          "delta_speed": -0.05372687492104711,
+          "counts": {
+            "finite": 83,
+            "left": 27,
+            "right": 10,
+            "n": 120
+          },
+          "label_changes": 278,
+          "interval_changes": 44,
+          "original_eligible_boundary_losses": 1
+        },
+        "D2": {
+          "fit": {
+            "params": [
+              -0.6242041905373493,
+              1.12858277248639,
+              -1.0070646148442222,
+              -0.515013167090609
+            ],
+            "nll": 363.01463773283086,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 7.631421539144867e-08,
+            "scale_hit": false,
+            "sigma": 0.597492727325564,
+            "iterations": 8,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -2.884205811159999,
+                1.3119152878163864,
+                -2.0,
+                -0.06190514737430313
+              ],
+              "nll": 402.83305259304035,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 1.0158958185790823e-06,
+              "scale_hit": false,
+              "sigma": 0.9399720413789552,
+              "iterations": 15,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.1035149993978401,
+                1.1486750970854376,
+                -1.2,
+                -0.4739604641899178
+              ],
+              "nll": 365.534614666283,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 6.206111995976649e-06,
+              "scale_hit": false,
+              "sigma": 0.6225318643827199,
+              "iterations": 9,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 79.63682972041897,
+            "-1.2": 5.039953866904284
+          },
+          "delta_beta": 0.09840585408697855,
+          "delta_speed": -0.0018515644852907798,
+          "counts": {
+            "finite": 103,
+            "left": 5,
+            "right": 12,
+            "n": 120
+          },
+          "label_changes": 236,
+          "interval_changes": 53,
+          "original_eligible_boundary_losses": 1
+        }
+      },
+      "global_label_changes": 3200,
+      "original_eligible_boundary_losses": 10,
+      "lost_boundary_groups": [
+        "A2|2024-04-19_TypeA_sample2/v3",
+        "A3|2024-04-22_TypeA_sample3/v3",
+        "A4|2024-04-24_TypeA_sample4/v3",
+        "A_T2|2024-06-19_TypeA_T2_sample1/v3",
+        "B1|2024-04-10_TypeB_sample1/2024-04-10/v3",
+        "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v3",
+        "B_T2s1|2024-06-13_TypeB_T2_sample1/v3",
+        "D1|2024-04-15_TypeD_sample1/2024-04-17/v3",
+        "D2|2024-04-26_TypeD_sample2/v3"
+      ]
+    },
+    "near_cutoff_no_loss": {
+      "thresholds": [
+        0.8,
+        0.49326392706532574
+      ],
+      "sessions": {
+        "A1": {
+          "fit": {
+            "params": [
+              -1.4885937861562932,
+              0.6676593866270081,
+              -0.9709601653920928,
+              -0.9737864027288617
+            ],
+            "nll": 320.55248727765746,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 5.727029366298098e-07,
+            "scale_hit": false,
+            "sigma": 0.377650391054443,
+            "iterations": 8,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -4.0058930310667815,
+                0.7844782790689376,
+                -2.0,
+                -0.2171181465231519
+              ],
+              "nll": 399.4590122802255,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 1.2771177229642383e-06,
+              "scale_hit": false,
+              "sigma": 0.8048348752453742,
+              "iterations": 16,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -2.084894992353233,
+                0.6806330444667106,
+                -1.2,
+                -0.877929683852022
+              ],
+              "nll": 329.3219135097754,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 2.741546624163149e-06,
+              "scale_hit": false,
+              "sigma": 0.4156425329784241,
+              "iterations": 11,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 157.81305000513612,
+            "-1.2": 17.5388524642359
+          },
+          "delta_beta": -0.000316346425061953,
+          "delta_speed": 0.0017547503105103113,
+          "counts": {
+            "finite": 112,
+            "right": 8,
+            "n": 120
+          },
+          "label_changes": 9,
+          "interval_changes": 1,
+          "original_eligible_boundary_losses": 0
+        },
+        "A2": {
+          "fit": {
+            "params": [
+              -1.4086391242969787,
+              0.9404496640029514,
+              -1.0872972342007077,
+              -0.3832229743570618
+            ],
+            "nll": 382.708706892391,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 4.1000216910447307e-07,
+            "scale_hit": false,
+            "sigma": 0.6816608894409143,
+            "iterations": 6,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.6501714980841933,
+                1.0421722192305662,
+                -2.0,
+                -0.05470382090031016
+              ],
+              "nll": 414.51125783362886,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 2.745878813215086e-07,
+              "scale_hit": false,
+              "sigma": 0.9467655185903864,
+              "iterations": 13,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.7015838734958284,
+                0.9470764618995713,
+                -1.2,
+                -0.37107777131122033
+              ],
+              "nll": 383.41878907512944,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 1.9457292665947534e-08,
+              "scale_hit": false,
+              "sigma": 0.6899902780234232,
+              "iterations": 8,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+            }
+          },
+          "T": {
+            "-2.0": 63.605101882475765,
+            "-1.2": 1.4201643654769214
+          },
+          "delta_beta": 0.0014929560807335207,
+          "delta_speed": -1.1921446075646713e-05,
+          "counts": {
+            "finite": 110,
+            "left": 1,
+            "right": 9,
+            "n": 120
+          },
+          "label_changes": 12,
+          "interval_changes": 1,
+          "original_eligible_boundary_losses": 0
+        },
+        "A3": {
+          "fit": {
+            "params": [
+              -1.5348752651056914,
+              1.0654549223490541,
+              -1.213796600078357,
+              -0.5156543850295254
+            ],
+            "nll": 383.41685586788026,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 1.8881677910087546e-07,
+            "scale_hit": false,
+            "sigma": 0.5971097270768687,
+            "iterations": 8,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.4282049858807104,
+                1.1735847132296817,
+                -2.0,
+                -0.1763804996199927
+              ],
+              "nll": 412.62785371035045,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 2.2947285772445672e-06,
+              "scale_hit": false,
+              "sigma": 0.8382989502129355,
+              "iterations": 13,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.498924721737886,
+                1.0646446244502512,
+                -1.2,
+                -0.5165858746953703
+              ],
+              "nll": 383.4307283659666,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 1.0361758695509593e-07,
+              "scale_hit": false,
+              "sigma": 0.5965537845042997,
+              "iterations": 6,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 58.421995684940384,
+            "-1.2": 0.02774499617271431
+          },
+          "delta_beta": 0.008042304167656056,
+          "delta_speed": -0.008729537487628392,
+          "counts": {
+            "finite": 103,
+            "left": 7,
+            "right": 10,
+            "n": 120
+          },
+          "label_changes": 6,
+          "interval_changes": 3,
+          "original_eligible_boundary_losses": 0
+        },
+        "A4": {
+          "fit": {
+            "params": [
+              -2.20526826074245,
+              1.0920916178041182,
+              -1.404594473517584,
+              -0.5988615731399062
+            ],
+            "nll": 338.6131360496455,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 2.8610094027214927e-07,
+            "scale_hit": false,
+            "sigma": 0.5494367737709336,
+            "iterations": 8,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.5061667256231597,
+                1.2657700035103612,
+                -2.0,
+                -0.3167769886857983
+              ],
+              "nll": 356.0851484367897,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 4.7849099234327895e-08,
+              "scale_hit": false,
+              "sigma": 0.72849319923734,
+              "iterations": 13,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+            },
+            "-1.2": {
+              "params": [
+                -1.7058365389201642,
+                1.0583259220959327,
+                -1.2,
+                -0.5933397236556318
+              ],
+              "nll": 341.8087188521,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 2.699215671691265e-09,
+              "scale_hit": false,
+              "sigma": 0.5524790727652091,
+              "iterations": 11,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+            }
+          },
+          "T": {
+            "-2.0": 34.94402477428844,
+            "-1.2": 6.39116560490902
+          },
+          "delta_beta": 0.012278276487797113,
+          "delta_speed": -0.0007130466445794958,
+          "counts": {
+            "finite": 86,
+            "left": 26,
+            "right": 8,
+            "n": 120
+          },
+          "label_changes": 10,
+          "interval_changes": 2,
+          "original_eligible_boundary_losses": 0
+        },
+        "A_T2": {
+          "fit": {
+            "params": [
+              -3.7606468564644437,
+              1.1876944681356982,
+              -1.9504984843271005,
+              -0.7055714747823033
+            ],
+            "nll": 281.163643099002,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 1.5859947470886482e-06,
+            "scale_hit": false,
+            "sigma": 0.49382628433470277,
+            "iterations": 12,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.8583138281219513,
+                1.2085011333015863,
+                -2.0,
+                -0.6963691876892477
+              ],
+              "nll": 281.3313820666653,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 3.140865025841322e-07,
+              "scale_hit": false,
+              "sigma": 0.49839158898268465,
+              "iterations": 7,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -2.065813913792129,
+                0.9833258016215496,
+                -1.2,
+                -0.4031817145960071
+              ],
+              "nll": 314.9159159734433,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 5.044880744264901e-07,
+              "scale_hit": false,
+              "sigma": 0.6681906682936545,
+              "iterations": 12,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 0.335477935326594,
+            "-1.2": 67.5045457488826
+          },
+          "delta_beta": 0.0,
+          "delta_speed": 0.0,
+          "counts": {
+            "finite": 82,
+            "left": 32,
+            "right": 6,
+            "n": 120
+          },
+          "label_changes": 9,
+          "interval_changes": 0,
+          "original_eligible_boundary_losses": 0
+        },
+        "B1": {
+          "fit": {
+            "params": [
+              -2.9349551157709017,
+              1.0743952003453163,
+              -1.6655372817817684,
+              -0.5166310215733667
+            ],
+            "nll": 357.2518809522769,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 4.038482566137702e-07,
+            "scale_hit": false,
+            "sigma": 0.5965268525713233,
+            "iterations": 8,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.687221323112677,
+                1.155750032627693,
+                -2.0,
+                -0.41303448026987805
+              ],
+              "nll": 363.2325267446213,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 5.155260849321053e-07,
+              "scale_hit": false,
+              "sigma": 0.6616394689270854,
+              "iterations": 10,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.7632223824512607,
+                1.0194128532822155,
+                -1.2,
+                -0.42333348461757203
+              ],
+              "nll": 370.62118045926985,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 1.439149344584223e-06,
+              "scale_hit": false,
+              "sigma": 0.6548602108866137,
+              "iterations": 11,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 11.961291584688752,
+            "-1.2": 26.73859901398589
+          },
+          "delta_beta": -0.002595280559702262,
+          "delta_speed": -0.014019153639038162,
+          "counts": {
+            "finite": 92,
+            "left": 20,
+            "right": 8,
+            "n": 120
+          },
+          "label_changes": 19,
+          "interval_changes": 4,
+          "original_eligible_boundary_losses": 0
+        },
+        "B_T2r1": {
+          "fit": {
+            "params": [
+              -3.6887013552686705,
+              1.4489049046560014,
+              -2.185303834337767,
+              -1.0755642915342016
+            ],
+            "nll": 222.4181921365669,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 1.0231033423568903e-05,
+            "scale_hit": false,
+            "sigma": 0.34110521819567363,
+            "iterations": 1,
+            "attempts": 2,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.4084663047234587,
+                1.3241981745470448,
+                -2.0,
+                -1.0853247086854207
+              ],
+              "nll": 225.0331207066817,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 9.331001938212295e-06,
+              "scale_hit": false,
+              "sigma": 0.3377920840615467,
+              "iterations": 9,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.6997811500407853,
+                1.0461921567902823,
+                -1.2,
+                -0.48061013475859654
+              ],
+              "nll": 281.5204766979549,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 2.784735131378113e-07,
+              "scale_hit": false,
+              "sigma": 0.6184059657028584,
+              "iterations": 16,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 5.229857140229626,
+            "-1.2": 118.20456912277604
+          },
+          "delta_beta": -0.01010315526273553,
+          "delta_speed": 0.026053357014304446,
+          "counts": {
+            "finite": 63,
+            "left": 46,
+            "right": 11,
+            "n": 120
+          },
+          "label_changes": 10,
+          "interval_changes": 2,
+          "original_eligible_boundary_losses": 0
+        },
+        "B_T2r2": {
+          "fit": {
+            "params": [
+              -2.9356258028304643,
+              1.2181598459613636,
+              -1.8151656998947903,
+              -0.8651066703929533
+            ],
+            "nll": 233.9059659162566,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 1.1542443343337538e-06,
+            "scale_hit": false,
+            "sigma": 0.4210066412881465,
+            "iterations": 12,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.3169703854544603,
+                1.2997847208844107,
+                -2.0,
+                -0.7778441047907432
+              ],
+              "nll": 235.53946497631227,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 9.867570777144508e-08,
+              "scale_hit": false,
+              "sigma": 0.45939535270388654,
+              "iterations": 10,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+            },
+            "-1.2": {
+              "params": [
+                -1.5176739930636756,
+                1.0452337347242304,
+                -1.2,
+                -0.6929482762900906
+              ],
+              "nll": 261.1124412849804,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 5.167101218229874e-07,
+              "scale_hit": false,
+              "sigma": 0.5000994620263103,
+              "iterations": 15,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 3.2669981201113387,
+            "-1.2": 54.412950737447545
+          },
+          "delta_beta": 0.0010199492688121037,
+          "delta_speed": 0.0011837645758052684,
+          "counts": {
+            "finite": 58,
+            "left": 51,
+            "right": 11,
+            "n": 120
+          },
+          "label_changes": 14,
+          "interval_changes": 1,
+          "original_eligible_boundary_losses": 0
+        },
+        "B_T2s1": {
+          "fit": {
+            "params": [
+              -2.7240442400773217,
+              1.3284610018881127,
+              -1.8320518123062401,
+              -0.5922259416976299
+            ],
+            "nll": 316.5153642953015,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 9.5039949332687e-07,
+            "scale_hit": false,
+            "sigma": 0.5530947567938632,
+            "iterations": 8,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.079203234840081,
+                1.3782075161687166,
+                -2.0,
+                -0.5527519805614743
+              ],
+              "nll": 318.24348248891647,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 3.397554759778753e-07,
+              "scale_hit": false,
+              "sigma": 0.5753642384496199,
+              "iterations": 8,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.169794386743774,
+                1.239558632497741,
+                -1.2,
+                -0.4093886462482007
+              ],
+              "nll": 341.5817391862313,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 1.8303418336529376e-08,
+              "scale_hit": false,
+              "sigma": 0.6640560992526721,
+              "iterations": 12,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+            }
+          },
+          "T": {
+            "-2.0": 3.4562363872299784,
+            "-1.2": 50.132749781859616
+          },
+          "delta_beta": 0.015473075242694811,
+          "delta_speed": 0.0036357809455331846,
+          "counts": {
+            "finite": 92,
+            "left": 18,
+            "right": 10,
+            "n": 120
+          },
+          "label_changes": 9,
+          "interval_changes": 3,
+          "original_eligible_boundary_losses": 0
+        },
+        "C1": {
+          "fit": {
+            "params": [
+              -2.9274324110034398,
+              1.1167163854679998,
+              -1.6050776776395013,
+              -0.705492252913236
+            ],
+            "nll": 320.10415338394944,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 3.1743851991450356e-10,
+            "scale_hit": false,
+            "sigma": 0.4938654077256359,
+            "iterations": 9,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.7853312919940354,
+                1.2395455598102338,
+                -2.0,
+                -0.5358162989697401
+              ],
+              "nll": 330.1081399888844,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 7.331259070466894e-07,
+              "scale_hit": false,
+              "sigma": 0.5851914039821676,
+              "iterations": 11,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.9386061186685462,
+                1.0457673073664573,
+                -1.2,
+                -0.6124656202963542
+              ],
+              "nll": 333.5629673232437,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 2.5678423885011625e-06,
+              "scale_hit": false,
+              "sigma": 0.5420128223790766,
+              "iterations": 12,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 20.007973209869874,
+            "-1.2": 26.91762787858852
+          },
+          "delta_beta": 0.0015584575182057137,
+          "delta_speed": -0.0038045186229795913,
+          "counts": {
+            "finite": 86,
+            "left": 27,
+            "right": 7,
+            "n": 120
+          },
+          "label_changes": 9,
+          "interval_changes": 1,
+          "original_eligible_boundary_losses": 0
+        },
+        "C_T2": {
+          "fit": {
+            "params": [
+              -3.516543909883902,
+              1.1743968007222503,
+              -1.8259035165076682,
+              -1.1780577501244816
+            ],
+            "nll": 254.5697248497508,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 3.4241341939633685e-07,
+            "scale_hit": false,
+            "sigma": 0.3078761306474457,
+            "iterations": 13,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.8889238355119717,
+                1.2456272419214964,
+                -2.0,
+                -1.093151851753119
+              ],
+              "nll": 257.81629750013286,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 6.700137956449445e-05,
+              "scale_hit": false,
+              "sigma": 0.33515845742426464,
+              "iterations": 11,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -2.158746540264011,
+                0.9507568488646744,
+                -1.2,
+                -0.776868317443131
+              ],
+              "nll": 296.2899005344352,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 2.175881015107144e-05,
+              "scale_hit": false,
+              "sigma": 0.45984384365691927,
+              "iterations": 17,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 6.493145300764127,
+            "-1.2": 83.44035136936884
+          },
+          "delta_beta": -0.0035837667598617173,
+          "delta_speed": 0.013689979070713676,
+          "counts": {
+            "finite": 72,
+            "left": 43,
+            "right": 5,
+            "n": 120
+          },
+          "label_changes": 15,
+          "interval_changes": 1,
+          "original_eligible_boundary_losses": 0
+        },
+        "D1": {
+          "fit": {
+            "params": [
+              -2.6874947892666263,
+              1.13151322539709,
+              -1.640450101200072,
+              -0.8050660005622459
+            ],
+            "nll": 294.85487524497375,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 6.486140513572991e-09,
+            "scale_hit": false,
+            "sigma": 0.4470584194785829,
+            "iterations": 9,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.4480550262800107,
+                1.2562825273130593,
+                -2.0,
+                -0.6270286521569166
+              ],
+              "nll": 303.2467060044795,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 8.349152539909442e-07,
+              "scale_hit": false,
+              "sigma": 0.5341766699384486,
+              "iterations": 11,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            },
+            "-1.2": {
+              "params": [
+                -1.6335402829204253,
+                1.0430301553188157,
+                -1.2,
+                -0.6871152956016597
+              ],
+              "nll": 312.32521389895766,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 5.284479256850716e-06,
+              "scale_hit": false,
+              "sigma": 0.5030250567042844,
+              "iterations": 12,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 16.783661519011503,
+            "-1.2": 34.9406773079678
+          },
+          "delta_beta": 0.0,
+          "delta_speed": 0.0,
+          "counts": {
+            "finite": 78,
+            "left": 33,
+            "right": 9,
+            "n": 120
+          },
+          "label_changes": 6,
+          "interval_changes": 0,
+          "original_eligible_boundary_losses": 0
+        },
+        "D2": {
+          "fit": {
+            "params": [
+              -0.9230968649415726,
+              1.165110960427079,
+              -1.0946357011667942,
+              -0.46857715169972497
+            ],
+            "nll": 367.4244190331076,
+            "success": true,
+            "optimizer_success": true,
+            "grad_max": 7.438621985045302e-08,
+            "scale_hit": false,
+            "sigma": 0.6258921846556581,
+            "iterations": 8,
+            "attempts": 1,
+            "n": 120,
+            "rank": 3,
+            "fixed_beta": null,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+          },
+          "fixed": {
+            "-2.0": {
+              "params": [
+                -3.0269294885624305,
+                1.319768623332921,
+                -2.0,
+                -0.08355784984945044
+              ],
+              "nll": 400.2203421105246,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 4.777009543488475e-08,
+              "scale_hit": false,
+              "sigma": 0.9198378726495882,
+              "iterations": 15,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -2.0,
+              "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+            },
+            "-1.2": {
+              "params": [
+                -1.189686884644071,
+                1.1744497697999434,
+                -1.2,
+                -0.4527163975102148
+              ],
+              "nll": 368.13308025198455,
+              "success": true,
+              "optimizer_success": true,
+              "grad_max": 1.6051941233534465e-07,
+              "scale_hit": false,
+              "sigma": 0.6358984504398524,
+              "iterations": 7,
+              "attempts": 1,
+              "n": 120,
+              "rank": 2,
+              "fixed_beta": -1.2,
+              "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+            }
+          },
+          "T": {
+            "-2.0": 65.591846154834,
+            "-1.2": 1.41732243775391
+          },
+          "delta_beta": 0.010834767764406505,
+          "delta_speed": 0.03467662345539835,
+          "counts": {
+            "finite": 102,
+            "left": 7,
+            "right": 11,
+            "n": 120
+          },
+          "label_changes": 22,
+          "interval_changes": 7,
+          "original_eligible_boundary_losses": 0
+        }
+      },
+      "global_label_changes": 150,
+      "original_eligible_boundary_losses": 0,
+      "lost_boundary_groups": []
+    }
+  },
+  "max_abs_beta_change": {
+    "baseline": 0.0,
+    "hard_restore_with_loss": 0.2868967885134701,
+    "near_cutoff_no_loss": 0.015473075242694811
+  }
+}

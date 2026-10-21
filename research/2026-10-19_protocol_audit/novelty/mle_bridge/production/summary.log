@@ -1,0 +1,192 @@
+{
+  "status": "PASS",
+  "control_jobs": 41,
+  "distinct_control_subsets": 22110,
+  "control_fits": 60234,
+  "unresolved_fit_failures": 0,
+  "max_control_gradient": 0.00031391800630586886,
+  "selected_control_max_parameter_delta": 0.0,
+  "optimizer_attempt_counts": {
+    "1": 59924,
+    "2": 214,
+    "3": 96
+  },
+  "max_decomposition_identity_error": 2.687583489091594e-11,
+  "all": {
+    "n": 77,
+    "median_abs_delta_beta": 0.0062871436840483685,
+    "max_abs_delta_beta": 0.1385741353120633,
+    "toward_target_positive": 37,
+    "toward_target_negative": 40,
+    "T_reduction_positive": 61,
+    "T_reduction_negative": 16,
+    "median_T_reduction": 0.8269224076371984,
+    "T_reduction_range": [
+      -44.23166545826149,
+      5.110688170400067
+    ],
+    "median_T_before": 25.832943832637056,
+    "median_T_after": 25.00950023054247,
+    "block_sign_agreement": 47,
+    "block_median_abs_delta_beta": 0.010070025942580996,
+    "metrics": {
+      "abs_delta_beta": {
+        "median_percentile": 0.5646853146853147,
+        "at_least_95_percentile": 4,
+        "span_matched_median_percentile": 0.32978723404255317
+      },
+      "toward_target": {
+        "median_percentile": 0.5012315270935961,
+        "at_least_95_percentile": 7,
+        "span_matched_median_percentile": 0.4876543209876543
+      },
+      "T_reduction": {
+        "median_percentile": 0.6684782608695652,
+        "at_least_95_percentile": 7,
+        "span_matched_median_percentile": 0.6168831168831169
+      }
+    }
+  },
+  "classifier_specific_52": {
+    "n": 52,
+    "median_abs_delta_beta": 0.006130279452723264,
+    "max_abs_delta_beta": 0.1385741353120633,
+    "toward_target_positive": 17,
+    "toward_target_negative": 35,
+    "T_reduction_positive": 37,
+    "T_reduction_negative": 15,
+    "median_T_reduction": 0.48992755903969964,
+    "T_reduction_range": [
+      -44.23166545826149,
+      4.518794445889455
+    ],
+    "median_T_before": 26.593116729292774,
+    "median_T_after": 26.22686612318529,
+    "block_sign_agreement": 31,
+    "block_median_abs_delta_beta": 0.008758081212636604,
+    "metrics": {
+      "abs_delta_beta": {
+        "median_percentile": 0.5419213139801375,
+        "at_least_95_percentile": 2,
+        "span_matched_median_percentile": 0.34687891113892366
+      },
+      "toward_target": {
+        "median_percentile": 0.4730221078976641,
+        "at_least_95_percentile": 6,
+        "span_matched_median_percentile": 0.5530612244897959
+      },
+      "T_reduction": {
+        "median_percentile": 0.6108870967741935,
+        "at_least_95_percentile": 5,
+        "span_matched_median_percentile": 0.6258174449663811
+      }
+    }
+  },
+  "geometry_infeasible_25": {
+    "n": 25,
+    "median_abs_delta_beta": 0.007167152792012299,
+    "max_abs_delta_beta": 0.06951166813095,
+    "toward_target_positive": 20,
+    "toward_target_negative": 5,
+    "T_reduction_positive": 24,
+    "T_reduction_negative": 1,
+    "median_T_reduction": 1.624441653944018,
+    "T_reduction_range": [
+      -0.09548277963688179,
+      5.110688170400067
+    ],
+    "median_T_before": 16.783661519010934,
+    "median_T_after": 15.452593363035135,
+    "block_sign_agreement": 16,
+    "block_median_abs_delta_beta": 0.01152102747324757,
+    "metrics": {
+      "abs_delta_beta": {
+        "median_percentile": 0.6885057471264368,
+        "at_least_95_percentile": 2,
+        "span_matched_median_percentile": 0.26811594202898553
+      },
+      "toward_target": {
+        "median_percentile": 0.6185770750988142,
+        "at_least_95_percentile": 1,
+        "span_matched_median_percentile": 0.21428571428571427
+      },
+      "T_reduction": {
+        "median_percentile": 0.7078947368421052,
+        "at_least_95_percentile": 2,
+        "span_matched_median_percentile": 0.548951048951049
+      }
+    }
+  },
+  "by_slope": {
+    "-2.0": {
+      "n": 38,
+      "median_abs_delta_beta": 0.007424033213319525,
+      "max_abs_delta_beta": 0.06951166813095,
+      "toward_target_positive": 25,
+      "toward_target_negative": 13,
+      "T_reduction_positive": 34,
+      "T_reduction_negative": 4,
+      "median_T_reduction": 1.304263353724366,
+      "T_reduction_range": [
+        -1.2351489957862896,
+        5.110688170400067
+      ],
+      "median_T_before": 16.783661519010934,
+      "median_T_after": 15.519053370858956,
+      "block_sign_agreement": 25,
+      "block_median_abs_delta_beta": 0.011219029414619497,
+      "metrics": {
+        "abs_delta_beta": {
+          "median_percentile": 0.6771476104053236,
+          "at_least_95_percentile": 3,
+          "span_matched_median_percentile": 0.5662287903667214
+        },
+        "toward_target": {
+          "median_percentile": 0.6091877310977942,
+          "at_least_95_percentile": 5,
+          "span_matched_median_percentile": 0.44605263157894737
+        },
+        "T_reduction": {
+          "median_percentile": 0.7007853130850843,
+          "at_least_95_percentile": 4,
+          "span_matched_median_percentile": 0.6478174603174603
+        }
+      }
+    },
+    "-1.2": {
+      "n": 39,
+      "median_abs_delta_beta": 0.005406198297161602,
+      "max_abs_delta_beta": 0.1385741353120633,
+      "toward_target_positive": 12,
+      "toward_target_negative": 27,
+      "T_reduction_positive": 27,
+      "T_reduction_negative": 12,
+      "median_T_reduction": 0.49440405883149197,
+      "T_reduction_range": [
+        -44.23166545826149,
+        4.518794445889455
+      ],
+      "median_T_before": 27.35328962594849,
+      "median_T_after": 26.737454004166466,
+      "block_sign_agreement": 22,
+      "block_median_abs_delta_beta": 0.00849899320610914,
+      "metrics": {
+        "abs_delta_beta": {
+          "median_percentile": 0.5012315270935961,
+          "at_least_95_percentile": 1,
+          "span_matched_median_percentile": 0.3282828282828283
+        },
+        "toward_target": {
+          "median_percentile": 0.46673387096774194,
+          "at_least_95_percentile": 2,
+          "span_matched_median_percentile": 0.5073529411764706
+        },
+        "T_reduction": {
+          "median_percentile": 0.6441532258064516,
+          "at_least_95_percentile": 3,
+          "span_matched_median_percentile": 0.6162790697674418
+        }
+      }
+    }
+  }
+}

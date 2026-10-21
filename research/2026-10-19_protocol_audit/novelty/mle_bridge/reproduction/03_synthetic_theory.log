@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "output": "/private/var/folders/0z/30l8kgzx48v822q6d0j0c4h00000gn/T/violin_mle_bridge_rzqwls_u/mle_bridge/theory/synthetic_results.json",
+  "counterexamples": 4,
+  "max_identity_error": 8.881784197001252e-15
+}

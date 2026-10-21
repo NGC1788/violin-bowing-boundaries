@@ -1,0 +1,5775 @@
+{
+  "passed": true,
+  "n_rows_exactly_reconstructed": 1560,
+  "numerical_fit_comparisons": 425,
+  "max_params_absolute_difference": 7.113302746830641e-07,
+  "max_nll_absolute_difference": 3.3509195418446325e-11,
+  "decomposition_identities": 77,
+  "max_decomposition_error": 2.7000623958883807e-11,
+  "block_refits": [
+    {
+      "group": "A1|2024-03-25_TypeA_sample1/2024-03-27_r_v1",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -1.4875913082375924,
+          0.6560733341477962,
+          -0.9607936609868423,
+          -0.9604040423027327
+        ],
+        "nll": 307.5204262621175,
+        "grad_max": 1.08949886149882e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 4.2632564145606e-09,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -4.03375736781505,
+          0.7603412875454552,
+          -2.0,
+          -0.2151532269519875
+        ],
+        "nll": 381.98954593005766,
+        "grad_max": 1.0421293457814802e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 1.1842378929335002e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A1|2024-03-25_TypeA_sample1/2024-03-27_r_v1",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -1.52795590536937,
+          0.6402352913060857,
+          -0.9621448258078042,
+          -0.9730897162820551
+        ],
+        "nll": 306.15934317034544,
+        "grad_max": 1.2316074086508401e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 6.089002908170321e-09,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -2.143671800308817,
+          0.6517819886918444,
+          -1.2,
+          -0.8746499702244499
+        ],
+        "nll": 314.90283063097297,
+        "grad_max": 4.7285611813808544e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 7.472735841318248e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A1|2024-03-25_TypeA_sample1/2024-03-27_r_v2",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -1.5092414427625562,
+          0.6472360882479095,
+          -0.9627741721598186,
+          -0.971409189664631
+        ],
+        "nll": 305.7647765105215,
+        "grad_max": 6.461201943845176e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 2.3826866405822023e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -4.0482002755164395,
+          0.7515914051846452,
+          -2.0,
+          -0.21970785095082562
+        ],
+        "nll": 380.8779299654245,
+        "grad_max": 7.105427357601001e-09,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 1.4830153439685764e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A1|2024-03-25_TypeA_sample1/2024-03-27_r_v2",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -1.5476221353426398,
+          0.6643160388842917,
+          -0.9884542069996167,
+          -0.9785505449821764
+        ],
+        "nll": 303.46282614309257,
+        "grad_max": 6.356989009267029e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 2.432039040109091e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -2.100075422711,
+          0.6766355990441947,
+          -1.2,
+          -0.8935926485811612
+        ],
+        "nll": 310.66259047021055,
+        "grad_max": 3.372709519074608e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 3.2582492339911076e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A1|2024-03-25_TypeA_sample1/2024-03-27_r_v3",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -1.5362783622547385,
+          0.6651340493125948,
+          -0.9844112964113872,
+          -0.986789905310811
+        ],
+        "nll": 302.36709382563623,
+        "grad_max": 9.819700608204582e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 3.607529579254299e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -4.014024719688752,
+          0.7856827926123483,
+          -2.0,
+          -0.24050108744004467
+        ],
+        "nll": 375.63676369887315,
+        "grad_max": 2.4158453015843403e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 3.351916250546524e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A1|2024-03-25_TypeA_sample1/2024-03-27_r_v3",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -1.5643259196703267,
+          0.6320119530812621,
+          -0.9698059434755495,
+          -0.9831024109172948
+        ],
+        "nll": 294.8876796764657,
+        "grad_max": 7.839654851219771e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 111,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 2.734695138542e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -2.1552138752940264,
+          0.6462980458936611,
+          -1.2,
+          -0.8807011380765691
+        ],
+        "nll": 303.3878853256368,
+        "grad_max": 1.3599787962448315e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 111,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 5.617371649451035e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A2|2024-04-19_TypeA_sample2/v1",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -1.3958844406512063,
+          0.9437032255989479,
+          -1.079874760525455,
+          -0.3702992389062076
+        ],
+        "nll": 367.52148442972054,
+        "grad_max": 2.3021584638627243e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 1.7761508917478466e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.6611404721454304,
+          1.0354705143839873,
+          -2.0,
+          -0.04985140784924327
+        ],
+        "nll": 397.2551261449311,
+        "grad_max": 4.440892098500625e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 1.9699238173300668e-05,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A2|2024-04-19_TypeA_sample2/v1",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -1.4694199756966753,
+          0.90846507177412,
+          -1.0851187943485219,
+          -0.37333564963189075
+        ],
+        "nll": 367.0980715601344,
+        "grad_max": 1.2789769243681802e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 5.210646728907401e-09,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.7657847010511025,
+          0.9144767326692536,
+          -1.2,
+          -0.3615943251459778
+        ],
+        "nll": 367.76847050018563,
+        "grad_max": 2.2168933355715123e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 4.4907476349095676e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A2|2024-04-19_TypeA_sample2/v2",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -1.4897676646832085,
+          0.8902663637215316,
+          -1.0749567877559774,
+          -0.38640314661545416
+        ],
+        "nll": 365.2072257693866,
+        "grad_max": 1.0042337332076082e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 6.82121026329696e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.764844567248415,
+          0.9823090859858075,
+          -2.0,
+          -0.055551911555299684
+        ],
+        "nll": 395.9112734039846,
+        "grad_max": 5.157119176146806e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 2.3399680284312075e-05,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A2|2024-04-19_TypeA_sample2/v2",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -1.4499817366478744,
+          0.9319866205655521,
+          -1.088633673623296,
+          -0.37330910259727357
+        ],
+        "nll": 366.807859058286,
+        "grad_max": 3.0221751027662924e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 2.048012038582056e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.7387945710515513,
+          0.937893374877583,
+          -1.2,
+          -0.3620038806229473
+        ],
+        "nll": 367.4497039849881,
+        "grad_max": 1.0658141036401501e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 8.85809943914258e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A2|2024-04-19_TypeA_sample2/v3",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -1.4666698282011121,
+          0.9325094466731012,
+          -1.0999541783078455,
+          -0.3590882141473047
+        ],
+        "nll": 365.66860697859147,
+        "grad_max": 2.2547889481453842e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 1.50177464489415e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.665136721774453,
+          1.0377019503321718,
+          -2.0,
+          -0.0450012173922204
+        ],
+        "nll": 394.1261154213026,
+        "grad_max": 1.400070619575754e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 7.443961879709546e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A2|2024-04-19_TypeA_sample2/v3",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -1.4149092964113108,
+          0.9534923382367994,
+          -1.0988602159792518,
+          -0.3651418339663516
+        ],
+        "nll": 364.4664080645788,
+        "grad_max": 3.69482222595252e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 3.616700500758611e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.676781329881083,
+          0.9598070662528404,
+          -1.2,
+          -0.3547599628158047
+        ],
+        "nll": 364.9944691969652,
+        "grad_max": 6.158037043254201e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 2.8421709430404004e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A3|2024-04-22_TypeA_sample3/v1",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -1.5997432444260853,
+          1.0477740404595242,
+          -1.2190185892461378,
+          -0.47839723539644524
+        ],
+        "nll": 366.50082847668966,
+        "grad_max": 5.2106467289074005e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 2.1182869397258002e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.4843402538677424,
+          1.1472008205044213,
+          -2.0,
+          -0.15987415918002615
+        ],
+        "nll": 392.17988759991044,
+        "grad_max": 4.594843024581981e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 7.791548683924342e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A3|2024-04-22_TypeA_sample3/v1",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -1.604170076411265,
+          1.0466562845176965,
+          -1.2218936705601142,
+          -0.48481345389828306
+        ],
+        "nll": 363.772682643796,
+        "grad_max": 3.968618026798746e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 2.4542146093153856e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.5473736322450158,
+          1.0455440486286516,
+          -1.2,
+          -0.48602482434550653
+        ],
+        "nll": 363.8032796499737,
+        "grad_max": 9.459692288752799e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 1.2018354175852933e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A3|2024-04-22_TypeA_sample3/v2",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -1.604170076411265,
+          1.0466562845176965,
+          -1.2218936705601142,
+          -0.48481345389828306
+        ],
+        "nll": 363.772682643796,
+        "grad_max": 3.968618026798746e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 2.4542146093153856e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.4747473868326852,
+          1.1464669085183565,
+          -2.0,
+          -0.16531748035849061
+        ],
+        "nll": 389.5308800998713,
+        "grad_max": 3.4342898895071505e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 2.799538378894794e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A3|2024-04-22_TypeA_sample3/v2",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -1.5510709703711747,
+          1.0769175277195375,
+          -1.2236988753479976,
+          -0.49084493658302797
+        ],
+        "nll": 362.1665859312683,
+        "grad_max": 2.6526928801710405e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 1.56319401867222e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.4890712189910582,
+          1.0757251508923713,
+          -1.2,
+          -0.49213498097844527
+        ],
+        "nll": 362.2019693419992,
+        "grad_max": 8.853362487570847e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 1.0505935170066937e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A3|2024-04-22_TypeA_sample3/v3",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -1.6742124423269509,
+          1.024992383645466,
+          -1.2296373625101604,
+          -0.4968534313347824
+        ],
+        "nll": 360.7178717022538,
+        "grad_max": 3.1737575530617804e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 1.2041818457703562e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.4855546999215155,
+          1.1410148266039468,
+          -2.0,
+          -0.1642248614468964
+        ],
+        "nll": 386.9023604581021,
+        "grad_max": 1.0745794804097166e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 5.874164395804682e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A3|2024-04-22_TypeA_sample3/v3",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -1.5746552377199996,
+          1.0860686583480788,
+          -1.240625895675464,
+          -0.4867389698095179
+        ],
+        "nll": 361.8162193977427,
+        "grad_max": 2.813749233609996e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 2.9027260760113065e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.4688319816272508,
+          1.0836036380688263,
+          -1.2,
+          -0.4888364257874069
+        ],
+        "nll": 361.9220375645959,
+        "grad_max": 1.8047138788391833e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 3.9120675052510194e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A4|2024-04-24_TypeA_sample4/v1",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -2.219889467112295,
+          1.1118134500979133,
+          -1.4181782166582049,
+          -0.5462010465838729
+        ],
+        "nll": 319.03059721365526,
+        "grad_max": 4.1685173831259206e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 4.6637554072022597e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.4907260324501834,
+          1.2798505036244783,
+          -2.0,
+          -0.291995060149338
+        ],
+        "nll": 333.35492538831454,
+        "grad_max": 3.505344163083161e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 1.2027241139310033e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A4|2024-04-24_TypeA_sample4/v1",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -2.2984031425990246,
+          1.0669121887255921,
+          -1.4146890186094032,
+          -0.5517720527825588
+        ],
+        "nll": 319.16011092150495,
+        "grad_max": 1.378452907374594e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 7.897534993671517e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.7769793652690802,
+          1.0342890072522073,
+          -1.2,
+          -0.5454751642074229
+        ],
+        "nll": 322.1084684331323,
+        "grad_max": 2.5105843330190204e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 3.2669993818254184e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A4|2024-04-24_TypeA_sample4/v2",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -2.275058923131287,
+          1.0739479152906812,
+          -1.408906958710517,
+          -0.5447162729077414
+        ],
+        "nll": 320.84845306107087,
+        "grad_max": 2.7805905726078584e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 1.5923898946330098e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.56096653072224,
+          1.2412050098007796,
+          -2.0,
+          -0.2837649042687262
+        ],
+        "nll": 335.6409570668014,
+        "grad_max": 2.1316282072803002e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 1.78332877409879e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A4|2024-04-24_TypeA_sample4/v2",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -2.315400623719147,
+          1.052134075271294,
+          -1.4098463943503807,
+          -0.563310976175393
+        ],
+        "nll": 322.9437586000196,
+        "grad_max": 1.7526720815415803e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 2.5350349415361655e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.8053918913198892,
+          1.019579958853875,
+          -1.2,
+          -0.5574829686301414
+        ],
+        "nll": 325.8790547407288,
+        "grad_max": 1.1397105481592005e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 2.775270072143386e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A4|2024-04-24_TypeA_sample4/v3",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -2.1715098016204233,
+          1.0993915579640232,
+          -1.3994902810763996,
+          -0.5658418120567049
+        ],
+        "nll": 325.14004863878256,
+        "grad_max": 1.0989727646422881e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 8.554292341501786e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.51128067399459,
+          1.2675987023974025,
+          -2.0,
+          -0.2889742553822867
+        ],
+        "nll": 341.4851889505319,
+        "grad_max": 1.1842378929335002e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 2.0933942736833433e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A4|2024-04-24_TypeA_sample4/v3",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -2.3003824037975518,
+          1.0749180797973832,
+          -1.4176583500357833,
+          -0.5552704766422584
+        ],
+        "nll": 320.40984502228866,
+        "grad_max": 6.91594929473164e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 7.484352815986573e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.7708336304138648,
+          1.0394901721135639,
+          -1.2,
+          -0.5488181090130714
+        ],
+        "nll": 323.6058148366283,
+        "grad_max": 1.4542441325223382e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 1.7758037355375344e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A_T2|2024-06-19_TypeA_T2_sample1/v1",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -3.7575740773698447,
+          1.2967923476371908,
+          -2.0266450958144593,
+          -0.8412139959768321
+        ],
+        "nll": 250.40216345017527,
+        "grad_max": 7.92580055592956e-09,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 4.870259770397061e-09,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.7061252269645726,
+          1.2849608325062987,
+          -2.0,
+          -0.8445264049839523
+        ],
+        "nll": 250.45649378401987,
+        "grad_max": 2.458477865729946e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 4.03385110626476e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A_T2|2024-06-19_TypeA_T2_sample1/v1",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -3.8307483031734266,
+          1.1671649075248933,
+          -1.9638584926893978,
+          -0.6890758361118525
+        ],
+        "nll": 264.4287987892309,
+        "grad_max": 2.3340611614182586e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 1.153608675710907e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -2.1232871074167283,
+          0.9656426233413464,
+          -1.2,
+          -0.3886954782769813
+        ],
+        "nll": 295.73199797770707,
+        "grad_max": 4.90274487674469e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 1.0986104293703717e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A_T2|2024-06-19_TypeA_T2_sample1/v2",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -3.8093978536216646,
+          1.1874743196208437,
+          -1.9650535092475,
+          -0.6945930290529847
+        ],
+        "nll": 269.57660767070394,
+        "grad_max": 2.543742994021158e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 1.295044780569867e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.8790781753048056,
+          1.2015365912673628,
+          -2.0,
+          -0.6888344936170384
+        ],
+        "nll": 269.65374190275776,
+        "grad_max": 1.2409542755763272e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 4.3887242638312033e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A_T2|2024-06-19_TypeA_T2_sample1/v2",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -3.830546746352737,
+          1.1670830485757369,
+          -1.9581949860624621,
+          -0.6952457906914864
+        ],
+        "nll": 269.8432017057512,
+        "grad_max": 4.076537938174017e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 2.035429828659731e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -2.1239031130188737,
+          0.9657952253797611,
+          -1.2,
+          -0.39539844440157446
+        ],
+        "nll": 301.22265444097553,
+        "grad_max": 2.70006239588838e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 5.292074729066621e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A_T2|2024-06-19_TypeA_T2_sample1/v3",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -3.8397501252099344,
+          1.187035891432446,
+          -1.970529051389682,
+          -0.7164787555087004
+        ],
+        "nll": 264.49274934411557,
+        "grad_max": 5.165885459042729e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 5.159897063954266e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.897258262276163,
+          1.1995371042128549,
+          -2.0,
+          -0.7112250732318963
+        ],
+        "nll": 264.5502898678708,
+        "grad_max": 1.714776468967708e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 3.951947794651536e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "A_T2|2024-06-19_TypeA_T2_sample1/v3",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -3.702107046192881,
+          1.2028449762101834,
+          -1.9449681936529646,
+          -0.6872408767236748
+        ],
+        "nll": 268.6814938050204,
+        "grad_max": 1.1128203079753316e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 5.641881578928527e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -2.0338586344839444,
+          0.9980417774914294,
+          -1.2,
+          -0.3984565044851616
+        ],
+        "nll": 299.51154395424743,
+        "grad_max": 2.98427949019242e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 1.56319401867222e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B1|2024-04-10_TypeB_sample1/2024-04-10/v1",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -2.9495776929154376,
+          1.1148785853160224,
+          -1.6891780409292025,
+          -0.5220253844986045
+        ],
+        "nll": 335.1647488465488,
+        "grad_max": 5.480652968496239e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 6.587851609513264e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.646363746940934,
+          1.1902467431422563,
+          -2.0,
+          -0.4290566679638177
+        ],
+        "nll": 340.0484889480524,
+        "grad_max": 4.5848954262813395e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 1.1094364727920748e-05,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B1|2024-04-10_TypeB_sample1/2024-04-10/v1",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -3.006137711764304,
+          1.0560087538662184,
+          -1.6719592275528878,
+          -0.4892101247113982
+        ],
+        "nll": 334.8265993103,
+        "grad_max": 7.531729909520435e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 7.048674623741313e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.824207538087188,
+          1.0043859240794217,
+          -1.2,
+          -0.39814361506048296
+        ],
+        "nll": 346.9723244130408,
+        "grad_max": 3.7909823428587206e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 7.735977961357157e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B1|2024-04-10_TypeB_sample1/2024-04-10/v2",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -3.005397198018378,
+          1.1035915490076935,
+          -1.6971962127625189,
+          -0.534230818651652
+        ],
+        "nll": 334.0919254268918,
+        "grad_max": 4.4858931384320983e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 4.3395472972086394e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.685265314172953,
+          1.176842717236873,
+          -2.0,
+          -0.44338124518817673
+        ],
+        "nll": 338.83716993903454,
+        "grad_max": 7.721231061926422e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 1.5429766760629198e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B1|2024-04-10_TypeB_sample1/2024-04-10/v2",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -2.9798807701740677,
+          1.0736360390047488,
+          -1.6747318372848303,
+          -0.4782970607508739
+        ],
+        "nll": 339.5353883802619,
+        "grad_max": 1.2837138759399142e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 1.3026616822268503e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.793841892714501,
+          1.0210902679100735,
+          -1.2,
+          -0.3889371387616886
+        ],
+        "nll": 351.5216897523581,
+        "grad_max": 1.1824696390675195e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 2.937695551614093e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B1|2024-04-10_TypeB_sample1/2024-04-10/v3",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -2.8806736711319725,
+          1.098214317780053,
+          -1.6581567744041483,
+          -0.4960259621845703
+        ],
+        "nll": 331.9931257607701,
+        "grad_max": 2.6053233644537005e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 1.3366052457908113e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.655920790131956,
+          1.1799181114255073,
+          -2.0,
+          -0.3890905148815449
+        ],
+        "nll": 337.5982941740236,
+        "grad_max": 1.7668829362567823e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 1.1747639897900321e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B1|2024-04-10_TypeB_sample1/2024-04-10/v3",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -2.9040718748485075,
+          1.1298714986705143,
+          -1.6836223484284745,
+          -0.5136837897087936
+        ],
+        "nll": 333.2193270758751,
+        "grad_max": 6.77979524849191e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 9.267373403503489e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.6996781310520621,
+          1.0685546631826939,
+          -1.2,
+          -0.41036873725691203
+        ],
+        "nll": 346.87370499157015,
+        "grad_max": 4.8165253881894507e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 5.258016244624741e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -3.81307424883558,
+          1.4550382761638534,
+          -2.2338306256497695,
+          -1.0915537957432677
+        ],
+        "nll": 203.37542589519103,
+        "grad_max": 3.8819318130360137e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 111,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 3.146943522178902e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.448423645962721,
+          1.308325680478713,
+          -2.0,
+          -1.0905727412058694
+        ],
+        "nll": 207.02530029692366,
+        "grad_max": 7.664184820063115e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 111,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 1.531645968939291e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -3.707494068183877,
+          1.4726855890431991,
+          -2.2067348226868067,
+          -1.0805917356627306
+        ],
+        "nll": 202.58090832410676,
+        "grad_max": 1.3689790042311262e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 3.963929067372793e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.7201293066141785,
+          1.0511148335160272,
+          -1.2,
+          -0.4607385079191063
+        ],
+        "nll": 259.32821399007076,
+        "grad_max": 3.122188092376878e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 7.417192054760273e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -3.796757756825297,
+          1.4256189531792403,
+          -2.206440399058444,
+          -1.1016269407989854
+        ],
+        "nll": 207.8414560336344,
+        "grad_max": 2.7670902606284163e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 9.246382600150831e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.7630935301657926,
+          1.0262922340994685,
+          -1.2,
+          -0.46648226230281725
+        ],
+        "nll": 265.88126975967043,
+        "grad_max": 1.300583606318259e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 2.847740354368e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v3",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -3.764194464282719,
+          1.4208668408145053,
+          -2.180477734351141,
+          -1.1406840739267363
+        ],
+        "nll": 206.2260290736097,
+        "grad_max": 2.1048644309000033e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 6.631685726983518e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.498611143783871,
+          1.295580732932315,
+          -2.0,
+          -1.1487151478998507
+        ],
+        "nll": 208.89478361764506,
+        "grad_max": 9.257696564710038e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 6.450323006116424e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v3",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -3.6381183705532494,
+          1.4471749580153042,
+          -2.1627795342177274,
+          -1.1077274130500385
+        ],
+        "nll": 207.7168530865029,
+        "grad_max": 2.908902271903592e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 9.650339959938785e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.6958162300256685,
+          1.0504695261947958,
+          -1.2,
+          -0.4995034833021902
+        ],
+        "nll": 264.28016572229694,
+        "grad_max": 3.945337789633784e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 6.637297300397693e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v1",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -2.9447361108514256,
+          1.2290239626972639,
+          -1.8240668051345532,
+          -0.8349317265741105
+        ],
+        "nll": 222.60055500182287,
+        "grad_max": 8.905468954859921e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 2.9134341998367315e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.3143413091319807,
+          1.3007833163205444,
+          -2.0,
+          -0.756468841165234
+        ],
+        "nll": 223.8694845409323,
+        "grad_max": 5.852503666877358e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 2.949008033329867e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v1",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -3.1637366322870766,
+          1.3343992930207909,
+          -1.9725569213661527,
+          -1.240677300822871
+        ],
+        "nll": 195.31466871140816,
+        "grad_max": 2.5058473814472865e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 7.047985765269947e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.430708701027867,
+          1.0929622354873842,
+          -1.2,
+          -0.754154429990595
+        ],
+        "nll": 243.10670645626777,
+        "grad_max": 2.8658557008990702e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 1.639080358839847e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -3.0199636853469642,
+          1.224106944072448,
+          -1.8470186584428485,
+          -0.825112280469392
+        ],
+        "nll": 221.04846098776426,
+        "grad_max": 1.2652397648101517e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 5.612046504308474e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.347144147579039,
+          1.2861791163455225,
+          -2.0,
+          -0.7574627170209599
+        ],
+        "nll": 221.99908707774568,
+        "grad_max": 6.380910614704286e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 8.814915741477916e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -2.9884142796876563,
+          1.20744007218338,
+          -1.8278200795412454,
+          -0.8409596241942263
+        ],
+        "nll": 217.92703114241922,
+        "grad_max": 1.0563402004966821e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 6.94630322446214e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.5428164585817252,
+          1.0369015077154058,
+          -1.2,
+          -0.6727526765033769
+        ],
+        "nll": 243.28518821295924,
+        "grad_max": 4.305820636175354e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 8.361718917737961e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v3",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -2.942503533881906,
+          1.2477944322534202,
+          -1.8402588062261904,
+          -0.8305640614214379
+        ],
+        "nll": 218.80174810864887,
+        "grad_max": 9.166001291305291e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 3.0346379926568995e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.2581950925031977,
+          1.3228839662053544,
+          -2.0,
+          -0.7572150400253507
+        ],
+        "nll": 219.877619280673,
+        "grad_max": 6.38043178456955e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 1.909482910589326e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v3",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -2.885349966302971,
+          1.2622895120759206,
+          -1.8336539512772598,
+          -0.8392982792351056
+        ],
+        "nll": 212.6478240208999,
+        "grad_max": 3.12638803734444e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 1.565516929893943e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.4595565666158246,
+          1.0730933193068337,
+          -1.2,
+          -0.6723021497847911
+        ],
+        "nll": 238.48540147127758,
+        "grad_max": 4.271072384653961e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 5.601416781663426e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B_T2s1|2024-06-13_TypeB_T2_sample1/v1",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -2.831457103859351,
+          1.317923315554272,
+          -1.8587989392812165,
+          -0.5716570849041828
+        ],
+        "nll": 299.10424791677156,
+        "grad_max": 4.057894072284464e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 3.0464445596827536e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.131677968991131,
+          1.358016127410226,
+          -2.0,
+          -0.5402353087183925
+        ],
+        "nll": 300.2076961238778,
+        "grad_max": 1.556801160062014e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 5.965585341005939e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B_T2s1|2024-06-13_TypeB_T2_sample1/v1",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -2.8432158306295485,
+          1.3185032650811555,
+          -1.86639301690556,
+          -0.5636581185369101
+        ],
+        "nll": 300.6422506216944,
+        "grad_max": 6.574888781566792e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 5.61288390292404e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.2154889592484608,
+          1.2308313122751686,
+          -1.2,
+          -0.37610364532690144
+        ],
+        "nll": 324.86600606323185,
+        "grad_max": 2.3462121134798504e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 5.2940364862975365e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B_T2s1|2024-06-13_TypeB_T2_sample1/v2",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -2.8111873706194133,
+          1.3300461263059664,
+          -1.8608865659809837,
+          -0.5581046456867087
+        ],
+        "nll": 301.54587802920327,
+        "grad_max": 2.5390060424494245e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 1.2533552880751847e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.1058192340188597,
+          1.369376501064529,
+          -2.0,
+          -0.528034535555313
+        ],
+        "nll": 302.5821969144618,
+        "grad_max": 1.9421501444109403e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 9.498507647710164e-09,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B_T2s1|2024-06-13_TypeB_T2_sample1/v2",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -2.8354707014567246,
+          1.3148835502735368,
+          -1.8621286781080237,
+          -0.570396953113758
+        ],
+        "nll": 300.2356709624142,
+        "grad_max": 2.9942270884930618e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 1.4481216911451897e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.2131563507349221,
+          1.2280944169030692,
+          -1.2,
+          -0.3805231485618794
+        ],
+        "nll": 324.6633234447934,
+        "grad_max": 2.1763763722250265e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 6.889876934516901e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B_T2s1|2024-06-13_TypeB_T2_sample1/v3",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -2.8129011583301278,
+          1.326893681990557,
+          -1.8582716617726605,
+          -0.5559160485912537
+        ],
+        "nll": 301.6390353667052,
+        "grad_max": 1.0613377103391858e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 7.226854466933317e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.1152362102721627,
+          1.3679754239307433,
+          -2.0,
+          -0.524402161773595
+        ],
+        "nll": 302.7272227015184,
+        "grad_max": 2.7474319116057203e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 3.252460034908651e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "B_T2s1|2024-06-13_TypeB_T2_sample1/v3",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -2.738809896875104,
+          1.3396356057775443,
+          -1.8456739680967063,
+          -0.5792564546613462
+        ],
+        "nll": 295.387543593683,
+        "grad_max": 1.0279184910662781e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 2.994708278665283e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.1651381424109348,
+          1.243730977584972,
+          -1.2,
+          -0.3913099239016258
+        ],
+        "nll": 319.9433857270687,
+        "grad_max": 2.0842586915629603e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 7.2806290431024106e-09,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v1",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -2.8844192587528434,
+          1.1387116645404505,
+          -1.6076226219226086,
+          -0.7032939612529966
+        ],
+        "nll": 301.43716980814423,
+        "grad_max": 1.5557465809536833e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 8.125628469388257e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.7344584940332886,
+          1.2600170288760069,
+          -2.0,
+          -0.5388712329424066
+        ],
+        "nll": 310.5412415929507,
+        "grad_max": 2.056784372446903e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 4.4852707253017255e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v1",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -2.986166996679157,
+          1.088383255547718,
+          -1.6025388317932738,
+          -0.6973450227677289
+        ],
+        "nll": 302.0536564942716,
+        "grad_max": 3.025490968866506e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 1.5017296499867066e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -2.013343386672729,
+          1.0201600192456102,
+          -1.2,
+          -0.6076963901337665
+        ],
+        "nll": 314.19752349451966,
+        "grad_max": 1.739566697920748e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 3.6839011075732666e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v2",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -2.986166996679157,
+          1.088383255547718,
+          -1.6025388317932738,
+          -0.6973450227677289
+        ],
+        "nll": 302.0536564942716,
+        "grad_max": 3.025490968866506e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 1.5017296499867066e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.8460234895848475,
+          1.208188678955112,
+          -2.0,
+          -0.529694619223044
+        ],
+        "nll": 311.3782452468731,
+        "grad_max": 1.0681825794260171e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 1.8078588567889347e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v2",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -2.951810367689596,
+          1.105879740405262,
+          -1.6053552685454808,
+          -0.6882113230583268
+        ],
+        "nll": 307.4910944947978,
+        "grad_max": 1.4454043561476303e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 1.6875583568046184e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.9690048590517102,
+          1.0361564555779557,
+          -1.2,
+          -0.5995169763807375
+        ],
+        "nll": 319.6142398752571,
+        "grad_max": 6.726471231862281e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 9.051306553923974e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v3",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -2.957977324393434,
+          1.1272529050058013,
+          -1.618644247615319,
+          -0.6990356280398118
+        ],
+        "nll": 296.8320117378886,
+        "grad_max": 6.015454800945007e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 2.97877555662123e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.7674100044543963,
+          1.254013960911162,
+          -2.0,
+          -0.5349128479822605
+        ],
+        "nll": 305.56015955504114,
+        "grad_max": 5.126802686087709e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 1.5602840495518545e-05,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v3",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -2.947215821702967,
+          1.151830425508421,
+          -1.6336285967174387,
+          -0.7365324855776318
+        ],
+        "nll": 298.5086751264399,
+        "grad_max": 5.258016244624741e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 8.349679672381815e-09,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.900257009568501,
+          1.0697249812164449,
+          -1.2,
+          -0.6227809528591298
+        ],
+        "nll": 313.32569802024994,
+        "grad_max": 1.0369186990525727e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 1.2365187838313757e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v1",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -3.5528104039858186,
+          1.1677515845850328,
+          -1.8283945148035314,
+          -1.1619376785693654
+        ],
+        "nll": 238.75526750993305,
+        "grad_max": 1.6661755127446893e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 4.7108365763232443e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.917615356854763,
+          1.2383033739678866,
+          -2.0,
+          -1.081074461109309
+        ],
+        "nll": 241.57761539780992,
+        "grad_max": 2.1339966830661672e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 3.078055371002198e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v1",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -3.555604612897562,
+          1.1577942023747625,
+          -1.8255665160015273,
+          -1.1544498305507125
+        ],
+        "nll": 241.7980440894469,
+        "grad_max": 1.5428523745644123e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 4.77997957991769e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -2.225335664698519,
+          0.9328087254116644,
+          -1.2,
+          -0.7747687476009272
+        ],
+        "nll": 278.8758796282474,
+        "grad_max": 2.0752584835766657e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 1.6065674632627592e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v2",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -3.6620526242486786,
+          1.1763674555462458,
+          -1.8687614499752139,
+          -1.2290665346535732
+        ],
+        "nll": 237.32276000921038,
+        "grad_max": 1.572194226658515e-05,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "Optimization terminated successfully.",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 4.603271639739272e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.9547278191647672,
+          1.2250292361170494,
+          -2.0,
+          -1.173266113611725
+        ],
+        "nll": 239.09423259256275,
+        "grad_max": 5.817094472748899e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 6.447829685841594e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v2",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -3.5595554209765092,
+          1.1474252187724967,
+          -1.8182695635977646,
+          -1.157441169068096
+        ],
+        "nll": 237.42929183049424,
+        "grad_max": 1.1508864559032873e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 3.3042617253625837e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -2.243507583228588,
+          0.9232253278086712,
+          -1.2,
+          -0.7807645693296364
+        ],
+        "nll": 274.3053175063005,
+        "grad_max": 1.0127602460367293e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 1.7208584570700078e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v3",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -3.5783542092793685,
+          1.1695829683442398,
+          -1.8380133250914406,
+          -1.1727684913798693
+        ],
+        "nll": 238.18130647182423,
+        "grad_max": 1.5994118522519066e-05,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 1.1369973767105462e-05,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.9320008807740927,
+          1.2322452109719007,
+          -2.0,
+          -1.0972812070263722
+        ],
+        "nll": 240.70783642945193,
+        "grad_max": 6.406412583610672e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 7.754441255725356e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v3",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -3.496689452886729,
+          1.1710106383138699,
+          -1.8144562588984376,
+          -1.1687352525000168
+        ],
+        "nll": 244.17607310172758,
+        "grad_max": 3.07627089647153e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 7.174398966988797e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -2.1677769545231906,
+          0.9516006414732209,
+          -1.2,
+          -0.7886360812657464
+        ],
+        "nll": 282.07109558432023,
+        "grad_max": 7.422803112907179e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 3.564995441495002e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v1",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -2.6253500425689724,
+          1.1481407654357414,
+          -1.6289290711201145,
+          -0.814159787512034
+        ],
+        "nll": 277.5325585832655,
+        "grad_max": 5.293463664528126e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 3.068041390040197e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.411273426063392,
+          1.276764210736506,
+          -2.0,
+          -0.6313158552636734
+        ],
+        "nll": 285.9113951109586,
+        "grad_max": 6.645467411251586e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 1.9501270802847288e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v1",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -2.664617805517274,
+          1.1686057414583366,
+          -1.65494290207178,
+          -0.8382760737914747
+        ],
+        "nll": 271.6221959540814,
+        "grad_max": 9.151790436590089e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 4.6583351577648514e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.584121097496212,
+          1.073492454511297,
+          -1.2,
+          -0.7099731227420382
+        ],
+        "nll": 288.97752476111805,
+        "grad_max": 5.449862783279968e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 8.598510532666296e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v2",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -2.7292537579084515,
+          1.1212926551310094,
+          -1.6477327422689558,
+          -0.775115661711136
+        ],
+        "nll": 281.00529437382744,
+        "grad_max": 5.324333566629017e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 4.903131741987275e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.4710913177598437,
+          1.240552770076696,
+          -2.0,
+          -0.6077429165017149
+        ],
+        "nll": 288.20779621111967,
+        "grad_max": 1.2742399727964462e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 5.701010270153195e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v2",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -2.7218642648202285,
+          1.117509885032199,
+          -1.6421932796348486,
+          -0.7844524629126989
+        ],
+        "nll": 281.03069562421393,
+        "grad_max": 4.2057986637916007e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 1.981817742851643e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.6655410642549455,
+          1.0316061076353011,
+          -1.2,
+          -0.6720846643295575
+        ],
+        "nll": 296.84207424721575,
+        "grad_max": 3.0316490059097604e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 1.2094454582559871e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v3",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -2.7267536123924914,
+          1.1259453042635164,
+          -1.648804347476182,
+          -0.7793531703465564
+        ],
+        "nll": 280.8431527873533,
+        "grad_max": 2.7055657160164842e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 2.4653179772934052e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.45848226198323,
+          1.2507853360774892,
+          -2.0,
+          -0.6070878727528839
+        ],
+        "nll": 288.2241030721574,
+        "grad_max": 1.6105635343895603e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 2.5297063287637548e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v3",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -2.69288001926024,
+          1.1857603690847565,
+          -1.680465486426491,
+          -0.8202818691097126
+        ],
+        "nll": 267.70572944754974,
+        "grad_max": 1.63282720677671e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 7.191867000495269e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.560916378541565,
+          1.0797249145886287,
+          -1.2,
+          -0.6793845258413133
+        ],
+        "nll": 286.9289815998478,
+        "grad_max": 4.2487808483300424e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 7.756191377767071e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v1",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -0.9867554889919063,
+          1.1487142834369255,
+          -1.0928678867623631,
+          -0.44427691398910785
+        ],
+        "nll": 352.06475647184425,
+        "grad_max": 1.3263464400855202e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 5.803220650105479e-09,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.1105857991338235,
+          1.2905181754961097,
+          -2.0,
+          -0.07460490101969057
+        ],
+        "nll": 381.9195293278846,
+        "grad_max": 6.631732200427601e-09,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 8.792825281559099e-09,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v1",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -1.0764899959784247,
+          1.1016345624564012,
+          -1.087249032697397,
+          -0.44422470585732643
+        ],
+        "nll": 352.77810006870106,
+        "grad_max": 1.5158245029548802e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 7.579122514774401e-09,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.3601113629607129,
+          1.1104421750657871,
+          -1.2,
+          -0.42793210753058036
+        ],
+        "nll": 353.4866731496988,
+        "grad_max": 5.002220859751104e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 8.167254111081653e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v2",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -1.0740941453032098,
+          1.1014623868146403,
+          -1.0882622895920175,
+          -0.453921272677743
+        ],
+        "nll": 349.8478854573387,
+        "grad_max": 1.3372414287005083e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 8.491918540722166e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.2017958049886164,
+          1.2438301604302802,
+          -2.0,
+          -0.07543897478391662
+        ],
+        "nll": 380.38938273015134,
+        "grad_max": 2.79338034185154e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 1.2225894110464146e-05,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v2",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -1.167482562447658,
+          1.0793823689618063,
+          -1.107067204791761,
+          -0.47741686744121276
+        ],
+        "nll": 351.78223899884136,
+        "grad_max": 5.314859663485548e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 3.334934632891766e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.403188768611419,
+          1.0864106880850113,
+          -1.2,
+          -0.46454395742196525
+        ],
+        "nll": 352.31282922398293,
+        "grad_max": 1.70530256582424e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 1.9051538003939725e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v3",
+      "p": -2.0,
+      "free": {
+        "success": true,
+        "params": [
+          -1.1054944242718447,
+          1.109011451894622,
+          -1.10978867601383,
+          -0.44203034602162755
+        ],
+        "nll": 352.0887453356904,
+        "grad_max": 2.2737367544323203e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 1.3737159558028601e-08,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -3.167483525287672,
+          1.260917162076107,
+          -2.0,
+          -0.06904387517037884
+        ],
+        "nll": 382.11258672928136,
+        "grad_max": 2.2263672387149804e-08,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -2.0,
+        "starts": 2,
+        "canonical_grad_max": 8.39976569062582e-09,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v3",
+      "p": -1.2,
+      "free": {
+        "success": true,
+        "params": [
+          -1.0425645013906137,
+          1.1442511521317458,
+          -1.1114630857099186,
+          -0.4544705015650661
+        ],
+        "nll": 348.46853811053154,
+        "grad_max": 2.6389557206130117e-06,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": null,
+        "starts": 2,
+        "canonical_grad_max": 1.6794699305385282e-06,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      },
+      "fixed": {
+        "success": true,
+        "params": [
+          -1.266094904212208,
+          1.1522999367724427,
+          -1.2,
+          -0.4416507267102525
+        ],
+        "nll": 348.9428270232172,
+        "grad_max": 1.1131836193574901e-07,
+        "diagnostics": {
+          "valid": true,
+          "issues": [],
+          "rank": 3,
+          "n": 114,
+          "p": 3
+        },
+        "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "fixed_beta": -1.2,
+        "starts": 2,
+        "canonical_grad_max": 1.2578895895256245e-07,
+        "parameterization": "eta=theta/sigma,tau=1/sigma"
+      }
+    }
+  ],
+  "coherent_rule_refits": {
+    "hard_restore_with_loss": {
+      "A1": {
+        "free": {
+          "success": true,
+          "params": [
+            -1.2194270574157673,
+            0.6576079365814047,
+            -0.8952043517839265,
+            -1.0661368061555048
+          ],
+          "nll": 309.1215556629116,
+          "grad_max": 1.4731919388092743e-07,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 7.764054326964468e-08,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.9065035478189145,
+              0.7886627932514021,
+              -2.0,
+              -0.1826571959770039
+            ],
+            "nll": 401.7157466965805,
+            "grad_max": 1.3571366253017911e-06,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 9.241848037220194e-07,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -2.0060377037229036,
+              0.6773727762209816,
+              -1.2,
+              -0.8885968709650656
+            ],
+            "nll": 326.13576007957977,
+            "grad_max": 6.064420446863194e-07,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 9.128270713528826e-07,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "A2": {
+        "free": {
+          "success": true,
+          "params": [
+            -0.7356584089891788,
+            1.0016477774063066,
+            -0.9505785374715049,
+            -0.5333269361468667
+          ],
+          "nll": 365.34158268984584,
+          "grad_max": 2.48689957516035e-07,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 1.506350599811412e-07,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.241556800887078,
+              1.1433603337057472,
+              -2.0,
+              -0.05937448089021741
+            ],
+            "nll": 412.44535858699487,
+            "grad_max": 9.379164112033321e-08,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 2.124808955082343e-07,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.369712752300153,
+              1.0214203319652415,
+              -1.2,
+              -0.47801582320866487
+            ],
+            "nll": 369.761869746764,
+            "grad_max": 5.305385760342081e-08,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 7.224942873756252e-08,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "A3": {
+        "free": {
+          "success": true,
+          "params": [
+            -1.0841797568819507,
+            1.0672940681229366,
+            -1.1023603976872063,
+            -0.5624605405243909
+          ],
+          "nll": 378.32151601999846,
+          "grad_max": 4.343784591280079e-07,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 3.087816333556064e-07,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.186076351906073,
+              1.2082026120138314,
+              -2.0,
+              -0.14107081476551386
+            ],
+            "nll": 416.5879285678037,
+            "grad_max": 5.643323566707478e-06,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 2.935701216991462e-05,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.333154629483961,
+              1.074876192159718,
+              -1.2,
+              -0.5478584051202574
+            ],
+            "nll": 379.0704359266914,
+            "grad_max": 1.8000415972589203e-08,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 3.2866110311421655e-08,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "A4": {
+        "free": {
+          "success": true,
+          "params": [
+            -1.65236291471225,
+            1.104495875228616,
+            -1.2700039635650657,
+            -0.6976977489008583
+          ],
+          "nll": 350.39984954047884,
+          "grad_max": 9.331794596315982e-08,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 4.5185077578786366e-08,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.174258574569645,
+              1.3346787709090284,
+              -2.0,
+              -0.3021280558220387
+            ],
+            "nll": 380.01049466624534,
+            "grad_max": 4.21588689884326e-08,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 1.0155104461195189e-07,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.4844785238775935,
+              1.0922123656141614,
+              -1.2,
+              -0.7015960425919998
+            ],
+            "nll": 350.8675429057366,
+            "grad_max": 4.1590434799824527e-07,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 6.160244441241414e-07,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "A_T2": {
+        "free": {
+          "success": true,
+          "params": [
+            -3.560036032314932,
+            1.2046112131126785,
+            -1.9334890955527382,
+            -0.6553319773611489
+          ],
+          "nll": 286.95768317488125,
+          "grad_max": 1.4959293063535975e-06,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "Optimization terminated successfully.",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 7.749959396920226e-07,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.687310695988946,
+              1.2337063297574766,
+              -2.0,
+              -0.6420338479011827
+            ],
+            "nll": 287.22526215705136,
+            "grad_max": 9.890754881780592e-07,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 5.21228817363357e-07,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.9158669942280975,
+              1.0021572816906335,
+              -1.2,
+              -0.39922215451194437
+            ],
+            "nll": 317.5590294987968,
+            "grad_max": 6.347515106123561e-08,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 5.338610640235547e-08,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "B1": {
+        "free": {
+          "success": true,
+          "params": [
+            -2.2981261361521312,
+            0.9842876060576401,
+            -1.4477542693772096,
+            -0.39932847967050067
+          ],
+          "nll": 389.6922837733105,
+          "grad_max": 2.9179621681881445e-06,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 9.061963544750115e-07,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.5773872543050764,
+              1.091272688444206,
+              -2.0,
+              -0.21945306782520402
+            ],
+            "nll": 402.47563220671617,
+            "grad_max": 5.616129783447831e-06,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 1.1594429773431625e-05,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.665936259867189,
+              0.961701731346329,
+              -1.2,
+              -0.38622887785420185
+            ],
+            "nll": 393.05799826260255,
+            "grad_max": 1.3969270185043568e-06,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 3.603044083818033e-06,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "B_T2r1": {
+        "free": {
+          "success": true,
+          "params": [
+            -3.0563160419045827,
+            1.2582635656714667,
+            -1.8883038944571997,
+            -0.8138647612451564
+          ],
+          "nll": 264.08893509644173,
+          "grad_max": 1.3036090725411969e-06,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 5.018525940666358e-07,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.240966660817227,
+              1.3223676178345563,
+              -2.0,
+              -0.7770902703090399
+            ],
+            "nll": 264.85960446949423,
+            "grad_max": 8.279865846388205e-06,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 2.3651067721812195e-05,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.585594915676074,
+              1.031616164559221,
+              -1.2,
+              -0.5503111221073045
+            ],
+            "nll": 296.60353304765204,
+            "grad_max": 8.586592605051782e-08,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 1.4780840351373433e-07,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "B_T2r2": {
+        "free": {
+          "success": true,
+          "params": [
+            -2.904767960738914,
+            1.182832418230452,
+            -1.8196564930258168,
+            -0.8623183937031976
+          ],
+          "nll": 238.99594660384713,
+          "grad_max": 1.2777926864752467e-06,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 2.29383535686175e-07,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.259373028477075,
+              1.2667403456234927,
+              -2.0,
+              -0.776992369688876
+            ],
+            "nll": 240.58978669964364,
+            "grad_max": 8.42905270335317e-08,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 2.4611262331238677e-07,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.509377758638934,
+              1.0024382366521782,
+              -1.2,
+              -0.6873459321701629
+            ],
+            "nll": 267.43859616387897,
+            "grad_max": 6.808420494053279e-06,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 1.0963141349454199e-05,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "B_T2s1": {
+        "free": {
+          "success": true,
+          "params": [
+            -2.269539001214585,
+            1.1604362472999235,
+            -1.6045285570145769,
+            -0.6110280903594454
+          ],
+          "nll": 357.60226171024806,
+          "grad_max": 1.5961044718438444e-06,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 1.3776393083967606e-06,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.171287550770966,
+              1.2360413781714934,
+              -2.0,
+              -0.47585883382361754
+            ],
+            "nll": 368.1231063126784,
+            "grad_max": 4.641401363761422e-06,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 1.667561994192223e-05,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.2332522358217322,
+              1.1286062245387918,
+              -1.2,
+              -0.523022068677628
+            ],
+            "nll": 370.5115973619103,
+            "grad_max": 2.8421709430404003e-09,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 2.077710651054956e-08,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "C1": {
+        "free": {
+          "success": true,
+          "params": [
+            -2.2572915803005955,
+            1.1072553796603384,
+            -1.4346493741472097,
+            -0.639697868698914
+          ],
+          "nll": 348.76228039053456,
+          "grad_max": 1.8663589192631963e-07,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 1.67650251953256e-07,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.503058027277096,
+              1.2612493618197937,
+              -2.0,
+              -0.3828929064001731
+            ],
+            "nll": 367.05636321597683,
+            "grad_max": 3.023810104205713e-07,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 1.0549377871246322e-06,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.6763303564948715,
+              1.0736017925776407,
+              -1.2,
+              -0.6186436905710113
+            ],
+            "nll": 353.3201838878464,
+            "grad_max": 2.7853275241795923e-06,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 4.208222846134111e-06,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "C_T2": {
+        "free": {
+          "success": true,
+          "params": [
+            -3.333724516511296,
+            1.1281204809558936,
+            -1.7675652282010288,
+            -1.13304371501891
+          ],
+          "nll": 264.4259322130756,
+          "grad_max": 8.340559380316241e-07,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 2.2139698055609078e-07,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.818425840980531,
+              1.2243528935926495,
+              -2.0,
+              -1.0101378348149956
+            ],
+            "nll": 270.20813597604877,
+            "grad_max": 5.121774799768219e-06,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 2.8423646863175587e-06,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -2.102151341308028,
+              0.9329099445559584,
+              -1.2,
+              -0.7953428605385395
+            ],
+            "nll": 301.19996446683166,
+            "grad_max": 6.518045362705984e-07,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 1.059569840312503e-06,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "D1": {
+        "free": {
+          "success": true,
+          "params": [
+            -2.0687450073793574,
+            1.077786348949853,
+            -1.4557769627940351,
+            -0.7169034354565639
+          ],
+          "nll": 319.3241916975392,
+          "grad_max": 4.5190517994342367e-07,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 1.9381873614463407e-07,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.221496696915717,
+              1.2497125988190612,
+              -2.0,
+              -0.42819292230630795
+            ],
+            "nll": 335.7923587398832,
+            "grad_max": 7.24753590475302e-08,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 6.729667622412676e-08,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.4489860916763782,
+              1.0346758042164448,
+              -1.2,
+              -0.6977430195124147
+            ],
+            "nll": 325.2452993928783,
+            "grad_max": 5.2915572454033805e-08,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 7.968740820873118e-08,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "D2": {
+        "free": {
+          "success": true,
+          "params": [
+            -0.6242041888438519,
+            1.1285827729282087,
+            -1.0070646145878415,
+            -0.5150131669739132
+          ],
+          "nll": 363.01463773283086,
+          "grad_max": 9.947598300641401e-09,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 2.8302941141347484e-09,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -2.884205810778205,
+              1.3119152892590031,
+              -2.0,
+              -0.061905142561724774
+            ],
+            "nll": 402.8330525930403,
+            "grad_max": 1.3412666909585796e-07,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 7.173141919021759e-07,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.1035149857387094,
+              1.1486750918903526,
+              -1.2,
+              -0.47396047339836717
+            ],
+            "nll": 365.5346146662829,
+            "grad_max": 1.9279392896957384e-06,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 5.050881514497053e-06,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      }
+    },
+    "near_cutoff_no_loss": {
+      "A1": {
+        "free": {
+          "success": true,
+          "params": [
+            -1.4885937847611588,
+            0.6676593852759318,
+            -0.9709601639366683,
+            -0.9737864003922325
+          ],
+          "nll": 320.55248727765746,
+          "grad_max": 5.854872142663224e-07,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 2.2216302871432464e-07,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -4.005893027858733,
+              0.7844782834732106,
+              -2.0,
+              -0.2171181436063058
+            ],
+            "nll": 399.4590122802254,
+            "grad_max": 3.6000831945178405e-08,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 2.6526928801710405e-08,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -2.0848949839909916,
+              0.680633046336354,
+              -1.2,
+              -0.8779296849592506
+            ],
+            "nll": 329.3219135097753,
+            "grad_max": 2.1316282072803002e-08,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 4.736951571734001e-09,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "A2": {
+        "free": {
+          "success": true,
+          "params": [
+            -1.4086391251095676,
+            0.9404496607790048,
+            -1.0872972316074212,
+            -0.38322297379857406
+          ],
+          "nll": 382.708706892391,
+          "grad_max": 1.0373923942097461e-07,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 9.590114031587367e-08,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.6501714961079803,
+              1.0421722208884816,
+              -2.0,
+              -0.054703822292217034
+            ],
+            "nll": 414.51125783362863,
+            "grad_max": 3.9790393202565604e-08,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 2.9599563873712057e-08,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.7015838746290886,
+              0.9470764613885051,
+              -1.2,
+              -0.37107777085582533
+            ],
+            "nll": 383.41878907512955,
+            "grad_max": 8.052817671947801e-08,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 6.205406558971541e-08,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "A3": {
+        "free": {
+          "success": true,
+          "params": [
+            -1.5348752714409375,
+            1.0654549196854979,
+            -1.2137966006561567,
+            -0.5156543843438407
+          ],
+          "nll": 383.4168558678803,
+          "grad_max": 6.996477471451119e-07,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 4.221635079187984e-07,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.4282050559854573,
+              1.173584686627013,
+              -2.0,
+              -0.1763804999100159
+            ],
+            "nll": 412.6278537103499,
+            "grad_max": 3.12638803734444e-08,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 2.03688917584562e-08,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.4989247230719713,
+              1.0646446239888092,
+              -1.2,
+              -0.5165858742056095
+            ],
+            "nll": 383.4307283659664,
+            "grad_max": 4.736951571734001e-09,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 2.1460170976969024e-09,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "A4": {
+        "free": {
+          "success": true,
+          "params": [
+            -2.205268262090959,
+            1.0920916181396414,
+            -1.404594474631894,
+            -0.598861572928995
+          ],
+          "nll": 338.6131360496454,
+          "grad_max": 9.331794596315982e-08,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 5.011003708838211e-08,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.506166676791259,
+              1.2657700200449808,
+              -2.0,
+              -0.3167769703467563
+            ],
+            "nll": 356.0851484367891,
+            "grad_max": 3.242917046009097e-06,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 8.317207502281525e-06,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.7058365324553835,
+              1.0583259409713779,
+              -1.2,
+              -0.5933397221705545
+            ],
+            "nll": 341.8087188520998,
+            "grad_max": 1.2424612353363457e-05,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 2.8756589682960255e-05,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "A_T2": {
+        "free": {
+          "success": true,
+          "params": [
+            -3.760646791123053,
+            1.1876944698578538,
+            -1.950498461318485,
+            -0.7055714921665369
+          ],
+          "nll": 281.1636430990019,
+          "grad_max": 4.782226804714181e-06,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 2.3615892527634024e-06,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.8583138338249716,
+              1.2085011304176518,
+              -2.0,
+              -0.6963691959170513
+            ],
+            "nll": 281.3313820666652,
+            "grad_max": 1.01702350245129e-06,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 1.449093904666094e-06,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -2.0658139153148594,
+              0.9833257998083413,
+              -1.2,
+              -0.4031817118042687
+            ],
+            "nll": 314.91591597344325,
+            "grad_max": 1.0480355913016343e-07,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 2.389716068147135e-07,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "B1": {
+        "free": {
+          "success": true,
+          "params": [
+            -2.9349551152862334,
+            1.0743951999643577,
+            -1.6655372810842597,
+            -0.5166310194663348
+          ],
+          "nll": 357.2518809522768,
+          "grad_max": 4.5379996057211725e-07,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 1.3738280388794062e-07,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.687221373203494,
+              1.1557500085981793,
+              -2.0,
+              -0.41303450403136505
+            ],
+            "nll": 363.2325267446184,
+            "grad_max": 3.912248303095111e-06,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 9.774799644226384e-06,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.7632223762398702,
+              1.0194128535844855,
+              -1.2,
+              -0.42333348620353106
+            ],
+            "nll": 370.62118045926866,
+            "grad_max": 1.0516032489249481e-07,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 1.4517552349430648e-07,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "B_T2r1": {
+        "free": {
+          "success": true,
+          "params": [
+            -3.6887012905038814,
+            1.4489048722798814,
+            -2.1853037938963134,
+            -1.075564299668945
+          ],
+          "nll": 222.41819213656711,
+          "grad_max": 1.6650384774645013e-06,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 5.727141685536235e-07,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.4084663633176655,
+              1.3241981470389272,
+              -2.0,
+              -1.0853246991492187
+            ],
+            "nll": 225.03312070668153,
+            "grad_max": 1.387926213226543e-07,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 9.104596077421613e-08,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.6997810825040687,
+              1.0461921775223524,
+              -1.2,
+              -0.4806101333740882
+            ],
+            "nll": 281.520476697953,
+            "grad_max": 5.115186209883997e-06,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 1.1670859651113581e-05,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "B_T2r2": {
+        "free": {
+          "success": true,
+          "params": [
+            -2.9356258027654714,
+            1.2181598440270096,
+            -1.815165697571119,
+            -0.8651066692487175
+          ],
+          "nll": 233.90596591625626,
+          "grad_max": 8.763360407707901e-08,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 1.2125271486529024e-07,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.31697021276698,
+              1.2997847986619906,
+              -2.0,
+              -0.7778440529830142
+            ],
+            "nll": 235.539464976311,
+            "grad_max": 1.291482476517558e-05,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 5.927289513337913e-06,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.5176739982766985,
+              1.0452337321515632,
+              -1.2,
+              -0.6929482743029349
+            ],
+            "nll": 261.11244128498095,
+            "grad_max": 1.392663762089796e-07,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 6.798877710270053e-08,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "B_T2s1": {
+        "free": {
+          "success": true,
+          "params": [
+            -2.72404425495554,
+            1.3284610036405482,
+            -1.8320518185785264,
+            -0.5922259387808579
+          ],
+          "nll": 316.5153642953015,
+          "grad_max": 1.237291750536921e-06,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 8.546384823773714e-07,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.0792032234580526,
+              1.3782075211225457,
+              -2.0,
+              -0.5527519833759371
+            ],
+            "nll": 318.24348248891675,
+            "grad_max": 5.475916016924505e-07,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 3.0329628204512206e-07,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.1697943866513243,
+              1.2395586325123067,
+              -1.2,
+              -0.40938864616880655
+            ],
+            "nll": 341.58173918623135,
+            "grad_max": 2.8421709430404004e-08,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 5.536258786650658e-08,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "C1": {
+        "free": {
+          "success": true,
+          "params": [
+            -2.9274324417273707,
+            1.1167163962463618,
+            -1.6050776961286648,
+            -0.7054922346302259
+          ],
+          "nll": 320.10415338394944,
+          "grad_max": 3.6054536770447378e-06,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 3.7603781819558356e-06,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.7853311928216593,
+              1.239545605752261,
+              -2.0,
+              -0.5358163211669577
+            ],
+            "nll": 330.108139988884,
+            "grad_max": 6.785683126508956e-06,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 6.0973424052084426e-06,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.9386061006813162,
+              1.0457673181416705,
+              -1.2,
+              -0.6124656313889535
+            ],
+            "nll": 333.5629673232436,
+            "grad_max": 1.3884212791178023e-07,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 2.6316756739481377e-07,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "C_T2": {
+        "free": {
+          "success": true,
+          "params": [
+            -3.5165439141848553,
+            1.1743967937623214,
+            -1.8259035128495489,
+            -1.178057751689138
+          ],
+          "nll": 254.56972484974855,
+          "grad_max": 2.2734999068537336e-06,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 7.341557000274961e-07,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.8889234428719437,
+              1.2456274149872508,
+              -2.0,
+              -1.0931519635695248
+            ],
+            "nll": 257.8162975001156,
+            "grad_max": 2.487745517514711e-06,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 8.862146217580999e-07,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -2.1587463309622823,
+              0.9507569478966091,
+              -1.2,
+              -0.7768683024357206
+            ],
+            "nll": 296.28990053442965,
+            "grad_max": 1.8426741614045261e-06,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 2.1717232765009014e-07,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "D1": {
+        "free": {
+          "success": true,
+          "params": [
+            -2.687494787418925,
+            1.1315132234803102,
+            -1.6404500992683784,
+            -0.8050660051150171
+          ],
+          "nll": 294.85487524497364,
+          "grad_max": 6.266986929404083e-07,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 4.896108697156589e-07,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.448055037045693,
+              1.256282521787417,
+              -2.0,
+              -0.6270286582390028
+            ],
+            "nll": 303.24670600447877,
+            "grad_max": 7.437013967622382e-08,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 1.0576942423589142e-07,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.6335403392667822,
+              1.0430301320584523,
+              -1.2,
+              -0.6871152830450149
+            ],
+            "nll": 312.32521389895766,
+            "grad_max": 6.707814956140105e-06,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 1.3489537720432414e-05,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      },
+      "D2": {
+        "free": {
+          "success": true,
+          "params": [
+            -0.9230968549366958,
+            1.165110962023064,
+            -1.094635698884979,
+            -0.46857714733631745
+          ],
+          "nll": 367.4244190331076,
+          "grad_max": 8.289665250534501e-07,
+          "diagnostics": {
+            "valid": true,
+            "issues": [],
+            "rank": 3,
+            "n": 120,
+            "p": 3
+          },
+          "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "fixed_beta": null,
+          "starts": 2,
+          "canonical_grad_max": 3.444691481090374e-07,
+          "parameterization": "eta=theta/sigma,tau=1/sigma"
+        },
+        "fixed": {
+          "-2.0": {
+            "success": true,
+            "params": [
+              -3.026929487753757,
+              1.3197686236766397,
+              -2.0,
+              -0.08355785000090081
+            ],
+            "nll": 400.22034211052437,
+            "grad_max": 1.1948176819936628e-08,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -2.0,
+            "starts": 2,
+            "canonical_grad_max": 8.365876715381803e-08,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          },
+          "-1.2": {
+            "success": true,
+            "params": [
+              -1.1896868868950947,
+              1.1744497688094964,
+              -1.2,
+              -0.45271639722505397
+            ],
+            "nll": 368.1330802519843,
+            "grad_max": 7.177277838486173e-09,
+            "diagnostics": {
+              "valid": true,
+              "issues": [],
+              "rank": 3,
+              "n": 120,
+              "p": 3
+            },
+            "optimizer": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+            "fixed_beta": -1.2,
+            "starts": 2,
+            "canonical_grad_max": 2.6808759469685852e-08,
+            "parameterization": "eta=theta/sigma,tau=1/sigma"
+          }
+        }
+      }
+    }
+  },
+  "source_sha256": {
+    "/Users/jeongjihoon/violin-rne/novelty/mle_bridge/verification/compare_results.py": "cb2d215c9e27a5256c8557e6ad118a1629d17f845a3d36c76bacd3a26071f138",
+    "/Users/jeongjihoon/violin-rne/novelty/mle_bridge/verification/oracle.py": "683ff759c416ff026638beb6b6ebd5d2839408d8721125024461aeade276a0fe",
+    "/Users/jeongjihoon/violin-rne/novelty/mle_bridge/verification/independent_refits.json": "3751dc400737e3dcf7dac27f46f694c38ceb622dc6868609a179584dcf4d2e15",
+    "/Users/jeongjihoon/violin-rne/novelty/mle_bridge/production/rows.json": "735cc47929931218716cd644a37883e6badb10ba699bd92c0e87f3bba1ca8726",
+    "/Users/jeongjihoon/violin-rne/novelty/mle_bridge/production/baselines.json": "4d633e5122eec463da5e4a3e35411599a059217f764086eb582719b8b9e9d501",
+    "/Users/jeongjihoon/violin-rne/novelty/mle_bridge/production/selected.json": "108a13f05fa22fa399e2052e0587422848c05419481fc98d0d135649e7cccee5",
+    "/Users/jeongjihoon/violin-rne/novelty/mle_bridge/coherent_replay.json": "3334808ec32048ff82075e47fec107cb8a3503abe21f3ff45e608cfefc58e31d"
+  },
+  "seconds": 2.9242412091698498
+}

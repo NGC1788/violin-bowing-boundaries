@@ -1,0 +1,9 @@
+# Data, transformations and provenance
+
+Derived from A. Lampis, **A collection of bowed responses of cello strings**, IWK / University of Music and Performing Arts Vienna, Zenodo parts 1–4 and 6, CC BY 4.0. Original record identities and source-cache SHA256 hashes are retained in `production/input_joint.json.gz` (`source_records` and `source_sha256`). Attribution and transformations from the earlier audit are documented in `../joint_rule/DATA.md`.
+
+The compact fixture is a byte-identical copy of the earlier joint-rule fixture:13 diagrams,39 speedfolders,1,560 beta columns,78,000 waveform windows. It includes force order, trial IDs, waveform feature scores, fixed guards and baseline labels. This audit reconstructs the original t=.2,K=2 lower-boundary intervals, retaining all finite and one-sided censored rows. It uses the original1mN force clamp. No original force, feature, or label is corrected. Deletions and shared-threshold changes are hypothetical sensitivity analyses.
+
+`source_obstruction_certificates.json` is the immutable original fixed-choice certificate artifact; `production/prior_obstructions.json` contains all enumerated minimum certificates. `production/reference_baselines.json` records previously saved stable original-MLE outputs; `production/cases.json` fixes the77selectedcases and their geometry-feasibility classification. The baseline reconstruction and independent verifier check interval/ID identity before using those references.
+
+The joint waveform domain, prior all-column decision and geometric certificates are held fixed. One-sided boundaries excluded from that earlier hard predicate remain in the MLE. No new raw archives were downloaded; no frozen prediction was rescored. Every empirical result is post hoc on exposed cello data. Code/tests support computation, not classifier truth, causal physics or independent experimental replication.

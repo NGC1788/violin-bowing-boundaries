@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "steps": [
+    "prepare",
+    "controls",
+    "summarize"
+  ],
+  "seconds": 27.95456266682595,
+  "npz_arrays": 908,
+  "npz_elements": 673916,
+  "max_float_difference": 0.0,
+  "exact_json_files": 4,
+  "source_hashes_unchanged": true
+}

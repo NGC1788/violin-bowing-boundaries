@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "seconds": 48.190896209096536,
+  "steps": [
+    {
+      "name": "full_production",
+      "status": "PASS",
+      "seconds": 28.019291957840323
+    },
+    {
+      "name": "coherent_replay",
+      "status": "PASS",
+      "seconds": 0.4997246661223471
+    },
+    {
+      "name": "synthetic_theory",
+      "status": "PASS",
+      "seconds": 0.8963495411444455
+    },
+    {
+      "name": "synthetic_oracle",
+      "status": "PASS",
+      "seconds": 0.6639157498721033
+    },
+    {
+      "name": "independent_refits",
+      "status": "PASS",
+      "seconds": 2.6313914582133293
+    },
+    {
+      "name": "independent_comparison",
+      "status": "PASS",
+      "seconds": 3.1204163748770952
+    },
+    {
+      "name": "all_control_checks",
+      "status": "PASS",
+      "seconds": 4.972513541113585
+    },
+    {
+      "name": "all_certificate_families",
+      "status": "PASS",
+      "seconds": 1.2195437918417156
+    },
+    {
+      "name": "independent_family_checks",
+      "status": "PASS",
+      "seconds": 3.649364417186007
+    },
+    {
+      "name": "figures",
+      "status": "PASS",
+      "seconds": 0.7805779590271413
+    }
+  ],
+  "compared_additional_json_files": 8,
+  "compared_additional_numbers": 228770,
+  "production_reproduction": {
+    "status": "PASS",
+    "steps": [
+      "prepare",
+      "controls",
+      "summarize"
+    ],
+    "seconds": 27.95456266682595,
+    "npz_arrays": 908,
+    "npz_elements": 673916,
+    "max_float_difference": 0.0,
+    "exact_json_files": 4,
+    "source_hashes_unchanged": true
+  },
+  "source_hashes_unchanged": true
+}

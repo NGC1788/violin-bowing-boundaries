@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "n_rows_exactly_reconstructed": 1560,
+  "numerical_fit_comparisons": 425,
+  "max_params_absolute_difference": 7.113302746830641e-07,
+  "max_nll_absolute_difference": 3.3509195418446325e-11,
+  "decomposition_identities": 77,
+  "max_decomposition_error": 2.7000623958883807e-11,
+  "seconds": 2.9242412091698498
+}

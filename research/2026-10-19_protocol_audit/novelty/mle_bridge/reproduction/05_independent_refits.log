@@ -1,0 +1,91 @@
+independent baseline A1
+independent baseline A2
+independent baseline A3
+independent baseline A4
+independent baseline A_T2
+independent baseline B1
+independent baseline B_T2r1
+independent baseline B_T2r2
+independent baseline B_T2s1
+independent baseline C1
+independent baseline C_T2
+independent baseline D1
+independent baseline D2
+independent case 1 A1|2024-03-25_TypeA_sample1/2024-03-27_r_v1 -2.0
+independent case 2 A1|2024-03-25_TypeA_sample1/2024-03-27_r_v1 -1.2
+independent case 3 A1|2024-03-25_TypeA_sample1/2024-03-27_r_v2 -2.0
+independent case 4 A1|2024-03-25_TypeA_sample1/2024-03-27_r_v2 -1.2
+independent case 5 A1|2024-03-25_TypeA_sample1/2024-03-27_r_v3 -2.0
+independent case 6 A2|2024-04-19_TypeA_sample2/v1 -2.0
+independent case 7 A2|2024-04-19_TypeA_sample2/v1 -1.2
+independent case 8 A2|2024-04-19_TypeA_sample2/v2 -2.0
+independent case 9 A2|2024-04-19_TypeA_sample2/v2 -1.2
+independent case 10 A2|2024-04-19_TypeA_sample2/v3 -2.0
+independent case 11 A2|2024-04-19_TypeA_sample2/v3 -1.2
+independent case 12 A3|2024-04-22_TypeA_sample3/v1 -2.0
+independent case 13 A3|2024-04-22_TypeA_sample3/v1 -1.2
+independent case 14 A3|2024-04-22_TypeA_sample3/v2 -2.0
+independent case 15 A3|2024-04-22_TypeA_sample3/v2 -1.2
+independent case 16 A3|2024-04-22_TypeA_sample3/v3 -2.0
+independent case 17 A3|2024-04-22_TypeA_sample3/v3 -1.2
+independent case 18 A4|2024-04-24_TypeA_sample4/v1 -2.0
+independent case 19 A4|2024-04-24_TypeA_sample4/v1 -1.2
+independent case 20 A4|2024-04-24_TypeA_sample4/v2 -2.0
+independent case 21 A4|2024-04-24_TypeA_sample4/v2 -1.2
+independent case 22 A4|2024-04-24_TypeA_sample4/v3 -2.0
+independent case 23 A4|2024-04-24_TypeA_sample4/v3 -1.2
+independent case 24 A_T2|2024-06-19_TypeA_T2_sample1/v1 -2.0
+independent case 25 A_T2|2024-06-19_TypeA_T2_sample1/v1 -1.2
+independent case 26 A_T2|2024-06-19_TypeA_T2_sample1/v2 -2.0
+independent case 27 A_T2|2024-06-19_TypeA_T2_sample1/v2 -1.2
+independent case 28 A_T2|2024-06-19_TypeA_T2_sample1/v3 -2.0
+independent case 29 A_T2|2024-06-19_TypeA_T2_sample1/v3 -1.2
+independent case 30 B1|2024-04-10_TypeB_sample1/2024-04-10/v1 -2.0
+independent case 31 B1|2024-04-10_TypeB_sample1/2024-04-10/v1 -1.2
+independent case 32 B1|2024-04-10_TypeB_sample1/2024-04-10/v2 -2.0
+independent case 33 B1|2024-04-10_TypeB_sample1/2024-04-10/v2 -1.2
+independent case 34 B1|2024-04-10_TypeB_sample1/2024-04-10/v3 -2.0
+independent case 35 B1|2024-04-10_TypeB_sample1/2024-04-10/v3 -1.2
+independent case 36 B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1 -1.2
+independent case 37 B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2 -1.2
+independent case 38 B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v3 -2.0
+independent case 39 B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v3 -1.2
+independent case 40 B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v1 -2.0
+independent case 41 B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v1 -1.2
+independent case 42 B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2 -2.0
+independent case 43 B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2 -1.2
+independent case 44 B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v3 -2.0
+independent case 45 B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v3 -1.2
+independent case 46 B_T2s1|2024-06-13_TypeB_T2_sample1/v1 -2.0
+independent case 47 B_T2s1|2024-06-13_TypeB_T2_sample1/v1 -1.2
+independent case 48 B_T2s1|2024-06-13_TypeB_T2_sample1/v2 -2.0
+independent case 49 B_T2s1|2024-06-13_TypeB_T2_sample1/v2 -1.2
+independent case 50 B_T2s1|2024-06-13_TypeB_T2_sample1/v3 -2.0
+independent case 51 B_T2s1|2024-06-13_TypeB_T2_sample1/v3 -1.2
+independent case 52 C1|2024-04-12_TypeC_sample1/2024-04-15/v1 -2.0
+independent case 53 C1|2024-04-12_TypeC_sample1/2024-04-15/v1 -1.2
+independent case 54 C1|2024-04-12_TypeC_sample1/2024-04-15/v2 -2.0
+independent case 55 C1|2024-04-12_TypeC_sample1/2024-04-15/v2 -1.2
+independent case 56 C1|2024-04-12_TypeC_sample1/2024-04-15/v3 -2.0
+independent case 57 C1|2024-04-12_TypeC_sample1/2024-04-15/v3 -1.2
+independent case 58 C_T2|2024-06-11_TypeC_T2_sample1/v1 -2.0
+independent case 59 C_T2|2024-06-11_TypeC_T2_sample1/v1 -1.2
+independent case 60 C_T2|2024-06-11_TypeC_T2_sample1/v2 -2.0
+independent case 61 C_T2|2024-06-11_TypeC_T2_sample1/v2 -1.2
+independent case 62 C_T2|2024-06-11_TypeC_T2_sample1/v3 -2.0
+independent case 63 C_T2|2024-06-11_TypeC_T2_sample1/v3 -1.2
+independent case 64 D1|2024-04-15_TypeD_sample1/2024-04-17/v1 -2.0
+independent case 65 D1|2024-04-15_TypeD_sample1/2024-04-17/v1 -1.2
+independent case 66 D1|2024-04-15_TypeD_sample1/2024-04-17/v2 -2.0
+independent case 67 D1|2024-04-15_TypeD_sample1/2024-04-17/v2 -1.2
+independent case 68 D1|2024-04-15_TypeD_sample1/2024-04-17/v3 -2.0
+independent case 69 D1|2024-04-15_TypeD_sample1/2024-04-17/v3 -1.2
+independent case 70 D2|2024-04-26_TypeD_sample2/v1 -2.0
+independent case 71 D2|2024-04-26_TypeD_sample2/v1 -1.2
+independent case 72 D2|2024-04-26_TypeD_sample2/v2 -2.0
+independent case 73 D2|2024-04-26_TypeD_sample2/v2 -1.2
+independent case 74 D2|2024-04-26_TypeD_sample2/v3 -2.0
+independent case 75 D2|2024-04-26_TypeD_sample2/v3 -1.2
+independent case 76 A1|2024-03-25_TypeA_sample1/2024-03-27_r_v3 -1.2
+independent case 77 B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1 -2.0
+PASS independent fits 193 seconds 2.490264374995604

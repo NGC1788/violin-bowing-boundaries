@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "exhaustive_control_jobs": 41,
+  "exhaustive_control_subsets": 22110,
+  "independent_objective_recalculations": 60234,
+  "max_objective_error": 2.7625901566352695e-11,
+  "independent_canonical_refits": 354,
+  "max_refit_parameter_error": 1.2992258486832498e-06,
+  "max_refit_nll_error": 4.604316927725449e-11,
+  "exact_rank_comparisons": 462,
+  "refit_sample_rule": "first, floor(N/2), last subset of every job, every model; deterministic, not selected by influence rank",
+  "seconds": 5.6399352920707315
+}

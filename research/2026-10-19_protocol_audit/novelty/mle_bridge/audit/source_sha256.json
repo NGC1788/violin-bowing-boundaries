@@ -1,0 +1,12 @@
+{
+  "final/compare.py": "0967e96b1ce7c8d8572dc36560f610b8279b2aa7fefa2501d9619b4bce0150a6",
+  "novelty/lower_law/lower_law.py": "d973f94cbbbfceca3a87c06f218822a21fe9645b9abd29e5c94023e591c766d8",
+  "novelty/lower_law/onset_axis.py": "8f1549de76aeec0e4a291bce89e3862551658a1273ea17617e7b0caabd19c413",
+  "novelty/label_sensitivity/label_sweep.py": "5bf6a58421e042cbf64f532641cec14d4d270313ea55621c5e5b53e652a171db",
+  "verify_lower_law/statistics.py": "a44318eb9f5cb10384a88b872d84091ff64775c58bbab4abf95c175725d5bda4",
+  "verify_lower_law/audit_statistics.json": "0decc6d8b35f9a0a32fb0df777e1fc436b576f082d1c99505b257a51f7ff506c",
+  "novelty/criterion_identifiability/response/results.json": "f790e4c174d5e54b67c0589d4b4f0ac9ac9f3ab3512ac5f95331dbb352890954",
+  "novelty/criterion_identifiability/response/audit.json": "a1b4dab364a8eb74f94bf803510da22a8e29644651cf929aed7b6a35376296ac",
+  "novelty/joint_rule/input_joint.json.gz": "85ab696054670f80bc9690873291c39bb119b56670b4513da59bae994a2b0d70",
+  "novelty/joint_rule/theory/obstructions.json": "ca4a54163f28ae0a529e68f3855d3d9519594abb9a55b323cc911c01c3fc6c29"
+}

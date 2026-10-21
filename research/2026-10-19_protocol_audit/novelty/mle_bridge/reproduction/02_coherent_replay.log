@@ -1,0 +1,17 @@
+{
+  "baseline": {
+    "edits": 0,
+    "losses": 0,
+    "max_beta_delta": 0.0
+  },
+  "hard_restore_with_loss": {
+    "edits": 3200,
+    "losses": 10,
+    "max_beta_delta": 0.2868967885134701
+  },
+  "near_cutoff_no_loss": {
+    "edits": 150,
+    "losses": 0,
+    "max_beta_delta": 0.015473075242694811
+  }
+}

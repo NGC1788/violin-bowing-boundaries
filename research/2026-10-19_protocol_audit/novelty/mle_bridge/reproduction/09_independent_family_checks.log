@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "scope": "independent join/ranks/selection against previously certified geometric lists; no new geometric proof",
+  "case_families": 77,
+  "minimum_certificates_joined": 7742,
+  "member_rank_comparisons": 23226,
+  "selected_maximizers_checked": 77,
+  "aggregate_groups_checked": 6,
+  "both_triple_families_all_away_and_T_increase": true,
+  "seconds": 3.5127731249667704
+}

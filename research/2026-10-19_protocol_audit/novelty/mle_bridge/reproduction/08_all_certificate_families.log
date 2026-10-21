@@ -1,0 +1,384 @@
+{
+  "status": "PASS",
+  "counts": {
+    "cases": 77,
+    "minimum_pairs": 7718,
+    "minimum_triples": 24
+  },
+  "summary": {
+    "all": {
+      "n_cases": 77,
+      "n_certificates": 7742,
+      "family_size": {
+        "minimum": 1.0,
+        "median": 62.0,
+        "maximum": 468.0
+      },
+      "cases_with_some_away_from_target": 61,
+      "cases_with_all_away_from_target": 12,
+      "cases_with_both_toward_directions": 49,
+      "cases_with_some_T_increase": 47,
+      "cases_with_all_T_increase": 6,
+      "cases_with_both_T_directions": 41,
+      "member_direction_counts": {
+        "away_from_target": 2126,
+        "toward_target": 5616,
+        "T_increase": 1198,
+        "T_decrease": 6544
+      },
+      "cases_best_T_reduction_positive": 71,
+      "cases_best_T_matches_unrestricted_control_max": 11,
+      "cases_lex_choice_matches_best_T": 5,
+      "best_T_improvement_over_previous": {
+        "minimum": 0.0,
+        "median": 1.1291453285170405,
+        "maximum": 5.874520392452268
+      },
+      "best_T_gap_to_all_control_max": {
+        "minimum": 0.0,
+        "median": 0.3773075646641928,
+        "maximum": 46.48367920665993
+      },
+      "best_T_selected_metrics": {
+        "abs_delta_beta": {
+          "minimum": 4.906702912288452e-05,
+          "median": 0.011531192052395278,
+          "maximum": 0.1385741353120633
+        },
+        "toward_target": {
+          "minimum": -0.12765604339730752,
+          "median": 0.01050856135933742,
+          "maximum": 0.1385741353120633
+        },
+        "T_reduction": {
+          "minimum": -42.816646449696975,
+          "median": 1.9802266973914016,
+          "maximum": 7.8108306262944325
+        }
+      },
+      "best_T_rank_among_all_controls": {
+        "minimum": 0.13736263736263737,
+        "median": 0.986021505376344,
+        "maximum": 0.9992492492492493
+      },
+      "best_T_rank_at_least_95_percentile": 57,
+      "previous_choice_T_rank_among_all_controls": {
+        "minimum": 0.04071969696969697,
+        "median": 0.6684782608695652,
+        "maximum": 0.9836601307189542
+      }
+    },
+    "classifier_specific_52": {
+      "n_cases": 52,
+      "n_certificates": 3599,
+      "family_size": {
+        "minimum": 1.0,
+        "median": 38.0,
+        "maximum": 381.0
+      },
+      "cases_with_some_away_from_target": 47,
+      "cases_with_all_away_from_target": 12,
+      "cases_with_both_toward_directions": 35,
+      "cases_with_some_T_increase": 37,
+      "cases_with_all_T_increase": 6,
+      "cases_with_both_T_directions": 31,
+      "member_direction_counts": {
+        "away_from_target": 1533,
+        "toward_target": 2066,
+        "T_increase": 1079,
+        "T_decrease": 2520
+      },
+      "cases_best_T_reduction_positive": 46,
+      "cases_best_T_matches_unrestricted_control_max": 2,
+      "cases_lex_choice_matches_best_T": 5,
+      "best_T_improvement_over_previous": {
+        "minimum": 0.0,
+        "median": 0.6940598376722278,
+        "maximum": 5.874520392452268
+      },
+      "best_T_gap_to_all_control_max": {
+        "minimum": 0.0,
+        "median": 0.4090797772061876,
+        "maximum": 46.48367920665993
+      },
+      "best_T_selected_metrics": {
+        "abs_delta_beta": {
+          "minimum": 4.906702912288452e-05,
+          "median": 0.00597282699032653,
+          "maximum": 0.12765604339730752
+        },
+        "toward_target": {
+          "minimum": -0.12765604339730752,
+          "median": 0.0049803733209243806,
+          "maximum": 0.04657858827654726
+        },
+        "T_reduction": {
+          "minimum": -42.816646449696975,
+          "median": 1.3785659947966735,
+          "maximum": 6.2972242772499385
+        }
+      },
+      "best_T_rank_among_all_controls": {
+        "minimum": 0.13736263736263737,
+        "median": 0.9809934318555009,
+        "maximum": 0.9992492492492493
+      },
+      "best_T_rank_at_least_95_percentile": 32,
+      "previous_choice_T_rank_among_all_controls": {
+        "minimum": 0.04071969696969697,
+        "median": 0.6108870967741935,
+        "maximum": 0.9836601307189542
+      }
+    },
+    "geometry_infeasible_25": {
+      "n_cases": 25,
+      "n_certificates": 4143,
+      "family_size": {
+        "minimum": 9.0,
+        "median": 124.0,
+        "maximum": 468.0
+      },
+      "cases_with_some_away_from_target": 14,
+      "cases_with_all_away_from_target": 0,
+      "cases_with_both_toward_directions": 14,
+      "cases_with_some_T_increase": 10,
+      "cases_with_all_T_increase": 0,
+      "cases_with_both_T_directions": 10,
+      "member_direction_counts": {
+        "away_from_target": 593,
+        "toward_target": 3550,
+        "T_increase": 119,
+        "T_decrease": 4024
+      },
+      "cases_best_T_reduction_positive": 25,
+      "cases_best_T_matches_unrestricted_control_max": 9,
+      "cases_lex_choice_matches_best_T": 0,
+      "best_T_improvement_over_previous": {
+        "minimum": 0.026514919824421668,
+        "median": 2.073460294888946,
+        "maximum": 3.7649457300169615
+      },
+      "best_T_gap_to_all_control_max": {
+        "minimum": 0.0,
+        "median": 0.0916696257975218,
+        "maximum": 1.3714916994666737
+      },
+      "best_T_selected_metrics": {
+        "abs_delta_beta": {
+          "minimum": 0.0029494083485461786,
+          "median": 0.03822812123803465,
+          "maximum": 0.1385741353120633
+        },
+        "toward_target": {
+          "minimum": -0.0045462803689209075,
+          "median": 0.03430114364354697,
+          "maximum": 0.1385741353120633
+        },
+        "T_reduction": {
+          "minimum": 0.29688758872373455,
+          "median": 3.8668802154239756,
+          "maximum": 7.8108306262944325
+        }
+      },
+      "best_T_rank_among_all_controls": {
+        "minimum": 0.9783333333333334,
+        "median": 0.9957983193277311,
+        "maximum": 0.9992492492492493
+      },
+      "best_T_rank_at_least_95_percentile": 25,
+      "previous_choice_T_rank_among_all_controls": {
+        "minimum": 0.08333333333333333,
+        "median": 0.7078947368421052,
+        "maximum": 0.9757834757834758
+      }
+    },
+    "triples": {
+      "n_cases": 2,
+      "n_certificates": 24,
+      "family_size": {
+        "minimum": 5.0,
+        "median": 12.0,
+        "maximum": 19.0
+      },
+      "cases_with_some_away_from_target": 2,
+      "cases_with_all_away_from_target": 2,
+      "cases_with_both_toward_directions": 0,
+      "cases_with_some_T_increase": 2,
+      "cases_with_all_T_increase": 2,
+      "cases_with_both_T_directions": 0,
+      "member_direction_counts": {
+        "away_from_target": 24,
+        "toward_target": 0,
+        "T_increase": 24,
+        "T_decrease": 0
+      },
+      "cases_best_T_reduction_positive": 0,
+      "cases_best_T_matches_unrestricted_control_max": 0,
+      "cases_lex_choice_matches_best_T": 0,
+      "best_T_improvement_over_previous": {
+        "minimum": 0.15542777907859318,
+        "median": 0.7981894130454918,
+        "maximum": 1.4409510470123905
+      },
+      "best_T_gap_to_all_control_max": {
+        "minimum": 0.4976487924129742,
+        "median": 1.230011966242614,
+        "maximum": 1.962375140072254
+      },
+      "best_T_selected_metrics": {
+        "abs_delta_beta": {
+          "minimum": 0.005393959347704147,
+          "median": 0.006797850809851347,
+          "maximum": 0.008201742271998547
+        },
+        "toward_target": {
+          "minimum": -0.008201742271998547,
+          "median": -0.006797850809851347,
+          "maximum": -0.005393959347704147
+        },
+        "T_reduction": {
+          "minimum": -0.9992695331296773,
+          "median": -0.548280138992908,
+          "maximum": -0.09729074485613864
+        }
+      },
+      "best_T_rank_among_all_controls": {
+        "minimum": 0.3595766129032258,
+        "median": 0.5198232714865779,
+        "maximum": 0.6800699300699301
+      },
+      "best_T_rank_at_least_95_percentile": 0,
+      "previous_choice_T_rank_among_all_controls": {
+        "minimum": 0.11018145161290323,
+        "median": 0.3199508656665915,
+        "maximum": 0.5297202797202797
+      }
+    },
+    "by_slope": {
+      "-2.0": {
+        "n_cases": 38,
+        "n_certificates": 4459,
+        "family_size": {
+          "minimum": 1.0,
+          "median": 72.0,
+          "maximum": 468.0
+        },
+        "cases_with_some_away_from_target": 26,
+        "cases_with_all_away_from_target": 3,
+        "cases_with_both_toward_directions": 23,
+        "cases_with_some_T_increase": 19,
+        "cases_with_all_T_increase": 1,
+        "cases_with_both_T_directions": 18,
+        "member_direction_counts": {
+          "away_from_target": 809,
+          "toward_target": 3650,
+          "T_increase": 256,
+          "T_decrease": 4203
+        },
+        "cases_best_T_reduction_positive": 37,
+        "cases_best_T_matches_unrestricted_control_max": 10,
+        "cases_lex_choice_matches_best_T": 2,
+        "best_T_improvement_over_previous": {
+          "minimum": 0.0,
+          "median": 1.6019814602581732,
+          "maximum": 3.7649457300169615
+        },
+        "best_T_gap_to_all_control_max": {
+          "minimum": 0.0,
+          "median": 0.23274982105132835,
+          "maximum": 1.3714916994666737
+        },
+        "best_T_selected_metrics": {
+          "abs_delta_beta": {
+            "minimum": 4.906702912288452e-05,
+            "median": 0.020602034988299045,
+            "maximum": 0.1385741353120633
+          },
+          "toward_target": {
+            "minimum": -0.005393959347704147,
+            "median": 0.020602034988299045,
+            "maximum": 0.1385741353120633
+          },
+          "T_reduction": {
+            "minimum": -0.09729074485613864,
+            "median": 2.2761946923461664,
+            "maximum": 7.8108306262944325
+          }
+        },
+        "best_T_rank_among_all_controls": {
+          "minimum": 0.3657635467980296,
+          "median": 0.9923247525963994,
+          "maximum": 0.9992492492492493
+        },
+        "best_T_rank_at_least_95_percentile": 33,
+        "previous_choice_T_rank_among_all_controls": {
+          "minimum": 0.05952380952380952,
+          "median": 0.7007853130850843,
+          "maximum": 0.9836601307189542
+        }
+      },
+      "-1.2": {
+        "n_cases": 39,
+        "n_certificates": 3283,
+        "family_size": {
+          "minimum": 2.0,
+          "median": 62.0,
+          "maximum": 381.0
+        },
+        "cases_with_some_away_from_target": 35,
+        "cases_with_all_away_from_target": 9,
+        "cases_with_both_toward_directions": 26,
+        "cases_with_some_T_increase": 28,
+        "cases_with_all_T_increase": 5,
+        "cases_with_both_T_directions": 23,
+        "member_direction_counts": {
+          "away_from_target": 1317,
+          "toward_target": 1966,
+          "T_increase": 942,
+          "T_decrease": 2341
+        },
+        "cases_best_T_reduction_positive": 34,
+        "cases_best_T_matches_unrestricted_control_max": 1,
+        "cases_lex_choice_matches_best_T": 3,
+        "best_T_improvement_over_previous": {
+          "minimum": 0.0,
+          "median": 0.9447785738341281,
+          "maximum": 5.874520392452268
+        },
+        "best_T_gap_to_all_control_max": {
+          "minimum": 0.0,
+          "median": 0.4293916874956949,
+          "maximum": 46.48367920665993
+        },
+        "best_T_selected_metrics": {
+          "abs_delta_beta": {
+            "minimum": 0.00014064750648090651,
+            "median": 0.0061178605872938,
+            "maximum": 0.12765604339730752
+          },
+          "toward_target": {
+            "minimum": -0.12765604339730752,
+            "median": 0.004542260763731543,
+            "maximum": 0.04657858827654726
+          },
+          "T_reduction": {
+            "minimum": -42.816646449696975,
+            "median": 1.5610566212264985,
+            "maximum": 6.2972242772499385
+          }
+        },
+        "best_T_rank_among_all_controls": {
+          "minimum": 0.13736263736263737,
+          "median": 0.9804597701149426,
+          "maximum": 0.9992492492492493
+        },
+        "best_T_rank_at_least_95_percentile": 24,
+        "previous_choice_T_rank_among_all_controls": {
+          "minimum": 0.04071969696969697,
+          "median": 0.6441532258064516,
+          "maximum": 0.9673076923076923
+        }
+      }
+    }
+  }
+}
