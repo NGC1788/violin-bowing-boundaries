@@ -1,4 +1,4 @@
-# Generalisation tests — result (run once; Claude, 2026-10-21 ≈14:28 KST). Plan: PLAN_generalize.md (ec650f5).
+# Generalisation tests — result (run once; Claude, 2026-10-21 ≈14:21 KST). Plan: PLAN_generalize.md (ec650f5).
 
 ## G1 — second_flyback_ratio as an upper bound (minimum force)
 - b_sfr > 0 in 14/14 sessions (mean +0.46).
