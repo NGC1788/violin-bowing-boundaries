@@ -1,0 +1,7 @@
+# Before-cost structural diagnostic addendum — 2026-10-21
+
+The primary PLAN is unchanged. Before computing empirical coherent-threshold costs, add a structural diagnostic suggested by the literature reviewer. Under a shared lower threshold, each possible K-run has an activation ceiling equal to its minimum effective score. Only strict record-high ceilings in force order can be the first run. For a strict upper threshold the corresponding maxima must be strict record lows. Fixed H/non-H gates are represented explicitly and endpoint conventions must match the production solver.
+
+An independently implemented closed-form first-run threshold interval will be checked against exhaustive direct classification. Report the fraction of admissible finite first-run starts attainable under each rule/domain and identify whether any eligible column alone has no admissible boundary at a chosen threshold. This diagnoses why the arbitrary-label relaxation can permit boundaries that a shared rule cannot realize. It does not by itself prove a whole folder impossible: separately attainable columns may require conflicting common thresholds. The full shared-threshold profile remains the primary feasibility/cost computation. These are elementary order-statistic consequences, not a claim to invent record statistics or a general algorithm.
+
+No costs or coherent empirical outcomes have been read. Input-baseline audits (zero mismatches for all four rules) and synthetic solver tests have been seen. This addendum and its timing are local records, not public preregistration.
