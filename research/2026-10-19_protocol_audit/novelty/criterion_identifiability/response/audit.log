@@ -1,0 +1,226 @@
+{
+  "legacy_differences": [
+    {
+      "session": "D1",
+      "feature": "periodicity",
+      "a": 0.0,
+      "stored_delta": 0.3148545679372545,
+      "stable_delta": 0.12264443865710328,
+      "legacy_params_recomputed": [
+        -1.1149435801948326,
+        1.394005606726656,
+        -1.3255956639876345,
+        -0.22699952323777867
+      ],
+      "legacy_params_evaluated_stable_nll": 356.57140016040455,
+      "legacy_stable_gradient_max": 7.348852689028894,
+      "stable_fit": {
+        "params": [
+          -2.522466085696321,
+          1.0222008933605542,
+          -1.5178056775892765,
+          -0.30094647408479896
+        ],
+        "nll": 350.85890034615124,
+        "success": true,
+        "grad_max": 2.2166359014974546e-07,
+        "sigma": 0.7401173871470029,
+        "fallback": false,
+        "n": 120
+      },
+      "stable_fit_initialized_at_legacy": {
+        "params": [
+          -2.5224660578940274,
+          1.0222008990251426,
+          -1.5178056732098153,
+          -0.30094647045877515
+        ],
+        "nll": 350.85890034615153,
+        "success": true,
+        "grad_max": 7.114217006561663e-07,
+        "sigma": 0.7401173898306862,
+        "fallback": false,
+        "n": 120
+      },
+      "stable_nll_improvement": 5.712499814253306
+    },
+    {
+      "session": "D1",
+      "feature": "second_flyback_ratio",
+      "a": -1.0,
+      "stored_delta": 0.4261015349970503,
+      "stable_delta": 0.40343844727019595,
+      "legacy_params_recomputed": [
+        -1.4731064458436773,
+        1.0290282364730574,
+        -1.2143486969278388,
+        -0.39110947031610865
+      ],
+      "legacy_params_evaluated_stable_nll": 369.4806528756354,
+      "legacy_stable_gradient_max": 2.0444094599358578,
+      "stable_fit": {
+        "params": [
+          -1.647760937887534,
+          0.9812710996394965,
+          -1.2370116496514376,
+          -0.3943566971950839
+        ],
+        "nll": 369.3595002631828,
+        "success": true,
+        "grad_max": 7.922212388266794e-07,
+        "sigma": 0.6741135589349968,
+        "fallback": false,
+        "n": 120
+      },
+      "stable_fit_initialized_at_legacy": {
+        "params": [
+          -1.6477609536355773,
+          0.9812710959236779,
+          -1.2370116534101319,
+          -0.3943566973039166
+        ],
+        "nll": 369.3595002631832,
+        "success": true,
+        "grad_max": 1.9576729970438578e-07,
+        "sigma": 0.6741135588616313,
+        "fallback": false,
+        "n": 120
+      },
+      "stable_nll_improvement": 0.12115261245264719
+    },
+    {
+      "session": "C_T2",
+      "feature": "periodicity",
+      "a": 0.0,
+      "stored_delta": 0.2991723009220315,
+      "stable_delta": 0.18609502064526584,
+      "legacy_params_recomputed": [
+        -2.367294539719449,
+        1.2494971732458526,
+        -1.5231344064763093,
+        -0.22234344673482365
+      ],
+      "legacy_params_evaluated_stable_nll": 342.4605577648041,
+      "legacy_stable_gradient_max": 7.827114520012806,
+      "stable_fit": {
+        "params": [
+          -3.4626858394901774,
+          0.9139035245183842,
+          -1.636224758679653,
+          -0.26271527469721334
+        ],
+        "nll": 339.0030172674425,
+        "success": true,
+        "grad_max": 7.753279597125873e-07,
+        "sigma": 0.7689608087439701,
+        "fallback": false,
+        "n": 120
+      },
+      "stable_fit_initialized_at_legacy": {
+        "params": [
+          -3.462685804592087,
+          0.9139035385989298,
+          -1.6362247572187147,
+          -0.2627152767555462
+        ],
+        "nll": 339.00301726745045,
+        "success": true,
+        "grad_max": 4.7303656587535443e-07,
+        "sigma": 0.7689608071611929,
+        "fallback": false,
+        "n": 120
+      },
+      "stable_nll_improvement": 3.457540497361606
+    },
+    {
+      "session": "B_T2r1",
+      "feature": "periodicity",
+      "a": 0.0,
+      "stored_delta": 0.548768137417484,
+      "stable_delta": 0.34907480085502995,
+      "legacy_params_recomputed": [
+        -1.24595327085208,
+        1.7705041949460623,
+        -1.6264325487546865,
+        -0.07605325886353716
+      ],
+      "legacy_params_evaluated_stable_nll": 313.7955465655308,
+      "legacy_stable_gradient_max": 6.786077341772551,
+      "stable_fit": {
+        "params": [
+          -3.214267462558258,
+          1.1500499827370225,
+          -1.826125822520668,
+          -0.23437285864291377
+        ],
+        "nll": 304.71477213092686,
+        "success": true,
+        "grad_max": 7.021468618084725e-06,
+        "sigma": 0.7910668048049905,
+        "fallback": false,
+        "n": 120
+      },
+      "stable_fit_initialized_at_legacy": {
+        "params": [
+          -3.214267349814624,
+          1.150049996772959,
+          -1.8261258059690835,
+          -0.23437286002777008
+        ],
+        "nll": 304.71477213092567,
+        "success": true,
+        "grad_max": 3.906505283622663e-06,
+        "sigma": 0.7910668037094766,
+        "fallback": true,
+        "n": 120
+      },
+      "stable_nll_improvement": 9.080774434603939
+    }
+  ],
+  "corrected": {
+    "M0": {
+      "mae": 0.1338412577702093,
+      "rmse": 0.16985214558243633
+    },
+    "M1": {
+      "mae": 0.07708222813762265,
+      "rmse": 0.10300241705956381
+    }
+  },
+  "gate": {
+    "mae_reduction": 0.42407722833893013,
+    "pass": true
+  },
+  "observed_trim": {
+    "amplitude": {
+      "multiple_values_at_threshold": 0,
+      "threshold_hits": 21,
+      "fraction_min": 0.14984391259105098,
+      "fraction_max": 0.15157894736842106
+    },
+    "flyback_height": {
+      "multiple_values_at_threshold": 0,
+      "threshold_hits": 21,
+      "fraction_min": 0.14984391259105098,
+      "fraction_max": 0.15157894736842106
+    },
+    "periodicity": {
+      "multiple_values_at_threshold": 0,
+      "threshold_hits": 21,
+      "fraction_min": 0.14984391259105098,
+      "fraction_max": 0.15157894736842106
+    },
+    "second_flyback_ratio": {
+      "multiple_values_at_threshold": 0,
+      "threshold_hits": 5,
+      "fraction_min": 0.14980793854033292,
+      "fraction_max": 0.1514476614699332
+    },
+    "B1_corner": {
+      "multiple_values_at_threshold": 0,
+      "threshold_hits": 0,
+      "fraction_min": 0.15024390243902438,
+      "fraction_max": 0.1510791366906475
+    }
+  }
+}

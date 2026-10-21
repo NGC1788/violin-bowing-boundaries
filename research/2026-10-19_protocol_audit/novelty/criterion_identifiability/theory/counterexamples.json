@@ -1,0 +1,235 @@
+{
+  "kind": "synthetic finite-grid counterexample, not an empirical failure",
+  "K": 2,
+  "removal_fraction": 0.1111111111111111,
+  "variants": {
+    "0.0": {
+      "removed_count": 5,
+      "removed_mean_log_beta": -4.0,
+      "intervals": [
+        [
+          -3.0,
+          -2.0
+        ],
+        [
+          -2.0,
+          -1.0
+        ],
+        [
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          2.0
+        ],
+        [
+          -3.0,
+          -2.0
+        ],
+        [
+          -2.0,
+          -1.0
+        ],
+        [
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          2.0
+        ],
+        [
+          -3.0,
+          -2.0
+        ],
+        [
+          -2.0,
+          -1.0
+        ],
+        [
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          2.0
+        ]
+      ],
+      "fit": {
+        "intercept": -0.4999999995414689,
+        "beta_exponent": 4.952127854387896e-15,
+        "sigma": 1.3837568951828072,
+        "nll": 26.480904717592296,
+        "optimizer_difference": 1.4921397450962104e-13,
+        "success": true
+      }
+    },
+    "1.0": {
+      "removed_count": 5,
+      "removed_mean_log_beta": -3.4,
+      "intervals": [
+        [
+          -3.0,
+          -2.0
+        ],
+        [
+          -2.0,
+          -1.0
+        ],
+        [
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          2.0
+        ],
+        [
+          -2.0,
+          -1.0
+        ],
+        [
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          2.0
+        ],
+        [
+          2.0,
+          3.0
+        ],
+        [
+          -3.0,
+          -2.0
+        ],
+        [
+          -2.0,
+          -1.0
+        ],
+        [
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          2.0
+        ]
+      ],
+      "fit": {
+        "intercept": -0.54761155166858,
+        "beta_exponent": -0.11904764223580289,
+        "sigma": 1.4593019458729604,
+        "nll": 27.24486520302872,
+        "optimizer_difference": 1.1723955140041653e-13,
+        "success": true
+      }
+    }
+  },
+  "exponent_change": -0.11904764223580784,
+  "neutral_counterexample": {
+    "all_window_scaling_b": 0.0,
+    "tilt": 0.0,
+    "log_features": [
+      [
+        -0.5,
+        0.0,
+        0.5
+      ],
+      [
+        -1.0,
+        0.25,
+        0.75
+      ]
+    ],
+    "removed": [
+      1,
+      0
+    ],
+    "first_K_starts": [
+      0,
+      1
+    ],
+    "finite_interval_base": {
+      "intercept": -0.5000000024364125,
+      "beta_exponent": 9.840007476615808e-14,
+      "sigma": 1.3837569058609636,
+      "nll": 17.653936478394865,
+      "optimizer_difference": 3.197442310920451e-14,
+      "success": true
+    },
+    "finite_interval_changed": {
+      "intercept": 3.499999906114385,
+      "beta_exponent": 0.9999999734714611,
+      "sigma": 1.3837568963104518,
+      "nll": 17.653936478394865,
+      "optimizer_difference": 2.4868995751603507e-14,
+      "success": true
+    },
+    "conclusion": "The neutral feature slope need not preserve the lower boundary slope."
+  },
+  "same_marginals_different_response": {
+    "original_features": [
+      [
+        -0.5,
+        0.0,
+        0.5
+      ],
+      [
+        -1.0,
+        0.25,
+        0.75
+      ]
+    ],
+    "permuted_features": [
+      [
+        -0.5,
+        0.0,
+        0.5
+      ],
+      [
+        0.75,
+        0.25,
+        -1.0
+      ]
+    ],
+    "same": [
+      "beta grid",
+      "force grid",
+      "base labels",
+      "global feature slope",
+      "within-column feature distributions",
+      "removed fraction",
+      "removed beta columns"
+    ],
+    "different": "feature ordering within the force grid",
+    "original_changed_exponent": 0.9999999734714611,
+    "permuted_changed_exponent": 9.840007476615808e-14
+  }
+}

@@ -1,0 +1,542 @@
+{
+  "post_hoc": true,
+  "no_new_model_fitted": true,
+  "sessions": {
+    "A1": {
+      "periodicity": {
+        "observed_positive_range": [
+          0.8031874756415965,
+          0.9541252400069016
+        ],
+        "M0": {
+          "n": 1749,
+          "p_below_support_mean": 1.7034217422113693e-13,
+          "p_above_support_mean": 0.002238749695163638,
+          "p_outside_mean": 0.0022387496953339804
+        },
+        "M1": {
+          "n": 1749,
+          "p_below_support_mean": 1.635490759011286e-13,
+          "p_above_support_mean": 0.0022442557031363626,
+          "p_outside_mean": 0.002244255703299912
+        }
+      },
+      "second_flyback_ratio": {
+        "observed_positive_range": [
+          0.007507098036143248,
+          0.49823450540056835
+        ],
+        "M0": {
+          "n": 1695,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.013434829083130548,
+          "p_outside_mean": 0.013434829083130548
+        },
+        "M1": {
+          "n": 1695,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.013606360712586356,
+          "p_outside_mean": 0.013606360712586356
+        }
+      }
+    },
+    "A2": {
+      "periodicity": {
+        "observed_positive_range": [
+          0.8014761705109873,
+          0.956194611262894
+        ],
+        "M0": {
+          "n": 1950,
+          "p_below_support_mean": 8.716548485163083e-16,
+          "p_above_support_mean": 0.0010135216521953536,
+          "p_outside_mean": 0.0010135216521962253
+        },
+        "M1": {
+          "n": 1949,
+          "p_below_support_mean": 3.0628883574152033e-16,
+          "p_above_support_mean": 0.0008333300877506831,
+          "p_outside_mean": 0.0008333300877509894
+        }
+      },
+      "second_flyback_ratio": {
+        "observed_positive_range": [
+          0.009838536388155553,
+          0.4997632448874728
+        ],
+        "M0": {
+          "n": 1875,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.021912387575874215,
+          "p_outside_mean": 0.021912387575874215
+        },
+        "M1": {
+          "n": 1874,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.02184819309569844,
+          "p_outside_mean": 0.02184819309569844
+        }
+      }
+    },
+    "B1": {
+      "periodicity": {
+        "observed_positive_range": [
+          0.8006751459847941,
+          0.9554636515126211
+        ],
+        "M0": {
+          "n": 2536,
+          "p_below_support_mean": 9.775741802333922e-18,
+          "p_above_support_mean": 0.0005321999938917124,
+          "p_outside_mean": 0.0005321999938917221
+        },
+        "M1": {
+          "n": 2535,
+          "p_below_support_mean": 1.1792126052499667e-18,
+          "p_above_support_mean": 0.0004322545953766048,
+          "p_outside_mean": 0.00043225459537660595
+        }
+      },
+      "second_flyback_ratio": {
+        "observed_positive_range": [
+          0.006670415109921521,
+          0.4999240474593297
+        ],
+        "M0": {
+          "n": 2366,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.031023593077257442,
+          "p_outside_mean": 0.031023593077257442
+        },
+        "M1": {
+          "n": 2365,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.031162985683121824,
+          "p_outside_mean": 0.031162985683121824
+        }
+      }
+    },
+    "C1": {
+      "periodicity": {
+        "observed_positive_range": [
+          0.8006508059206005,
+          0.956819036633722
+        ],
+        "M0": {
+          "n": 2772,
+          "p_below_support_mean": 1.7332165453622904e-21,
+          "p_above_support_mean": 0.00021043396288134337,
+          "p_outside_mean": 0.00021043396288134337
+        },
+        "M1": {
+          "n": 2772,
+          "p_below_support_mean": 4.618753677186154e-23,
+          "p_above_support_mean": 0.00012198270693275323,
+          "p_outside_mean": 0.00012198270693275323
+        }
+      },
+      "second_flyback_ratio": {
+        "observed_positive_range": [
+          0.009944728430448881,
+          0.49933470138897545
+        ],
+        "M0": {
+          "n": 2735,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.030669533986237747,
+          "p_outside_mean": 0.030669533986237747
+        },
+        "M1": {
+          "n": 2735,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.03067338633788007,
+          "p_outside_mean": 0.03067338633788007
+        }
+      }
+    },
+    "D1": {
+      "periodicity": {
+        "observed_positive_range": [
+          0.8012235384207419,
+          0.9563850072076461
+        ],
+        "M0": {
+          "n": 2774,
+          "p_below_support_mean": 2.3637089338431645e-16,
+          "p_above_support_mean": 0.0006621107126274049,
+          "p_outside_mean": 0.0006621107126276414
+        },
+        "M1": {
+          "n": 2774,
+          "p_below_support_mean": 5.9515950855860396e-18,
+          "p_above_support_mean": 0.0003652963462227754,
+          "p_outside_mean": 0.00036529634622278144
+        }
+      },
+      "second_flyback_ratio": {
+        "observed_positive_range": [
+          0.009782250261636725,
+          0.4986969914429336
+        ],
+        "M0": {
+          "n": 2618,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.021031069240358344,
+          "p_outside_mean": 0.021031069240358344
+        },
+        "M1": {
+          "n": 2618,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.02105167788210197,
+          "p_outside_mean": 0.02105167788210197
+        }
+      }
+    },
+    "A3": {
+      "periodicity": {
+        "observed_positive_range": [
+          0.8058079104718203,
+          0.9572271698935269
+        ],
+        "M0": {
+          "n": 2282,
+          "p_below_support_mean": 1.4893258167056178e-16,
+          "p_above_support_mean": 0.0007733865482889403,
+          "p_outside_mean": 0.0007733865482890892
+        },
+        "M1": {
+          "n": 2282,
+          "p_below_support_mean": 2.0167734317521407e-17,
+          "p_above_support_mean": 0.0005409181490542114,
+          "p_outside_mean": 0.0005409181490542315
+        }
+      },
+      "second_flyback_ratio": {
+        "observed_positive_range": [
+          0.0073494600348955955,
+          0.4988506292748875
+        ],
+        "M0": {
+          "n": 2162,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.024018217917268443,
+          "p_outside_mean": 0.024018217917268443
+        },
+        "M1": {
+          "n": 2162,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.02405487511858336,
+          "p_outside_mean": 0.02405487511858336
+        }
+      }
+    },
+    "A4": {
+      "periodicity": {
+        "observed_positive_range": [
+          0.8026394353839773,
+          0.9556323438152943
+        ],
+        "M0": {
+          "n": 2570,
+          "p_below_support_mean": 3.0796978746059604e-16,
+          "p_above_support_mean": 0.0009252962856827706,
+          "p_outside_mean": 0.0009252962856830785
+        },
+        "M1": {
+          "n": 2570,
+          "p_below_support_mean": 2.6587139600359015e-17,
+          "p_above_support_mean": 0.0005877149528833436,
+          "p_outside_mean": 0.0005877149528833701
+        }
+      },
+      "second_flyback_ratio": {
+        "observed_positive_range": [
+          0.007705732659282303,
+          0.4998133853411098
+        ],
+        "M0": {
+          "n": 2514,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.027395997944844933,
+          "p_outside_mean": 0.027395997944844933
+        },
+        "M1": {
+          "n": 2514,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.027120690903832713,
+          "p_outside_mean": 0.027120690903832713
+        }
+      }
+    },
+    "D2": {
+      "periodicity": {
+        "observed_positive_range": [
+          0.8021848857369726,
+          0.9582724273193564
+        ],
+        "M0": {
+          "n": 1980,
+          "p_below_support_mean": 3.481405000013754e-13,
+          "p_above_support_mean": 0.0016838320867319716,
+          "p_outside_mean": 0.001683832087080112
+        },
+        "M1": {
+          "n": 1980,
+          "p_below_support_mean": 1.5114859731085692e-13,
+          "p_above_support_mean": 0.0013694767155489032,
+          "p_outside_mean": 0.0013694767157000516
+        }
+      },
+      "second_flyback_ratio": {
+        "observed_positive_range": [
+          0.008662688031411504,
+          0.4997611140903143
+        ],
+        "M0": {
+          "n": 1817,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.029654067808416135,
+          "p_outside_mean": 0.029654067808416135
+        },
+        "M1": {
+          "n": 1817,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.030151141582052562,
+          "p_outside_mean": 0.030151141582052562
+        }
+      }
+    },
+    "A_T2": {
+      "periodicity": {
+        "observed_positive_range": [
+          0.8060066602196174,
+          0.9556791985546478
+        ],
+        "M0": {
+          "n": 2855,
+          "p_below_support_mean": 6.658843324578517e-27,
+          "p_above_support_mean": 7.364612538579518e-05,
+          "p_outside_mean": 7.364612538579518e-05
+        },
+        "M1": {
+          "n": 2855,
+          "p_below_support_mean": 2.4259327858267556e-29,
+          "p_above_support_mean": 4.0215016621762e-05,
+          "p_outside_mean": 4.0215016621762e-05
+        }
+      },
+      "second_flyback_ratio": {
+        "observed_positive_range": [
+          0.006823029743132863,
+          0.499937440934674
+        ],
+        "M0": {
+          "n": 2748,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.01403782491182254,
+          "p_outside_mean": 0.01403782491182254
+        },
+        "M1": {
+          "n": 2748,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.014001290321533596,
+          "p_outside_mean": 0.014001290321533596
+        }
+      }
+    },
+    "B_T2s1": {
+      "periodicity": {
+        "observed_positive_range": [
+          0.8039769570964918,
+          0.9584757937881827
+        ],
+        "M0": {
+          "n": 2193,
+          "p_below_support_mean": 1.1525987494968635e-20,
+          "p_above_support_mean": 0.0002163944019641162,
+          "p_outside_mean": 0.0002163944019641162
+        },
+        "M1": {
+          "n": 2191,
+          "p_below_support_mean": 4.306197831747848e-22,
+          "p_above_support_mean": 0.0003369212019279935,
+          "p_outside_mean": 0.0003369212019279935
+        }
+      },
+      "second_flyback_ratio": {
+        "observed_positive_range": [
+          0.011395175151126029,
+          0.4981224942380989
+        ],
+        "M0": {
+          "n": 2137,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.03396967072820582,
+          "p_outside_mean": 0.03396967072820582
+        },
+        "M1": {
+          "n": 2135,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.033932335954376364,
+          "p_outside_mean": 0.033932335954376364
+        }
+      }
+    },
+    "C_T2": {
+      "periodicity": {
+        "observed_positive_range": [
+          0.8002044548059061,
+          0.9560227573628166
+        ],
+        "M0": {
+          "n": 3223,
+          "p_below_support_mean": 2.1306137181769813e-25,
+          "p_above_support_mean": 0.00011385104808334065,
+          "p_outside_mean": 0.00011385104808334065
+        },
+        "M1": {
+          "n": 3223,
+          "p_below_support_mean": 1.5235656136464649e-27,
+          "p_above_support_mean": 6.126129525138651e-05,
+          "p_outside_mean": 6.126129525138651e-05
+        }
+      },
+      "second_flyback_ratio": {
+        "observed_positive_range": [
+          0.009137345966674626,
+          0.49992098429527326
+        ],
+        "M0": {
+          "n": 3193,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.011489055139779502,
+          "p_outside_mean": 0.011489055139779502
+        },
+        "M1": {
+          "n": 3193,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.011508300704202272,
+          "p_outside_mean": 0.011508300704202272
+        }
+      }
+    },
+    "B_T2r1": {
+      "periodicity": {
+        "observed_positive_range": [
+          0.8116578481671799,
+          0.9583203162012802
+        ],
+        "M0": {
+          "n": 3016,
+          "p_below_support_mean": 6.437224610229024e-25,
+          "p_above_support_mean": 8.791279518501951e-05,
+          "p_outside_mean": 8.791279518501951e-05
+        },
+        "M1": {
+          "n": 3016,
+          "p_below_support_mean": 1.5365165862448802e-27,
+          "p_above_support_mean": 5.078130915660923e-05,
+          "p_outside_mean": 5.078130915660923e-05
+        }
+      },
+      "second_flyback_ratio": {
+        "observed_positive_range": [
+          0.008808629442105373,
+          0.49908086588588463
+        ],
+        "M0": {
+          "n": 2846,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.019695907451907156,
+          "p_outside_mean": 0.019695907451907156
+        },
+        "M1": {
+          "n": 2846,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.019776009111182522,
+          "p_outside_mean": 0.019776009111182522
+        }
+      }
+    },
+    "B_T2r2": {
+      "periodicity": {
+        "observed_positive_range": [
+          0.8002433086622106,
+          0.9568979935783581
+        ],
+        "M0": {
+          "n": 2858,
+          "p_below_support_mean": 5.473976317082181e-25,
+          "p_above_support_mean": 6.947994139718554e-05,
+          "p_outside_mean": 6.947994139718554e-05
+        },
+        "M1": {
+          "n": 2858,
+          "p_below_support_mean": 2.689098261569101e-27,
+          "p_above_support_mean": 3.794868606724526e-05,
+          "p_outside_mean": 3.794868606724526e-05
+        }
+      },
+      "second_flyback_ratio": {
+        "observed_positive_range": [
+          0.008646741314832231,
+          0.4995754594724432
+        ],
+        "M0": {
+          "n": 2676,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.024908507108470174,
+          "p_outside_mean": 0.024908507108470174
+        },
+        "M1": {
+          "n": 2676,
+          "p_below_support_mean": 0.0,
+          "p_above_support_mean": 0.024933383599934536,
+          "p_outside_mean": 0.024933383599934536
+        }
+      }
+    }
+  },
+  "summary": {
+    "periodicity": {
+      "M0": {
+        "diagram_mean_p_outside": 0.0006616011730768191,
+        "window_weighted_p_outside": 0.0005694474014724558,
+        "diagram_range": [
+          6.947994139718554e-05,
+          0.0022387496953339804
+        ]
+      },
+      "M1": {
+        "diagram_mean_p_outside": 0.000540181289711207,
+        "window_weighted_p_outside": 0.0004507855770051514,
+        "diagram_range": [
+          3.794868606724526e-05,
+          0.002244255703299912
+        ]
+      }
+    },
+    "second_flyback_ratio": {
+      "M0": {
+        "diagram_mean_p_outside": 0.023326204767197926,
+        "window_weighted_p_outside": 0.022989161462590675,
+        "diagram_range": [
+          0.011489055139779502,
+          0.03396967072820582
+        ]
+      },
+      "M1": {
+        "diagram_mean_p_outside": 0.023370817769775894,
+        "window_weighted_p_outside": 0.02302109075119316,
+        "diagram_range": [
+          0.011508300704202272,
+          0.033932335954376364
+        ]
+      }
+    }
+  },
+  "sha256": {
+    "novelty/criterion_identifiability/response/support_diagnostic.py": "7228f215cc6fac4e8ab29a669292b23cef4ece372538f01d49a351e49a1d4e66",
+    "novelty/criterion_identifiability/response/results.json": "f790e4c174d5e54b67c0589d4b4f0ac9ac9f3ab3512ac5f95331dbb352890954"
+  }
+}

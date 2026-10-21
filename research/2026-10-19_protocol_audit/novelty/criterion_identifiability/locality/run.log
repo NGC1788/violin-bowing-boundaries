@@ -1,0 +1,51 @@
+A1
+A2
+B1
+C1
+D1
+A3
+A4
+D2
+A_T2
+B_T2s1
+C_T2
+B_T2r1
+B_T2r2
+{
+  "amplitude": {
+    "n_session_tilt_cells": 91,
+    "denominator_repeated_columns": 10129,
+    "lower_run_hit": 0.4360746371803732,
+    "upper_run_hit": 0.05923585743903643,
+    "lower_endpoint_changed": 0.4360746371803732,
+    "upper_endpoint_changed": 0.05923585743903643,
+    "band_lost": 0.05706387599960509
+  },
+  "flyback_height": {
+    "n_session_tilt_cells": 91,
+    "denominator_repeated_columns": 10129,
+    "lower_run_hit": 0.4112943034850429,
+    "upper_run_hit": 0.08993977687827032,
+    "lower_endpoint_changed": 0.4112943034850429,
+    "upper_endpoint_changed": 0.08993977687827032,
+    "band_lost": 0.0630861881725738
+  },
+  "periodicity": {
+    "n_session_tilt_cells": 91,
+    "denominator_repeated_columns": 10129,
+    "lower_run_hit": 0.18955474380491658,
+    "upper_run_hit": 0.28087669069009774,
+    "lower_endpoint_changed": 0.18955474380491658,
+    "upper_endpoint_changed": 0.28087669069009774,
+    "band_lost": 0.16566294797117187
+  },
+  "second_flyback_ratio": {
+    "n_session_tilt_cells": 65,
+    "denominator_repeated_columns": 7235,
+    "lower_run_hit": 0.43344851416724256,
+    "upper_run_hit": 0.1695922598479613,
+    "lower_endpoint_changed": 0.43344851416724256,
+    "upper_endpoint_changed": 0.1695922598479613,
+    "band_lost": 0.008154803040774015
+  }
+}

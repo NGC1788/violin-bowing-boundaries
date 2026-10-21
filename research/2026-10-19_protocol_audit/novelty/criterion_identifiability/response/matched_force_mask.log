@@ -1,0 +1,14 @@
+A2 amplitude
+A2 flyback_height
+A2 periodicity
+A2 second_flyback_ratio
+B1 amplitude
+B1 flyback_height
+B1 periodicity
+B1 second_flyback_ratio
+B1 B1_corner
+B_T2s1 amplitude
+B_T2s1 flyback_height
+B_T2s1 periodicity
+B_T2s1 second_flyback_ratio
+{'stored_target_summary': {'models': {'M0': {'n_cells': 338, 'mae': 0.13247826076095343, 'rmse': 0.1685361347560167}, 'M1': {'n_cells': 338, 'mae': 0.07719579014032424, 'rmse': 0.10304923618200104}}, 'reduction': 0.4172946587846744, 'gate': True}, 'stable_target_summary': {'models': {'M0': {'n_cells': 338, 'mae': 0.13364827682337424, 'rmse': 0.16959029879725207}, 'M1': {'n_cells': 338, 'mae': 0.07708222813762265, 'rmse': 0.10300241705956381}}, 'reduction': 0.42324562673193067, 'gate': True}}

@@ -1,0 +1,51 @@
+{
+  "read_only_no_refits": true,
+  "all_checks_pass": true,
+  "main_replay_fits": 13720,
+  "matched_mask_fits": 1660,
+  "main_cells": 338,
+  "m0_mae": 0.13364827682337424,
+  "m1_mae": 0.07708222813762265,
+  "relative_reduction": 0.42324562673193067,
+  "primary_input_hash_matches": {
+    "final/compare.py": true,
+    "novelty/criterion_identifiability/PLAN.md": false,
+    "novelty/criterion_identifiability/response/replay.py": true,
+    "novelty/label_sensitivity/b1_flyback/b1_flyback.csv": true,
+    "novelty/label_sensitivity/label_sweep.py": true,
+    "novelty/tilt_principle/results.json": true,
+    "novelty/tilt_principle/results_edge.json": true,
+    "novelty/tilt_principle/results_generalize.json": true,
+    "novelty/tilt_principle/tilt.py": true,
+    "timeres/features/2024-03-25_TypeA_sample1.csv.gz": true,
+    "timeres/features/2024-04-10_TypeB_sample1.csv.gz": true,
+    "timeres/features/2024-04-12_TypeC_sample1.csv.gz": true,
+    "timeres/features/2024-04-15_TypeD_sample1.csv.gz": true,
+    "timeres/features/2024-04-19_TypeA_sample2.csv.gz": true,
+    "timeres/features/2024-04-22_TypeA_sample3.csv.gz": true,
+    "timeres/features/2024-04-24_TypeA_sample4.csv.gz": true,
+    "timeres/features/2024-04-26_TypeD_sample2.csv.gz": true,
+    "timeres/features/2024-06-11_TypeC_T2_sample1.csv.gz": true,
+    "timeres/features/2024-06-13_TypeB_T2_sample1.csv.gz": true,
+    "timeres/features/2024-06-19_TypeA_T2_sample1.csv.gz": true,
+    "timeres/features/2024-10-23_variability_setup.csv.gz": true,
+    "verify_lower_law/statistics.py": true
+  },
+  "plan_hash_exception": "Post-run audit addendum; original planned values preserved in local commit 2d8b05c.",
+  "python_syntax_checked": [
+    "integration_check.py",
+    "locality/analyze.py",
+    "locality/figure.py",
+    "response/audit_and_present.py",
+    "response/matched_force_mask.py",
+    "response/replay.py",
+    "response/support_diagnostic.py",
+    "theory/counterexamples.py",
+    "update_documentation.py"
+  ],
+  "figures_visually_inspected": [
+    "response/response_curves.png",
+    "locality/fig_endpoint_locality.png"
+  ],
+  "limits": "Arithmetic/provenance verification, not a physical validation or independent statistical replication."
+}
