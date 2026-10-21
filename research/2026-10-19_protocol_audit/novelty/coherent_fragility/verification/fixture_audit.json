@@ -1,0 +1,47 @@
+{
+  "columns": 1560,
+  "windows": 78000,
+  "eligible_columns": 1132,
+  "eligible_windows": 56600,
+  "groups": 39,
+  "unique_window_ids": 78000,
+  "baseline_mismatches": {
+    "periodicity": 0,
+    "second_flyback_ratio": 0,
+    "amplitude": 0,
+    "flyback_height": 0
+  },
+  "features": {
+    "periodicity": {
+      "missing": 0,
+      "guarded": 33313,
+      "fixed_positive": 0,
+      "negative": 15
+    },
+    "second_flyback_ratio": {
+      "missing": 821,
+      "guarded": 72482,
+      "fixed_positive": 0,
+      "negative": 0
+    },
+    "amplitude": {
+      "missing": 0,
+      "guarded": 32758,
+      "fixed_positive": 0,
+      "negative": 0
+    },
+    "flyback_height": {
+      "missing": 821,
+      "guarded": 32758,
+      "fixed_positive": 0,
+      "negative": 0
+    }
+  },
+  "passed": true,
+  "source_sha256": {
+    "coherent_fragility/prior_input_columns.json.gz": "df926dbacbec45a01a50aa71e6f4172b34d68d9346a30f291655cbfa9de03167",
+    "coherent_fragility/input_features.json.gz": "e5650e0a51402382d2545702885c536c44ae0efd66a698dbb0cc8103e0d686d4",
+    "coherent_fragility/verification/fixture_audit.py": "256480479509ae10d387fba9af4b90181e7d3ba0ec65750dc0e2fc30bd834dfa",
+    "coherent_fragility/verification/oracle.py": "c555f98e505025b0e2e98df4db521ae978938dd400600fdd5f30814c08d814bb"
+  }
+}

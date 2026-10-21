@@ -1,0 +1,66 @@
+periodicity_primary passed 1401 patterns
+ratio_primary passed 10716 patterns
+amplitude_stress passed 32759 patterns
+height_stress passed 32759 patterns
+periodicity_extended passed 33314 patterns
+ratio_extended passed 71108 patterns
+{
+  "passed": true,
+  "rules": [
+    {
+      "name": "periodicity_primary",
+      "patterns": 1401,
+      "passed": true,
+      "profile_sha256": "fce6f62fdb7dacb0f9d52e1b1008c07eb3354d80d8bd705e62cab8df212e042a"
+    },
+    {
+      "name": "ratio_primary",
+      "patterns": 10716,
+      "passed": true,
+      "profile_sha256": "65914c42693d7590dd752a6717d255fd7b64f3abe9cc21117539a37f94691a99"
+    },
+    {
+      "name": "amplitude_stress",
+      "patterns": 32759,
+      "passed": true,
+      "profile_sha256": "708767809fb387e1447e37e151bfe876400896c4246b0a99f013cffd76cf97f1"
+    },
+    {
+      "name": "height_stress",
+      "patterns": 32759,
+      "passed": true,
+      "profile_sha256": "71709d6995e3aa4b6c8cd37a72e09342cb8ff5bf74c25abdb86d05bffdecef04"
+    },
+    {
+      "name": "periodicity_extended",
+      "patterns": 33314,
+      "passed": true,
+      "profile_sha256": "9feac1cb3732146ebfa9754caec9d948ec930dc904356379baff40994e30d408"
+    },
+    {
+      "name": "ratio_extended",
+      "patterns": 71108,
+      "passed": true,
+      "profile_sha256": "ccbb923d055bd048973164c7edd11ea7228e1e5660f0a2fee9ff7373064738f7"
+    }
+  ],
+  "counts": {
+    "compared_profile_scalars": 157115191,
+    "local_literal_label_patterns": 191987,
+    "local_literal_label_evaluations": 9599350,
+    "full_global_threshold_witnesses": 48,
+    "full_global_witness_window_evaluations": 3744000,
+    "budget_optima": 288,
+    "local_optima": 1872,
+    "global_optima": 48,
+    "local_threshold_witnesses": 51
+  },
+  "seconds": 12.66780920792371,
+  "source_sha256": {
+    "real_profiles.py": "7550347c0827ebe3b70ff393f0007bd781935d3d1471ba159d7344f656c898f5",
+    "oracle.py": "c555f98e505025b0e2e98df4db521ae978938dd400600fdd5f30814c08d814bb",
+    "input_features.json.gz": "e5650e0a51402382d2545702885c536c44ae0efd66a698dbb0cc8103e0d686d4",
+    "results.json": "2a917c3d5b47508b6ebcc0ec5d122db074ef09c4330efb68d65b7febff7c5be5",
+    "arbitrary_reference.json": "b1da83e4c69012b7c9bcab74969ebc21da4e3e16fa3abe7c52d163b9cee65339"
+  }
+}

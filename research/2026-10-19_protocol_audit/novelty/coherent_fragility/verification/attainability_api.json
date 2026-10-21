@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "fixtures": 14560,
+  "threshold_comparisons": 94024,
+  "source_sha256": {
+    "attainability_api.py": "61a63ef8194fbd710dbc03571b4abbb167d783b93af4810db79d0f2ca1399f4f",
+    "oracle.py": "c555f98e505025b0e2e98df4db521ae978938dd400600fdd5f30814c08d814bb",
+    "attainability.py": "dc0fc703fcce4666aab717edcbf1e9fc73766a83b70b2a39c061ed5edf619490"
+  }
+}

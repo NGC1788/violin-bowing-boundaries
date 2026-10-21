@@ -1,0 +1,168 @@
+{
+  "passed": true,
+  "rejection_cases": [
+    {
+      "name": "relation",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "Kbool",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "Kfloat",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "Kzero",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "Knegative",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "empty_slope",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "nan_slope",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "empty_epsilon",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "negative_epsilon",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "nan_epsilon",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "reverse_domain",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "nan_domain",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "long_domain",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "empty_id",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "numeric_id",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "empty_group",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "beta_zero",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "beta_nan",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "unsorted_force",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "force_inf",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "force_length",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "bad_baseline",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "bad_guard",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "bad_fixed",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "values_inf",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "active_nan",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "overlap",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "eligible_int",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "invalid_eligible",
+      "rejected": true,
+      "error_type": "ValueError"
+    },
+    {
+      "name": "duplicate_id",
+      "rejected": true,
+      "error_type": "ValueError"
+    }
+  ],
+  "n_rejection_cases": 30,
+  "regression_counts": {
+    "fixtures": 12,
+    "threshold_probes": 62,
+    "atoms": 21,
+    "profile_comparisons": 186,
+    "minima_checks": 432
+  },
+  "empty_input": "Returns zero groups; no compatibility claims",
+  "source_sha256": {
+    "validation_cases.py": "20e1e00e8aa73c8ae0d8d872a221920166d6f04d805cf9640623a1d8b24f09dc",
+    "threshold_profile.py": "44ddd0cdfdd4538bfbc3b5951f1e0aff5b6f78f2f2decbc68116f02a511a3e0b"
+  }
+}

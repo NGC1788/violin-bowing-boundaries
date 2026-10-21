@@ -1,0 +1,14 @@
+{
+  "fixtures": 828,
+  "threshold_probes": 8362,
+  "atoms": 2748,
+  "profile_comparisons": 34620,
+  "minima_checks": 43236,
+  "passed": true,
+  "seconds": 0.44737041601911187,
+  "source_sha256": {
+    "exhaustive.py": "f8da01fe8153dcdb195f36b7d873ca1a73620f4cafb1acc7834264a4e0b3a69c",
+    "oracle.py": "c555f98e505025b0e2e98df4db521ae978938dd400600fdd5f30814c08d814bb",
+    "threshold_profile.py": "44ddd0cdfdd4538bfbc3b5951f1e0aff5b6f78f2f2decbc68116f02a511a3e0b"
+  }
+}

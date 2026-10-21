@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "status_rule_k_fixtures": 6552,
+  "threshold_comparisons": 58968,
+  "source_sha256": {
+    "record_envelope.py": "26e669f1665ed9f829c938ca5841644af59a01869436c72ea63fbdc5fd2038d3",
+    "oracle.py": "c555f98e505025b0e2e98df4db521ae978938dd400600fdd5f30814c08d814bb"
+  },
+  "interpretation": "Structural record-extrema equivalence, not a novel general algorithm or empirical validation."
+}

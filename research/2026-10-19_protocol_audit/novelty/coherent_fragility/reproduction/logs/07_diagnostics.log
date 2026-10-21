@@ -1,0 +1,6 @@
+periodicity_primary median reachable fraction 0.020833333333333332 no-loss [(-2.0, 0), (-1.2, 0)]
+ratio_primary median reachable fraction 0.0625 no-loss [(-2.0, 0), (-1.2, 0)]
+amplitude_stress median reachable fraction 0.20833333333333334 no-loss [(-2.0, 0), (-1.2, 0)]
+height_stress median reachable fraction 0.1875 no-loss [(-2.0, 0), (-1.2, 0)]
+periodicity_extended median reachable fraction 0.0625 no-loss [(-2.0, 0), (-1.2, 0)]
+ratio_extended median reachable fraction 0.125 no-loss [(-2.0, 0), (-1.2, 0)]

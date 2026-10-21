@@ -1,0 +1,227 @@
+{
+  "case_selection": "All primary rule-slope cases with at least one restored folder",
+  "cases": [
+    {
+      "name": "ratio_primary",
+      "p": -2.0,
+      "local": {
+        "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2",
+        "baseline_compatible": false,
+        "n_eligible_windows": 1200,
+        "n_eligible_columns": 24,
+        "feasible": true,
+        "arbitrary_minimum": 5.0,
+        "feasible_threshold_regions": [
+          {
+            "lo": 0.3,
+            "hi": 0.33218555281080747,
+            "lo_closed": true,
+            "hi_closed": true
+          }
+        ],
+        "atom": {
+          "index": 521,
+          "lo": 0.3321039186367665,
+          "hi": 0.33218555281080747,
+          "lo_closed": false,
+          "hi_closed": true,
+          "threshold": 0.33218555281080747
+        },
+        "eligible_edits": 44,
+        "folder_all_edits": 88,
+        "global_all_edits": 3200,
+        "changed_eligible_columns": 21,
+        "excess_over_arbitrary": 39.0
+      },
+      "global_best": {
+        "atom": {
+          "index": 521,
+          "lo": 0.3321039186367665,
+          "hi": 0.33218555281080747,
+          "lo_closed": false,
+          "hi_closed": true,
+          "threshold": 0.33218555281080747
+        },
+        "n_compatible": 1,
+        "compatible_groups": [
+          "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2"
+        ],
+        "n_invalid_groups": 9,
+        "invalid_groups": [
+          "A2|2024-04-19_TypeA_sample2/v3",
+          "A3|2024-04-22_TypeA_sample3/v3",
+          "A4|2024-04-24_TypeA_sample4/v3",
+          "A_T2|2024-06-19_TypeA_T2_sample1/v3",
+          "B1|2024-04-10_TypeB_sample1/2024-04-10/v3",
+          "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v3",
+          "B_T2s1|2024-06-13_TypeB_T2_sample1/v3",
+          "D1|2024-04-15_TypeD_sample1/2024-04-17/v3",
+          "D2|2024-04-26_TypeD_sample2/v3"
+        ],
+        "all_edits": 3200,
+        "eligible_edits": 2272,
+        "excluded_column_edits": 928,
+        "changed_eligible_columns": 897,
+        "invalid_eligible_columns": 10
+      }
+    },
+    {
+      "name": "amplitude_stress",
+      "p": -1.2,
+      "local": {
+        "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1",
+        "baseline_compatible": false,
+        "n_eligible_windows": 650,
+        "n_eligible_columns": 13,
+        "feasible": true,
+        "arbitrary_minimum": 5.0,
+        "feasible_threshold_regions": [
+          {
+            "lo": 0.4705620071075642,
+            "hi": 0.4821003906504866,
+            "lo_closed": false,
+            "hi_closed": true
+          }
+        ],
+        "atom": {
+          "index": 12021,
+          "lo": 0.4705620071075642,
+          "hi": 0.47063290374448163,
+          "lo_closed": false,
+          "hi_closed": true,
+          "threshold": 0.47056200710756424
+        },
+        "eligible_edits": 32,
+        "folder_all_edits": 856,
+        "global_all_edits": 12021,
+        "changed_eligible_columns": 6,
+        "excess_over_arbitrary": 27.0,
+        "arbitrary_delete_minimum": 6.0
+      },
+      "global_best": {
+        "atom": {
+          "index": 12021,
+          "lo": 0.4705620071075642,
+          "hi": 0.47063290374448163,
+          "lo_closed": false,
+          "hi_closed": true,
+          "threshold": 0.47056200710756424
+        },
+        "n_compatible": 1,
+        "compatible_groups": [
+          "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1"
+        ],
+        "n_invalid_groups": 23,
+        "invalid_groups": [
+          "A1|2024-03-25_TypeA_sample1/2024-03-27_r_v1",
+          "A1|2024-03-25_TypeA_sample1/2024-03-27_r_v2",
+          "A2|2024-04-19_TypeA_sample2/v1",
+          "A2|2024-04-19_TypeA_sample2/v2",
+          "A3|2024-04-22_TypeA_sample3/v1",
+          "A3|2024-04-22_TypeA_sample3/v2",
+          "A4|2024-04-24_TypeA_sample4/v1",
+          "A4|2024-04-24_TypeA_sample4/v2",
+          "A_T2|2024-06-19_TypeA_T2_sample1/v1",
+          "A_T2|2024-06-19_TypeA_T2_sample1/v2",
+          "B1|2024-04-10_TypeB_sample1/2024-04-10/v1",
+          "B1|2024-04-10_TypeB_sample1/2024-04-10/v2",
+          "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v1",
+          "B_T2s1|2024-06-13_TypeB_T2_sample1/v1",
+          "B_T2s1|2024-06-13_TypeB_T2_sample1/v2",
+          "C1|2024-04-12_TypeC_sample1/2024-04-15/v1",
+          "C1|2024-04-12_TypeC_sample1/2024-04-15/v2",
+          "C_T2|2024-06-11_TypeC_T2_sample1/v1",
+          "C_T2|2024-06-11_TypeC_T2_sample1/v2",
+          "D1|2024-04-15_TypeD_sample1/2024-04-17/v1",
+          "D1|2024-04-15_TypeD_sample1/2024-04-17/v2",
+          "D2|2024-04-26_TypeD_sample2/v1",
+          "D2|2024-04-26_TypeD_sample2/v2"
+        ],
+        "all_edits": 12021,
+        "eligible_edits": 4725,
+        "excluded_column_edits": 7296,
+        "changed_eligible_columns": 493,
+        "invalid_eligible_columns": 162
+      }
+    },
+    {
+      "name": "height_stress",
+      "p": -1.2,
+      "local": {
+        "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1",
+        "baseline_compatible": false,
+        "n_eligible_windows": 650,
+        "n_eligible_columns": 13,
+        "feasible": true,
+        "arbitrary_minimum": 5.0,
+        "feasible_threshold_regions": [
+          {
+            "lo": 1.6047788383136012,
+            "hi": 1.6559146572905932,
+            "lo_closed": false,
+            "hi_closed": true
+          }
+        ],
+        "atom": {
+          "index": 11492,
+          "lo": 1.6047788383136012,
+          "hi": 1.6047850550406801,
+          "lo_closed": false,
+          "hi_closed": true,
+          "threshold": 1.6047788383136015
+        },
+        "eligible_edits": 26,
+        "folder_all_edits": 844,
+        "global_all_edits": 11492,
+        "changed_eligible_columns": 6,
+        "excess_over_arbitrary": 21.0,
+        "arbitrary_delete_minimum": 6.0
+      },
+      "global_best": {
+        "atom": {
+          "index": 11492,
+          "lo": 1.6047788383136012,
+          "hi": 1.6047850550406801,
+          "lo_closed": false,
+          "hi_closed": true,
+          "threshold": 1.6047788383136015
+        },
+        "n_compatible": 1,
+        "compatible_groups": [
+          "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1"
+        ],
+        "n_invalid_groups": 22,
+        "invalid_groups": [
+          "A1|2024-03-25_TypeA_sample1/2024-03-27_r_v1",
+          "A1|2024-03-25_TypeA_sample1/2024-03-27_r_v2",
+          "A2|2024-04-19_TypeA_sample2/v1",
+          "A2|2024-04-19_TypeA_sample2/v2",
+          "A3|2024-04-22_TypeA_sample3/v1",
+          "A3|2024-04-22_TypeA_sample3/v2",
+          "A4|2024-04-24_TypeA_sample4/v1",
+          "A4|2024-04-24_TypeA_sample4/v2",
+          "A_T2|2024-06-19_TypeA_T2_sample1/v1",
+          "A_T2|2024-06-19_TypeA_T2_sample1/v2",
+          "B1|2024-04-10_TypeB_sample1/2024-04-10/v1",
+          "B1|2024-04-10_TypeB_sample1/2024-04-10/v2",
+          "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v1",
+          "B_T2s1|2024-06-13_TypeB_T2_sample1/v1",
+          "B_T2s1|2024-06-13_TypeB_T2_sample1/v2",
+          "C1|2024-04-12_TypeC_sample1/2024-04-15/v1",
+          "C1|2024-04-12_TypeC_sample1/2024-04-15/v2",
+          "C_T2|2024-06-11_TypeC_T2_sample1/v2",
+          "D1|2024-04-15_TypeD_sample1/2024-04-17/v1",
+          "D1|2024-04-15_TypeD_sample1/2024-04-17/v2",
+          "D2|2024-04-26_TypeD_sample2/v1",
+          "D2|2024-04-26_TypeD_sample2/v2"
+        ],
+        "all_edits": 11492,
+        "eligible_edits": 4417,
+        "excluded_column_edits": 7075,
+        "changed_eligible_columns": 430,
+        "invalid_eligible_columns": 150
+      }
+    }
+  ],
+  "profile_rule": "ratio_primary"
+}

@@ -1,0 +1,7 @@
+periodicity_primary patterns 1401 [(-2.0, 0, 0, 0), (-1.2, 0, 0, 0)]
+ratio_primary patterns 10716 [(-2.0, 1, 1, 3200), (-1.2, 0, 0, 0)]
+amplitude_stress patterns 32759 [(-2.0, 0, 0, 0), (-1.2, 1, 1, 12021)]
+height_stress patterns 32759 [(-2.0, 0, 0, 0), (-1.2, 1, 1, 11492)]
+periodicity_extended patterns 33314 [(-2.0, 0, 0, 0), (-1.2, 0, 0, 0)]
+ratio_extended patterns 71108 [(-2.0, 1, 1, 3200), (-1.2, 0, 0, 0)]
+seconds 8.815010624937713

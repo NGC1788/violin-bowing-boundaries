@@ -1,0 +1,60 @@
+A1
+A2
+B1
+C1
+D1
+A3
+A4
+D2
+A_T2
+B_T2s1
+C_T2
+B_T2r1
+B_T2r2
+{
+  "windows": 78000,
+  "columns": 1560,
+  "baseline_mismatches": {
+    "periodicity": 0,
+    "second_flyback_ratio": 0,
+    "amplitude": 0,
+    "flyback_height": 0
+  },
+  "missing_values": {
+    "periodicity": 0,
+    "second_flyback_ratio": 821,
+    "amplitude": 0,
+    "flyback_height": 821
+  },
+  "negative_values": {
+    "periodicity": 15,
+    "second_flyback_ratio": 0,
+    "amplitude": 0,
+    "flyback_height": 0
+  },
+  "frozen_missing_H": {
+    "periodicity": 0,
+    "second_flyback_ratio": 0,
+    "amplitude": 0,
+    "flyback_height": 0
+  },
+  "classifier_constants": {
+    "flyback_frac": 0.5,
+    "hysteresis_sigma": 3.0,
+    "noise_floor_factor": 3.0,
+    "min_amplitude": 0.4063327834010124,
+    "min_periodicity": 0.8,
+    "max_aperiodic": 0.5,
+    "subharmonic_ratio": 0.75,
+    "max_hole": 2
+  },
+  "dependency_sha256": {
+    "/Users/jeongjihoon/violin-rne/novelty/tilt_principle/tilt.py": "8f0925f6d38e7386bf08897953269e97e2751ef41437bb5450d05182fc427f98",
+    "/Users/jeongjihoon/violin-rne/novelty/label_sensitivity/label_sweep.py": "5bf6a58421e042cbf64f532641cec14d4d270313ea55621c5e5b53e652a171db",
+    "/Users/jeongjihoon/violin-rne/final/compare.py": "0967e96b1ce7c8d8572dc36560f610b8279b2aa7fefa2501d9619b4bce0150a6",
+    "/Users/jeongjihoon/violin-rne/final/data.py": "df6ed901fc6df82db2fb2e4a8f8d0c23808d8d6615e4288b6ba66ae30ab2283b",
+    "/Users/jeongjihoon/violin-rne/claude_extra/verify_astra_boundaries.py": "2dfd0572c8b4eca7865662136dccbaf6f2aa392936199860eaaa2f1af7ca926d"
+  },
+  "input_sha256": "e5650e0a51402382d2545702885c536c44ae0efd66a698dbb0cc8103e0d686d4",
+  "prior_fixture_sha256": "df926dbacbec45a01a50aa71e6f4172b34d68d9346a30f291655cbfa9de03167"
+}
