@@ -1,0 +1,229 @@
+{
+ "P0": {
+  "rows": {
+   "0.03": {
+    "fmin": 0.05526475705630105,
+    "labels": "................HHHHHHHHHHHHHHHH"
+   },
+   "0.05": {
+    "fmin": 0.022446256291093016,
+    "labels": ".............HHHHHHHHHHHHHHHHHHH"
+   },
+   "0.08": {
+    "fmin": 0.009116740004342204,
+    "labels": "..........HHHHHHHHHHHHHHHHHHHH.."
+   },
+   "0.12": {
+    "fmin": 0.0037028423461312188,
+    "labels": ".......HHHHHHHHHHHHHHHHHHHHHH..."
+   },
+   "0.2": {
+    "fmin": 0.0011137714759997793,
+    "labels": "...HHHHHHHHHHHHHHHHHHHHHHHH....."
+   },
+   "0.1": {
+    "fmin": 0.005,
+    "labels": "........HHHHHHHHHHHHHHHHHHHHH..."
+   }
+  },
+  "b_beta": -2.056437017685645,
+  "n_beta_defined": 5
+ },
+ "P1": {
+  "rows": {
+   "0.03": {
+    "fmin": null,
+    "labels": "ccccccc........................H"
+   },
+   "0.05": {
+    "fmin": null,
+    "labels": "cccccc..c....c................H."
+   },
+   "0.08": {
+    "fmin": 0.4523678621174643,
+    "labels": "ccccccc..cccccc........HHHH.HH.."
+   },
+   "0.12": {
+    "fmin": 0.012310462007473127,
+    "labels": "ccc.cccccccHHHHH...HHHHHHHHH...."
+   },
+   "0.2": {
+    "fmin": 0.0011137714759997793,
+    "labels": "cccHHHHHHHHHHHHHHHHHHHH........."
+   },
+   "0.1": {
+    "fmin": 0.022446256291093016,
+    "labels": "ccccc.cccccccHHHHHHHHHHH...HH..."
+   }
+  },
+  "b_beta": -6.476702677986597,
+  "n_beta_defined": 3
+ },
+ "W0": {
+  "rows": {
+   "0.03": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.05": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.08": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.12": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.2": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.1": {
+    "fmin": null,
+    "labels": "................................"
+   }
+  },
+  "b_beta": null,
+  "n_beta_defined": 0
+ },
+ "W1": {
+  "rows": {
+   "0.03": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.05": {
+    "fmin": null,
+    "labels": "...............cc..............."
+   },
+   "0.08": {
+    "fmin": null,
+    "labels": ".............c.................."
+   },
+   "0.12": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.2": {
+    "fmin": null,
+    "labels": ".......c........................"
+   },
+   "0.1": {
+    "fmin": null,
+    "labels": "............c..................."
+   }
+  },
+  "b_beta": null,
+  "n_beta_defined": 0
+ },
+ "W1-5mm": {
+  "rows": {
+   "0.03": {
+    "fmin": null,
+    "labels": "cccccccccc.c......cc............"
+   },
+   "0.05": {
+    "fmin": null,
+    "labels": "ccccc..........c................"
+   },
+   "0.08": {
+    "fmin": null,
+    "labels": ".............c.................."
+   },
+   "0.12": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.2": {
+    "fmin": null,
+    "labels": "...c............................"
+   },
+   "0.1": {
+    "fmin": null,
+    "labels": "............c..................."
+   }
+  },
+  "b_beta": null,
+  "n_beta_defined": 0
+ },
+ "W1-coul": {
+  "rows": {
+   "0.03": {
+    "fmin": null,
+    "labels": "...........c...................."
+   },
+   "0.05": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.08": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.12": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.2": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.1": {
+    "fmin": null,
+    "labels": "...............c................"
+   }
+  },
+  "b_beta": null,
+  "n_beta_defined": 0
+ },
+ "W1-ramp": {
+  "rows": {
+   "0.03": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.05": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.08": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.12": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.2": {
+    "fmin": null,
+    "labels": "................................"
+   },
+   "0.1": {
+    "fmin": null,
+    "labels": "..........c....................."
+   }
+  },
+  "b_beta": null,
+  "n_beta_defined": 0
+ },
+ "readings": {
+  "code_gate_P0": true,
+  "code_gate_P1": true,
+  "b_beta_W1": null,
+  "W1_reading": "undefined",
+  "b_beta_W0": null,
+  "b_beta_point_v6_H1m": -6.476702677986597,
+  "b_beta_point_v6_H0m": -2.04589777782553,
+  "W1_F_min_beta0p1": null,
+  "b_beta_W1_5mm": null,
+  "b_beta_W1_coul": null,
+  "W1_ramp_establishment": false,
+  "measured": {
+   "b_onset": -1.23,
+   "b_window": -1.54
+  }
+ }
+}
