@@ -1,0 +1,22 @@
+A1      base β -0.97 | P1: β -0.97 (drop 0, removed by β tercile 0.00/0.01/0.03) P2: β -0.97 (drop 0, removed by β tercile 0.00/0.02/0.07) A1: β -0.97 (drop 0, removed by β tercile 0.00/0.00/0.00)
+A2      base β -1.09 | P1: β -1.00 (drop 0, removed by β tercile 0.00/0.01/0.03) P2: β -0.98 (drop 0, removed by β tercile 0.00/0.01/0.05) A1: β -1.09 (drop 0, removed by β tercile 0.00/0.00/0.00)
+B1      base β -1.66 | P1: β -1.66 (drop 0, removed by β tercile 0.00/0.00/0.02) P2: β -1.66 (drop 0, removed by β tercile 0.00/0.00/0.04) A1: β -1.66 (drop 0, removed by β tercile 0.00/0.00/0.00)
+C1      base β -1.61 | P1: β -1.61 (drop 0, removed by β tercile 0.01/0.00/0.03) P2: β -1.57 (drop 0, removed by β tercile 0.01/0.01/0.04) A1: β -1.61 (drop 0, removed by β tercile 0.00/0.00/0.00)
+D1      base β -1.64 | P1: β -1.60 (drop 0, removed by β tercile 0.00/0.00/0.02) P2: β -1.60 (drop 0, removed by β tercile 0.00/0.01/0.03) A1: β -1.64 (drop 0, removed by β tercile 0.00/0.00/0.00)
+A3      base β -1.22 | P1: β -1.22 (drop 0, removed by β tercile 0.00/0.00/0.03) P2: β -1.21 (drop 0, removed by β tercile 0.00/0.01/0.06) A1: β -1.22 (drop 0, removed by β tercile 0.00/0.00/0.00)
+A4      base β -1.42 | P1: β -1.35 (drop 0, removed by β tercile 0.00/0.00/0.04) P2: β -1.32 (drop 0, removed by β tercile 0.00/0.01/0.08) A1: β -1.42 (drop 0, removed by β tercile 0.00/0.00/0.00)
+D2      base β -1.11 | P1: β -1.11 (drop 0, removed by β tercile 0.01/0.01/0.02) P2: β -1.10 (drop 0, removed by β tercile 0.01/0.01/0.06) A1: β -1.13 (drop 0, removed by β tercile 0.03/0.01/0.00)
+A_T2    base β -1.95 | P1: β -1.95 (drop 0, removed by β tercile 0.00/0.00/0.02) P2: β -1.95 (drop 0, removed by β tercile 0.00/0.00/0.04) A1: β -1.94 (drop 0, removed by β tercile 0.00/0.00/0.00)
+B_T2s1  base β -1.85 | P1: β -1.85 (drop 0, removed by β tercile 0.01/0.00/0.00) P2: β -1.81 (drop 0, removed by β tercile 0.01/0.00/0.02) A1: β -1.85 (drop 0, removed by β tercile 0.01/0.00/0.00)
+C_T2    base β -1.82 | P1: β -1.82 (drop 0, removed by β tercile 0.00/0.00/0.02) P2: β -1.76 (drop 0, removed by β tercile 0.00/0.01/0.03) A1: β -1.82 (drop 0, removed by β tercile 0.00/0.00/0.00)
+D_T2    base β -1.12 | P1: β -1.12 (drop 0, removed by β tercile 0.00/0.00/0.05) P2: β -1.07 (drop 0, removed by β tercile 0.00/0.01/0.08) A1: β -1.12 (drop 0, removed by β tercile 0.00/0.00/0.01)
+B_T2r1  base β -2.18 | P1: β -2.18 (drop 0, removed by β tercile 0.01/0.00/0.01) P2: β -2.18 (drop 0, removed by β tercile 0.01/0.00/0.02) A1: β -2.18 (drop 0, removed by β tercile 0.00/0.00/0.00)
+B_T2r2  base β -1.82 | P1: β -1.84 (drop 0, removed by β tercile 0.01/0.00/0.01) P2: β -1.84 (drop 0, removed by β tercile 0.02/0.00/0.02) A1: β -1.82 (drop 0, removed by β tercile 0.00/0.00/0.00)
+== window: S over unflagged variants = 0.340 → label-dependent (S>=0.3)
+   P1: mean -1.519 shift +0.013 [-0.006, +0.031] (small); removed by β tercile [0.0, 0.0, 0.02] flag False; to Schelleng False
+   P2: mean -1.502 shift +0.030 [+0.007, +0.052] (small); removed by β tercile [0.01, 0.01, 0.05] flag False; to Schelleng False
+   A1: mean -1.533 shift -0.001 [-0.005, +0.003] (small); removed by β tercile [0.0, 0.0, 0.0] flag False; to Schelleng False
+== onset: S over unflagged variants = 0.170 → moderate (0.1<=S<0.3)
+   P1: mean -1.224 shift +0.012 [-0.001, +0.026] (small); removed by β tercile [0.0, 0.0, 0.02] flag False; to Schelleng False
+   P2: mean -1.212 shift +0.025 [+0.010, +0.039] (small); removed by β tercile [0.0, 0.01, 0.05] flag False; to Schelleng False
+   A1: mean -1.237 shift -0.001 [-0.005, +0.003] (small); removed by β tercile [0.0, 0.0, 0.0] flag False; to Schelleng False
