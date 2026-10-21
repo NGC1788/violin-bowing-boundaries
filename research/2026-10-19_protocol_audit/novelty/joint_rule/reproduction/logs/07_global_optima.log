@@ -1,0 +1,24 @@
+checked row 0 / 2051
+checked row 250 / 2051
+checked row 500 / 2051
+checked row 750 / 2051
+checked row 1000 / 2051
+checked row 1250 / 2051
+checked row 1500 / 2051
+checked row 1750 / 2051
+checked row 2000 / 2051
+{
+  "null_row_checks": 2491965,
+  "global_cells": 22282064,
+  "tie_row_checks": 285,
+  "global_budget_optima": 96,
+  "local_optima": 1248,
+  "minimum_tolerance_optima": 156,
+  "passed": true,
+  "seconds": 40.781970750074834,
+  "source_sha256": {
+    "global_optima.py": "c4725e7b05fee53f3e9d2320e209b6cc69c20b475157257d6cededae0248248e",
+    "results.json": "8bb91f3abdb1884b92fe05b3143ccfaf24edf884f309887ad53aa8f6fbb37017",
+    "global_atoms.npz": "28f0bff858d8b520a4d78a3faaff55fdb7f4fc8f82003de66f98dca90950d282"
+  }
+}

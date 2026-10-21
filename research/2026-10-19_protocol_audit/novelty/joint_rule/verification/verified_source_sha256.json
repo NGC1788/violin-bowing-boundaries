@@ -1,0 +1,21 @@
+{
+  "empirical.py": "d0f4daa0ea8e5f6a59daf9c88df73c95a5c09b88d4e6b280c77b8d5c8db75777",
+  "global_atoms.npz": "28f0bff858d8b520a4d78a3faaff55fdb7f4fc8f82003de66f98dca90950d282",
+  "input_joint.json.gz": "85ab696054670f80bc9690873291c39bb119b56670b4513da59bae994a2b0d70",
+  "prior_arbitrary_reference.json": "b1da83e4c69012b7c9bcab74969ebc21da4e3e16fa3abe7c52d163b9cee65339",
+  "prior_input_features.json.gz": "e5650e0a51402382d2545702885c536c44ae0efd66a698dbb0cc8103e0d686d4",
+  "results.json": "a19620a173e3cb2eae878c0c708235e88c0cac4b4de16db3a212475e7becfd42",
+  "solver.py": "61b3b29d520d1f0545901f98b3ce5c8ebf0fae07908967ae82d872b97dc3a1b2",
+  "theory/diagnostics.py": "0507ee3255102e66ee19fd9d5f59ffc42373c6f03b82cfb3527c04fc1ed11a75",
+  "theory/obstruction_certificates.json": "196206b72ec2d2ccd24e73bd9079254745bfa9858b414dc129adbd09e7f9eabc",
+  "theory/obstructions.json": "ca4a54163f28ae0a529e68f3855d3d9519594abb9a55b323cc911c01c3fc6c29",
+  "verification/exhaustive.py": "b2e561847ab622aaf12d3b3db0c3495121238d3b119bb2aec03d70534da1578f",
+  "verification/fixture_audit.py": "1d6d1c593cdb29528dd68100af2a459f044c225075a2f65d394a31d630d3dbc6",
+  "verification/global_optima.py": "c4725e7b05fee53f3e9d2320e209b6cc69c20b475157257d6cededae0248248e",
+  "verification/lower_bounds.py": "1efb62e60d04ca8e76887c5dde6c686607d57c6736b88027b19cc0f283cbcc29",
+  "verification/obstruction_verify.py": "f26bf185c376130fabc1cf1275bf273a0ab65b745ec0cc8160aa438b389dfb38",
+  "verification/oracle.py": "eb88a007532de345b53beced1b4acf8583dddb7c11c10f866324b4e2ea8d0fbb",
+  "verification/real_profiles.py": "5e170aeff122baec1dd04c2693a07e401820e1e55ccbf2ec6505d40d757b36ae",
+  "verification/tolerance_cutoff_checks.py": "c554e39fd133621920535011f3cb17a90594d9b769d57b25b860a0e483925aa0",
+  "verification/validation_cases.py": "021535354638bfc14193648c91a0779565a63b673b64bbc4f55d1e4968822584"
+}

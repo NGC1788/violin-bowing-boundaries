@@ -1,0 +1,19 @@
+{
+  "direct_window_classifications": 546000,
+  "global_budget_witnesses": 96,
+  "both_bound_checks": 126,
+  "delete_bound_checks": 126,
+  "feasible_local_mode_witnesses": 33,
+  "add_bound_checks": 26,
+  "distinct_classifier_pairs": 7,
+  "passed": true,
+  "seconds": 0.19002529210411012,
+  "note": "Previously certified arbitrary restore costs are a reference, not re-derived here. Only identical eligible-folder costs are compared. One-sided bounds require matching observed direction.",
+  "source_sha256": {
+    "verification/lower_bounds.py": "1efb62e60d04ca8e76887c5dde6c686607d57c6736b88027b19cc0f283cbcc29",
+    "verification/oracle.py": "eb88a007532de345b53beced1b4acf8583dddb7c11c10f866324b4e2ea8d0fbb",
+    "prior_arbitrary_reference.json": "b1da83e4c69012b7c9bcab74969ebc21da4e3e16fa3abe7c52d163b9cee65339",
+    "input_joint.json.gz": "85ab696054670f80bc9690873291c39bb119b56670b4513da59bae994a2b0d70",
+    "results.json": "8bb91f3abdb1884b92fe05b3143ccfaf24edf884f309887ad53aa8f6fbb37017"
+  }
+}

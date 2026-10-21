@@ -1,0 +1,39 @@
+{
+  "tolerance_witnesses": 156,
+  "binary64_bisection_checks": 9672,
+  "closed_form_false_in_float": 0,
+  "passed": true,
+  "seconds": 0.20438829204067588,
+  "interpretation": "Epsilon is a log-force compatibility tolerance, not calibrated measurement uncertainty. Float endpoint tests do not turn post-hoc classifier sensitivity into physical confirmation.",
+  "source_sha256": {
+    "verification/tolerance_cutoff_checks.py": "c554e39fd133621920535011f3cb17a90594d9b769d57b25b860a0e483925aa0",
+    "verification/oracle.py": "eb88a007532de345b53beced1b4acf8583dddb7c11c10f866324b4e2ea8d0fbb",
+    "input_joint.json.gz": "85ab696054670f80bc9690873291c39bb119b56670b4513da59bae994a2b0d70",
+    "results.json": "a19620a173e3cb2eae878c0c708235e88c0cac4b4de16db3a212475e7becfd42"
+  }
+}
+{
+  "group": "A4|2024-04-24_TypeA_sample4/v3",
+  "p": -2.0,
+  "policy": "preserve_all",
+  "u": 0.8,
+  "v": 0.49326392706532574,
+  "lower": -5.416518807898982,
+  "upper": -5.82762377749361,
+  "reported_closed_form_epsilon": 0.2055524847973138,
+  "literal_closed_form_epsilon": 0.2055524847973138,
+  "closed_form_passes_float_predicate": true,
+  "minimum_representable_epsilon": 0.2055524847973138,
+  "previous_representable_epsilon": 0.20555248479731378,
+  "previous_is_incompatible": true,
+  "minimum_is_compatible": true,
+  "machine_minus_literal_closed_form": 0.0,
+  "baseline_epsilon_required": 0.40916524926568076,
+  "all_data_edits": 150,
+  "target_folder_edits": 1,
+  "all_invalid_eligible_columns": 0,
+  "epsilon_below": 0.205552,
+  "epsilon_above": 0.205553,
+  "target_compatible_below": false,
+  "target_compatible_above": true
+}

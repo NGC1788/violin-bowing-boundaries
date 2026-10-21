@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "duration_seconds": 162.208175458014,
+  "summary_counts": {
+    "json_files": 52,
+    "npz_files": 40,
+    "arrays": 1063,
+    "array_elements": 16248845,
+    "json_numbers": 197575
+  },
+  "source_files_unchanged": true,
+  "copied_fixtures_unchanged": true,
+  "all_scientific_comparisons_passed": true,
+  "steps": 12,
+  "figures": 3,
+  "source_report": "/private/tmp/joint-rule-reproduction-20261021-final-complete/reproduction_report.json"
+}

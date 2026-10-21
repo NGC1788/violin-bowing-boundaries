@@ -1,0 +1,59 @@
+profile 0 A1 (142, 243)
+profile 1 A1 (55, 251)
+profile 2 A1 (47, 217)
+profile 3 A2 (146, 315)
+profile 4 A2 (34, 266)
+profile 5 A2 (24, 219)
+profile 6 A3 (155, 279)
+profile 7 A3 (33, 265)
+profile 8 A3 (11, 219)
+profile 9 A4 (106, 254)
+profile 10 A4 (56, 298)
+profile 11 A4 (18, 289)
+profile 12 A_T2 (55, 185)
+profile 13 A_T2 (32, 282)
+profile 14 A_T2 (5, 215)
+profile 15 B1 (107, 342)
+profile 16 B1 (31, 363)
+profile 17 B1 (16, 291)
+profile 18 B_T2r1 (65, 216)
+profile 19 B_T2r1 (37, 276)
+profile 20 B_T2r1 (8, 314)
+profile 21 B_T2r2 (67, 290)
+profile 22 B_T2r2 (38, 309)
+profile 23 B_T2r2 (8, 278)
+profile 24 B_T2s1 (72, 367)
+profile 25 B_T2s1 (35, 334)
+profile 26 B_T2s1 (22, 294)
+profile 27 C1 (89, 338)
+profile 28 C1 (39, 366)
+profile 29 C1 (13, 298)
+profile 30 C_T2 (75, 230)
+profile 31 C_T2 (33, 268)
+profile 32 C_T2 (8, 220)
+profile 33 D1 (103, 248)
+profile 34 D1 (37, 330)
+profile 35 D1 (15, 240)
+profile 36 D2 (183, 336)
+profile 37 D2 (26, 318)
+profile 38 D2 (43, 239)
+global row 0 / 2051 v_cells 10864
+global row 200 / 2051 v_cells 10864
+global row 400 / 2051 v_cells 10864
+global row 600 / 2051 v_cells 10864
+global row 800 / 2051 v_cells 10864
+global row 1000 / 2051 v_cells 10864
+global row 1200 / 2051 v_cells 10864
+global row 1400 / 2051 v_cells 10864
+global row 1600 / 2051 v_cells 10864
+global row 1800 / 2051 v_cells 10864
+global row 2000 / 2051 v_cells 10864
+RESULT -2.0 0.0 local 0 joint_only 0 [('unrestricted', 0, 0, 0), ('preserve_all', 0, 0, 0)]
+RESULT -2.0 0.1 local 0 joint_only 0 [('unrestricted', 0, 0, 0), ('preserve_all', 0, 0, 0)]
+RESULT -2.0 0.2 local 1 joint_only 0 [('unrestricted', 1, 3200, 9), ('preserve_all', 0, 0, 0)]
+RESULT -2.0 0.4 local 6 joint_only 0 [('unrestricted', 5, 150, 0), ('preserve_all', 5, 150, 0)]
+RESULT -1.2 0.0 local 0 joint_only 0 [('unrestricted', 0, 0, 0), ('preserve_all', 0, 0, 0)]
+RESULT -1.2 0.1 local 0 joint_only 0 [('unrestricted', 0, 0, 0), ('preserve_all', 0, 0, 0)]
+RESULT -1.2 0.2 local 0 joint_only 0 [('unrestricted', 0, 0, 0), ('preserve_all', 0, 0, 0)]
+RESULT -1.2 0.4 local 4 joint_only 0 [('unrestricted', 4, 2071, 7), ('preserve_all', 1, 0, 0)]
+seconds 92.31038104207255

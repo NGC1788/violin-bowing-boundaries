@@ -1,0 +1,53 @@
+{
+  "targets": [
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2",
+      "baseline_epsilon": 0.3231546542514456,
+      "best_epsilon": 0.1834754877491216,
+      "best_preserve_all_epsilon": 0.3231546542514456,
+      "selected": {
+        "u": 0.8,
+        "v": 0.32841456169474226,
+        "all_edits": 3255,
+        "invalid_groups": 9
+      }
+    },
+    {
+      "group": "A4|2024-04-24_TypeA_sample4/v3",
+      "baseline_epsilon": 0.40916524926568076,
+      "best_epsilon": 0.2055524847973138,
+      "best_preserve_all_epsilon": 0.2055524847973138,
+      "selected": {
+        "u": 0.8,
+        "v": 0.49326392706532574,
+        "all_edits": 150,
+        "invalid_groups": 0
+      }
+    }
+  ],
+  "primary_epsilon": 0.2,
+  "triple_certificates": [
+    {
+      "group": "A1|2024-03-25_TypeA_sample1/2024-03-27_r_v3",
+      "p": -1.2,
+      "beta": [
+        0.03206913670665765,
+        0.03827722268472975,
+        0.09287681009077065
+      ],
+      "minimum_columns": 3,
+      "rectangles": 18
+    },
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1",
+      "p": -2.0,
+      "beta": [
+        0.0196905229390484,
+        0.0209374556122245,
+        0.0299633205392033
+      ],
+      "minimum_columns": 3,
+      "rectangles": 12
+    }
+  ]
+}

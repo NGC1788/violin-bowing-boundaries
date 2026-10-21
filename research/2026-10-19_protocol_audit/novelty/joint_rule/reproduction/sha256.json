@@ -1,0 +1,18 @@
+{
+  "early_inventory_stops.json": "34bed385d88f814ed96f29d5f0eb925fb61d637cfa4900b7cf67f4348de25244",
+  "logs/01_exhaustive.log": "94994bd12d2a9f3c83d3e3081efb38baff4d10cd0a4657ef8527b89095fe8ea2",
+  "logs/02_validation_cases.log": "77900fe3d8708a6297fd69fb9de22dbd4bd991322ca64c69ea73d1691a4fb484",
+  "logs/03_test_rectangle_oracle.log": "7c05500640252feeb688b4a8891154c8d751ed00fe84a4a3fd65afdcd01afd8c",
+  "logs/04_fixture_audit.log": "e097692bd16a8993809dfbd50012dd74ee051a4bf99ab7ec26e915960d58abbb",
+  "logs/05_empirical.log": "c45a0b45d31bd069fa22be4a8c8d39057ec92e6f54e8422656afbdc3926fe43d",
+  "logs/06_real_profiles.log": "36fd5cce143a7121925c34cafd2a8ff9c955b5849922fed71839dea8aeefd5d1",
+  "logs/07_global_optima.log": "67ca64505e61ff43043ac826e99be941cfa3fdaa3396b39cc7358ff28c7d00bd",
+  "logs/08_lower_bounds.log": "1ea2337d678caf94d4697157330fe4f95dd9fb6aad3cc216c67b4c13702876fc",
+  "logs/09_tolerance_cutoff_checks.log": "72adeced5cf54d86ce853f5a9c9178d7d94f726e8789a5b11c4109a45afa0ae2",
+  "logs/10_diagnostics.log": "26b6985a5b71ead1f678383edadae9ad406bc7df2a7afd43ee715705f913a485",
+  "logs/11_obstruction_verify.log": "bd4fd317d6354362901e99c9de7bee4e9bda0bacbb97631d4c9b409f4f9a73ea",
+  "logs/12_figures.log": "9584fc12b41fa697b8b411a69e93b3b7e0a3db8b04f32dd45e24a8c818406b27",
+  "reproduction_report.json": "a211ddce58ae5b9037fe428ef7e7405c422d699a8f02c2c1e291df8f32e10ebb",
+  "safety_checks.json": "28984bdba9b3f62b8ec7e70611d3391519f784473896ddb013bb394a6f713f31",
+  "summary.json": "d70097ee5a84162d5a865d5ef8dc08c2aeddf047d5d025f0c712565066893d1f"
+}

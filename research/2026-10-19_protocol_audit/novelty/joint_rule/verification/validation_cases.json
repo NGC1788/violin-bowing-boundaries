@@ -1,0 +1,19 @@
+{
+  "integer_type_regressions": 2,
+  "passed": true,
+  "invalid_group_inputs": 30,
+  "invalid_atoms": 3,
+  "invalid_mappings": 3,
+  "regressions": {
+    "fixtures": 4,
+    "threshold_pairs": 224,
+    "cells": 19,
+    "scalar_comparisons": 6496,
+    "minima_checks": 96,
+    "certificate_checks": 672
+  },
+  "source_sha256": {
+    "verification/validation_cases.py": "021535354638bfc14193648c91a0779565a63b673b64bbc4f55d1e4968822584",
+    "solver.py": "61b3b29d520d1f0545901f98b3ce5c8ebf0fae07908967ae82d872b97dc3a1b2"
+  }
+}

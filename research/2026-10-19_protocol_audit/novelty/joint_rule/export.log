@@ -1,0 +1,14 @@
+A1
+A2
+B1
+C1
+D1
+A3
+A4
+D2
+A_T2
+B_T2s1
+C_T2
+B_T2r1
+B_T2r2
+{'windows': 78000, 'locked_missing_positive': 0, 'joint_only_admissible_windows': 105, 'columns': 1560, 'eligible_columns': 1132} local_cells_bound 597003

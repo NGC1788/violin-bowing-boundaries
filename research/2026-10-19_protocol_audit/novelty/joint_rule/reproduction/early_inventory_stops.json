@@ -1,0 +1,18 @@
+[
+  {
+    "attempt": "prefigure",
+    "status": "failed",
+    "error": "RuntimeError: Verifier inventory changed; explicitly update runner: ['exhaustive.py', 'fixture_audit.py', 'global_optima.py', 'lower_bounds.py', 'oracle.py', 'real_profiles.py', 'validation_cases.py']",
+    "steps_executed": 0,
+    "reason": "New verifier was added during active development; inventory guard halted before any scientific subprocess.",
+    "original_artifact_writes_performed": false
+  },
+  {
+    "attempt": "final",
+    "status": "failed",
+    "error": "RuntimeError: Verifier inventory changed; explicitly update runner: ['exhaustive.py', 'fixture_audit.py', 'global_optima.py', 'lower_bounds.py', 'oracle.py', 'real_profiles.py', 'tolerance_cutoff_checks.py', 'validation_cases.py']",
+    "steps_executed": 0,
+    "reason": "New verifier was added during active development; inventory guard halted before any scientific subprocess.",
+    "original_artifact_writes_performed": false
+  }
+]

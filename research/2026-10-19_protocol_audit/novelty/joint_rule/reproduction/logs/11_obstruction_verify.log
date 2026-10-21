@@ -1,0 +1,59 @@
+checked all subsets 1 A1|2024-03-25_TypeA_sample1/2024-03-27_r_v1
+checked all subsets 2 A1|2024-03-25_TypeA_sample1/2024-03-27_r_v2
+checked all subsets 3 A1|2024-03-25_TypeA_sample1/2024-03-27_r_v3
+checked all subsets 4 A2|2024-04-19_TypeA_sample2/v1
+checked all subsets 5 A2|2024-04-19_TypeA_sample2/v2
+checked all subsets 6 A2|2024-04-19_TypeA_sample2/v3
+checked all subsets 7 A3|2024-04-22_TypeA_sample3/v1
+checked all subsets 8 A3|2024-04-22_TypeA_sample3/v2
+checked all subsets 9 A3|2024-04-22_TypeA_sample3/v3
+checked all subsets 10 A4|2024-04-24_TypeA_sample4/v1
+checked all subsets 11 A4|2024-04-24_TypeA_sample4/v2
+checked all subsets 12 A4|2024-04-24_TypeA_sample4/v3
+checked all subsets 13 A_T2|2024-06-19_TypeA_T2_sample1/v1
+checked all subsets 14 A_T2|2024-06-19_TypeA_T2_sample1/v2
+checked all subsets 15 A_T2|2024-06-19_TypeA_T2_sample1/v3
+checked all subsets 16 B1|2024-04-10_TypeB_sample1/2024-04-10/v1
+checked all subsets 17 B1|2024-04-10_TypeB_sample1/2024-04-10/v2
+checked all subsets 18 B1|2024-04-10_TypeB_sample1/2024-04-10/v3
+checked all subsets 19 B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1
+checked all subsets 20 B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2
+checked all subsets 21 B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v3
+checked all subsets 22 B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v1
+checked all subsets 23 B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2
+checked all subsets 24 B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v3
+checked all subsets 25 B_T2s1|2024-06-13_TypeB_T2_sample1/v1
+checked all subsets 26 B_T2s1|2024-06-13_TypeB_T2_sample1/v2
+checked all subsets 27 B_T2s1|2024-06-13_TypeB_T2_sample1/v3
+checked all subsets 28 C1|2024-04-12_TypeC_sample1/2024-04-15/v1
+checked all subsets 29 C1|2024-04-12_TypeC_sample1/2024-04-15/v2
+checked all subsets 30 C1|2024-04-12_TypeC_sample1/2024-04-15/v3
+checked all subsets 31 C_T2|2024-06-11_TypeC_T2_sample1/v1
+checked all subsets 32 C_T2|2024-06-11_TypeC_T2_sample1/v2
+checked all subsets 33 C_T2|2024-06-11_TypeC_T2_sample1/v3
+checked all subsets 34 D1|2024-04-15_TypeD_sample1/2024-04-17/v1
+checked all subsets 35 D1|2024-04-15_TypeD_sample1/2024-04-17/v2
+checked all subsets 36 D1|2024-04-15_TypeD_sample1/2024-04-17/v3
+checked all subsets 37 D2|2024-04-26_TypeD_sample2/v1
+checked all subsets 38 D2|2024-04-26_TypeD_sample2/v2
+checked all subsets 39 D2|2024-04-26_TypeD_sample2/v3
+{
+  "literal_column_patterns": 45258,
+  "literal_window_classifications": 2262900,
+  "all_pairs_checked": 33728,
+  "all_triples_checked": 5246,
+  "rectangle_boundary_claims": 3350,
+  "certificate_rectangles": 1660,
+  "certificate_cover_probe_points": 75062,
+  "certificates": 77,
+  "passed": true,
+  "seconds": 2.040640125051141,
+  "source_sha256": {
+    "verification/obstruction_verify.py": "f26bf185c376130fabc1cf1275bf273a0ab65b745ec0cc8160aa438b389dfb38",
+    "verification/oracle.py": "eb88a007532de345b53beced1b4acf8583dddb7c11c10f866324b4e2ea8d0fbb",
+    "input_joint.json.gz": "85ab696054670f80bc9690873291c39bb119b56670b4513da59bae994a2b0d70",
+    "theory/obstructions.json": "585399fc07e16ba1200d96bd3c4572c92aebfbabbe0bd3666f285ea60f02a344",
+    "theory/obstruction_certificates.json": "196206b72ec2d2ccd24e73bd9079254745bfa9858b414dc129adbd09e7f9eabc",
+    "prior_arbitrary_reference.json": "b1da83e4c69012b7c9bcab74969ebc21da4e3e16fa3abe7c52d163b9cee65339"
+  }
+}

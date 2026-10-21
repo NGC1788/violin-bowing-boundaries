@@ -1,0 +1,3936 @@
+{
+  "direct_window_classifications": 546000,
+  "global_budget_witnesses": 96,
+  "both_bound_checks": 126,
+  "delete_bound_checks": 126,
+  "feasible_local_mode_witnesses": 33,
+  "add_bound_checks": 26,
+  "distinct_classifier_pairs": 7,
+  "passed": true,
+  "seconds": 0.19618433294817805,
+  "note": "Previously certified arbitrary restore costs are a reference, not re-derived here. Only identical eligible-folder costs are compared. One-sided bounds require matching observed direction.",
+  "local_witnesses": [
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2",
+      "p": -2.0,
+      "epsilon": 0.2,
+      "mode": "joint",
+      "u": 0.8,
+      "v": 0.33218555281080747,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 88,
+        "eligible_additions": 0,
+        "eligible_deletions": 44,
+        "all_edits": 88,
+        "eligible_edits": 44
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 3200,
+        "eligible_additions": 0,
+        "eligible_deletions": 2272,
+        "all_edits": 3200,
+        "eligible_edits": 2272
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 5.0,
+        "delete": 6.0
+      }
+    },
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2",
+      "p": -2.0,
+      "epsilon": 0.2,
+      "mode": "ratio_only",
+      "u": 0.8,
+      "v": 0.33218555281080747,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 88,
+        "eligible_additions": 0,
+        "eligible_deletions": 44,
+        "all_edits": 88,
+        "eligible_edits": 44
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 3200,
+        "eligible_additions": 0,
+        "eligible_deletions": 2272,
+        "all_edits": 3200,
+        "eligible_edits": 2272
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 5.0,
+        "delete": 6.0
+      }
+    },
+    {
+      "group": "A4|2024-04-24_TypeA_sample4/v3",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "joint",
+      "u": 0.8,
+      "v": 0.49326392706532574,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 1,
+        "eligible_additions": 0,
+        "eligible_deletions": 1,
+        "all_edits": 1,
+        "eligible_edits": 1
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 150,
+        "eligible_additions": 0,
+        "eligible_deletions": 106,
+        "all_edits": 150,
+        "eligible_edits": 106
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 1.0,
+        "delete": 1.0
+      }
+    },
+    {
+      "group": "A4|2024-04-24_TypeA_sample4/v3",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "ratio_only",
+      "u": 0.8,
+      "v": 0.49326392706532574,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 1,
+        "eligible_additions": 0,
+        "eligible_deletions": 1,
+        "all_edits": 1,
+        "eligible_edits": 1
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 150,
+        "eligible_additions": 0,
+        "eligible_deletions": 106,
+        "all_edits": 150,
+        "eligible_edits": 106
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 1.0,
+        "delete": 1.0
+      }
+    },
+    {
+      "group": "A4|2024-04-24_TypeA_sample4/v3",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "preserve_all",
+      "u": 0.8,
+      "v": 0.49326392706532574,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 1,
+        "eligible_additions": 0,
+        "eligible_deletions": 1,
+        "all_edits": 1,
+        "eligible_edits": 1
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 150,
+        "eligible_additions": 0,
+        "eligible_deletions": 106,
+        "all_edits": 150,
+        "eligible_edits": 106
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 1.0,
+        "delete": 1.0
+      }
+    },
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "joint",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    },
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "periodicity_only",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    },
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "ratio_only",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    },
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "preserve_all",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    },
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "joint",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    },
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "periodicity_only",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    },
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "ratio_only",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    },
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "preserve_all",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    },
+    {
+      "group": "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "joint",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    },
+    {
+      "group": "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "periodicity_only",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    },
+    {
+      "group": "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "ratio_only",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    },
+    {
+      "group": "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "preserve_all",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v1",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "joint",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v1",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "periodicity_only",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v1",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "ratio_only",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v1",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "preserve_all",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v3",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "joint",
+      "u": 0.8,
+      "v": 0.3518106398555424,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 57,
+        "eligible_additions": 0,
+        "eligible_deletions": 39,
+        "all_edits": 57,
+        "eligible_edits": 39
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 2859,
+        "eligible_additions": 0,
+        "eligible_deletions": 2054,
+        "all_edits": 2859,
+        "eligible_edits": 2054
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 2.0,
+        "delete": 2.0
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v3",
+      "p": -2.0,
+      "epsilon": 0.4,
+      "mode": "ratio_only",
+      "u": 0.8,
+      "v": 0.3518106398555424,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 57,
+        "eligible_additions": 0,
+        "eligible_deletions": 39,
+        "all_edits": 57,
+        "eligible_edits": 39
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 2859,
+        "eligible_additions": 0,
+        "eligible_deletions": 2054,
+        "all_edits": 2859,
+        "eligible_edits": 2054
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 2.0,
+        "delete": 2.0
+      }
+    },
+    {
+      "group": "A1|2024-03-25_TypeA_sample1/2024-03-27_r_v3",
+      "p": -1.2,
+      "epsilon": 0.4,
+      "mode": "joint",
+      "u": 0.8,
+      "v": 0.47502326042662324,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 10,
+        "eligible_additions": 0,
+        "eligible_deletions": 10,
+        "all_edits": 10,
+        "eligible_edits": 10
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 528,
+        "eligible_additions": 0,
+        "eligible_deletions": 384,
+        "all_edits": 528,
+        "eligible_edits": 384
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 2.0,
+        "delete": 2.0
+      }
+    },
+    {
+      "group": "A1|2024-03-25_TypeA_sample1/2024-03-27_r_v3",
+      "p": -1.2,
+      "epsilon": 0.4,
+      "mode": "ratio_only",
+      "u": 0.8,
+      "v": 0.47502326042662324,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 10,
+        "eligible_additions": 0,
+        "eligible_deletions": 10,
+        "all_edits": 10,
+        "eligible_edits": 10
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 528,
+        "eligible_additions": 0,
+        "eligible_deletions": 384,
+        "all_edits": 528,
+        "eligible_edits": 384
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 2.0,
+        "delete": 2.0
+      }
+    },
+    {
+      "group": "A2|2024-04-19_TypeA_sample2/v2",
+      "p": -1.2,
+      "epsilon": 0.4,
+      "mode": "joint",
+      "u": 0.8,
+      "v": 0.45189028821633315,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 17,
+        "eligible_additions": 0,
+        "eligible_deletions": 17,
+        "all_edits": 17,
+        "eligible_edits": 17
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 1014,
+        "eligible_additions": 0,
+        "eligible_deletions": 742,
+        "all_edits": 1014,
+        "eligible_edits": 742
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 3.0,
+        "delete": 3.0
+      }
+    },
+    {
+      "group": "A2|2024-04-19_TypeA_sample2/v2",
+      "p": -1.2,
+      "epsilon": 0.4,
+      "mode": "ratio_only",
+      "u": 0.8,
+      "v": 0.45189028821633315,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 17,
+        "eligible_additions": 0,
+        "eligible_deletions": 17,
+        "all_edits": 17,
+        "eligible_edits": 17
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 1014,
+        "eligible_additions": 0,
+        "eligible_deletions": 742,
+        "all_edits": 1014,
+        "eligible_edits": 742
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 3.0,
+        "delete": 3.0
+      }
+    },
+    {
+      "group": "A4|2024-04-24_TypeA_sample4/v2",
+      "p": -1.2,
+      "epsilon": 0.4,
+      "mode": "joint",
+      "u": 0.8,
+      "v": 0.3971654593391785,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 59,
+        "eligible_additions": 0,
+        "eligible_deletions": 44,
+        "all_edits": 59,
+        "eligible_edits": 44
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 2071,
+        "eligible_additions": 0,
+        "eligible_deletions": 1507,
+        "all_edits": 2071,
+        "eligible_edits": 1507
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 1.0,
+        "delete": 3.0
+      }
+    },
+    {
+      "group": "A4|2024-04-24_TypeA_sample4/v2",
+      "p": -1.2,
+      "epsilon": 0.4,
+      "mode": "ratio_only",
+      "u": 0.8,
+      "v": 0.3971654593391785,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 59,
+        "eligible_additions": 0,
+        "eligible_deletions": 44,
+        "all_edits": 59,
+        "eligible_edits": 44
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 2071,
+        "eligible_additions": 0,
+        "eligible_deletions": 1507,
+        "all_edits": 2071,
+        "eligible_edits": 1507
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 1.0,
+        "delete": 3.0
+      }
+    },
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1",
+      "p": -1.2,
+      "epsilon": 0.4,
+      "mode": "joint",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    },
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1",
+      "p": -1.2,
+      "epsilon": 0.4,
+      "mode": "periodicity_only",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    },
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1",
+      "p": -1.2,
+      "epsilon": 0.4,
+      "mode": "ratio_only",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    },
+    {
+      "group": "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1",
+      "p": -1.2,
+      "epsilon": 0.4,
+      "mode": "preserve_all",
+      "u": 0.8,
+      "v": 0.5,
+      "target": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "applicable_arbitrary_bounds": {
+        "both": 0.0,
+        "delete": 0.0,
+        "add": 0.0
+      }
+    }
+  ],
+  "global_witnesses": [
+    {
+      "p": -2.0,
+      "epsilon": 0.0,
+      "policy": "unrestricted",
+      "budget_fraction": 0.01,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.0,
+      "policy": "unrestricted",
+      "budget_fraction": 0.05,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.0,
+      "policy": "unrestricted",
+      "budget_fraction": 0.1,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.0,
+      "policy": "unrestricted",
+      "budget_fraction": 0.15,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.0,
+      "policy": "unrestricted",
+      "budget_fraction": 0.3,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.0,
+      "policy": "unrestricted",
+      "budget_fraction": 1.0,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.0,
+      "policy": "preserve_all",
+      "budget_fraction": 0.01,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.0,
+      "policy": "preserve_all",
+      "budget_fraction": 0.05,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.0,
+      "policy": "preserve_all",
+      "budget_fraction": 0.1,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.0,
+      "policy": "preserve_all",
+      "budget_fraction": 0.15,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.0,
+      "policy": "preserve_all",
+      "budget_fraction": 0.3,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.0,
+      "policy": "preserve_all",
+      "budget_fraction": 1.0,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.1,
+      "policy": "unrestricted",
+      "budget_fraction": 0.01,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.1,
+      "policy": "unrestricted",
+      "budget_fraction": 0.05,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.1,
+      "policy": "unrestricted",
+      "budget_fraction": 0.1,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.1,
+      "policy": "unrestricted",
+      "budget_fraction": 0.15,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.1,
+      "policy": "unrestricted",
+      "budget_fraction": 0.3,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.1,
+      "policy": "unrestricted",
+      "budget_fraction": 1.0,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.1,
+      "policy": "preserve_all",
+      "budget_fraction": 0.01,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.1,
+      "policy": "preserve_all",
+      "budget_fraction": 0.05,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.1,
+      "policy": "preserve_all",
+      "budget_fraction": 0.1,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.1,
+      "policy": "preserve_all",
+      "budget_fraction": 0.15,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.1,
+      "policy": "preserve_all",
+      "budget_fraction": 0.3,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.1,
+      "policy": "preserve_all",
+      "budget_fraction": 1.0,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.2,
+      "policy": "unrestricted",
+      "budget_fraction": 0.01,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.2,
+      "policy": "unrestricted",
+      "budget_fraction": 0.05,
+      "u": 0.8,
+      "v": 0.33218555281080747,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 3200,
+        "eligible_additions": 0,
+        "eligible_deletions": 2272,
+        "all_edits": 3200,
+        "eligible_edits": 2272
+      },
+      "compatible_groups": {
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 88,
+            "eligible_additions": 0,
+            "eligible_deletions": 44,
+            "all_edits": 88,
+            "eligible_edits": 44
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 5.0,
+            "delete": 6.0
+          }
+        }
+      }
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.2,
+      "policy": "unrestricted",
+      "budget_fraction": 0.1,
+      "u": 0.8,
+      "v": 0.33218555281080747,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 3200,
+        "eligible_additions": 0,
+        "eligible_deletions": 2272,
+        "all_edits": 3200,
+        "eligible_edits": 2272
+      },
+      "compatible_groups": {
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 88,
+            "eligible_additions": 0,
+            "eligible_deletions": 44,
+            "all_edits": 88,
+            "eligible_edits": 44
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 5.0,
+            "delete": 6.0
+          }
+        }
+      }
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.2,
+      "policy": "unrestricted",
+      "budget_fraction": 0.15,
+      "u": 0.8,
+      "v": 0.33218555281080747,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 3200,
+        "eligible_additions": 0,
+        "eligible_deletions": 2272,
+        "all_edits": 3200,
+        "eligible_edits": 2272
+      },
+      "compatible_groups": {
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 88,
+            "eligible_additions": 0,
+            "eligible_deletions": 44,
+            "all_edits": 88,
+            "eligible_edits": 44
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 5.0,
+            "delete": 6.0
+          }
+        }
+      }
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.2,
+      "policy": "unrestricted",
+      "budget_fraction": 0.3,
+      "u": 0.8,
+      "v": 0.33218555281080747,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 3200,
+        "eligible_additions": 0,
+        "eligible_deletions": 2272,
+        "all_edits": 3200,
+        "eligible_edits": 2272
+      },
+      "compatible_groups": {
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 88,
+            "eligible_additions": 0,
+            "eligible_deletions": 44,
+            "all_edits": 88,
+            "eligible_edits": 44
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 5.0,
+            "delete": 6.0
+          }
+        }
+      }
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.2,
+      "policy": "unrestricted",
+      "budget_fraction": 1.0,
+      "u": 0.8,
+      "v": 0.33218555281080747,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 3200,
+        "eligible_additions": 0,
+        "eligible_deletions": 2272,
+        "all_edits": 3200,
+        "eligible_edits": 2272
+      },
+      "compatible_groups": {
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 88,
+            "eligible_additions": 0,
+            "eligible_deletions": 44,
+            "all_edits": 88,
+            "eligible_edits": 44
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 5.0,
+            "delete": 6.0
+          }
+        }
+      }
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.2,
+      "policy": "preserve_all",
+      "budget_fraction": 0.01,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.2,
+      "policy": "preserve_all",
+      "budget_fraction": 0.05,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.2,
+      "policy": "preserve_all",
+      "budget_fraction": 0.1,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.2,
+      "policy": "preserve_all",
+      "budget_fraction": 0.15,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.2,
+      "policy": "preserve_all",
+      "budget_fraction": 0.3,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.2,
+      "policy": "preserve_all",
+      "budget_fraction": 1.0,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.4,
+      "policy": "unrestricted",
+      "budget_fraction": 0.01,
+      "u": 0.8,
+      "v": 0.49326392706532574,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 150,
+        "eligible_additions": 0,
+        "eligible_deletions": 106,
+        "all_edits": 150,
+        "eligible_edits": 106
+      },
+      "compatible_groups": {
+        "A4|2024-04-24_TypeA_sample4/v3": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 1,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 1,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 1.0,
+            "delete": 1.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 2,
+            "all_edits": 3,
+            "eligible_edits": 2
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 7,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 7,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "C_T2|2024-06-11_TypeC_T2_sample1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.4,
+      "policy": "unrestricted",
+      "budget_fraction": 0.05,
+      "u": 0.8,
+      "v": 0.49326392706532574,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 150,
+        "eligible_additions": 0,
+        "eligible_deletions": 106,
+        "all_edits": 150,
+        "eligible_edits": 106
+      },
+      "compatible_groups": {
+        "A4|2024-04-24_TypeA_sample4/v3": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 1,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 1,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 1.0,
+            "delete": 1.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 2,
+            "all_edits": 3,
+            "eligible_edits": 2
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 7,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 7,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "C_T2|2024-06-11_TypeC_T2_sample1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.4,
+      "policy": "unrestricted",
+      "budget_fraction": 0.1,
+      "u": 0.8,
+      "v": 0.49326392706532574,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 150,
+        "eligible_additions": 0,
+        "eligible_deletions": 106,
+        "all_edits": 150,
+        "eligible_edits": 106
+      },
+      "compatible_groups": {
+        "A4|2024-04-24_TypeA_sample4/v3": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 1,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 1,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 1.0,
+            "delete": 1.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 2,
+            "all_edits": 3,
+            "eligible_edits": 2
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 7,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 7,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "C_T2|2024-06-11_TypeC_T2_sample1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.4,
+      "policy": "unrestricted",
+      "budget_fraction": 0.15,
+      "u": 0.8,
+      "v": 0.49326392706532574,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 150,
+        "eligible_additions": 0,
+        "eligible_deletions": 106,
+        "all_edits": 150,
+        "eligible_edits": 106
+      },
+      "compatible_groups": {
+        "A4|2024-04-24_TypeA_sample4/v3": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 1,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 1,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 1.0,
+            "delete": 1.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 2,
+            "all_edits": 3,
+            "eligible_edits": 2
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 7,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 7,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "C_T2|2024-06-11_TypeC_T2_sample1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.4,
+      "policy": "unrestricted",
+      "budget_fraction": 0.3,
+      "u": 0.8,
+      "v": 0.49326392706532574,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 150,
+        "eligible_additions": 0,
+        "eligible_deletions": 106,
+        "all_edits": 150,
+        "eligible_edits": 106
+      },
+      "compatible_groups": {
+        "A4|2024-04-24_TypeA_sample4/v3": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 1,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 1,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 1.0,
+            "delete": 1.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 2,
+            "all_edits": 3,
+            "eligible_edits": 2
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 7,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 7,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "C_T2|2024-06-11_TypeC_T2_sample1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.4,
+      "policy": "unrestricted",
+      "budget_fraction": 1.0,
+      "u": 0.8,
+      "v": 0.49326392706532574,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 150,
+        "eligible_additions": 0,
+        "eligible_deletions": 106,
+        "all_edits": 150,
+        "eligible_edits": 106
+      },
+      "compatible_groups": {
+        "A4|2024-04-24_TypeA_sample4/v3": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 1,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 1,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 1.0,
+            "delete": 1.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 2,
+            "all_edits": 3,
+            "eligible_edits": 2
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 7,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 7,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "C_T2|2024-06-11_TypeC_T2_sample1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.4,
+      "policy": "preserve_all",
+      "budget_fraction": 0.01,
+      "u": 0.8,
+      "v": 0.49326392706532574,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 150,
+        "eligible_additions": 0,
+        "eligible_deletions": 106,
+        "all_edits": 150,
+        "eligible_edits": 106
+      },
+      "compatible_groups": {
+        "A4|2024-04-24_TypeA_sample4/v3": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 1,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 1,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 1.0,
+            "delete": 1.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 2,
+            "all_edits": 3,
+            "eligible_edits": 2
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 7,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 7,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "C_T2|2024-06-11_TypeC_T2_sample1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.4,
+      "policy": "preserve_all",
+      "budget_fraction": 0.05,
+      "u": 0.8,
+      "v": 0.49326392706532574,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 150,
+        "eligible_additions": 0,
+        "eligible_deletions": 106,
+        "all_edits": 150,
+        "eligible_edits": 106
+      },
+      "compatible_groups": {
+        "A4|2024-04-24_TypeA_sample4/v3": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 1,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 1,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 1.0,
+            "delete": 1.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 2,
+            "all_edits": 3,
+            "eligible_edits": 2
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 7,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 7,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "C_T2|2024-06-11_TypeC_T2_sample1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.4,
+      "policy": "preserve_all",
+      "budget_fraction": 0.1,
+      "u": 0.8,
+      "v": 0.49326392706532574,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 150,
+        "eligible_additions": 0,
+        "eligible_deletions": 106,
+        "all_edits": 150,
+        "eligible_edits": 106
+      },
+      "compatible_groups": {
+        "A4|2024-04-24_TypeA_sample4/v3": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 1,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 1,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 1.0,
+            "delete": 1.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 2,
+            "all_edits": 3,
+            "eligible_edits": 2
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 7,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 7,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "C_T2|2024-06-11_TypeC_T2_sample1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.4,
+      "policy": "preserve_all",
+      "budget_fraction": 0.15,
+      "u": 0.8,
+      "v": 0.49326392706532574,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 150,
+        "eligible_additions": 0,
+        "eligible_deletions": 106,
+        "all_edits": 150,
+        "eligible_edits": 106
+      },
+      "compatible_groups": {
+        "A4|2024-04-24_TypeA_sample4/v3": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 1,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 1,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 1.0,
+            "delete": 1.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 2,
+            "all_edits": 3,
+            "eligible_edits": 2
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 7,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 7,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "C_T2|2024-06-11_TypeC_T2_sample1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.4,
+      "policy": "preserve_all",
+      "budget_fraction": 0.3,
+      "u": 0.8,
+      "v": 0.49326392706532574,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 150,
+        "eligible_additions": 0,
+        "eligible_deletions": 106,
+        "all_edits": 150,
+        "eligible_edits": 106
+      },
+      "compatible_groups": {
+        "A4|2024-04-24_TypeA_sample4/v3": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 1,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 1,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 1.0,
+            "delete": 1.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 2,
+            "all_edits": 3,
+            "eligible_edits": 2
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 7,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 7,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "C_T2|2024-06-11_TypeC_T2_sample1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -2.0,
+      "epsilon": 0.4,
+      "policy": "preserve_all",
+      "budget_fraction": 1.0,
+      "u": 0.8,
+      "v": 0.49326392706532574,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 150,
+        "eligible_additions": 0,
+        "eligible_deletions": 106,
+        "all_edits": 150,
+        "eligible_edits": 106
+      },
+      "compatible_groups": {
+        "A4|2024-04-24_TypeA_sample4/v3": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 1,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 1,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 1.0,
+            "delete": 1.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 2,
+            "all_edits": 3,
+            "eligible_edits": 2
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "B_T2r2|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_2/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 7,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 7,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        },
+        "C_T2|2024-06-11_TypeC_T2_sample1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 3,
+            "eligible_additions": 0,
+            "eligible_deletions": 1,
+            "all_edits": 3,
+            "eligible_edits": 1
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.0,
+      "policy": "unrestricted",
+      "budget_fraction": 0.01,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.0,
+      "policy": "unrestricted",
+      "budget_fraction": 0.05,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.0,
+      "policy": "unrestricted",
+      "budget_fraction": 0.1,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.0,
+      "policy": "unrestricted",
+      "budget_fraction": 0.15,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.0,
+      "policy": "unrestricted",
+      "budget_fraction": 0.3,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.0,
+      "policy": "unrestricted",
+      "budget_fraction": 1.0,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.0,
+      "policy": "preserve_all",
+      "budget_fraction": 0.01,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.0,
+      "policy": "preserve_all",
+      "budget_fraction": 0.05,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.0,
+      "policy": "preserve_all",
+      "budget_fraction": 0.1,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.0,
+      "policy": "preserve_all",
+      "budget_fraction": 0.15,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.0,
+      "policy": "preserve_all",
+      "budget_fraction": 0.3,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.0,
+      "policy": "preserve_all",
+      "budget_fraction": 1.0,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.1,
+      "policy": "unrestricted",
+      "budget_fraction": 0.01,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.1,
+      "policy": "unrestricted",
+      "budget_fraction": 0.05,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.1,
+      "policy": "unrestricted",
+      "budget_fraction": 0.1,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.1,
+      "policy": "unrestricted",
+      "budget_fraction": 0.15,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.1,
+      "policy": "unrestricted",
+      "budget_fraction": 0.3,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.1,
+      "policy": "unrestricted",
+      "budget_fraction": 1.0,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.1,
+      "policy": "preserve_all",
+      "budget_fraction": 0.01,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.1,
+      "policy": "preserve_all",
+      "budget_fraction": 0.05,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.1,
+      "policy": "preserve_all",
+      "budget_fraction": 0.1,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.1,
+      "policy": "preserve_all",
+      "budget_fraction": 0.15,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.1,
+      "policy": "preserve_all",
+      "budget_fraction": 0.3,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.1,
+      "policy": "preserve_all",
+      "budget_fraction": 1.0,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.2,
+      "policy": "unrestricted",
+      "budget_fraction": 0.01,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.2,
+      "policy": "unrestricted",
+      "budget_fraction": 0.05,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.2,
+      "policy": "unrestricted",
+      "budget_fraction": 0.1,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.2,
+      "policy": "unrestricted",
+      "budget_fraction": 0.15,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.2,
+      "policy": "unrestricted",
+      "budget_fraction": 0.3,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.2,
+      "policy": "unrestricted",
+      "budget_fraction": 1.0,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.2,
+      "policy": "preserve_all",
+      "budget_fraction": 0.01,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.2,
+      "policy": "preserve_all",
+      "budget_fraction": 0.05,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.2,
+      "policy": "preserve_all",
+      "budget_fraction": 0.1,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.2,
+      "policy": "preserve_all",
+      "budget_fraction": 0.15,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.2,
+      "policy": "preserve_all",
+      "budget_fraction": 0.3,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.2,
+      "policy": "preserve_all",
+      "budget_fraction": 1.0,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {}
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.4,
+      "policy": "unrestricted",
+      "budget_fraction": 0.01,
+      "u": 0.8,
+      "v": 0.47502326042662324,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 528,
+        "eligible_additions": 0,
+        "eligible_deletions": 384,
+        "all_edits": 528,
+        "eligible_edits": 384
+      },
+      "compatible_groups": {
+        "A1|2024-03-25_TypeA_sample1/2024-03-27_r_v3": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 10,
+            "eligible_additions": 0,
+            "eligible_deletions": 10,
+            "all_edits": 10,
+            "eligible_edits": 10
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 2.0,
+            "delete": 2.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 10,
+            "eligible_additions": 0,
+            "eligible_deletions": 3,
+            "all_edits": 10,
+            "eligible_edits": 3
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.4,
+      "policy": "unrestricted",
+      "budget_fraction": 0.05,
+      "u": 0.8,
+      "v": 0.3971654593391785,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 2071,
+        "eligible_additions": 0,
+        "eligible_deletions": 1507,
+        "all_edits": 2071,
+        "eligible_edits": 1507
+      },
+      "compatible_groups": {
+        "A1|2024-03-25_TypeA_sample1/2024-03-27_r_v3": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 33,
+            "eligible_additions": 0,
+            "eligible_deletions": 32,
+            "all_edits": 33,
+            "eligible_edits": 32
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 2.0,
+            "delete": 2.0
+          }
+        },
+        "A2|2024-04-19_TypeA_sample2/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 40,
+            "eligible_additions": 0,
+            "eligible_deletions": 40,
+            "all_edits": 40,
+            "eligible_edits": 40
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 3.0,
+            "delete": 3.0
+          }
+        },
+        "A4|2024-04-24_TypeA_sample4/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 59,
+            "eligible_additions": 0,
+            "eligible_deletions": 44,
+            "all_edits": 59,
+            "eligible_edits": 44
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 1.0,
+            "delete": 3.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 41,
+            "eligible_additions": 0,
+            "eligible_deletions": 14,
+            "all_edits": 41,
+            "eligible_edits": 14
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.4,
+      "policy": "unrestricted",
+      "budget_fraction": 0.1,
+      "u": 0.8,
+      "v": 0.3971654593391785,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 2071,
+        "eligible_additions": 0,
+        "eligible_deletions": 1507,
+        "all_edits": 2071,
+        "eligible_edits": 1507
+      },
+      "compatible_groups": {
+        "A1|2024-03-25_TypeA_sample1/2024-03-27_r_v3": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 33,
+            "eligible_additions": 0,
+            "eligible_deletions": 32,
+            "all_edits": 33,
+            "eligible_edits": 32
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 2.0,
+            "delete": 2.0
+          }
+        },
+        "A2|2024-04-19_TypeA_sample2/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 40,
+            "eligible_additions": 0,
+            "eligible_deletions": 40,
+            "all_edits": 40,
+            "eligible_edits": 40
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 3.0,
+            "delete": 3.0
+          }
+        },
+        "A4|2024-04-24_TypeA_sample4/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 59,
+            "eligible_additions": 0,
+            "eligible_deletions": 44,
+            "all_edits": 59,
+            "eligible_edits": 44
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 1.0,
+            "delete": 3.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 41,
+            "eligible_additions": 0,
+            "eligible_deletions": 14,
+            "all_edits": 41,
+            "eligible_edits": 14
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.4,
+      "policy": "unrestricted",
+      "budget_fraction": 0.15,
+      "u": 0.8,
+      "v": 0.3971654593391785,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 2071,
+        "eligible_additions": 0,
+        "eligible_deletions": 1507,
+        "all_edits": 2071,
+        "eligible_edits": 1507
+      },
+      "compatible_groups": {
+        "A1|2024-03-25_TypeA_sample1/2024-03-27_r_v3": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 33,
+            "eligible_additions": 0,
+            "eligible_deletions": 32,
+            "all_edits": 33,
+            "eligible_edits": 32
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 2.0,
+            "delete": 2.0
+          }
+        },
+        "A2|2024-04-19_TypeA_sample2/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 40,
+            "eligible_additions": 0,
+            "eligible_deletions": 40,
+            "all_edits": 40,
+            "eligible_edits": 40
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 3.0,
+            "delete": 3.0
+          }
+        },
+        "A4|2024-04-24_TypeA_sample4/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 59,
+            "eligible_additions": 0,
+            "eligible_deletions": 44,
+            "all_edits": 59,
+            "eligible_edits": 44
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 1.0,
+            "delete": 3.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 41,
+            "eligible_additions": 0,
+            "eligible_deletions": 14,
+            "all_edits": 41,
+            "eligible_edits": 14
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.4,
+      "policy": "unrestricted",
+      "budget_fraction": 0.3,
+      "u": 0.8,
+      "v": 0.3971654593391785,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 2071,
+        "eligible_additions": 0,
+        "eligible_deletions": 1507,
+        "all_edits": 2071,
+        "eligible_edits": 1507
+      },
+      "compatible_groups": {
+        "A1|2024-03-25_TypeA_sample1/2024-03-27_r_v3": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 33,
+            "eligible_additions": 0,
+            "eligible_deletions": 32,
+            "all_edits": 33,
+            "eligible_edits": 32
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 2.0,
+            "delete": 2.0
+          }
+        },
+        "A2|2024-04-19_TypeA_sample2/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 40,
+            "eligible_additions": 0,
+            "eligible_deletions": 40,
+            "all_edits": 40,
+            "eligible_edits": 40
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 3.0,
+            "delete": 3.0
+          }
+        },
+        "A4|2024-04-24_TypeA_sample4/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 59,
+            "eligible_additions": 0,
+            "eligible_deletions": 44,
+            "all_edits": 59,
+            "eligible_edits": 44
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 1.0,
+            "delete": 3.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 41,
+            "eligible_additions": 0,
+            "eligible_deletions": 14,
+            "all_edits": 41,
+            "eligible_edits": 14
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.4,
+      "policy": "unrestricted",
+      "budget_fraction": 1.0,
+      "u": 0.8,
+      "v": 0.3971654593391785,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 2071,
+        "eligible_additions": 0,
+        "eligible_deletions": 1507,
+        "all_edits": 2071,
+        "eligible_edits": 1507
+      },
+      "compatible_groups": {
+        "A1|2024-03-25_TypeA_sample1/2024-03-27_r_v3": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 33,
+            "eligible_additions": 0,
+            "eligible_deletions": 32,
+            "all_edits": 33,
+            "eligible_edits": 32
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 2.0,
+            "delete": 2.0
+          }
+        },
+        "A2|2024-04-19_TypeA_sample2/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 40,
+            "eligible_additions": 0,
+            "eligible_deletions": 40,
+            "all_edits": 40,
+            "eligible_edits": 40
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 3.0,
+            "delete": 3.0
+          }
+        },
+        "A4|2024-04-24_TypeA_sample4/v2": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 59,
+            "eligible_additions": 0,
+            "eligible_deletions": 44,
+            "all_edits": 59,
+            "eligible_edits": 44
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 1.0,
+            "delete": 3.0
+          }
+        },
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 41,
+            "eligible_additions": 0,
+            "eligible_deletions": 14,
+            "all_edits": 41,
+            "eligible_edits": 14
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.4,
+      "policy": "preserve_all",
+      "budget_fraction": 0.01,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 0,
+            "eligible_additions": 0,
+            "eligible_deletions": 0,
+            "all_edits": 0,
+            "eligible_edits": 0
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0,
+            "add": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.4,
+      "policy": "preserve_all",
+      "budget_fraction": 0.05,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 0,
+            "eligible_additions": 0,
+            "eligible_deletions": 0,
+            "all_edits": 0,
+            "eligible_edits": 0
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0,
+            "add": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.4,
+      "policy": "preserve_all",
+      "budget_fraction": 0.1,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 0,
+            "eligible_additions": 0,
+            "eligible_deletions": 0,
+            "all_edits": 0,
+            "eligible_edits": 0
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0,
+            "add": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.4,
+      "policy": "preserve_all",
+      "budget_fraction": 0.15,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 0,
+            "eligible_additions": 0,
+            "eligible_deletions": 0,
+            "all_edits": 0,
+            "eligible_edits": 0
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0,
+            "add": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.4,
+      "policy": "preserve_all",
+      "budget_fraction": 0.3,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 0,
+            "eligible_additions": 0,
+            "eligible_deletions": 0,
+            "all_edits": 0,
+            "eligible_edits": 0
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0,
+            "add": 0.0
+          }
+        }
+      }
+    },
+    {
+      "p": -1.2,
+      "epsilon": 0.4,
+      "policy": "preserve_all",
+      "budget_fraction": 1.0,
+      "u": 0.8,
+      "v": 0.5,
+      "whole_dataset": {
+        "all_additions": 0,
+        "all_deletions": 0,
+        "eligible_additions": 0,
+        "eligible_deletions": 0,
+        "all_edits": 0,
+        "eligible_edits": 0
+      },
+      "compatible_groups": {
+        "B_T2r1|2024-10-23_variability_setup/2024-10-23_Schelleng_diagram/2024-10-23_TypeB_T2/rep_1/v1": {
+          "changes": {
+            "all_additions": 0,
+            "all_deletions": 0,
+            "eligible_additions": 0,
+            "eligible_deletions": 0,
+            "all_edits": 0,
+            "eligible_edits": 0
+          },
+          "applicable_arbitrary_bounds": {
+            "both": 0.0,
+            "delete": 0.0,
+            "add": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "source_sha256": {
+    "verification/lower_bounds.py": "1efb62e60d04ca8e76887c5dde6c686607d57c6736b88027b19cc0f283cbcc29",
+    "verification/oracle.py": "eb88a007532de345b53beced1b4acf8583dddb7c11c10f866324b4e2ea8d0fbb",
+    "prior_arbitrary_reference.json": "b1da83e4c69012b7c9bcab74969ebc21da4e3e16fa3abe7c52d163b9cee65339",
+    "input_joint.json.gz": "85ab696054670f80bc9690873291c39bb119b56670b4513da59bae994a2b0d70",
+    "results.json": "a19620a173e3cb2eae878c0c708235e88c0cac4b4de16db3a212475e7becfd42"
+  }
+}

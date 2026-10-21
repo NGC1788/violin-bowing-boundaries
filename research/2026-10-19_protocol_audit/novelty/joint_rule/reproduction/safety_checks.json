@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "rejected_paths": 5,
+  "fresh_empty_directory_accepted": true,
+  "scientific_value_mismatch_detected": true
+}

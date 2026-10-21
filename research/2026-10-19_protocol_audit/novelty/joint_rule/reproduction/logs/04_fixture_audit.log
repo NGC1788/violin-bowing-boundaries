@@ -1,0 +1,19 @@
+{
+  "columns": 1560,
+  "windows": 78000,
+  "eligible_columns": 1132,
+  "eligible_windows": 56600,
+  "slice_patterns": 62394,
+  "slice_window_comparisons": 3119700,
+  "joint_only_admissible_windows": 105,
+  "missing_locked_windows": 821,
+  "unique_window_ids": 78000,
+  "groups": 39,
+  "passed": true,
+  "source_sha256": {
+    "work/prior_input_features.json.gz": "e5650e0a51402382d2545702885c536c44ae0efd66a698dbb0cc8103e0d686d4",
+    "work/input_joint.json.gz": "85ab696054670f80bc9690873291c39bb119b56670b4513da59bae994a2b0d70",
+    "work/verification/fixture_audit.py": "1d6d1c593cdb29528dd68100af2a459f044c225075a2f65d394a31d630d3dbc6",
+    "work/verification/oracle.py": "eb88a007532de345b53beced1b4acf8583dddb7c11c10f866324b4e2ea8d0fbb"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "fixtures": 755,
+  "threshold_pairs": 90140,
+  "cells": 5841,
+  "scalar_comparisons": 4492535,
+  "minima_checks": 25944,
+  "certificate_checks": 464745,
+  "passed": true,
+  "seconds": 6.996174167143181,
+  "source_sha256": {
+    "verification/exhaustive.py": "b2e561847ab622aaf12d3b3db0c3495121238d3b119bb2aec03d70534da1578f",
+    "verification/oracle.py": "eb88a007532de345b53beced1b4acf8583dddb7c11c10f866324b4e2ea8d0fbb",
+    "solver.py": "61b3b29d520d1f0545901f98b3ce5c8ebf0fae07908967ae82d872b97dc3a1b2"
+  }
+}
