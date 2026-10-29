@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "scope": "Independent enumeration n<=7, all K; no fits",
+  "counts": {
+    "certificates": 21324,
+    "first_runs": 1538,
+    "minimum_certificates": 1538,
+    "distributions": 252,
+    "information_gains": 297,
+    "joint_lower_bounds": 120
+  },
+  "max_probability_error": 5.551115123125783e-16,
+  "max_information_gain_error": 1.2628786905111156e-15,
+  "torch_differentiable_layer": {
+    "status": "PASS",
+    "max_distribution_error": 2.220446049250313e-16,
+    "finite_gradient": true
+  },
+  "seconds": 2.0476181249832734,
+  "source_hashes": {
+    "harness/models.py": "f1840c0b37909b91400ade4024973070f338e0301c6472463b90597354b0861e",
+    "harness/run_distribution.py": "aa18601f3ed76de763908af00fa58f9bf99f5fba206af50fd3a46bf7d255db0a",
+    "harness/experiment.py": "b718278eb0ebf817b4f1e49448c8e30e23ad653dd84e6536edd2785c3d1ddf6d",
+    "harness/data.py": "69d45b0c182929aff114f6d3573cee6716d8253d8742988199c89bec7d63ebd9"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "scope": "K=2 shared query exact hindsight certificate; no learned policy or hidden-data acquisition",
+  "cases": 6160,
+  "enumeration": "Every two-rule binary bank n<=6, plus 100 random nine-rule banks for each n=1..7; brute-force subset/completion reference",
+  "strict_example": {
+    "labels": [
+      [
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ]
+    ],
+    "per_rule_minimum": [
+      3,
+      2
+    ],
+    "joint_minimum": 4,
+    "joint_witness": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "seconds": 0.3425279170041904
+}

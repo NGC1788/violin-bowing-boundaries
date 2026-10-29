@@ -1,0 +1,31 @@
+{
+  "record_id": "4554201",
+  "record_url": "https://zenodo.org/records/4554201",
+  "api_url": "https://zenodo.org/api/records/4554201",
+  "download_url": "https://zenodo.org/api/records/4554201/files/Sound_and_Motion_Data.rar/content",
+  "file": "Sound_and_Motion_Data.rar",
+  "size_bytes": 468988201,
+  "md5": "352be95f849ebeeb76a3cc5e761208e7",
+  "sha256": "dde1717818007970e499ec7c451991a4ab3386dfab865270511fe1e5269dcc55",
+  "license": "CC-BY-4.0",
+  "title": "Real-Time Sound and Motion Feedback for Violin Bow Technique Learning: A controlled, Randomized Trial.",
+  "creators": [
+    {
+      "name": "Angel David Blanco",
+      "affiliation": "Universitat Pompeu Fabra"
+    },
+    {
+      "name": "Simone Tassani",
+      "affiliation": "Universitat Pompeu Fabra"
+    },
+    {
+      "name": "Rafael Ramirez",
+      "affiliation": "Universitat Pompeu Fabra"
+    }
+  ],
+  "record_version": null,
+  "api_metadata_sha256": "c05969896466416e6a9b68c0111f7ae9be56c29391c4c47bb56821c8fdc31658",
+  "verified_utc": "2026-10-29T16:20:14.181842+00:00",
+  "raw_storage": "Outside repository; set --data-root to reproduce",
+  "scope": "Source/archive integrity only; no feasibility or model accuracy implied"
+}

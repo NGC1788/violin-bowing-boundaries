@@ -1,0 +1,9 @@
+# Versions exercised on this Mac. CPU-only research; no audio or GPU downloads.
+numpy==2.4.6
+scipy==1.17.1
+scikit-learn==1.9.1
+torch==2.14.1
+joblib==1.6.0
+threadpoolctl==3.7.0
+pyarrow==26.0.0
+pytest>=8,<10

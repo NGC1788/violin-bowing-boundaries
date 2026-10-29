@@ -1,0 +1,61 @@
+{
+  "version": "2026-10-30-pilot-v1",
+  "title": "Certified active audit of archived bowing signals",
+  "scope": "Exploratory algorithmic pilot on historically exposed cello measurements; not independent confirmation, physical ground truth, or saved physical experiments.",
+  "benchmark": {
+    "rule_bank": "nine",
+    "max_eval_columns": 16,
+    "max_train_columns": null,
+    "eval_selection_seed": 20261030
+  },
+  "budget": {
+    "max_trials": 36,
+    "max_campaign_seconds": 2700,
+    "max_trial_seconds": 600,
+    "end_date": "2026-11-06"
+  },
+  "allowed": {
+    "priors": [
+      "uniform",
+      "constant",
+      "logreg",
+      "hgb",
+      "mlp_bce",
+      "mlp_boundary"
+    ],
+    "policies": [
+      "ascending",
+      "random",
+      "even_first",
+      "uncertainty",
+      "entropy"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "primary_metric": "mean queries until exact first-K-run certificate across all nine rules",
+  "secondary_metrics": [
+    "anytime rank MAE at budgets5,10,20,35,50",
+    "certificate failure count",
+    "training CPU seconds",
+    "acquisition CPU seconds",
+    "omniscient certificate lower bound ratio",
+    "break-even per-oracle cost"
+  ],
+  "data_exposure": "All historical scientific results exposed. Train families A/B; development C/D. Development scores may guide bounded selection; no final unseen test exists.",
+  "acceptance": {
+    "certificate_errors": 0,
+    "minimum_mean_query_reduction_vs_best_nonlearned": 0.1,
+    "scope": "screening only; cannot establish generalization from16columns",
+    "next_gate": "locked full-development480columns + seeds0/1/2; externaldata required for confirmatory claim"
+  },
+  "stop_policy": [
+    "any verifier failure pausescampaign",
+    "no automatic endpoint/metric/split changes",
+    "36totalattempts or2700seconds orend_date",
+    "negative results preserved; success not guaranteed"
+  ]
+}

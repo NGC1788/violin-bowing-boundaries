@@ -1,0 +1,500 @@
+{
+  "scope": "Schema and signal-quality audit only; no model fitting, prediction scores or human quality judgement",
+  "mat_sha256": "fef94d704500624c8391e1caaf3c20ec764f606ae17f48d81a7e15932db31822",
+  "mat_bytes": 469462149,
+  "mat_reader": "mat-io",
+  "parser_versions": {
+    "mat-io": "1.0.2",
+    "pandas": "3.1.0",
+    "h5py": "3.16.0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "load_seconds": 2.9409692919871304,
+  "participant_records_before_exclusions": {
+    "CG": 28,
+    "FG": 29,
+    "EG": 15
+  },
+  "participant_records_total": 72,
+  "counts_by_cohort_stage_mode": {
+    "CG/Results_pre/Violin_Trials_GS": 279,
+    "CG/Results_pre/Violin_Trials_GS_online": 0,
+    "CG/Results_pre/Violin_Trials_GS_online_MC_Task": 0,
+    "CG/Results_pre/Violin_Trials_GS_online_GS_Task": 0,
+    "CG/Results_feed/Violin_Trials_GS": 267,
+    "CG/Results_feed/Violin_Trials_GS_online": 73,
+    "CG/Results_feed/Violin_Trials_GS_online_MC_Task": 128,
+    "CG/Results_feed/Violin_Trials_GS_online_GS_Task": 156,
+    "CG/Results_post/Violin_Trials_GS": 280,
+    "CG/Results_post/Violin_Trials_GS_online": 0,
+    "CG/Results_post/Violin_Trials_GS_online_MC_Task": 0,
+    "CG/Results_post/Violin_Trials_GS_online_GS_Task": 0,
+    "FG/Results_pre/Violin_Trials_GS": 290,
+    "FG/Results_pre/Violin_Trials_GS_online": 0,
+    "FG/Results_pre/Violin_Trials_GS_online_MC_Task": 0,
+    "FG/Results_pre/Violin_Trials_GS_online_GS_Task": 0,
+    "FG/Results_feed/Violin_Trials_GS": 278,
+    "FG/Results_feed/Violin_Trials_GS_online": 143,
+    "FG/Results_feed/Violin_Trials_GS_online_MC_Task": 142,
+    "FG/Results_feed/Violin_Trials_GS_online_GS_Task": 171,
+    "FG/Results_post/Violin_Trials_GS": 290,
+    "FG/Results_post/Violin_Trials_GS_online": 0,
+    "FG/Results_post/Violin_Trials_GS_online_MC_Task": 0,
+    "FG/Results_post/Violin_Trials_GS_online_GS_Task": 0,
+    "EG/Results_pre/Violin_Trials_GS": 150,
+    "EG/Results_pre/Violin_Trials_GS_online": 0,
+    "EG/Results_pre/Violin_Trials_GS_online_MC_Task": 0,
+    "EG/Results_pre/Violin_Trials_GS_online_GS_Task": 0,
+    "EG/Results_feed/Violin_Trials_GS": 144,
+    "EG/Results_feed/Violin_Trials_GS_online": 71,
+    "EG/Results_feed/Violin_Trials_GS_online_MC_Task": 72,
+    "EG/Results_feed/Violin_Trials_GS_online_GS_Task": 87,
+    "EG/Results_post/Violin_Trials_GS": 140,
+    "EG/Results_post/Violin_Trials_GS_online": 0,
+    "EG/Results_post/Violin_Trials_GS_online_MC_Task": 0,
+    "EG/Results_post/Violin_Trials_GS_online_GS_Task": 0
+  },
+  "sound_trial_cells_total": 3161,
+  "empty_sound_trial_cells": 0,
+  "sound_channel_length_mismatches": 0,
+  "schemas": {
+    "sound_fields": [
+      "pitch_stab",
+      "dyn_stab",
+      "aperiodicity",
+      "power_raw_data",
+      "f0_raw_data",
+      "ap_raw_data"
+    ],
+    "motion_fields": [
+      "bowSkew",
+      "bowBridge",
+      "tilt",
+      "Speed",
+      "inclination",
+      "ViolinDist",
+      "bowSkew_raw_data",
+      "bowBridge_raw_data",
+      "tilt_raw_data",
+      "Speed_raw_data",
+      "inclination_raw_data",
+      "ViolinDist_raw_data",
+      "positionX",
+      "positionY",
+      "positionZ",
+      "rotationX",
+      "rotationY"
+    ]
+  },
+  "missing_motion_fields_by_participant_condition": {
+    "bowSkew_raw_data": 0,
+    "tilt_raw_data": 0,
+    "bowBridge_raw_data": 0,
+    "Speed_raw_data": 0,
+    "inclination_raw_data": 0,
+    "ViolinDist_raw_data": 0,
+    "bowPosition_raw_data": 648
+  },
+  "motion_schema_variants": {
+    "bowSkew|bowPosition|tilt|bowBridge|Speed|inclination|ViolinDist|bowSkew_raw_data|tilt_raw_data|bowBridge_raw_data|Speed_raw_data|inclination_raw_data|ViolinDist_raw_data|bowPosition_raw_data|positionX|positionY|positionZ|rotationX|rotationY": 216,
+    "bowSkew|tilt|bowBridge|Speed|inclination|ViolinDist|bowSkew_raw_data|tilt_raw_data|bowBridge_raw_data|Speed_raw_data|inclination_raw_data|ViolinDist_raw_data|positionX|positionY|positionZ|rotationX|rotationY": 216,
+    "bowSkew|bowBridge|tilt|Speed|inclination|ViolinDist|bowSkew_raw_data|bowBridge_raw_data|tilt_raw_data|Speed_raw_data|inclination_raw_data|ViolinDist_raw_data|positionX|positionY|positionZ|rotationX|rotationY": 432
+  },
+  "trial_count_alignment_checks": {
+    "sound_raw_vs_pitch_stab_cell_count_mismatch": 70,
+    "sound_raw_vs_dyn_stab_cell_count_mismatch": 70,
+    "sound_raw_vs_motion_cell_count_mismatch": 70
+  },
+  "aggregate_cell_counts_by_cohort_stage_mode": {
+    "CG/Results_pre/Violin_Trials_GS/pitch_stab": 279,
+    "CG/Results_pre/Violin_Trials_GS/dyn_stab": 279,
+    "CG/Results_pre/Violin_Trials_GS_online/pitch_stab": 0,
+    "CG/Results_pre/Violin_Trials_GS_online/dyn_stab": 0,
+    "CG/Results_pre/Violin_Trials_GS_online_MC_Task/pitch_stab": 0,
+    "CG/Results_pre/Violin_Trials_GS_online_MC_Task/dyn_stab": 0,
+    "CG/Results_pre/Violin_Trials_GS_online_GS_Task/pitch_stab": 0,
+    "CG/Results_pre/Violin_Trials_GS_online_GS_Task/dyn_stab": 0,
+    "CG/Results_feed/Violin_Trials_GS/pitch_stab": 267,
+    "CG/Results_feed/Violin_Trials_GS/dyn_stab": 267,
+    "CG/Results_feed/Violin_Trials_GS_online/pitch_stab": 73,
+    "CG/Results_feed/Violin_Trials_GS_online/dyn_stab": 73,
+    "CG/Results_feed/Violin_Trials_GS_online_MC_Task/pitch_stab": 128,
+    "CG/Results_feed/Violin_Trials_GS_online_MC_Task/dyn_stab": 128,
+    "CG/Results_feed/Violin_Trials_GS_online_GS_Task/pitch_stab": 128,
+    "CG/Results_feed/Violin_Trials_GS_online_GS_Task/dyn_stab": 128,
+    "CG/Results_post/Violin_Trials_GS/pitch_stab": 280,
+    "CG/Results_post/Violin_Trials_GS/dyn_stab": 280,
+    "CG/Results_post/Violin_Trials_GS_online/pitch_stab": 0,
+    "CG/Results_post/Violin_Trials_GS_online/dyn_stab": 0,
+    "CG/Results_post/Violin_Trials_GS_online_MC_Task/pitch_stab": 0,
+    "CG/Results_post/Violin_Trials_GS_online_MC_Task/dyn_stab": 0,
+    "CG/Results_post/Violin_Trials_GS_online_GS_Task/pitch_stab": 0,
+    "CG/Results_post/Violin_Trials_GS_online_GS_Task/dyn_stab": 0,
+    "FG/Results_pre/Violin_Trials_GS/pitch_stab": 290,
+    "FG/Results_pre/Violin_Trials_GS/dyn_stab": 290,
+    "FG/Results_pre/Violin_Trials_GS_online/pitch_stab": 0,
+    "FG/Results_pre/Violin_Trials_GS_online/dyn_stab": 0,
+    "FG/Results_pre/Violin_Trials_GS_online_MC_Task/pitch_stab": 0,
+    "FG/Results_pre/Violin_Trials_GS_online_MC_Task/dyn_stab": 0,
+    "FG/Results_pre/Violin_Trials_GS_online_GS_Task/pitch_stab": 0,
+    "FG/Results_pre/Violin_Trials_GS_online_GS_Task/dyn_stab": 0,
+    "FG/Results_feed/Violin_Trials_GS/pitch_stab": 278,
+    "FG/Results_feed/Violin_Trials_GS/dyn_stab": 278,
+    "FG/Results_feed/Violin_Trials_GS_online/pitch_stab": 143,
+    "FG/Results_feed/Violin_Trials_GS_online/dyn_stab": 143,
+    "FG/Results_feed/Violin_Trials_GS_online_MC_Task/pitch_stab": 142,
+    "FG/Results_feed/Violin_Trials_GS_online_MC_Task/dyn_stab": 142,
+    "FG/Results_feed/Violin_Trials_GS_online_GS_Task/pitch_stab": 143,
+    "FG/Results_feed/Violin_Trials_GS_online_GS_Task/dyn_stab": 143,
+    "FG/Results_post/Violin_Trials_GS/pitch_stab": 290,
+    "FG/Results_post/Violin_Trials_GS/dyn_stab": 290,
+    "FG/Results_post/Violin_Trials_GS_online/pitch_stab": 0,
+    "FG/Results_post/Violin_Trials_GS_online/dyn_stab": 0,
+    "FG/Results_post/Violin_Trials_GS_online_MC_Task/pitch_stab": 0,
+    "FG/Results_post/Violin_Trials_GS_online_MC_Task/dyn_stab": 0,
+    "FG/Results_post/Violin_Trials_GS_online_GS_Task/pitch_stab": 0,
+    "FG/Results_post/Violin_Trials_GS_online_GS_Task/dyn_stab": 0,
+    "EG/Results_pre/Violin_Trials_GS/pitch_stab": 150,
+    "EG/Results_pre/Violin_Trials_GS/dyn_stab": 150,
+    "EG/Results_pre/Violin_Trials_GS_online/pitch_stab": 0,
+    "EG/Results_pre/Violin_Trials_GS_online/dyn_stab": 0,
+    "EG/Results_pre/Violin_Trials_GS_online_MC_Task/pitch_stab": 0,
+    "EG/Results_pre/Violin_Trials_GS_online_MC_Task/dyn_stab": 0,
+    "EG/Results_pre/Violin_Trials_GS_online_GS_Task/pitch_stab": 0,
+    "EG/Results_pre/Violin_Trials_GS_online_GS_Task/dyn_stab": 0,
+    "EG/Results_feed/Violin_Trials_GS/pitch_stab": 144,
+    "EG/Results_feed/Violin_Trials_GS/dyn_stab": 144,
+    "EG/Results_feed/Violin_Trials_GS_online/pitch_stab": 71,
+    "EG/Results_feed/Violin_Trials_GS_online/dyn_stab": 71,
+    "EG/Results_feed/Violin_Trials_GS_online_MC_Task/pitch_stab": 72,
+    "EG/Results_feed/Violin_Trials_GS_online_MC_Task/dyn_stab": 72,
+    "EG/Results_feed/Violin_Trials_GS_online_GS_Task/pitch_stab": 72,
+    "EG/Results_feed/Violin_Trials_GS_online_GS_Task/dyn_stab": 72,
+    "EG/Results_post/Violin_Trials_GS/pitch_stab": 140,
+    "EG/Results_post/Violin_Trials_GS/dyn_stab": 140,
+    "EG/Results_post/Violin_Trials_GS_online/pitch_stab": 0,
+    "EG/Results_post/Violin_Trials_GS_online/dyn_stab": 0,
+    "EG/Results_post/Violin_Trials_GS_online_MC_Task/pitch_stab": 0,
+    "EG/Results_post/Violin_Trials_GS_online_MC_Task/dyn_stab": 0,
+    "EG/Results_post/Violin_Trials_GS_online_GS_Task/pitch_stab": 0,
+    "EG/Results_post/Violin_Trials_GS_online_GS_Task/dyn_stab": 0
+  },
+  "exact_content_duplicates": {
+    "unique_three_channel_sequences": 2117,
+    "duplicate_extra_cells": 1044,
+    "hashes_repeated_across_participants": 0,
+    "within_mode_duplicate_positions": {
+      "Results_feed/Violin_Trials_GS_online_GS_Task/4=5": 59,
+      "Results_feed/Violin_Trials_GS_online_GS_Task/3=4": 9,
+      "Results_feed/Violin_Trials_GS_online_GS_Task/0=1": 1,
+      "Results_feed/Violin_Trials_GS_online_GS_Task/2=3": 2,
+      "Results_post/Violin_Trials_GS/0=1": 1
+    },
+    "scope": "Byte-identical f0,power,aperiodicity triples; do not count duplicated cells as independent trials"
+  },
+  "explicit_timestamp_fields_found": false,
+  "signals": {
+    "f0_raw_data": {
+      "trials": 3161,
+      "samples": 27589187,
+      "nonfinite": 0,
+      "empty": 0,
+      "negative": 26256568,
+      "adjacent_equal": 1811032,
+      "adjacent_pairs": 27586026,
+      "length_quantiles": {
+        "min": 2116.0,
+        "p05": 3755.0,
+        "median": 8098.0,
+        "p95": 16468.0,
+        "max": 26728.0
+      },
+      "sampled_value_quantiles": {
+        "min": -3.8748,
+        "p05": -0.5545835,
+        "median": -0.33044,
+        "p95": 0.04264149999999997,
+        "max": 3.4461
+      },
+      "sampled_value_quantile_scope": "At most32 uniformly indexed samples per trial; descriptive only",
+      "adjacent_equal_fraction": 0.06565034050210784
+    },
+    "power_raw_data": {
+      "trials": 3161,
+      "samples": 27589187,
+      "nonfinite": 0,
+      "empty": 0,
+      "negative": 27589187,
+      "adjacent_equal": 168547,
+      "adjacent_pairs": 27586026,
+      "length_quantiles": {
+        "min": 2116.0,
+        "p05": 3755.0,
+        "median": 8098.0,
+        "p95": 16468.0,
+        "max": 26728.0
+      },
+      "sampled_value_quantiles": {
+        "min": -81.221,
+        "p05": -55.307,
+        "median": -36.823,
+        "p95": -28.211,
+        "max": -15.303
+      },
+      "sampled_value_quantile_scope": "At most32 uniformly indexed samples per trial; descriptive only",
+      "adjacent_equal_fraction": 0.006109868815464757
+    },
+    "ap_raw_data": {
+      "trials": 3161,
+      "samples": 27589187,
+      "nonfinite": 0,
+      "empty": 0,
+      "negative": 0,
+      "adjacent_equal": 2671,
+      "adjacent_pairs": 27586026,
+      "length_quantiles": {
+        "min": 2116.0,
+        "p05": 3755.0,
+        "median": 8098.0,
+        "p95": 16468.0,
+        "max": 26728.0
+      },
+      "sampled_value_quantiles": {
+        "min": 5.9873e-07,
+        "p05": 0.0002603275,
+        "median": 0.0018749,
+        "p95": 0.14394899999999994,
+        "max": 0.9348
+      },
+      "sampled_value_quantile_scope": "At most32 uniformly indexed samples per trial; descriptive only",
+      "adjacent_equal_fraction": 9.682438492590415e-05
+    },
+    "bowSkew_raw_data": {
+      "trials": 3090,
+      "samples": 1817737,
+      "nonfinite": 0,
+      "empty": 0,
+      "negative": 1051359,
+      "adjacent_equal": 1197816,
+      "adjacent_pairs": 1814647,
+      "length_quantiles": {
+        "min": 91.0,
+        "p05": 251.0,
+        "median": 531.0,
+        "p95": 1141.0,
+        "max": 2611.0
+      },
+      "sampled_value_quantiles": {
+        "min": -69.892136,
+        "p05": -12.3550916,
+        "median": -1.4064255,
+        "p95": 10.17222874999992,
+        "max": 49.191437
+      },
+      "sampled_value_quantile_scope": "At most32 uniformly indexed samples per trial; descriptive only",
+      "adjacent_equal_fraction": 0.6600820986120165
+    },
+    "tilt_raw_data": {
+      "trials": 3090,
+      "samples": 1817737,
+      "nonfinite": 0,
+      "empty": 0,
+      "negative": 509794,
+      "adjacent_equal": 1197810,
+      "adjacent_pairs": 1814647,
+      "length_quantiles": {
+        "min": 91.0,
+        "p05": 251.0,
+        "median": 531.0,
+        "p95": 1141.0,
+        "max": 2611.0
+      },
+      "sampled_value_quantiles": {
+        "min": -83.238342,
+        "p05": -11.968438149999999,
+        "median": 6.359009,
+        "p95": 29.246337299999997,
+        "max": 81.146919
+      },
+      "sampled_value_quantile_scope": "At most32 uniformly indexed samples per trial; descriptive only",
+      "adjacent_equal_fraction": 0.6600787921838241
+    },
+    "bowBridge_raw_data": {
+      "trials": 3090,
+      "samples": 1817737,
+      "nonfinite": 0,
+      "empty": 0,
+      "negative": 16769,
+      "adjacent_equal": 1197813,
+      "adjacent_pairs": 1814647,
+      "length_quantiles": {
+        "min": 91.0,
+        "p05": 251.0,
+        "median": 531.0,
+        "p95": 1141.0,
+        "max": 2611.0
+      },
+      "sampled_value_quantiles": {
+        "min": -17269.492188,
+        "p05": 9.274135950000002,
+        "median": 29.502340500000003,
+        "p95": 51.44038594999999,
+        "max": 12685.960938
+      },
+      "sampled_value_quantile_scope": "At most32 uniformly indexed samples per trial; descriptive only",
+      "adjacent_equal_fraction": 0.6600804453979203
+    },
+    "Speed_raw_data": {
+      "trials": 3090,
+      "samples": 1817737,
+      "nonfinite": 0,
+      "empty": 0,
+      "negative": 867707,
+      "adjacent_equal": 1197811,
+      "adjacent_pairs": 1814647,
+      "length_quantiles": {
+        "min": 91.0,
+        "p05": 251.0,
+        "median": 531.0,
+        "p95": 1141.0,
+        "max": 2611.0
+      },
+      "sampled_value_quantiles": {
+        "min": -1051484.375,
+        "p05": -338.67937035,
+        "median": 15.3270515,
+        "p95": 328.63882949999964,
+        "max": 38659.152344
+      },
+      "sampled_value_quantile_scope": "At most32 uniformly indexed samples per trial; descriptive only",
+      "adjacent_equal_fraction": 0.6600793432551896
+    },
+    "inclination_raw_data": {
+      "trials": 3090,
+      "samples": 1817737,
+      "nonfinite": 0,
+      "empty": 0,
+      "negative": 886901,
+      "adjacent_equal": 1197810,
+      "adjacent_pairs": 1814647,
+      "length_quantiles": {
+        "min": 91.0,
+        "p05": 251.0,
+        "median": 531.0,
+        "p95": 1141.0,
+        "max": 2611.0
+      },
+      "sampled_value_quantiles": {
+        "min": -89.104393,
+        "p05": -7.197280099999999,
+        "median": 0.324172,
+        "p95": 6.718620849999998,
+        "max": 89.812347
+      },
+      "sampled_value_quantile_scope": "At most32 uniformly indexed samples per trial; descriptive only",
+      "adjacent_equal_fraction": 0.6600787921838241
+    },
+    "ViolinDist_raw_data": {
+      "trials": 3090,
+      "samples": 1817737,
+      "nonfinite": 0,
+      "empty": 0,
+      "negative": 226088,
+      "adjacent_equal": 1197810,
+      "adjacent_pairs": 1814647,
+      "length_quantiles": {
+        "min": 91.0,
+        "p05": 251.0,
+        "median": 531.0,
+        "p95": 1141.0,
+        "max": 2611.0
+      },
+      "sampled_value_quantiles": {
+        "min": -326.254089,
+        "p05": -13.95615479999999,
+        "median": 21.0620125,
+        "p95": 80.55548749999996,
+        "max": 249.509735
+      },
+      "sampled_value_quantile_scope": "At most32 uniformly indexed samples per trial; descriptive only",
+      "adjacent_equal_fraction": 0.6600787921838241
+    },
+    "bowPosition_raw_data": {
+      "trials": 0,
+      "samples": 0,
+      "nonfinite": 0,
+      "empty": 0,
+      "negative": 0,
+      "adjacent_equal": 0,
+      "adjacent_pairs": 0,
+      "length_quantiles": null,
+      "sampled_value_quantiles": null,
+      "sampled_value_quantile_scope": "At most32 uniformly indexed samples per trial; descriptive only",
+      "adjacent_equal_fraction": null
+    }
+  },
+  "paired_modal_lengths": {
+    "pairs": 3090,
+    "sound_to_motion_length_ratio": {
+      "min": 2.475682878081279,
+      "p05": 8.566455904133566,
+      "median": 15.77517736892737,
+      "p95": 20.026923553602614,
+      "max": 92.22018348623853
+    },
+    "inferred_duration_difference_if_audio_hop32_at44100Hz_and_motion512_at44100Hz": {
+      "min": -21.00027210884354,
+      "p05": -4.293950113378685,
+      "median": -0.07836734693877556,
+      "p95": 1.4172879818594049,
+      "max": 9.047074829931972
+    },
+    "warning": "Rates inferred from cited toolbox/default and paper, not saved timestamps. Length agreement does not prove common origin or synchronization."
+  },
+  "aggregate_consistency": {
+    "f0_raw_data": {
+      "trials": 3090,
+      "absolute_error_quantiles": {
+        "min": 8.874789791946114e-11,
+        "p05": 1.3831030898706076e-08,
+        "median": 2.321027819288113e-06,
+        "p95": 0.44603421352409933,
+        "max": 1.47651170565885
+      },
+      "within_1e_6": 1243,
+      "stored_to_recomputed_ratio": {
+        "min": 0.002142892431146343,
+        "p05": 0.2588832067558416,
+        "median": 0.9999997515178953,
+        "p95": 11.453388575114968,
+        "max": 370.84911257314144
+      }
+    },
+    "power_raw_data": {
+      "trials": 3090,
+      "absolute_error_quantiles": {
+        "min": 1.1287568968398887e-07,
+        "p05": 3.2531477263564314e-06,
+        "median": 3.766360566714866e-05,
+        "p95": 2.875326312793385,
+        "max": 12.805658305877136
+      },
+      "within_1e_6": 43,
+      "stored_to_recomputed_ratio": {
+        "min": 0.17657810428819656,
+        "p05": 0.6548870377655072,
+        "median": 1.000000168308365,
+        "p95": 1.4718389980470572,
+        "max": 4.223199385326784
+      }
+    }
+  },
+  "unresolved_before_temporal_protocol": [
+    "Exact acoustic hop/window alignment and recorded parameters",
+    "Cross-modal time origin and dropouts; do not resample to equal lengths using future duration",
+    "f0 units differ from README Hz label; cited YIN uses octaves relative440Hz",
+    "Kinect repeated samples/large gaps; not independent86Hz motion measurements",
+    "No acoustic waveform in this archive; separate2.2GB record not downloaded"
+  ]
+}

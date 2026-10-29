@@ -1,0 +1,114 @@
+{
+  "version": "2026-10-30-full-development-v2",
+  "title": "Feasibility-gated certified active audit: full historical development cohort",
+  "scope": "Exploratory algorithmic pilot on historically exposed cello measurements; not independent confirmation, physical ground truth, or saved physical experiments.",
+  "benchmark": {
+    "rule_bank": "nine",
+    "max_eval_columns": 480,
+    "max_train_columns": null,
+    "eval_selection_seed": 20261030
+  },
+  "budget": {
+    "max_trials": 24,
+    "max_campaign_seconds": 2700,
+    "max_trial_seconds": 600,
+    "end_date": "2026-11-06",
+    "max_consecutive_failures": 1
+  },
+  "allowed": {
+    "priors": [
+      "uniform",
+      "constant",
+      "logreg",
+      "hgb",
+      "mlp_bce",
+      "mlp_boundary"
+    ],
+    "policies": [
+      "ascending",
+      "random",
+      "even_first",
+      "uncertainty",
+      "entropy"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "primary_metric": "mean queries until exact simultaneous first-K=2-run certification; unchanged10percent threshold, full480 retrospective development only",
+  "secondary_metrics": [
+    "anytime rank MAE at budgets5,10,20,35,50",
+    "certificate failure count",
+    "training CPU seconds",
+    "acquisition CPU seconds",
+    "omniscient certificate lower bound ratio",
+    "break-even per-oracle cost"
+  ],
+  "data_exposure": "All historical scientific results exposed. Train families A/B; development C/D. Development scores may guide bounded selection; no final unseen test exists.",
+  "acceptance": {
+    "certificate_errors": 0,
+    "minimum_mean_query_reduction_vs_best_nonlearned": 0.1,
+    "scope": "Retrospective development only. This is a separately registered diagnostic following an unattainable16column pilot, not independent confirmation or pilot promotion.",
+    "next_gate": "If exact joint hindsight bound leaves <10% relative headroom, stop before learned search. Otherwise run registeredpriors/policies and all3seeds; do notselectbestseed. External comparison and unseen data remain required."
+  },
+  "stop_policy": [
+    "any verifier failure pausescampaign",
+    "no automatic endpoint/metric/split changes",
+    "36totalattempts or2700seconds orend_date",
+    "negative results preserved; success not guaranteed",
+    "headroom below10percent stopslearnedsearch; cannotlowerthresholdorresamplecolumns"
+  ],
+  "planner": {
+    "candidate_dir": "candidates/development480",
+    "max_rounds": 18
+  },
+  "headroom": {
+    "required": true,
+    "minimum_relative_improvement": 0.1,
+    "required_baselines": [
+      {
+        "prior": "uniform",
+        "policy": "ascending",
+        "seed": 0
+      },
+      {
+        "prior": "uniform",
+        "policy": "random",
+        "seed": 0
+      },
+      {
+        "prior": "uniform",
+        "policy": "even_first",
+        "seed": 0
+      },
+      {
+        "prior": "uniform",
+        "policy": "entropy",
+        "seed": 0
+      },
+      {
+        "prior": "constant",
+        "policy": "entropy",
+        "seed": 0
+      }
+    ]
+  },
+  "preflight_candidate_ids": [
+    "ascending",
+    "random",
+    "even_first",
+    "entropy_uniform",
+    "entropy_constant"
+  ],
+  "analysis_plan": {
+    "selection": "all480 development columns in fixedloader order; not selecting favorable conditions",
+    "comparators": "all5 inputfree baseline configurations; learned5priors/policies withseeds0,1,2",
+    "minimum_gain": 0.1,
+    "groups": "C1,C_T2,D1,D2 separately; reportanyworsening",
+    "uncertainty": "noiidwindowor3seedpopulationconfidenceclaims; fourhistoricalsessionblocks",
+    "cost": "oraclecountisproxy; trainandacquisitionwall/cpu andbreak-evenoraclecost reported",
+    "provenance": "pilotv1negativepreserved; allhistoricaldataexposed; codefreeze before full480 headroom evaluation"
+  }
+}

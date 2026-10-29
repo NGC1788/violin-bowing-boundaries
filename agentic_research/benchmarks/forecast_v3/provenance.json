@@ -1,0 +1,241 @@
+{
+  "artifact": {
+    "bytes": 9031011,
+    "filename": "dataset.npz",
+    "receipt_filename": "dataset.json",
+    "sha256": "598a6964ce7ef91c5bb6b3cde1aa37daf4b615219438f896a4dc188f0d427975"
+  },
+  "attribution": "Alessio Lampis, A collection of bowed responses of cello strings, parts 1, 2, 3, 4, and 6; individual DOIs below.",
+  "content_scan": {
+    "coverage": "All NPZ string fields and complete receipt; no redaction applied",
+    "credential_patterns": 0,
+    "email_addresses": 0,
+    "local_home_paths": 0
+  },
+  "data_license": "CC-BY-4.0",
+  "derived_by": [
+    "Kim Taegeon",
+    "Jeong Jiyun",
+    "Jeong Jihoon"
+  ],
+  "license_scope": "Derived benchmark data only; no new license is asserted for repository code",
+  "limitations": [
+    "Robotic bowed cello G2-string mechanical data, not violin audio",
+    "Targets are deterministic observer outputs, not independent physical truth",
+    "Full-trace landmark is retrospective, not a causal online detector",
+    "Development families were historically exposed; no untouched final test"
+  ],
+  "modifications": [
+    "Existing mechanical-signal window extraction",
+    "Selection of 78,000 original strokes and declared prefix/future windows",
+    "Fixed feature transforms and prefix-only missing indicators",
+    "Nine declared observer rules and ten-pattern target IDs",
+    "Whole-family training/development split and reproducibility metadata"
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "api_response_sha256": "4e7207e821f711a51714174e1bee9562dcaf37e825b19bbe75f0b69d89a639ee",
+      "api_url": "https://zenodo.org/api/records/17749111",
+      "creators": [
+        {
+          "affiliation": "University of Music and Performing Arts Vienna",
+          "name": "Lampis, Alessio",
+          "orcid": "0009-0003-0813-9031"
+        }
+      ],
+      "doi": "10.5281/zenodo.17749111",
+      "doi_url": "https://doi.org/10.5281/zenodo.17749111",
+      "license_id": "cc-by-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "publication_date": "2025-11-28",
+      "record_id": 17749111,
+      "record_url": "https://zenodo.org/records/17749111",
+      "selected_archives": [
+        {
+          "archive_bytes": 15054063064,
+          "archive_checksum": "md5:1197e7e4543368f0b18fdbec72c133ba",
+          "archive_download_url": "https://zenodo.org/api/records/17749111/files/2024-04-12_TypeC_sample1.7z/content",
+          "archive_filename": "2024-04-12_TypeC_sample1.7z",
+          "derived_csv_filename": "2024-04-12_TypeC_sample1.csv.gz",
+          "derived_csv_sha256": "0a95128ff2132f7d16778bfdcd5ad31b0ed069b946d2b6ba0c314183170c33b9"
+        },
+        {
+          "archive_bytes": 14083546513,
+          "archive_checksum": "md5:2709034cc10344f37f3488376ae3ebcd",
+          "archive_download_url": "https://zenodo.org/api/records/17749111/files/2024-03-25_TypeA_sample1.7z/content",
+          "archive_filename": "2024-03-25_TypeA_sample1.7z",
+          "derived_csv_filename": "2024-03-25_TypeA_sample1.csv.gz",
+          "derived_csv_sha256": "e7961c8d86b514090967a288f1bd173190ee48021e01cab89303486ef55fe483"
+        },
+        {
+          "archive_bytes": 14856184074,
+          "archive_checksum": "md5:abf26b782546c767bc4310f8c321f5d1",
+          "archive_download_url": "https://zenodo.org/api/records/17749111/files/2024-04-10_TypeB_sample1.7z/content",
+          "archive_filename": "2024-04-10_TypeB_sample1.7z",
+          "derived_csv_filename": "2024-04-10_TypeB_sample1.csv.gz",
+          "derived_csv_sha256": "67e889a3e90070e0498b04cadecd27f52cfcea117d0ed19919d233189bb7d4b5"
+        }
+      ],
+      "title": "A collection of bowed responses of cello strings (part 1)"
+    },
+    {
+      "api_response_sha256": "69862aa45d21883ec8300366a0c4cf0661b6f0e002c310e1cbeb1c705e6a6eb4",
+      "api_url": "https://zenodo.org/api/records/17782542",
+      "creators": [
+        {
+          "affiliation": "University of Music and Performing Arts Vienna",
+          "name": "Lampis, Alessio",
+          "orcid": "0009-0003-0813-9031"
+        }
+      ],
+      "doi": "10.5281/zenodo.17782542",
+      "doi_url": "https://doi.org/10.5281/zenodo.17782542",
+      "license_id": "cc-by-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "publication_date": "2025-12-01",
+      "record_id": 17782542,
+      "record_url": "https://zenodo.org/records/17782542",
+      "selected_archives": [
+        {
+          "archive_bytes": 14416522615,
+          "archive_checksum": "md5:c1c316576b956ff29dc7caa9d5ca03f5",
+          "archive_download_url": "https://zenodo.org/api/records/17782542/files/2024-04-22_TypeA_sample3.7z/content",
+          "archive_filename": "2024-04-22_TypeA_sample3.7z",
+          "derived_csv_filename": "2024-04-22_TypeA_sample3.csv.gz",
+          "derived_csv_sha256": "c01b6081266bf32f3a14af02860acba43d91faac385dae406408b81a298161cf"
+        },
+        {
+          "archive_bytes": 14399592100,
+          "archive_checksum": "md5:ba582c0ecb1f47c9dcfa9be2d43d0f80",
+          "archive_download_url": "https://zenodo.org/api/records/17782542/files/2024-04-15_TypeD_sample1.7z/content",
+          "archive_filename": "2024-04-15_TypeD_sample1.7z",
+          "derived_csv_filename": "2024-04-15_TypeD_sample1.csv.gz",
+          "derived_csv_sha256": "625757e21a6c840c1c5f01cfa33e46535e4bd350f28003db7885064082da4843"
+        },
+        {
+          "archive_bytes": 14775691753,
+          "archive_checksum": "md5:ec520fecf6c5011ef8491b335edc1cee",
+          "archive_download_url": "https://zenodo.org/api/records/17782542/files/2024-04-19_TypeA_sample2.7z/content",
+          "archive_filename": "2024-04-19_TypeA_sample2.7z",
+          "derived_csv_filename": "2024-04-19_TypeA_sample2.csv.gz",
+          "derived_csv_sha256": "3345934e53c0eafdbca0a89717a22a43cfac2fd3c294a813673a43b8c960c272"
+        }
+      ],
+      "title": "A collection of bowed responses of cello strings (part 2)"
+    },
+    {
+      "api_response_sha256": "4cd534958973abb0dd7377ebcf47dc91fedcdbc3e58ee7beab52aa60bfff01b0",
+      "api_url": "https://zenodo.org/api/records/17782552",
+      "creators": [
+        {
+          "affiliation": "University of Music and Performing Arts Vienna",
+          "name": "Lampis, Alessio",
+          "orcid": "0009-0003-0813-9031"
+        }
+      ],
+      "doi": "10.5281/zenodo.17782552",
+      "doi_url": "https://doi.org/10.5281/zenodo.17782552",
+      "license_id": "cc-by-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "publication_date": "2025-12-01",
+      "record_id": 17782552,
+      "record_url": "https://zenodo.org/records/17782552",
+      "selected_archives": [
+        {
+          "archive_bytes": 14388913034,
+          "archive_checksum": "md5:05e6dd728abf75acb06e88ec47ba959d",
+          "archive_download_url": "https://zenodo.org/api/records/17782552/files/2024-04-26_TypeD_sample2.7z/content",
+          "archive_filename": "2024-04-26_TypeD_sample2.7z",
+          "derived_csv_filename": "2024-04-26_TypeD_sample2.csv.gz",
+          "derived_csv_sha256": "a01e10e92b5700616fe9ac2ebee478f9bfdb5e8f90a88994e21f61d3e642798c"
+        },
+        {
+          "archive_bytes": 14688771984,
+          "archive_checksum": "md5:90b14bfb1a5fa992e193895d1a7bdc49",
+          "archive_download_url": "https://zenodo.org/api/records/17782552/files/2024-04-24_TypeA_sample4.7z/content",
+          "archive_filename": "2024-04-24_TypeA_sample4.7z",
+          "derived_csv_filename": "2024-04-24_TypeA_sample4.csv.gz",
+          "derived_csv_sha256": "e43dc48baf45ee86b00a1ff0ab949e18dd208e42be1ea81980047c5bbd88b771"
+        }
+      ],
+      "title": "A collection of bowed responses of cello strings (part 3)"
+    },
+    {
+      "api_response_sha256": "7aeea68e8914508a14fc84df5e57f129b8a156c23068834fbe12d3b8be2494fb",
+      "api_url": "https://zenodo.org/api/records/17782565",
+      "creators": [
+        {
+          "affiliation": "University of Music and Performing Arts Vienna",
+          "name": "Lampis, Alessio",
+          "orcid": "0009-0003-0813-9031"
+        }
+      ],
+      "doi": "10.5281/zenodo.17782565",
+      "doi_url": "https://doi.org/10.5281/zenodo.17782565",
+      "license_id": "cc-by-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "publication_date": "2025-12-01",
+      "record_id": 17782565,
+      "record_url": "https://zenodo.org/records/17782565",
+      "selected_archives": [
+        {
+          "archive_bytes": 14974282927,
+          "archive_checksum": "md5:d2f75b921998cf5bff0b062b131e5bc5",
+          "archive_download_url": "https://zenodo.org/api/records/17782565/files/2024-06-11_TypeC_T2_sample1.7z/content",
+          "archive_filename": "2024-06-11_TypeC_T2_sample1.7z",
+          "derived_csv_filename": "2024-06-11_TypeC_T2_sample1.csv.gz",
+          "derived_csv_sha256": "274864ad30f94357e36045b07858aa7e16c68bd383bde04a37698bb8cde8d33e"
+        },
+        {
+          "archive_bytes": 14978195174,
+          "archive_checksum": "md5:3e7b785530ac7b03f216e793de34deb8",
+          "archive_download_url": "https://zenodo.org/api/records/17782565/files/2024-06-19_TypeA_T2_sample1.7z/content",
+          "archive_filename": "2024-06-19_TypeA_T2_sample1.7z",
+          "derived_csv_filename": "2024-06-19_TypeA_T2_sample1.csv.gz",
+          "derived_csv_sha256": "f4035562019dda73d02e2d0a539151d8d079de3dca054199a9379bd6fe6c3336"
+        },
+        {
+          "archive_bytes": 14390431235,
+          "archive_checksum": "md5:b0c24d75a1913bb04d37944fd84b2ff6",
+          "archive_download_url": "https://zenodo.org/api/records/17782565/files/2024-06-13_TypeB_T2_sample1.7z/content",
+          "archive_filename": "2024-06-13_TypeB_T2_sample1.7z",
+          "derived_csv_filename": "2024-06-13_TypeB_T2_sample1.csv.gz",
+          "derived_csv_sha256": "785140f55333679ebfd3e91bfbe5283d5b452a5dff7a0ecfe13c65862295e5b2"
+        }
+      ],
+      "title": "A collection of bowed responses of cello strings (part 4)"
+    },
+    {
+      "api_response_sha256": "27ca16b3db4a03184c1759f5e5098f6767d36878026376ae54b22112117059ac",
+      "api_url": "https://zenodo.org/api/records/17795326",
+      "creators": [
+        {
+          "affiliation": "University of Music and Performing Arts Vienna",
+          "name": "Lampis, Alessio",
+          "orcid": "0009-0003-0813-9031"
+        }
+      ],
+      "doi": "10.5281/zenodo.17795326",
+      "doi_url": "https://doi.org/10.5281/zenodo.17795326",
+      "license_id": "cc-by-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "publication_date": "2025-12-02",
+      "record_id": 17795326,
+      "record_url": "https://zenodo.org/records/17795326",
+      "selected_archives": [
+        {
+          "archive_bytes": 28218620427,
+          "archive_checksum": "md5:bddef0d9cf48a6dccbc27021116274a5",
+          "archive_download_url": "https://zenodo.org/api/records/17795326/files/2024-10-23_variability_setup.7z/content",
+          "archive_filename": "2024-10-23_variability_setup.7z",
+          "derived_csv_filename": "2024-10-23_variability_setup.csv.gz",
+          "derived_csv_sha256": "01f9aa7ba423ee19af05ae5f830347379044396e2469f6fe747974925e8db502"
+        }
+      ],
+      "title": "A collection of bowed responses of cello strings (part 6)"
+    }
+  ],
+  "verification": "Current official Zenodo API HTTPS requests; all five records returned cc-by-4.0",
+  "verified_at_utc": "2026-10-29T16:25:11.937954+00:00"
+}

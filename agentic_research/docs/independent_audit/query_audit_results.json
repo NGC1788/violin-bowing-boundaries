@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "cases": 60,
+  "rules": 9,
+  "shared_positions": 50,
+  "noninterference": "Unqueried labels flipped; all traces and exact conclusions unchanged",
+  "query_accounting": "One query reveals 9-rule vector and counts once; no duplicate query",
+  "even_order_n10": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    1,
+    3,
+    5,
+    7,
+    9
+  ],
+  "even_order_is_parity": true,
+  "hashes": {
+    "harness/models.py": "f1840c0b37909b91400ade4024973070f338e0301c6472463b90597354b0861e",
+    "harness/run_distribution.py": "aa18601f3ed76de763908af00fa58f9bf99f5fba206af50fd3a46bf7d255db0a",
+    "harness/experiment.py": "b718278eb0ebf817b4f1e49448c8e30e23ad653dd84e6536edd2785c3d1ddf6d",
+    "harness/data.py": "69d45b0c182929aff114f6d3573cee6716d8253d8742988199c89bec7d63ebd9"
+  }
+}

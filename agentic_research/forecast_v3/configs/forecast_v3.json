@@ -1,0 +1,95 @@
+{
+  "version": "2026-10-30-forecast-v3",
+  "title": "Retrospective landmark forecasting with coherent observer probabilities",
+  "primary_metric": "mean_log_loss",
+  "data_scope": "retrospective_landmark_forecast",
+  "benchmark": {
+    "strokes": 78000,
+    "train_strokes": 54000,
+    "development_strokes": 24000,
+    "input_end_seconds": 0.2,
+    "target_interval_seconds": [
+      0.25,
+      0.45
+    ],
+    "rules": 9,
+    "patterns": 10,
+    "observer": "Pinned joint-rule observer, reconstructed historicalfixturezero mismatches",
+    "landmark": "plateau onset uses full-trace protocol detection; not claimedreal-timecausal"
+  },
+  "budget": {
+    "max_trials": 12,
+    "max_campaign_seconds": 1800,
+    "max_trial_seconds": 600,
+    "max_consecutive_failures": 1,
+    "end_date": "2026-11-06"
+  },
+  "planner": {
+    "candidate_dir": "candidates",
+    "max_rounds": 18
+  },
+  "model_parameters": {
+    "epochs": 8,
+    "hidden": 32,
+    "batch_size": 512,
+    "learning_rate": 0.003,
+    "hgb_max_iter": 80
+  },
+  "allowed": {
+    "methods": [
+      "source_frequency",
+      "persistence",
+      "source_markov",
+      "hgb_history",
+      "mlp_ind",
+      "mlp_joint"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "preflight_candidate_ids": [
+    "source_frequency_s0",
+    "persistence_s0",
+    "source_markov_s0"
+  ],
+  "acceptance": {
+    "minimum_relative_log_loss_reduction": 0.02,
+    "versus": "Best fixedbaseline among source_markov,HGBhistory andprespecified certifiedcoherentrepair ofHGB; never onlyrawpersistence",
+    "worst_session_max_absolute_worsening_nats": 0.02,
+    "interpretation": "Operationaldevelopment screening threshold selected beforeC/D scores; nothypothesistest orphysicalqualityguarantee",
+    "neural_mechanism": "Jointhead vsindependenthead withidentical marginalBCE,backbone,batchorder,updates; independentposthocrepair ismandatoryauxiliary",
+    "primary_model": "mlp_joint; comparemeanacrossall3seeds, neverselectbestseed"
+  },
+  "auxiliary": {
+    "independent_mass_simplex_projection": "Knownposthoccoherencecomparator; nearestinpatternmassnotmarginalspace",
+    "forward_kl_coherent_repair": "KnownPredd2009/ForecastICML2026classicalbaseline; approximateprojection acceptedonlybylabel-free finite-patternloglosscertificate usingclipepsilon1e-6, otherwiseunchangedprediction; notnewtheorem",
+    "secondary_metrics": [
+      "mean_brier",
+      "session/familyloss",
+      "transitionentry/exitsubsets",
+      "coherence",
+      "runtime",
+      "boundaryrankonlyifdeclaredorderisreconstructable"
+    ]
+  },
+  "data_exposure": "All historicalcello data exposed. SourceA/B; devC/D. No independent finaltest. Source-onlysanity A2048/B1024 inspectedbeforethisfreeze andreportedseparately; no tuning fromthose scores.",
+  "source_sanity": "source_sanity/summary.json fixedschedule; initial5methodsanity then sourceMarkovadded beforedevelopment evaluation",
+  "stop_policy": [
+    "Anyverificationfailure orinput/source/resultseal mismatch stopspermanently",
+    "All12registeredconfigs or1800worker seconds orenddate; noautoretryunder sameID",
+    "No metric/split/labelchange toconvertfailuretosuccess",
+    "Benchmarkfailure recorded evenifsecondarymetricimproves"
+  ],
+  "portability": {
+    "backends": [
+      "codex",
+      "claude",
+      "manual"
+    ],
+    "model_choice": "UseusersCLIdefault; nocredentialsinrepository",
+    "datasets": "../benchmarks/forecast_v3/dataset.npz plusdataset.json; CC-BY-4.0deriveddata withcredits"
+  }
+}

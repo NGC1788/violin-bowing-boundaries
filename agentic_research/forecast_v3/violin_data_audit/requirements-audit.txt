@@ -1,0 +1,5 @@
+# Isolated optional parser dependencies. NumPy/SciPy are supplied by the research environment.
+mat-io==1.0.2
+pandas==3.1.0
+h5py==3.16.0
+tzdata==2025.2

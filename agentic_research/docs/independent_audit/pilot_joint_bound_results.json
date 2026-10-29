@@ -1,0 +1,404 @@
+{
+  "status": "PASS",
+  "scope": "Exactly 16 receipt-pinned pilot columns; no full-development labels analyzed",
+  "receipt": "/Users/jeongjihoon/violin-bowing-boundaries/agentic_research/runs/pilot_20261030_v1/56dac511b4d70d08969f2ca3c3920e0c17c1332e54aba331800e3bc7fb023e4a/data_receipt.json",
+  "input_sha256": "85ab696054670f80bc9690873291c39bb119b56670b4513da59bae994a2b0d70",
+  "columns": [
+    {
+      "id": "C1|2024-04-12_TypeC_sample1/2024-04-15/v3|34",
+      "max_individual_bound": 6,
+      "exact_joint_bound": 7,
+      "witness_positions": [
+        1,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "C_T2|2024-06-11_TypeC_T2_sample1/v3|34",
+      "max_individual_bound": 2,
+      "exact_joint_bound": 2,
+      "witness_positions": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "D1|2024-04-15_TypeD_sample1/2024-04-17/v2|34",
+      "max_individual_bound": 4,
+      "exact_joint_bound": 5,
+      "witness_positions": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "D2|2024-04-26_TypeD_sample2/v1|12",
+      "max_individual_bound": 14,
+      "exact_joint_bound": 15,
+      "witness_positions": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "id": "C1|2024-04-12_TypeC_sample1/2024-04-15/v3|38",
+      "max_individual_bound": 5,
+      "exact_joint_bound": 7,
+      "witness_positions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "C_T2|2024-06-11_TypeC_T2_sample1/v3|10",
+      "max_individual_bound": 23,
+      "exact_joint_bound": 23,
+      "witness_positions": [
+        1,
+        3,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        41,
+        42
+      ]
+    },
+    {
+      "id": "D1|2024-04-15_TypeD_sample1/2024-04-17/v1|25",
+      "max_individual_bound": 2,
+      "exact_joint_bound": 2,
+      "witness_positions": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "D2|2024-04-26_TypeD_sample2/v3|28",
+      "max_individual_bound": 18,
+      "exact_joint_bound": 21,
+      "witness_positions": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        9,
+        10,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "id": "C1|2024-04-12_TypeC_sample1/2024-04-15/v2|14",
+      "max_individual_bound": 17,
+      "exact_joint_bound": 19,
+      "witness_positions": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        11,
+        13,
+        15,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        27,
+        28,
+        29,
+        30
+      ]
+    },
+    {
+      "id": "C_T2|2024-06-11_TypeC_T2_sample1/v3|37",
+      "max_individual_bound": 3,
+      "exact_joint_bound": 3,
+      "witness_positions": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "id": "D1|2024-04-15_TypeD_sample1/2024-04-17/v1|9",
+      "max_individual_bound": 15,
+      "exact_joint_bound": 15,
+      "witness_positions": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        24,
+        25
+      ]
+    },
+    {
+      "id": "D2|2024-04-26_TypeD_sample2/v2|14",
+      "max_individual_bound": 19,
+      "exact_joint_bound": 20,
+      "witness_positions": [
+        1,
+        3,
+        5,
+        7,
+        8,
+        10,
+        12,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        26,
+        28,
+        30,
+        31,
+        32,
+        33
+      ]
+    },
+    {
+      "id": "C1|2024-04-12_TypeC_sample1/2024-04-15/v2|37",
+      "max_individual_bound": 10,
+      "exact_joint_bound": 13,
+      "witness_positions": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "id": "C_T2|2024-06-11_TypeC_T2_sample1/v1|32",
+      "max_individual_bound": 2,
+      "exact_joint_bound": 2,
+      "witness_positions": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "D1|2024-04-15_TypeD_sample1/2024-04-17/v1|12",
+      "max_individual_bound": 13,
+      "exact_joint_bound": 14,
+      "witness_positions": [
+        0,
+        2,
+        4,
+        6,
+        7,
+        8,
+        9,
+        11,
+        13,
+        15,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "id": "D2|2024-04-26_TypeD_sample2/v1|15",
+      "max_individual_bound": 9,
+      "exact_joint_bound": 10,
+      "witness_positions": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        13,
+        14
+      ]
+    }
+  ],
+  "mean_max_individual_bound": 10.125,
+  "mean_exact_joint_bound": 11.125,
+  "completed_runs_at_audit": [
+    {
+      "run_id": "56dac511b4d70d08969f2ca3c3920e0c17c1332e54aba331800e3bc7fb023e4a",
+      "config": {
+        "hidden": 32,
+        "learning_rate": 0.003,
+        "max_eval_columns": 16,
+        "max_train_columns": null,
+        "mlp_epochs": 8,
+        "policy": "random",
+        "prior": "uniform",
+        "rule_bank": "nine",
+        "seed": 0,
+        "id": "56dac511b4d70d08969f2ca3c3920e0c17c1332e54aba331800e3bc7fb023e4a"
+      },
+      "mean_queries": 45.625,
+      "mean_gap_to_exact_joint_bound": 34.5
+    },
+    {
+      "run_id": "a430cd5a867051b0677dd620077dde1825d4e5426b89ffeb4320dc92a1677d99",
+      "config": {
+        "hidden": 32,
+        "learning_rate": 0.003,
+        "max_eval_columns": 16,
+        "max_train_columns": null,
+        "mlp_epochs": 8,
+        "policy": "ascending",
+        "prior": "uniform",
+        "rule_bank": "nine",
+        "seed": 0,
+        "id": "a430cd5a867051b0677dd620077dde1825d4e5426b89ffeb4320dc92a1677d99"
+      },
+      "mean_queries": 17.125,
+      "mean_gap_to_exact_joint_bound": 6.0
+    },
+    {
+      "run_id": "a7974d932d13040a02c394c3b2a26f9335f22e83616358b91d878e85e3fce23e",
+      "config": {
+        "hidden": 32,
+        "learning_rate": 0.003,
+        "max_eval_columns": 16,
+        "max_train_columns": null,
+        "mlp_epochs": 8,
+        "policy": "entropy",
+        "prior": "hgb",
+        "rule_bank": "nine",
+        "seed": 0,
+        "id": "a7974d932d13040a02c394c3b2a26f9335f22e83616358b91d878e85e3fce23e"
+      },
+      "mean_queries": 12.5625,
+      "mean_gap_to_exact_joint_bound": 1.4375
+    },
+    {
+      "run_id": "aea598efc020a49f326f1dad944aa1b85ee3819d08642542cb056ca44d9e6f69",
+      "config": {
+        "hidden": 32,
+        "learning_rate": 0.003,
+        "max_eval_columns": 16,
+        "max_train_columns": null,
+        "mlp_epochs": 8,
+        "policy": "even_first",
+        "prior": "uniform",
+        "rule_bank": "nine",
+        "seed": 0,
+        "id": "aea598efc020a49f326f1dad944aa1b85ee3819d08642542cb056ca44d9e6f69"
+      },
+      "mean_queries": 33.3125,
+      "mean_gap_to_exact_joint_bound": 22.1875
+    },
+    {
+      "run_id": "b9a54052ac11d01cf68bf481f4aab6f4355ea503fb3c74e7f3f80da3bd14bc45",
+      "config": {
+        "hidden": 32,
+        "learning_rate": 0.003,
+        "max_eval_columns": 16,
+        "max_train_columns": null,
+        "mlp_epochs": 8,
+        "policy": "entropy",
+        "prior": "constant",
+        "rule_bank": "nine",
+        "seed": 0,
+        "id": "b9a54052ac11d01cf68bf481f4aab6f4355ea503fb3c74e7f3f80da3bd14bc45"
+      },
+      "mean_queries": 12.0625,
+      "mean_gap_to_exact_joint_bound": 0.9375
+    },
+    {
+      "run_id": "cda036aff7be60f7270b8dc7bf801f04eec8bbcd6928abf1bd0eba2a014356a5",
+      "config": {
+        "hidden": 32,
+        "learning_rate": 0.003,
+        "max_eval_columns": 16,
+        "max_train_columns": null,
+        "mlp_epochs": 8,
+        "policy": "entropy",
+        "prior": "uniform",
+        "rule_bank": "nine",
+        "seed": 0,
+        "id": "cda036aff7be60f7270b8dc7bf801f04eec8bbcd6928abf1bd0eba2a014356a5"
+      },
+      "mean_queries": 12.0625,
+      "mean_gap_to_exact_joint_bound": 0.9375
+    }
+  ]
+}

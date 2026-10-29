@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "dev_sessions": [
+      "C1",
+      "C_T2",
+      "D1",
+      "D2"
+    ],
+    "feature_count": 60,
+    "feature_names_sha256": "218b62161f9e45e5ab9fd258e866147414d2bfabf8ba58e7f0cddff0eec7af42",
+    "grouping": "conservative string family A/B/C/D; sessions are diagram IDs, not asserted independent specimens",
+    "input_exclusions": [
+      "future features",
+      "future force/speed",
+      "plateau_s",
+      "IDs",
+      "session/folder/trial",
+      "target labels"
+    ],
+    "input_sha256": "a0a56fe957859c5c57ad4218da34032fea947b73b41a9acf97e9aa37d931b39c",
+    "joint_input_sha256": "85ab696054670f80bc9690873291c39bb119b56670b4513da59bae994a2b0d70",
+    "loader_sha256": "94feedce80d4b5e41232a16dc084447740c672ce9bed252d88006115ccda9663",
+    "minimum_gap_s": 0.05,
+    "normalization": "none fitted; fixed transforms and prefix-only zero+missing flags; caller fits training-only scaler",
+    "observer": {
+      "max_aperiodic": 0.5,
+      "min_amplitude": 0.4063327834010124,
+      "min_periodicity": 0.8,
+      "reference_f0": 98.08,
+      "subharmonic_ratio": 0.75
+    },
+    "observer_audit": {
+      "audit_window_start_end": [
+        0.2,
+        0.4
+      ],
+      "baseline_mismatches": 0,
+      "fixed_mismatches": 0,
+      "guard_mismatches": 0,
+      "historical_feature_mismatches": 0,
+      "strokes": 78000
+    },
+    "ordered_ids_sha256": "677b7d7257b763033b7559efd563e107f7ab6d48a8e8fca2ac30e28a8d81814e",
+    "origin_s": 0.2,
+    "persistence_window_start_end": [
+      0.1,
+      0.2
+    ],
+    "prefix_windows_width_start": [
+      [
+        0.2,
+        0.0
+      ],
+      [
+        0.1,
+        0.0
+      ],
+      [
+        0.1,
+        0.05
+      ],
+      [
+        0.1,
+        0.1
+      ]
+    ],
+    "rows": 78000,
+    "rule_patterns_sha256": "f89334cd1615ff48c2028a179af96cfb3812e3e77559c9dae9cb9a99e91261b6",
+    "schema_version": "retrospective_prefix_v3_1",
+    "scope": "retrospective full-trace landmark; historically exposed development",
+    "source_csv_sha256": {
+      "2024-03-25_TypeA_sample1.csv.gz": "e7961c8d86b514090967a288f1bd173190ee48021e01cab89303486ef55fe483",
+      "2024-04-10_TypeB_sample1.csv.gz": "67e889a3e90070e0498b04cadecd27f52cfcea117d0ed19919d233189bb7d4b5",
+      "2024-04-12_TypeC_sample1.csv.gz": "0a95128ff2132f7d16778bfdcd5ad31b0ed069b946d2b6ba0c314183170c33b9",
+      "2024-04-15_TypeD_sample1.csv.gz": "625757e21a6c840c1c5f01cfa33e46535e4bd350f28003db7885064082da4843",
+      "2024-04-19_TypeA_sample2.csv.gz": "3345934e53c0eafdbca0a89717a22a43cfac2fd3c294a813673a43b8c960c272",
+      "2024-04-22_TypeA_sample3.csv.gz": "c01b6081266bf32f3a14af02860acba43d91faac385dae406408b81a298161cf",
+      "2024-04-24_TypeA_sample4.csv.gz": "e43dc48baf45ee86b00a1ff0ab949e18dd208e42be1ea81980047c5bbd88b771",
+      "2024-04-26_TypeD_sample2.csv.gz": "a01e10e92b5700616fe9ac2ebee478f9bfdb5e8f90a88994e21f61d3e642798c",
+      "2024-06-11_TypeC_T2_sample1.csv.gz": "274864ad30f94357e36045b07858aa7e16c68bd383bde04a37698bb8cde8d33e",
+      "2024-06-13_TypeB_T2_sample1.csv.gz": "785140f55333679ebfd3e91bfbe5283d5b452a5dff7a0ecfe13c65862295e5b2",
+      "2024-06-19_TypeA_T2_sample1.csv.gz": "f4035562019dda73d02e2d0a539151d8d079de3dca054199a9379bd6fe6c3336",
+      "2024-10-23_variability_setup.csv.gz": "01f9aa7ba423ee19af05ae5f830347379044396e2469f6fe747974925e8db502"
+    },
+    "source_records": [
+      "https://zenodo.org/records/17749111",
+      "https://zenodo.org/records/17782542",
+      "https://zenodo.org/records/17782552",
+      "https://zenodo.org/records/17782565",
+      "https://zenodo.org/records/17782538",
+      "https://zenodo.org/records/17795326"
+    ],
+    "split_counts": {
+      "dev": 24000,
+      "train": 54000
+    },
+    "split_manifest_sha256": "b94beab611c85e75b71e60db3d23b22fc8cd4e10b7ff53bab2c24bc6aa9dc7ce",
+    "target_kind": "deterministic mechanical-signal observer, not physical ground truth",
+    "target_window_start_end": [
+      0.25,
+      0.45
+    ],
+    "train_sessions": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A_T2",
+      "B1",
+      "B_T2s1",
+      "B_T2r1",
+      "B_T2r2"
+    ]
+  },
+  "npz_sha256": "598a6964ce7ef91c5bb6b3cde1aa37daf4b615219438f896a4dc188f0d427975"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "ascending",
+  "seed": 0,
+  "rule_bank": "nine",
+  "max_train_columns": null,
+  "max_eval_columns": 480,
+  "mlp_epochs": 8,
+  "hidden": 32,
+  "learning_rate": 0.003,
+  "prior": "uniform",
+  "policy": "ascending"
+}

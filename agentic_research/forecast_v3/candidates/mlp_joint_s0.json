@@ -1,0 +1,10 @@
+{
+  "epochs": 8,
+  "hidden": 32,
+  "batch_size": 512,
+  "learning_rate": 0.003,
+  "hgb_max_iter": 80,
+  "method": "mlp_joint",
+  "seed": 0,
+  "id": "mlp_joint_s0"
+}

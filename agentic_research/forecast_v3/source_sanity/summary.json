@@ -1,0 +1,426 @@
+{
+  "scope": "SOURCE-ONLY sanity; familyA2048 train and familyB1024 validation. No C/D predictions/scores. No tuning, candidate selection or acceptance-threshold calibration.",
+  "rows": [
+    2048,
+    1024
+  ],
+  "methods": {
+    "persistence": {
+      "config": {
+        "method": "persistence",
+        "seed": 0,
+        "epochs": 8,
+        "hidden": 32,
+        "learning_rate": 0.003,
+        "batch_size": 512,
+        "hgb_max_iter": 80
+      },
+      "metrics": {
+        "rows": 1024,
+        "mean_log_loss": 2.9232045197518466,
+        "mean_brier": 0.21158854166666666,
+        "per_rule_log_loss": [
+          1.200763061190678,
+          1.2142547697433208,
+          1.2277464782957355,
+          1.3221884381649738,
+          1.3491718552703136,
+          1.3356801467173582,
+          5.437159546738167,
+          6.0442864316096365,
+          7.177589950036375
+        ],
+        "coherence": {
+          "coherent_fraction": 1.0,
+          "incoherent_rows": 0,
+          "order_violation_rows": 0,
+          "minimum_signed_pattern_mass": 0.0,
+          "mean_negative_pattern_mass": 0.0,
+          "tolerance": 1e-06
+        }
+      },
+      "training_info": {
+        "config": {
+          "method": "persistence",
+          "seed": 0,
+          "epochs": 8,
+          "hidden": 32,
+          "learning_rate": 0.003,
+          "batch_size": 512,
+          "hgb_max_iter": 80
+        },
+        "source_rows": 2048,
+        "feature_count": 60,
+        "source_training_sha256": "5853f997e27e9c2588c6edfcbd7e8491774aa91f396515849d1ee806d68cdea3",
+        "preprocessing_fit_split": "train",
+        "prediction_kind": "future observer-rule probabilities; not physical truth",
+        "optimizer_updates": 0,
+        "loss": "none; hard persistence",
+        "fit_seconds": 0.0003264159895479679,
+        "total_seconds": 0.00036670800182037055,
+        "cpu_seconds": 0.0003670000000000062,
+        "prediction_and_artifact_seconds": 4.0292012272402644e-05
+      }
+    },
+    "source_frequency": {
+      "config": {
+        "method": "source_frequency",
+        "seed": 0,
+        "epochs": 8,
+        "hidden": 32,
+        "learning_rate": 0.003,
+        "batch_size": 512,
+        "hgb_max_iter": 80
+      },
+      "metrics": {
+        "rows": 1024,
+        "mean_log_loss": 0.6925820438567443,
+        "mean_brier": 0.24963950364757248,
+        "per_rule_log_loss": [
+          0.6857083741249975,
+          0.6979396871747816,
+          0.693581842316681,
+          0.685502744092794,
+          0.6984185487120022,
+          0.695035123137667,
+          0.6821316980941046,
+          0.6965517513819098,
+          0.6983686256757856
+        ],
+        "coherence": {
+          "coherent_fraction": 1.0,
+          "incoherent_rows": 0,
+          "order_violation_rows": 0,
+          "minimum_signed_pattern_mass": 0.0014641288433382416,
+          "mean_negative_pattern_mass": 0.0,
+          "tolerance": 1e-06
+        }
+      },
+      "training_info": {
+        "config": {
+          "method": "source_frequency",
+          "seed": 0,
+          "epochs": 8,
+          "hidden": 32,
+          "learning_rate": 0.003,
+          "batch_size": 512,
+          "hgb_max_iter": 80
+        },
+        "source_rows": 2048,
+        "feature_count": 60,
+        "source_training_sha256": "5853f997e27e9c2588c6edfcbd7e8491774aa91f396515849d1ee806d68cdea3",
+        "preprocessing_fit_split": "train",
+        "prediction_kind": "future observer-rule probabilities; not physical truth",
+        "optimizer_updates": 0,
+        "loss": "source empirical frequency with marginal Jeffreys smoothing",
+        "fit_seconds": 0.0004858330066781491,
+        "total_seconds": 0.0005145829927641898,
+        "cpu_seconds": 0.0005149999999999877,
+        "prediction_and_artifact_seconds": 2.8749986086040735e-05
+      }
+    },
+    "source_markov": {
+      "config": {
+        "method": "source_markov",
+        "seed": 0,
+        "epochs": 8,
+        "hidden": 32,
+        "learning_rate": 0.003,
+        "batch_size": 512,
+        "hgb_max_iter": 80
+      },
+      "metrics": {
+        "rows": 1024,
+        "mean_log_loss": 0.21116157888654408,
+        "mean_brier": 0.059555210170970554,
+        "per_rule_log_loss": [
+          0.16804388145245636,
+          0.20450904800402936,
+          0.25946243830744137,
+          0.16994990185499367,
+          0.20768748092896036,
+          0.2616388941720508,
+          0.1682902307735237,
+          0.20344640939302497,
+          0.2574259250924124
+        ],
+        "coherence": {
+          "coherent_fraction": 1.0,
+          "incoherent_rows": 0,
+          "order_violation_rows": 0,
+          "minimum_signed_pattern_mass": 0.00018083182640138418,
+          "mean_negative_pattern_mass": 0.0,
+          "tolerance": 1e-06
+        }
+      },
+      "training_info": {
+        "config": {
+          "method": "source_markov",
+          "seed": 0,
+          "epochs": 8,
+          "hidden": 32,
+          "learning_rate": 0.003,
+          "batch_size": 512,
+          "hgb_max_iter": 80
+        },
+        "source_rows": 2048,
+        "feature_count": 60,
+        "source_training_sha256": "5853f997e27e9c2588c6edfcbd7e8491774aa91f396515849d1ee806d68cdea3",
+        "preprocessing_fit_split": "train",
+        "prediction_kind": "future observer-rule probabilities; not physical truth",
+        "optimizer_updates": 0,
+        "loss": "source-only empirical conditional pattern frequency",
+        "learned_from_source": true,
+        "dirichlet_total_mass": 1.0,
+        "dirichlet_mass_per_pattern": 0.1,
+        "empty_prefix_fallback": "source global pattern prior",
+        "source_unseen_prefix_patterns": 0,
+        "fit_seconds": 0.0006555830186698586,
+        "total_seconds": 0.0006818330148234963,
+        "cpu_seconds": 0.0006819999999999882,
+        "prediction_and_artifact_seconds": 2.6249996153637767e-05
+      }
+    },
+    "hgb_history": {
+      "config": {
+        "method": "hgb_history",
+        "seed": 0,
+        "epochs": 8,
+        "hidden": 32,
+        "learning_rate": 0.003,
+        "batch_size": 512,
+        "hgb_max_iter": 80
+      },
+      "metrics": {
+        "rows": 1024,
+        "mean_log_loss": 0.1373567299597869,
+        "mean_brier": 0.04123376131262048,
+        "per_rule_log_loss": [
+          0.1062398430133222,
+          0.13200359200438785,
+          0.17851842136942805,
+          0.10205381578374595,
+          0.13764495358871956,
+          0.18605388196191702,
+          0.10375893175827007,
+          0.13503042974433047,
+          0.15490670041396104
+        ],
+        "coherence": {
+          "coherent_fraction": 0.0048828125,
+          "incoherent_rows": 1019,
+          "order_violation_rows": 1012,
+          "minimum_signed_pattern_mass": -0.569948788599737,
+          "mean_negative_pattern_mass": 0.07081306319057354,
+          "tolerance": 1e-06
+        }
+      },
+      "training_info": {
+        "config": {
+          "method": "hgb_history",
+          "seed": 0,
+          "epochs": 8,
+          "hidden": 32,
+          "learning_rate": 0.003,
+          "batch_size": 512,
+          "hgb_max_iter": 80
+        },
+        "source_rows": 2048,
+        "feature_count": 60,
+        "source_training_sha256": "5853f997e27e9c2588c6edfcbd7e8491774aa91f396515849d1ee806d68cdea3",
+        "preprocessing_fit_split": "train",
+        "prediction_kind": "future observer-rule probabilities; not physical truth",
+        "optimizer_updates": 0,
+        "loss": "independent binary log loss",
+        "hgb_early_stopping": false,
+        "hgb_max_iter": 80,
+        "hgb_max_leaf_nodes": 15,
+        "hgb_learning_rate": 0.08,
+        "hgb_l2_regularization": 1.0,
+        "fit_seconds": 1.4448486249893904,
+        "total_seconds": 1.5082561250019353,
+        "cpu_seconds": 2.3719889999999997,
+        "prediction_and_artifact_seconds": 0.06340750001254492
+      }
+    },
+    "mlp_ind": {
+      "config": {
+        "method": "mlp_ind",
+        "seed": 0,
+        "epochs": 8,
+        "hidden": 32,
+        "learning_rate": 0.003,
+        "batch_size": 512,
+        "hgb_max_iter": 80
+      },
+      "metrics": {
+        "rows": 1024,
+        "mean_log_loss": 0.26857734199497196,
+        "mean_brier": 0.07696599198948134,
+        "per_rule_log_loss": [
+          0.20613694655584594,
+          0.27704994990662224,
+          0.309659724279979,
+          0.24807106181048455,
+          0.21032295396188821,
+          0.37938943020030874,
+          0.2151606910226306,
+          0.22645630355491592,
+          0.3449490166620709
+        ],
+        "coherence": {
+          "coherent_fraction": 0.0,
+          "incoherent_rows": 1024,
+          "order_violation_rows": 1024,
+          "minimum_signed_pattern_mass": -0.2728250026702881,
+          "mean_negative_pattern_mass": 0.18785607113125602,
+          "tolerance": 1e-06
+        }
+      },
+      "training_info": {
+        "config": {
+          "method": "mlp_ind",
+          "seed": 0,
+          "epochs": 8,
+          "hidden": 32,
+          "learning_rate": 0.003,
+          "batch_size": 512,
+          "hgb_max_iter": 80
+        },
+        "source_rows": 2048,
+        "feature_count": 60,
+        "source_training_sha256": "5853f997e27e9c2588c6edfcbd7e8491774aa91f396515849d1ee806d68cdea3",
+        "preprocessing_fit_split": "train",
+        "prediction_kind": "future observer-rule probabilities; not physical truth",
+        "optimizer_updates": 32,
+        "loss": "mean marginal binary cross-entropy across nine rules",
+        "optimizer": "AdamW",
+        "weight_decay": 0.0001,
+        "minibatch_order_sha256": "d7f9af82d3ff4fe59e2d83a5d9d86b636bbd7ed6219f017c775be1afb189aa8d",
+        "train_loss_by_epoch": [
+          0.6818715780973434,
+          0.6552240252494812,
+          0.6140858829021454,
+          0.5556584149599075,
+          0.48255613446235657,
+          0.4070606231689453,
+          0.3383462578058243,
+          0.2829890623688698
+        ],
+        "parameter_count": 3305,
+        "deterministic_algorithms": true,
+        "early_stopping": false,
+        "fit_seconds": 1.087490624981001,
+        "total_seconds": 1.0888509590004105,
+        "cpu_seconds": 1.0778400000000001,
+        "prediction_and_artifact_seconds": 0.0013603340194094926
+      },
+      "latent_mass_projection": {
+        "rows": 1024,
+        "mean_log_loss": 0.2800681253122843,
+        "mean_brier": 0.08149324957653892,
+        "per_rule_log_loss": [
+          0.23388130126282142,
+          0.25923052273268554,
+          0.2856925465976174,
+          0.24099676301973774,
+          0.2502330229643469,
+          0.37170040486111794,
+          0.24070120669378386,
+          0.2664028721075013,
+          0.3717744875709466
+        ],
+        "coherence": {
+          "coherent_fraction": 1.0,
+          "incoherent_rows": 0,
+          "order_violation_rows": 0,
+          "minimum_signed_pattern_mass": -1.1102230246251565e-16,
+          "mean_negative_pattern_mass": 1.2182769001240195e-17,
+          "tolerance": 1e-06
+        }
+      }
+    },
+    "mlp_joint": {
+      "config": {
+        "method": "mlp_joint",
+        "seed": 0,
+        "epochs": 8,
+        "hidden": 32,
+        "learning_rate": 0.003,
+        "batch_size": 512,
+        "hgb_max_iter": 80
+      },
+      "metrics": {
+        "rows": 1024,
+        "mean_log_loss": 0.20084082402232536,
+        "mean_brier": 0.05940312649964089,
+        "per_rule_log_loss": [
+          0.15435662296554056,
+          0.1524035952989137,
+          0.2680439101099927,
+          0.15195586928336285,
+          0.14880483801579888,
+          0.28829158387612924,
+          0.16256198037170314,
+          0.1710836824901364,
+          0.3100653337893505
+        ],
+        "coherence": {
+          "coherent_fraction": 1.0,
+          "incoherent_rows": 0,
+          "order_violation_rows": 0,
+          "minimum_signed_pattern_mass": 1.1839205131539406e-11,
+          "mean_negative_pattern_mass": 0.0,
+          "tolerance": 1e-06
+        }
+      },
+      "training_info": {
+        "config": {
+          "method": "mlp_joint",
+          "seed": 0,
+          "epochs": 8,
+          "hidden": 32,
+          "learning_rate": 0.003,
+          "batch_size": 512,
+          "hgb_max_iter": 80
+        },
+        "source_rows": 2048,
+        "feature_count": 60,
+        "source_training_sha256": "5853f997e27e9c2588c6edfcbd7e8491774aa91f396515849d1ee806d68cdea3",
+        "preprocessing_fit_split": "train",
+        "prediction_kind": "future observer-rule probabilities; not physical truth",
+        "optimizer_updates": 32,
+        "loss": "mean marginal binary cross-entropy across nine rules",
+        "optimizer": "AdamW",
+        "weight_decay": 0.0001,
+        "minibatch_order_sha256": "d7f9af82d3ff4fe59e2d83a5d9d86b636bbd7ed6219f017c775be1afb189aa8d",
+        "train_loss_by_epoch": [
+          0.7835647016763687,
+          0.7374223172664642,
+          0.665831595659256,
+          0.5561991184949875,
+          0.4206610321998596,
+          0.3058612272143364,
+          0.23798011988401413,
+          0.21564263477921486
+        ],
+        "parameter_count": 3338,
+        "deterministic_algorithms": true,
+        "early_stopping": false,
+        "fit_seconds": 0.039021958014927804,
+        "total_seconds": 0.039786667010048404,
+        "cpu_seconds": 0.05217199999999966,
+        "prediction_and_artifact_seconds": 0.0007647089951205999
+      }
+    }
+  },
+  "history": "A first source-only sanity was inspected immediately before adding the requested Markov comparator. It used the identical deterministic sample and fixed schedules; no parameters or endpoint changed. This rerun preserves all six methods and artifacts.",
+  "first_sanity_log_loss": {
+    "persistence": 2.9232045197518466,
+    "source_frequency": 0.6925820438567443,
+    "hgb_history": 0.1373567299597869,
+    "mlp_ind": 0.26857734199497196,
+    "mlp_joint": 0.20084082402232536
+  },
+  "runtime_note": "Sequential shared interpreter includes import/cache warmup differences; these timings are operational checks, not comparative runtime claims."
+}

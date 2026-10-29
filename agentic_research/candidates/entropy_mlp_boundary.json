@@ -1,0 +1,12 @@
+{
+  "id": "entropy_mlp_boundary",
+  "seed": 0,
+  "rule_bank": "nine",
+  "max_train_columns": null,
+  "max_eval_columns": 16,
+  "mlp_epochs": 8,
+  "hidden": 32,
+  "learning_rate": 0.003,
+  "prior": "mlp_boundary",
+  "policy": "entropy"
+}
