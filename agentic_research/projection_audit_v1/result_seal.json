@@ -1,0 +1,5 @@
+{
+  "manifest_sha256": "2f769c3fac347a74777c17760918ab9f4571c2d9f76103d21921f79c3ad96e5f",
+  "results_sha256": "ddc14029867a529000c91fffc2b1b81ba9b79f064125e7e991f6c9348e499c19",
+  "scope": "Same-user integrity, not external attestation"
+}

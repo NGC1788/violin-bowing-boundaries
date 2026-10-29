@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "frozen_unix": 1793294445.366132,
+  "source_hashes": {
+    "agentic_research/projection_audit_v1/solver.py": "04bb2442c0831d4a0d00e21c675bdd1c08a445071ca4ad98a7cb524f57b164a6",
+    "agentic_research/projection_audit_v1/test_runner.py": "f4ef7d248047681f324b082428325db408bc7c69f30dcae1276af75c8ed3d907",
+    "agentic_research/projection_audit_v1/test_solver.py": "d6eaa3f8484e6cb0cdd218873eb600eacc02049c1e502147e2258a2923c1bb1b",
+    "agentic_research/projection_audit_v1/run_audit.py": "f9621988e8d2dc0fa021eade0bab7188bbd0160ab4a664048a04df2c630ce2b2",
+    "agentic_research/projection_audit_v1/protocol.json": "9c1ee74054147f8347dd27f78610902dd4ac30370a2453ae670b157d566d68da",
+    "agentic_research/forecast_v3/coherent_repair.py": "e6c6a1033411a98444fc0cbf2f2494802e4b999e747ec6a85fc712746ebcebb9",
+    "agentic_research/forecast_v3/models.py": "9198bdf06c53a7ec1e979b4e2b1cb9dfd4c29c9bdba6db689dec5fd7d687bd7e",
+    "agentic_research/forecast_v3/rule_patterns.py": "f89334cd1615ff48c2028a179af96cfb3812e3e77559c9dae9cb9a99e91261b6"
+  },
+  "input_hashes": {
+    "agentic_research/forecast_v3/runs/forecast_20261030_v3/8619e9794c32b69aad9d32ffe106e98c85b18399bb24e8db9995dbb16ee71cd1/predictions.npz": "475fe4d07319ead2e4aa5aa3a4c502c31cf4cd16005b22ff4781acbdefa5dc1f",
+    "agentic_research/forecast_v3/runs/forecast_20261030_v3/7e06a46af172e646477d17b964ccba5ee34eec335a9ef7e16c5518e042631c8a/predictions.npz": "5337b9d6b920f5899a955b258d93fa18a28ac31a9e4cf2be7878d39191d88aa6",
+    "agentic_research/forecast_v3/runs/forecast_20261030_v3/21ecaba2047ef632502f8c33e2a337e90dd6d0c5fdf1a24f8382032c0f7904c3/predictions.npz": "4d7d9e792391a1e5507f994f265e8a556d8d562b4a00d048159d9c7d471b26ac",
+    "agentic_research/forecast_v3/runs/forecast_20261030_v3/df6bfa9962f7807dcd69ebad7fd42fd0853ab9f75689dafd61c1866a5a655d96/predictions.npz": "b5203d631a8699e2f17499038da73860acba18b805b7b649bebebb8b4c68b60d"
+  },
+  "prior_snapshot_hash": "436baea6d70821468828c5b092f176ece543d420924267796eda28f45e973587",
+  "scope": "One numerical audit; source/selection locked before sample evaluation; no observed target access."
+}
