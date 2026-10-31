@@ -1,0 +1,16 @@
+{
+  "scope": "Synthetic implementation validation only; no real violin model training or evaluation",
+  "checked_utc": "2026-10-31T06:25:46.304248+00:00",
+  "command": ".venv-mac/bin/python -m pytest agentic_research/violin_raw_v1/test_features.py agentic_research/violin_raw_v1/test_models.py -q",
+  "passed": 19,
+  "reported_seconds": 2.53,
+  "source_sha256": {
+    "features.py": "aa931a3b9eb99fde8eb97a8fd6230bf99deb3facf8b58d16d8f97453e60d64d1",
+    "test_features.py": "65e53e04c5596dda00f6ceabba0a258bae3e1582d9a1ecb56a7afec6bac76b19",
+    "models.py": "1ef41dbf750541c8073fd497113363d1d27ae4e5b8b9f6b2564b7e26bffa3325",
+    "test_models.py": "f616c22c680e6c4c5533d1539342ab55b87ad5ff237a4e15987873bb6123c93b"
+  },
+  "independent_review": "pending",
+  "experiment_frozen": false,
+  "prior_failure": "test collection failed on relative import; fixed before the reported successful test run"
+}

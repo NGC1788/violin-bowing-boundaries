@@ -1,5 +1,7 @@
 # 공동연구 인계 프롬프트 — Claude·Codex·기타 AI 공통
 
+**2026-10-30 추가 인계:** 현재 다음 행동과 로컬 미커밋 작업은 [CLAUDE_NEXT.md](CLAUDE_NEXT.md)에 갱신했다. projection 보완 v2는 이미 완료/종료했고, 저장 MAT 대신 raw WAV에서 시간 지지가 명확한 입력을 만드는 준비 단계다. 아래의 보완 검증 대기·MAT 후속 계획을 그대로 실행하지 않는다. v3 결과와 기존 금지 사항은 유지한다.
+
 당신은 이 저장소의 공동연구자다. 사용자는 미래 예측 AI 연구, 데이터 누수 검증, 공개 바이올린 자료 적용, 여러 AI가 이어갈 수 있는 재현 가능한 자동 루프를 요청했다. 좋은 숫자를 만들기 위해 목표나 평가 조건을 바꾸는 것은 허용하지 않았다.
 
 먼저 저장소의 `agentic_research/START_HERE.md`, `docs/EXECUTION_STATUS.md`, `AGENTS.md`, `forecast_v3/DATA_AUDIT.md`, `forecast_v3/configs/forecast_v3.json`, `forecast_v3/COHERENT_REPAIR_REVIEW.md`, `forecast_v3/violin_data_audit/README.md`를 읽고 실제 status·프로세스·Git 상태를 확인하라. 이 파일에 적힌 진행 상황보다 봉인된 실행 결과와 최신 상태 문서가 우선한다.

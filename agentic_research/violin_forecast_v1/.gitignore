@@ -1,0 +1,6 @@
+local/
+*.lock
+*.npz
+*.npy
+*.mat
+*.log

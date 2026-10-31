@@ -1,5 +1,7 @@
 # 다른 AI·다른 컴퓨터에서 이어가는 방법
 
+**현재 다음 작업(2026-10-31):** [CLAUDE_NEXT.md](CLAUDE_NEXT.md), [실행 현황](docs/EXECUTION_STATUS.md), [raw 특징 감사](violin_raw_v1/RAW_FEATURE_AUDIT.md)를 먼저 읽는다. 아래 v3 명령은 완료된 첼로 비교의 이식/재현 설명이다. 현재 연구의 진행 명령이 아니며 raw 바이올린 실험을 실행하지 않는다. 보정 solver 보완도 이미 종료했다.
+
 현재 연구는 **초기 신호로 미래의 여러 관측 규칙 출력을 예측하는 AI 연구**다. 구현, 테스트, 실행, 신규성 주장을 구분한다. 최신 실제 결과는 `docs/EXECUTION_STATUS.md`를 먼저 읽는다.
 
 공개 브랜치: `research/agentic-forecast-20261030`

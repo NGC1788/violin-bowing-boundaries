@@ -1,0 +1,52 @@
+{
+  "version": "projection_audit_v2",
+  "purpose": "One final label-free numerical adequacy audit of a classical active-set Newton forward Bernoulli-KL solver; not a novel method or prediction benchmark",
+  "sample_size": 64,
+  "selection": "First 64 lexicographic (sha256('projection_audit_v1:'+id), id) pairs; same IDs for all models; no label/score/group stratification",
+  "models": {
+    "hgb_history_s0": "8619e9794c32b69aad9d32ffe106e98c85b18399bb24e8db9995dbb16ee71cd1",
+    "mlp_ind_s0": "7e06a46af172e646477d17b964ccba5ee34eec335a9ef7e16c5518e042631c8a",
+    "mlp_ind_s1": "21ecaba2047ef632502f8c33e2a337e90dd6d0c5fdf1a24f8382032c0f7904c3",
+    "mlp_ind_s2": "df6bfa9962f7807dcd69ebad7fd42fd0853ab9f75689dafd61c1866a5a655d96"
+  },
+  "allowed_npz_members": [
+    "ids",
+    "probabilities",
+    "repaired_probabilities"
+  ],
+  "forbidden": "No targets, prefix labels, row log loss, row Brier, participant/group outcomes, model fitting or observed-label performance recomputation",
+  "solver": {
+    "name": "simplex active-set Newton with vertex admission and Armijo line search",
+    "starts": 1,
+    "max_iterations": 1000,
+    "internal_gap_target": 1e-12,
+    "probability_clip": 1e-06,
+    "mass_floor": 0,
+    "exact_identity": "Already coherent q is returned bitwise unchanged. For q inside the clipping domain, compute objective/gradient/FW gap at actual represented p=w@bank, record reconstruction residual, and never hardcode zero gap. Outside the clip domain record identity with no FW certificate."
+  },
+  "acceptance": {
+    "estimated_fw_gap_max": 1e-08,
+    "feasibility_error_max": 1e-10,
+    "all_10_clipped_losses_max_delta": 0.0,
+    "fallback": "original prediction",
+    "estimated_fw_gap_min": 0
+  },
+  "reports": [
+    "objective",
+    "estimated_fw_gap",
+    "weight_feasibility",
+    "all_10_feasible_target_clipped_losses",
+    "timing",
+    "raw_64_iteration_candidate",
+    "stored_guarded_repair",
+    "reference_candidate_and_guarded_return",
+    "all_failed_cases"
+  ],
+  "interpretation": "Floating-point convex gap and finite-target checks, not exact or interval-arithmetic certification. Reference timing is per-row; old batch timing is not an equivalent throughput comparison. No best-model conclusion from this audit.",
+  "budget": {
+    "max_seconds": 600,
+    "max_audit_runs": 1
+  },
+  "end_date": "2026-11-06T00:00:00+09:00",
+  "after_completion": "Stop regardless of outcome. No third projection audit; return to violin future prediction."
+}

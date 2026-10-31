@@ -1,0 +1,9 @@
+local/
+*.lock
+*.npz
+*.npy
+*.wav
+*.rar
+*.part
+*.tmp
+*.log
