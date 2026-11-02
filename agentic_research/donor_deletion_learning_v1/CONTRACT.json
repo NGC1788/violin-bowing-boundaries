@@ -1,0 +1,164 @@
+{
+  "status": "REQUIRES_INDEPENDENT_REVIEW_THEN_SOURCE_BINDING",
+  "model_config": {
+    "status": "PROPOSED_NOT_EXECUTION_APPROVED",
+    "scope_now": "synthetic preparation, no actual fits",
+    "methods": [
+      "retrieval_erm",
+      "retrieval_random_delete",
+      "retrieval_adversarial_delete",
+      "retrieval_query_group_dro"
+    ],
+    "future_blocks": [
+      23,
+      23
+    ],
+    "future_frames": 46,
+    "minimum_voiced": 23,
+    "input_dimension": 73,
+    "prefix_features": "60 clipped normalized summaries + 11 inner-train-threshold prefix-state indicators + 2 unclipped normalized log1p prefix moments",
+    "hidden_width": 32,
+    "hidden_layers": 2,
+    "activation": "GELU",
+    "regimes": 2,
+    "generator": "shared latent mixture; separately predicted future initial-mask logits; per-block binary transition rows; per-channel zero-sum block contrast; per-channel scale; future level integrated out in projected contrast likelihood",
+    "scale_range_normalized_units": [
+      0.05,
+      3.0
+    ],
+    "contrast_bound_normalized_units": 3.0,
+    "mask_probability_epsilon": 0.0001,
+    "mdn_log_std_location_bound": 5.0,
+    "mdn_log_std_scale_range": [
+      0.05,
+      3.0
+    ],
+    "loss": "method-specific memory event loss +0.1*unchanged common projected-path/mask auxiliary",
+    "auxiliary_weight": 0.1,
+    "probability_clipping": 1e-06,
+    "optimizer": {
+      "name": "AdamW",
+      "learning_rate": 0.001,
+      "weight_decay": 0.001,
+      "gradient_norm_clip": 5.0
+    },
+    "epochs": 40,
+    "batch_size": 64,
+    "seed": 0,
+    "dtype": "CPUfloat64",
+    "stopping": "fixed epochs, no held-source stopping or best-epoch selection; budget/NaN/integrity failures preserved",
+    "source_folds": "existing source34 people/1442 recordings,3folds; historically exposed exploratory",
+    "maximum_actual_jobs_if_later_frozen": 12,
+    "max_seconds_per_job": 180,
+    "max_seconds_per_batch": 1800,
+    "deadline_kst": "2026-11-06T00:00:00+09:00",
+    "primary_score": "participant-macro mean9query clipped log loss, include invalid15rows; same source folds/threshold provenance as prior baseline",
+    "promotion_screen": "at least2percent lower primary score than strongest Markov/HGB baseline and improvement in at least2of3folds; exploratory only; all controls/failures reported",
+    "baseline_recheck": "future runner must match saved source Markov/HGB evaluation with inner-train preprocessing before new comparative claims",
+    "new_training_allowed_now": false,
+    "new_math_audits_allowed": false,
+    "old_dev_test_truth_access_allowed": false,
+    "path_label_normalization": "inner-train pooled within-record contrast scale; no between-note level variance; future centering is labels only, never inference input",
+    "invariance_scope": "auxiliary target likelihood conditional on fixed future mask is invariant to per-record per-channel constant shifts; not a claim of raw audio or network-input invariance",
+    "retrieval_prior_mass": 0.01,
+    "retrieval_temperature": 0.25,
+    "retrieval_group_count_correction": true,
+    "random_delete_policy": "uniform over null plus eligible donor groups, independent seeded RNG",
+    "query_group_dro_eta": 0.01,
+    "query_group_dro_policy": "exp-weights updated after each shuffled minibatch using importance-scaled group risk estimates; no conditionally unbiased adaptive-oracle claim; primary BCE only, common auxiliary remains person macro"
+  },
+  "expected_rows": 1442,
+  "expected_people": 34,
+  "expected_invalid": 15,
+  "fold_rows": [
+    510,
+    465,
+    467
+  ],
+  "fold_people": [
+    12,
+    11,
+    11
+  ],
+  "pinned_path_results_sha256": "1ecbdc1b0b97168594e2ae0c64d27a43748c2a7b8f7af677a32c14e8ba0a9451",
+  "pinned_discovery_results_sha256": "dfc38a89b0e077eaaf9ec60aa47e2afd4660db7ce82fc5b2d8fe8d1590929f3f",
+  "max_jobs": 12,
+  "max_job_seconds": 180,
+  "max_worker_seconds": 1800,
+  "deadline_kst": "2026-11-06T00:00:00+09:00",
+  "log_every_epochs": 10,
+  "eval_chunk_size": 64,
+  "job_order": [
+    {
+      "fold": 0,
+      "method": "retrieval_erm"
+    },
+    {
+      "fold": 0,
+      "method": "retrieval_random_delete"
+    },
+    {
+      "fold": 0,
+      "method": "retrieval_adversarial_delete"
+    },
+    {
+      "fold": 0,
+      "method": "retrieval_query_group_dro"
+    },
+    {
+      "fold": 1,
+      "method": "retrieval_erm"
+    },
+    {
+      "fold": 1,
+      "method": "retrieval_random_delete"
+    },
+    {
+      "fold": 1,
+      "method": "retrieval_adversarial_delete"
+    },
+    {
+      "fold": 1,
+      "method": "retrieval_query_group_dro"
+    },
+    {
+      "fold": 2,
+      "method": "retrieval_erm"
+    },
+    {
+      "fold": 2,
+      "method": "retrieval_random_delete"
+    },
+    {
+      "fold": 2,
+      "method": "retrieval_adversarial_delete"
+    },
+    {
+      "fold": 2,
+      "method": "retrieval_query_group_dro"
+    }
+  ],
+  "baseline_policy": {
+    "markov": "reuse sealed source all_predictions, new fits0",
+    "hgb": "reuse sealed source all_predictions, new fits0",
+    "joint_aux_and_mdn_aux": "reuse same sealed source all_predictions, historical controls not newly refitted",
+    "expected_score_tolerance": 1e-12,
+    "representation": "HGBraw60clip8 vs all neural73derived; retrieval encoder/generator and supervision match previous neural shared components; retrieval has private innertrain inference memory whereas parametric references do not"
+  },
+  "failure_policy": "first job failure/timeout stops entire batch; preserve partialweights/predictions/receipts; no promotion of incomplete batch",
+  "evaluation": "all12 full-memory and every donor-counterfactual prediction parent-pinned before any held event scoring; full-memory primary; deletion risk secondary only among four new retrieval arms",
+  "refitting_or_external_weights": false,
+  "new_math_audits": false,
+  "old_dev_test_truth_access": false,
+  "public_outputs": "aggregates/code/hashes only; row/people predictions/weights/traces private",
+  "fitting_authority": "FREEZE.json execution_authorized=true plus active atomic job registration; embedded model_config false flags retain preparation provenance",
+  "budget_clock": "parent child-process per-job watchdog and whole-worker SIGALRM; teardown grace2s is charged and cannot produce successful overbudget job",
+  "pinned_parent_results_sha256": "66dbf1b1cc109a6de53a10938d55bee57a403df4b3300d06e30dfbb3f2ea7bd0",
+  "prospective_choices": {
+    "rho_0.01": "fixed uniform10pattern regularization avoids1e-6 clipping dead region, not a learned-support guarantee",
+    "temperature_0.25": "bounded cosine scores in[-4,4], fixed conventional metric scale, not data-selected",
+    "group_count_correction": "each donor contributes average exp-score rather than number of recordings",
+    "query_dro_eta_0.01": "fixed small exp-gradient rate; no tuning",
+    "unchanged_40epochs_seed0_optimizer_aux": "retain previous shared training settings and initialization for historical correspondence"
+  }
+}

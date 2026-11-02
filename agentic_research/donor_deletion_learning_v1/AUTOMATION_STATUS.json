@@ -1,0 +1,10 @@
+{
+  "automation_id": "ai",
+  "status": "ACTIVE",
+  "interval_minutes": 30,
+  "saved_prompt_matches": true,
+  "prompt_sha256": "00735bc28058cdf8398bd32a6555eacf74136ed60bb2d06b76faa75181f93340",
+  "existing_automation_updated_not_duplicated": true,
+  "recorded_utc": "2026-11-02T16:56:39.624315+00:00",
+  "next_task": "Run fixed12fits once aftercheck and absenceofstate/otherworker, not repeat preparation"
+}

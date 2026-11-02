@@ -1,5 +1,7 @@
 # 활현 AI 연구: 재현 가능한 미래 예측과 에이전트 루프
 
+**최신(2026-11-03 전체동결완료):** [donor deletion](donor_deletion_learning_v1/README.md)의28합성기능시험·별도코드검토뒤7source입력/27소스/실행계약을동결했다. 실제새학습0건이며다음은**고정12fit의한번실행**이다. `...donor_deletion_learning_v1.runner check`뒤state/다른worker가없을때만run한다. 준비/서면선택/이전STOP배치를재실행하지않는다. [준비결과](donor_deletion_learning_v1/PREPARATION_RESULT.json). 성능/높은novelty는아직미입증이다.
+
 **최신(2026-11-03 방법 선택):** 3후보/직접선행6개대조로 **donor그룹삭제의최악손실로검색가중치를학습하는가설B** 하나를코드준비후보로남겼다. Scale수정과기존meta-TTA전용은주방법후보기각. [판단](method_redesign_v1/DECISION.md), [수식/대조](method_redesign_v1/METHOD.md). 아직높은novelty/성능은미입증이며이번서면단위실제학습·자료열람0이다. 다음은[코드·누수검사·별도검토·실행계약준비](method_redesign_v1/NEXT_PREPARATION_GATE.md)이고이준비에서학습하지않는다. 이전exact12개는STOP이다.
 
 **최신(2026-11-03 실행 완료):** 고정12학습·독립검토를마쳤고 `exact_count_runner_v1`은 **STOP**이다. Markov0.542081 대joint0.541763(+0.0586%)로2%screen미달, exact3.029807/moment1.924280도실패했다. exact는정규화/고정잡음하한때문에9질의중6개의주BCE기울기가0인설계결함을확인했다. [실제결과](exact_count_runner_v1/RESULTS.md), [독립검토](exact_count_runner_v1/EXECUTION_REVIEW.json). 같은batch를재개하지않는다. 다음은 [별도AI방법론서면검토](exact_count_runner_v1/NEXT_METHOD_GATE.md)이며이번단위새학습/NPZ열람0, 남은학습2batch·추가수치감사0이다. 아래실행대기는과거이력이다.

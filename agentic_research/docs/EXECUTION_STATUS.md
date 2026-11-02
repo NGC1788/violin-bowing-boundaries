@@ -1,5 +1,13 @@
 # 실제 실행 현황 — 2026-10-30
 
+## 2026-11-03 donor deletion 실행 준비·전체동결 완료
+
+`donor_deletion_learning_v1`의28합성기능시험·별도코드검토를완료했다. 검토가요구한사건빈도/entropy/저장·inference memory비용과DRO근사표현·trace구분을보완했고,stale검토해시가실제입력열람전에차단되는것도확인후재검토했다. 승인뒤7source입력의동일성/34명1442개·invalid15개/행정렬·목표·guard를검증하고27소스/환경/전체계약을동결했다. [준비결과](../donor_deletion_learning_v1/PREPARATION_RESULT.json), [코드/규약](../donor_deletion_learning_v1/README.md). 실제새fit0·참조fit0·실제forward0·추가수치감사0·다운로드0·olddev/test정답열람/hash0이다. 동결뒤별도검토도27소스/7입력/검토·시험·영수증의불일치0건이었다. [동결검토](../donor_deletion_learning_v1/FREEZE_REVIEW.json). 자동화ai는고정실행단계로30분ACTIVE·저장프롬프트일치를확인했다. [설정기록](../donor_deletion_learning_v1/AUTOMATION_STATUS.json).
+
+**다음 한 작업은고정12개실제학습:** `.venv-mac/bin/python -m agentic_research.donor_deletion_learning_v1.runner check`로전체동결을확인한뒤state/다른worker가없을때만 `...runner run`을한번시작한다. 네retrieval목적×3fold,40epoch/batch64/seed0/CPUfloat64,job180초/worker1800초/첫실패STOP이다. 기존Markov/HGB/joint_aux/mdn_aux봉인예측은재사용하며새참조fit0. Parent가fullmemory와모든donor반사실예측·가중치·trace·stats·memory·영수증72개산출물을고정하고all12 OUTPUT_SEAL뒤에만held사건을평가한다. 실제학습비용은미검증이며합성시험시간으로예상하지않는다.
+
+이미state가있으면같은batch를다시시작하지않고RUNNING은실제process/lock을확인해관찰만하며완료/실패는결과검토로넘어간다. orphan/중단도소비된시도로남긴다. Epoch/seed/prior/temp/학습률/기준을바꾸어구조하지않는다. 새방법성공/높은novelty/독립확증은아직미입증이다. 아래준비선점/서면검토다음단계는완료이력이다.
+
 ## 2026-11-03 새 AI 학습 가설 선택: 제공자 삭제에 강건한 검색
 
 `method_redesign_v1`에서3후보·직접선행6개를대조했다. A(scale/σ하한수정)와C(prefix-only meta적응)는기존학습원리를넘는차이가없어주방법후보로기각했다. B는**query별기억에서donor한명의원자를함께삭제한최악9query손실로검색encoder를학습**하는가설로좁혔다. [선택결과](../method_redesign_v1/DECISION.md), [목적식/반박조건](../method_redesign_v1/METHOD.md), [직접선행](../method_redesign_v1/PRIOR_REVIEW.md). 신규성/성능성공은아직아니며실제 fitting/forward/NPZ·행별자료열람·hash/다운로드/standalone수치감사0. 이전exact12개결과와STOP은보존했다. 독립반박검토도JUSTIFIED_TO_PREPARE·blocker0으로완료했고,금지된held정답과허용memorylabel의구분·retrieval만의삭제risk·반사실예측사전봉인을보완했다. [검토기록](../method_redesign_v1/REVIEW.json). 기존자동화ai는새준비단계로30분ACTIVE·저장프롬프트일치를확인했다. [설정기록](../method_redesign_v1/AUTOMATION_STATUS.json).

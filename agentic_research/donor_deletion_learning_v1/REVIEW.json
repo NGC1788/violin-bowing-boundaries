@@ -1,0 +1,143 @@
+{
+  "review_kind": "independent adversarial pre-input source/code/contract review",
+  "reviewer": "execution_final_review",
+  "recorded_utc": "2026-11-02T16:53:55.644828+00:00",
+  "verdict": "APPROVE_TO_FREEZE_SOURCE_INPUTS",
+  "blockers": [],
+  "authorization_scope": "Only bind the seven allowlisted original-source inputs and identities after this approval. No fitting in this preparation unit. Actual fitting requires the subsequent separately frozen execution unit and existing bounded registration. No old dev/test input access.",
+  "source_sha256": {
+    "agentic_research/exact_count_runner_v1/AGENTS.md": "6c8cc3cba4135194cfb22c91592f651d6c4947a029c6a75add94c60e3fa8b711",
+    "agentic_research/exact_count_runner_v1/CONTRACT.json": "734d254b2c9728a384322db266d825e94c54f59065f9e165f196764c81e3b02c",
+    "agentic_research/exact_count_runner_v1/data.py": "c1792d15db470d64aa2d2cf3db0bf257839cf624eb59972526961b6abdcfcfce",
+    "agentic_research/exact_count_runner_v1/control.py": "9771f87238dbbb5c1244ba82bce76d182f9335d6193284585b530f6dc6b8f1af",
+    "agentic_research/exact_count_runner_v1/job.py": "36703428f468c39bdaaa93561cce547a8d55297be2db8c1fd3dfd011d4ff2fdc",
+    "agentic_research/exact_count_runner_v1/runner.py": "9858fd5a6a55c8ef992e0ebee5496c93b6b5bfa2bef5f3bbab08f1d46aa083d1",
+    "agentic_research/exact_count_runner_v1/test_runner.py": "1367de1effe300ef2a7e9ec2c025f3faa5c2f883e282a4db1b9c9dd49223f0a2",
+    "agentic_research/exact_count_learning_v1/AGENTS.md": "d4726c59eb35c511dcd6f6272cb5ab5550a45b1bf44afd26ee947ec9f2b66637",
+    "agentic_research/exact_count_learning_v1/CONTRACT_PROPOSAL.json": "0c02133a9385b3ef91fd2acdb7597931abf0d2b7ff0128d88f348648cb360d51",
+    "agentic_research/exact_count_learning_v1/model.py": "0edb31a422d5987bb47a02036b837a009447281469ec8a2cc3cb05484f3cf5a1",
+    "agentic_research/exact_count_learning_v1/preprocess.py": "9c131ddc96bb8150f454b452b97edc91519e0dc98c274c47468545cd554d26f3",
+    "agentic_research/exact_count_learning_v1/test_model.py": "3516d9b9c1094d87d3ade0f0f4c913d4b532da4dfde9f298cdbdbcfa38b9ad34",
+    "agentic_research/exact_count_learning_v1/INVARIANT_OBJECTIVE.md": "c0ce9fd38bc4a20f3c2032dbed2f77d0064550257271babb6ebde0ba7fb66a31",
+    "agentic_research/exact_count_learning_v1/readiness.py": "7fd80e7b60ea91906344c45b30f1dd79cf49e9552807a0a1a7974515b69c88e8",
+    "agentic_research/discovery_v3_math/decoder.py": "8383d9b8ce68203800fc730eb5bf8a0f1a1908f874eff12054369e9a2f957824",
+    "agentic_research/violin_raw_v1/data.py": "79b3d1c997741d82fe560f9ec12842f3889441be24fde7434833c8b6ccbf3c3d",
+    "agentic_research/violin_raw_v1/models.py": "1ef41dbf750541c8073fd497113363d1d27ae4e5b8b9f6b2564b7e26bffa3325",
+    "agentic_research/violin_raw_v1/metrics.py": "7e2e0d394562ad45a83ce14ee3def71e70f10e679f006855cee25295162e6369",
+    "agentic_research/donor_deletion_learning_v1/.gitignore": "04e59f5cc75e578a7492cd2c14ddf16487d1af09e188a7cc01224a61b1b3855f",
+    "agentic_research/donor_deletion_learning_v1/AGENTS.md": "35da687bdecd5cfe2e408faff936e3945075dd4ae99d3068a8063d5208a35f47",
+    "agentic_research/donor_deletion_learning_v1/CONTRACT.json": "13b7e26d1bd7c49c736cdf699e30b8dcc3dd32ce95cda6bb624d0b7bf83a7370",
+    "agentic_research/donor_deletion_learning_v1/model.py": "b9efe8ea4cd91b93e61cfc9277f99a62fdc22ae695f51b07c6545888dddc2e52",
+    "agentic_research/donor_deletion_learning_v1/data.py": "74bf5bb1a61638d57911a4fca445b581391d8ae3c716320e23a295a4e05414fa",
+    "agentic_research/donor_deletion_learning_v1/control.py": "2d46f5107e642948be754eb1baeb2ec2da0de05d33c4ff062d84166aae41765b",
+    "agentic_research/donor_deletion_learning_v1/job.py": "4ade3b0e3ac2bc8dade8b4fe7c134bb6f4edfdd603f570de220aa59454aa9203",
+    "agentic_research/donor_deletion_learning_v1/runner.py": "50bb90aaa76cee1050e4cb62963c358c7895afe2ff43e7e2f3f62beb73ffae49",
+    "agentic_research/donor_deletion_learning_v1/test_runner.py": "7317541e68098469559e7b8b4bd9260f26e16116b75ce0719d24d8b5a82a4152"
+  },
+  "source_map_sha256": "efe6f5e72d1b55523679e2071305a284aa8c33dfd85feb05ef00336f07dfb73e",
+  "contract_sha256": "13b7e26d1bd7c49c736cdf699e30b8dcc3dd32ce95cda6bb624d0b7bf83a7370",
+  "method_document_sha256": "0003db617071d099347845ea79a0815cfc25eb014a80aa959e2bec2550295683",
+  "method_review_sha256": "fa5eaca4a45d3a3e4dd5479340a69fadcd532f568e14be06bf7155bd82faa6a2",
+  "parent_frozen_source_hashes_match": true,
+  "reviewed_menu": {
+    "objectives": [
+      "retrieval_erm",
+      "retrieval_random_delete",
+      "retrieval_adversarial_delete",
+      "retrieval_query_group_dro"
+    ],
+    "folds": 3,
+    "jobs": 12,
+    "seed": 0,
+    "epochs": 40,
+    "batch_size": 64,
+    "encoder": "73 inputs,32 hidden width,two GELU layers; shared encoder/generator initialization and projected-path/mask auxiliary identical to frozen parent shared components",
+    "memory": "fold innertrain prefixes and attainable ten-pattern labels only; training query excludes every record from its own person; held query uses only training donors",
+    "score": "shared cosine /0.25 with donor-record-count log correction, equivalent to donor-average exp-score mass",
+    "uniform_ten_pattern_prior_mass": 0.01,
+    "random_deletion": "uniform over null plus eligible donors; independent seeded generator",
+    "adversary": "per-query maximum of mean9 event loss over null and one common donor removal; null-first deterministic tie order",
+    "query_group_dro": "eta0.01 exponential weights, shuffled-minibatch importance-scaled primary-risk estimate; auxiliary remains person macro",
+    "optimizer": {
+      "name": "AdamW",
+      "learning_rate": 0.001,
+      "weight_decay": 0.001,
+      "gradient_norm_clip": 5.0
+    },
+    "auxiliary_weight": 0.1,
+    "references": "reuse sealed Markov,HGB,joint_aux,mdn_aux forecasts; zero new reference fits",
+    "inputs": "three sealed path-source NPZs,three sealed historical HGB prediction NPZs,and sealed parent source all_predictions NPZ; seven inputs only",
+    "bounds": {
+      "job_seconds": 180,
+      "worker_seconds": 1800,
+      "first_failure_stops": true,
+      "no_resume_or_rescue": true,
+      "deadline_kst": "2026-11-06T00:00:00+09:00"
+    }
+  },
+  "review_findings": {
+    "deletion_math": "Group logsumexp and within-group conditional averages reproduce direct remaining-key normalization without subtraction of near-equal masses. Every query event vector removes the same donor. Same-person mass is masked before normalization; deleting an already excluded own donor is an ineligible duplicate null.",
+    "proper_score_and_prior": "All arms use the same coherent ten-pattern distribution and uniform prior; event marginals lie within the common loose interval[.001,.999], safely inside the1e-6 clip. Each fixed forecast has mean9 proper binary log loss. Worst-deletion and DRO objectives are robust training objectives, not ordinary calibration guarantees. Missing raw atom support remains reported and the prior does not restore a learnable absent-event direction.",
+    "query_group_dro": "participant_weights=N/(G*n_g) and multipliers=G*softmax(logweights)_g give primary per-record weight N*q_g/n_g. The update sums detached primary losses and scales by N/(batch_size*n_g); it is a shuffled-minibatch estimate, not a conditionally unbiased adaptive full-data oracle. Current source and contract explicitly qualify that limitation. Auxiliary receives no DRO multiplier.",
+    "leakage": "Every supervised array is sliced to innertrain before fitting statistics/thresholds. prediction_inputs touches only held prefix. Training memory is built only from innertrain and excluded-own-group prediction has zero same-person label/score effect. Eligible memory labels and supervised query labels correctly affect predictions or loss/gradients in positive controls.",
+    "historical_correspondence": "Child and evaluation paths enforce frozen-parent preprocessing, shared initialization and minibatch-order hashes. New retrieval arms additionally match memory hashes. Parent source hashes were independently checked against its public frozen map. Historical heads remain reused references with different heads/deployment memory resources, not newly trained matched controls. Current metadata_check additionally verifies all18 parent frozen source hashes against disk; synthetic constructor test additionally matches public historical initialization hashes.",
+    "output_sealing": "Parent pins each of12 receipts plus predictions,weights,trace,stats,memory:72 artifacts. Prediction schema covers full-memory and all ordered donor counterfactuals, group mass/support/DRO state. The once-only OUTPUT_SEAL is verified before the first held event-label operation and again after scoring. Held-label worst-donor selection is secondary post-seal scoring only.",
+    "budget_and_failure": "Atomic canonical ledger consumes starts/failures and rejects another running campaign. Parent per-job process ownership and whole-worker SIGALRM cleanup preserve kill/reap responsibility across pending alarms. Launch/loading/checkpoint/pinning/evaluation are charged; first failure closes batch without promotion. Frozen request config/fold/method identity is enforced.",
+    "evaluation": "Full-memory participant-macro loss is primary. Existing2percent Markov/HGB and2fold screen is retained; operator screen additionally requires advantage over ERM/random deletion in overall loss and at least2folds. Query-DRO comparison is separately retained. Event frequencies/losses, invalid versus valid-all-zero groups, donor concentration/entropy/effective count, support deficits and actual memory/artifact/inference costs are preserved.",
+    "privacy": "Seven source inputs are explicitly allowlisted. No raw reprocessing/download/dev-test access. .gitignore excludes local memory,weights,rows,traces,tokens/logs; ignore behavior was checked using path strings only."
+  },
+  "resolved_pre_freeze_findings": [
+    "Added record/person-macro event frequencies, donor entropy, storage costs and full-plus-counterfactual inference time required by the written method.",
+    "Removed unqualified unbiased full-data risk claim for adaptive shuffled-minibatch query-group DRO.",
+    "Separated person-macro primary trace diagnostic from optimized primary including DRO multipliers."
+  ],
+  "synthetic_validation": {
+    "independently_executed": true,
+    "passed": 28,
+    "failed": 0,
+    "pytest_reported_seconds": 1.9,
+    "command": "PYTHONDONTWRITEBYTECODE=1 .venv-mac/bin/python -m pytest --import-mode=importlib -p no:cacheprovider -q agentic_research/donor_deletion_learning_v1/test_runner.py",
+    "scope": "Synthetic arrays,model forward/backward,functional controller/seal checks. The training-failure test replaces AdamW with a step that raises before any update; no actual optimizer fitting occurred."
+  },
+  "limitations": [
+    "Actual input bytes/identity alignment and runtime feasibility are not yet verified; this review authorizes only their subsequent source-input binding.",
+    "No accuracy, donor mechanism, novelty, calibration or generalization claim is approved. Source34people are historically exposed exploratory folds.",
+    "The learning operator instantiates established weighted retrieval,minimax deletion and exponential weighting; composition alone does not establish high novelty.",
+    "Same forward deletion menu is computed for all arms; backward work differs, so equal FLOPs are not established.",
+    "Query-specific worst-donor risk is not deletion of one shared donor across the population. Held labels select worst donors only after sealed forecasts, and this risk is not the issued forecast.",
+    "Operator screen excludes query-group-DRO from its Boolean conjunction but retains that comparison; failure to beat that control weakens donor-side necessity even if the narrower screen passes.",
+    "Entropy or a finite prior alone does not demonstrate useful forecasts or missing-support learnability.",
+    "Historical HGB representation and parametric heads/inference resources differ; infer the deletion operator effect primarily from the matched new retrieval arms.",
+    "Training traces are online changing-model averages with objective-specific primary losses; they are not endpoint fitted-training scores."
+  ],
+  "review_actions": {
+    "public_source_method_contract_metadata_read": true,
+    "code_text_hashes_computed": true,
+    "actual_NPZ_raw_row_person_or_weights_opened_or_hashed": false,
+    "real_model_fitting_or_forward": false,
+    "actual_optimizer_updates": false,
+    "downloads": false,
+    "standalone_numerical_audit": false,
+    "old_dev_test_truth_access_or_hash": false,
+    "frozen_or_root_source_files_modified": false,
+    "only_written_artifact": "donor_deletion_learning_v1/REVIEW.json"
+  },
+  "revision_history": [
+    {
+      "prior_review_sha256": "b707adebbbb7f8bfebe1b0743540d73047783429bde38ef1ab5ae93039b30178",
+      "prior_source_map_sha256": "edaa2d330ba2460674831111397521d10e93f87eb41f6286bbe32ff518e31bae",
+      "changed_sources": {
+        "agentic_research/donor_deletion_learning_v1/runner.py": {
+          "prior": "878295f38d5d3dee881bd0c4a9115e64a05e58ad577d7332094ae0cc33bc22f3",
+          "current": "50bb90aaa76cee1050e4cb62963c358c7895afe2ff43e7e2f3f62beb73ffae49"
+        },
+        "agentic_research/donor_deletion_learning_v1/test_runner.py": {
+          "prior": "4ec77ddfef3170d7f676bb6ee608fb0993b93636b8ddbf9a3aba98114c92b756",
+          "current": "7317541e68098469559e7b8b4bd9260f26e16116b75ce0719d24d8b5a82a4152"
+        }
+      },
+      "reason": "Reviewed two final pre-input hardening changes: metadata_check validates every frozen parent source byte hash, and synthetic shared-initialization test matches public historical result hashes. Existing source-binding gate halted before any actual input access. No recipe/model changes.",
+      "independent_current_synthetic_tests": "28 passed in1.90s; no cacheprovider; no actual data or optimizer updates."
+    }
+  ]
+}

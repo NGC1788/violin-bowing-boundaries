@@ -1,0 +1,14 @@
+{
+  "rows": 1442,
+  "people": 34,
+  "invalid_retained": 15,
+  "fold_rows": [
+    510,
+    465,
+    467
+  ],
+  "source_ids_order_sha256": "4754612f7f7667c3e8b161f68a1e0aa701dd7c380831399fa099fe91c9eb95df",
+  "guard_and_continuous_targets_reconstructed": true,
+  "actual_fitting_jobs": 0,
+  "old_dev_test_truth_accessed_or_hashed": false
+}
