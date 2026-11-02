@@ -1,0 +1,28 @@
+{
+  "source_sha256": {
+    "agentic_research/path_source_gate_v1/AGENTS.md": "202f264db1efb0bfa6729c4c449c9f65829e472749603e165f0e6be69f8f97ee",
+    "agentic_research/path_source_gate_v1/PLAN.json": "298d8d50f7c0052aaf6939d42216167fabe81f43073073420c9753aca04c6a7d",
+    "agentic_research/path_source_gate_v1/core.py": "127ca8719fbf472182e290401d60dc341ea27253d21cacbdd95ee973401ebf41",
+    "agentic_research/path_source_gate_v1/runner.py": "b0618b883f3bc5b812b76ac55ef46b7131084946853341700215c1f30aa51aba",
+    "agentic_research/path_source_gate_v1/test_gate.py": "263229001c42d5244f11ad16a63504c57cccffb95d8e4975a929e1d57c4809f8",
+    "agentic_research/discovery_v1/data.py": "68ffec0e0f908b5e1eae0d589831d7dceb35c9791360fc17e769752f079234d2",
+    "agentic_research/violin_raw_v1/features.py": "aa931a3b9eb99fde8eb97a8fd6230bf99deb3facf8b58d16d8f97453e60d64d1",
+    "agentic_research/violin_raw_v1/prepare.py": "5f27e6d753a7526b8fe5912151fbc8436053d4487e512c2be6b297f0be208b10",
+    "agentic_research/violin_raw_v1/data.py": "79b3d1c997741d82fe560f9ec12842f3889441be24fde7434833c8b6ccbf3c3d",
+    "agentic_research/violin_raw_v1/inventory.py": "06811e7c3b810f0b13dbc0a7bae1160688bd970a3f39d5aaab86e4620d2ef64b",
+    "agentic_research/violin_raw_v1/models.py": "1ef41dbf750541c8073fd497113363d1d27ae4e5b8b9f6b2564b7e26bffa3325"
+  },
+  "command": ".venv-mac/bin/python -m pytest --import-mode=importlib -q agentic_research/path_source_gate_v1/test_gate.py",
+  "passed": 11,
+  "failed": 0,
+  "recorded_utc": "2026-11-02T13:31:51.650594+00:00",
+  "history": [
+    "Initial pytest collection without --import-mode=importlib failed because namespace package relative imports had no known parent; no data preparation or scientific audit ran.",
+    "9 synthetic tests passed before the old-source integrity binding addition.",
+    "9 synthetic tests passed on the latest reviewed source.",
+    "Independent review found cached-sequence receipt provenance insufficient; before any freeze/run, pinned the historical V1 result, bound receipt/freeze/prepared links, and added two adversarial tests. 11/11 latest synthetic tests passed (see returned command output for measured seconds)."
+  ],
+  "actual_data_accessed": false,
+  "receipt_kind": "root-recorded test output, not an independent attestation",
+  "latest_passed_seconds": 1.18
+}

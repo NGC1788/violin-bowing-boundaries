@@ -1,0 +1,37 @@
+{
+  "sources": {
+    "agentic_research/path_source_gate_v1/AGENTS.md": "202f264db1efb0bfa6729c4c449c9f65829e472749603e165f0e6be69f8f97ee",
+    "agentic_research/path_source_gate_v1/PLAN.json": "298d8d50f7c0052aaf6939d42216167fabe81f43073073420c9753aca04c6a7d",
+    "agentic_research/path_source_gate_v1/core.py": "127ca8719fbf472182e290401d60dc341ea27253d21cacbdd95ee973401ebf41",
+    "agentic_research/path_source_gate_v1/runner.py": "b0618b883f3bc5b812b76ac55ef46b7131084946853341700215c1f30aa51aba",
+    "agentic_research/path_source_gate_v1/test_gate.py": "263229001c42d5244f11ad16a63504c57cccffb95d8e4975a929e1d57c4809f8",
+    "agentic_research/discovery_v1/data.py": "68ffec0e0f908b5e1eae0d589831d7dceb35c9791360fc17e769752f079234d2",
+    "agentic_research/violin_raw_v1/features.py": "aa931a3b9eb99fde8eb97a8fd6230bf99deb3facf8b58d16d8f97453e60d64d1",
+    "agentic_research/violin_raw_v1/prepare.py": "5f27e6d753a7526b8fe5912151fbc8436053d4487e512c2be6b297f0be208b10",
+    "agentic_research/violin_raw_v1/data.py": "79b3d1c997741d82fe560f9ec12842f3889441be24fde7434833c8b6ccbf3c3d",
+    "agentic_research/violin_raw_v1/inventory.py": "06811e7c3b810f0b13dbc0a7bae1160688bd970a3f39d5aaab86e4620d2ef64b",
+    "agentic_research/violin_raw_v1/models.py": "1ef41dbf750541c8073fd497113363d1d27ae4e5b8b9f6b2564b7e26bffa3325"
+  },
+  "inputs": {
+    "prefix_features": "97182f023acaabc50d8fa2c9f41581864288e6b26bf111ceaef7a166ec538e23",
+    "train_labels": "c0d821dbeafade8a749ce2cde5cc99852b5bfc7a4d37cfc215b6fe7620030258",
+    "source_prepared": "72dfbb0437009e4851e5a1f74e07ca4c51f6b7cc0e4aa770bd67e11d9c67c25b",
+    "source_receipt": "6e12b31b42d7cc737f87eaa1ebc1991ee68788e9be36c8e1c92bda99699bd8c1",
+    "source_result": "dfc38a89b0e077eaaf9ec60aa47e2afd4660db7ce82fc5b2d8fe8d1590929f3f",
+    "source_seal": "8cd3def9695bf0e7eb6888017b24962d464810787b753e54d57f567257fd9445",
+    "source_freeze": "2067d0336b0f9feb0e8b95dd7023176251197f0bdf942bc19d1275c2ebc50bc4",
+    "old_execution_manifest": "e23ebe938134885ae132ec57913f02ea9ef7cc0b20091154339c5aeda8c98cec",
+    "old_data_manifest": "383c081891fd67fee670809c969bb06aa224f4f5375848f0715eae8d725f172b",
+    "partition_receipt": "bf6fc787c4d7e16e6105842564c9b0045aeb92e2cdadccf54d6523aca44cb06c",
+    "inventory_metadata": "70b1c9bcde26f4618f8223952a76642935d5a9e2b705ccf2bbf50a55afe59f0b"
+  },
+  "versions": {
+    "python": "3.11.15",
+    "numpy": "2.4.6"
+  },
+  "review_sha256": "acf29427736ea422f40b77a8355b79ba7f2143c91dc3e68d0be3f4bb164e2a9b",
+  "tests_sha256": "a5c09f8f7c6666bba6bd224dbca1a5e227486dc3de7cb4d035931bfef093a7e5",
+  "scope": "one source-only future-path preparation and mask coverage audit; no training",
+  "deadline_kst": "2026-11-06T00:00:00+09:00",
+  "raw_identity": "each selected source WAV checked against frozen inventory PCM identity at read time"
+}

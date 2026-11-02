@@ -1,5 +1,7 @@
 # 다른 AI·다른 컴퓨터에서 이어가는 방법
 
+**최신(2026-11-02):** [source 미래 경로 준비](path_source_gate_v1/RESULTS.md)를 1회 완료했다. 기존 정답 재구성과 시간 누수 검사는 통과했지만, inner-train 마스크 사전은 한 분할의 미지 유효 패턴7.22% 및 다른 분할의67종으로 고정 운영 기준을 실패했다. 새 학습0건이다. 다음은 [미래 마스크 모형의 서면 가능성 검토](path_source_gate_v1/NEXT_METHOD_REVIEW.md)이며 준비·기존 수치 감사를 반복하지 않는다. 아래 대기 설명은 이전 이력이다.
+
 **최신:** [공동변동량decoder의수치감사](discovery_v3_math/RESULTS.md)까지완료·PASS다. 해당감사는재실행하지않는다. 다음은 [별도source경로자료gate](discovery_v3_math/NEXT_DATA_GATE.md)이고실제자료준비/학습은아직안했다. 이론/구현통과를실제바이올린성능개선과혼동하지않는다.
 
 **최신(2026-11-02): 사용자의새요청으로넓은탐색을재개했다.** [첫새12학습](discovery_v1/RESULTS.md), [두번째12학습](discovery_v2/RESULTS.md), [다음가설](discovery_v2/NEXT_EXPLORATION.md), [추가루프예산](discovery_v2/LOOP_BUDGET.json)을읽는다. 기존STOP을연구전체종료로해석하지않는다.24추가학습에서도Markov개선은미확보이며,새가설은아직검증된novel방법이아니다. 완료batch는보존하고다음은별도label-free수치프로토타입이다.

@@ -1,0 +1,10 @@
+{
+  "automation_id": "ai",
+  "status": "ACTIVE",
+  "rrule": "FREQ=MINUTELY;INTERVAL=30",
+  "verified_utc": "2026-11-02T13:40:18.482221+00:00",
+  "prompt_matches_file_trimmed": true,
+  "prompt_sha256": "afa0c11ca3b674e88d47344c43d8b2acf297d3f2f29e230df38f5349f2e79e2d",
+  "next": "path_mask_feasibility_v1: source-free written feasibility review, not yet implemented",
+  "requires": "Mac and Codex app running"
+}

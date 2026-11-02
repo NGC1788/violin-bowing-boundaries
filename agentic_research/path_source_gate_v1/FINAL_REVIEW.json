@@ -1,0 +1,28 @@
+{
+  "verdict": "APPROVE_RECORDED_PREPARATION_AND_CATALOGUE_SCREEN_FAIL",
+  "reviewer": "separate Codex agent /root/execution_final_review",
+  "recorded_by": "root from independent-agent message",
+  "recorded_utc": "2026-11-02T13:39:34.620495+00:00",
+  "mismatches": 0,
+  "code_text_sources_verified": 11,
+  "public_metadata_input_hashes_verified": 7,
+  "results_sha256": "1ecbdc1b0b97168594e2ae0c64d27a43748c2a7b8f7af677a32c14e8ba0a9451",
+  "freeze_sha256": "75f950c714221fd9c81f6c315f0bb069f0998ed1fba6bd973116af39c8d8d107",
+  "source_map_sorted_json_sha256": "37d7103308a2aa0914d6bcc286e25f5650b74f59c4ed485ce801304fa9e155bf",
+  "recomputed": [
+    "histogram total1442 and valid1427/invalid15",
+    "all fold unknown fractions",
+    "all catalogue screens and overall failed-screen verdict"
+  ],
+  "recorded_execution_only": [
+    "target and guard reconstruction against raw train_labels",
+    "raw waveform mutation and reverse support checks8+8",
+    "catalogue membership and cardinalities",
+    "runtime9.154771seconds"
+  ],
+  "raw_or_prepared_files_opened_or_hashed_by_reviewer": false,
+  "limitations": [
+    "Aggregate review is not an independent row-level replay.",
+    "Operational screen failure is not a proof of general impossibility or a performance result."
+  ]
+}

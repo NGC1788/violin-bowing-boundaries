@@ -1,5 +1,7 @@
 # 활현 AI 연구: 재현 가능한 미래 예측과 에이전트 루프
 
+**최신(2026-11-02):** [source 미래 경로 준비](path_source_gate_v1/RESULTS.md)를 1회 완료했다. 기존 정답 재구성과 시간 누수 검사는 통과했지만, inner-train 마스크 사전은 한 분할의 미지 유효 패턴7.22% 및 다른 분할의67종으로 고정 운영 기준을 실패했다. 새 학습0건이다. 다음은 [미래 마스크 모형의 서면 가능성 검토](path_source_gate_v1/NEXT_METHOD_REVIEW.md)이며 준비·기존 수치 감사를 반복하지 않는다. 아래 대기 설명은 이전 이력이다.
+
 **새공동decoder 수치관문통과:** [discovery_v3_math](discovery_v3_math/RESULTS.md)는미래경로에서두표본분산·futuremask공동확률을계산하는restricted모형의합성감사10기준을통과했다. 실제자료/학습0이며예측성능·높은novelty를입증한것은아니다. 다음은source-only경로자료준비와mask지원범위감사다.
 
 **새요청에따라넓은탐색재개·24추가학습완료:** [discovery_v1](discovery_v1/RESULTS.md), [discovery_v2](discovery_v2/RESULTS.md). 원래source34명만쓴표현/감독/attention조합탐색이며olddev/test정답은재사용하지않았다. 신경망은HGB보다좋았지만Markov를못넘었고novelty는미입증이다. 새 [경로분포후보](discovery_v2/NEXT_EXPLORATION.md)와 [가설은행](discovery_v1/IDEAS.md)을준비했다. 종료된보정분기를다시돌리는것이아니며각완료batch와부정결과를보존한다.

@@ -1,0 +1,111 @@
+{
+  "verdict": "PREPARATION_PASS_CATALOGUE_SCREEN_FAIL",
+  "rows": 1442,
+  "people": 34,
+  "fold_rows": [
+    510,
+    465,
+    467
+  ],
+  "fold_people": [
+    12,
+    11,
+    11
+  ],
+  "future_shape": [
+    1442,
+    46
+  ],
+  "valid_rows": 1427,
+  "invalid_rows_retained": 15,
+  "target_reconstruction_max_abs": 0.0,
+  "target_guard_exact_match": true,
+  "real_future_mutation_checks": 8,
+  "real_future_support_checks": 8,
+  "voiced_count_histogram": {
+    "4": 1,
+    "7": 1,
+    "9": 1,
+    "11": 1,
+    "13": 1,
+    "14": 1,
+    "15": 2,
+    "16": 2,
+    "18": 1,
+    "19": 1,
+    "20": 1,
+    "21": 1,
+    "22": 1,
+    "24": 1,
+    "25": 2,
+    "32": 1,
+    "35": 2,
+    "37": 4,
+    "38": 5,
+    "39": 4,
+    "40": 5,
+    "41": 4,
+    "42": 10,
+    "43": 7,
+    "44": 7,
+    "45": 15,
+    "46": 1360
+  },
+  "total_unique_masks_descriptive_only": 78,
+  "fold_catalogue": [
+    {
+      "fold": 0,
+      "inner_train_rows": 932,
+      "inner_train_unique_masks": 67,
+      "held_rows": 510,
+      "held_valid_rows": 508,
+      "held_unknown_rows": 11,
+      "held_valid_unknown_rows": 9,
+      "held_unknown_fraction": 0.021568627450980392,
+      "held_valid_unknown_fraction": 0.017716535433070866,
+      "catalogue_screen_pass": false
+    },
+    {
+      "fold": 1,
+      "inner_train_rows": 977,
+      "inner_train_unique_masks": 58,
+      "held_rows": 465,
+      "held_valid_rows": 462,
+      "held_unknown_rows": 20,
+      "held_valid_unknown_rows": 17,
+      "held_unknown_fraction": 0.043010752688172046,
+      "held_valid_unknown_fraction": 0.0367965367965368,
+      "catalogue_screen_pass": true
+    },
+    {
+      "fold": 2,
+      "inner_train_rows": 975,
+      "inner_train_unique_masks": 35,
+      "held_rows": 467,
+      "held_valid_rows": 457,
+      "held_unknown_rows": 43,
+      "held_valid_unknown_rows": 33,
+      "held_unknown_fraction": 0.09207708779443255,
+      "held_valid_unknown_fraction": 0.07221006564551423,
+      "catalogue_screen_pass": false
+    }
+  ],
+  "catalogue_screen": {
+    "max_inner_train_unique_masks": 64,
+    "max_held_valid_unknown_fraction": 0.05,
+    "purpose": "operational screen for exact finite-mask integration; not a statistical confidence bound or performance criterion",
+    "invalid_policy": "retain all rows; report exact unknown rates over all rows and valid rows separately"
+  },
+  "prepared_files": {
+    "prefix_inputs.npz": "48359ac17b788e0e631516112c7fa07af527f9195716815964de1c8244d9a9fc",
+    "source_metadata.npz": "f5542fa08b6e7ef404f71fc7d7338dc211418e6371a1bec035e4ae866160e19b",
+    "future_labels.npz": "027ca39543d3cdf1e8eed281e7ea60bf663b75cc210c02f9908d2ad5a4cdabc5"
+  },
+  "new_training_jobs": 0,
+  "new_downloads": 0,
+  "old_dev_test_truth_accessed": false,
+  "scope": "historically exposed source-only preparation, no independent confirmation or forecasting performance",
+  "observer_limit": "no claim of Gaussian innovation independence, latent-factor adequacy or missing-at-random voicing",
+  "seconds": 9.15477100003045,
+  "freeze_sha256": "75f950c714221fd9c81f6c315f0bb069f0998ed1fba6bd973116af39c8d8d107"
+}
