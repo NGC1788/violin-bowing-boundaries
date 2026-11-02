@@ -1,5 +1,9 @@
 # 실제 실행 현황 — 2026-10-30
 
+## 2026-11-02 수치 감사 후 자동화 갱신
+
+수치 감사와 별도 검토를 커밋 `3fb679b`로 연구 브랜치에 공유했다. 기존 자동화 `ai`를 완료된 수치 감사를 반복하지 않고 다음 `path_source_gate_v1` 자료 준비 감사를 수행하도록 갱신했다. 앱 응답과 로컬 설정에서 ACTIVE·30분 간격·저장 프롬프트 일치를 확인했다. [설정 확인](../discovery_v3_math/AUTOMATION_STATUS.json). 실제 후속 실행은 Mac과 Codex 앱이 동작해야 한다. 새 자료 준비·학습은 아직 수행하지 않았다. 아래 자동화 기록은 이전 단계의 이력이다.
+
 ## 2026-11-02 경로→공동변동량 수치 프로토타입 통과
 
 `discovery_v3_math`의label-free합성감사를단1회완료했다. [결과](../discovery_v3_math/RESULTS.md), [가정/수식](../discovery_v3_math/METHOD.md), [봉인](../discovery_v3_math/RESULTS_SEAL.json).8단위시험·별도검토·5소스/환경/문헌/계약동결뒤10개수치기준전부통과. 알려진분포오차5.55e-16,GLorder차7.52e-8,QMC16개대조최대확률차.001983,64CDF/9pathparametergradient검사통과. 상관을무시한주변곱은.2104,미래누락을무시한fullmask모형은.2648의합성절대확률오차를보여joint/mask가필요함을확인했다. 모델성능21%/26%개선이아니다.

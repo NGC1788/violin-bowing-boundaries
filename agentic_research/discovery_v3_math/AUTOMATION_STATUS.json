@@ -1,0 +1,11 @@
+{
+  "automation_id": "ai",
+  "status": "ACTIVE",
+  "rrule": "FREQ=MINUTELY;INTERVAL=30",
+  "verified_utc": "2026-11-02T13:22:04.585284+00:00",
+  "prompt_sha256": "4307dde52665802262d35f5321a9e4dd878ebd94371277506f597e069426a5ed",
+  "prompt_matches_file_trimmed": true,
+  "completed_audit_commit": "3fb679b",
+  "next": "path_source_gate_v1: source-only data readiness; not yet implemented or executed",
+  "requires": "Mac and Codex app running"
+}
