@@ -1,0 +1,308 @@
+{
+  "review_kind": "independent postexecution source-only integrity and aggregate verification",
+  "reviewer": "execution_final_review",
+  "recorded_utc": "2026-11-02T16:11:15.022311+00:00",
+  "verdict": "PASS_EXECUTION_INTEGRITY_AND_REPORTING_BATCH_STOP_NO_PROMOTION",
+  "mismatch_count": 0,
+  "mismatches": [],
+  "verification": {
+    "frozen_source_files": 18,
+    "frozen_source_inputs": 6,
+    "metadata_files": 7,
+    "parent_pinned_artifacts": 60,
+    "completed_jobs": 12,
+    "epochs_per_job": 40,
+    "ordered_job_ids_receipts_state_and_terminal_ledger_match": true,
+    "all_job_artifact_hashes_match_output_seal_and_receipts": true,
+    "review_test_input_receipt_and_results_bindings_match": true,
+    "same_preprocessing_initial_shared_parameters_and_minibatch_order_within_each_fold": true,
+    "overall_and_fold_person_macro_log_loss_brier_worst_person_loss_recomputed": true,
+    "maximum_absolute_recomputed_score_difference": 0.0,
+    "private_participant_loss_vectors_match": true,
+    "coherence_recomputed_by_two_dimensional_cdf_differences": true,
+    "historical_hgb_prediction_arrays_identical_to_reused_forecasts": true,
+    "historical_markov_and_hgb_fold_and_aggregate_scores_match": true,
+    "all_four_promotion_decisions_recomputed_false": true,
+    "independently_reconstructed_truth_from_original_future_paths": false
+  },
+  "recomputed_aggregate": {
+    "markov": {
+      "log_loss": 0.5420809264671534,
+      "brier": 0.18194311173340272,
+      "maximum_person_loss": 0.7056687399495652
+    },
+    "summary_hgb": {
+      "log_loss": 0.5817218347181454,
+      "brier": 0.1900004740550775,
+      "maximum_person_loss": 0.8484162116571007
+    },
+    "joint_aux": {
+      "log_loss": 0.5417632561246704,
+      "brier": 0.18082325392560997,
+      "maximum_person_loss": 0.8621046711993617,
+      "relative_gain_percent_vs_markov": 0.05860201438065982,
+      "folds_better_than_both": 2,
+      "promotion": false
+    },
+    "mdn_aux": {
+      "log_loss": 0.570751188809117,
+      "brier": 0.18386699507803936,
+      "maximum_person_loss": 0.8389734613859142,
+      "relative_gain_percent_vs_markov": -5.288926605260436,
+      "folds_better_than_both": 0,
+      "promotion": false
+    },
+    "exact_count": {
+      "log_loss": 3.0298068231822293,
+      "brier": 0.31230134230630774,
+      "maximum_person_loss": 5.598746744228586,
+      "relative_gain_percent_vs_markov": -458.92149589694446,
+      "folds_better_than_both": 0,
+      "promotion": false
+    },
+    "moment_count": {
+      "log_loss": 1.9242804872165389,
+      "brier": 0.3061747809095621,
+      "maximum_person_loss": 3.557714030027922,
+      "relative_gain_percent_vs_markov": -254.98029782332466,
+      "folds_better_than_both": 0,
+      "promotion": false
+    }
+  },
+  "timing": {
+    "results_inner_worker_seconds": 365.468158499978,
+    "outer_terminal_ledger_seconds": 365.4736259999918,
+    "outer_minus_inner_seconds": 0.005467500013764948,
+    "sum_recorded_job_seconds": 365.2868904588395,
+    "interpretation": "Inner result timestamp is taken before final check/result persistence/terminal registration; outer ledger includes later parent work. The small positive difference is consistent with source ordering, not a discrepancy in job completion.",
+    "recorded_all_job_seconds_within_180_and_total_within_1800": true
+  },
+  "posthoc_exact_count_capacity_diagnostic": {
+    "status": "aggregate analytic diagnosis of frozen parameterization; no model forward or fitting",
+    "sigma_minimum_normalized_units": 0.05,
+    "minimum_valid_pitch_count": 23,
+    "pitch_degrees_of_freedom": [
+      22,
+      45
+    ],
+    "formula": "A_i = max_{d in integers 22..45} chi2_cdf(d * (t_pitch_i / 0.05)^2, d). U_ij = A_i * chi2_cdf(45 * (t_power_j / 0.05)^2, 45). Noncentrality >= 0 and sigma >= 0.05 imply each conditional CDF is bounded by the corresponding central CDF. Mixture weights, valid-mask mass and the other-channel CDF cannot increase the bound.",
+    "normalized_pitch_thresholds_by_fold": {
+      "0": [
+        0.006815640842077079,
+        0.012638048536369158,
+        0.03397914282260468
+      ],
+      "1": [
+        0.008097886315497939,
+        0.01614198974582107,
+        0.03949629311964148
+      ],
+      "2": [
+        0.006949895993207597,
+        0.012708671555499903,
+        0.03239281599906793
+      ]
+    },
+    "pitch_probability_upper_caps_by_fold": {
+      "0": [
+        5.403252462301971e-16,
+        2.720555835154473e-10,
+        0.01520801112550315
+      ],
+      "1": [
+        2.2194326275429736e-14,
+        3.9556531209858634e-08,
+        0.08913629214324022
+      ],
+      "2": [
+        8.237545129679654e-16,
+        3.05337334479151e-10,
+        0.007977042851870904
+      ]
+    },
+    "metric_clipped_joint_caps_by_fold": {
+      "0": [
+        [
+          1e-06,
+          1e-06,
+          1e-06
+        ],
+        [
+          1e-06,
+          1e-06,
+          1e-06
+        ],
+        [
+          0.01520801112550315,
+          0.01520801112550315,
+          0.01520801112550315
+        ]
+      ],
+      "1": [
+        [
+          1e-06,
+          1e-06,
+          1e-06
+        ],
+        [
+          1e-06,
+          1e-06,
+          1e-06
+        ],
+        [
+          0.08913629214324022,
+          0.08913629214324022,
+          0.08913629214324022
+        ]
+      ],
+      "2": [
+        [
+          1e-06,
+          1e-06,
+          1e-06
+        ],
+        [
+          1e-06,
+          1e-06,
+          1e-06
+        ],
+        [
+          0.007977042851870904,
+          0.007977042851870904,
+          0.007977042851870904
+        ]
+      ]
+    },
+    "power_cdf_upper_cap_numeric_note": "At all saved power thresholds, the ordinary floating-point central CDF evaluates to 1; the displayed joint caps therefore equal pitch-only caps before metric clipping.",
+    "held_box_oracle_loss_lower_bounds_by_fold": {
+      "0": 3.2998416452973807,
+      "1": 3.4949801527722797,
+      "2": 1.9527291884972555
+    },
+    "held_participant_macro_box_oracle_loss_lower_bound": 2.9271441911039253,
+    "box_oracle_formula": "Per query: y * (-log(clip(U, epsilon, 1-epsilon))) + (1-y) * (-log(1-epsilon)), epsilon=1e-6. Average queries, records within person, then persons. Allows separate per-label best probabilities and ignores shared-parameter/coherence coupling, so it is an optimistic lower bound, not a feasible fitted predictor.",
+    "clipping_rationale": "For every fold, the first two pitch-threshold caps are below epsilon=1e-6. Thus six of nine exact-count probabilities necessarily lie below the training/metric clipping floor for every parameter choice under the frozen law. model.py loss_rows clamps q before BCE, so the primary BCE gradient with respect to those q values is zero. Shared parameters can still receive auxiliary gradients; this does not mean all network gradients vanish.",
+    "observed_exact_prediction_fraction_at_or_beyond_metric_clip": 0.6910926182770843,
+    "interpretation": "The exact-count score is constrained by a concrete incompatibility between the frozen scale floor, fitted normalization and query thresholds. The failed execution must be preserved. This is a model-design/training-objective failure, not detected data/seal corruption; no rescue or refit is authorized by this review.",
+    "limits": [
+      "The mathematical bound applies to the restricted exact conditional-IID Gaussian model, not the moment approximation, other exact-count models or all correction methods.",
+      "Numeric cap and lower-bound values use ordinary floating-point SciPy central chi-square CDF evaluation, not outward-rounded numerical certification.",
+      "The capacity diagnostic is posthoc and does not establish prior scientific novelty or independent predictive improvement."
+    ]
+  },
+  "saved_training_trace_review": {
+    "trace_kind": "online within-epoch changing-model weighted averages, not endpoint fitted training scores",
+    "epoch40_bce_by_fold": {
+      "joint_aux": [
+        0.4839109333310509,
+        0.49299425964311555,
+        0.4818814425381106
+      ],
+      "mdn_aux": [
+        0.48413335762545845,
+        0.4790056021753486,
+        0.4759874313426167
+      ],
+      "exact_count": [
+        3.139245516599708,
+        2.7600034548516437,
+        3.0328724852152202
+      ],
+      "moment_count": [
+        2.040210863324386,
+        1.7062347647633733,
+        1.9251761338670854
+      ]
+    },
+    "interpretation": "Both count heads remain poor in recorded training-time BCE. This is evidence against describing the entire failure as held-person overfit alone, but traces do not identify optimizer convergence, all causal mechanisms or endpoint train-vs-held gaps. The exact-count capacity restriction gives a separate mathematical explanation; it does not prove the moment-count cause."
+  },
+  "reference_sha256": {
+    "FREEZE.json": "aa7f4dc023a3885db4aab19c52e113ed9af765850621e8bb661481c3d45abfa3",
+    "OUTPUT_SEAL.json": "543cc6a4588666c6921c58da21b25dcfa6ea8acac720dce08c93e57252088a95",
+    "RESULTS.json": "66dbf1b1cc109a6de53a10938d55bee57a403df4b3300d06e30dfbb3f2ea7bd0",
+    "RESULTS_SEAL.json": "9590463bf8e38c6a53a9d56c73d68f09e3d41cf0d3f1d82c9bd48f9e5299e460",
+    "local/all_predictions.npz": "8c24cc00133fc5f9c4d4ce2c5d5e7d142eb3b27c2d3c5df128a3fcde67112c87",
+    "local/private_scores.json": "f1f264557d48ec79dff0d4d637d2109ad2985ace3648f4be51bfe77498895a85"
+  },
+  "verified_frozen_sources": {
+    "agentic_research/exact_count_runner_v1/AGENTS.md": "6c8cc3cba4135194cfb22c91592f651d6c4947a029c6a75add94c60e3fa8b711",
+    "agentic_research/exact_count_runner_v1/CONTRACT.json": "734d254b2c9728a384322db266d825e94c54f59065f9e165f196764c81e3b02c",
+    "agentic_research/exact_count_runner_v1/data.py": "c1792d15db470d64aa2d2cf3db0bf257839cf624eb59972526961b6abdcfcfce",
+    "agentic_research/exact_count_runner_v1/control.py": "9771f87238dbbb5c1244ba82bce76d182f9335d6193284585b530f6dc6b8f1af",
+    "agentic_research/exact_count_runner_v1/job.py": "36703428f468c39bdaaa93561cce547a8d55297be2db8c1fd3dfd011d4ff2fdc",
+    "agentic_research/exact_count_runner_v1/runner.py": "9858fd5a6a55c8ef992e0ebee5496c93b6b5bfa2bef5f3bbab08f1d46aa083d1",
+    "agentic_research/exact_count_runner_v1/test_runner.py": "1367de1effe300ef2a7e9ec2c025f3faa5c2f883e282a4db1b9c9dd49223f0a2",
+    "agentic_research/exact_count_learning_v1/AGENTS.md": "d4726c59eb35c511dcd6f6272cb5ab5550a45b1bf44afd26ee947ec9f2b66637",
+    "agentic_research/exact_count_learning_v1/CONTRACT_PROPOSAL.json": "0c02133a9385b3ef91fd2acdb7597931abf0d2b7ff0128d88f348648cb360d51",
+    "agentic_research/exact_count_learning_v1/model.py": "0edb31a422d5987bb47a02036b837a009447281469ec8a2cc3cb05484f3cf5a1",
+    "agentic_research/exact_count_learning_v1/preprocess.py": "9c131ddc96bb8150f454b452b97edc91519e0dc98c274c47468545cd554d26f3",
+    "agentic_research/exact_count_learning_v1/test_model.py": "3516d9b9c1094d87d3ade0f0f4c913d4b532da4dfde9f298cdbdbcfa38b9ad34",
+    "agentic_research/exact_count_learning_v1/INVARIANT_OBJECTIVE.md": "c0ce9fd38bc4a20f3c2032dbed2f77d0064550257271babb6ebde0ba7fb66a31",
+    "agentic_research/exact_count_learning_v1/readiness.py": "7fd80e7b60ea91906344c45b30f1dd79cf49e9552807a0a1a7974515b69c88e8",
+    "agentic_research/discovery_v3_math/decoder.py": "8383d9b8ce68203800fc730eb5bf8a0f1a1908f874eff12054369e9a2f957824",
+    "agentic_research/violin_raw_v1/data.py": "79b3d1c997741d82fe560f9ec12842f3889441be24fde7434833c8b6ccbf3c3d",
+    "agentic_research/violin_raw_v1/models.py": "1ef41dbf750541c8073fd497113363d1d27ae4e5b8b9f6b2564b7e26bffa3325",
+    "agentic_research/violin_raw_v1/metrics.py": "7e2e0d394562ad45a83ce14ee3def71e70f10e679f006855cee25295162e6369"
+  },
+  "verified_frozen_inputs": {
+    "prefix_inputs.npz": "48359ac17b788e0e631516112c7fa07af527f9195716815964de1c8244d9a9fc",
+    "source_metadata.npz": "f5542fa08b6e7ef404f71fc7d7338dc211418e6371a1bec035e4ae866160e19b",
+    "future_labels.npz": "027ca39543d3cdf1e8eed281e7ea60bf663b75cc210c02f9908d2ad5a4cdabc5",
+    "hgb_fold0": "abb30eeea1cc5affa0a5266b538ebaf225da5a0e2d2ff0a51cd935220eba5517",
+    "hgb_fold1": "f40388aad5ca12f990b7c03f427e4c6556255a58e6ff3f139766e96f17cec5dd",
+    "hgb_fold2": "08a3513c0cc9ced372ee1861f5a2a12f3ce0f85f5ca6e0ffd654efaa15c0a98d"
+  },
+  "scientific_limits": [
+    "Historically exposed source-person folds are exploratory, not independent confirmation.",
+    "Joint head has additional parameters; historical HGB uses a different derived representation.",
+    "Conditional IID Gaussian innovations remain a restrictive modeling assumption for overlapping audio frames.",
+    "Tiny average joint_aux gain does not meet the predefined 2 percent promotion gate and its worst-person loss exceeds Markov.",
+    "Hashes and source ordering support recorded execution integrity; this review does not independently observe runtime label-access chronology or reconstruct sealed event truth from raw audio/future paths."
+  ],
+  "review_actions": {
+    "actual_source_input_bytes_hashed": true,
+    "sealed_source_predictions_truth_people_fold_opened": true,
+    "row_or_person_identifiers_published": false,
+    "weights_opened_as_arrays": false,
+    "old_dev_test_files_opened_or_hashed": false,
+    "model_fitting": false,
+    "new_model_forward": false,
+    "new_parameter_search": false,
+    "full_numerical_audit_rerun": false,
+    "frozen_or_result_files_modified": false
+  },
+  "terminal_recommendation": "Preserve COMPLETE_STOP_THIS_BATCH and all negative results. No tuning, noise/floor changes, extra epochs, rescue or rerun as part of this review.",
+  "root_chernoff_diagnostic_source_review": {
+    "verdict": "APPROVE_AS_POSTHOC_ANALYTIC_CAPACITY_DIAGNOSIS",
+    "blockers": [],
+    "script_sha256": "63acdfc60608d98c20d4ce8ec4a3b85a57a9049cb1a65435e956487701764241",
+    "diagnosis_sha256": "bd156776f1689b5f16bc44156f3c47be5031ea3ffe813dd0eb3b586f117a1858",
+    "review_scope": "Read source/formulas and saved public aggregates only; did not rerun script, reconstruct labels again, fit models or run forward predictions.",
+    "chernoff_formula_review": "For r in (0,1), a=r^2 and d>=d_min, P(chi2_d<=d*a)<=exp(d/2*(log(a)+1-a))<=exp(d_min/2*(log(a)+1-a)). For r>=1, cap1 is valid. Noncentral lambda>=0 decreases the lower-tail CDF; sigma>=sigma_min reduces its argument. Pitch d_min=minimum_voiced-1=22; power d=45. Conditional product bounds, valid-mask mass and regime mixing preserve the cap.",
+    "label_reconstruction_review": "The <= comparisons, guard suppression and 3x3 flatten order in posthoc_capacity.py lines83-86 match frozen violin_raw_v1/data.py labels_and_states lines150-153. Each fold uses its saved training-only thresholds for BOTH its innertrain and held labels; this avoids reusing another fold's OOF event definition. The source asserts exact held reconstruction agreement with the sealed truth.",
+    "loss_bound_review": "macro() chooses the maximal allowed clipped q for each positive and q0 for each negative, then averages queries, records within person and persons. This is an optimistic per-label box relaxation, so its loss is a lower bound even if one predictor cannot attain every choice. Held folds are combined by person counts12/11/11.",
+    "reported_held_macro_loss_lower_bound": 2.700568422050754,
+    "reported_innertrain_bounds_by_fold": {
+      "0": 2.80862883187346,
+      "1": 2.4564826136914455,
+      "2": 2.7368169670756295
+    },
+    "reported_held_bounds_by_fold": {
+      "0": 3.0322959124020286,
+      "1": 3.267880905304867,
+      "2": 1.771371403867979
+    },
+    "reported_queries_below_clip_per_fold": [
+      6,
+      6,
+      6
+    ],
+    "consistency_with_independent_central_cdf_diagnostic": "The Chernoff caps are looser and the reported held lower bound2.700568422050754 is correspondingly below the independent central-CDF bound2.9271441911039253. Both are far above Markov0.5420809264671534 and imply the same restricted-parameterization failure.",
+    "limitations": [
+      "Formula and source review does not independently recompute the saved Chernoff numerical output or innertrain label counts.",
+      "The file reports ordinary floating-point evaluation, not interval arithmetic.",
+      "This is a posthoc diagnosis of the already completed exact_count law, not a new forecast, model selection run, scientific novelty result or bound for moment_count.",
+      "read_pinned validates the diagnostic inputs it reads; the separate execution review checked all six frozen source inputs."
+    ]
+  }
+}

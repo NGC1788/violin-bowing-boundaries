@@ -1,0 +1,32 @@
+{
+  "status": "POSTEXECUTION_VERIFIED_BATCH_STOP_NO_PROMOTION",
+  "recorded_utc": "2026-11-02T16:14:51.221128+00:00",
+  "scope": "postexecution snapshot, distinct from immutable preparation FINAL_AUDIT.json",
+  "frozen_source_files_verified": 18,
+  "parent_pinned_output_artifacts_verified": 60,
+  "all12_jobs_completed_once": true,
+  "frozen_runner_check_passed": true,
+  "independent_review_mismatches": 0,
+  "training_batches_consumed": 1,
+  "training_batches_remaining": 2,
+  "standalone_math_audits_consumed": 2,
+  "standalone_math_audits_remaining": 0,
+  "new_source_only_posthoc_diagnostic_fits_or_forwards": 0,
+  "old_dev_test_truth_access_or_hash": false,
+  "snapshot_sha256": {
+    "agentic_research/exact_count_runner_v1/FREEZE.json": "aa7f4dc023a3885db4aab19c52e113ed9af765850621e8bb661481c3d45abfa3",
+    "agentic_research/exact_count_runner_v1/OUTPUT_SEAL.json": "543cc6a4588666c6921c58da21b25dcfa6ea8acac720dce08c93e57252088a95",
+    "agentic_research/exact_count_runner_v1/RESULTS.json": "66dbf1b1cc109a6de53a10938d55bee57a403df4b3300d06e30dfbb3f2ea7bd0",
+    "agentic_research/exact_count_runner_v1/RESULTS_SEAL.json": "9590463bf8e38c6a53a9d56c73d68f09e3d41cf0d3f1d82c9bd48f9e5299e460",
+    "agentic_research/exact_count_runner_v1/RESULTS.md": "38f2ae64c09246c8d19018845a08b21500bebfd8bb270a88c85f4868d41e8fb9",
+    "agentic_research/exact_count_runner_v1/EXECUTION_REVIEW.json": "49cc14ddf04bf8145763d39f60a9f5bfc1d0d6f492dfec26b126f10ca9794804",
+    "agentic_research/exact_count_runner_v1/CAPACITY_DIAGNOSIS.json": "bd156776f1689b5f16bc44156f3c47be5031ea3ffe813dd0eb3b586f117a1858",
+    "agentic_research/exact_count_runner_v1/posthoc_capacity.py": "63acdfc60608d98c20d4ce8ec4a3b85a57a9049cb1a65435e956487701764241",
+    "agentic_research/exact_count_runner_v1/NEXT_METHOD_GATE.md": "58dee31023701b8d649bb002fac57e07cd34b4beb4d15f73ddbdb6bafe861381",
+    "agentic_research/exact_count_runner_v1/EXECUTION_LOOP_PROMPT.md": "b4a7b7ba8f5d65f412cbe88d65d152357c02c98ab7252469e916e6e7d487e6bb",
+    "agentic_research/exact_count_runner_v1/EXECUTION_AUTOMATION_STATUS.json": "954a8f0d5f76195406286825faa60cc1e319bfda4933df163b79d184eabfacda"
+  },
+  "ledger_snapshot_sha256": "f833a0c643da3e90d5f9d7a497acc086eb4101c1ff92152625e03a04cf7af272",
+  "next_task": "method_redesign_v1 bounded written method/prior review, no training/data access",
+  "scientific_claim": "No promotion, no high novelty or independent accuracy improvement established. Concrete exact parameterization/clip capacity restriction diagnosed."
+}

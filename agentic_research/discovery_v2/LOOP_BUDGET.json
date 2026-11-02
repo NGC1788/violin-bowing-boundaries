@@ -9,7 +9,113 @@
   "max_seconds_per_math_audit": 600,
   "max_math_audits": 2,
   "max_new_public_model_weight_download_gib": 1,
-  "additional_batches_started": [],
+  "additional_batches_started": [
+    {
+      "campaign": "exact_count_runner_v1",
+      "status": "COMPLETE_STOP_THIS_BATCH",
+      "freeze_sha256": "aa7f4dc023a3885db4aab19c52e113ed9af765850621e8bb661481c3d45abfa3",
+      "started_utc": "2026-11-02T15:53:28.942650+00:00",
+      "jobs": [
+        {
+          "id": "job_0_joint_aux",
+          "fold": 0,
+          "method": "joint_aux",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 2.927995916979853
+        },
+        {
+          "id": "job_0_mdn_aux",
+          "fold": 0,
+          "method": "mdn_aux",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 7.691962249984499
+        },
+        {
+          "id": "job_0_exact_count",
+          "fold": 0,
+          "method": "exact_count",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 62.51018766697962
+        },
+        {
+          "id": "job_0_moment_count",
+          "fold": 0,
+          "method": "moment_count",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 43.9526538340142
+        },
+        {
+          "id": "job_1_joint_aux",
+          "fold": 1,
+          "method": "joint_aux",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 3.074687124986667
+        },
+        {
+          "id": "job_1_mdn_aux",
+          "fold": 1,
+          "method": "mdn_aux",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 8.738945624965709
+        },
+        {
+          "id": "job_1_exact_count",
+          "fold": 1,
+          "method": "exact_count",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 67.2525674579665
+        },
+        {
+          "id": "job_1_moment_count",
+          "fold": 1,
+          "method": "moment_count",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 42.94818745797966
+        },
+        {
+          "id": "job_2_joint_aux",
+          "fold": 2,
+          "method": "joint_aux",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 3.10568224999588
+        },
+        {
+          "id": "job_2_mdn_aux",
+          "fold": 2,
+          "method": "mdn_aux",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 8.061978792014997
+        },
+        {
+          "id": "job_2_exact_count",
+          "fold": 2,
+          "method": "exact_count",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 70.82113012496848
+        },
+        {
+          "id": "job_2_moment_count",
+          "fold": 2,
+          "method": "moment_count",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 44.20091195800342
+        }
+      ],
+      "seconds": 365.4736259999918
+    }
+  ],
   "math_audits_started": [
     {
       "audit": "discovery_v3_math",

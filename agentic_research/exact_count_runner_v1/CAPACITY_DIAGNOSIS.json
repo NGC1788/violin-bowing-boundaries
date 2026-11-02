@@ -1,0 +1,108 @@
+{
+  "status": "POSTHOC_STRUCTURAL_CAPACITY_FAILURE",
+  "scope": "completed exact_count parameterization only; not moment approximation",
+  "method": "closed-form Chernoff upper cap, no scipy CDF, model forward or fitting",
+  "folds": [
+    {
+      "fold": 0,
+      "normalized_thresholds": [
+        [
+          0.006815640842077079,
+          0.012638048536369158,
+          0.03397914282260468
+        ],
+        [
+          0.19847490604430423,
+          0.32181087461037305,
+          0.7158938540005647
+        ]
+      ],
+      "pitch_chernoff_upper_caps": [
+        4.4491778944684086e-15,
+        2.1461043765901584e-09,
+        0.07590778836611799
+      ],
+      "power_chernoff_upper_caps": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "queries_entirely_below_clip": 6,
+      "innertrain_box_oracle_lower_bound": 2.80862883187346,
+      "held_box_oracle_lower_bound": 3.0322959124020286,
+      "innertrain_people": 22,
+      "held_people": 12
+    },
+    {
+      "fold": 1,
+      "normalized_thresholds": [
+        [
+          0.008097886315497939,
+          0.01614198974582107,
+          0.03949629311964148
+        ],
+        [
+          0.22211256024917378,
+          0.34581347374797333,
+          0.59932706989069
+        ]
+      ],
+      "pitch_chernoff_upper_caps": [
+        1.8145444954908872e-13,
+        2.9994689337676607e-07,
+        0.3493197543063653
+      ],
+      "power_chernoff_upper_caps": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "queries_entirely_below_clip": 6,
+      "innertrain_box_oracle_lower_bound": 2.4564826136914455,
+      "held_box_oracle_lower_bound": 3.267880905304867,
+      "innertrain_people": 23,
+      "held_people": 11
+    },
+    {
+      "fold": 2,
+      "normalized_thresholds": [
+        [
+          0.006949895993207597,
+          0.012708671555499903,
+          0.03239281599906793
+        ],
+        [
+          0.2576020881604919,
+          0.40964210309172283,
+          0.654049151381746
+        ]
+      ],
+      "pitch_chernoff_upper_caps": [
+        6.778344611797457e-15,
+        2.406984155278126e-09,
+        0.04213842238415525
+      ],
+      "power_chernoff_upper_caps": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "queries_entirely_below_clip": 6,
+      "innertrain_box_oracle_lower_bound": 2.7368169670756295,
+      "held_box_oracle_lower_bound": 1.771371403867979,
+      "innertrain_people": 23,
+      "held_people": 11
+    }
+  ],
+  "held_macro_loss_lower_bound": 2.700568422050754,
+  "observed_exact_macro_loss": 3.0298068231822293,
+  "reference_markov_macro_loss": 0.5420809264671534,
+  "limitation": "ordinary float evaluation of a mathematical bound, not interval arithmetic; posthoc exposed source diagnosis, not novelty or independent accuracy evidence",
+  "new_fits": 0,
+  "new_model_predictions": 0,
+  "old_dev_test_truth_access_or_hash": false,
+  "results_sha256": "66dbf1b1cc109a6de53a10938d55bee57a403df4b3300d06e30dfbb3f2ea7bd0",
+  "output_seal_sha256": "543cc6a4588666c6921c58da21b25dcfa6ea8acac720dce08c93e57252088a95",
+  "script_sha256": "63acdfc60608d98c20d4ce8ec4a3b85a57a9049cb1a65435e956487701764241",
+  "frozen_inputs_unchanged": true
+}

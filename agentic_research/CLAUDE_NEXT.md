@@ -1,5 +1,7 @@
 # Claude Code 최신 인계 — 2026-10-30
 
+**최신(2026-11-03 실행 완료):** 고정12학습·독립검토를마쳤고 `exact_count_runner_v1`은 **STOP**이다. Markov0.542081 대joint0.541763(+0.0586%)로2%screen미달, exact3.029807/moment1.924280도실패했다. exact는정규화/고정잡음하한때문에9질의중6개의주BCE기울기가0인설계결함을확인했다. [실제결과](exact_count_runner_v1/RESULTS.md), [독립검토](exact_count_runner_v1/EXECUTION_REVIEW.json). 같은batch를재개하지않는다. 다음은 [별도AI방법론서면검토](exact_count_runner_v1/NEXT_METHOD_GATE.md)이며이번단위새학습/NPZ열람0, 남은학습2batch·추가수치감사0이다. 아래실행대기는과거이력이다.
+
 **최신(2026-11-03):** [실행기/전체계약 동결](exact_count_runner_v1/README.md)을 완료했다.18합성검사·별도코드검토 뒤6source입력의동일성을검증했고 FROZEN_READY_FOR_BOUNDED_TRAINING이다. 실제fitting은아직0건이며 다음은 `exact_count_runner_v1.runner run`의고정12개실행이다. 준비/동결을다시하지않고실행중이면기존worker만관찰한다. [준비결과](exact_count_runner_v1/PREPARATION_RESULT.json). 주연구AI·정보,바이올린적용자료,novelty/개선아직미입증. 아래준비대기는이력이다.
 
 **최신(2026-11-03):** [정확 count 기반 AI 학습 코드 준비](exact_count_learning_v1/README.md)를 완료했다.15합성 기능시험·별도 검토·코드 준비 봉인까지 통과했으며 실제 fitting/데이터접근0건, execution_authorized=false다. 다음은 [별도 실행기·전체계약 동결](exact_count_learning_v1/NEXT_RUNNER_GATE.md)이다. 미래 mask/center는 label에만 사용하고 네 방법의 보조감독을 맞춘다. 주 연구는 AI·정보, 바이올린은 적용 자료다. 높은 novelty·실제 성능은 아직 미입증이며 아래 준비 대기는 이력이다.

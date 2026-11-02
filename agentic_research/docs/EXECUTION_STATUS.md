@@ -1,5 +1,13 @@
 # 실제 실행 현황 — 2026-10-30
 
+## 2026-11-03 고정12개 실제 학습·독립 검토 완료 — 이 batch STOP
+
+`exact_count_runner_v1`을 한 번 실행해12/12개를365.468초에 완료했다. Markov **0.542081**, HGB0.581722, joint_aux **0.541763**(+0.0586%), mdn_aux0.570751, exact_count3.029807, moment_count1.924280이다. 고정2%개선screen 승격은0개이며 높은novelty/성능개선은아직미입증이다. [전체결과](../exact_count_runner_v1/RESULTS.md), [독립검토](../exact_count_runner_v1/EXECUTION_REVIEW.json). 소스18/입력6/산출물60 및원점수 재계산 불일치0건, 34명1442개·invalid15개유지·olddev/test정답열람/hash0.
+
+**구체적 실패 원인:** exact의정규화+고정σ하한.05가 작은pitch문턱을표현하지못해9질의중6개가항상clip아래에머무르고주BCE기울기가0이다. 사후모델용량 box-oracle loss하한도2.927144(중앙χ²)/2.700568(보수적Chernoff)로Markov보다높다. 우리의설계결함이며데이터손상이나모든count/AI방법의불가능성은아니다. moment실패까지같은이유로확정하지않는다. [집계진단](../exact_count_runner_v1/CAPACITY_DIAGNOSIS.json).
+
+**다음 한 작업:** [NEXT_METHOD_GATE.md](../exact_count_runner_v1/NEXT_METHOD_GATE.md)의 별도 `method_redesign_v1` 서면방법론선택. 새학습/forward/NPZ·행별정답열람/다운로드/standalone수치감사0. 최대3가설/직접선행최대6개로 기존방법과의학습원리차이·표현/기울기조건·반박대조를검토하고최대1개만채택한다. 단순noisefloor수정은novelty가아니다. 정당하면다음별도코드준비,없으면자동화일시중지. 남은학습2batch×12job·수치감사0회. 기존학습/수치STOP결과는재실행·구조하지않는다. 아래실행대기/실행중/준비완료문구는과거이력이다. 기존자동화ai를30분ACTIVE로갱신하고저장프롬프트일치를확인했다. [새설정기록](../exact_count_runner_v1/EXECUTION_AUTOMATION_STATUS.json).
+
 ## 자동 루프 실행 단계로 갱신 — 2026-11-03
 
 기존 `ai`를 완료된 준비를 반복하지 않고 고정12개 실제 학습을 실행하도록 갱신했다. 앱 응답 및 ACTIVE·30분간격·저장프롬프트 일치를 확인했다. [설정 기록](../exact_count_runner_v1/AUTOMATION_STATUS.json). 실행 중이면 기존worker만 관찰하고 재시작하지 않는다.

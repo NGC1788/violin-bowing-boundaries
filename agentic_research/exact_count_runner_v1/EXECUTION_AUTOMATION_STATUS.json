@@ -1,0 +1,11 @@
+{
+  "automation_id": "ai",
+  "status": "ACTIVE",
+  "interval_minutes": 30,
+  "saved_prompt_matches": true,
+  "execution_prompt_sha256": "b4a7b7ba8f5d65f412cbe88d65d152357c02c98ab7252469e916e6e7d487e6bb",
+  "next_task": "method_redesign_v1 written method gate; no new fitting this unit",
+  "recorded_utc": "2026-11-02T16:14:16.886274+00:00",
+  "existing_automation_updated_not_duplicated": true,
+  "app_update_response": "Updated automation in the app."
+}
