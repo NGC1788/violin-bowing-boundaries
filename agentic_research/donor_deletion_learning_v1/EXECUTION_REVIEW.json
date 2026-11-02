@@ -1,0 +1,950 @@
+{
+  "review_kind": "independent source-only postexecution saved-artifact and aggregate-score verification",
+  "reviewer": "execution_final_review",
+  "recorded_utc": "2026-11-02T17:08:00.091262+00:00",
+  "verdict": "PASS_EXECUTION_INTEGRITY_AND_AGGREGATE_REPORTING_BATCH_STOP_NO_PROMOTION",
+  "mismatch_count": 0,
+  "mismatches": [],
+  "checks_by_category": {
+    "sources": 27,
+    "inputs": 8,
+    "review_tests": 1,
+    "freeze_binding": 3,
+    "result_binding": 6,
+    "terminal": 2,
+    "score_inputs": 9,
+    "references": 69,
+    "job_identity": 12,
+    "artifact": 72,
+    "receipt": 60,
+    "memory": 48,
+    "truth_reconstruction": 12,
+    "predictions": 36,
+    "support": 6204,
+    "diagnostics": 84,
+    "cost": 60,
+    "dro_state": 12,
+    "traces": 12,
+    "trace_decomposition": 480,
+    "common_controls": 36,
+    "scores": 336,
+    "private_vectors": 32,
+    "eventwise": 10,
+    "secondary": 4,
+    "promotion": 9,
+    "matched_operator": 7,
+    "ledger": 4
+  },
+  "maximum_absolute_score_recompute_error": 0.0,
+  "maximum_memory_prefix_reconstruction_error": 0.0,
+  "source_files_verified": 27,
+  "source_inputs_verified": 7,
+  "parent_pinned_artifacts_verified": 72,
+  "completed_jobs_verified": 12,
+  "epochs_per_job": 40,
+  "recomputed_aggregate": {
+    "retrieval_erm": {
+      "log_loss": 0.5348383195684011,
+      "brier": 0.17962045850861666,
+      "maximum_person_loss": 0.7635973273986523,
+      "people": 34,
+      "rows": 1442,
+      "coherence_rate": 1.0,
+      "deletion_risk_person_macro": 0.5542156620688761
+    },
+    "retrieval_random_delete": {
+      "log_loss": 0.5349644961641158,
+      "brier": 0.17966708682193858,
+      "maximum_person_loss": 0.7659981036211974,
+      "people": 34,
+      "rows": 1442,
+      "coherence_rate": 1.0,
+      "deletion_risk_person_macro": 0.5543470058904648
+    },
+    "retrieval_adversarial_delete": {
+      "log_loss": 0.5357666548922083,
+      "brier": 0.18008413611318683,
+      "maximum_person_loss": 0.741879475408865,
+      "people": 34,
+      "rows": 1442,
+      "coherence_rate": 1.0,
+      "deletion_risk_person_macro": 0.5542395390253768
+    },
+    "retrieval_query_group_dro": {
+      "log_loss": 0.5339737947876262,
+      "brier": 0.17913759781868713,
+      "maximum_person_loss": 0.7725016434505451,
+      "people": 34,
+      "rows": 1442,
+      "coherence_rate": 1.0,
+      "deletion_risk_person_macro": 0.5534188703184424
+    },
+    "markov": {
+      "log_loss": 0.5420809264671534,
+      "brier": 0.18194311173340272,
+      "maximum_person_loss": 0.7056687399495652,
+      "people": 34,
+      "rows": 1442,
+      "coherence_rate": 1.0
+    },
+    "summary_hgb": {
+      "log_loss": 0.5817218347181454,
+      "brier": 0.1900004740550775,
+      "maximum_person_loss": 0.8484162116571007,
+      "people": 34,
+      "rows": 1442,
+      "coherence_rate": 0.11373092926490985
+    },
+    "joint_aux": {
+      "log_loss": 0.5417632561246704,
+      "brier": 0.18082325392560997,
+      "maximum_person_loss": 0.8621046711993617,
+      "people": 34,
+      "rows": 1442,
+      "coherence_rate": 1.0
+    },
+    "mdn_aux": {
+      "log_loss": 0.570751188809117,
+      "brier": 0.18386699507803936,
+      "maximum_person_loss": 0.8389734613859142,
+      "people": 34,
+      "rows": 1442,
+      "coherence_rate": 1.0
+    }
+  },
+  "recomputed_fold_scores": {
+    "0": {
+      "retrieval_erm": {
+        "log_loss": 0.5568179557041549,
+        "brier": 0.1882831885446982,
+        "maximum_person_loss": 0.7635973273986523,
+        "people": 12,
+        "rows": 510,
+        "coherence_rate": 1.0
+      },
+      "retrieval_random_delete": {
+        "log_loss": 0.5574501255723884,
+        "brier": 0.1885234770671237,
+        "maximum_person_loss": 0.7659981036211974,
+        "people": 12,
+        "rows": 510,
+        "coherence_rate": 1.0
+      },
+      "retrieval_adversarial_delete": {
+        "log_loss": 0.559930195188429,
+        "brier": 0.1896646134254377,
+        "maximum_person_loss": 0.741879475408865,
+        "people": 12,
+        "rows": 510,
+        "coherence_rate": 1.0
+      },
+      "retrieval_query_group_dro": {
+        "log_loss": 0.558279875289244,
+        "brier": 0.18866559653885837,
+        "maximum_person_loss": 0.7725016434505451,
+        "people": 12,
+        "rows": 510,
+        "coherence_rate": 1.0
+      },
+      "markov": {
+        "log_loss": 0.5429572830484722,
+        "brier": 0.18173632556745045,
+        "maximum_person_loss": 0.7056687399495652,
+        "people": 12,
+        "rows": 510,
+        "coherence_rate": 1.0
+      },
+      "summary_hgb": {
+        "log_loss": 0.60094614466246,
+        "brier": 0.19602321498950961,
+        "maximum_person_loss": 0.8229569805171459,
+        "people": 12,
+        "rows": 510,
+        "coherence_rate": 0.1411764705882353
+      },
+      "joint_aux": {
+        "log_loss": 0.5789609239142212,
+        "brier": 0.19574413478642305,
+        "maximum_person_loss": 0.8621046711993617,
+        "people": 12,
+        "rows": 510,
+        "coherence_rate": 1.0
+      },
+      "mdn_aux": {
+        "log_loss": 0.5740761694890822,
+        "brier": 0.19034646131709243,
+        "maximum_person_loss": 0.8389734613859142,
+        "people": 12,
+        "rows": 510,
+        "coherence_rate": 1.0
+      }
+    },
+    "1": {
+      "retrieval_erm": {
+        "log_loss": 0.5778688944025091,
+        "brier": 0.19805862804209273,
+        "maximum_person_loss": 0.6746751954083403,
+        "people": 11,
+        "rows": 465,
+        "coherence_rate": 1.0
+      },
+      "retrieval_random_delete": {
+        "log_loss": 0.5775179766028024,
+        "brier": 0.1979737766500242,
+        "maximum_person_loss": 0.6735772505884652,
+        "people": 11,
+        "rows": 465,
+        "coherence_rate": 1.0
+      },
+      "retrieval_adversarial_delete": {
+        "log_loss": 0.5771365265957487,
+        "brier": 0.19794436972740834,
+        "maximum_person_loss": 0.6831456275997264,
+        "people": 11,
+        "rows": 465,
+        "coherence_rate": 1.0
+      },
+      "retrieval_query_group_dro": {
+        "log_loss": 0.5736822785766182,
+        "brier": 0.19655206334420558,
+        "maximum_person_loss": 0.666649033729141,
+        "people": 11,
+        "rows": 465,
+        "coherence_rate": 1.0
+      },
+      "markov": {
+        "log_loss": 0.5865684302851382,
+        "brier": 0.20106396356295395,
+        "maximum_person_loss": 0.6913441663485945,
+        "people": 11,
+        "rows": 465,
+        "coherence_rate": 1.0
+      },
+      "summary_hgb": {
+        "log_loss": 0.6488714128414352,
+        "brier": 0.21303468022328265,
+        "maximum_person_loss": 0.8484162116571007,
+        "people": 11,
+        "rows": 465,
+        "coherence_rate": 0.08172043010752689
+      },
+      "joint_aux": {
+        "log_loss": 0.5799187146749354,
+        "brier": 0.19696166705226614,
+        "maximum_person_loss": 0.7455749233606662,
+        "people": 11,
+        "rows": 465,
+        "coherence_rate": 1.0
+      },
+      "mdn_aux": {
+        "log_loss": 0.6287532318651734,
+        "brier": 0.2084433466014876,
+        "maximum_person_loss": 0.7780056646238609,
+        "people": 11,
+        "rows": 465,
+        "coherence_rate": 1.0
+      }
+    },
+    "2": {
+      "retrieval_erm": {
+        "log_loss": 0.4678299598589254,
+        "brier": 0.15173203802668803,
+        "maximum_person_loss": 0.6304751970937261,
+        "people": 11,
+        "rows": 467,
+        "coherence_rate": 1.0
+      },
+      "retrieval_random_delete": {
+        "log_loss": 0.46788123818913196,
+        "brier": 0.15169888036274196,
+        "maximum_person_loss": 0.6303248223755442,
+        "people": 11,
+        "rows": 467,
+        "coherence_rate": 1.0
+      },
+      "retrieval_adversarial_delete": {
+        "log_loss": 0.4680365574109725,
+        "brier": 0.15177247270378258,
+        "maximum_person_loss": 0.6281965380408319,
+        "people": 11,
+        "rows": 467,
+        "coherence_rate": 1.0
+      },
+      "retrieval_query_group_dro": {
+        "log_loss": 0.46774958681505097,
+        "brier": 0.15132895187116382,
+        "maximum_person_loss": 0.6305580277594509,
+        "people": 11,
+        "rows": 467,
+        "coherence_rate": 1.0
+      },
+      "markov": {
+        "log_loss": 0.49663739728773026,
+        "brier": 0.16304784481216308,
+        "maximum_person_loss": 0.657796593363539,
+        "people": 11,
+        "rows": 467,
+        "coherence_rate": 1.0
+      },
+      "summary_hgb": {
+        "log_loss": 0.49360028211014895,
+        "brier": 0.1603960050493101,
+        "maximum_person_loss": 0.6935320726378248,
+        "people": 11,
+        "rows": 467,
+        "coherence_rate": 0.11563169164882227
+      },
+      "joint_aux": {
+        "log_loss": 0.46302852362216773,
+        "brier": 0.14840751622352144,
+        "maximum_person_loss": 0.646802910281405,
+        "people": 11,
+        "rows": 467,
+        "coherence_rate": 1.0
+      },
+      "mdn_aux": {
+        "log_loss": 0.509121894102189,
+        "brier": 0.15222213493016962,
+        "maximum_person_loss": 0.6889449216487014,
+        "people": 11,
+        "rows": 467,
+        "coherence_rate": 1.0
+      }
+    }
+  },
+  "recomputed_promotion": {
+    "retrieval_erm": {
+      "relative_gain_percent": {
+        "markov": 1.3360748451257676,
+        "summary_hgb": 8.059438781846694
+      },
+      "folds_better_than_both": 2,
+      "promotion": false
+    },
+    "retrieval_random_delete": {
+      "relative_gain_percent": {
+        "markov": 1.3127985058276836,
+        "summary_hgb": 8.037748587636283
+      },
+      "folds_better_than_both": 2,
+      "promotion": false
+    },
+    "retrieval_adversarial_delete": {
+      "relative_gain_percent": {
+        "markov": 1.164820835165048,
+        "summary_hgb": 7.899854721492994
+      },
+      "folds_better_than_both": 2,
+      "promotion": false
+    },
+    "retrieval_query_group_dro": {
+      "relative_gain_percent": {
+        "markov": 1.4955574497636404,
+        "summary_hgb": 8.208053588645859
+      },
+      "folds_better_than_both": 2,
+      "promotion": false
+    }
+  },
+  "recomputed_adversarial_vs_matched_controls": {
+    "retrieval_erm": {
+      "relative_gain_percent": -0.17357307616931994,
+      "folds_better": 1
+    },
+    "retrieval_random_delete": {
+      "relative_gain_percent": -0.1499461616320863,
+      "folds_better": 1
+    },
+    "retrieval_query_group_dro": {
+      "relative_gain_percent": -0.3357580694189677,
+      "folds_better": 0
+    }
+  },
+  "adversarial_operator_screen_pass": false,
+  "recomputed_diagnostics": {
+    "0": {
+      "retrieval_erm": {
+        "deletion_risk_person_macro": 0.577559350088367,
+        "mean_maximum_donor_mass": 0.08465973104900153,
+        "mean_donor_entropy_nats": 3.0034512454660818,
+        "mean_effective_donor_count": 20.180243673387817,
+        "zero_positive_support_fraction_all_query_donor_event_cells": 0.0,
+        "zero_negative_support_fraction_all_query_donor_event_cells": 0.0,
+        "train_support": {
+          "query_group_macro_donor_event_cells": 4356,
+          "zero_positive_support_cells": 0,
+          "zero_negative_support_cells": 0,
+          "groups": 22,
+          "memory_rows": 932,
+          "scope": "training only; raw empirical support before fixed common uniform prior"
+        },
+        "resource_costs": {
+          "inference_memory_array_bytes": 626304,
+          "memory_artifact_bytes": 425659,
+          "weights_artifact_bytes": 32946,
+          "predictions_artifact_bytes": 936592,
+          "held_full_plus_all_counterfactual_inference_seconds": 0.025490666972473264
+        }
+      },
+      "retrieval_random_delete": {
+        "deletion_risk_person_macro": 0.5781828119294011,
+        "mean_maximum_donor_mass": 0.08464048937035844,
+        "mean_donor_entropy_nats": 3.00250245444214,
+        "mean_effective_donor_count": 20.15977785437679,
+        "zero_positive_support_fraction_all_query_donor_event_cells": 0.0,
+        "zero_negative_support_fraction_all_query_donor_event_cells": 0.0,
+        "train_support": {
+          "query_group_macro_donor_event_cells": 4356,
+          "zero_positive_support_cells": 0,
+          "zero_negative_support_cells": 0,
+          "groups": 22,
+          "memory_rows": 932,
+          "scope": "training only; raw empirical support before fixed common uniform prior"
+        },
+        "resource_costs": {
+          "inference_memory_array_bytes": 626304,
+          "memory_artifact_bytes": 425659,
+          "weights_artifact_bytes": 32937,
+          "predictions_artifact_bytes": 936467,
+          "held_full_plus_all_counterfactual_inference_seconds": 0.02542629203526303
+        }
+      },
+      "retrieval_adversarial_delete": {
+        "deletion_risk_person_macro": 0.5788647160240239,
+        "mean_maximum_donor_mass": 0.07305420715962074,
+        "mean_donor_entropy_nats": 3.026492310712136,
+        "mean_effective_donor_count": 20.65295825053644,
+        "zero_positive_support_fraction_all_query_donor_event_cells": 0.0,
+        "zero_negative_support_fraction_all_query_donor_event_cells": 0.0,
+        "train_support": {
+          "query_group_macro_donor_event_cells": 4356,
+          "zero_positive_support_cells": 0,
+          "zero_negative_support_cells": 0,
+          "groups": 22,
+          "memory_rows": 932,
+          "scope": "training only; raw empirical support before fixed common uniform prior"
+        },
+        "resource_costs": {
+          "inference_memory_array_bytes": 626304,
+          "memory_artifact_bytes": 425659,
+          "weights_artifact_bytes": 32937,
+          "predictions_artifact_bytes": 936526,
+          "held_full_plus_all_counterfactual_inference_seconds": 0.026944790966808796
+        }
+      },
+      "retrieval_query_group_dro": {
+        "deletion_risk_person_macro": 0.5795935956033147,
+        "mean_maximum_donor_mass": 0.0876087305953734,
+        "mean_donor_entropy_nats": 2.9919848027147444,
+        "mean_effective_donor_count": 19.946733391704225,
+        "zero_positive_support_fraction_all_query_donor_event_cells": 0.0,
+        "zero_negative_support_fraction_all_query_donor_event_cells": 0.0,
+        "train_support": {
+          "query_group_macro_donor_event_cells": 4356,
+          "zero_positive_support_cells": 0,
+          "zero_negative_support_cells": 0,
+          "groups": 22,
+          "memory_rows": 932,
+          "scope": "training only; raw empirical support before fixed common uniform prior"
+        },
+        "resource_costs": {
+          "inference_memory_array_bytes": 626304,
+          "memory_artifact_bytes": 425659,
+          "weights_artifact_bytes": 32930,
+          "predictions_artifact_bytes": 936630,
+          "held_full_plus_all_counterfactual_inference_seconds": 0.02535299997543916
+        }
+      }
+    },
+    "1": {
+      "retrieval_erm": {
+        "deletion_risk_person_macro": 0.6006059794670043,
+        "mean_maximum_donor_mass": 0.07064110459854456,
+        "mean_donor_entropy_nats": 3.059771881064178,
+        "mean_effective_donor_count": 21.38373639952246,
+        "zero_positive_support_fraction_all_query_donor_event_cells": 0.0,
+        "zero_negative_support_fraction_all_query_donor_event_cells": 0.0,
+        "train_support": {
+          "query_group_macro_donor_event_cells": 4761,
+          "zero_positive_support_cells": 0,
+          "zero_negative_support_cells": 0,
+          "groups": 23,
+          "memory_rows": 977,
+          "scope": "training only; raw empirical support before fixed common uniform prior"
+        },
+        "resource_costs": {
+          "inference_memory_array_bytes": 656544,
+          "memory_artifact_bytes": 446001,
+          "weights_artifact_bytes": 32929,
+          "predictions_artifact_bytes": 888355,
+          "held_full_plus_all_counterfactual_inference_seconds": 0.026458417007233948
+        }
+      },
+      "retrieval_random_delete": {
+        "deletion_risk_person_macro": 0.6002820697552325,
+        "mean_maximum_donor_mass": 0.07041241828153293,
+        "mean_donor_entropy_nats": 3.0602827940374997,
+        "mean_effective_donor_count": 21.394396253499618,
+        "zero_positive_support_fraction_all_query_donor_event_cells": 0.0,
+        "zero_negative_support_fraction_all_query_donor_event_cells": 0.0,
+        "train_support": {
+          "query_group_macro_donor_event_cells": 4761,
+          "zero_positive_support_cells": 0,
+          "zero_negative_support_cells": 0,
+          "groups": 23,
+          "memory_rows": 977,
+          "scope": "training only; raw empirical support before fixed common uniform prior"
+        },
+        "resource_costs": {
+          "inference_memory_array_bytes": 656544,
+          "memory_artifact_bytes": 446001,
+          "weights_artifact_bytes": 32936,
+          "predictions_artifact_bytes": 888307,
+          "held_full_plus_all_counterfactual_inference_seconds": 0.02620720799313858
+        }
+      },
+      "retrieval_adversarial_delete": {
+        "deletion_risk_person_macro": 0.5994032440754595,
+        "mean_maximum_donor_mass": 0.07001644002743342,
+        "mean_donor_entropy_nats": 3.0613195001381284,
+        "mean_effective_donor_count": 21.392861071000777,
+        "zero_positive_support_fraction_all_query_donor_event_cells": 0.0,
+        "zero_negative_support_fraction_all_query_donor_event_cells": 0.0,
+        "train_support": {
+          "query_group_macro_donor_event_cells": 4761,
+          "zero_positive_support_cells": 0,
+          "zero_negative_support_cells": 0,
+          "groups": 23,
+          "memory_rows": 977,
+          "scope": "training only; raw empirical support before fixed common uniform prior"
+        },
+        "resource_costs": {
+          "inference_memory_array_bytes": 656544,
+          "memory_artifact_bytes": 446001,
+          "weights_artifact_bytes": 32906,
+          "predictions_artifact_bytes": 888465,
+          "held_full_plus_all_counterfactual_inference_seconds": 0.025994708004873246
+        }
+      },
+      "retrieval_query_group_dro": {
+        "deletion_risk_person_macro": 0.5959735027739759,
+        "mean_maximum_donor_mass": 0.07053957464029455,
+        "mean_donor_entropy_nats": 3.064552602059551,
+        "mean_effective_donor_count": 21.479247786092483,
+        "zero_positive_support_fraction_all_query_donor_event_cells": 0.0,
+        "zero_negative_support_fraction_all_query_donor_event_cells": 0.0,
+        "train_support": {
+          "query_group_macro_donor_event_cells": 4761,
+          "zero_positive_support_cells": 0,
+          "zero_negative_support_cells": 0,
+          "groups": 23,
+          "memory_rows": 977,
+          "scope": "training only; raw empirical support before fixed common uniform prior"
+        },
+        "resource_costs": {
+          "inference_memory_array_bytes": 656544,
+          "memory_artifact_bytes": 446001,
+          "weights_artifact_bytes": 32941,
+          "predictions_artifact_bytes": 888658,
+          "held_full_plus_all_counterfactual_inference_seconds": 0.026122874987777323
+        }
+      }
+    },
+    "2": {
+      "retrieval_erm": {
+        "deletion_risk_person_macro": 0.48235950319493953,
+        "mean_maximum_donor_mass": 0.06926720341819538,
+        "mean_donor_entropy_nats": 3.056457534996149,
+        "mean_effective_donor_count": 21.295270019298435,
+        "zero_positive_support_fraction_all_query_donor_event_cells": 0.0,
+        "zero_negative_support_fraction_all_query_donor_event_cells": 0.0,
+        "train_support": {
+          "query_group_macro_donor_event_cells": 4761,
+          "zero_positive_support_cells": 0,
+          "zero_negative_support_cells": 0,
+          "groups": 23,
+          "memory_rows": 975,
+          "scope": "training only; raw empirical support before fixed common uniform prior"
+        },
+        "resource_costs": {
+          "inference_memory_array_bytes": 655200,
+          "memory_artifact_bytes": 445247,
+          "weights_artifact_bytes": 32921,
+          "predictions_artifact_bytes": 892484,
+          "held_full_plus_all_counterfactual_inference_seconds": 0.026020332996267825
+        }
+      },
+      "retrieval_random_delete": {
+        "deletion_risk_person_macro": 0.4824092445286755,
+        "mean_maximum_donor_mass": 0.06857031393388667,
+        "mean_donor_entropy_nats": 3.058706738746721,
+        "mean_effective_donor_count": 21.343276726129684,
+        "zero_positive_support_fraction_all_query_donor_event_cells": 0.0,
+        "zero_negative_support_fraction_all_query_donor_event_cells": 0.0,
+        "train_support": {
+          "query_group_macro_donor_event_cells": 4761,
+          "zero_positive_support_cells": 0,
+          "zero_negative_support_cells": 0,
+          "groups": 23,
+          "memory_rows": 975,
+          "scope": "training only; raw empirical support before fixed common uniform prior"
+        },
+        "resource_costs": {
+          "inference_memory_array_bytes": 655200,
+          "memory_artifact_bytes": 445247,
+          "weights_artifact_bytes": 32932,
+          "predictions_artifact_bytes": 892524,
+          "held_full_plus_all_counterfactual_inference_seconds": 0.026331458007916808
+        }
+      },
+      "retrieval_adversarial_delete": {
+        "deletion_risk_person_macro": 0.48221200452222474,
+        "mean_maximum_donor_mass": 0.06816241262256255,
+        "mean_donor_entropy_nats": 3.06117736832566,
+        "mean_effective_donor_count": 21.394409104702422,
+        "zero_positive_support_fraction_all_query_donor_event_cells": 0.0,
+        "zero_negative_support_fraction_all_query_donor_event_cells": 0.0,
+        "train_support": {
+          "query_group_macro_donor_event_cells": 4761,
+          "zero_positive_support_cells": 0,
+          "zero_negative_support_cells": 0,
+          "groups": 23,
+          "memory_rows": 975,
+          "scope": "training only; raw empirical support before fixed common uniform prior"
+        },
+        "resource_costs": {
+          "inference_memory_array_bytes": 655200,
+          "memory_artifact_bytes": 445247,
+          "weights_artifact_bytes": 32943,
+          "predictions_artifact_bytes": 892406,
+          "held_full_plus_all_counterfactual_inference_seconds": 0.026216416037641466
+        }
+      },
+      "retrieval_query_group_dro": {
+        "deletion_risk_person_macro": 0.4823099920975937,
+        "mean_maximum_donor_mass": 0.06678364335179804,
+        "mean_donor_entropy_nats": 3.0726116273863013,
+        "mean_effective_donor_count": 21.627835444462786,
+        "zero_positive_support_fraction_all_query_donor_event_cells": 0.0,
+        "zero_negative_support_fraction_all_query_donor_event_cells": 0.0,
+        "train_support": {
+          "query_group_macro_donor_event_cells": 4761,
+          "zero_positive_support_cells": 0,
+          "zero_negative_support_cells": 0,
+          "groups": 23,
+          "memory_rows": 975,
+          "scope": "training only; raw empirical support before fixed common uniform prior"
+        },
+        "resource_costs": {
+          "inference_memory_array_bytes": 655200,
+          "memory_artifact_bytes": 445247,
+          "weights_artifact_bytes": 32931,
+          "predictions_artifact_bytes": 892750,
+          "held_full_plus_all_counterfactual_inference_seconds": 0.026229500013869256
+        }
+      }
+    }
+  },
+  "saved_trace_first_last": {
+    "job_0_retrieval_erm": {
+      "online_weighted_loss": [
+        0.9145846418394795,
+        0.4975608061326361
+      ],
+      "online_person_macro_primary_diagnostic": [
+        0.5446655902671353,
+        0.5039657922945463
+      ],
+      "online_optimized_weighted_primary": [
+        0.5446655902671353,
+        0.5039657922945463
+      ],
+      "online_weighted_auxiliary": [
+        3.699190515723442,
+        -0.06404986161910303
+      ]
+    },
+    "job_0_retrieval_random_delete": {
+      "online_weighted_loss": [
+        0.915191920269311,
+        0.5009878011483523
+      ],
+      "online_person_macro_primary_diagnostic": [
+        0.5452574680976773,
+        0.5044698537935054
+      ],
+      "online_optimized_weighted_primary": [
+        0.5452574680976773,
+        0.5044698537935054
+      ],
+      "online_weighted_auxiliary": [
+        3.699344521716338,
+        -0.034820526451529714
+      ]
+    },
+    "job_0_retrieval_adversarial_delete": {
+      "online_weighted_loss": [
+        0.9399560747801375,
+        0.5161514924207475
+      ],
+      "online_person_macro_primary_diagnostic": [
+        0.5701058513462598,
+        0.5242922262891484
+      ],
+      "online_optimized_weighted_primary": [
+        0.5701058513462598,
+        0.5242922262891484
+      ],
+      "online_weighted_auxiliary": [
+        3.698502234338777,
+        -0.08140733868400801
+      ]
+    },
+    "job_0_retrieval_query_group_dro": {
+      "online_weighted_loss": [
+        0.9144871716156954,
+        0.5387342472681207
+      ],
+      "online_person_macro_primary_diagnostic": [
+        0.5446755882455431,
+        0.5046305697978222
+      ],
+      "online_optimized_weighted_primary": [
+        0.5445691133184642,
+        0.5454092602667726
+      ],
+      "online_weighted_auxiliary": [
+        3.699180582972312,
+        -0.06675012998652
+      ]
+    },
+    "job_1_retrieval_erm": {
+      "online_weighted_loss": [
+        0.9224477599195895,
+        0.5001539876013351
+      ],
+      "online_person_macro_primary_diagnostic": [
+        0.5515672989869453,
+        0.5129514039245608
+      ],
+      "online_optimized_weighted_primary": [
+        0.5515672989869453,
+        0.5129514039245608
+      ],
+      "online_weighted_auxiliary": [
+        3.70880460932644,
+        -0.12797416323225838
+      ]
+    },
+    "job_1_retrieval_random_delete": {
+      "online_weighted_loss": [
+        0.9229615380519688,
+        0.49942027985369175
+      ],
+      "online_person_macro_primary_diagnostic": [
+        0.5520820575338532,
+        0.5141604756967768
+      ],
+      "online_optimized_weighted_primary": [
+        0.5520820575338532,
+        0.5141604756967768
+      ],
+      "online_weighted_auxiliary": [
+        3.708794805181157,
+        -0.14740195843085047
+      ]
+    },
+    "job_1_retrieval_adversarial_delete": {
+      "online_weighted_loss": [
+        0.9496224617130999,
+        0.5026310959980472
+      ],
+      "online_person_macro_primary_diagnostic": [
+        0.5788888660152095,
+        0.5283826725318475
+      ],
+      "online_optimized_weighted_primary": [
+        0.5788888660152095,
+        0.5283826725318475
+      ],
+      "online_weighted_auxiliary": [
+        3.7073359569789037,
+        -0.2575157653380028
+      ]
+    },
+    "job_1_retrieval_query_group_dro": {
+      "online_weighted_loss": [
+        0.9227373117206803,
+        0.5733836577755671
+      ],
+      "online_person_macro_primary_diagnostic": [
+        0.551562367718929,
+        0.5149146918248835
+      ],
+      "online_optimized_weighted_primary": [
+        0.5518565365932415,
+        0.5922969230578867
+      ],
+      "online_weighted_auxiliary": [
+        3.7088077512743878,
+        -0.18913265282319427
+      ]
+    },
+    "job_2_retrieval_erm": {
+      "online_weighted_loss": [
+        0.9090902208575954,
+        0.4702817358481392
+      ],
+      "online_person_macro_primary_diagnostic": [
+        0.5377098719160356,
+        0.5051574282463618
+      ],
+      "online_optimized_weighted_primary": [
+        0.5377098719160356,
+        0.5051574282463618
+      ],
+      "online_weighted_auxiliary": [
+        3.7138034894155982,
+        -0.3487569239822269
+      ]
+    },
+    "job_2_retrieval_random_delete": {
+      "online_weighted_loss": [
+        0.9097531678943861,
+        0.47851048891826126
+      ],
+      "online_person_macro_primary_diagnostic": [
+        0.538389662890019,
+        0.5061098730368192
+      ],
+      "online_optimized_weighted_primary": [
+        0.538389662890019,
+        0.5061098730368192
+      ],
+      "online_weighted_auxiliary": [
+        3.7136350500436737,
+        -0.27599384118557857
+      ]
+    },
+    "job_2_retrieval_adversarial_delete": {
+      "online_weighted_loss": [
+        0.930087847589016,
+        0.48462567273859436
+      ],
+      "online_person_macro_primary_diagnostic": [
+        0.5587505534195728,
+        0.5208612618234962
+      ],
+      "online_optimized_weighted_primary": [
+        0.5587505534195728,
+        0.5208612618234962
+      ],
+      "online_weighted_auxiliary": [
+        3.7133729416944283,
+        -0.3623558908490198
+      ]
+    },
+    "job_2_retrieval_query_group_dro": {
+      "online_weighted_loss": [
+        0.9089519308939884,
+        0.5208748457296285
+      ],
+      "online_person_macro_primary_diagnostic": [
+        0.5377081682611695,
+        0.5080718990877431
+      ],
+      "online_optimized_weighted_primary": [
+        0.5375710368995572,
+        0.5576885118466118
+      ],
+      "online_weighted_auxiliary": [
+        3.7138089399443066,
+        -0.36813666116983484
+      ]
+    }
+  },
+  "timing": {
+    "result_inner_worker_seconds": 82.47327958303504,
+    "outer_terminal_ledger_seconds": 82.4807412920054,
+    "outer_minus_inner_seconds": 0.0074617089703679085,
+    "sum_job_seconds": 82.14076595910592,
+    "note": "Inner result timestamp precedes final result/check/persistence/terminal registration. Costs and elapsed times are checked recorded evidence, not independently re-timed model runs."
+  },
+  "interpretation": [
+    "All four retrieval arms improve the exploratory average relative to Markov, but the best gain is below the predefined2percent screen. No promotions are justified.",
+    "Adversarial deletion is worse in full-memory primary loss than ERM,random deletion,and query-group DRO. Its intended operator advantage is unsupported by this fixed comparison; gains from ordinary retrieval or query weighting must not be called donor-deletion novelty.",
+    "Secondary deletion risk is computed from sealed counterfactual forecasts after labels are opened. It is a label-informed post-seal risk summary, not an issued forecast or generalization guarantee.",
+    "The adversarial secondary risk does not beat both ERM and query-DRO. Donor entropy/support and a lower worst-person score versus some retrieval controls do not overturn the failed primary/operator screens.",
+    "No integrity mismatch was detected. Close this fixed batch with its negative operator result preserved; this review proposes no fitting,tuning,rescue or new forward analysis."
+  ],
+  "limitations": [
+    "Historically exposed source34person folds are exploratory; there is one seed and no independent confirmation or high-novelty result.",
+    "Query-specific worst-donor intervention is not removal of one common donor across all queries.",
+    "Historical parametric references are exact reused forecasts,not newly fitted heads with matched inference-memory resources.",
+    "Recorded online epoch traces are changing-model,objective-specific summaries,not endpoint fitted-training losses; no convergence or causal optimization claim follows.",
+    "Review independently reconstructs saved memory prefix/event labels and held truth from frozen original-source arrays/statistics,not raw audio. It does not observe runtime chronology beyond frozen code,seals,receipts and ledger.",
+    "Weights were byte-hashed only; no network forward,optimizer update or learned-parameter inspection occurred."
+  ],
+  "reference_sha256": {
+    "FREEZE.json": "3c6f47ec0287df93af97b2bd973d8a94a8bb9b73ef646eb92e82f9d80639b6c1",
+    "REVIEW.json": "23295ce4fa2b512ae2b69b8dcf1243568dd55be59e56f484d870d4865ac30209",
+    "FREEZE_REVIEW.json": "109d5c900f425a5ae378ca23e0ff6ca6b6845e9a82c98555362820b6d41b20ef",
+    "UNIT_TESTS.json": "4e48862c58b9e6a1c8bbde60681b138cc0da81af9f899bbe3f6cc2fdb4a2beef",
+    "INPUT_RECEIPT.json": "97bc8df3e966b94a1f0970e12caf6111837d290a62985c8aaba77cfab3d390e6",
+    "OUTPUT_SEAL.json": "f72b5eeea5fe3f888033a4ce303c3439338d344ca273021de9f3a42bb1dc03b6",
+    "RESULTS.json": "df1fa0114e0163277cb595c61cfc83c9616bceb445a1ded47fe6e557e399aae1",
+    "RESULTS_SEAL.json": "58c4d9bc166715876d77604b9c58dd9320b330ef01a317f9f4a337221b730395",
+    "local/all_predictions.npz": "d8e09be756bb735a5f7788710cd7660cea2e3d3bbc475f83946b2c6df0460211",
+    "local/private_scores.json": "fe55d257d1268f5fb92c77454adda06927a06cf754230edbcb5ce40cc3c1f49c"
+  },
+  "verified_source_sha256": {
+    "agentic_research/exact_count_runner_v1/AGENTS.md": "6c8cc3cba4135194cfb22c91592f651d6c4947a029c6a75add94c60e3fa8b711",
+    "agentic_research/exact_count_runner_v1/CONTRACT.json": "734d254b2c9728a384322db266d825e94c54f59065f9e165f196764c81e3b02c",
+    "agentic_research/exact_count_runner_v1/data.py": "c1792d15db470d64aa2d2cf3db0bf257839cf624eb59972526961b6abdcfcfce",
+    "agentic_research/exact_count_runner_v1/control.py": "9771f87238dbbb5c1244ba82bce76d182f9335d6193284585b530f6dc6b8f1af",
+    "agentic_research/exact_count_runner_v1/job.py": "36703428f468c39bdaaa93561cce547a8d55297be2db8c1fd3dfd011d4ff2fdc",
+    "agentic_research/exact_count_runner_v1/runner.py": "9858fd5a6a55c8ef992e0ebee5496c93b6b5bfa2bef5f3bbab08f1d46aa083d1",
+    "agentic_research/exact_count_runner_v1/test_runner.py": "1367de1effe300ef2a7e9ec2c025f3faa5c2f883e282a4db1b9c9dd49223f0a2",
+    "agentic_research/exact_count_learning_v1/AGENTS.md": "d4726c59eb35c511dcd6f6272cb5ab5550a45b1bf44afd26ee947ec9f2b66637",
+    "agentic_research/exact_count_learning_v1/CONTRACT_PROPOSAL.json": "0c02133a9385b3ef91fd2acdb7597931abf0d2b7ff0128d88f348648cb360d51",
+    "agentic_research/exact_count_learning_v1/model.py": "0edb31a422d5987bb47a02036b837a009447281469ec8a2cc3cb05484f3cf5a1",
+    "agentic_research/exact_count_learning_v1/preprocess.py": "9c131ddc96bb8150f454b452b97edc91519e0dc98c274c47468545cd554d26f3",
+    "agentic_research/exact_count_learning_v1/test_model.py": "3516d9b9c1094d87d3ade0f0f4c913d4b532da4dfde9f298cdbdbcfa38b9ad34",
+    "agentic_research/exact_count_learning_v1/INVARIANT_OBJECTIVE.md": "c0ce9fd38bc4a20f3c2032dbed2f77d0064550257271babb6ebde0ba7fb66a31",
+    "agentic_research/exact_count_learning_v1/readiness.py": "7fd80e7b60ea91906344c45b30f1dd79cf49e9552807a0a1a7974515b69c88e8",
+    "agentic_research/discovery_v3_math/decoder.py": "8383d9b8ce68203800fc730eb5bf8a0f1a1908f874eff12054369e9a2f957824",
+    "agentic_research/violin_raw_v1/data.py": "79b3d1c997741d82fe560f9ec12842f3889441be24fde7434833c8b6ccbf3c3d",
+    "agentic_research/violin_raw_v1/models.py": "1ef41dbf750541c8073fd497113363d1d27ae4e5b8b9f6b2564b7e26bffa3325",
+    "agentic_research/violin_raw_v1/metrics.py": "7e2e0d394562ad45a83ce14ee3def71e70f10e679f006855cee25295162e6369",
+    "agentic_research/donor_deletion_learning_v1/.gitignore": "04e59f5cc75e578a7492cd2c14ddf16487d1af09e188a7cc01224a61b1b3855f",
+    "agentic_research/donor_deletion_learning_v1/AGENTS.md": "35da687bdecd5cfe2e408faff936e3945075dd4ae99d3068a8063d5208a35f47",
+    "agentic_research/donor_deletion_learning_v1/CONTRACT.json": "13b7e26d1bd7c49c736cdf699e30b8dcc3dd32ce95cda6bb624d0b7bf83a7370",
+    "agentic_research/donor_deletion_learning_v1/model.py": "b9efe8ea4cd91b93e61cfc9277f99a62fdc22ae695f51b07c6545888dddc2e52",
+    "agentic_research/donor_deletion_learning_v1/data.py": "74bf5bb1a61638d57911a4fca445b581391d8ae3c716320e23a295a4e05414fa",
+    "agentic_research/donor_deletion_learning_v1/control.py": "2d46f5107e642948be754eb1baeb2ec2da0de05d33c4ff062d84166aae41765b",
+    "agentic_research/donor_deletion_learning_v1/job.py": "4ade3b0e3ac2bc8dade8b4fe7c134bb6f4edfdd603f570de220aa59454aa9203",
+    "agentic_research/donor_deletion_learning_v1/runner.py": "50bb90aaa76cee1050e4cb62963c358c7895afe2ff43e7e2f3f62beb73ffae49",
+    "agentic_research/donor_deletion_learning_v1/test_runner.py": "7317541e68098469559e7b8b4bd9260f26e16116b75ce0719d24d8b5a82a4152"
+  },
+  "verified_input_sha256": {
+    "prefix_inputs.npz": "48359ac17b788e0e631516112c7fa07af527f9195716815964de1c8244d9a9fc",
+    "source_metadata.npz": "f5542fa08b6e7ef404f71fc7d7338dc211418e6371a1bec035e4ae866160e19b",
+    "future_labels.npz": "027ca39543d3cdf1e8eed281e7ea60bf663b75cc210c02f9908d2ad5a4cdabc5",
+    "hgb_fold0": "abb30eeea1cc5affa0a5266b538ebaf225da5a0e2d2ff0a51cd935220eba5517",
+    "hgb_fold1": "f40388aad5ca12f990b7c03f427e4c6556255a58e6ff3f139766e96f17cec5dd",
+    "hgb_fold2": "08a3513c0cc9ced372ee1861f5a2a12f3ce0f85f5ca6e0ffd654efaa15c0a98d",
+    "reference_predictions": "8c24cc00133fc5f9c4d4ce2c5d5e7d142eb3b27c2d3c5df128a3fcde67112c87"
+  },
+  "review_actions": {
+    "original_source_arrays_and_saved_predictions_opened": true,
+    "public_row_or_person_data_published": false,
+    "weights_loaded_as_arrays": false,
+    "new_model_forward": false,
+    "model_fitting_or_optimizer_updates": false,
+    "new_parameter_search": false,
+    "standalone_math_audit": false,
+    "old_dev_test_truth_files_opened_or_hashed": false,
+    "frozen_files_modified": false,
+    "only_written_artifact": "donor_deletion_learning_v1/EXECUTION_REVIEW.json"
+  }
+}

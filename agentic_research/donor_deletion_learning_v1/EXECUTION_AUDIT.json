@@ -1,0 +1,30 @@
+{
+  "status": "POSTEXECUTION_VERIFIED_STOP_NO_PROMOTION",
+  "recorded_utc": "2026-11-02T17:08:58.461648+00:00",
+  "source_files_verified": 27,
+  "allowed_inputs_verified_by_independent_review": 7,
+  "parent_pinned_artifacts_verified": 72,
+  "actual_neural_fit_attempts": 12,
+  "completed_once": true,
+  "new_reference_fits": 0,
+  "postexecution_new_fits_or_forwards": 0,
+  "old_dev_test_truth_access_or_hash": false,
+  "independent_mismatches": 0,
+  "training_batches_consumed": 2,
+  "training_batches_remaining": 1,
+  "math_audits_remaining": 0,
+  "public_snapshot_sha256": {
+    "FREEZE.json": "3c6f47ec0287df93af97b2bd973d8a94a8bb9b73ef646eb92e82f9d80639b6c1",
+    "OUTPUT_SEAL.json": "f72b5eeea5fe3f888033a4ce303c3439338d344ca273021de9f3a42bb1dc03b6",
+    "RESULTS.json": "df1fa0114e0163277cb595c61cfc83c9616bceb445a1ded47fe6e557e399aae1",
+    "RESULTS_SEAL.json": "58c4d9bc166715876d77604b9c58dd9320b330ef01a317f9f4a337221b730395",
+    "RESULTS.md": "79f78f502801dcf9bd980c8b3c44dad86b8ac5ffe9415674a1f20e34e1d50b93",
+    "EXECUTION_REVIEW.json": "f358e155b520c22fdcf164b9cd569db52b025251cbf1d29362258d23fae5041d",
+    "NEXT_POSTMORTEM_GATE.md": "902ba236d7b27d81b2a99c35f49a5700615f26c6e618f271b3390ee197fc56fa",
+    "EXECUTION_LOOP_PROMPT.md": "4d5a8af1f78877415d1d41bc247ad99052a190fe0d081c696cc9dd529a422df4",
+    "EXECUTION_AUTOMATION_STATUS.json": "3ddc6b776ff5f686fa0a4309ccc07dbfd5d99a97e5c336436560e1ed59c302c8"
+  },
+  "ledger_snapshot_sha256": "37ebe09233886beb61ca8bd3373bb9d9cde7f54a3689785dc39d43064541a302",
+  "next_task": "saved-artifact-only donor_postmortem_v1; no new fitting/forward",
+  "scientific_limit": "Historical exposed source exploratory; small gains below fixed screen; proposed adversarial donor deletion fails matched comparison; no high-novelty or independent accuracy claim"
+}

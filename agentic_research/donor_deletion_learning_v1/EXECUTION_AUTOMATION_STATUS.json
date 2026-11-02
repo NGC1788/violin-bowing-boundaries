@@ -1,0 +1,10 @@
+{
+  "automation_id": "ai",
+  "status": "ACTIVE",
+  "interval_minutes": 30,
+  "saved_prompt_matches": true,
+  "prompt_sha256": "4d5a8af1f78877415d1d41bc247ad99052a190fe0d081c696cc9dd529a422df4",
+  "recorded_utc": "2026-11-02T17:08:17.573168+00:00",
+  "next_task": "saved-artifact postmortem, no fits/forwards; donor training campaignSTOP",
+  "existing_automation_updated_not_duplicated": true
+}

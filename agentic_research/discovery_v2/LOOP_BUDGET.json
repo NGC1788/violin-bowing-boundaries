@@ -114,6 +114,111 @@
         }
       ],
       "seconds": 365.4736259999918
+    },
+    {
+      "campaign": "donor_deletion_learning_v1",
+      "status": "COMPLETE_STOP_THIS_BATCH",
+      "freeze_sha256": "3c6f47ec0287df93af97b2bd973d8a94a8bb9b73ef646eb92e82f9d80639b6c1",
+      "started_utc": "2026-11-02T17:03:22.818375+00:00",
+      "jobs": [
+        {
+          "id": "job_0_retrieval_erm",
+          "fold": 0,
+          "method": "retrieval_erm",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 6.653657959017437
+        },
+        {
+          "id": "job_0_retrieval_random_delete",
+          "fold": 0,
+          "method": "retrieval_random_delete",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 6.477775750041474
+        },
+        {
+          "id": "job_0_retrieval_adversarial_delete",
+          "fold": 0,
+          "method": "retrieval_adversarial_delete",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 6.55579775001388
+        },
+        {
+          "id": "job_0_retrieval_query_group_dro",
+          "fold": 0,
+          "method": "retrieval_query_group_dro",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 6.507460957975127
+        },
+        {
+          "id": "job_1_retrieval_erm",
+          "fold": 1,
+          "method": "retrieval_erm",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 6.887955375015736
+        },
+        {
+          "id": "job_1_retrieval_random_delete",
+          "fold": 1,
+          "method": "retrieval_random_delete",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 7.042226749996189
+        },
+        {
+          "id": "job_1_retrieval_adversarial_delete",
+          "fold": 1,
+          "method": "retrieval_adversarial_delete",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 6.89848550001625
+        },
+        {
+          "id": "job_1_retrieval_query_group_dro",
+          "fold": 1,
+          "method": "retrieval_query_group_dro",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 6.925185666012112
+        },
+        {
+          "id": "job_2_retrieval_erm",
+          "fold": 2,
+          "method": "retrieval_erm",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 6.87751537503209
+        },
+        {
+          "id": "job_2_retrieval_random_delete",
+          "fold": 2,
+          "method": "retrieval_random_delete",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 7.1832822089781985
+        },
+        {
+          "id": "job_2_retrieval_adversarial_delete",
+          "fold": 2,
+          "method": "retrieval_adversarial_delete",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 7.065346000017598
+        },
+        {
+          "id": "job_2_retrieval_query_group_dro",
+          "fold": 2,
+          "method": "retrieval_query_group_dro",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 7.066076666989829
+        }
+      ],
+      "seconds": 82.4807412920054
     }
   ],
   "math_audits_started": [
