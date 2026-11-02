@@ -1,0 +1,10 @@
+{
+  "automation_id": "ai",
+  "status": "PAUSED",
+  "interval_minutes_preserved": 30,
+  "saved_prompt_matches": true,
+  "prompt_sha256": "2cef6b305aeb1710e070c3e0a1488490d0144a96869f6d1236292c457d3789a8",
+  "reason": "NO_JUSTIFIED_NEXT_LEARNING_FROM_CURRENT_EVIDENCE; remaining1trainingbatch preserved, not exhausted",
+  "existing_automation_updated_not_duplicated": true,
+  "recorded_utc": "2026-11-02T17:18:08.842382+00:00"
+}

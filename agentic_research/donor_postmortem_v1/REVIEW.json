@@ -1,0 +1,420 @@
+{
+  "review_kind": "independent saved-artifact postmortem code and arithmetic review",
+  "reviewer": "execution_final_review",
+  "recorded_utc": "2026-11-02T17:17:03.902093+00:00",
+  "verdict": "APPROVE_DESCRIPTIVE_POSTMORTEM_NO_JUSTIFIED_NEXT_LEARNING_FROM_CURRENT_EVIDENCE",
+  "blockers": [],
+  "mismatch_count": 0,
+  "checks_by_category": {
+    "sources": 27,
+    "bindings": 7,
+    "population": 1,
+    "aggregate": 8,
+    "decompositions": 645,
+    "additivity": 25,
+    "selected_pinned_artifacts": 36,
+    "forecast_alignment": 12,
+    "concentration": 25,
+    "traces": 484,
+    "support": 40,
+    "resource_metadata": 76,
+    "associations": 138,
+    "scope": 5
+  },
+  "maximum_absolute_recompute_difference": 3.552713678800501e-15,
+  "maximum_additive_reconstruction_error": 5.204170427930421e-18,
+  "recomputed_comparison_summary": {
+    "retrieval_erm__minus__markov": {
+      "loss_gap": -0.007242606898752498,
+      "fold_additive_contributions": {
+        "0": 0.004892002113770326,
+        "1": -0.0028145557267329722,
+        "2": -0.009320053285789848
+      },
+      "outcome_additive_contributions": {
+        "invalid": -0.0003237717751892431,
+        "valid_all_zero": -0.0020328275246190583,
+        "valid_any_positive": -0.004886007598944195
+      },
+      "true_label_partition": {
+        "0": {
+          "event_cell_macro_mass": 0.6798814585352757,
+          "loss_gap_contribution": 0.0032594390182519406,
+          "conditional_mean_probability_change": 0.0031146856210269433
+        },
+        "1": {
+          "event_cell_macro_mass": 0.3201185414647243,
+          "loss_gap_contribution": -0.010502045917004436,
+          "conditional_mean_probability_change": 0.012254357206855153
+        }
+      },
+      "people_better": 19,
+      "people_worse": 15
+    },
+    "retrieval_query_group_dro__minus__markov": {
+      "loss_gap": -0.008107131679527447,
+      "fold_additive_contributions": {
+        "0": 0.005407973732037085,
+        "1": -0.004169049082168276,
+        "2": -0.009346056329396252
+      },
+      "outcome_additive_contributions": {
+        "invalid": -0.0002583946507749217,
+        "valid_all_zero": -0.002009659579195601,
+        "valid_any_positive": -0.005839077449556919
+      },
+      "true_label_partition": {
+        "0": {
+          "event_cell_macro_mass": 0.6798814585352757,
+          "loss_gap_contribution": 0.003889210039907393,
+          "conditional_mean_probability_change": 0.0040414114056723785
+        },
+        "1": {
+          "event_cell_macro_mass": 0.3201185414647243,
+          "loss_gap_contribution": -0.011996341719434839,
+          "conditional_mean_probability_change": 0.01384542683677014
+        }
+      },
+      "people_better": 21,
+      "people_worse": 13
+    },
+    "retrieval_adversarial_delete__minus__retrieval_erm": {
+      "loss_gap": 0.0009283353238072172,
+      "fold_additive_contributions": {
+        "0": 0.001098437465037933,
+        "1": -0.00023694252571657593,
+        "2": 6.684038448586072e-05
+      },
+      "outcome_additive_contributions": {
+        "invalid": -6.506560012297085e-05,
+        "valid_all_zero": -0.0013010400274104216,
+        "valid_any_positive": 0.00229444095134061
+      },
+      "true_label_partition": {
+        "0": {
+          "event_cell_macro_mass": 0.6798814585352757,
+          "loss_gap_contribution": -0.0030784936198990473,
+          "conditional_mean_probability_change": -0.002640634220494906
+        },
+        "1": {
+          "event_cell_macro_mass": 0.3201185414647243,
+          "loss_gap_contribution": 0.004006828943706265,
+          "conditional_mean_probability_change": -0.005020601372075148
+        }
+      },
+      "people_better": 17,
+      "people_worse": 17
+    },
+    "retrieval_adversarial_delete__minus__retrieval_random_delete": {
+      "loss_gap": 0.0008021587280924735,
+      "fold_additive_contributions": {
+        "0": 0.0008753186880143384,
+        "1": -0.0001234102963996839,
+        "2": 5.025033647781932e-05
+      },
+      "outcome_additive_contributions": {
+        "invalid": -7.30310598018172e-05,
+        "valid_all_zero": -0.0013006856247098908,
+        "valid_any_positive": 0.002175875412604182
+      },
+      "true_label_partition": {
+        "0": {
+          "event_cell_macro_mass": 0.6798814585352757,
+          "loss_gap_contribution": -0.0030162167559773276,
+          "conditional_mean_probability_change": -0.0026121769171876166
+        },
+        "1": {
+          "event_cell_macro_mass": 0.3201185414647243,
+          "loss_gap_contribution": 0.0038183754840698013,
+          "conditional_mean_probability_change": -0.004748452358626574
+        }
+      },
+      "people_better": 14,
+      "people_worse": 20
+    },
+    "retrieval_adversarial_delete__minus__retrieval_query_group_dro": {
+      "loss_gap": 0.0017928601045821661,
+      "fold_additive_contributions": {
+        "0": 0.0005824658467711743,
+        "1": 0.0011175508297187288,
+        "2": 9.284342809226287e-05
+      },
+      "outcome_additive_contributions": {
+        "invalid": -0.0001304427245372923,
+        "valid_all_zero": -0.0013242079728338775,
+        "valid_any_positive": 0.003247510801953336
+      },
+      "true_label_partition": {
+        "0": {
+          "event_cell_macro_mass": 0.6798814585352757,
+          "loss_gap_contribution": -0.003708264641554501,
+          "conditional_mean_probability_change": -0.003567360005140342
+        },
+        "1": {
+          "event_cell_macro_mass": 0.3201185414647243,
+          "loss_gap_contribution": 0.005501124746136667,
+          "conditional_mean_probability_change": -0.006611671001990134
+        }
+      },
+      "people_better": 13,
+      "people_worse": 21
+    }
+  },
+  "recomputed_concentration_aggregates": {
+    "retrieval_erm": {
+      "entropy": 3.0388217212428414,
+      "max_mass": 0.07514435766976935,
+      "effective_donors": 20.930352784931873,
+      "deletion_risk": 0.5542156620688761,
+      "counterfactual_event_sensitivity": 0.012133231203295784
+    },
+    "retrieval_random_delete": {
+      "entropy": 3.039379832762709,
+      "max_mass": 0.07483811549452696,
+      "effective_donors": 20.942109912601293,
+      "deletion_risk": 0.5543470058904648,
+      "counterfactual_event_sensitivity": 0.012088861180486538
+    },
+    "retrieval_adversarial_delete": {
+      "entropy": 3.0489815671072735,
+      "max_mass": 0.07048876073721777,
+      "effective_donors": 21.13221973350507,
+      "deletion_risk": 0.5542395390253768,
+      "counterfactual_event_sensitivity": 0.011637855529457153
+    },
+    "retrieval_query_group_dro": {
+      "entropy": 3.041547769308274,
+      "max_mass": 0.07534882838404408,
+      "effective_donors": 20.98643283048702,
+      "deletion_risk": 0.5534188703184424,
+      "counterfactual_event_sensitivity": 0.012256880781418492
+    }
+  },
+  "recomputed_matched_associations": {
+    "retrieval_adversarial_delete__minus__retrieval_erm": {
+      "entropy": {
+        "person_macro_change": 0.010159845864432773,
+        "record_weighted_pearson_with_loss_change": -0.05973691171873091,
+        "within_person_centered_weighted_pearson": -0.07469544364708329,
+        "person_mean_pearson": 0.10395347056007105,
+        "people_delta_positive": 28,
+        "people_delta_negative": 6
+      },
+      "max_mass": {
+        "person_macro_change": -0.004655596932551559,
+        "record_weighted_pearson_with_loss_change": 0.052560754588531024,
+        "within_person_centered_weighted_pearson": 0.06906457490596672,
+        "person_mean_pearson": -0.026500906077343747,
+        "people_delta_positive": 5,
+        "people_delta_negative": 29
+      },
+      "effective_donors": {
+        "person_macro_change": 0.2018669485731976,
+        "record_weighted_pearson_with_loss_change": -0.06050236187095249,
+        "within_person_centered_weighted_pearson": -0.07605876454543452,
+        "person_mean_pearson": 0.10198606072708974,
+        "people_delta_positive": 28,
+        "people_delta_negative": 6
+      },
+      "counterfactual_event_sensitivity": {
+        "person_macro_change": -0.0004953756738386332,
+        "record_weighted_pearson_with_loss_change": -0.055726969847612835,
+        "within_person_centered_weighted_pearson": -0.030553558138974802,
+        "person_mean_pearson": -0.38869116225135875,
+        "people_delta_positive": 0,
+        "people_delta_negative": 34
+      },
+      "folds": {
+        "0": {
+          "entropy": 0.023041065246054846,
+          "max_mass": -0.011605523889380766,
+          "effective_donors": 0.4727145771486196,
+          "deletion_risk": 0.0013053659356567994
+        },
+        "1": {
+          "entropy": 0.0015476190739499686,
+          "max_mass": -0.0006246645711111451,
+          "effective_donors": 0.009124671478315775,
+          "deletion_risk": -0.0012027353915447924
+        },
+        "2": {
+          "entropy": 0.004719833329509675,
+          "max_mass": -0.001104790795632841,
+          "effective_donors": 0.09913908540398272,
+          "deletion_risk": -0.0001474986727147775
+        }
+      },
+      "deletion_risk_macro_change": 2.3876956500774655e-05
+    },
+    "retrieval_adversarial_delete__minus__retrieval_random_delete": {
+      "entropy": {
+        "person_macro_change": 0.009601734344564607,
+        "record_weighted_pearson_with_loss_change": -0.07297559632904531,
+        "within_person_centered_weighted_pearson": -0.09032231512693419,
+        "person_mean_pearson": 0.09939770496592218,
+        "people_delta_positive": 26,
+        "people_delta_negative": 8
+      },
+      "max_mass": {
+        "person_macro_change": -0.0043493547573091795,
+        "record_weighted_pearson_with_loss_change": 0.06509425008531287,
+        "within_person_centered_weighted_pearson": 0.08214055219416505,
+        "person_mean_pearson": 0.0015715246621754006,
+        "people_delta_positive": 9,
+        "people_delta_negative": 25
+      },
+      "effective_donors": {
+        "person_macro_change": 0.19010982090378162,
+        "record_weighted_pearson_with_loss_change": -0.07384009369372273,
+        "within_person_centered_weighted_pearson": -0.0918240871409517,
+        "person_mean_pearson": 0.0955659731658321,
+        "people_delta_positive": 26,
+        "people_delta_negative": 8
+      },
+      "counterfactual_event_sensitivity": {
+        "person_macro_change": -0.000451005651029387,
+        "record_weighted_pearson_with_loss_change": -0.04436801354811581,
+        "within_person_centered_weighted_pearson": -0.01993142959518502,
+        "person_mean_pearson": -0.36891119480449736,
+        "people_delta_positive": 2,
+        "people_delta_negative": 32
+      },
+      "folds": {
+        "0": {
+          "entropy": 0.023989856269997285,
+          "max_mass": -0.011586282210737686,
+          "effective_donors": 0.49318039615965076,
+          "deletion_risk": 0.0006819040946226547
+        },
+        "1": {
+          "entropy": 0.0010367061006279913,
+          "max_mass": -0.0003959782540995076,
+          "effective_donors": -0.0015351824988474848,
+          "deletion_risk": -0.0008788256797729687
+        },
+        "2": {
+          "entropy": 0.0024706295789383003,
+          "max_mass": -0.0004079013113241179,
+          "effective_donors": 0.05113237857273522,
+          "deletion_risk": -0.0001972400064506961
+        }
+      },
+      "deletion_risk_macro_change": -0.0001074668650878961
+    },
+    "retrieval_adversarial_delete__minus__retrieval_query_group_dro": {
+      "entropy": {
+        "person_macro_change": 0.007433797798999799,
+        "record_weighted_pearson_with_loss_change": -0.08314469849340397,
+        "within_person_centered_weighted_pearson": -0.09696042327578062,
+        "person_mean_pearson": -0.052216738729762804,
+        "people_delta_positive": 15,
+        "people_delta_negative": 19
+      },
+      "max_mass": {
+        "person_macro_change": -0.004860067646826317,
+        "record_weighted_pearson_with_loss_change": 0.06888195223645982,
+        "within_person_centered_weighted_pearson": 0.05647441170137964,
+        "person_mean_pearson": 0.17803666576378785,
+        "people_delta_positive": 17,
+        "people_delta_negative": 17
+      },
+      "effective_donors": {
+        "person_macro_change": 0.14578690301805058,
+        "record_weighted_pearson_with_loss_change": -0.08409161008703724,
+        "within_person_centered_weighted_pearson": -0.09802077893857489,
+        "person_mean_pearson": -0.05891188290272606,
+        "people_delta_positive": 14,
+        "people_delta_negative": 20
+      },
+      "counterfactual_event_sensitivity": {
+        "person_macro_change": -0.0006190252519613377,
+        "record_weighted_pearson_with_loss_change": -0.0226920434154135,
+        "within_person_centered_weighted_pearson": 0.0021612588508490727,
+        "person_mean_pearson": -0.21270719224324564,
+        "people_delta_positive": 1,
+        "people_delta_negative": 33
+      },
+      "folds": {
+        "0": {
+          "entropy": 0.03450750799739211,
+          "max_mass": -0.014554523435752658,
+          "effective_donors": 0.7062248588322136,
+          "deletion_risk": -0.0007288795792908785
+        },
+        "1": {
+          "entropy": -0.003233101921422733,
+          "max_mass": -0.000523134612861136,
+          "effective_donors": -0.08638671509171186,
+          "deletion_risk": 0.003429741301483545
+        },
+        "2": {
+          "entropy": -0.01143425906064201,
+          "max_mass": 0.001378769270764508,
+          "effective_donors": -0.2334263397603647,
+          "deletion_risk": -9.798757536896552e-05
+        }
+      },
+      "deletion_risk_macro_change": 0.0008206687069344069
+    }
+  },
+  "code_math_review": {
+    "additive_denominators": "Correct fixed original-person weights1/(34*n_person) and query weights1/9 in every additive fold,outcome,event and intersection cell. Conditional subgroup macro means are not added. Positive/negative conditional probability changes divide by the correct fixed-weight event-cell mass.",
+    "correlation_denominators": "Correct weighted Pearson at recording level using original participant-macro record weights; within-person centering uses equal within-person record weights; Pearson of34person means is a distinct descriptive association. Fold association summaries renormalize by fold weight mass and are not additive contributions.",
+    "sensitivity_definition": "Maximum over stored donor/null interventions of mean9 absolute event-marginal forecast changes; this is not total variation of the ten-pattern categorical law and is not a loss robustness certificate.",
+    "trace_distinction": "Checkpoints and differences agree with sealed traces. ERM uses full-memory primary,random uses a sampled deletion,adversarial uses worst deletion,and query-DRO separates optimized weighted primary from person-macro diagnostic. Cross-arm raw training primary values are different objectives,not directly comparable endpoint full-memory train scores."
+  },
+  "scientific_assessment": {
+    "supported": [
+      "Adversarial-minus-ERM aggregate loss+.0009283353 decomposes into negative-event contribution-.0030784936 and positive-event contribution+.0040068289. Conditional mean probabilities decrease for both truth categories. This is an arithmetic/descriptive downward shift,not a demonstrated causal pathway.",
+      "Adversarial deletion increases mean entropy and decreases maximum donor mass versus ERM,while event-marginal deletion sensitivity decreases in all34person means. The mean post-seal deletion loss risk nonetheless increases slightly. Thus the measured intervention-sensitivity/concentration changes do not establish primary utility.",
+      "Entropy/loss-change associations are weak and differ across aggregation levels; no mediation or entropy-caused suppression is demonstrated.",
+      "NO_JUSTIFIED_NEXT_LEARNING is a defensible evidence/budget decision for the present donor-deletion branch. The proposed operator failed its matched controls and fixed promotion gates; this evidence does not itself justify consuming the remaining batch."
+    ],
+    "not_supported": [
+      "All AI forecasting or all future learning operators are impossible.",
+      "Every recording has reduced sensitivity; all34 refers to per-person means versus ERM.",
+      "Entropy increase caused loss harm,or deletion-risk decrease necessarily follows lower event sensitivity.",
+      "Endpoint fitting,gradient starvation,optimization convergence,auxiliary domination or a particular rescue setting is established by online traces.",
+      "Tiny exploratory gains or weak correlations establish novelty,independent significance,calibration or population generalization."
+    ],
+    "recommended_boundary": "Preserve negative operator findings and the small exploratory baseline improvements. Close this hypothesis under the present evidence without epoch/seed/temperature/prior rescue. A future distinct hypothesis would need its own rationale,controls,review and freeze; none is proposed by this review."
+  },
+  "reference_sha256": {
+    "AGENTS.md": "c1ac81948806557b3d5d81736a73d6c8140c81856fa256cad876f11439b7b8f6",
+    "analyze.py": "792a032ed98ac4a0fa80205ac94d282b00a7897ba3058379d28e9afef6c3dc8a",
+    "RESULTS.json": "d99af478f10b9012aad20bde72764e1edc0051dc10ea2b9f06cf8a58e68eb0c5",
+    "parent_NEXT_POSTMORTEM_GATE.md": "902ba236d7b27d81b2a99c35f49a5700615f26c6e618f271b3390ee197fc56fa",
+    "parent_RESULTS.json": "df1fa0114e0163277cb595c61cfc83c9616bceb445a1ded47fe6e557e399aae1",
+    "parent_RESULTS_SEAL.json": "58c4d9bc166715876d77604b9c58dd9320b330ef01a317f9f4a337221b730395",
+    "parent_OUTPUT_SEAL.json": "f72b5eeea5fe3f888033a4ce303c3439338d344ca273021de9f3a42bb1dc03b6",
+    "parent_EXECUTION_REVIEW.json": "f358e155b520c22fdcf164b9cd569db52b025251cbf1d29362258d23fae5041d",
+    "parent_saved_forecasts.npz": "d8e09be756bb735a5f7788710cd7660cea2e3d3bbc475f83946b2c6df0460211",
+    "source_metadata.npz": "f5542fa08b6e7ef404f71fc7d7338dc211418e6371a1bec035e4ae866160e19b",
+    "guard_file.npz": "027ca39543d3cdf1e8eed281e7ea60bf663b75cc210c02f9908d2ad5a4cdabc5"
+  },
+  "limits": [
+    "Posthoc historically exposed source analysis,one seed,no independent confirmation or causal identification.",
+    "No new endpoint train score,gradient or model forward was computed.",
+    "Recording-level correlations retain within-person dependence; no iid confidence inference or multiple-comparison significance claim is made.",
+    "Loss and concentration may respond together to many changed parameters; saved endpoints cannot identify mediation.",
+    "Counterfactuals are the already sealed fixed-menu forecasts,not newly generated interventions or deployment outcome guarantees.",
+    "Current review rechecked36forecast/trace/receipt pins and27frozen sources; the previous execution review checked all72artifacts. No memory or weight bytes were reopened/hashed for this postmortem."
+  ],
+  "review_actions": {
+    "saved_forecasts_counterfactuals_people_fold_guard_traces_read": true,
+    "public_rows_or_person_ids_written": false,
+    "memory_or_weights_opened_or_hashed": false,
+    "raw_audio": false,
+    "fitting": false,
+    "new_model_forward": false,
+    "gradients": false,
+    "endpoint_train_scoring": false,
+    "parameter_search": false,
+    "standalone_numerical_audit": false,
+    "literature_or_download": false,
+    "old_dev_test_access_or_hash": false,
+    "original_analysis_script_rerun": false,
+    "frozen_artifacts_modified": false,
+    "only_written_artifact": "donor_postmortem_v1/REVIEW.json"
+  }
+}

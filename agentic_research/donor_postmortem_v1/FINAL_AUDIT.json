@@ -1,0 +1,22 @@
+{
+  "status": "SAVED_POSTMORTEM_VERIFIED_LOOP_PAUSED",
+  "recorded_utc": "2026-11-02T17:18:44.236270+00:00",
+  "public_snapshot_sha256": {
+    ".gitignore": "04e59f5cc75e578a7492cd2c14ddf16487d1af09e188a7cc01224a61b1b3855f",
+    "AGENTS.md": "c1ac81948806557b3d5d81736a73d6c8140c81856fa256cad876f11439b7b8f6",
+    "analyze.py": "792a032ed98ac4a0fa80205ac94d282b00a7897ba3058379d28e9afef6c3dc8a",
+    "RESULTS.json": "d99af478f10b9012aad20bde72764e1edc0051dc10ea2b9f06cf8a58e68eb0c5",
+    "CAUSE_ANALYSIS.md": "ae6f5d599216b9b216bd1e039535d7809718bb6e73fb08f7e960c83d2f5c76e7",
+    "DECISION.md": "4bb4b4057298fd95fac18ada507a2629bf771022be0129e763600fb908966cca",
+    "REVIEW.json": "8fa005784ece056f442f8f48bcb2b306a03cab256c2057c6b390851005d9cf6c",
+    "LOOP_PROMPT.md": "2cef6b305aeb1710e070c3e0a1488490d0144a96869f6d1236292c457d3789a8",
+    "AUTOMATION_STATUS.json": "5bee51edda816c58505e6f45c7435bab95839f70e52afbedcf7820a2021e3636",
+    "COMPLETION_RESULT.json": "68999040ae6feef93ce339b3f3923d3657e07cfee70cab7448640bc280fd7e19"
+  },
+  "original_campaign_public_seals_results_unchanged": true,
+  "ledger_unchanged_sha256": "37ebe09233886beb61ca8bd3373bb9d9cde7f54a3689785dc39d43064541a302",
+  "no_new_training_or_predictions": true,
+  "independent_mismatch_count": 0,
+  "remaining_training_batches": 1,
+  "next_registered_task": null
+}

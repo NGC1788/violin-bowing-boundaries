@@ -1,5 +1,7 @@
 # 다른 AI·다른 컴퓨터에서 이어가는 방법
 
+**최신(2026-11-03 진단완료·학습루프일시중지):** [저장결과분석](donor_postmortem_v1/CAUSE_ANALYSIS.md)과별도재계산을완료했다. 제안삭제법은donor의존/확률민감도를줄였지만양성손실증가로일반검색보다나빴다. **NO_JUSTIFIED_NEXT_LEARNING**: 마지막1batch는쓰지않고보존한다. 일반검색/queryDRO의작은개선과실패결과는그대로다. 높은novelty/독립성능개선은미확보이며이번분기에추가등록작업은없다. 기존실험/진단을재실행하지않는다. 모든AI연구의불가능성은뜻하지않는다.
+
 **최신(2026-11-03 실제12학습완료):** donor-deletion은STOP이다. 최선queryDRO는Markov대비1.4956%낮은loss지만2%screen미달,제안adversarial은일반검색보다.1736%나빴다. [결과](donor_deletion_learning_v1/RESULTS.md). 다음은[저장산출물진단](donor_deletion_learning_v1/NEXT_POSTMORTEM_GATE.md)이며새fit/forward0이다. 같은batch를재개하지않는다. 마지막학습예산1batch는별도정당화전사용하지않는다.
 
 **최신(2026-11-03 전체동결완료):** [donor deletion](donor_deletion_learning_v1/README.md)의28합성기능시험·별도코드검토뒤7source입력/27소스/실행계약을동결했다. 실제새학습0건이며다음은**고정12fit의한번실행**이다. `...donor_deletion_learning_v1.runner check`뒤state/다른worker가없을때만run한다. 준비/서면선택/이전STOP배치를재실행하지않는다. [준비결과](donor_deletion_learning_v1/PREPARATION_RESULT.json). 성능/높은novelty는아직미입증이다.
