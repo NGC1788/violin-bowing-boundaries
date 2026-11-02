@@ -1,0 +1,542 @@
+{
+  "all_comparison_intervals_below_zero": false,
+  "dev": {
+    "frequency": {
+      "brier": 0.1828645627640394,
+      "coherence_rate": 1.0,
+      "cohort_log_loss": {
+        "CG": 0.5517602527101704,
+        "EG": 0.6647929352252113,
+        "FG": 0.46264502024844084
+      },
+      "invalid": {
+        "log_loss": 0.4121542613818973,
+        "participants": 1,
+        "rows": 2
+      },
+      "log_loss": 0.546600211165782,
+      "participant_loss": [
+        0.4383424778022928,
+        0.714062060506792,
+        0.5028762198214262,
+        0.47791159912640746,
+        0.7954116906772091,
+        0.5021328239985932,
+        0.5341741797732135,
+        0.40789063762032185
+      ],
+      "participants": 8,
+      "rows": 337,
+      "seed_log_losses": [
+        0.546600211165782
+      ],
+      "seeds": 1,
+      "valid": {
+        "log_loss": 0.546777158574028,
+        "participants": 8,
+        "rows": 335
+      }
+    },
+    "hgb": {
+      "brier": 0.17481003067368997,
+      "coherence_rate": 0.10979228486646884,
+      "cohort_log_loss": {
+        "CG": 0.5957761164104322,
+        "EG": 0.5975493731910864,
+        "FG": 0.4871209852460045
+      },
+      "invalid": {
+        "log_loss": 0.517720409337188,
+        "participants": 1,
+        "rows": 2
+      },
+      "log_loss": 0.5554737564189354,
+      "participant_loss": [
+        0.3892601970275897,
+        0.895886087746056,
+        0.5021820644576509,
+        0.5712527346338941,
+        0.6883163720781502,
+        0.7521865637727574,
+        0.5067823743040225,
+        0.13792365733136208
+      ],
+      "participants": 8,
+      "rows": 337,
+      "seed_log_losses": [
+        0.5554737564189354
+      ],
+      "seeds": 1,
+      "valid": {
+        "log_loss": 0.5546057820114381,
+        "participants": 8,
+        "rows": 335
+      }
+    },
+    "markov": {
+      "brier": 0.17862915601260762,
+      "coherence_rate": 1.0,
+      "cohort_log_loss": {
+        "CG": 0.5746212085776929,
+        "EG": 0.6244178555004505,
+        "FG": 0.4384966098787184
+      },
+      "invalid": {
+        "log_loss": 0.42799237842159993,
+        "participants": 1,
+        "rows": 2
+      },
+      "log_loss": 0.5360236457962668,
+      "participant_loss": [
+        0.4391989711097264,
+        0.7664813124674948,
+        0.5181833421558574,
+        0.4544821047242943,
+        0.7357245401069008,
+        0.5807668589772051,
+        0.5131111708940003,
+        0.2802408659346557
+      ],
+      "participants": 8,
+      "rows": 337,
+      "seed_log_losses": [
+        0.5360236457962668
+      ],
+      "seeds": 1,
+      "valid": {
+        "log_loss": 0.5360993660171325,
+        "participants": 8,
+        "rows": 335
+      }
+    },
+    "mlp_ind": {
+      "brier": 0.1733280279177064,
+      "coherence_rate": 0.6330365974282888,
+      "cohort_log_loss": {
+        "CG": 0.5643259863436335,
+        "EG": 0.6540475781685409,
+        "FG": 0.7805850967546667
+      },
+      "invalid": {
+        "log_loss": 0.4957996454161068,
+        "participants": 1,
+        "rows": 2
+      },
+      "log_loss": 0.6678535507039979,
+      "participant_loss": [
+        0.4106987442589904,
+        0.8060804531678522,
+        0.47619876160405794,
+        0.6454587509372227,
+        0.7714804607065672,
+        1.482791248693478,
+        0.5366146956305146,
+        0.21350529063329945
+      ],
+      "participants": 8,
+      "rows": 337,
+      "seed_log_losses": [
+        0.6775483553798846,
+        0.6655407832181187,
+        0.6604715135139902
+      ],
+      "seeds": 3,
+      "valid": {
+        "log_loss": 0.6672785446150984,
+        "participants": 8,
+        "rows": 335
+      }
+    },
+    "mlp_joint": {
+      "brier": 0.1783534522197964,
+      "coherence_rate": 1.0,
+      "cohort_log_loss": {
+        "CG": 0.5713478693045242,
+        "EG": 0.6785201308590256,
+        "FG": 0.8162606786653172
+      },
+      "invalid": {
+        "log_loss": 0.527365192703449,
+        "participants": 1,
+        "rows": 2
+      },
+      "log_loss": 0.689983238203447,
+      "participant_loss": [
+        0.4186824112063043,
+        0.8211168607882313,
+        0.4742443359190371,
+        0.6502961094008916,
+        0.7941523679270627,
+        1.5882852766767888,
+        0.5628878937909886,
+        0.21020064991827112
+      ],
+      "participants": 8,
+      "rows": 337,
+      "seed_log_losses": [
+        0.6784688614481407,
+        0.6864588173765986,
+        0.7050220357856014
+      ],
+      "seeds": 3,
+      "valid": {
+        "log_loss": 0.6892488950852229,
+        "participants": 8,
+        "rows": 335
+      }
+    },
+    "mlp_offset": {
+      "brier": 0.18129418805318157,
+      "coherence_rate": 1.0,
+      "cohort_log_loss": {
+        "CG": 0.6402802568643279,
+        "EG": 0.7021827446273496,
+        "FG": 0.7864169588860351
+      },
+      "invalid": {
+        "log_loss": 0.4626299497271725,
+        "participants": 1,
+        "rows": 2
+      },
+      "log_loss": 0.7105571420632235,
+      "participant_loss": [
+        0.5149173872613212,
+        0.9035665087728475,
+        0.5023568745588148,
+        0.6286010522596963,
+        0.822268654108376,
+        1.4830322980659627,
+        0.5820968351463234,
+        0.24761752633244635
+      ],
+      "participants": 8,
+      "rows": 337,
+      "seed_log_losses": [
+        0.7207700196173723,
+        0.7108786412207162,
+        0.7000227653515819
+      ],
+      "seeds": 3,
+      "valid": {
+        "log_loss": 0.7109104355600758,
+        "participants": 8,
+        "rows": 335
+      }
+    }
+  },
+  "manifest_sha256": "e23ebe938134885ae132ec57913f02ea9ef7cc0b20091154339c5aeda8c98cec",
+  "novelty": "joint heads, prior offsets and coherence are conventional; accuracy alone is not method novelty",
+  "persistence_untrained_auxiliary": {
+    "brier": 0.30055493203641354,
+    "coherence_rate": 1.0,
+    "cohort_log_loss": {
+      "CG": 3.5050469434057807,
+      "EG": 5.222294624152068,
+      "FG": 3.729620041159164
+    },
+    "invalid": {
+      "log_loss": 4.605170852645506,
+      "participants": 1,
+      "rows": 1
+    },
+    "log_loss": 4.152320536239005,
+    "participant_loss": [
+      3.5135750357255833,
+      4.741620329767162,
+      4.264047159862454,
+      5.901440885252032,
+      3.4112379278894536,
+      2.763102911591018,
+      2.6863500807142406,
+      5.023822657437008,
+      5.065687837912083
+    ],
+    "participants": 9,
+    "rows": 389,
+    "seed_log_losses": [
+      4.152320536239005
+    ],
+    "seeds": 1,
+    "valid": {
+      "log_loss": 4.149563981145771,
+      "participants": 9,
+      "rows": 388
+    }
+  },
+  "predictions_seal_sha256": "0d9e82f5c19c88143fda1e1777b513355b7fb45d94dbab9f7cdef1bdb057bdfd",
+  "primary_offset_comparisons": {
+    "markov": {
+      "mean_difference": 0.11177847615339087,
+      "participants": 9,
+      "percentile_95_interval": [
+        0.028139733083394906,
+        0.19355094865169023
+      ],
+      "relative_reduction": -0.20234579409287967,
+      "resamples": 5000,
+      "scope": "Exploratory paired participant uncertainty; no trial/seed pseudo-replication or population guarantee.",
+      "seed": 20261102
+    },
+    "mlp_ind": {
+      "mean_difference": 0.0007677929436767558,
+      "participants": 9,
+      "percentile_95_interval": [
+        -0.011878097111070716,
+        0.014230474097012506
+      ],
+      "relative_reduction": -0.001157318915854244,
+      "resamples": 5000,
+      "scope": "Exploratory paired participant uncertainty; no trial/seed pseudo-replication or population guarantee.",
+      "seed": 20261102
+    },
+    "mlp_joint": {
+      "mean_difference": -0.0025734851682252596,
+      "participants": 9,
+      "percentile_95_interval": [
+        -0.028405262082520952,
+        0.024629322999433705
+      ],
+      "relative_reduction": 0.0038596578469566323,
+      "resamples": 5000,
+      "scope": "Exploratory paired participant uncertainty; no trial/seed pseudo-replication or population guarantee.",
+      "seed": 20261102
+    }
+  },
+  "scope": "recording-relative descriptor prediction; exploratory nine-participant test",
+  "selected_baseline": "markov",
+  "selection_sha256": "c1a11e0379fe4007884dddd37487c2d07c4fb0e6a9b7d0829fb79cad48af6439",
+  "test": {
+    "frequency": {
+      "brier": 0.19966700010868654,
+      "coherence_rate": 1.0,
+      "cohort_log_loss": {
+        "CG": 0.4756399872006713,
+        "EG": 0.77791035066237,
+        "FG": 0.5048012323227663
+      },
+      "invalid": {
+        "log_loss": 0.4121542613818973,
+        "participants": 1,
+        "rows": 1
+      },
+      "log_loss": 0.586117190061936,
+      "participant_loss": [
+        0.46743723770469364,
+        0.8337210271068762,
+        0.5909699803362465,
+        0.892777585336132,
+        0.455996478927359,
+        0.4639940859130894,
+        0.4839694114053608,
+        0.6072324395441019,
+        0.4789564642835636
+      ],
+      "participants": 9,
+      "rows": 389,
+      "seed_log_losses": [
+        0.586117190061936
+      ],
+      "seeds": 1,
+      "valid": {
+        "log_loss": 0.5862567935374985,
+        "participants": 9,
+        "rows": 388
+      }
+    },
+    "hgb": {
+      "brier": 0.18229524540744016,
+      "coherence_rate": 0.13367609254498714,
+      "cohort_log_loss": {
+        "CG": 0.5125201712046139,
+        "EG": 0.6691871429698183,
+        "FG": 0.48815142117525717
+      },
+      "invalid": {
+        "log_loss": 0.22495376618515828,
+        "participants": 1,
+        "rows": 1
+      },
+      "log_loss": 0.5566195784498966,
+      "participant_loss": [
+        0.47254010729835844,
+        0.7001304290819591,
+        0.5637994693087891,
+        0.6933012111682206,
+        0.42811468691862403,
+        0.4486843399862382,
+        0.48683734689629893,
+        0.6141297886592754,
+        0.6020388267313047
+      ],
+      "participants": 9,
+      "rows": 389,
+      "seed_log_losses": [
+        0.5566195784498966
+      ],
+      "seeds": 1,
+      "valid": {
+        "log_loss": 0.5572447964830107,
+        "participants": 9,
+        "rows": 388
+      }
+    },
+    "markov": {
+      "brier": 0.18623925801092278,
+      "coherence_rate": 1.0,
+      "cohort_log_loss": {
+        "CG": 0.4562414522696905,
+        "EG": 0.7089193288742576,
+        "FG": 0.4920786488303097
+      },
+      "invalid": {
+        "log_loss": 0.5260454372887952,
+        "participants": 1,
+        "rows": 1
+      },
+      "log_loss": 0.5524131433247527,
+      "participant_loss": [
+        0.47864291781974105,
+        0.7087661422824629,
+        0.5317626676386009,
+        0.8060746069943588,
+        0.4658303610325872,
+        0.4286967851780149,
+        0.4285545600078775,
+        0.611917237345951,
+        0.511473011623179
+      ],
+      "participants": 9,
+      "rows": 389,
+      "seed_log_losses": [
+        0.5524131433247527
+      ],
+      "seeds": 1,
+      "valid": {
+        "log_loss": 0.55229343999276,
+        "participants": 9,
+        "rows": 388
+      }
+    },
+    "mlp_ind": {
+      "brier": 0.20104061735628678,
+      "coherence_rate": 0.586975149957155,
+      "cohort_log_loss": {
+        "CG": 0.7170268266216135,
+        "EG": 0.687164202198992,
+        "FG": 0.5860804507827946
+      },
+      "invalid": {
+        "log_loss": 0.2814320389981184,
+        "participants": 1,
+        "rows": 1
+      },
+      "log_loss": 0.6634238265344669,
+      "participant_loss": [
+        0.6204687048720029,
+        0.650335502103281,
+        0.6726574081592466,
+        0.773383688719471,
+        0.46511523931713433,
+        0.6456548486109138,
+        0.7048417155714631,
+        0.6377734157742241,
+        0.8005839156824637
+      ],
+      "participants": 9,
+      "rows": 389,
+      "seed_log_losses": [
+        0.668548693846446,
+        0.6541703200515712,
+        0.6675524657053832
+      ],
+      "seeds": 3,
+      "valid": {
+        "log_loss": 0.664279979731118,
+        "participants": 9,
+        "rows": 388
+      }
+    },
+    "mlp_joint": {
+      "brier": 0.1992411493132157,
+      "coherence_rate": 1.0,
+      "cohort_log_loss": {
+        "CG": 0.7366392079855834,
+        "EG": 0.6670288772994765,
+        "FG": 0.5966272286540465
+      },
+      "invalid": {
+        "log_loss": 0.34567309042692385,
+        "participants": 1,
+        "rows": 1
+      },
+      "log_loss": 0.6667651046463687,
+      "participant_loss": [
+        0.5875280800467299,
+        0.6445241716789207,
+        0.7072340884838159,
+        0.7160090323016709,
+        0.4951195174315936,
+        0.657212342361702,
+        0.7388951237074314,
+        0.6405534279178378,
+        0.8138101578876166
+      ],
+      "participants": 9,
+      "rows": 389,
+      "seed_log_losses": [
+        0.6692962455184859,
+        0.6619146747663454,
+        0.6690843936542747
+      ],
+      "seeds": 3,
+      "valid": {
+        "log_loss": 0.667375849569651,
+        "participants": 9,
+        "rows": 388
+      }
+    },
+    "mlp_offset": {
+      "brier": 0.19260106492576215,
+      "coherence_rate": 1.0,
+      "cohort_log_loss": {
+        "CG": 0.7122955843469935,
+        "EG": 0.6869293796637322,
+        "FG": 0.5933498944237049
+      },
+      "invalid": {
+        "log_loss": 0.28998796086349604,
+        "participants": 1,
+        "rows": 1
+      },
+      "log_loss": 0.6641916194781435,
+      "participant_loss": [
+        0.6537787030794925,
+        0.6451394114489141,
+        0.6644593528612829,
+        0.7699346918010601,
+        0.4618116273303389,
+        0.6271849778036078,
+        0.6736647351742455,
+        0.6457140357412227,
+        0.8360370400631268
+      ],
+      "participants": 9,
+      "rows": 389,
+      "seed_log_losses": [
+        0.6664937204037711,
+        0.6725629758724913,
+        0.6535181621581683
+      ],
+      "seeds": 3,
+      "valid": {
+        "log_loss": 0.665110282968588,
+        "participants": 9,
+        "rows": 388
+      }
+    }
+  },
+  "test_opened_marker_sha256": "8a0acf3fa5a63740cc3dae49a1b9d65b940c2e2bbb440e713a9983fd4353b913",
+  "training_attempts": 12,
+  "two_percent_screen_passed": false,
+  "worker_seconds": 16.96882862399798
+}

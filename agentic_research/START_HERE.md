@@ -1,5 +1,7 @@
 # 다른 AI·다른 컴퓨터에서 이어가는 방법
 
+**최신 상태(2026-11-02):** 바이올린 raw 고정 12개 학습·시험 평가·최종 감사가 완료됐고 개선 screen은 실패했다. [RESULTS.md](violin_raw_v1/RESULTS.md), [WORK_QUEUE.md](docs/WORK_QUEUE.md) 최상단을 읽는다. 캠페인은 STOP, 자동화는 PAUSED다. 아래의 준비/학습 대기 설명과 실행 예시를 현재의 미완료 작업으로 해석하지 않는다. source·입력·점수·부정적 결과를 보존하며 새 방향에는 별도 근거와 계약이 필요하다.
+
 **현재 다음 작업(2026-10-31):** [CLAUDE_NEXT.md](CLAUDE_NEXT.md), [실행 현황](docs/EXECUTION_STATUS.md), [raw 특징 감사](violin_raw_v1/RAW_FEATURE_AUDIT.md)를 먼저 읽는다. 아래 v3 명령은 완료된 첼로 비교의 이식/재현 설명이다. 현재 연구의 진행 명령이 아니며 raw 바이올린 실험을 실행하지 않는다. 보정 solver 보완도 이미 종료했다.
 
 현재 연구는 **초기 신호로 미래의 여러 관측 규칙 출력을 예측하는 AI 연구**다. 구현, 테스트, 실행, 신규성 주장을 구분한다. 최신 실제 결과는 `docs/EXECUTION_STATUS.md`를 먼저 읽는다.

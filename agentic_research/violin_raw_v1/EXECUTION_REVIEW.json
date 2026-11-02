@@ -1,0 +1,22 @@
+{
+  "snapshot_sha256": "759509b2aaa17df7b8590a653dbfc8bc84bf85b1709aa51526ed091e93115d47",
+  "scope": "training_evaluation",
+  "verdict": "approve",
+  "blockers": [],
+  "provider": "separate_codex_review_agent",
+  "reviewed_source_files": 10,
+  "observations": [
+    "Read-only source review of all ten supplied files; no code execution or outcomes accessed.",
+    "Training loads only train labels; scaler, participant weights and transition prior are source-only.",
+    "Exact12attempt menu, lock/time/deadline controls, persisted failures and terminal integrity halts match contract.",
+    "All predictions sealed before dev comparator selection; selection sealed before single test opening.",
+    "Seed losses and paired participant differences are aggregated without row/seed pseudo-replication.",
+    "Approval binds all ten reviewed files including PREPARED_SUMMARY.json, not only the minimum mandatory subset."
+  ],
+  "limitations": [
+    "Source-only separate review is not independent empirical confirmation or a security attestation.",
+    "Nine test participants; percentile bootstrap intervals are exploratory and not adjusted for multiple comparisons.",
+    "Upstream recording segmentation is unverified; no live onset, perceptual quality, education or physical bow-force claim.",
+    "Joint heads, Markov offsets and coherence are conventional; accuracy is not method novelty."
+  ]
+}

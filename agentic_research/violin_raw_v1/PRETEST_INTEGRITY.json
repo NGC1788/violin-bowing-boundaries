@@ -1,0 +1,15 @@
+{
+  "checked_utc": "2026-11-02T08:33:14.199646+00:00",
+  "stage": "after all twelve predictions, before dev/test scoring",
+  "training_attempts": 12,
+  "completed": 12,
+  "worker_seconds": 16.96882862399798,
+  "source_files_verified": 11,
+  "prepared_files_byte_hash_verified": 4,
+  "prediction_and_receipt_files_verified": 24,
+  "mismatches": 0,
+  "test_opened_marker_present": false,
+  "dev_selection_present": false,
+  "execution_manifest_sha256": "e23ebe938134885ae132ec57913f02ea9ef7cc0b20091154339c5aeda8c98cec",
+  "predictions_seal_sha256": "0d9e82f5c19c88143fda1e1777b513355b7fb45d94dbab9f7cdef1bdb057bdfd"
+}

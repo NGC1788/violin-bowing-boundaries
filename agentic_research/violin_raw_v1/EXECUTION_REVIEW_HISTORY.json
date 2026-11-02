@@ -1,0 +1,39 @@
+{
+  "stage": "before any actual training or dev/test scoring",
+  "attempts": [
+    {
+      "provider": "claude_cli",
+      "status": "timeout",
+      "timeout_seconds": 180,
+      "snapshot_sha256": "3ffee360d1d6424b1eede2ea1ed9f4bcf003c12e5392f1bf88f9f4775996c480"
+    },
+    {
+      "provider": "codex_cli",
+      "status": "local_config_rejection_before_model_call",
+      "correction": "Removed incorrect quoted dotted server keys."
+    },
+    {
+      "provider": "codex_cli",
+      "status": "timeout",
+      "timeout_seconds": 240,
+      "snapshot_sha256": "345d73ade18099eede1536411aeee9ee3d48f13e3647698957a3841dff43e26d"
+    },
+    {
+      "provider": "separate_codex_review_agent",
+      "status": "approve",
+      "snapshot_sha256": "759509b2aaa17df7b8590a653dbfc8bc84bf85b1709aa51526ed091e93115d47",
+      "tool_scope": "source reading only"
+    }
+  ],
+  "preflight_changes": [
+    "Bind snapshot SHA to exact source hash map.",
+    "Bind inputs to existing public prepared summary and data freeze.",
+    "Measure per-call time limits.",
+    "Persist integrity failures as terminal halts; lock contention cannot halt the owning worker."
+  ],
+  "synthetic_tests": {
+    "passed": 57,
+    "seconds": 2.63
+  },
+  "raw_cli_logs": "private local/reviews only"
+}

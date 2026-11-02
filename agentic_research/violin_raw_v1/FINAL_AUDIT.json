@@ -1,0 +1,22 @@
+{
+  "verdict": "passed",
+  "reviewer": "separate_codex_review_agent",
+  "source_only_preflight_and_aggregate_postflight": true,
+  "execution_sources_checked": 11,
+  "data_sources_checked": 17,
+  "prepared_files_byte_hashed": 4,
+  "prediction_receipt_files_checked": 24,
+  "hash_mismatches": 0,
+  "aggregate_max_tolerance": 1e-12,
+  "verified": [
+    "result/freeze/selection/test-opening seal links",
+    "exact12job IDs and STOP",
+    "participant and seed-loss means",
+    "dev baseline selection",
+    "relative loss changes",
+    "all3paired bootstrap intervals from stored participant-loss vectors"
+  ],
+  "test_labels_reopened": false,
+  "row_level_likelihood_independently_rescored": false,
+  "scope": "JSON aggregate recomputation and byte-hash verification only; no NPZ/raw audio read or second test evaluation; not external attestation."
+}
