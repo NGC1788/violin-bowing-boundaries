@@ -1,0 +1,149 @@
+{
+  "status": "FIXED_SPECIFICATION_REQUIRES_REVIEW_AND_FREEZE",
+  "model_config": {
+    "status": "PROPOSED_NOT_EXECUTION_APPROVED",
+    "scope_now": "source-free training-readiness code and tests; no actual fitting",
+    "methods": [
+      "joint_aux",
+      "mdn_aux",
+      "exact_count",
+      "moment_count"
+    ],
+    "future_blocks": [
+      23,
+      23
+    ],
+    "future_frames": 46,
+    "minimum_voiced": 23,
+    "input_dimension": 73,
+    "prefix_features": "60 clipped normalized summaries + 11 inner-train-threshold prefix-state indicators + 2 unclipped normalized log1p prefix moments",
+    "hidden_width": 32,
+    "hidden_layers": 2,
+    "activation": "GELU",
+    "regimes": 2,
+    "generator": "shared latent mixture; separately predicted future initial-mask logits; per-block binary transition rows; per-channel zero-sum block contrast; per-channel scale; future level integrated out in projected contrast likelihood",
+    "scale_range_normalized_units": [
+      0.05,
+      3.0
+    ],
+    "contrast_bound_normalized_units": 3.0,
+    "mask_probability_epsilon": 0.0001,
+    "mdn_log_std_location_bound": 5.0,
+    "mdn_log_std_scale_range": [
+      0.05,
+      3.0
+    ],
+    "loss": "mean9queryBCE +0.1*negative joint mask/projected-centered-path mixture loglikelihood /46; person macro weighting in future runner",
+    "auxiliary_weight": 0.1,
+    "probability_clipping": 1e-06,
+    "optimizer": {
+      "name": "AdamW",
+      "learning_rate": 0.001,
+      "weight_decay": 0.001,
+      "gradient_norm_clip": 5.0
+    },
+    "epochs": 40,
+    "batch_size": 64,
+    "seed": 0,
+    "dtype": "CPUfloat64",
+    "stopping": "fixed epochs, no held-source stopping or best-epoch selection; budget/NaN/integrity failures preserved",
+    "source_folds": "existing source34 people/1442 recordings,3folds; historically exposed exploratory",
+    "maximum_actual_jobs_if_later_frozen": 12,
+    "max_seconds_per_job": 180,
+    "max_seconds_per_batch": 1800,
+    "deadline_kst": "2026-11-06T00:00:00+09:00",
+    "primary_score": "participant-macro mean9query clipped log loss, include invalid15rows; same source folds/threshold provenance as prior baseline",
+    "promotion_screen": "at least2percent lower primary score than strongest Markov/HGB baseline and improvement in at least2of3folds; exploratory only; all controls/failures reported",
+    "baseline_recheck": "future runner must match saved source Markov/HGB evaluation with inner-train preprocessing before new comparative claims",
+    "new_training_allowed_now": false,
+    "new_math_audits_allowed": false,
+    "old_dev_test_truth_access_allowed": false,
+    "path_label_normalization": "inner-train pooled within-record contrast scale; no between-note level variance; future centering is labels only, never inference input",
+    "invariance_scope": "auxiliary target likelihood conditional on fixed future mask is invariant to per-record per-channel constant shifts; not a claim of raw audio or network-input invariance"
+  },
+  "expected_rows": 1442,
+  "expected_people": 34,
+  "expected_invalid": 15,
+  "fold_rows": [
+    510,
+    465,
+    467
+  ],
+  "fold_people": [
+    12,
+    11,
+    11
+  ],
+  "pinned_path_results_sha256": "1ecbdc1b0b97168594e2ae0c64d27a43748c2a7b8f7af677a32c14e8ba0a9451",
+  "pinned_discovery_results_sha256": "dfc38a89b0e077eaaf9ec60aa47e2afd4660db7ce82fc5b2d8fe8d1590929f3f",
+  "max_jobs": 12,
+  "max_job_seconds": 180,
+  "max_worker_seconds": 1800,
+  "deadline_kst": "2026-11-06T00:00:00+09:00",
+  "log_every_epochs": 10,
+  "eval_chunk_size": 64,
+  "job_order": [
+    {
+      "fold": 0,
+      "method": "joint_aux"
+    },
+    {
+      "fold": 0,
+      "method": "mdn_aux"
+    },
+    {
+      "fold": 0,
+      "method": "exact_count"
+    },
+    {
+      "fold": 0,
+      "method": "moment_count"
+    },
+    {
+      "fold": 1,
+      "method": "joint_aux"
+    },
+    {
+      "fold": 1,
+      "method": "mdn_aux"
+    },
+    {
+      "fold": 1,
+      "method": "exact_count"
+    },
+    {
+      "fold": 1,
+      "method": "moment_count"
+    },
+    {
+      "fold": 2,
+      "method": "joint_aux"
+    },
+    {
+      "fold": 2,
+      "method": "mdn_aux"
+    },
+    {
+      "fold": 2,
+      "method": "exact_count"
+    },
+    {
+      "fold": 2,
+      "method": "moment_count"
+    }
+  ],
+  "baseline_policy": {
+    "markov": "3fixed analytic innertrain count/prior fits, charged to totalworker elapsed; no iterative optimization",
+    "hgb": "reuse3sealed source summary_hgb forecasts, no refit",
+    "expected_score_tolerance": 1e-12,
+    "representation": "historicalHGB raw60 normalized/clipped8; neural73derivedfromsame raw60 and innertrain thresholds, representation differs"
+  },
+  "failure_policy": "first job failure/timeout stops entire batch; preserve partialweights/predictions/receipts; no promotion of incomplete batch",
+  "evaluation": "all12predictions sealed before any held target labels formed for scoring; participant-macro BCE, Brier, worstperson, coherence; includeinvalid15",
+  "refitting_or_external_weights": false,
+  "new_math_audits": false,
+  "old_dev_test_truth_access": false,
+  "public_outputs": "aggregates/code/hashes only; row/people predictions/weights/traces private",
+  "fitting_authority": "FREEZE.json execution_authorized=true plus active atomic job registration; embedded model_config false flags retain preparation provenance",
+  "budget_clock": "parent child-process per-job watchdog and whole-worker SIGALRM; teardown grace2s is charged and cannot produce successful overbudget job"
+}

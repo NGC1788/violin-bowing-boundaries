@@ -1,0 +1,11 @@
+{
+  "id": "ai",
+  "status": "ACTIVE",
+  "rrule": "FREQ=MINUTELY;INTERVAL=30",
+  "prompt_matches_file_trimmed": true,
+  "prompt_sha256": "028ffd228992009b1fa8b2da183a6f922ec925333bd3e0692b905879ae9f9d32",
+  "verified_utc": "2026-11-02T15:49:30.412151+00:00",
+  "next": "execute frozen12jobs once; no refreeze or extra preparation",
+  "execution_freeze_sha256": "aa7f4dc023a3885db4aab19c52e113ed9af765850621e8bb661481c3d45abfa3",
+  "requires": "Mac and Codex app running"
+}

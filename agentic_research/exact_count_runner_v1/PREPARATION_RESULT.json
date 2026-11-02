@@ -1,0 +1,19 @@
+{
+  "status": "FROZEN_READY_FOR_BOUNDED_TRAINING",
+  "freeze_sha256": "aa7f4dc023a3885db4aab19c52e113ed9af765850621e8bb661481c3d45abfa3",
+  "execution_authorized_after_freeze": true,
+  "actual_fitting_jobs": 0,
+  "synthetic_tests_passed": 18,
+  "separate_review": "APPROVE_TO_FREEZE_SOURCE_INPUTS",
+  "actual_input_files_verified": 6,
+  "actual_source_data_access_began_only_after_code_approval": true,
+  "old_dev_test_truth_accessed_or_hashed": false,
+  "raw_waveform_accessed": false,
+  "source_rows": 1442,
+  "source_people": 34,
+  "invalid_retained": 15,
+  "completed_utc": "2026-11-02T15:47:44.424509+00:00",
+  "completed_kst_date": "2026-11-03",
+  "next": "execute fixed12jobs once, no further preparation/refreeze",
+  "no_actual_performance_claim": true
+}

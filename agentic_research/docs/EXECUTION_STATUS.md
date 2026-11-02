@@ -1,5 +1,17 @@
 # 실제 실행 현황 — 2026-10-30
 
+## 자동 루프 실행 단계로 갱신 — 2026-11-03
+
+기존 `ai`를 완료된 준비를 반복하지 않고 고정12개 실제 학습을 실행하도록 갱신했다. 앱 응답 및 ACTIVE·30분간격·저장프롬프트 일치를 확인했다. [설정 기록](../exact_count_runner_v1/AUTOMATION_STATUS.json). 실행 중이면 기존worker만 관찰하고 재시작하지 않는다.
+
+## 2026-11-03 전체 실행 계약 동결 완료: 다음은 실제 고정12개 학습
+
+`exact_count_runner_v1`의 실행기·source-only loader·예산/종료 controller·결과 봉인을18합성 기능시험과 별도 검토로 완료했다. 초기 검토에서 parent출력봉인·중복Markovfit·watchdog소유/정리·checkpoint임시파일 문제를 찾아 실제입력열람 전에 모두 수정했다. [검토](../exact_count_runner_v1/REVIEW.json).
+
+코드 승인 뒤에만6개 source 입력(학습prefix/meta/future와 기존HGB예측3개)을 열고 hash·행정렬·34명1442개·invalid15개·연속목표/guard/시간지지를 확인했다. olddev/test 정답은hash도 열지 않았고 raw음원·실제fitting·추가수치감사0건이다. [전체동결](../exact_count_runner_v1/FREEZE.json)의 SHA는 `aa7f4dc023a3885db4aab19c52e113ed9af765850621e8bb661481c3d45abfa3`, 상태 FROZEN_READY_FOR_BOUNDED_TRAINING이다. [준비결과](../exact_count_runner_v1/PREPARATION_RESULT.json).
+
+**다음 한 작업은 준비 반복이 아니라 실제 실행:** `.venv-mac/bin/python -m agentic_research.exact_count_runner_v1.runner check` 후 다른worker/state가 없으면 `...runner run`을 한 번 실행한다. 네 head×3fold12neural jobs·40epochs/batch64/seed0/180초job/1800초worker 고정. HGB새fit0·sealed예측재사용, analyticMarkov3회는worker시간에 포함한다. 모든12예측을parent가고정한 OUTPUT_SEAL 뒤에만held-event score를계산한다. 첫실패는batchSTOP, 재실행/구조/불완전승격을하지않는다. 다음실행승인은이미사용자연구범위이며새확인을묻지않는다. 아직학습성능/novelty는미입증이다. 아래준비선점은완료이력이다.
+
 ## 자동 루프 갱신 — 2026-11-03
 
 기존 `ai`를 새 실행기·전체계약 동결 준비로 갱신하고 ACTIVE·30분 간격·프롬프트 일치를 확인했다. [확인 기록](../exact_count_learning_v1/AUTOMATION_STATUS.json). 준비 봉인은 실행 허가가 아니며 실제 입력을 여는 시점은 실행기 검토 통과 뒤로 제한했다.

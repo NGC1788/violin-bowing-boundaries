@@ -1,0 +1,59 @@
+{
+  "status": "FROZEN_READY_FOR_BOUNDED_TRAINING",
+  "execution_authorized": true,
+  "sources": {
+    "agentic_research/exact_count_runner_v1/AGENTS.md": "6c8cc3cba4135194cfb22c91592f651d6c4947a029c6a75add94c60e3fa8b711",
+    "agentic_research/exact_count_runner_v1/CONTRACT.json": "734d254b2c9728a384322db266d825e94c54f59065f9e165f196764c81e3b02c",
+    "agentic_research/exact_count_runner_v1/data.py": "c1792d15db470d64aa2d2cf3db0bf257839cf624eb59972526961b6abdcfcfce",
+    "agentic_research/exact_count_runner_v1/control.py": "9771f87238dbbb5c1244ba82bce76d182f9335d6193284585b530f6dc6b8f1af",
+    "agentic_research/exact_count_runner_v1/job.py": "36703428f468c39bdaaa93561cce547a8d55297be2db8c1fd3dfd011d4ff2fdc",
+    "agentic_research/exact_count_runner_v1/runner.py": "9858fd5a6a55c8ef992e0ebee5496c93b6b5bfa2bef5f3bbab08f1d46aa083d1",
+    "agentic_research/exact_count_runner_v1/test_runner.py": "1367de1effe300ef2a7e9ec2c025f3faa5c2f883e282a4db1b9c9dd49223f0a2",
+    "agentic_research/exact_count_learning_v1/AGENTS.md": "d4726c59eb35c511dcd6f6272cb5ab5550a45b1bf44afd26ee947ec9f2b66637",
+    "agentic_research/exact_count_learning_v1/CONTRACT_PROPOSAL.json": "0c02133a9385b3ef91fd2acdb7597931abf0d2b7ff0128d88f348648cb360d51",
+    "agentic_research/exact_count_learning_v1/model.py": "0edb31a422d5987bb47a02036b837a009447281469ec8a2cc3cb05484f3cf5a1",
+    "agentic_research/exact_count_learning_v1/preprocess.py": "9c131ddc96bb8150f454b452b97edc91519e0dc98c274c47468545cd554d26f3",
+    "agentic_research/exact_count_learning_v1/test_model.py": "3516d9b9c1094d87d3ade0f0f4c913d4b532da4dfde9f298cdbdbcfa38b9ad34",
+    "agentic_research/exact_count_learning_v1/INVARIANT_OBJECTIVE.md": "c0ce9fd38bc4a20f3c2032dbed2f77d0064550257271babb6ebde0ba7fb66a31",
+    "agentic_research/exact_count_learning_v1/readiness.py": "7fd80e7b60ea91906344c45b30f1dd79cf49e9552807a0a1a7974515b69c88e8",
+    "agentic_research/discovery_v3_math/decoder.py": "8383d9b8ce68203800fc730eb5bf8a0f1a1908f874eff12054369e9a2f957824",
+    "agentic_research/violin_raw_v1/data.py": "79b3d1c997741d82fe560f9ec12842f3889441be24fde7434833c8b6ccbf3c3d",
+    "agentic_research/violin_raw_v1/models.py": "1ef41dbf750541c8073fd497113363d1d27ae4e5b8b9f6b2564b7e26bffa3325",
+    "agentic_research/violin_raw_v1/metrics.py": "7e2e0d394562ad45a83ce14ee3def71e70f10e679f006855cee25295162e6369"
+  },
+  "versions": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "torch": "2.14.1",
+    "sklearn": "1.9.1",
+    "threadpoolctl": "3.7.0"
+  },
+  "inputs": {
+    "prefix_inputs.npz": "48359ac17b788e0e631516112c7fa07af527f9195716815964de1c8244d9a9fc",
+    "source_metadata.npz": "f5542fa08b6e7ef404f71fc7d7338dc211418e6371a1bec035e4ae866160e19b",
+    "future_labels.npz": "027ca39543d3cdf1e8eed281e7ea60bf663b75cc210c02f9908d2ad5a4cdabc5",
+    "hgb_fold0": "abb30eeea1cc5affa0a5266b538ebaf225da5a0e2d2ff0a51cd935220eba5517",
+    "hgb_fold1": "f40388aad5ca12f990b7c03f427e4c6556255a58e6ff3f139766e96f17cec5dd",
+    "hgb_fold2": "08a3513c0cc9ced372ee1861f5a2a12f3ce0f85f5ca6e0ffd654efaa15c0a98d"
+  },
+  "metadata": {
+    "gate_results": "1ecbdc1b0b97168594e2ae0c64d27a43748c2a7b8f7af677a32c14e8ba0a9451",
+    "gate_seal": "cf03f56c0dcd3aeaf9999ab3570d38850e10a7cf33405388475517bfbf65702d",
+    "gate_freeze": "75f950c714221fd9c81f6c315f0bb069f0998ed1fba6bd973116af39c8d8d107",
+    "old_results": "dfc38a89b0e077eaaf9ec60aa47e2afd4660db7ce82fc5b2d8fe8d1590929f3f",
+    "old_seal": "8cd3def9695bf0e7eb6888017b24962d464810787b753e54d57f567257fd9445",
+    "old_freeze": "2067d0336b0f9feb0e8b95dd7023176251197f0bdf942bc19d1275c2ebc50bc4",
+    "learning_readiness": "9034ccdda2d1bc5c306ec4b26fb07a3d830aba3fb69faee7bdb6677c8c0ec05a"
+  },
+  "review_sha256": "c74896ad1460545b05a9aaa3fe9bb3b204a30c2568c3b0d8383d24e15df1c231",
+  "tests_sha256": "4b52384f60509eb1b738597cc3ea1448fd26ad7dd386ba424995158850a3ab69",
+  "input_receipt_sha256": "97bc8df3e966b94a1f0970e12caf6111837d290a62985c8aaba77cfab3d390e6",
+  "limits": {
+    "deadline_kst": "2026-11-06T00:00:00+09:00",
+    "max_additional_training_batches": 3,
+    "max_jobs_per_additional_batch": 12,
+    "max_seconds_per_training_job": 180,
+    "max_training_seconds_per_batch": 1800
+  }
+}

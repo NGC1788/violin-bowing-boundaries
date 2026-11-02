@@ -1,5 +1,17 @@
 # 유한 연구 작업 큐 — 2026-10-30
 
+## 2026-11-03 전체 실행 계약 동결 완료: 다음은 실제 고정12개 학습
+
+`exact_count_runner_v1`의 실행기·source-only loader·예산/종료 controller·결과 봉인을18합성 기능시험과 별도 검토로 완료했다. 초기 검토에서 parent출력봉인·중복Markovfit·watchdog소유/정리·checkpoint임시파일 문제를 찾아 실제입력열람 전에 모두 수정했다. [검토](../exact_count_runner_v1/REVIEW.json).
+
+코드 승인 뒤에만6개 source 입력(학습prefix/meta/future와 기존HGB예측3개)을 열고 hash·행정렬·34명1442개·invalid15개·연속목표/guard/시간지지를 확인했다. olddev/test 정답은hash도 열지 않았고 raw음원·실제fitting·추가수치감사0건이다. [전체동결](../exact_count_runner_v1/FREEZE.json)의 SHA는 `aa7f4dc023a3885db4aab19c52e113ed9af765850621e8bb661481c3d45abfa3`, 상태 FROZEN_READY_FOR_BOUNDED_TRAINING이다. [준비결과](../exact_count_runner_v1/PREPARATION_RESULT.json).
+
+**다음 한 작업은 준비 반복이 아니라 실제 실행:** `.venv-mac/bin/python -m agentic_research.exact_count_runner_v1.runner check` 후 다른worker/state가 없으면 `...runner run`을 한 번 실행한다. 네 head×3fold12neural jobs·40epochs/batch64/seed0/180초job/1800초worker 고정. HGB새fit0·sealed예측재사용, analyticMarkov3회는worker시간에 포함한다. 모든12예측을parent가고정한 OUTPUT_SEAL 뒤에만held-event score를계산한다. 첫실패는batchSTOP, 재실행/구조/불완전승격을하지않는다. 다음실행승인은이미사용자연구범위이며새확인을묻지않는다. 아직학습성능/novelty는미입증이다. 아래준비선점은완료이력이다.
+
+## 2026-11-03 현재 선점: exact_count_runner_v1 실행기·전체 동결
+
+`/root`가 별도 실행기·누수 기능시험·계약을 원자료 비열람 상태에서 작성한다. 실제 planning.lock을 보유한다. 코드 검토 통과 뒤에만 같은 단위에서 source-only 입력 동일성/행 정렬을 확인하고 전체 실행 동결을 완료한다. 이 단위에서는 실제 fitting하지 않는다. 다른 작업자는 같은 실행기나 학습을 중복 시작하지 않는다.
+
 ## 2026-11-03 AI 학습 코드 준비 완료: 실제 학습은 아직0건
 
 `exact_count_learning_v1`의 batch countDP·Gaussian contrast/scale 역전파·prefix-only 입력·동일 보조감독 네 모델을 구현했다. 직접 joint/MDN은4414개, exact/moment count는4084개 파라미터이며 추가330개 free-head를 공개했다. [준비 결과](../exact_count_learning_v1/PREPARATION_RESULT.json), [코드/명세](../exact_count_learning_v1/README.md).

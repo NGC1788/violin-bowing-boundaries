@@ -1,0 +1,32 @@
+{
+  "status": "COMPLETE_FROZEN_READY_FOR_BOUNDED_TRAINING",
+  "code_and_dependencies_bound": 18,
+  "functional_tests": 18,
+  "functional_test_seconds": 2.47,
+  "separate_review": "APPROVE_TO_FREEZE_SOURCE_INPUTS",
+  "actual_source_npz_access_after_code_approval": true,
+  "actual_input_files_verified": 6,
+  "actual_fitting_jobs": 0,
+  "old_dev_test_truth_accessed_or_hashed": false,
+  "raw_waveforms_accessed": false,
+  "extra_standalone_math_audits": 0,
+  "next": "run fixed12neuraljobs once in next execution unit",
+  "no_runtime_or_forecast_improvement_claim": true,
+  "artifact_sha256": {
+    "runner.py": "9858fd5a6a55c8ef992e0ebee5496c93b6b5bfa2bef5f3bbab08f1d46aa083d1",
+    "INPUT_RECEIPT.json": "97bc8df3e966b94a1f0970e12caf6111837d290a62985c8aaba77cfab3d390e6",
+    "PREPARATION_RESULT.json": "5e029bd378530e48c17986a678428a15ad5b103a31e9bddc15efb3dab33a0e4c",
+    "job.py": "36703428f468c39bdaaa93561cce547a8d55297be2db8c1fd3dfd011d4ff2fdc",
+    "control.py": "9771f87238dbbb5c1244ba82bce76d182f9335d6193284585b530f6dc6b8f1af",
+    "LOOP_PROMPT.md": "dbf018041591cd2a4032c048439cdba041c971dd903073cce05647950316d521",
+    "UNIT_TESTS.json": "4b52384f60509eb1b738597cc3ea1448fd26ad7dd386ba424995158850a3ab69",
+    "README.md": "e008f9eff87894b24afa99b754b83069dd8f88f7e3d0e167188e05321b3a67b5",
+    "test_runner.py": "1367de1effe300ef2a7e9ec2c025f3faa5c2f883e282a4db1b9c9dd49223f0a2",
+    "AUTOMATION_STATUS.json": "c7ea728c856994f84b07218f206fa1a28a8d230807021eb78469ebb3a2731657",
+    "AGENTS.md": "6c8cc3cba4135194cfb22c91592f651d6c4947a029c6a75add94c60e3fa8b711",
+    "REVIEW.json": "c74896ad1460545b05a9aaa3fe9bb3b204a30c2568c3b0d8383d24e15df1c231",
+    "data.py": "c1792d15db470d64aa2d2cf3db0bf257839cf624eb59972526961b6abdcfcfce",
+    "FREEZE.json": "aa7f4dc023a3885db4aab19c52e113ed9af765850621e8bb661481c3d45abfa3",
+    "CONTRACT.json": "734d254b2c9728a384322db266d825e94c54f59065f9e165f196764c81e3b02c"
+  }
+}
