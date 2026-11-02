@@ -1,5 +1,13 @@
 # 실제 실행 현황 — 2026-10-30
 
+## 2026-11-02 경로→공동변동량 수치 프로토타입 통과
+
+`discovery_v3_math`의label-free합성감사를단1회완료했다. [결과](../discovery_v3_math/RESULTS.md), [가정/수식](../discovery_v3_math/METHOD.md), [봉인](../discovery_v3_math/RESULTS_SEAL.json).8단위시험·별도검토·5소스/환경/문헌/계약동결뒤10개수치기준전부통과. 알려진분포오차5.55e-16,GLorder차7.52e-8,QMC16개대조최대확률차.001983,64CDF/9pathparametergradient검사통과. 상관을무시한주변곱은.2104,미래누락을무시한fullmask모형은.2648의합성절대확률오차를보여joint/mask가필요함을확인했다. 모델성능21%/26%개선이아니다.
+
+실제자료/이전예측·가중치/정답접근0·새학습0,감사1.325초. Ledger수치감사1/2소진,추가학습3batch미사용. CPUfixtureforward/backward중앙값4.146ms는5개원timing미저장요약이며큰모델속도주장이아니다. 별도검토는8기준을저장수치로재계산했고불변성/guard2기준은소스·요약검토만가능했으며불일치0건. 이증거한계를보존하고감사를재실행하지않았다.
+
+수치PASS는1sharedfactor·조건부iid등분산Gaussian혁신·finite-mask모형안의구현가능성이다. MNAR관측·일반시간공분산·실제바이올린성능·novelty는미해결이다. 다음은 [NEXT_DATA_GATE.md](../discovery_v3_math/NEXT_DATA_GATE.md)의별도source-only미래경로자료준비·mask지원범위감사이며아직구현/실행하지않았다. 준비/누수검사/검토/동결후진행하고이후학습은별도계약이필요하다. 기존v1/v2및이번수치감사는완료상태를유지한다.
+
 ## 자동 루프 재개 확인 — 2026-11-02
 
 기존heartbeat자동화 `ai`를새탐색프롬프트로갱신하고앱도구의ACTIVE응답및로컬설정의prompt일치·30분간격·ACTIVE를확인했다. [설정확인](../discovery_v2/AUTOMATION_STATUS.json), [저장프롬프트](../discovery_v2/LOOP_PROMPT.md). 다음작업은label-free `discovery_v3_math`이며아직실행하지않았다. 기존batch재실행과olddev/test정답열람을금지하고추가예산ledger·11월6일종료를유지한다. 과거PAUSED문구는이전단계이력이다. 실제후속실행은Mac과앱이동작해야한다.

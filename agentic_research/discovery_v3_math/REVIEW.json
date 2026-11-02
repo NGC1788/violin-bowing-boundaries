@@ -1,0 +1,24 @@
+{
+  "verdict": "APPROVE",
+  "source_sha256": {
+    "AGENTS.md": "988695b0d99e124a445b8de7ef378340bef5c1822080dcea0a588fb58b15767b",
+    "PLAN.json": "8e4786f19e08f1b35fddc19ceac6e3dbee90f9212da66cca93439e78e0f6c4bb",
+    "decoder.py": "8383d9b8ce68203800fc730eb5bf8a0f1a1908f874eff12054369e9a2f957824",
+    "audit.py": "16ad266d40b7a68caeec829b1a43d2062e1f7fc707d564d7f03ebd9abebcb042",
+    "test_decoder.py": "5ab7f5417270128e368cf4837326c495e201c0b5cc74b63cc37400097e0d3995"
+  },
+  "reviewer": "separate Codex agent /root/execution_final_review",
+  "recorded_by": "root from final reviewmessage",
+  "synthetic_tests_passed": 8,
+  "seconds": 1.1,
+  "scope": "one600sec synthetic audit,not realforecast/modelnovelty confirmation",
+  "notes": [
+    "conditionalvariance/mask/joint/reference/gradientmath consistent",
+    "invalidmask massretained",
+    "atomicledgerregister blocksduplicate",
+    "hardinterruption leavesconsumedRUNNING entry,no retry",
+    "timeouts cooperative",
+    "forwardtailbound notgradienttailcertificate"
+  ],
+  "reviewer_execution": "no data/fixturescores read,no test/audit execution orfileedits"
+}

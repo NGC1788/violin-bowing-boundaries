@@ -1,5 +1,7 @@
 # Claude Code 최신 인계 — 2026-10-30
 
+**2026-11-02 추가완료: discovery_v3_math 수치PASS.** `discovery_v3_math/RESULTS.md`, `METHOD.md`, `FINAL_REVIEW.json`, `NEXT_DATA_GATE.md`와작업큐최상단을읽는다. 순수합성단일감사10기준통과:이론5.55e-16/GL차7.52e-8/QMC최대.001983/64+9gradient. 실제자료·학습0. Ledger수치감사1/2개소진,추가학습3batch미사용. 다음은별도path_source_gate_v1 source34명future경로/voicing준비감사이며아직안했다. olddev/test정답hash금지·futuremask입력금지·자료/감독정보차이대조필수. v3수치PASS는restricted모형계산가능성이지신규성/실제성능이아니다. 반복실행/재동결로중간기록을채우지않는다.8기준은수치재구성,불변성/guard2개는요약/소스근거라는한계를보존한다.
+
 **2026-11-02 새요청: 넓은탐색으로전환해24추가학습완료.** 사용자는예상밖조합도많이시도하길명시적으로원했다. 아래보정분기종료를연구전체종료로확대하지말라. `discovery_v1/RESULTS.md` → `discovery_v2/RESULTS.md` → `NEXT_EXPLORATION.md` → `PATH_DISTRIBUTION_REVIEW.md` → `LOOP_BUDGET.json`과작업큐최상단을읽는다. 구분기와새v1/v2batch는모두완료·STOP으로보존하고새별도버전으로탐색한다.
 
 새24학습은source34명만쓰며olddev/test정답은hash도열지않았다. 여전히Markov.542081을넘는후보는없다. attention×relativeMDN의상호작용은있지만전체성능개선·기전·novelty는미입증이다. v2의weights/traincurves는private에있다. 다음은소스라벨도보지않는Gaussian경로→두표본분산공동확률의수치/gradient검사이며아직구현·실행하지않았다. Cents/dBFS·46frame·ddof1과unknownvoicingmask/guard·joint의존을반드시맞춘다. 최신선행검토는일반화χ²gradient자체가이미존재함을확인했다.

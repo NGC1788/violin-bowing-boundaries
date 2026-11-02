@@ -1,5 +1,17 @@
 # 유한 연구 작업 큐 — 2026-10-30
 
+## 2026-11-02 discovery_v3_math 완료: 제한된 공동 decoder 수치 PASS
+
+고정합성감사1회를완료했다.8단위시험·별도소스/수학검토후동결했고10기준전부통과했다. 이론특수사례오차5.55e-16,GL256/512차7.52e-8,독립경로QMC16대조최대차.001983,64scalar+9pathgradient유한차분통과. 잘못된주변CDF곱/미래fullmask고정의합성절대확률오차는.210398/.264838이다. 실제예측성능개선이아니다. source/raw/dev/test자료접근·새학습0. 별도결과검토불일치0이며8기준수치재구성/2기준요약·소스근거의한계를기록했다.
+
+해당감사는완료·STOP으로보존하고재실행/재동결하지않는다. Ledger수치감사1/2개를1.325초로소진했고추가학습3batch는아직미사용이다. restricted1factor·조건부등분산iid혁신·선언finite-mask법칙안의계산가능성일뿐실제observer/value-dependentmask/일반공분산/높은novelty를해결한것이아니다.
+
+**다음 한 작업:** [NEXT_DATA_GATE.md](../discovery_v3_math/NEXT_DATA_GATE.md)의별도 `path_source_gate_v1` 준비감사. 아직구현/실행안했다. 새계획·누수시험·검토·동결후원source34명의미래경로/voicing을정답파일로분리해재구성하고,기존연속목표/guard일치와innertrain-onlymask사전의held미지패턴비율을aggregate로확인한다. olddev/test정답은hash도열지않고실제futuremask를입력으로주지않는다. 준비600초/새학습0/추가다운로드0. 준비승인을모델학습으로확대하지않는다. root의마무리중planning.lock실제보유를확인하고해제후선점한다.
+
+## 2026-11-02 현재 선점: discovery_v3_math 수치·gradient 프로토타입
+
+사용자의“바로진행”요청으로 `/root`가새 `discovery_v3_math`를담당한다. 실제 planning.lock을보유하는guardian프로세스와private claim.json이있으며완료전다른실행자는이작업이나동일감사를시작하지않는다. source라벨/원음/olddev/test정답을모두읽지않는합성수치감사다. 좁은shared-factor+채널별whiteGaussian혁신모형에서두표본분산jointCDF와미래mask혼합을적분하고CDFparametergradient를검사한다. 일반Gaussian/임의mask선택을해결했다고주장하지않는다. 코드·오차기준·별도검토·동결후ledger에1개수치감사시도를기록하고한번만실행한다. CPU600초이내,이전동결분기는그대로보존한다.
+
 ## 2026-11-02 넓은 탐색 24학습 완료·다음 수치 가설 준비
 
 사용자는예상밖조합을넓게시도하도록새로요청했다. 보정인증분기의STOP을연구전체종료로확대하지않는다. `discovery_v1`과별도 `discovery_v2`의12개씩24학습완료,모두결과·동결·별도검토를보존했다. olddev/test정답은이번탐색에서hash도열지않았다. v1/v2각batch는종료상태로재실행하지않는다.

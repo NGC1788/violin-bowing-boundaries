@@ -1,0 +1,23 @@
+{
+  "sources": {
+    "AGENTS.md": "988695b0d99e124a445b8de7ef378340bef5c1822080dcea0a588fb58b15767b",
+    "PLAN.json": "8e4786f19e08f1b35fddc19ceac6e3dbee90f9212da66cca93439e78e0f6c4bb",
+    "decoder.py": "8383d9b8ce68203800fc730eb5bf8a0f1a1908f874eff12054369e9a2f957824",
+    "audit.py": "16ad266d40b7a68caeec829b1a43d2062e1f7fc707d564d7f03ebd9abebcb042",
+    "test_decoder.py": "5ab7f5417270128e368cf4837326c495e201c0b5cc74b63cc37400097e0d3995"
+  },
+  "versions": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "torch": "2.14.1"
+  },
+  "budget_limits": {
+    "deadline_kst": "2026-11-06T00:00:00+09:00",
+    "max_math_audits": 2,
+    "max_seconds_per_math_audit": 600
+  },
+  "review_sha256": "9447194f0e56b3b68d30bf737b6bf64bb04c3baa9d97d0f8ea1b71ed774c0ac2",
+  "literature_sha256": "d1cd9ba0c037e1827a6a91e8e10a36066d62b89623d4f48e66c7bd45ea80e427",
+  "scope": "one synthetic numerical audit; no model fitting or actual data access"
+}
