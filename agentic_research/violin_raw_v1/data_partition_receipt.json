@@ -1,0 +1,82 @@
+{
+  "AG2_interpretation": "Undocumented extra folder label; excluded by the pre-existing CG/FG/EG allowlist.",
+  "aliases_removed": 0,
+  "archive_listing_sha256": "accf59ed9fd7ecd5c7c17389be4dd8e2ecdc9fa722a877458ce702fa8abdd357",
+  "archive_sha256": "7d04d43a091d12aa5481c88d16b677647395e8401cc8d0d57702605eb09da830",
+  "data_contract_code_sha256": "79b3d1c997741d82fe560f9ec12842f3889441be24fde7434833c8b6ccbf3c3d",
+  "eligible_cohorts": [
+    "CG",
+    "FG",
+    "EG"
+  ],
+  "eligible_recordings": 2168,
+  "exclusions": {
+    "AG2_outside_declared_cohorts": 431,
+    "different_AG_cohort": 489,
+    "not_wav": 289,
+    "reference": 2407,
+    "voice": 4738
+  },
+  "future_targets_computed": false,
+  "independent_review": "pending",
+  "original_inventory_sha256": "70b1c9bcde26f4618f8223952a76642935d5a9e2b705ccf2bbf50a55afe59f0b",
+  "original_summary_sha256": "3cbeb4223b97b73d52c53df307f5879214d10653548613e42f794340d6f424f8",
+  "original_unknown_count": 431,
+  "participant_counts": {
+    "dev": 8,
+    "test": 9,
+    "train": 34
+  },
+  "partition_code_sha256": "407011dd872a66f3689c6370fc2f4f83e7f18de644cd54335b40f6b6641336bf",
+  "row_counts": {
+    "dev": 337,
+    "test": 389,
+    "train": 1442
+  },
+  "scope": "Recording-relative prediction only; upstream recording/segmentation provenance still unverified.",
+  "selected_source_ids_sha256": "0ca99a5877ac923012501bb92f9831edfa06c9399dd0dfec65f6fc269864dde7",
+  "selection_changed": false,
+  "selection_does_not_use": [
+    "future acoustic descriptor",
+    "target guard",
+    "future rule label",
+    "model score"
+  ],
+  "selection_uses": [
+    "cohort/folder and filename metadata",
+    "recorded sample count",
+    "exact full/prefix PCM identity hashes"
+  ],
+  "split": {
+    "cohort_counts": {
+      "CG": {
+        "dev": 3,
+        "test": 3,
+        "train": 12
+      },
+      "EG": {
+        "dev": 2,
+        "test": 3,
+        "train": 10
+      },
+      "FG": {
+        "dev": 3,
+        "test": 3,
+        "train": 12
+      }
+    },
+    "manifest_sha256": "5a5940d93092e12d7cfcb255964a640584258f3575dc2c03c214c72e1e9d43e9",
+    "proportions": [
+      0.68,
+      0.14,
+      0.18
+    ],
+    "seed": 20261030,
+    "selection_inputs": [
+      "participant_id",
+      "cohort"
+    ]
+  },
+  "status": "METADATA_GATE_PASSED_AND_TARGET_BLIND_SPLIT_FIXED",
+  "training_authorized_by_this_receipt": false
+}

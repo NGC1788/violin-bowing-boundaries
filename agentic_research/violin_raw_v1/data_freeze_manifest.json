@@ -1,0 +1,28 @@
+{
+  "approved_scope": "data_preparation_only",
+  "end_utc": "2026-11-05T15:00:00+00:00",
+  "frozen_utc": "2026-11-02T07:57:42.894272+00:00",
+  "review_snapshot_sha256": "d468135fc389714f7a2ff5579b640966c6a13870f5830fc645f94a4e13602cab",
+  "scope": "Same-user integrity and a separate Claude code review, not external attestation or independent empirical confirmation. Test labels will remain in a separate private file.",
+  "source_hashes": {
+    "agentic_research/violin_raw_v1/DATA_REVIEW.json": "d046746bc13229c04938664ebbb7538863d421527607f4cc3493eaec9564ecc5",
+    "agentic_research/violin_raw_v1/DATA_REVIEW_INITIAL.json": "464c28675074b6c57b09dcadd9d2af0245ae824d8a6b55f4c784ccb052655f00",
+    "agentic_research/violin_raw_v1/PROTOCOL.md": "ed0b0d696f029de833456894e584e426c98486829a8aca487103ddcd93568135",
+    "agentic_research/violin_raw_v1/data.py": "79b3d1c997741d82fe560f9ec12842f3889441be24fde7434833c8b6ccbf3c3d",
+    "agentic_research/violin_raw_v1/data_partition_receipt.json": "bf6fc787c4d7e16e6105842564c9b0045aeb92e2cdadccf54d6523aca44cb06c",
+    "agentic_research/violin_raw_v1/download_receipt.json": "2e0c7348dcda6c55f356a07b8f1d2cc737699296ae59af169815b6576af06b65",
+    "agentic_research/violin_raw_v1/features.py": "aa931a3b9eb99fde8eb97a8fd6230bf99deb3facf8b58d16d8f97453e60d64d1",
+    "agentic_research/violin_raw_v1/inventory.py": "06811e7c3b810f0b13dbc0a7bae1160688bd970a3f39d5aaab86e4620d2ef64b",
+    "agentic_research/violin_raw_v1/inventory_summary.json": "3cbeb4223b97b73d52c53df307f5879214d10653548613e42f794340d6f424f8",
+    "agentic_research/violin_raw_v1/partition_inventory.py": "407011dd872a66f3689c6370fc2f4f83e7f18de644cd54335b40f6b6641336bf",
+    "agentic_research/violin_raw_v1/prepare.py": "5f27e6d753a7526b8fe5912151fbc8436053d4487e512c2be6b297f0be208b10",
+    "agentic_research/violin_raw_v1/protocol.json": "52049827c93129db890f1e750a52fb557da942df54d789ea54886a6ae8585061",
+    "agentic_research/violin_raw_v1/test_data.py": "607bf7be48e89465d453b745b3bf5e7063189c7d2ba29a50600b8da74cf1da87",
+    "agentic_research/violin_raw_v1/test_features.py": "65e53e04c5596dda00f6ceabba0a258bae3e1582d9a1ecb56a7afec6bac76b19",
+    "agentic_research/violin_raw_v1/test_inventory.py": "6c99005a2b37407eb73ee931cc5fa0d0a20576c071e4750ca1c30601b8b04912",
+    "agentic_research/violin_raw_v1/test_partition_inventory.py": "4ebee51d92f9611bbc8ad5e8ad453c0281c6cd1e0d2a9b4c2893fda7356a8cc5",
+    "agentic_research/violin_raw_v1/test_prepare.py": "9dfef30984d5771457c4a941c8397e67a207ace89d185e54ef4bb272af12bd7b"
+  },
+  "tests": "42 passed in2.69s across raw preparation, models and metric synthetic checks; training/evaluation not approved by this data freeze",
+  "version": 1
+}

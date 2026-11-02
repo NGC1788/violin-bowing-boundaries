@@ -1,0 +1,31 @@
+{
+  "snapshot_sha256": "d468135fc389714f7a2ff5579b640966c6a13870f5830fc645f94a4e13602cab",
+  "scope": "data_preparation_only",
+  "verdict": "approve",
+  "blockers": [],
+  "observations": [
+    "inventory.wav_metadata exposes exactly the (sample_rate, channels, subtype, frames, pcm_sha256, prefix_pcm_sha256, data_offset) tuple that prepare.read_supported_samples re-verifies before reading round(1.75*sr) PCM_16 bytes at data_offset, closing the identity loop between the sealed inventory and feature extraction.",
+    "RIFF parser validates RIFF size == file size, rejects multiple data chunks, enforces block_align == channels*(bits//8) and byte_rate == sr*align, pads odd chunks, forbids padded wValidBitsPerSample, and for WAVE_FORMAT_EXTENSIBLE checks the fixed KSDATAFORMAT_SUBTYPE_PCM/IEEE GUID tail 00001000800000aa00389b71.",
+    "pcm_sha256 and prefix_pcm_sha256 are seeded with the sorted-key fmt JSON so a header mutation that leaves PCM bytes untouched still changes both hashes; prefix_pcm_sha256 covers exactly min(frames, sr) frames (first second), independent of future bytes.",
+    "classify_member fullmatches r'Participant\\d+_(CG|FG|EG|AG)' with re.I, so Participant1_AG2 falls through to unclassified_wav and is only resolved via partition_inventory.reconcile against the archive listing with the explicit label AG2_outside_declared_cohorts; AG is still excluded as different_AG_cohort before any file inspection.",
+    "partition_inventory.reconcile asserts (len(member_names) == original_summary.archive_entries), (sorted selected == sorted inventoried source_ids), and (counts['unclassified_wav'] == 0) before any manifest is produced; data_partition_receipt.exclusions.AG2_outside_declared_cohorts = 431 matches original_unknown_count = 431 with selection_changed=false.",
+    "scan_archive refuses symlinks/hardlinks/non-regular entries, enforces per-member <=128 MiB and cumulative <=8 GiB caps, extracts to sha256(name).wav via .tmp + atomic rename, re-hashes on collision, never deletes source or raw material, and raises if no eligible violin pattern is found.",
+    "summarize.metadata_gate_passed requires nonzero eligible, zero unclassified_wav, and zero cross-participant full/prefix PCM groups; test_cross_participant_prefix_copy_blocks_metadata_gate exercises the negative path with the real wav_metadata output.",
+    "write_once writes sort_keys=True JSON and permits re-execution only when the existing payload compares equal under json.loads, so participant_split_v1.json and data_partition_receipt.json are byte-stable and idempotent across reruns.",
+    "Counts reconcile across protocol.json and data_partition_receipt.json: CG 12/3/3 + FG 12/3/3 + EG 10/2/3 = 34/8/9 participants and 1442/337/389 rows summing to 2168; split_manifest_sha256 5a5940d9... matches in both receipts and participant_split receipt.",
+    "verify_freeze is called before and after writes so a mid-run freeze mutation, deadline passage, or review-blocker change still aborts the run; approved_scope must equal 'data_preparation_only' and the referenced DATA_REVIEW.json must have verdict=='approve' with matching snapshot_sha256 and empty blockers.",
+    "write_partitioned stores only {X, prefix_states, prefix_Y9, prefix_guard, participant_ids, split, source_ids} in features.npz and segregates Y9/targets/target_guard into per-split label files; the 8-record runtime leakage audit (hash-selected from source_id) replaces samples[sr:] with NaN and demands bitwise-equal X.",
+    "Honest scope statements are preserved end-to-end: data_partition_receipt.scope restricts to recording-relative prediction with upstream segmentation unverified, AG2_interpretation disavows semantic claims, and training_authorized_by_this_receipt=false, future_targets_computed=false, models_trained=false."
+  ],
+  "limitations": [
+    "partition_inventory.main lists a .rar archive via subprocess tar -tf, which depends on a libarchive-backed tar (bsdtar on macOS). On systems with GNU tar this would fail; the user's current environment is Darwin so the data-preparation path is viable, but any CI or Linux rerun needs an equivalent lister with the same ordering.",
+    "scan_archive intentionally keeps the duplicate .wav.tmp alongside an existing .wav when hashes match; this leaves accumulating .tmp debris on reruns but does not change identity or selection and is consistent with the stated no-raw-material-deletion policy.",
+    "read_supported_samples pins (44100, 1, PCM_16); features._mono_interval also supports PCM_U8/24/32, FLOAT, DOUBLE, but those paths are only exercised by synthetic unit tests and are not reachable from prepare.build against the real archive.",
+    "The runtime future-mutation audit covers 8 of ~2168 recordings; the rest of the no-leakage assurance relies on the slice-before-convert structure of _mono_interval, the PREFIX/TARGET allowlist in interval_frames, and the pytest suite's bitwise checks on synthetic signals.",
+    "download_receipt.json, data_freeze_manifest.json, and the final DATA_REVIEW.json consumed by verify_freeze are referenced but not in this snapshot; the integrity chain only holds if those files are themselves vetted and their source_hashes cover the current data.py/features.py/prepare.py/inventory.py/partition_inventory.py/protocol.json.",
+    "The declared libarchive dependency (ctypes.util.find_library('archive')) is unversioned; archive_version_string is only recorded in the summary, so a libarchive upgrade that changes extraction semantics would be observable only post hoc via that receipt field.",
+    "Nine test participants give wide population uncertainty for any downstream claim; this is a bound on later evaluation strength rather than a data-prep defect, and is acknowledged in PROTOCOL.md.",
+    "Upstream recording/segmentation causality from Blanco et al. (clipping/onset provenance) remains unverified; PROTOCOL.md correctly scopes the study to recording-relative forecasts and this review does not extend that scope.",
+    "The training/evaluation runner, StandardScaler fit, bootstrap, and test-label opening are explicitly deferred and not covered by this approval."
+  ]
+}

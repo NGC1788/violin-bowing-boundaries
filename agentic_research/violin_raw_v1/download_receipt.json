@@ -1,0 +1,27 @@
+{
+  "record_id": "4553940",
+  "url": "https://zenodo.org/records/4553940",
+  "filename": "Participants_Raw_data.rar",
+  "bytes": 2203971621,
+  "md5": "b7e8fef0b4a3e989319c5c5b38a819c2",
+  "sha256": "7d04d43a091d12aa5481c88d16b677647395e8401cc8d0d57702605eb09da830",
+  "license": "CC-BY-4.0",
+  "creators": [
+    {
+      "name": "Angel David Blanco",
+      "affiliation": "Universitat Pompeu Fabra"
+    },
+    {
+      "name": "Simone Tassani",
+      "affiliation": "Universitat Pompeu Fabra"
+    },
+    {
+      "name": "Rafael Ramirez",
+      "affiliation": "Universitat Pompeu Fabra"
+    }
+  ],
+  "download_url": "https://zenodo.org/api/records/4553940/files/Participants_Raw_data.rar/content",
+  "verified_utc": "2026-10-31T06:35:04.823859+00:00",
+  "budget_change": "Initial stored-descriptor pilot cap2GiB raised to3GiB before download, to investigate causal input provenance. No existing experiment changed.",
+  "raw_storage": "Outside repository; audio files are not republished."
+}

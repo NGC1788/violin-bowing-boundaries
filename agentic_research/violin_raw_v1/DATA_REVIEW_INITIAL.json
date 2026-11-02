@@ -1,0 +1,33 @@
+{
+  "snapshot_sha256": "716704819bc49d1fa4e39cf0b53bb072f3b96672954c706c4e3f7a49336cb20a",
+  "scope": "data_preparation_only",
+  "verdict": "approve",
+  "blockers": [],
+  "observations": [
+    "features._mono_interval slices with integer-rounded [start:stop] before any dtype conversion or finite check, so prefix extraction never reads TARGET samples; interval is restricted to the declared PREFIX/TARGET tuples.",
+    "extract_prefix computes target_count purely from TARGET duration (constant 0.5 s * sr), not from TARGET samples; the prefix proxy feature is set to 0.0 when guard is false, keeping X finite.",
+    "Guard criterion in _targets requires >= max(2, ceil(n/2)) voiced frames; pitch target is NaN iff guard is false; power is always finite because RMS_FLOOR bounds the log.",
+    "labels_and_states enforces y[:,1] (power) finite and nonnegative on all rows, y[g] finite/nonnegative on valid rows; invalid future rows retain all-false 9-rule labels, invalid prefix rows get a separate state 10.",
+    "fit_thresholds operates only on (split=='train') & guard rows, needs >=4, raises on degenerate quantiles without jitter; test_thresholds_ignore_all_held_out_values_and_guards verifies held-out and invalid-train mutations do not move thresholds.",
+    "participant_split consumes only participant_id and cohort, uses hash-ordered largest-remainder allocation of (0.68, 0.14, 0.18), and refuses cohorts too small for a three-way split; order-invariance tested.",
+    "deduplicate_manifest merges within-person exact-PCM aliases and raises on any cross-person full-or-prefix PCM collision, with consistent prefix-vs-full checksum enforcement.",
+    "_partition rejects any participant_id crossing splits; assemble_rows calls it after sorting by source_id, enforcing the participant separation invariant end to end.",
+    "read_supported_samples resolves the path, enforces containment under <root>/violin_wav, verifies seven identity fields (incl. pcm_sha256, prefix_pcm_sha256, data_offset, frames) against the inventory row, pins (44100, 1, PCM_16), and reads exactly round(1.75*sr) PCM_16 samples at data_offset.",
+    "build re-selects an 8-record deterministic audit set by sha256(source_id), replaces samples[sr:] with NaN, re-runs extract_prefix with DOUBLE, and demands bitwise equality of X; audit set is hash-selected, so it cannot be chosen to mask leakage.",
+    "write_partitioned stores only {X, prefix_states, prefix_Y9, prefix_guard, participant_ids, split, source_ids} in features.npz; Y9/targets/target_guard are segregated into per-split label files; test asserts the set difference.",
+    "verify_freeze checks approved_scope=='data_preparation_only', end_utc deadline, source file hashes, and that the referenced independent review has verdict=='approve' with matching snapshot_sha256 and no blockers; verify_freeze is re-called after writes.",
+    "Receipt reports train thresholds and threshold_fit provenance only (no dev/test target distribution); flags test_labels_separate=true, models_trained=false, and the lock-file prevents overwriting an existing destination.",
+    "protocol.json and data_partition_receipt.json agree on 2168 rows, 34/8/9 participants, 1442/337/389 row counts, split manifest sha256, forbidden predictor inputs, and training_authorized_by_this_receipt=false.",
+    "Rectangular frame + overlap-energy ACF normalization is documented as a conventional descriptor choice to avoid Hann-induced lag bias; voicing threshold combines RMS floor and periodicity >= 0.5; parabolic peak refinement is clamped to [-0.5, 0.5] and pitch to [MIN_HZ, MAX_HZ]."
+  ],
+  "limitations": [
+    "The training/evaluation runner is not implemented in this snapshot and is explicitly deferred to a later separate review; this approval does not cover training, scaler fitting on train X, baselines, bootstrap, or test opening.",
+    "inventory.py (file_sha, wav_metadata) and inventory_records.json are referenced by prepare.py but not in the pasted snapshot; correctness of RIFF parsing, data_offset, and whole-file PCM hashing is trusted here and should be re-checked when those files are reviewed.",
+    "models.patterns() and models.pattern_ids() are exercised by test_data.py to assert parity with data.patterns() but the models module itself is out of this review's scope.",
+    "Upstream recording/segmentation provenance from Blanco et al. (clipping/onset causality) is unverified; PROTOCOL.md correctly scopes claims to recording-relative forecasts, not live onset or perceptual quality.",
+    "The runtime leakage audit covers 8 of ~2168 recordings; the remaining assurance relies on the static slice-before-convert structure of _mono_interval and the interval allowlist, which the pytest suite also exercises on synthetic signals.",
+    "Nine test participants give wide population uncertainty for any downstream claim; this is acknowledged in PROTOCOL.md and bounds how strong any 2% screen can be.",
+    "ddof=1 std on target/prefix target is well-defined because interval_frames enforces len(starts) >= 2, but this invariant is implicit; any future change loosening that minimum would require revisiting _targets.",
+    "The identity check compares wav_metadata to the inventory row for PCM_16 44100 mono; alternative subtypes supported by features._mono_interval (PCM_U8/24/32, FLOAT/DOUBLE) are not reachable from prepare.build and therefore not exercised on real audio in this scope."
+  ]
+}

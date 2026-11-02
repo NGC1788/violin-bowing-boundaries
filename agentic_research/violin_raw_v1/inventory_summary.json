@@ -1,0 +1,50 @@
+{
+  "archive_entries": 10528,
+  "exclusions": {
+    "different_AG_cohort": 489,
+    "reference": 2407,
+    "voice": 4738,
+    "unclassified_wav": 431,
+    "not_wav": 289
+  },
+  "selected_wav_count": 2174,
+  "selected_wav_bytes": 1389498152,
+  "libarchive_version": "libarchive 3.7.4",
+  "duration_eligible": 2168,
+  "too_short": 6,
+  "sample_rate_counts": {
+    "44100": 2174
+  },
+  "subtype_counts": {
+    "PCM_16": 2174
+  },
+  "channel_counts": {
+    "1": 2174
+  },
+  "stage_counts": {
+    "feed": 1160,
+    "post": 499,
+    "pre": 509
+  },
+  "participant_counts": {
+    "CG": 18,
+    "FG": 18,
+    "EG": 15
+  },
+  "duration_min": 1.2539002267573696,
+  "duration_max": 30.302063492063493,
+  "constant_prefix_count": 0,
+  "pcm_sha256_extra_copies": 0,
+  "pcm_sha256_cross_participant_groups": 0,
+  "prefix_pcm_sha256_extra_copies": 0,
+  "prefix_pcm_sha256_cross_participant_groups": 0,
+  "metadata_gate_passed": false,
+  "scope": "Headers and byte identities only. No acoustic targets, scores, or questionnaire access.",
+  "recording_origin_provenance": "Unverified: file-relative support does not prove upstream segmentation was causal.",
+  "archive_sha256": "7d04d43a091d12aa5481c88d16b677647395e8401cc8d0d57702605eb09da830",
+  "inventory_sha256": "70b1c9bcde26f4618f8223952a76642935d5a9e2b705ccf2bbf50a55afe59f0b",
+  "code_sha256": "06811e7c3b810f0b13dbc0a7bae1160688bd970a3f39d5aaab86e4620d2ef64b",
+  "checked_utc": "2026-10-31T06:35:40.645235+00:00",
+  "record_id": "4553940",
+  "license": "CC-BY-4.0"
+}
