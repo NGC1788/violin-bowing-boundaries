@@ -1,0 +1,33 @@
+{
+  "scope": "posthoc diagnosis, not training or test evaluation",
+  "verdict": "DIAGNOSIS_COMPLETE_NEW_METHOD_NOT_ESTABLISHED",
+  "new_models_fitted": 0,
+  "test_labels_reopened": false,
+  "max_sealed_dev_reproduction_error": 0.0,
+  "old_data_sources_verified": 17,
+  "old_result_sha256": "e1a572d453432c84afaae92970a7a104675dafebc7e189cb268ffdfadfcc228e",
+  "old_artifacts_verified_unchanged": true,
+  "synthetic_tests_passed": 9,
+  "source_math_review": "approved by separate AI after listed corrections; not external empirical validation",
+  "next_training_authorized_by_this_audit": false,
+  "artifact_sha256": {
+    "AGENTS.md": "9bdd5711c047721a03fe2939d2c01ab9af90e44647156727d038ad0af89cb8c2",
+    "PLAN.json": "b37342c9763c2ccafa7f54b864d6fd2987d0695402e59f610fadf6e15fa27575",
+    "MECHANISM_PLAN.json": "81a358d058595fcc0546ffb0aa62628f9d595679efa5350114ecce9547fd16da",
+    "SUMMARY.json": "71a2e559111ab8127bbad46328e75c8a3d2083aebf7601a3a1d04a86cf394e20",
+    "MECHANISM_SUMMARY.json": "51654b955f2c20cae4c42526420f8cce569e6ffeb6df92a0969a279ec65b6836",
+    "RISK_FEASIBILITY.json": "6630c048474bf7cbed5189cad132759bde65c83968403e5fa2cd91b1793563a4",
+    "DIAGNOSTIC_REVISION.json": "cf0592edc0eb04d901182041c6d897b313051aeaabcf6871e75c0dc66980beaf",
+    "CAUSE_ANALYSIS.md": "549481337609b25320301ee17eeb3ad6cc6594580a5177d74435f58c773f481e",
+    "NEXT_METHOD.md": "3f1d562d607a6cea8cae8620314ba4737a9dcb42be4f86b5740f6eac212fe946",
+    "LITERATURE_RESIDUAL_REVIEW.md": "1128281028e5e0a7bf540f1536e8a62a332931a649dd1f5fc7a9eee60958c5f5",
+    "REVIEW.json": "b7e49e58e490964f1c8ad509b0b70310e4dc1b0d96df425eb2a541ca9591b079",
+    "diagnose.py": "dcaa182866d0ed5dfc92dc5aacdc4fd4c57206bc9ade6d03db30f32288523155",
+    "mechanisms.py": "1252ab42b51dd43ef0e7b4ae03b0806cc33f3c5267c88d4c0b24a94a972537e5",
+    "risk_feasibility.py": "bf1323ff0c538f55e50fd17502c077d77ed7ab123f3f96a78f1514ff7831cf55",
+    "export_summary.py": "2466b76b3f4294643ae5409e15ba97ec10d18352ab62c617088f3452ab5e6447",
+    "test_diagnose.py": "d1854fa7af250298a5a2b01407493888580870ddc3fdc3b6aa20b400f2e62af4",
+    "test_mechanisms.py": "6677a467f54dcd09dcfdf892e046815d9e329dd2808e9d297c14bad8a475e8fe",
+    "test_risk_feasibility.py": "8e1fb52c5b86610fab3fb7799d64915b015c41c51e49cdc8e89f04c0e8c37fa6"
+  }
+}

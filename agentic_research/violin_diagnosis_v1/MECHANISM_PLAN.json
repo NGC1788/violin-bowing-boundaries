@@ -1,0 +1,10 @@
+{
+  "scope": "Additional post-hoc train/dev mechanism probes, no model fitting, test truth or performance replacement",
+  "reason": "Endpoint diagnosis shows generalization gap, confidence-error tails and residual amplification. Large feature excursions alone do not identify the failing person, so inspect what features and a known measurement transformation do.",
+  "fixed_probes": ["top mean-absolute standardized features for every dev person", "centered offset/prior geometry per dev person", "fixed binary gain factors 0.5 and 2.0; no gain search or model tuning"],
+  "gain_action": "Shift the nine power_dbfs mean/p10/p90 prefix summaries by20log10(gain), holding within-window variability fixed. This models unclipped linear recording gain only when RMS voicing masks and power floors do not change.",
+  "admission_certificate": "On existing train/dev audio only, require no clipping, no RMS-floor crossings, and no RMS-threshold crossing on either observed or future frames. Future support is used ONLY to certify a diagnostic transformation, NEVER as a predictor input, deployed gate or sample-selection rule for the original study.",
+  "raw_audit": "For each gain, first8 admitted train/dev records by source-ID hash: recompute frozen features/targets and verify proposed feature action, continuous target invariance and exact9-rule label preservation. Report failures rather than silently discarding them.",
+  "report": "Probability sensitivity and its descriptive association with dev excess loss; no recalibrated predictor or gain-augmented performance estimate. All people retained in original scores.",
+  "novelty": "Gain augmentation/invariance and prior anchoring are known. A vulnerability is not a new method or proof it caused original failure. If sensitivity does not distinguish failures from useful corrections, reject a simple sensitivity gate."
+}

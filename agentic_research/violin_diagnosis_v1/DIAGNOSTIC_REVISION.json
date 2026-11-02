@@ -1,0 +1,19 @@
+{
+  "initial_diagnosis_code_sha256": "ddf83b8a5c3dd13db58878a79e584d46382f332b50547f5da79f61545d879ce8",
+  "initial_diagnostics_sha256": "187440158e2340ed6c1dd2f8dd23027727723da8bb5ed93ba91f5764abf5fc6a",
+  "initial_summary_sha256": "44625e502819d8622a969b1fe8dcdf2c7ac060f3a7578b70f61311fbf52ba107",
+  "current_diagnosis_code_sha256": "dcaa182866d0ed5dfc92dc5aacdc4fd4c57206bc9ade6d03db30f32288523155",
+  "current_diagnostics_sha256": "62cb0f893051fbbd9d8b8c5daec86cb37277871768e102fcafdcde3af5e226cb",
+  "exact_clip_boundary_count_across_neural_train_dev": 0,
+  "max_original_scalar_change_after_boundary_fix": 0.0,
+  "reasons_for_forward_only_rechecks": [
+    "independent review found softening one-sided derivative omitted exact clip boundaries; corrected and tested",
+    "strengthened inventory/PCM, original-X/prefix-state/target/label identity checks for gain audits",
+    "prefix invalid state explicitly uses prefix=True",
+    "algebra checks use actual clipped BCE and interior-baseline no-go assumption"
+  ],
+  "initial_snapshots_preserved_privately": true,
+  "new_model_fits": 0,
+  "old_test_reopened": false,
+  "review": "separate AI source/math review approved corrected revision; no human or new empirical confirmation"
+}

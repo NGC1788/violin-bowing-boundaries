@@ -1,5 +1,11 @@
 # Claude Code 최신 인계 — 2026-10-30
 
+**2026-11-02 사후 원인 분석까지 완료:** `violin_diagnosis_v1/CAUSE_ANALYSIS.md` → `MECHANISM_SUMMARY.json` → `NEXT_METHOD.md` → `LITERATURE_RESIDUAL_REVIEW.md` → `FINAL_AUDIT.json`을읽는다. 새학습0·test정답재열람0,9합성시험·별도AI소스/수학최종검토통과. train/dev복원은봉인dev예측과정확히같고기존시험/소스/가중치/점수는보존했다. 초기진단보완hash/수치불변은DIAGNOSTIC_REVISION.json. 개인별자료는local/에만있고공개하지않는다.
+
+실패근거는일반화격차·확신오류손실집중이다. offsettrain.423/dev.711,Markov.533/.536;dev확신오류4.083%가손실40.956%를차지했다. prior전체상쇄나큰OOD=실패라는설명은성립하지않는다. 음량민감도도실패와일관된연관을못보였으므로단순gate를추가학습할근거가없다. 미래창의gainadmission은진단검증에만썼고배포입력/gate금지다.
+
+다음작업은조건부regret보정예산이작은사람수와겹치는cross-fit의존아래에서유효하고비자명해질수있는지수학적으로검토하는것이다. LTT/혼합/DRO/HCP선행,baseline포함집합의정확비악화no-go,실제주변BCE/clipping을존중한다. 가정/의존을해결하지못하거나단순혼합이동등하면후속도종료한다. 현재후보는신규성/성능/안전성을확보한새방법이아니다. 기존캠페인재개·test재평가·추가seed/모델탐색은하지않고자동화PAUSED를유지한다. 새학습은새버전계약·관문통과후별도로검토한다. 아래학습미완료/재개안내는과거이력이다.
+
 **2026-11-02 최종 갱신:** raw 바이올린고정12개학습과시험1회평가까지완료·STOP이다. `violin_raw_v1/RESULTS.md`, `RESULTS.json`, `FINAL_AUDIT.json`과작업큐최상단부터읽는다. offset손실0.664192는개발선택Markov0.552413보다20.23%나빴고등록개선screen실패다. 모든12실험·원점수·부정적결과를보존한다. 데이터/실행동결파일,원자료,평가정답과예측을변경·재실행하지않는다. 아래실행기미완료/학습대기문장은과거이력이다. 같은자료의추가seed나hyperparameter탐색은허용된후속이아니다.
 
 고정 비교를 완료한 뒤 자동화 `ai`를 **PAUSED**로 전환했다. 재개 명령을 받더라도 완료한 캠페인을 반복 실행하지 말고, 사용자가 요청한 새 방향의 근거부터 확인한다.

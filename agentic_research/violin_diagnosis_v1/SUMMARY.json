@@ -1,0 +1,21 @@
+{
+  "scope": "post-hoc train/dev endpoint diagnosis only; no new fit or test truth access",
+  "new_models_fitted": 0,
+  "test_labels_accessed": false,
+  "original_result_sha256": "e1a572d453432c84afaae92970a7a104675dafebc7e189cb268ffdfadfcc228e",
+  "diagnostic_code_sha256": "dcaa182866d0ed5dfc92dc5aacdc4fd4c57206bc9ade6d03db30f32288523155",
+  "diagnostics_sha256": "62cb0f893051fbbd9d8b8c5daec86cb37277871768e102fcafdcde3af5e226cb",
+  "max_dev_reproduction_error": 0.0,
+  "original_frozen_artifacts_verified_unchanged": true,
+  "train_log_loss": {
+    "markov": 0.5330973619109736,
+    "mlp_ind": 0.4469680634674103,
+    "mlp_joint": 0.42798103615222627,
+    "mlp_offset": 0.4228243596038575
+  },
+  "dev_log_loss": {
+    "mlp_ind": 0.6678535507039977,
+    "mlp_joint": 0.689983238203447,
+    "mlp_offset": 0.7105571420632235
+  }
+}

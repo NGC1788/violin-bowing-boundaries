@@ -1,0 +1,18 @@
+{
+  "version": "posthoc_diagnosis_20261102",
+  "purpose": "Explain completed fixed-study failures and constrain a justified future method; not improve/re-evaluate the old test",
+  "allowed_truth": ["existing train labels", "existing dev labels"],
+  "forbidden": ["test_labels.npz parsing", "new training/fitting", "new seeds or epochs", "hyperparameter/temperature/mixture sweeps", "modification of original frozen artifacts"],
+  "original_model_reconstruction": "Restore saved network weights and source-count Markov prior exactly; no optimization. Verify neural and Markov dev predictions against sealed original dev predictions before using train forward scores.",
+  "weight_limitation": "Weights lacked original hash seal. Record current weight hashes and validate behavior on sealed dev predictions; this is not retroactive cryptographic attestation.",
+  "hypotheses": [
+    "Low neural train loss plus worse dev loss supports a participant generalization gap; endpoint evidence cannot identify the optimal epoch or prove memorization.",
+    "Confidently wrong marginal predictions (p<0.05 for y=1 or p>0.95 for y=0) dominate log loss; retain all people and report their contributions.",
+    "Large standardized-feature excursions/clipping are associated with dev excess loss; association is not a causal scaling ablation.",
+    "Conditional prior is fixed but unrestricted residual can oppose/amplify it. Measure centered residual/prior alignment, conditional KL and entropy; divergence alone does not prove harmful cancellation."
+  ],
+  "diagnostics": ["participant-macro log loss/Brier on train and dev", "wrong-confidence tails and loss shares", "per-person excess loss concentration", "standardized train/dev feature excursions and source-derived clip fractions", "source/dev pattern prevalence shift", "state-specific support in independent participants", "analytic local gradients toward Markov and toward softer marginal probabilities; no fitted calibration or new performance claim"],
+  "causality": "Post-hoc descriptive and endpoint mechanism analysis only. No training trajectory or causal ablation exists.",
+  "future_validation": "Old test is historically exposed. Any new method requires separate contract and suitable independent confirmation or explicitly exploratory nested source-only evaluation.",
+  "training_jobs_authorized_by_this_plan": 0
+}

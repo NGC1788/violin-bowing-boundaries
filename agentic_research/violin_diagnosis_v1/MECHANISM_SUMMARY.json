@@ -1,0 +1,129 @@
+{
+  "scope": "post-hoc train/dev measurement probes; no test truth, fit or alternative performance score",
+  "new_models_fitted": 0,
+  "test_labels_accessed": false,
+  "diagnostics_sha256": "62cb0f893051fbbd9d8b8c5daec86cb37277871768e102fcafdcde3af5e226cb",
+  "mechanisms_sha256": "d4c2fc7716e2cde8e5a3eeb3dacacc2a0571ef6b5de5073c9d6369d56658d79c",
+  "mechanism_code_sha256": "1252ab42b51dd43ef0e7b4ae03b0806cc33f3c5267c88d4c0b24a94a972537e5",
+  "admitted_counts": {
+    "0.5": {
+      "train": 1432,
+      "dev": 337
+    },
+    "2.0": {
+      "train": 1442,
+      "dev": 337
+    }
+  },
+  "raw_audits": {
+    "count": 16,
+    "all_originals_match_frozen_prepared": true,
+    "all_guards_preserved": true,
+    "all_rules_preserved": true,
+    "max_feature_action_error": 4.263256414560601e-13,
+    "max_continuous_target_error": 1.1102230246251565e-15
+  },
+  "offset_geometry": {
+    "train": {
+      "centered_residual_norm": 4.655560924306164,
+      "centered_log_prior_norm": 2.4642974293561184,
+      "cosine_against_centered_log_prior": -0.07181867202774196,
+      "fraction_residual_norm_exceeds_prior_norm": 0.6023371812326355,
+      "KL_pattern_posterior_to_prior": 0.36495252571604103,
+      "pattern_entropy": 1.5521555984334636,
+      "prior_pattern_entropy": 1.9479430135646814
+    },
+    "dev": {
+      "centered_residual_norm": 8.298742493523994,
+      "centered_log_prior_norm": 2.3951038576359545,
+      "cosine_against_centered_log_prior": -0.17709151457367733,
+      "fraction_residual_norm_exceeds_prior_norm": 0.6741513959271334,
+      "KL_pattern_posterior_to_prior": 0.4249985350640266,
+      "pattern_entropy": 1.3459091820395817,
+      "prior_pattern_entropy": 1.9214843265350314
+    }
+  },
+  "feature_excursions": {
+    "train": {
+      "macro_fraction_abs_z_gt_3": 0.017723738056083446,
+      "macro_fraction_clipped_at_8": 0.002480175982686743
+    },
+    "dev": {
+      "macro_fraction_abs_z_gt_3": 0.05113390586811248,
+      "macro_fraction_clipped_at_8": 0.011491786637135475
+    }
+  },
+  "confidence_tails": {
+    "mlp_ind": {
+      "dev_wrong_95_fraction": 0.031788073881924325,
+      "dev_seed_mean_loss_share": 0.3683888641590712,
+      "dev_aggregate_loss_share": 0.36844873750529916,
+      "largest_person_share_of_total_excess": 0.8552918914221406
+    },
+    "mlp_joint": {
+      "dev_wrong_95_fraction": 0.03417952647643201,
+      "dev_seed_mean_loss_share": 0.3802035217522867,
+      "dev_aggregate_loss_share": 0.3802085922588737,
+      "largest_person_share_of_total_excess": 0.8180055574541428
+    },
+    "mlp_offset": {
+      "dev_wrong_95_fraction": 0.040834684197875094,
+      "dev_seed_mean_loss_share": 0.4094426185617898,
+      "dev_aggregate_loss_share": 0.40956268621111913,
+      "largest_person_share_of_total_excess": 0.6461979064098268
+    }
+  },
+  "gain_sensitivity": {
+    "mlp_ind": {
+      "0.5": 0.0631367709831614,
+      "2.0": 0.044030824895299664
+    },
+    "mlp_joint": {
+      "0.5": 0.0816304448188796,
+      "2.0": 0.062100933149348655
+    },
+    "mlp_offset": {
+      "0.5": 0.07056548201560159,
+      "2.0": 0.0535048246022278
+    }
+  },
+  "gain_associations": {
+    "mlp_ind": {
+      "0.5": {
+        "people": 8,
+        "spearman_sensitivity_vs_excess": 0.2380952380952381
+      },
+      "2.0": {
+        "people": 8,
+        "spearman_sensitivity_vs_excess": -0.14285714285714288
+      }
+    },
+    "mlp_joint": {
+      "0.5": {
+        "people": 8,
+        "spearman_sensitivity_vs_excess": 0.30952380952380953
+      },
+      "2.0": {
+        "people": 8,
+        "spearman_sensitivity_vs_excess": -0.023809523809523815
+      }
+    },
+    "mlp_offset": {
+      "0.5": {
+        "people": 8,
+        "spearman_sensitivity_vs_excess": 0.28571428571428575
+      },
+      "2.0": {
+        "people": 8,
+        "spearman_sensitivity_vs_excess": -0.1666666666666667
+      }
+    }
+  },
+  "caveats": [
+    "posthoc, train/dev only",
+    "all337dev rows admitted at both gains; no realized dev admission-subset mismatch",
+    "future support verifies diagnostic transformation only, forbidden as an inference gate",
+    "gain action verified on16audits, not continuous observer recomputation on every row",
+    "no new predictor, causal claim or improvement certificate"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-02",
+  "reviewer": "separate Codex agent /root/execution_final_review",
+  "recorded_by": "root from review messages",
+  "verdict": "APPROVE_CURRENT_REVISION",
+  "scope": "read-only source/math review of forward-only diagnosis and algebraic feasibility; no human review, data-array access, experiment execution or independent empirical confirmation by reviewer",
+  "corrected_findings": [
+    "clipped-loss one-sided softening derivative at exact clip boundary",
+    "inventory/PCM identity plus recomputed-original frozen-record correspondence",
+    "SUMMARY hash binding for mechanism inputs",
+    "prefix=True for invalid prefix state10",
+    "actual clipped BCE and interior-baseline assumption in no-go/rank argument"
+  ],
+  "interpretation_limits": [
+    "larger dev residual is not a time trajectory or universal harmful amplification",
+    "seed mean loss shares differ from contribution divided by aggregate loss",
+    "all337dev records admitted at both gains in realized comparison; future admission remains unusable at deployment",
+    "no cause, performance improvement, novelty or fresh risk certificate established"
+  ],
+  "approved_core_sha256": {
+    "diagnose.py": "dcaa182866d0ed5dfc92dc5aacdc4fd4c57206bc9ade6d03db30f32288523155",
+    "mechanisms.py": "1252ab42b51dd43ef0e7b4ae03b0806cc33f3c5267c88d4c0b24a94a972537e5",
+    "risk_feasibility.py": "bf1323ff0c538f55e50fd17502c077d77ed7ab123f3f96a78f1514ff7831cf55"
+  }
+}

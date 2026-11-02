@@ -1,0 +1,46 @@
+{
+  "scope": "finite algebra checks and hypothetical sample-size arithmetic; no models, data rows or test labels",
+  "new_models_fitted": 0,
+  "new_method_claim": false,
+  "code_sha256": "bf1323ff0c538f55e50fd17502c077d77ed7ab123f3f96a78f1514ff7831cf55",
+  "score": "mean of nine marginal BCE terms; not categorical joint NLL",
+  "toy_checks": 32,
+  "max_logit_span_bound_violation": 0.0,
+  "min_expected_excess_under_baseline_law_for_nontrivial_toys": 0.009903030757264938,
+  "pattern_map_augmented_rank": 10,
+  "no_go": "If uncertainty includes the baseline law and its marginals are strictly inside the clipping interval, exact robust noninferiority forces equal clipped marginals by proper scoring. Equality to interior baseline marginals then forces equal raw marginals. Here the augmented pattern map has full rank, hence the same pattern distribution. Do not extend the argument to baselines at/outside the clip boundaries.",
+  "illustrative_dev_baseline_loss": 0.5360236457962668,
+  "illustrative_two_percent_absolute_gain": 0.010720472915925337,
+  "hypothetical_independent_calibration_only": [
+    {
+      "logit_span_cap": 0.025,
+      "people": 8,
+      "delta": 0.05,
+      "hoeffding_width": 0.02163522978252857,
+      "independent_people_needed_for_width_below_illustrative_gain": 33
+    },
+    {
+      "logit_span_cap": 0.025,
+      "people": 34,
+      "delta": 0.05,
+      "hoeffding_width": 0.010494627956220505,
+      "independent_people_needed_for_width_below_illustrative_gain": 33
+    },
+    {
+      "logit_span_cap": 0.1,
+      "people": 8,
+      "delta": 0.05,
+      "hoeffding_width": 0.08654091913011427,
+      "independent_people_needed_for_width_below_illustrative_gain": 522
+    },
+    {
+      "logit_span_cap": 0.1,
+      "people": 34,
+      "delta": 0.05,
+      "hoeffding_width": 0.04197851182488202,
+      "independent_people_needed_for_width_below_illustrative_gain": 522
+    }
+  ],
+  "warning": "The actual 34 people trained the models, eight dev people informed this diagnosis, and nine test people were already evaluated. None is a fresh independent calibration set. Overlapping cross-fit losses are not iid people for this bound.",
+  "diagnostic_source_sha256": "dcaa182866d0ed5dfc92dc5aacdc4fd4c57206bc9ade6d03db30f32288523155"
+}
