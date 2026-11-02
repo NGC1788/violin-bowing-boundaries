@@ -1,5 +1,7 @@
 # 활현 AI 연구: 재현 가능한 미래 예측과 에이전트 루프
 
+**새요청에따라넓은탐색재개·24추가학습완료:** [discovery_v1](discovery_v1/RESULTS.md), [discovery_v2](discovery_v2/RESULTS.md). 원래source34명만쓴표현/감독/attention조합탐색이며olddev/test정답은재사용하지않았다. 신경망은HGB보다좋았지만Markov를못넘었고novelty는미입증이다. 새 [경로분포후보](discovery_v2/NEXT_EXPLORATION.md)와 [가설은행](discovery_v1/IDEAS.md)을준비했다. 종료된보정분기를다시돌리는것이아니며각완료batch와부정결과를보존한다.
+
 **조건부 보정 방향도 검증 후 종료:** [가능성 감사와최종판정](correction_feasibility_v1/DECISION.md). 사후개발한사람제외보정에서단순전역혼합은Markov보다2.62%낮은손실을보였지만상태별혼합은전역보다1.10%나빴다. 유효한위험인증·독립확증·단순기법을넘는신규성도미확보여서이후속은STOP이다. 추가모델탐색없이기존성과와실패를보존한다.
 
 **후속 원인 분석 완료:** 저장모델의train/dev복원으로일반화격차와확신오류손실집중을확인했다. 새학습·시험재평가없이 [진단](violin_diagnosis_v1/CAUSE_ANALYSIS.md), [직접선행과새방법후보의가능조건](violin_diagnosis_v1/NEXT_METHOD.md)을정리했다. 높은방법론신규성과실제성능개선은아직미입증이며,추가학습에앞서통계적타당성부터검토한다.

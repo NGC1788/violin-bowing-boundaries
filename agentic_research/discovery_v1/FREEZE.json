@@ -1,0 +1,20 @@
+{
+  "sources": {
+    "AGENTS.md": "db965d22283029a57fec47355ed17a549738cdb84970d251554854c8641ee281",
+    "PLAN.json": "ffff77b38263edc970ed8a5666d9b3d766c532babfee7acbcb3ebc6fc8d5d41c",
+    "data.py": "68ffec0e0f908b5e1eae0d589831d7dceb35c9791360fc17e769752f079234d2",
+    "models.py": "7d7d5d58d746f473eb87c79101f9930bf16e7f7dd26b71218adc2252f1886404",
+    "runner.py": "ab5d9734ee476626b072b62f262ba02f6d83f031472c20be672005816f2ed81c",
+    "test_discovery.py": "3eb5bff60c9048dd3896a7d45cfcb3b9909d01ab0d900f66ea4116ec606bc877"
+  },
+  "source_inputs": {
+    "features.npz": "97182f023acaabc50d8fa2c9f41581864288e6b26bf111ceaef7a166ec538e23",
+    "train_labels.npz": "c0d821dbeafade8a749ce2cde5cc99852b5bfc7a4d37cfc215b6fe7620030258",
+    "meta:data_freeze_manifest.json": "383c081891fd67fee670809c969bb06aa224f4f5375848f0715eae8d725f172b",
+    "meta:execution_freeze_manifest.json": "e23ebe938134885ae132ec57913f02ea9ef7cc0b20091154339c5aeda8c98cec",
+    "meta:data_partition_receipt.json": "bf6fc787c4d7e16e6105842564c9b0045aeb92e2cdadccf54d6523aca44cb06c",
+    "meta:RESULTS.json": "e1a572d453432c84afaae92970a7a104675dafebc7e189cb268ffdfadfcc228e"
+  },
+  "review_sha256": "b6607e8954fb9a7fe75917d54fbb67a1f78581546c8781eb3ec71c38da504414",
+  "scope": "one12job exploratory source-person batch; no olddev/test truth access"
+}

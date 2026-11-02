@@ -1,0 +1,35 @@
+{
+  "scope": "two completed exploratory source-only batches, not independent confirmation",
+  "new_training_jobs": 24,
+  "total_training_seconds": 66.7240074989968,
+  "new_dev_test_truth_access": false,
+  "synthetic_tests_passed": {
+    "v1": 8,
+    "v2": 4
+  },
+  "review_status": "both source and results approved by separate AI, no human confirmation",
+  "all_model_predictions_preserved": true,
+  "v1_weights_not_saved": true,
+  "v2_weights_and_train_traces_saved_privately": true,
+  "old_raw_result_sha256": "e1a572d453432c84afaae92970a7a104675dafebc7e189cb268ffdfadfcc228e",
+  "novel_method_established": false,
+  "next_work": "label-free path-to-joint-window-variance numerical probe, separately versioned/reviewed",
+  "automation": "prepared for resuming existing heartbeat; actual app state must be checked",
+  "mutable_budget_file": "LOOP_BUDGET.json",
+  "artifact_sha256": {
+    "AGENTS.md": "accf9dea89a1927aa5aa74af34040e2d206bda47707d91978bd99d1c9a37b0a4",
+    "PLAN.json": "92afb81bda7b7ca0bf745787282c7a06ea1db959bd7775cff397450332ed7f10",
+    "models.py": "d36f1446871860820089a98066481b0b5ef2e58fce74a65d0ca59c6511ea0dba",
+    "runner.py": "403b15c52996edb30158219781acf469ca5ff97d9f74bd471e247802632ebc60",
+    "test_discovery.py": "68f3a41aff8393a3f8bb6b6a6def319a7515eb3ddaacb3b8834c2084b336c00a",
+    "REVIEW.json": "198193a965fcfd28b930e272c02da645d4653aef846ae8cc9dfac4ff38ff791d",
+    "FREEZE.json": "6af6ad1e2027df26fcb57c5ad807ba75f36f14d5eb2555291ed5b5c1b0d8c219",
+    "RESULTS.json": "f0b91f7f4fc09e1f2fdd41c951a1adc38c577ca89aa3fb0e331ee87c2042f82a",
+    "RESULTS_SEAL.json": "68f0ca4b5b3f60447a4acefdfe6961974dffcc7b904d619ad2f87689b78b53cb",
+    "FINAL_REVIEW.json": "9823a416f9cefbd82f0bc1565ffc8fd0e01aae099709481169a5dcc0d41040d5",
+    "RESULTS.md": "703ddda03a5072f358300a940e5c868980541d0348ebe50af6a16a644da4a030",
+    "PATH_DISTRIBUTION_REVIEW.md": "d1cd9ba0c037e1827a6a91e8e10a36066d62b89623d4f48e66c7bd45ea80e427",
+    "NEXT_EXPLORATION.md": "15426b17256ea7e4480674495ad0bc872483b4d9216023d4a623e2dcd3a639c6",
+    "LOOP_PROMPT.md": "b87a29f235860873bc0998f0bdbfed013f5cc9bcc01d10ea77856d73b830b2b3"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "verdict": "APPROVE",
+  "source_sha256": {
+    "AGENTS.md": "db965d22283029a57fec47355ed17a549738cdb84970d251554854c8641ee281",
+    "PLAN.json": "ffff77b38263edc970ed8a5666d9b3d766c532babfee7acbcb3ebc6fc8d5d41c",
+    "data.py": "68ffec0e0f908b5e1eae0d589831d7dceb35c9791360fc17e769752f079234d2",
+    "models.py": "7d7d5d58d746f473eb87c79101f9930bf16e7f7dd26b71218adc2252f1886404",
+    "runner.py": "ab5d9734ee476626b072b62f262ba02f6d83f031472c20be672005816f2ed81c",
+    "test_discovery.py": "3eb5bff60c9048dd3896a7d45cfcb3b9909d01ab0d900f66ea4116ec606bc877"
+  },
+  "reviewer": "separate Codex agent /root/execution_final_review",
+  "recorded_by": "root from reviewer messages",
+  "synthetic_tests_passed": 8,
+  "test_seconds": 1.11,
+  "scope": "preparation andfixed12job exploratory source-only batch; no superiority/novelty/causal guarantees",
+  "resolved": [
+    "remaining budgets andfailed time accounting",
+    "freeze/preparation receipt identity",
+    "truncatedMDN consistentCDF/NLL",
+    "probability float-range handling"
+  ],
+  "limitations": [
+    "cooperative timeouts, not preemptivekill",
+    "onehistoricallyexposedsource split",
+    "TCN/MDN areconventional components"
+  ],
+  "reviewer_execution": "no arrays,modeltraining/tests orfilechanges"
+}

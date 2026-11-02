@@ -1,0 +1,20 @@
+{
+  "version":"discovery_source_only_v2_20261102",
+  "reason":"v1 temporal models beat HGB but not Markov; Markov had exact computed prefix-state access while raw sequence models had to infer these statistics. No v1 training trajectories were saved, so undertraining versus representation cannot be identified. v2 equalizes analytic moment/state access and records trajectories.",
+  "mode":"adaptive exploratory second batch; never independent confirmation",
+  "data":"v1 prepared source-only34people1442rows, same3source-personfolds. No olddev/test truth access or globaloldthreshold reuse.",
+  "query":"same train-scaled60summaryfeatures plus11onehot fold-defined prefix states plus2UNCLIPPED standardizedlog1p prefix-moment anchors to allmodels (73dims). Summaryclip doesnotremove momentaccess fromjointheads.",
+  "context":"96x4train-scaled prefix tokens plus fixed relative-time and Fourier time features1/2/4/8cycles. No frameafter1second.",
+  "factorial_methods":["moment_mlp_joint","moment_mlp_delta","moment_attention_joint","moment_attention_delta"],
+  "joint":"10pattern softmax,9marginalBCE",
+  "delta":"two-component lower-truncated Gaussian MDN,means anchored at observedprefix log1p variability; unavailableprefixpitch uses originalzero sentinel togetherwithprefixstate10. guard-aware9marginalBCE plus.1continuous/guardNLL. Relative means, mixtures andmulti-taskloss are known ideas, not novelty claims.",
+  "attention":"32dim summaryquery cross-attends to96prefix context tokens,2heads; residual+LayerNorm. MLP uses same summaryquery+LayerNorm without context. Extra attention parameters are recorded; contrast is not parameter-count-matched.",
+  "untrained_controls":["same fold-train Markov","v1 HGB score retained as historically exposed control, not retrained"],
+  "parameters":{"seed":0,"epochs":60,"batch_size":256,"width":32,"heads":2,"learning_rate":0.001,"weight_decay":0.01,"gradient_norm_clip":5,"mdn_nll_weight":0.1,"log_train_bce_every_epochs":10},
+  "preprocessing":"v1 fit_fold refits quantiles/scalers/continuous scales/prior on innertrain only; query states andanchors useprefixonly. Train BCE traces andendpointweights saved; heldtargets formed only after predictions persisted.",
+  "evaluation":"same person-macro9BCE/Brier/maxperson/coherence asv1; primary relativeeffects vsMarkov/HGB and2x2lossinteraction. No pvalues/bootstrap certificates from adaptivefolds.",
+  "promotion":">=2percent relative gain vsboth Markov/v1HGB and better thanboth in>=2of3folds is promisingexploratory only. Retain allmodels and failures.",
+  "budget":{"training_jobs":12,"single_job_seconds":180,"total_training_seconds":1800,"end_utc":"2026-11-05T15:00:00+00:00"},
+  "limitations":["one seed, adaptive reusedsourcefolds","changing head changes bothoutputparameterization andsupervision","attention adds parameters/context","fixed60epochs notoptimizedlearning schedule","allmethods conventionalprototypes; novelty remains unestablished"],
+  "stop":"finish12jobs or any failure/budget/deadline. No samebatchrescue. This stops thisbatch, not all authorizedexploration."
+}

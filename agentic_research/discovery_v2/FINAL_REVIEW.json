@@ -1,0 +1,22 @@
+{
+  "verdict": "APPROVE_RESULTS",
+  "reviewer": "separate Codex agent /root/execution_final_review",
+  "recorded_by": "root from final reviewer message",
+  "scope": "read-only hash/JSONparticipant-vector recomputation,no newforward/training/truthfileaccess",
+  "sources_verified": 5,
+  "parent_sources_verified": 6,
+  "inputs_verified": 5,
+  "parent_inputs_verified": 6,
+  "prediction_hashes_verified": 12,
+  "weight_hashes_verified": 12,
+  "mismatches": 0,
+  "training_seconds_verified": 11.583057373994961,
+  "result_sha256": "f0b91f7f4fc09e1f2fdd41c951a1adc38c577ca89aa3fb0e331ee87c2042f82a",
+  "private_details_sha256": "97616381a177ef965166f3814bdf88d24d59cc5ab3ac1971c1860205c0d747a7",
+  "notes": [
+    "allreceipts match sealedmetadata; receiptfiles notindividuallyoriginallysealed",
+    "interaction positiveall3folds,butdeltahelpsattentiononly2of3 andhurtsMLP3of3",
+    "alltraintraces decrease through60,convergencenotestablished",
+    "noMarkovsuperiority ornovelty; closeonlyv2batch"
+  ]
+}

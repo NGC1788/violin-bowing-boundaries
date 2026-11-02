@@ -1,0 +1,21 @@
+{
+  "verdict": "APPROVE_RESULTS",
+  "reviewer": "separate Codex agent /root/execution_final_review",
+  "recorded_by": "root from reviewer messages",
+  "scope": "read-only hash andJSONparticipant-vector recomputation,not independent empiricalconfirmation",
+  "sources_verified": 6,
+  "inputs_verified": 6,
+  "prediction_hashes_verified": 12,
+  "mismatches": 0,
+  "training_seconds_verified": 55.141,
+  "results_sha256": "dfc38a89b0e077eaaf9ec60aa47e2afd4660db7ce82fc5b2d8fe8d1590929f3f",
+  "prepared_receipt_sha256": "6e12b31b42d7cc737f87eaa1ebc1991ee68788e9be36c8e1c92bda99699bd8c1",
+  "private_details_sha256": "f09730ab573b85433cdff060e9a106c61876ef2e4831d16b75297bbe6294ecf0",
+  "decision": "COMPLETE_STOP_THIS_BATCH",
+  "limitations": [
+    "cannotinfer temporal informationabsence oroptimal training",
+    "no learningcurves/weights inthispilot",
+    "Markovanalyticprefixmomentaccess differsfromTCN",
+    "allsource historicallyexposed"
+  ]
+}

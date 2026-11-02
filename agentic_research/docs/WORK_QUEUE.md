@@ -1,5 +1,25 @@
 # 유한 연구 작업 큐 — 2026-10-30
 
+## 2026-11-02 넓은 탐색 24학습 완료·다음 수치 가설 준비
+
+사용자는예상밖조합을넓게시도하도록새로요청했다. 보정인증분기의STOP을연구전체종료로확대하지않는다. `discovery_v1`과별도 `discovery_v2`의12개씩24학습완료,모두결과·동결·별도검토를보존했다. olddev/test정답은이번탐색에서hash도열지않았다. v1/v2각batch는종료상태로재실행하지않는다.
+
+v2는공통의정확prefix정보+attention/MLP×joint/deltaMDN의2x2다. Source34명3fold에서Markov.542081,MLPjoint.554539,MLPdelta.563987,attentionjoint.568173,attentiondelta.558815. Markov개선screen후보없음. delta는MLP를해치고attention을2fold에서돕는bundled상호작용(+.018806,세fold양수)이있지만성능/기전/novelty증거가아니다. train곡선은60epoch까지감소,일반화격차도있어수렴·최적epoch를확정하지않는다.
+
+**다음 한 작업:** [NEXT_EXPLORATION.md](../discovery_v2/NEXT_EXPLORATION.md)와 [경로분포 선행6개](../discovery_v2/PATH_DISTRIBUTION_REVIEW.md)를읽고별도 `discovery_v3_math`에서source라벨도쓰지않는Gaussian경로→공동표본분산decoder의작은수치·gradient반박시험을명세/구현/검토/동결한다. Cents/dBFS/46frame/ddof1,unknownvoicingmask/guard,두채널joint의존을존중한다. 고전χ²CDFgradient자체는novelty가아니다. 실패하면그가설을버리거나수정하되모든탐색불가능성으로확대하지않는다.
+
+자동루프재개시추가예산은 `../discovery_v2/LOOP_BUDGET.json`을따른다. 이미끝난24회뒤별도학습batch최대3개×12회,각1800초/작업180초,수치감사최대2개×600초,종료2026-11-06 00:00KST. 시작한시도/실패도ledger에먼저기록하고늘리지않는다. 준비가안된후보를자동학습하지않고각batch의가설·반박대조·누수시험·별도검토·계약동결을먼저완성한다. 원자료·가중치·개인별점수공개와olddev/test선택을금지한다. 아래수동학습중/이전전체종료문구는이력이다.
+
+## 2026-11-02 넓은 탐색 첫batch완료·두번째검토중
+
+`discovery_v1`의고정12학습완료(55.141초),별도결과검토통과. Source34명사람fold에서Markov.542081/HGB.581722/orderedTCN.561511/shuffledTCN.560271/MDN.559653. HGB보다좋지만Markov를못넘어유망후보screen없음. 이batch만STOP으로닫고모든숫자를보존한다. 시계열무정보나학습최적성의증명이아니다(첫pilot은곡선/가중치미보존).
+
+사용자의넓은탐색요청범위에서 `/root`는별도 `discovery_v2`를검토·실행한다. 모든모델에동일한정확prefix상태/변동량을주고,summaryMLP/crossattention × joint/relativecontinuousMDN의2x2를같은source3fold에서12학습한다. Source입력/목표외olddev/test정답은열지않고v1결과도보존한다. train곡선과가중치를이번에는보존한다. 기존종료분기는재개하지않으며앱자동화PAUSED인상태로이검토된batch만수동실행한다. 중복학습을시작하지않는다.
+
+## 2026-11-02 새 사용자 요청: 넓은 탐색을 별도 공간에서 시작
+
+사용자는조건부보정종료를연구전체종료로보지않고,예상밖아이디어·조합을많이시험하는탐색을명시적으로요청했다. Codex `/root`는별도 `discovery_v1/`에서원train34명만사용하는탐색을담당한다. 기존STOP분기·원결과·노출된dev/test는보존한다. 새후보의자료구조/학습목표를바꾸는것은이번새요청의범위이며기존동결을재사용·수정하는것이아니다. 첫batch는prefix시계열/순서제거대조/연속감독결합을검증하는4방법×3사람fold의12학습으로제한한다. fold문턱/전처리/prior는매번내부train만사용하며기존dev/test정답은hash도열지않는다. 탐색은새미사용확증이아니며좋은조합이나novelty를보장하지않는다. 실행전합성누수검사·별도검토·새동결후실행한다. 같은감사·학습을중복시작하지않는다.
+
 ## 2026-11-02 조건부 보정 가능성 감사 완료·종료
 
 사용자요청의추가감사를완료했고 `correction_feasibility_v1`도**STOP_CORRECTION_CERTIFICATION_BRANCH**로닫았다. [DECISION.md](../correction_feasibility_v1/DECISION.md), [RESULTS.json](../correction_feasibility_v1/RESULTS.json), [PRIOR_AND_MATH.md](../correction_feasibility_v1/PRIOR_AND_MATH.md)가최신이다.7합성시험·별도AI소스검토후코드6/입력19동결,실제감사1회,108개의사후보정계수최적화,새base학습0·test정답열람0. 결과별도재계산검토도통과했다.

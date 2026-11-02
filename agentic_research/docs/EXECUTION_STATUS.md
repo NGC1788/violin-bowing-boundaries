@@ -1,5 +1,15 @@
 # 실제 실행 현황 — 2026-10-30
 
+## 2026-11-02 사용자 요청으로 넓은 탐색: 새24학습 완료
+
+사용자가비정상적으로보이는조합도폭넓게시도하도록요청했다. 이전보정인증분기는STOP으로보존하고새source-only `discovery_v1/v2`를만들었다. 기존raw_v1학습결과를재실행한것이아니다. Source34명1442녹음만3사람fold로사용했고olddev/test정답은이번에hash도열지않았다. 모든fold문턱/정규화/prior는innertrain만쓴다. source자체도역사적으로노출돼있어독립확증은아니다.
+
+v1: prefix96×4시계열추출,8실제미래변조검사·8합성시험·별도검토후12학습55.141초. Markov.542081/HGB.581722/orderedTCN.561511/shuffledTCN.560271/MDN.559653. v2: 같은정확prefix상태와unclipped변동량을모든모델에주고4합성시험·별도검토후12학습11.583초. MLPjoint.554539/MLPdelta.563987/attentionjoint.568173/attentiondelta.558815. 두batch모두HGB보다나은신경망이있지만Markov를못넘어고정screen통과후보는없다. 24학습총66.724초(준비·검토·시작시간별도)이며모든실패/점수를보존했다.
+
+v2의delta상호작용+.018806은세fold에서양수지만delta가attention에항상도움된것은아니고MLP에서는세fold모두악화였다. bundledhead/anchoring/auxloss와context/모수수변경이므로기전/novelty를선언하지않는다. trainBCE가60까지감소해수렴미확인이고held-train격차도모두양수다. v2는가중치·train곡선을private로보존했다. 별도결과검토가두batch의hash/집계/score조건을재현했고불일치0건이었다.
+
+다음은 `discovery_v2/NEXT_EXPLORATION.md`의별도label-free수치프로토타입이다. Gaussian경로의표본분산pushforward는직접MDN과다른실질표현후보이며선행6개검토상선형집계예측과구별된다. 그러나고전이차형식CDF·gradient/lowrankpath자체는선행이고joint/mask가미해결이다. 아직새방법이나개선이확보된것은아니다. 넓은가설은행은 `discovery_v1/IDEAS.md`,추가루프예산은 `discovery_v2/LOOP_BUDGET.json`에있다. 완료된batch만STOP이며새요청의탐색전체를닫지않는다.
+
 ## 2026-11-02 최종 가능성 감사: 조건부 보정·인증 방향 STOP
 
 사용자가요청한“현재자료규모에서성립하는지,단순혼합을넘는novelty가있는지”검증을완료했다. 현재후속은**STOP_CORRECTION_CERTIFICATION_BRANCH**다. [최종판정](../correction_feasibility_v1/DECISION.md), [집계](../correction_feasibility_v1/RESULTS.json), [추가선행·수학](../correction_feasibility_v1/PRIOR_AND_MATH.md)을읽는다. 이전문서의가능조건미완료는이번감사로대체됐다.

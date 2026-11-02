@@ -1,0 +1,25 @@
+{
+  "version": "discovery_source_only_v1_20261102",
+  "mode": "exploration, not confirmation; newly authorized by user's request to try unconventional ideas/combinations",
+  "first_question": "Does preserving prefix dynamics or combining continuous and discrete supervision help source-person transfer beyond a conventional summary baseline?",
+  "data": "Original train34 people/1442rows only. Existing dev/test labels must not be read or hashed. Existing target Y9/prefix_states/quantile thresholds are NOT reused for fold labels.",
+  "folds": "3 deterministic cohort-stratified participant folds, SHA256(seed20261102,participant) ordering and round-robin within cohort; labels never used in split",
+  "fold_preprocessing": "Refit valid training target .25/.5/.75 quantiles, prefix states, participant-weighted Markov prior, summary and sequence standardization, and log1p continuous-target scaling on inner training only. Held labels are used for scoring only after training.",
+  "sequence": "96x4 prefix frame descriptors: voiced pitch cents, power dBFS, periodicity, voiced mask. Frozen 50ms ACF/RMS descriptor,10ms hop,cut raw waveform at1second before extraction. No new audio-model download.",
+  "hypotheses": [
+    "60 summaries may lose predictive temporal order; compare ordered TCN with identical TCN whose per-record frame order is randomly permuted by a fixed label-blind source-ID hash",
+    "Continuous future descriptors may provide denser supervision than nine quantile labels; compare same ordered TCN with finite10-pattern head versus guard-aware two-component diagonal Gaussian MDN on standardized log1p descriptors, truncated at physical descriptor0, plus marginal BCE",
+    "Temporal/continuous combinations must beat strong conventional controls; modern model names alone are not novelty"
+  ],
+  "trained_methods": ["summary_hgb", "ordered_tcn_joint", "shuffled_tcn_joint", "ordered_tcn_mdn"],
+  "untrained_controls": ["fold-train frequency", "fold-train source Markov"],
+  "parameters": {"seed": 0,"epochs": 30,"batch_size": 256,"tcn_width": 16,"dilations": [1,2,4],"learning_rate": 0.001,"weight_decay": 0.01,"gradient_norm_clip": 5,"hgb_iterations": 100,"mdn_components": 2,"mdn_nll_weight": 0.1},
+  "neural_training": "CPU1thread;fixed30epochs,no early stop/tuning. Equal total weight per training person. Ordered/shuffled joint use identical architecture/init/batches; shuffling preserves each row's multiset/cross-channel values but changes order. It is a topology/order control, not proof every representation difference is pure time information.",
+  "primary": "held-source-person macro mean9rule BCE,clip1e-6,allrows including invalidfutureguard,eachperson scored once across folds",
+  "secondary": ["Brier", "maximum person loss", "coherence", "compute time", "per-fold direction and time-order/continuous-head contrasts"],
+  "promotion": "Promising exploratory result requires>=2percent relative improvement against Markov and HGB and direction in>=2of3folds. No statistical confirmation or novelty claim. If no candidate passes, preserve negative firstbatch and reconsider representation/data-information hypotheses before any separately planned batch.",
+  "budget": {"training_jobs": 12,"single_job_seconds": 180,"total_training_seconds": 1800,"end_utc": "2026-11-05T15:00:00+00:00","source_audio_preparation_seconds": 600},
+  "scope_limitations": ["All source participants historically exposed; new folds do not remove adaptive selection bias", "one seed/pilotsetting cannot establish neural model superiority", "TCN/MDN combinations are hypotheses not new algorithms", "bad ACF observations may limit target meaning; targets remain measured descriptors, not perceptual violin quality"],
+  "future_idea_bank_not_execution_menu": ["self-supervised prefix representation", "cross-record retrieval and learned adaptation", "music-pretrained embeddings with frozen small head", "switching latent dynamics and change-point tokens", "spectral/temporal multi-scale experts", "observation uncertainty or alternative source-only observer audit"],
+  "guardrails": "No paid API/model download,oldcampaign rerun,olddev/test modelselection,raw deletion or mainmerge. Any next batch needs a separate contract and finite scope. Automatic app loop remains paused while this reviewed batch runs manually."
+}

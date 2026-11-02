@@ -1,5 +1,7 @@
 # 다른 AI·다른 컴퓨터에서 이어가는 방법
 
+**최신(2026-11-02): 사용자의새요청으로넓은탐색을재개했다.** [첫새12학습](discovery_v1/RESULTS.md), [두번째12학습](discovery_v2/RESULTS.md), [다음가설](discovery_v2/NEXT_EXPLORATION.md), [추가루프예산](discovery_v2/LOOP_BUDGET.json)을읽는다. 기존STOP을연구전체종료로해석하지않는다.24추가학습에서도Markov개선은미확보이며,새가설은아직검증된novel방법이아니다. 완료batch는보존하고다음은별도label-free수치프로토타입이다.
+
 **최종 판정(2026-11-02):** [보정 가능성 감사](correction_feasibility_v1/DECISION.md)까지완료했고조건부보정·인증후속도STOP이다. 전역혼합의탐색적개선은있지만조건부장치의추가이점·유효인증·높은novelty가없어더돌리지않는다. 기존시험과결과를보존하며등록된다음실험은없다. 아래미완료수학검토안내는완료이력이다.
 
 **최신 후속:** [신경망 실패 진단](violin_diagnosis_v1/CAUSE_ANALYSIS.md)과 [후속 방법론의 가능 조건](violin_diagnosis_v1/NEXT_METHOD.md)을정리했다. 새학습없이저장모델의train/dev만검증했고,높은novelty·독립성능개선은미확보다. 현재다음작업은수학적가능조건·직접선행검토이며기존캠페인실행이아니다. 완료캠페인STOP·자동화PAUSED유지.

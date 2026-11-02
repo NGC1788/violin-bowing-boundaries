@@ -1,0 +1,18 @@
+{
+  "sources": {
+    "AGENTS.md": "accf9dea89a1927aa5aa74af34040e2d206bda47707d91978bd99d1c9a37b0a4",
+    "PLAN.json": "92afb81bda7b7ca0bf745787282c7a06ea1db959bd7775cff397450332ed7f10",
+    "models.py": "d36f1446871860820089a98066481b0b5ef2e58fce74a65d0ca59c6511ea0dba",
+    "runner.py": "403b15c52996edb30158219781acf469ca5ff97d9f74bd471e247802632ebc60",
+    "test_discovery.py": "68f3a41aff8393a3f8bb6b6a6def319a7515eb3ddaacb3b8834c2084b336c00a"
+  },
+  "inputs": {
+    "FREEZE.json": "2067d0336b0f9feb0e8b95dd7023176251197f0bdf942bc19d1275c2ebc50bc4",
+    "PREPARED.json": "6e12b31b42d7cc737f87eaa1ebc1991ee68788e9be36c8e1c92bda99699bd8c1",
+    "local/prepared.npz": "72dfbb0437009e4851e5a1f74e07ca4c51f6b7cc0e4aa770bd67e11d9c67c25b",
+    "RESULTS.json": "dfc38a89b0e077eaaf9ec60aa47e2afd4660db7ce82fc5b2d8fe8d1590929f3f",
+    "RESULTS_SEAL.json": "8cd3def9695bf0e7eb6888017b24962d464810787b753e54d57f567257fd9445"
+  },
+  "review_sha256": "198193a965fcfd28b930e272c02da645d4653aef846ae8cc9dfac4ff38ff791d",
+  "scope": "second exploratory12job batch,sourceonly"
+}

@@ -1,0 +1,293 @@
+{
+  "scope": "exploratory original-source-person3fold comparison, not independent confirmation",
+  "training_jobs": 12,
+  "training_seconds": 55.14095012500184,
+  "dev_test_truth_accessed": false,
+  "aggregate": {
+    "summary_hgb": {
+      "log_loss": 0.5817218347181454,
+      "brier": 0.1900004740550775,
+      "maximum_person_loss": 0.8484162116571007,
+      "coherence_rate": 0.11373092926490985,
+      "people": 34,
+      "relative_gain_vs_controls": {
+        "markov": -0.07312728840938837,
+        "summary_hgb": 0.0
+      },
+      "folds_better_than_both_controls": 0
+    },
+    "ordered_tcn_joint": {
+      "log_loss": 0.5615114338822821,
+      "brier": 0.18834057322002873,
+      "maximum_person_loss": 0.9554850979072246,
+      "coherence_rate": 1.0,
+      "people": 34,
+      "relative_gain_vs_controls": {
+        "markov": -0.03584429273643887,
+        "summary_hgb": 0.034742379655829214
+      },
+      "folds_better_than_both_controls": 1
+    },
+    "shuffled_tcn_joint": {
+      "log_loss": 0.5602706933991779,
+      "brier": 0.18826811659874082,
+      "maximum_person_loss": 0.9171036216497841,
+      "coherence_rate": 1.0,
+      "people": 34,
+      "relative_gain_vs_controls": {
+        "markov": -0.0335554454029045,
+        "summary_hgb": 0.036875255558115654
+      },
+      "folds_better_than_both_controls": 1
+    },
+    "ordered_tcn_mdn": {
+      "log_loss": 0.5596525964467809,
+      "brier": 0.1888944362555485,
+      "maximum_person_loss": 0.7404811327766538,
+      "coherence_rate": 1.0,
+      "people": 34,
+      "relative_gain_vs_controls": {
+        "markov": -0.032415215370416056,
+        "summary_hgb": 0.03793778564639485
+      },
+      "folds_better_than_both_controls": 1
+    },
+    "markov": {
+      "log_loss": 0.5420809264671534,
+      "brier": 0.18194311173340272,
+      "maximum_person_loss": 0.7056687399495652,
+      "coherence_rate": 1.0,
+      "people": 34
+    },
+    "frequency": {
+      "log_loss": 0.5660535972524613,
+      "brier": 0.19128112564435737,
+      "maximum_person_loss": 0.7629849249716153,
+      "coherence_rate": 1.0,
+      "people": 34
+    }
+  },
+  "fold_results": {
+    "0": {
+      "summary_hgb": {
+        "log_loss": 0.60094614466246,
+        "brier": 0.19602321498950961,
+        "maximum_person_loss": 0.8229569805171459,
+        "coherence_rate": 0.1411764705882353,
+        "people": 12
+      },
+      "ordered_tcn_joint": {
+        "log_loss": 0.5919225695863694,
+        "brier": 0.19885865703179814,
+        "maximum_person_loss": 0.9554850979072246,
+        "coherence_rate": 1.0,
+        "people": 12
+      },
+      "shuffled_tcn_joint": {
+        "log_loss": 0.5903343762640613,
+        "brier": 0.1985473595508996,
+        "maximum_person_loss": 0.9171036216497841,
+        "coherence_rate": 1.0,
+        "people": 12
+      },
+      "ordered_tcn_mdn": {
+        "log_loss": 0.5756427583530985,
+        "brier": 0.1961082672700416,
+        "maximum_person_loss": 0.7404811327766538,
+        "coherence_rate": 1.0,
+        "people": 12
+      },
+      "markov": {
+        "log_loss": 0.5429572830484722,
+        "brier": 0.18173632556745045,
+        "maximum_person_loss": 0.7056687399495652,
+        "coherence_rate": 1.0,
+        "people": 12
+      },
+      "frequency": {
+        "log_loss": 0.5803290616457318,
+        "brier": 0.19719980950434043,
+        "maximum_person_loss": 0.7629849249716153,
+        "coherence_rate": 1.0,
+        "people": 12
+      }
+    },
+    "1": {
+      "summary_hgb": {
+        "log_loss": 0.6488714128414352,
+        "brier": 0.21303468022328265,
+        "maximum_person_loss": 0.8484162116571007,
+        "coherence_rate": 0.08172043010752689,
+        "people": 11
+      },
+      "ordered_tcn_joint": {
+        "log_loss": 0.6124789795430661,
+        "brier": 0.21184677329230697,
+        "maximum_person_loss": 0.747877202113261,
+        "coherence_rate": 1.0,
+        "people": 11
+      },
+      "shuffled_tcn_joint": {
+        "log_loss": 0.6159333569749329,
+        "brier": 0.21277298694931804,
+        "maximum_person_loss": 0.7540450545809209,
+        "coherence_rate": 1.0,
+        "people": 11
+      },
+      "ordered_tcn_mdn": {
+        "log_loss": 0.6100235734516162,
+        "brier": 0.21150779390517105,
+        "maximum_person_loss": 0.7380599864619637,
+        "coherence_rate": 1.0,
+        "people": 11
+      },
+      "markov": {
+        "log_loss": 0.5865684302851382,
+        "brier": 0.20106396356295395,
+        "maximum_person_loss": 0.6913441663485945,
+        "coherence_rate": 1.0,
+        "people": 11
+      },
+      "frequency": {
+        "log_loss": 0.6265826603203011,
+        "brier": 0.21749890017453166,
+        "maximum_person_loss": 0.7419858923326863,
+        "coherence_rate": 1.0,
+        "people": 11
+      }
+    },
+    "2": {
+      "summary_hgb": {
+        "log_loss": 0.49360028211014895,
+        "brier": 0.1603960050493101,
+        "maximum_person_loss": 0.6935320726378248,
+        "coherence_rate": 0.11563169164882227,
+        "people": 11
+      },
+      "ordered_tcn_joint": {
+        "log_loss": 0.47736810381703915,
+        "brier": 0.15336009989854751,
+        "maximum_person_loss": 0.6809254328080028,
+        "coherence_rate": 1.0,
+        "people": 11
+      },
+      "shuffled_tcn_joint": {
+        "log_loss": 0.4718112848799136,
+        "brier": 0.1525495266639903,
+        "maximum_person_loss": 0.6960449927043645,
+        "coherence_rate": 1.0,
+        "people": 11
+      },
+      "ordered_tcn_mdn": {
+        "log_loss": 0.4918378064532357,
+        "brier": 0.1584114447719334,
+        "maximum_person_loss": 0.651858386583677,
+        "coherence_rate": 1.0,
+        "people": 11
+      },
+      "markov": {
+        "log_loss": 0.49663739728773026,
+        "brier": 0.16304784481216308,
+        "maximum_person_loss": 0.657796593363539,
+        "coherence_rate": 1.0,
+        "people": 11
+      },
+      "frequency": {
+        "log_loss": 0.48995130030105366,
+        "brier": 0.15860660508511065,
+        "maximum_person_loss": 0.6984043658679904,
+        "coherence_rate": 1.0,
+        "people": 11
+      }
+    }
+  },
+  "jobs": [
+    {
+      "method": "summary_hgb",
+      "fold": 0,
+      "seconds": 9.5966963749961,
+      "predictions_sha256": "abb30eeea1cc5affa0a5266b538ebaf225da5a0e2d2ff0a51cd935220eba5517"
+    },
+    {
+      "method": "ordered_tcn_joint",
+      "fold": 0,
+      "seconds": 3.2896623340202495,
+      "predictions_sha256": "dde5748492f91ea247e8d55ac79041cb79bbcafacf897e6daf4173cdc5fac82b"
+    },
+    {
+      "method": "shuffled_tcn_joint",
+      "fold": 0,
+      "seconds": 2.646161957993172,
+      "predictions_sha256": "5f5b5515bacb7ee945074ddb05c66681f670636e7cc53f52c43206b1b4ff5e43"
+    },
+    {
+      "method": "ordered_tcn_mdn",
+      "fold": 0,
+      "seconds": 2.7099782500299625,
+      "predictions_sha256": "6602aec2a09275397f91f6786d99a5dfd072481eed317070069b68f8a331feac"
+    },
+    {
+      "method": "summary_hgb",
+      "fold": 1,
+      "seconds": 9.803249666991178,
+      "predictions_sha256": "f40388aad5ca12f990b7c03f427e4c6556255a58e6ff3f139766e96f17cec5dd"
+    },
+    {
+      "method": "ordered_tcn_joint",
+      "fold": 1,
+      "seconds": 2.855079500004649,
+      "predictions_sha256": "3a347bd22b67f07934c46455978c9d4fb5a84e8fa67723579759835b8fa0221b"
+    },
+    {
+      "method": "shuffled_tcn_joint",
+      "fold": 1,
+      "seconds": 2.847119832993485,
+      "predictions_sha256": "d9f720aaa4d1fcc930f2dcb24bd47a0c84b3947aa75c51d1549a5236bb5df795"
+    },
+    {
+      "method": "ordered_tcn_mdn",
+      "fold": 1,
+      "seconds": 2.9497580000315793,
+      "predictions_sha256": "a59e4e4b2092ab241e4187ad932f9aa74fcab72bfa9a70bd602260821d11554b"
+    },
+    {
+      "method": "summary_hgb",
+      "fold": 2,
+      "seconds": 9.800487999978941,
+      "predictions_sha256": "08a3513c0cc9ced372ee1861f5a2a12f3ce0f85f5ca6e0ffd654efaa15c0a98d"
+    },
+    {
+      "method": "ordered_tcn_joint",
+      "fold": 2,
+      "seconds": 2.855231499997899,
+      "predictions_sha256": "ffa7de47667ed2700a4eb55088122f8b83260d894c747607100e0bab2925a015"
+    },
+    {
+      "method": "shuffled_tcn_joint",
+      "fold": 2,
+      "seconds": 2.8574458329821937,
+      "predictions_sha256": "8a76ace5ba56ca6a076ae5507841fcf16c9005468fd01518689561e31909346f"
+    },
+    {
+      "method": "ordered_tcn_mdn",
+      "fold": 2,
+      "seconds": 2.930078874982428,
+      "predictions_sha256": "68d46369778f6148864488f73c83a48181da75c84182a300ca9686706524c7fa"
+    }
+  ],
+  "promising_exploratory_candidates": [],
+  "prepared_sha256": "72dfbb0437009e4851e5a1f74e07ca4c51f6b7cc0e4aa770bd67e11d9c67c25b",
+  "freeze_sha256": "2067d0336b0f9feb0e8b95dd7023176251197f0bdf942bc19d1275c2ebc50bc4",
+  "prepared_receipt_sha256": "6e12b31b42d7cc737f87eaa1ebc1991ee68788e9be36c8e1c92bda99699bd8c1",
+  "private_details_sha256": "f09730ab573b85433cdff060e9a106c61876ef2e4831d16b75297bbe6294ecf0",
+  "novel_method_established": false,
+  "old_results_preserved": true,
+  "status": "COMPLETE_STOP_THIS_BATCH",
+  "limitations": [
+    "source participants historically exposed",
+    "single seed, small fixed architecture and30epochs",
+    "fold targets use fold-train quantiles, so pooled score concerns this cross-fitting procedure, not one universal fixed threshold",
+    "summary versus sequence comparisons change representation/model; temporal order contrast uses matched TCN",
+    "MDN versus joint also changes loss andhead, so component ablations needed before a mechanism claim"
+  ]
+}

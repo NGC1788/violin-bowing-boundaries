@@ -1,5 +1,11 @@
 # Claude Code 최신 인계 — 2026-10-30
 
+**2026-11-02 새요청: 넓은탐색으로전환해24추가학습완료.** 사용자는예상밖조합도많이시도하길명시적으로원했다. 아래보정분기종료를연구전체종료로확대하지말라. `discovery_v1/RESULTS.md` → `discovery_v2/RESULTS.md` → `NEXT_EXPLORATION.md` → `PATH_DISTRIBUTION_REVIEW.md` → `LOOP_BUDGET.json`과작업큐최상단을읽는다. 구분기와새v1/v2batch는모두완료·STOP으로보존하고새별도버전으로탐색한다.
+
+새24학습은source34명만쓰며olddev/test정답은hash도열지않았다. 여전히Markov.542081을넘는후보는없다. attention×relativeMDN의상호작용은있지만전체성능개선·기전·novelty는미입증이다. v2의weights/traincurves는private에있다. 다음은소스라벨도보지않는Gaussian경로→두표본분산공동확률의수치/gradient검사이며아직구현·실행하지않았다. Cents/dBFS·46frame·ddof1과unknownvoicingmask/guard·joint의존을반드시맞춘다. 최신선행검토는일반화χ²gradient자체가이미존재함을확인했다.
+
+추가루프예산은새학습batch최대3×12회(각1800초/작업180초),수치감사2×600초,기존종료11월6일00시KST다. 각새batch는먼저가설/대조/실패기준/누수시험/별도검토/새동결을갖춘다. 시도와실패도ledger에기록한다. 모형/가중치추가결제나olddev/test재사용은하지않는다. root자동화상태는앱에서확인하고실제프로세스/lock/Git과대조해중복작업을막는다. 아래PAUSED는이전단계상태일수있다.
+
 **2026-11-02 최종후속도종료:** `correction_feasibility_v1/DECISION.md` → `RESULTS.json` → `PRIOR_AND_MATH.md` → `FINAL_REVIEW.json`을읽는다. 조건부보정·인증후보는STOP이다. 전역혼합은사후개발한사람제외보정에서2.6186%감소했지만상태별은전역보다1.10024%나빴고4/8명만개선해screen실패. 양쪽최대사람손실도Markov보다높았다. 고정cap이득.147%/.567%,재사용자료인증과독립확증·방법신규성은미확보다. 원시험/결과보존,새base학습0·test정답재열람0. 이번감사는보정계수를108개사후최적화했으며“아무fitting도안했다”고쓰지않는다.
 
 코드6·입력19동결후감사1회,7합성시험·별도AI소스/최종재계산검토통과. 좁은보정방향을닫는판정이며작은n/모든보정불가능성주장은아니다. 단순Hoeffding보다강한HB/betting과온라인대안도검토했고직접선행과목표차이를명시했다. 아래가능조건검토대기문구는완료이력이다. 기존캠페인/감사재개·추가gate/cap/seed탐색·oldtest재평가없이자동화PAUSED유지. 등록된다음실험은없다.

@@ -1,0 +1,18 @@
+{
+  "scope":"Next autonomous exploration after completeddiscovery_v1/v2; doesnotreopen anyoldbatch",
+  "deadline_kst":"2026-11-06T00:00:00+09:00",
+  "completed_training_jobs_before_this_budget":24,
+  "max_additional_training_batches":3,
+  "max_jobs_per_additional_batch":12,
+  "max_training_seconds_per_batch":1800,
+  "max_seconds_per_training_job":180,
+  "max_seconds_per_math_audit":600,
+  "max_math_audits":2,
+  "max_new_public_model_weight_download_gib":1,
+  "additional_batches_started":[],
+  "math_audits_started":[],
+  "new_model_weight_downloads":[],
+  "stop_policy":"Budget/deadline/nojustifiednextstep pausesautomationandreportsstate. Failureofasinglehypothesisdoesnotbyitselfclosethewholeexploration; no silentbudgetincrease orsamebatchrescue.",
+  "new_training_contracts_required":true,
+  "old_dev_test_truth_access_allowed":false
+}
