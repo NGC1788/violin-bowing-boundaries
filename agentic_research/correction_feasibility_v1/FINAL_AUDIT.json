@@ -1,0 +1,27 @@
+{
+  "verdict": "COMPLETE_STOP",
+  "base_model_training_jobs": 0,
+  "test_truth_access": false,
+  "calibration_scalar_fits": 108,
+  "actual_audit_runs": 1,
+  "synthetic_tests_passed": 7,
+  "old_artifacts_unchanged": true,
+  "source_review": "approve",
+  "result_recomputation_review": "approve",
+  "automatic_training": "PAUSED",
+  "next_registered_experiment": null,
+  "artifact_sha256": {
+    "AGENTS.md": "4869631f98f1a8314b2451501976adb9e32a7f209e9bb173fe72f93bc75dae0d",
+    "PLAN.json": "6ffbf1ebdb8cfe6cc4045bbb1975ac1e0488853f9aef7520ae80f685093e0ea0",
+    "methods.py": "a48344ef9610c74bfcf51245dcdcc65ee9bfc458371b28928b2223b5d966ae6f",
+    "audit.py": "f3d1078852866663358b37c62199917e0b8e583aaa3449550074abae0068812e",
+    "test_methods.py": "2e85a4d15361b80e03e28ea6df62d8e9393f303d2f403f1b7d815e9c808ab5ca",
+    "REVIEW.json": "a58efeab2b24fe050b8649cbe89226e632fa283457e7544441513bea12f2ef3e",
+    "FREEZE.json": "d485e0060062e5a5b9aa0af6a353d82d6589fde525f9abb1d9995e657d8d7f97",
+    "RESULTS.json": "82b767228bd92b3dc7afc6c7f73b87a21a26d7afc99f0d7660dce838fb77b389",
+    "RESULTS_SEAL.json": "b24e7cb6a5f6cf113c2d57d861c3913152aaf76e825dd353bbd05fb8b1ff55f1",
+    "FINAL_REVIEW.json": "98429b4b43daa5218af0a56e754897959d69d8c093d9d4cdece01f52fad3212c",
+    "PRIOR_AND_MATH.md": "d1425b61b3872ab65e70c7a360d28255d8e07a6aec7e9375bb89cdf5cedb52a3",
+    "DECISION.md": "d4e8b4a6bea8fb2d9f35724cb12e942f5bfb732100c0dac08a6e41bb58f4b7b5"
+  }
+}

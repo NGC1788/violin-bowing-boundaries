@@ -1,5 +1,17 @@
 # 유한 연구 작업 큐 — 2026-10-30
 
+## 2026-11-02 조건부 보정 가능성 감사 완료·종료
+
+사용자요청의추가감사를완료했고 `correction_feasibility_v1`도**STOP_CORRECTION_CERTIFICATION_BRANCH**로닫았다. [DECISION.md](../correction_feasibility_v1/DECISION.md), [RESULTS.json](../correction_feasibility_v1/RESULTS.json), [PRIOR_AND_MATH.md](../correction_feasibility_v1/PRIOR_AND_MATH.md)가최신이다.7합성시험·별도AI소스검토후코드6/입력19동결,실제감사1회,108개의사후보정계수최적화,새base학습0·test정답열람0. 결과별도재계산검토도통과했다.
+
+전역혼합은한dev사람제외보정에서Markov보다2.6186%낮은손실(.521987)을보였지만사후개발진단이다. 상태별혼합은.527730으로전역보다1.10024%나빴고4/8명만나아고정screen실패. 둘다최대사람손실은Markov보다높았다. cap의평균이득도.147%/.567%에그쳤다. 더강한HB/betting및온라인aggregation선행을확인했으나,현재재사용자료의유효인증·독립확증·실질신규성이없어모든승격관문미통과다. 작은n/모든보정의보편적불가능성을주장하지않는다.
+
+**이 방향의 다음 등록 실험은 없다.** cap/gate/seed/혼합범위를바꾸어다시돌리거나기존캠페인·이번감사를재개하지않는다. 자동화PAUSED유지. 기존연구와부정적결과를보존하고현재후속은종료한다. 아래미완료가능조건검토와선점은모두완료이력이다.
+
+## 2026-11-02 현재 선점: 조건부 보정의 유한 가능성 감사
+
+사용자의 “현재자료규모에서성립·단순혼합대비novelty검증,근거없으면접기” 요청에따라 Codex `/root`가 별도 `correction_feasibility_v1/`의 수학·사후 보정 감사를 담당한다. 기존STOP캠페인·동결자료는읽기전용,새신경망학습·test정답열람·raw다운로드없음. 기존offset3seed만사용하며전역/상태별혼합의dev-oracle및한dev참여자제외보정,미리명시한span cap2개만검사한다. 이는보정계수의사후적합이며새미사용확증이아니다. 기존LTT/Betting과자료의독립성조건도검토해유효성·novelty근거가없으면이방향을닫는다. 상세범위/실패조건은해당PLAN.json을따른다. 다른실행자는중복감사를시작하지않는다.
+
 ## 2026-11-02 사후 진단 완료: 새 학습 대신 방법론 가능 조건 검토
 
 Codex `/root`의 원인 분석 단위를 완료했다. [CAUSE_ANALYSIS.md](../violin_diagnosis_v1/CAUSE_ANALYSIS.md), [NEXT_METHOD.md](../violin_diagnosis_v1/NEXT_METHOD.md), [FINAL_AUDIT.json](../violin_diagnosis_v1/FINAL_AUDIT.json)이 최신이다. 새 fitting0·test정답재열람0,9개합성시험통과,저장9모델dev복원오차0. 기존17개데이터소스·실행소스·예측·점수봉인변경없음. 별도AI검토의경계미분/원음대조/prefix상태/clipping보완을반영했고원진단수치변화0이다. 기존캠페인STOP·자동화PAUSED유지.

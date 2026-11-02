@@ -1,5 +1,7 @@
 # 다른 AI·다른 컴퓨터에서 이어가는 방법
 
+**최종 판정(2026-11-02):** [보정 가능성 감사](correction_feasibility_v1/DECISION.md)까지완료했고조건부보정·인증후속도STOP이다. 전역혼합의탐색적개선은있지만조건부장치의추가이점·유효인증·높은novelty가없어더돌리지않는다. 기존시험과결과를보존하며등록된다음실험은없다. 아래미완료수학검토안내는완료이력이다.
+
 **최신 후속:** [신경망 실패 진단](violin_diagnosis_v1/CAUSE_ANALYSIS.md)과 [후속 방법론의 가능 조건](violin_diagnosis_v1/NEXT_METHOD.md)을정리했다. 새학습없이저장모델의train/dev만검증했고,높은novelty·독립성능개선은미확보다. 현재다음작업은수학적가능조건·직접선행검토이며기존캠페인실행이아니다. 완료캠페인STOP·자동화PAUSED유지.
 
 **최신 상태(2026-11-02):** 바이올린 raw 고정 12개 학습·시험 평가·최종 감사가 완료됐고 개선 screen은 실패했다. [RESULTS.md](violin_raw_v1/RESULTS.md), [WORK_QUEUE.md](docs/WORK_QUEUE.md) 최상단을 읽는다. 캠페인은 STOP, 자동화는 PAUSED다. 아래의 준비/학습 대기 설명과 실행 예시를 현재의 미완료 작업으로 해석하지 않는다. source·입력·점수·부정적 결과를 보존하며 새 방향에는 별도 근거와 계약이 필요하다.

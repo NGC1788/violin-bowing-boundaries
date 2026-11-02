@@ -1,0 +1,135 @@
+{
+  "scope": "one posthoc dev-only feasibility audit, not a new forecast performance study",
+  "new_base_model_training_jobs": 0,
+  "test_labels_accessed": false,
+  "calibration_fit_requests": 108,
+  "nonempty_scalar_optimizations": 108,
+  "dev_people": 8,
+  "dev_rows": 337,
+  "source_people": 34,
+  "max_saved_dev_reproduction_error": 0.0,
+  "baseline": {
+    "macro_log_loss": 0.5360236457962668,
+    "maximum_person_loss": 0.7664813124674948,
+    "relative_gain_vs_markov_percent": 0.0,
+    "people_better_than_markov": 0,
+    "people": 8
+  },
+  "original_offset": {
+    "macro_log_loss": 0.7105571420632235,
+    "maximum_person_loss": 1.4830322980659625,
+    "relative_gain_vs_markov_percent": -32.56078302435445,
+    "people_better_than_markov": 2,
+    "people": 8
+  },
+  "restricted_dev_oracle": {
+    "global": {
+      "macro_log_loss": 0.5178244397138034,
+      "maximum_person_loss": 0.793884735633474,
+      "relative_gain_vs_markov_percent": 3.3952244877981728,
+      "people_better_than_markov": 5,
+      "people": 8
+    },
+    "statewise": {
+      "macro_log_loss": 0.5072287056565534,
+      "maximum_person_loss": 0.7812097543134343,
+      "relative_gain_vs_markov_percent": 5.37195333928568,
+      "people_better_than_markov": 7,
+      "people": 8
+    }
+  },
+  "leave_one_dev_person_out_calibration": {
+    "global": {
+      "macro_log_loss": 0.5219871243171899,
+      "maximum_person_loss": 0.800026832487759,
+      "relative_gain_vs_markov_percent": 2.6186384852902562,
+      "people_better_than_markov": 5,
+      "people": 8
+    },
+    "statewise": {
+      "macro_log_loss": 0.5277302455894808,
+      "maximum_person_loss": 0.7975882523188561,
+      "relative_gain_vs_markov_percent": 1.5472079024547762,
+      "people_better_than_markov": 5,
+      "people": 8
+    }
+  },
+  "fixed_caps": {
+    "0.025": {
+      "macro_log_loss": 0.5352381599083422,
+      "maximum_person_loss": 0.7669040397612161,
+      "relative_gain_vs_markov_percent": 0.1465394099840041,
+      "people_better_than_markov": 7,
+      "people": 8,
+      "span_cap": 0.025,
+      "hypothetical_fixed_independent_person_hb": 0.9960584148658714,
+      "hypothetical_fixed_independent_person_betting_e": 1.134090618202405,
+      "valid_risk_certificate_on_these_data": false
+    },
+    "0.1": {
+      "macro_log_loss": 0.5329843795162621,
+      "maximum_person_loss": 0.7682753548495378,
+      "relative_gain_vs_markov_percent": 0.5670022775748774,
+      "people_better_than_markov": 7,
+      "people": 8,
+      "span_cap": 0.1,
+      "hypothetical_fixed_independent_person_hb": 0.9963113948290558,
+      "hypothetical_fixed_independent_person_betting_e": 1.1293648540586774,
+      "valid_risk_certificate_on_these_data": false
+    }
+  },
+  "conditional_over_global_exploratory_screen": {
+    "relative_gain_percent": -1.100241941753543,
+    "people_strictly_better": 4,
+    "maximum_person_loss_no_worse": true,
+    "screen_passed": false,
+    "criterion": "at least2percent relative gain, at least5of8 people better, maximum person loss no worse; not confirmation"
+  },
+  "solver": {
+    "interval": [
+      0.0,
+      0.95
+    ],
+    "maximum_root_bracket_width": 6.912248551316225e-12,
+    "maximum_iterations": 37,
+    "no_clipping_in_optimized_intervals": true,
+    "nested_oracle_check_passed": true
+  },
+  "math_controls": {
+    "scope": "exact synthetic controls, not a certificate on existing dev people",
+    "independent_symmetric_null_mean_mixture_evalue": 1.0,
+    "all_equal_symmetric_dependent_null_mean_evalue": 28.44444444444445,
+    "all_equal_dependent_null_rejection_probability_at_20": 0.5,
+    "iid_best_case_all_gains_one_evalue": 56.777777777777786,
+    "iid_best_case_all_gains_one_hb_pvalue": 0.003906250000000001,
+    "note": "Small n can support a nonvacuous test when gains are strong and consistent. Marginal zero-mean dependent gains alone do not suffice. This is a counterexample to a general independence substitution, not evidence that actual fold dependence takes this form.",
+    "conventional_online_alternative": {
+      "scope": "8synthetic participant rounds, no real predictions or training",
+      "expconcavity_min_gap": 0.0016281428005564536,
+      "max_cumulative_regret_vs_two_experts": -0.03829319147720778,
+      "known_cumulative_bound_log2": 0.6931471805599453,
+      "mean_bound_at8people": 0.08664339756999316,
+      "mean_bound_at34people": 0.02038668178117486,
+      "online_protocol_requires": "predict each person before that person labels, then update weights; individual next-person risk and offline posthoc generalization are not guaranteed",
+      "novelty": false
+    }
+  },
+  "promotion_gates": {
+    "valid_new_independent_calibration_or_dependence_theorem": false,
+    "substantive_new_method_beyond_existing_controls": false,
+    "conditional_exploratory_screen": false,
+    "new_independent_confirmation_design": false
+  },
+  "decision": "STOP_CORRECTION_CERTIFICATION_BRANCH",
+  "limitations": [
+    "original dev informed method design; no independent confirmation",
+    "LOO calibrators overlap, hence their eight losses are not iid calibration data",
+    "hypothetical HB/e values are sensitivity diagnostics, not valid p/e evidence for these posthoc-selected predictors",
+    "statewise mixture is conventional conditional stacking; oracle is a within-family lower loss bound only",
+    "failure of these gates does not rule out arbitrary conditional corrections or new data"
+  ],
+  "freeze_sha256": "d485e0060062e5a5b9aa0af6a353d82d6589fde525f9abb1d9995e657d8d7f97",
+  "cpu_wall_seconds": 0.0601752910297364,
+  "original_artifacts_unchanged": true,
+  "private_details_sha256": "0404c742d0f845de8b7d3cb6fba62255b1faac3e11385c7868ed896e39bf3f33"
+}

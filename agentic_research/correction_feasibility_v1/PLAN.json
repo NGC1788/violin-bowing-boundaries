@@ -1,0 +1,34 @@
+{
+  "version": "correction_feasibility_v1_20261102",
+  "question": "Can the proposed participant-uncertainty correction be justified with the existing data, and does it have a substantive gap beyond conventional mixture/risk testing?",
+  "new_base_model_training_jobs": 0,
+  "test_truth_access": false,
+  "models": "Only original offset seeds0,1,2; common correction parameters across seeds, scores are seed-mean losses, never ensemble scoring",
+  "truth": "existing train labels reconstruct the exact original Markov prior; existing dev labels for explicitly posthoc diagnostic calibration only",
+  "comparisons_fixed_before_new_scores": [
+    "original Markov and original offset endpoints",
+    "global convex mixture, alpha in[0,0.95], participant-macro BCE exact monotone-derivative bisection; verify no clipping anywhere on allowed interval",
+    "prefix-state-wise convex mixture in the same interval/objective, empty state fallback alpha0; weighted by original person recording count, not conditional equal-person reweighting",
+    "both mixtures fitted to full dev (oracle within these restricted families, never deployment performance)",
+    "both mixtures fitted separately to seven dev participants and scored only on the excluded eighth; exploratory because diagnosis already exposed dev, and overlapping calibration folds do not yield iid risk-certification samples",
+    "fixed residual logit span caps0.025 and0.1 from the previous feasibility document; no cap tuning"
+  ],
+  "limits": "One score audit, <=120 scalar mixture optimizations, bisection<=64steps each; no optimizer/model/backbone/seed/cap search. CPU runtime<=600seconds. Preserve any failed audit before a justified fix.",
+  "numerical_conventions": "Loss tolerance1e-10. Prefer alpha0 for a flat objective; otherwise deterministic bisection root. Statewise full-dev oracle must be no worse than nested global oracle within tolerance. Lower maximum person loss does not mean every person is unharmed.",
+  "math_checks": [
+    "loss clipping and convexity interior conditions",
+    "person-macro objective and no held-person truth in calibration fit",
+    "validity of basic bounded-gain betting under fixed predictor/independent calibration or sufficient conditional-mean null",
+    "exhaustive two-point null check showing overlapping cross-fit-style dependence can invalidate betting products despite marginal mean-zero losses",
+    "best-case tiny-sample counterexample showing the old Hoeffding example is not an impossibility theorem",
+    "synthetic-only conventional online expert-mixture regret control on participant-average marginal BCE, after uniform joint smoothing removes score clipping. Distinguish arbitrary-sequence cumulative regret from offline new-person risk. No sequential dev score or new real-data comparison."
+  ],
+  "promotion_gates": [
+    "a valid independent calibration path or a justified dependence-aware finite-sample theorem, not iid formulas on reused/crossfit people",
+    "a substantive distinction beyond mixture/stacking, bounded logit shrinkage, LTT or betting; mere joint-pattern structure is insufficient",
+    "as an exploratory screen only: state-wise leave-person-out correction at least2percent lower mean BCE than global mixture, at least5of8 people better, and no worse maximum person loss. This does not constitute confirmation or cover arbitrary conditional correctors.",
+    "a new independent confirmation design within resources; old test stays exposed"
+  ],
+  "stop": "Do not promote or launch new training unless all gates have support. Failure closes this correction-certification branch; no gate/alpha bound/cap/metric changes to rescue results. Do not infer universal impossibility of all correction methods.",
+  "public_output": "RESULTS.json with aggregate scores, solver accuracy, provenance and data-dependence limitations; DECISION.md with final go/no-go and direct prior comparison. Private calibration parameters and per-person vectors remain local."
+}

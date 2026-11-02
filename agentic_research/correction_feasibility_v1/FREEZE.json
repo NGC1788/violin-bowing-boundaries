@@ -1,0 +1,33 @@
+{
+  "scope": "one posthoc calibration audit; zero base training/test truth access",
+  "created_utc": "2026-11-02T10:46:04.398732+00:00",
+  "sources": {
+    "AGENTS.md": "4869631f98f1a8314b2451501976adb9e32a7f209e9bb173fe72f93bc75dae0d",
+    "PLAN.json": "6ffbf1ebdb8cfe6cc4045bbb1975ac1e0488853f9aef7520ae80f685093e0ea0",
+    "methods.py": "a48344ef9610c74bfcf51245dcdcc65ee9bfc458371b28928b2223b5d966ae6f",
+    "audit.py": "f3d1078852866663358b37c62199917e0b8e583aaa3449550074abae0068812e",
+    "test_methods.py": "2e85a4d15361b80e03e28ea6df62d8e9393f303d2f403f1b7d815e9c808ab5ca",
+    "REVIEW.json": "a58efeab2b24fe050b8649cbe89226e632fa283457e7544441513bea12f2ef3e"
+  },
+  "inputs": {
+    "violin_raw_v1/execution_freeze_manifest.json": "e23ebe938134885ae132ec57913f02ea9ef7cc0b20091154339c5aeda8c98cec",
+    "violin_raw_v1/data_freeze_manifest.json": "383c081891fd67fee670809c969bb06aa224f4f5375848f0715eae8d725f172b",
+    "violin_raw_v1/RESULTS.json": "e1a572d453432c84afaae92970a7a104675dafebc7e189cb268ffdfadfcc228e",
+    "violin_diagnosis_v1/SUMMARY.json": "71a2e559111ab8127bbad46328e75c8a3d2083aebf7601a3a1d04a86cf394e20",
+    "violin_diagnosis_v1/FINAL_AUDIT.json": "16751fe21d1db6379d006d8b272ff22d81f6b5791da07f3da5dcd713184d75fc",
+    "violin_diagnosis_v1/diagnose.py": "dcaa182866d0ed5dfc92dc5aacdc4fd4c57206bc9ade6d03db30f32288523155",
+    "violin_diagnosis_v1/local/diagnostics.json": "62cb0f893051fbbd9d8b8c5daec86cb37277871768e102fcafdcde3af5e226cb",
+    "violin_raw_v1/local/prepared/features.npz": "97182f023acaabc50d8fa2c9f41581864288e6b26bf111ceaef7a166ec538e23",
+    "violin_raw_v1/local/prepared/train_labels.npz": "c0d821dbeafade8a749ce2cde5cc99852b5bfc7a4d37cfc215b6fe7620030258",
+    "violin_raw_v1/local/prepared/dev_labels.npz": "8545c7f9971452e05ce7c31838c5a3c7aa43b806f68ae3babbc8e42ef7eec122",
+    "violin_raw_v1/local/campaign_v1/mlp_offset_s0/weights.npz": "4cfea2f82cf7f2a56196b24b020fb9e10ea024f5f5aaedebb91823d68739b75e",
+    "violin_raw_v1/local/campaign_v1/mlp_offset_s0/receipt.json": "170f9f7eed478118de0539010db7023d3fdefb33c6db418b65b56d0c57c06fde",
+    "violin_raw_v1/local/campaign_v1/mlp_offset_s0/predictions.npz": "5a01979fd8968b49defe9f8f7c86ac0db5f04b54868f8b88936b8bd639e9af73",
+    "violin_raw_v1/local/campaign_v1/mlp_offset_s1/weights.npz": "411eb5a2f9727641b1b23ae1d5f3a9756eb4216ca89c06f0c294dc90b0eeea01",
+    "violin_raw_v1/local/campaign_v1/mlp_offset_s1/receipt.json": "bae554dcf2e2a796752d112a936474a757d38e8738d1bba74376e0f2a682b060",
+    "violin_raw_v1/local/campaign_v1/mlp_offset_s1/predictions.npz": "07ac553bbb83a3f4842bf2c07943f6c671db4cc3384b1e98eb00bfa93d1c6c52",
+    "violin_raw_v1/local/campaign_v1/mlp_offset_s2/weights.npz": "ce33881708518047e5d35c23c5498089ab2edcd0225731b708703d3db84e1994",
+    "violin_raw_v1/local/campaign_v1/mlp_offset_s2/receipt.json": "229c4c5880385f5ef818db1482735cd7e1b4866540fe3991ac311fddf1abaf4c",
+    "violin_raw_v1/local/campaign_v1/mlp_offset_s2/predictions.npz": "eb42573316e60ac11375f3129a9a110631b96274e61726aaf1055d1465117bf6"
+  }
+}
