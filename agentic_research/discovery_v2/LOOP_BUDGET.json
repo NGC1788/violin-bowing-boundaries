@@ -17,6 +17,13 @@
       "freeze_sha256": "3363acd7f2a5fc32f2bd470aa312ca0d528bc431ca6630e178224694cc66d70e",
       "started_utc": "2026-11-02T13:05:29.255350+00:00",
       "seconds": 1.3250061670551077
+    },
+    {
+      "audit": "count_mask_audit_v1",
+      "status": "FAILED_PREDEFINED_GATE_STOP",
+      "freeze_sha256": "112bec6aac92f414e0400c1e10dee5c00f8c2a3c23f2c3467bb64f7dd102627d",
+      "started_utc": "2026-11-02T14:24:10.710355+00:00",
+      "seconds": 0.4693920420249924
     }
   ],
   "new_model_weight_downloads": [],

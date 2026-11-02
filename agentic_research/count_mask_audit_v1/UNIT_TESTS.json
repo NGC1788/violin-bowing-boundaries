@@ -1,0 +1,22 @@
+{
+  "source_sha256": {
+    "AGENTS.md": "4e078c5f3afde7934b491188c868ef04d70ce0855d3d554aa7e246332d5cf092",
+    "PLAN.json": "6b9dc306da7815889ae2463bfd0886d251b47ba5a69c0776fbb3de702b3d106b",
+    "kernel.py": "25ccb700ac8aca1e7fc2bae7c44e434ec64a48319852e7ad98965ac99ee1e8d2",
+    "audit.py": "6517dfa2d0801b86972cb3cdbcec58c165ddbc583852f4f369656ba57836510c",
+    "test_kernel.py": "998e37e32390f5923add97655d4092d98f299702323215452184fb82dbc4247c"
+  },
+  "command": ".venv-mac/bin/python -m pytest --import-mode=importlib -q agentic_research/count_mask_audit_v1/test_kernel.py",
+  "passed": 8,
+  "failed": 0,
+  "seconds": 0.91,
+  "recorded_utc": "2026-11-02T14:23:50.522001+00:00",
+  "actual_data_accessed": false,
+  "full_audit_executed": false,
+  "history": [
+    "Initial8tests passed with intentional tensor-to-scalar warning; made detach explicit and unified shared ledger lock before freezing.",
+    "Latest8tests passed without warnings; finite differences use fixed traces and concern mask-logit partials only.",
+    "Added saved small enumeration/large NumPy count references before freeze;8unit tests passed again on final reviewed source."
+  ],
+  "receipt_kind": "root-recorded test result, not independent attestation"
+}

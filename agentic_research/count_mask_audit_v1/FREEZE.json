@@ -1,0 +1,28 @@
+{
+  "sources": {
+    "AGENTS.md": "4e078c5f3afde7934b491188c868ef04d70ce0855d3d554aa7e246332d5cf092",
+    "PLAN.json": "6b9dc306da7815889ae2463bfd0886d251b47ba5a69c0776fbb3de702b3d106b",
+    "kernel.py": "25ccb700ac8aca1e7fc2bae7c44e434ec64a48319852e7ad98965ac99ee1e8d2",
+    "audit.py": "6517dfa2d0801b86972cb3cdbcec58c165ddbc583852f4f369656ba57836510c",
+    "test_kernel.py": "998e37e32390f5923add97655d4092d98f299702323215452184fb82dbc4247c"
+  },
+  "versions": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "torch": "2.14.1"
+  },
+  "parent_hashes": {
+    "METHOD.md": "836d3d56c7e493dfc22da08185e6f3b3dab80cb2c3832e40a21a5ea198893ad4",
+    "PRIOR_REVIEW.md": "b87dbb8187fbd22d8e5881594d0e6b04fdb8682e095bc7883816895029fa7552",
+    "REVIEW.json": "916cc5fd194204e1de803b5218bea2b4dcd18c1cb858d7384ef64649338f3817",
+    "DECISION.md": "4fb4c5799618cd64d44ce6223371cbff7ad49688f9cb565bda5cda490d071242"
+  },
+  "review_sha256": "531216e64f37033ed01f7e98007d11e0a45747cf7aac7a90c7d01d1842eefda8",
+  "tests_sha256": "8f5401a5612ffbf91f46c478e5a9fa3aa1b8b268ac2e07fecf1bf2c31fd104e5",
+  "budget_limits": {
+    "deadline_kst": "2026-11-06T00:00:00+09:00",
+    "max_math_audits": 2,
+    "max_seconds_per_math_audit": 600
+  }
+}

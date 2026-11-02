@@ -1,0 +1,11 @@
+{
+  "automation_id": "ai",
+  "status": "ACTIVE",
+  "rrule": "FREQ=MINUTELY;INTERVAL=30",
+  "verified_utc": "2026-11-02T14:37:30.988833+00:00",
+  "prompt_matches_file_trimmed": true,
+  "prompt_sha256": "2426ed37e0669ddce5326c38e99d31eb8530b761312a18babbcb942508419bdc",
+  "next": "exact_count_learning_v1 source-free code/contract readiness; no fitting before new freeze",
+  "main_research": "AI/information, violin as application",
+  "requires": "Mac and Codex app running"
+}

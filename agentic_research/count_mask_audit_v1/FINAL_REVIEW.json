@@ -1,0 +1,23 @@
+{
+  "verdict": "APPROVE_FAILURE_AND_CLOSE_PRACTICAL_BEAM_PROPOSAL",
+  "reviewer": "separate Codex agent /root/execution_final_review",
+  "recorded_by": "root from returned aggregate recalculation",
+  "material_mismatches": 0,
+  "sources_verified": 5,
+  "source_map_sorted_json_sha256": "7791cce0c883a2c14c9fa06d2000db378c90c9928d86555530dcad5981ce9405",
+  "results_sha256": "d81eb37104f05381f0c3cf20fab4b45891be9637cc36586c944aa74c7bc596c8",
+  "freeze_sha256": "112bec6aac92f414e0400c1e10dee5c00f8c2a3c23f2c3467bb64f7dd102627d",
+  "criteria_recomputed_from_saved_evidence": 9,
+  "criteria_using_recorded_fd_scalar": 1,
+  "tiny_reduction_order_difference": {
+    "reported_mass_error": 1.1102230246251565e-16,
+    "recomputed": 2.220446049250313e-16,
+    "criterion": 2e-12
+  },
+  "finite_difference_evidence_limit": "perturbed query values not retained; recordedFDscalar checked against saved-gradient mean, no rerun",
+  "math_attempts_used": 2,
+  "math_attempts_total": 2,
+  "actual_data_accessed": false,
+  "audit_rerun": false,
+  "conclusion": "numerical kernel has correct restricted-law checks, practical beam width/speed failed; no AI/novelty/performance success"
+}

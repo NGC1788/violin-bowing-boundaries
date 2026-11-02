@@ -1,5 +1,21 @@
 # 유한 연구 작업 큐 — 2026-10-30
 
+## 2026-11-02 AI 방법 후보 구현·반박 시험: 현재 beam 기각
+
+사용자가 AI·정보를 주 연구로 확인했다. [AI 연구 위치](../path_mask_feasibility_v1/AI_RESEARCH_POSITION.md), [학습 방법 후보](../path_mask_feasibility_v1/LEARNING_METHOD.md), [직접 선행11개](../path_mask_feasibility_v1/PRIOR_REVIEW.md)를 정리했다. Prefix encoder가 미래 mask/regime/path 법칙을 예측하고 count decoder가 비선형 미래 통계를 주변화하는 후보이며, 아직 학습된 새 AI 방법이나 높은 novelty가 확립된 것은 아니다.
+
+별도 `count_mask_audit_v1`을8합성시험·소스검토·새동결 후1회(0.469초) 실행했다.9/10기준은 통과했지만 concentrated64beam residual.007239가 고정.002를 초과해 `FAILED_PREDEFINED_GATE_STOP`이다. Dense13.945ms/beam14.748ms로 가속 주장도 기각했다. 정확 count/CDF·local mask 미분·고정법칙 coarsening은 일치했지만 조건부iid Gaussian 모형의 계산 근거이며 실제 미래 예측 성능이 아니다. [결과](../count_mask_audit_v1/RESULTS.md). 별도 저장근거 검토 material 불일치0건, FD원query 미저장 한계도 보존했다.
+
+현재 practical beam 제안은 닫고 재실행·재동결·기준완화를 하지 않는다. 공유 수치 감사2/2소진, 새 학습 배치3개는 미사용이다. **다음 한 작업**은 [NEXT_LEARNING_GATE.md](../count_mask_audit_v1/NEXT_LEARNING_GATE.md)의 별도 `exact_count_learning_v1` 준비 검토다. 원자료/NPZ/행별 정답 접근·fitting 없이 학습 명세, batch코드, 필요한 작은 기능시험, 공정한 directjoint/MDN 동일감독 대조와 별도검토를 준비한다. 추가 standalone 수치 감사로 예산을 우회하지 않는다. 실제 fitting은 별도 계약 동결 뒤에만 허용하며 olddev/test 정답hash 금지를 유지한다. 아래 서면/수치 준비 선점은 완료 이력이다.
+
+## 2026-11-02 서면 방법 검토 완료·별도 count_mask_audit_v1 준비
+
+`path_mask_feasibility_v1`에서 직접 선행11개와 별도 수학 검토를 완료했다. `JUSTIFIED_NUMERICAL_NEXT_STEP`이며 novelty/성능 승인이 아니다. 다음은 `/root`가 담당하는 별도 합성 연산기 `count_mask_audit_v1`: count DP·정확 guard·surviving beam valid residual·local mask-logit 미분 경계·mean coarsening을 반박 시험한다. 새 데이터 접근과 학습은0이며 남은 수치 감사1회/600초만 사용한다. 코드·합성 시험·별도 검토·새 동결 후 실행한다. 앞선 서면 단위는 완료됐고 여기의 수치 실행은 별도 계약이다.
+
+## 2026-11-02 현재 선점: 미지 mask를 열거하지 않는 새 방법의 서면 검토
+
+사용자의 방법론 발전 요청으로 `/root`가 별도 `path_mask_feasibility_v1`을 담당한다. 실제 planning.lock을 보유하고 직접 선행·수학·복잡도·공정한 대조를 검토한다. 새 자료 탐색·학습·수치 실행은 하지 않는다. 기존 유한 사전 실패와 수치 PASS는 그대로 보존한다. 다른 작업자는 같은 검토를 중복 시작하지 않는다.
+
 ## 2026-11-02 source 미래 경로 준비 완료: 현재 유한 mask 사전은 관문 실패
 
 별도 `path_source_gate_v1` 준비를 1회(9.155초) 완료했다. 합성 11시험·별도 코드 검토·동결 후 원 train34명1442개의 미래46frame을 준비했고 기존 연속 목표와 차이0·guard 완전 일치, 실제 미래 변조8건/역방향 시간 지지8건을 통과했다. 유효1427개·무효15개를 모두 보존했다. 입력과 미래 정답은 별도 private 파일이다. olddev/test 정답 열람/hash·새 학습·다운로드0건. [결과](../path_source_gate_v1/RESULTS.md).
