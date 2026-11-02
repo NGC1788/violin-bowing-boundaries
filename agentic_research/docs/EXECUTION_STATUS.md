@@ -1,5 +1,11 @@
 # 실제 실행 현황 — 2026-10-30
 
+## 2026-11-03 새 AI 학습 가설 선택: 제공자 삭제에 강건한 검색
+
+`method_redesign_v1`에서3후보·직접선행6개를대조했다. A(scale/σ하한수정)와C(prefix-only meta적응)는기존학습원리를넘는차이가없어주방법후보로기각했다. B는**query별기억에서donor한명의원자를함께삭제한최악9query손실로검색encoder를학습**하는가설로좁혔다. [선택결과](../method_redesign_v1/DECISION.md), [목적식/반박조건](../method_redesign_v1/METHOD.md), [직접선행](../method_redesign_v1/PRIOR_REVIEW.md). 신규성/성능성공은아직아니며실제 fitting/forward/NPZ·행별자료열람·hash/다운로드/standalone수치감사0. 이전exact12개결과와STOP은보존했다. 독립반박검토도JUSTIFIED_TO_PREPARE·blocker0으로완료했고,금지된held정답과허용memorylabel의구분·retrieval만의삭제risk·반사실예측사전봉인을보완했다. [검토기록](../method_redesign_v1/REVIEW.json). 기존자동화ai는새준비단계로30분ACTIVE·저장프롬프트일치를확인했다. [설정기록](../method_redesign_v1/AUTOMATION_STATUS.json).
+
+**다음 한 작업:** [NEXT_PREPARATION_GATE.md](../method_redesign_v1/NEXT_PREPARATION_GATE.md)의 별도 `donor_deletion_learning_v1` 코드/합성기능시험/별도검토, 통과뒤같은준비단위후반의source-only입력·전체계약동결. 그전실제NPZ/hash0·이번준비새학습0. 일반검색/무작위삭제/최악삭제/query-sideDRO×3fold12새job만후보이며Markov/HGB/과거joint_aux·mdn_aux는봉인예측재사용(참조fit0). 동일정보/보조감독·전처리·common초기값과배포memory/비용차이를명시한다. 삭제후support소실·prior·stable재정규화·같은donor공동삭제·미래변조불변성·heldlabel격리부터검증한다. 전체동결후별도실행단위이며서면선택/옛학습을반복하지않는다. 남은실제학습2batch·수치감사0. 아래현재선점/실행대기문구는완료이력이다.
+
 ## 2026-11-03 고정12개 실제 학습·독립 검토 완료 — 이 batch STOP
 
 `exact_count_runner_v1`을 한 번 실행해12/12개를365.468초에 완료했다. Markov **0.542081**, HGB0.581722, joint_aux **0.541763**(+0.0586%), mdn_aux0.570751, exact_count3.029807, moment_count1.924280이다. 고정2%개선screen 승격은0개이며 높은novelty/성능개선은아직미입증이다. [전체결과](../exact_count_runner_v1/RESULTS.md), [독립검토](../exact_count_runner_v1/EXECUTION_REVIEW.json). 소스18/입력6/산출물60 및원점수 재계산 불일치0건, 34명1442개·invalid15개유지·olddev/test정답열람/hash0.

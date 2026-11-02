@@ -1,0 +1,28 @@
+{
+  "status": "JUSTIFIED_TO_PREPARE",
+  "date_kst": "2026-11-03",
+  "candidate_count": 3,
+  "core_primary_paper_count": 6,
+  "selected_candidates": [
+    "B: query-conditional adversarial donor-group deletion training of empirical-pattern retrieval"
+  ],
+  "rejected_as_main_novelty": [
+    "A: scale-equivariant Gaussian path fix",
+    "C: functional prefix-only meta-auxiliary adaptation"
+  ],
+  "actual_data_access_or_hash": false,
+  "actual_fitting_jobs": 0,
+  "model_forwards": 0,
+  "standalone_math_audits": 0,
+  "dataset_model_paper_file_downloads": 0,
+  "old_dev_test_truth_access_or_hash": false,
+  "new_learning_execution_authorized_by_this_written_unit": false,
+  "high_novelty_established": false,
+  "predictive_gain_established": false,
+  "remaining_actual_training_batches": 2,
+  "remaining_standalone_math_audits": 0,
+  "shared_ledger_unchanged": true,
+  "review_blockers": 0,
+  "review_sha256": "fa5eaca4a45d3a3e4dd5479340a69fadcd532f568e14be06bf7155bd82faa6a2",
+  "next_task": "donor_deletion_learning_v1 code/functional-test/review preparation, then approved source binding and full contract freeze; actual training in later execution unit"
+}

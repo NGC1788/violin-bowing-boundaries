@@ -1,0 +1,86 @@
+{
+  "review_kind": "independent adversarial written-method review",
+  "reviewer": "ai_direction_review",
+  "review_date_kst": "2026-11-03",
+  "verdict": "JUSTIFIED_TO_PREPARE",
+  "authorization_scope": "One separately versioned code, contract and synthetic functional-test preparation unit only. This is not authorization to fit or evaluate actual models in the written-method unit, and it does not certify novelty, performance, calibration or generalization.",
+  "blockers": [],
+  "selected_candidate": "B: query-conditional adversarial deletion of one donor group from a learned empirical categorical memory distribution",
+  "document_sha256": {
+    "AGENTS.md": "c3ae4cb27ca3c6711db44aa99759323950e91ba6612b786fcba40e3259c0571b",
+    "PRIOR_REVIEW.md": "f26498790b7981962849efeef8d215ebe1cefa2b1e87d92476157ac667462bf6",
+    "METHOD.md": "0003db617071d099347845ea79a0815cfc25eb014a80aa959e2bec2550295683",
+    "DECISION.md": "1bcd9085b7556c678b6572a1b0e84ce02f4cec7fc258656f2f42ebfe73553ba5",
+    "NEXT_PREPARATION_GATE.md": "d3f7f9a874c2b3836794cbe778be80c860cef3e85788876b2ba72937808c45a2"
+  },
+  "mathematical_review": {
+    "categorical_measure": "Nonnegative normalized memory weights define a valid probability distribution on the ten attainable event patterns. Their shared event map gives coherent probabilities for the fixed nine queries. This does not identify a continuous joint distribution at arbitrary new thresholds or a future path law.",
+    "deletion_identity": "For a nonempty remainder and W_ig < 1, (q_i,r - A_ig,r)/(1 - W_ig) is the event probability obtained by deleting all atoms of donor g and renormalizing the same scores. It is an algebraic identity, not a novelty result. Stable direct remainder sums are required in implementation; subtraction of nearly equal terms is not endorsed.",
+    "adversary_placement": "The maximum is outside the average over the nine query losses but inside the query-record average. Thus one donor is deleted for the whole event vector of each query. Different query records may select different worst donors. This is a query-conditional memory intervention, not deletion of a single common donor from the entire evaluation population and not standard maximum-over-query-group risk.",
+    "uniform_prior_bounds": "For any fixed event r, let m_r be the number of true patterns. Since 1 <= m_r <= 9, the uniform ten-pattern prior assigns event probability m_r/10. With rho = 0.01, q_tilde_r = 0.99 q_r + 0.001 m_r lies within [0.001, 0.999]. These are valid common loose bounds, sufficient to avoid the 1e-6 scoring clamp's structural dead region. The rule-specific interval can be narrower.",
+    "support_and_gradient_limit": "If no remaining atom can realize a positive or negative event, changing its normalized weights cannot learn that missing event mass. The uniform prior makes its score finite but does not restore this direction's learnable support. The documents explicitly retain raw support-deficiency reporting; no blanket nonzero-gradient guarantee is approved.",
+    "null_and_tv": "Including null makes the event-loss part of the robust training objective at fixed parameters at least the full-memory event loss. The decomposition P = (1-W)P_minus + W P_group yields TV(P, P_minus) <= W. Neither statement bounds unseen-person risk or forces donor mass/entropy to improve. The auxiliary-loss term must remain explicitly separate when implementing comparisons.",
+    "scoring_scope": "Each fixed forecast is evaluated with the average of nine proper binary log scores. The maximum over data-dependent deletion choices is a robust training objective; it is not claimed to preserve ordinary probability calibration or be a generalization guarantee. Common auxiliary weighting and query-group-DRO updates remain contract items before execution."
+  },
+  "scientific_assessment": {
+    "A": "Reject as the principal new-method candidate. The documented normalization and noise-floor correction is necessary engineering for the failed parameterization but does not establish a new learning principle.",
+    "C": "Reject as the principal new-method candidate. Cui et al. 2023 equations 11-13 already perform observation-only auxiliary adaptation followed by a future-forecast meta-objective. Changing the auxiliary statistics and future proper score is presently a task/loss change. The one-second prefix also cannot contain an internally matched one-second context plus 0.25-second gap and 0.5-second target episode.",
+    "B": "The specified donor-side finite intervention changes the actual learning operator and has falsifiable matched controls, so bounded preparation is justified. This is stronger than renaming ordinary retrieval, but still an instantiation of established weighted retrieval and minimax training. High novelty and firstness are unproven.",
+    "prior_overlap": "Dr.k-NN section 2.2 uses class-specific Wasserstein uncertainty sets on empirical feature support. The proposed finite deletion of a complete donor group from a query-conditional memory distribution is not the same uncertainty set. RAF establishes retrieval of relevant series and continuations; retrieval itself cannot be claimed as new.",
+    "mechanism_not_established": "Existing Gaussian capacity failure does not show that dependence on a single donor caused the previous errors. Reducing donor dependence is a new hypothesis, not an explanation confirmed by those failures.",
+    "necessary_falsifiers": [
+      "No full-memory held-query improvement over ordinary learned retrieval or random deletion rejects the claimed advantage of the targeted intervention.",
+      "An effect explained equally well by query-group-DRO weakens the need for donor-side deletion.",
+      "Improved deletion risk without the predefined full-memory forecasting gain is not a primary success.",
+      "Higher donor entropy accompanied by uninformative or all-zero-biased forecasts is a failure, not evidence of useful robustness."
+    ]
+  },
+  "resolved_review_requests": [
+    {
+      "issue": "An unqualified future-label poisoning invariance test would incorrectly forbid legitimate supervised memory-label dependence.",
+      "resolution": "NEXT_PREPARATION_GATE now restricts prediction invariance to forbidden inference-query future/held truth and distinguishes allowed memory-label and training-supervision changes.",
+      "implementation_note": "The positive control should deliberately change an eligible memory atom's event pattern. Do not require every label permutation or an excluded same-person record to change a given query prediction. Likewise, choose a nondegenerate synthetic supervised example for the loss/gradient positive control."
+    },
+    {
+      "issue": "Applying the same memory-deletion interpretation to reused parametric references would be misleading.",
+      "resolution": "METHOD limits matched deletion-risk evaluation to the four new retrieval arms and explicitly declines equivalent inference-memory deletion claims for reused parametric joint/MDN/HGB."
+    },
+    {
+      "issue": "Selecting a held query's worst donor with its true outcome could otherwise be confused with a label-informed prediction procedure.",
+      "resolution": "METHOD and NEXT_PREPARATION_GATE require all twelve jobs' full-memory and donor-counterfactual predictions to be sealed before event scoring. Held labels may then select the worst donor solely to calculate secondary deletion risk, never to choose an issued forecast or a fitted model."
+    }
+  ],
+  "next_preparation_requirements": [
+    "Freeze the exact encoder, bounded score, any donor record-count correction, common auxiliary loss and initialization correspondence before actual input access or fitting.",
+    "Fix query-group-DRO updates, random deletion/null probabilities, prior rho, optimizer and stopping rules without a score-guided search.",
+    "Use stable remaining-key sums and fail explicitly on empty remainders. Verify shared-donor event coding, normalization and support-loss reporting with small synthetic functional tests.",
+    "Keep same-person records out of training-query memory and all held records/labels out of inference memory. Fit transforms and thresholds using only the corresponding innertrain.",
+    "Seal full-memory and every allowed held donor-counterfactual prediction before any held event scoring. Keep post-seal label-based worst-donor aggregation separate from prediction and model selection.",
+    "Preserve the twelve-job, timing, first-failure-stop and atomic-ledger constraints. New reference fitting remains zero; reused references are historical references rather than newly matched parametric controls.",
+    "Verify source/contract code before the separately permitted preparation-stage input binding. This review performed no input binding and does not authorize old dev/test access.",
+    "Report all folds, support deficits, invalid versus valid all-zero outcomes, full-memory performance, donor-deletion performance, donor concentration and actual resource costs. Maintain the existing promotion gate."
+  ],
+  "primary_source_scope": {
+    "independently_read": [
+      "Cui et al., Meta-Auxiliary Learning for Adaptive Human Pose Prediction, arXiv:2304.06411, equations 11-13 and Algorithm 1; https://arxiv.org/pdf/2304.06411",
+      "Zhu et al., Distributionally Robust Weighted k-Nearest Neighbors, arXiv:2006.04004v5, section 2.2; https://arxiv.org/pdf/2006.04004",
+      "Tire et al., Retrieval Augmented Time Series Forecasting, AISTATS 2026 official proceedings abstract and metadata; https://proceedings.mlr.press/v300/tire26a.html"
+    ],
+    "limits": "This reviewer did not independently verify every paragraph of the root's six-paper review. No additional literature expansion was undertaken for this final review. Grouped adversarial dropout and memory-editing literature are not exhaustively covered, so absence or firstness claims remain unsupported."
+  },
+  "review_actions": {
+    "public_documents_and_existing_source_read": true,
+    "public_aggregate_results_read": true,
+    "public_method_document_hashes_computed": true,
+    "actual_NPZ_raw_record_or_person_level_data_read_or_hashed": false,
+    "weights_read_or_hashed": false,
+    "model_fitting": false,
+    "model_forward": false,
+    "standalone_numerical_audit": false,
+    "dataset_model_or_paper_file_download": false,
+    "old_dev_test_truth_access_or_hash": false,
+    "frozen_campaign_or_root_method_documents_modified": false,
+    "git_push": false,
+    "only_written_artifact": "method_redesign_v1/REVIEW.json"
+  }
+}

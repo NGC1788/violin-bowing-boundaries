@@ -1,0 +1,10 @@
+{
+  "automation_id": "ai",
+  "status": "ACTIVE",
+  "interval_minutes": 30,
+  "saved_prompt_matches": true,
+  "prompt_sha256": "0272e55cb495b03c717336d0bf000e9214a0f684d950d6be62e04e7a1ac18964",
+  "next_task": "donor_deletion_learning_v1 preparation; no fitting before new full freeze",
+  "recorded_utc": "2026-11-02T16:35:19.182783+00:00",
+  "existing_automation_updated_not_duplicated": true
+}
