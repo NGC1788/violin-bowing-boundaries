@@ -1,0 +1,11 @@
+{
+  "automation_id": "ai",
+  "status_verified": "ACTIVE",
+  "interval_minutes": 30,
+  "verified_utc": "2026-11-02T12:37:21.297607+00:00",
+  "prompt_file": "LOOP_PROMPT.md",
+  "prompt_file_sha256": "b87a29f235860873bc0998f0bdbfed013f5cc9bcc01d10ea77856d73b830b2b3",
+  "next_work": "discovery_v3_math label-free numerical prototype",
+  "deadline_kst": "2026-11-06T00:00:00+09:00",
+  "scope": "new bounded exploration; completed batches preserved; actual future execution requires host app/computer running"
+}

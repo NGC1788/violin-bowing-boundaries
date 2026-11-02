@@ -1,5 +1,9 @@
 # 실제 실행 현황 — 2026-10-30
 
+## 자동 루프 재개 확인 — 2026-11-02
+
+기존heartbeat자동화 `ai`를새탐색프롬프트로갱신하고앱도구의ACTIVE응답및로컬설정의prompt일치·30분간격·ACTIVE를확인했다. [설정확인](../discovery_v2/AUTOMATION_STATUS.json), [저장프롬프트](../discovery_v2/LOOP_PROMPT.md). 다음작업은label-free `discovery_v3_math`이며아직실행하지않았다. 기존batch재실행과olddev/test정답열람을금지하고추가예산ledger·11월6일종료를유지한다. 과거PAUSED문구는이전단계이력이다. 실제후속실행은Mac과앱이동작해야한다.
+
 ## 2026-11-02 사용자 요청으로 넓은 탐색: 새24학습 완료
 
 사용자가비정상적으로보이는조합도폭넓게시도하도록요청했다. 이전보정인증분기는STOP으로보존하고새source-only `discovery_v1/v2`를만들었다. 기존raw_v1학습결과를재실행한것이아니다. Source34명1442녹음만3사람fold로사용했고olddev/test정답은이번에hash도열지않았다. 모든fold문턱/정규화/prior는innertrain만쓴다. source자체도역사적으로노출돼있어독립확증은아니다.
