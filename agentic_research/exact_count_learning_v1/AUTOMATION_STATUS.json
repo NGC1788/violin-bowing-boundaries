@@ -1,0 +1,11 @@
+{
+  "id": "ai",
+  "status": "ACTIVE",
+  "rrule": "FREQ=MINUTELY;INTERVAL=30",
+  "prompt_matches_file_trimmed": true,
+  "prompt_sha256": "6a6119e95a273b5dea54c1b4450b5cde09140523fb071432b73fc43344a6f245",
+  "verified_utc": "2026-11-02T15:12:08.645514+00:00",
+  "next": "exact_count_runner_v1 reviewed runner and source-only execution freeze, no fitting before completion",
+  "execution_authorized_by_readiness": false,
+  "requires": "Mac and Codex app running"
+}

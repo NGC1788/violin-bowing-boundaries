@@ -1,5 +1,19 @@
 # 유한 연구 작업 큐 — 2026-10-30
 
+## 2026-11-03 AI 학습 코드 준비 완료: 실제 학습은 아직0건
+
+`exact_count_learning_v1`의 batch countDP·Gaussian contrast/scale 역전파·prefix-only 입력·동일 보조감독 네 모델을 구현했다. 직접 joint/MDN은4414개, exact/moment count는4084개 파라미터이며 추가330개 free-head를 공개했다. [준비 결과](../exact_count_learning_v1/PREPARATION_RESULT.json), [코드/명세](../exact_count_learning_v1/README.md).
+
+실제 자료 없이 학습 목표의 nuisance를 수정했다. 원시 미래 레벨 회귀 대신 정규화된 Gaussian contrast 밀도와 pooled within-record scale을 사용하며 자유도n-1을 맞춘다. 미래 mask/center는 학습 label 변환에만 있고 추론 입력이 아니다. 모든 방법에 같은 aux를 준다. 이는 고전 error-contrast 원리의 적용이며 그 자체가 novelty가 아니다. [목표 명세](../exact_count_learning_v1/INVARIANT_OBJECTIVE.md).
+
+합성 기능시험15개가2.01초에 통과했고 별도 코드/수학검토는 APPROVE_PREPARATION_ONLY다. 실제 원음/NPZ/행별 정답/가중치 열람·hash0, optimizer step·실제 fitting·추가 standalone 수치감사0. [코드 준비 봉인](../exact_count_learning_v1/READINESS_FREEZE.json)은 execution_authorized=false다. 실제 예측 점수·큰 batch 비용·학습 수렴·높은 novelty는 미검증이다. 기존 수치 감사2/2STOP, 실제 학습3batch 미사용을 유지한다.
+
+**다음 한 작업:** [NEXT_RUNNER_GATE.md](../exact_count_learning_v1/NEXT_RUNNER_GATE.md)의 별도 exact_count_runner_v1 실행기·누수 기능검사·전체계약 검토, 통과하면 같은 단위에서 source-only 허용 입력/소스/환경/계약 동결까지 완료한다. 그 전 실제 자료를 열거나 fitting하지 않는다. 사용자 연구 허가는 이미 있으므로 새 사용자 확인 단계가 아니다. 아래 준비 선점은 완료 이력이다.
+
+## 2026-11-02 현재 선점: exact_count_learning_v1 원자료 비열람 학습 준비
+
+`/root`가 정확 count decoder의 batch·Gaussian mean/scale 미분·공통 보조감독 모델·prefix-only 전처리·합성 기능시험과 별도 검토를 담당한다. 실제 planning.lock을 보유한다. 원음/NPZ/행별 실제 정답을 읽거나 hash하지 않고 실제 fitting·다운로드·추가 standalone 수치 감사는 하지 않는다. 준비가 완료돼도 실행기/입력/학습계약 동결 전에는 학습하지 않는다.
+
 ## 2026-11-02 AI 방법 후보 구현·반박 시험: 현재 beam 기각
 
 사용자가 AI·정보를 주 연구로 확인했다. [AI 연구 위치](../path_mask_feasibility_v1/AI_RESEARCH_POSITION.md), [학습 방법 후보](../path_mask_feasibility_v1/LEARNING_METHOD.md), [직접 선행11개](../path_mask_feasibility_v1/PRIOR_REVIEW.md)를 정리했다. Prefix encoder가 미래 mask/regime/path 법칙을 예측하고 count decoder가 비선형 미래 통계를 주변화하는 후보이며, 아직 학습된 새 AI 방법이나 높은 novelty가 확립된 것은 아니다.

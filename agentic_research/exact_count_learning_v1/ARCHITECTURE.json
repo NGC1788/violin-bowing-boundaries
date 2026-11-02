@@ -1,0 +1,16 @@
+{
+  "main_research": "AI/information: learning conditional masked nonlinear window statistics",
+  "input_dimension": 73,
+  "parameters": {
+    "joint_aux": 4414,
+    "mdn_aux": 4414,
+    "exact_count": 4084,
+    "moment_count": 4084
+  },
+  "same_backbone_and_generator_all_methods": true,
+  "extra_free_head_parameters": 330,
+  "observed_future_is_inference_input": false,
+  "training_runner_present": false,
+  "actual_optimizer_steps": 0,
+  "claimed_runtime_or_forecast_score": null
+}

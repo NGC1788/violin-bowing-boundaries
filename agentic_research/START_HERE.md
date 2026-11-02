@@ -1,5 +1,7 @@
 # 다른 AI·다른 컴퓨터에서 이어가는 방법
 
+**최신(2026-11-03):** [정확 count 기반 AI 학습 코드 준비](exact_count_learning_v1/README.md)를 완료했다.15합성 기능시험·별도 검토·코드 준비 봉인까지 통과했으며 실제 fitting/데이터접근0건, execution_authorized=false다. 다음은 [별도 실행기·전체계약 동결](exact_count_learning_v1/NEXT_RUNNER_GATE.md)이다. 미래 mask/center는 label에만 사용하고 네 방법의 보조감독을 맞춘다. 주 연구는 AI·정보, 바이올린은 적용 자료다. 높은 novelty·실제 성능은 아직 미입증이며 아래 준비 대기는 이력이다.
+
 **최신(2026-11-02): AI·정보 중심 방법 후보와 수치 반박 시험을 완료했다.** [구조적 학습 후보](path_mask_feasibility_v1/LEARNING_METHOD.md), [count kernel 결과](count_mask_audit_v1/RESULTS.md).9/10수치 기준은 통과했지만64-state 누락오차 기준과 가속 주장이 실패해 해당beam 제안은STOP이다. 수치 감사2/2소진, 실제 새 학습0건. 다음은 [정확 count 기반 학습 준비 검토](count_mask_audit_v1/NEXT_LEARNING_GATE.md)이며 추가 standalone 수치 감사나 원자료 탐색은 하지 않는다. 바이올린은 검증 자료이며 물리 법칙이 주 기여가 아니다. 아래 준비 대기는 이전 이력이다.
 
 **최신(2026-11-02):** [source 미래 경로 준비](path_source_gate_v1/RESULTS.md)를 1회 완료했다. 기존 정답 재구성과 시간 누수 검사는 통과했지만, inner-train 마스크 사전은 한 분할의 미지 유효 패턴7.22% 및 다른 분할의67종으로 고정 운영 기준을 실패했다. 새 학습0건이다. 다음은 [미래 마스크 모형의 서면 가능성 검토](path_source_gate_v1/NEXT_METHOD_REVIEW.md)이며 준비·기존 수치 감사를 반복하지 않는다. 아래 대기 설명은 이전 이력이다.

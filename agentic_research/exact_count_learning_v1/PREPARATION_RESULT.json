@@ -1,0 +1,23 @@
+{
+  "status": "READY_TO_FREEZE_TRAINING_CONTRACT",
+  "execution_authorized": false,
+  "unit_tests_passed": 15,
+  "unit_test_seconds": 2.01,
+  "separate_review": "APPROVE_PREPARATION_ONLY",
+  "actual_data_accessed_or_hashed": false,
+  "actual_training_jobs": 0,
+  "optimizer_steps": 0,
+  "additional_standalone_math_audits": 0,
+  "readiness_freeze_sha256": "9034ccdda2d1bc5c306ec4b26fb07a3d830aba3fb69faee7bdb6677c8c0ec05a",
+  "completed_utc": "2026-11-02T15:09:39.721003+00:00",
+  "completed_kst_date": "2026-11-03",
+  "main_research": "AI/information; violin is application data",
+  "refinement": "normalized projected-contrast likelihood removes future-level nuisance and respects n-1 dimensions; same aux for all methods",
+  "limits": [
+    "no actual forecast score",
+    "no large-batch/optimizer/runtime validation",
+    "no high novelty established",
+    "conditional iid/observer assumptions unverified"
+  ],
+  "next": "exact_count_runner_v1 code review, source-only identity checks and full execution freeze; fitting only after that"
+}

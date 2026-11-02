@@ -1,0 +1,61 @@
+{
+  "status": "PROPOSED_NOT_EXECUTION_APPROVED",
+  "scope_now": "source-free training-readiness code and tests; no actual fitting",
+  "methods": [
+    "joint_aux",
+    "mdn_aux",
+    "exact_count",
+    "moment_count"
+  ],
+  "future_blocks": [
+    23,
+    23
+  ],
+  "future_frames": 46,
+  "minimum_voiced": 23,
+  "input_dimension": 73,
+  "prefix_features": "60 clipped normalized summaries + 11 inner-train-threshold prefix-state indicators + 2 unclipped normalized log1p prefix moments",
+  "hidden_width": 32,
+  "hidden_layers": 2,
+  "activation": "GELU",
+  "regimes": 2,
+  "generator": "shared latent mixture; separately predicted future initial-mask logits; per-block binary transition rows; per-channel zero-sum block contrast; per-channel scale; future level integrated out in projected contrast likelihood",
+  "scale_range_normalized_units": [
+    0.05,
+    3.0
+  ],
+  "contrast_bound_normalized_units": 3.0,
+  "mask_probability_epsilon": 0.0001,
+  "mdn_log_std_location_bound": 5.0,
+  "mdn_log_std_scale_range": [
+    0.05,
+    3.0
+  ],
+  "loss": "mean9queryBCE +0.1*negative joint mask/projected-centered-path mixture loglikelihood /46; person macro weighting in future runner",
+  "auxiliary_weight": 0.1,
+  "probability_clipping": 1e-06,
+  "optimizer": {
+    "name": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.001,
+    "gradient_norm_clip": 5.0
+  },
+  "epochs": 40,
+  "batch_size": 64,
+  "seed": 0,
+  "dtype": "CPUfloat64",
+  "stopping": "fixed epochs, no held-source stopping or best-epoch selection; budget/NaN/integrity failures preserved",
+  "source_folds": "existing source34 people/1442 recordings,3folds; historically exposed exploratory",
+  "maximum_actual_jobs_if_later_frozen": 12,
+  "max_seconds_per_job": 180,
+  "max_seconds_per_batch": 1800,
+  "deadline_kst": "2026-11-06T00:00:00+09:00",
+  "primary_score": "participant-macro mean9query clipped log loss, include invalid15rows; same source folds/threshold provenance as prior baseline",
+  "promotion_screen": "at least2percent lower primary score than strongest Markov/HGB baseline and improvement in at least2of3folds; exploratory only; all controls/failures reported",
+  "baseline_recheck": "future runner must match saved source Markov/HGB evaluation with inner-train preprocessing before new comparative claims",
+  "new_training_allowed_now": false,
+  "new_math_audits_allowed": false,
+  "old_dev_test_truth_access_allowed": false,
+  "path_label_normalization": "inner-train pooled within-record contrast scale; no between-note level variance; future centering is labels only, never inference input",
+  "invariance_scope": "auxiliary target likelihood conditional on fixed future mask is invariant to per-record per-channel constant shifts; not a claim of raw audio or network-input invariance"
+}

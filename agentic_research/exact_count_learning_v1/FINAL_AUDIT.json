@@ -1,0 +1,39 @@
+{
+  "status": "COMPLETE_READY_TO_FREEZE_TRAINING_CONTRACT",
+  "execution_authorized": false,
+  "functional_tests": 15,
+  "functional_test_seconds": 2.01,
+  "review": "separate AI APPROVE_PREPARATION_ONLY",
+  "actual_data_or_weights_accessed_or_hashed": false,
+  "actual_training_jobs": 0,
+  "optimizer_steps": 0,
+  "additional_standalone_math_audits": 0,
+  "source_files_and_dependencies_bound": 9,
+  "old_audits_preserved": true,
+  "next": "reviewed runner/source-only input/full execution freeze in separate exact_count_runner_v1",
+  "limitations": [
+    "no actual forecast score",
+    "no uniform Gaussian numerical-domain guarantee",
+    "no actual optimizer/large-batch runtime validation",
+    "no novelty established",
+    "no actual observer assumption validation"
+  ],
+  "artifact_sha256": {
+    "test_model.py": "3516d9b9c1094d87d3ade0f0f4c913d4b532da4dfde9f298cdbdbcfa38b9ad34",
+    "INVARIANT_OBJECTIVE.md": "c0ce9fd38bc4a20f3c2032dbed2f77d0064550257271babb6ebde0ba7fb66a31",
+    "PREPARATION_RESULT.json": "dffd7ea2eaa49b70798c49b50b38f5ebcc95bb5124750293dd5c0319014a8784",
+    "preprocess.py": "9c131ddc96bb8150f454b452b97edc91519e0dc98c274c47468545cd554d26f3",
+    "CONTRACT_PROPOSAL.json": "0c02133a9385b3ef91fd2acdb7597931abf0d2b7ff0128d88f348648cb360d51",
+    "LOOP_PROMPT.md": "3c0119d8068e50fea96c9dc199457eae823e0103b7108a4e8526d0097db85e98",
+    "NEXT_RUNNER_GATE.md": "679a5550e9c4ef2af0720c25fa17942592ccb61bced2a02720df441af655778b",
+    "UNIT_TESTS.json": "d719e6e3e1512ea1674e810d15169c35ef1896cf76bbc0cbc5cc80c6cd96e895",
+    "model.py": "0edb31a422d5987bb47a02036b837a009447281469ec8a2cc3cb05484f3cf5a1",
+    "README.md": "777dce0b28a9b34397bebf51041e2fe6ff806b9321296893d5168f694250858f",
+    "ARCHITECTURE.json": "629d48de1cd26f87a114dfd8a7a9b5db8df072f41621024ab1207355b7ecb1f9",
+    "AUTOMATION_STATUS.json": "a277778947eb6a6f97fe65aedadbac4f282f2254eecb7b16fae3c36e0be220ab",
+    "READINESS_FREEZE.json": "9034ccdda2d1bc5c306ec4b26fb07a3d830aba3fb69faee7bdb6677c8c0ec05a",
+    "readiness.py": "7fd80e7b60ea91906344c45b30f1dd79cf49e9552807a0a1a7974515b69c88e8",
+    "AGENTS.md": "d4726c59eb35c511dcd6f6272cb5ab5550a45b1bf44afd26ee947ec9f2b66637",
+    "REVIEW.json": "8e440db82f4065b3dd9318e956f749403d34f85cf7b9af1ec927cc192c1915d8"
+  }
+}

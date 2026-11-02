@@ -1,0 +1,34 @@
+{
+  "source_sha256": {
+    "agentic_research/exact_count_learning_v1/AGENTS.md": "d4726c59eb35c511dcd6f6272cb5ab5550a45b1bf44afd26ee947ec9f2b66637",
+    "agentic_research/exact_count_learning_v1/CONTRACT_PROPOSAL.json": "0c02133a9385b3ef91fd2acdb7597931abf0d2b7ff0128d88f348648cb360d51",
+    "agentic_research/exact_count_learning_v1/model.py": "0edb31a422d5987bb47a02036b837a009447281469ec8a2cc3cb05484f3cf5a1",
+    "agentic_research/exact_count_learning_v1/preprocess.py": "9c131ddc96bb8150f454b452b97edc91519e0dc98c274c47468545cd554d26f3",
+    "agentic_research/exact_count_learning_v1/test_model.py": "3516d9b9c1094d87d3ade0f0f4c913d4b532da4dfde9f298cdbdbcfa38b9ad34",
+    "agentic_research/exact_count_learning_v1/INVARIANT_OBJECTIVE.md": "c0ce9fd38bc4a20f3c2032dbed2f77d0064550257271babb6ebde0ba7fb66a31",
+    "agentic_research/exact_count_learning_v1/readiness.py": "7fd80e7b60ea91906344c45b30f1dd79cf49e9552807a0a1a7974515b69c88e8",
+    "agentic_research/discovery_v3_math/decoder.py": "8383d9b8ce68203800fc730eb5bf8a0f1a1908f874eff12054369e9a2f957824",
+    "agentic_research/violin_raw_v1/data.py": "79b3d1c997741d82fe560f9ec12842f3889441be24fde7434833c8b6ccbf3c3d"
+  },
+  "versions": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "torch": "2.14.1"
+  },
+  "passed": 15,
+  "failed": 0,
+  "seconds": 2.01,
+  "command": ".venv-mac/bin/python -m pytest --import-mode=importlib -q agentic_research/exact_count_learning_v1/test_model.py",
+  "recorded_utc": "2026-11-02T15:07:27.941730+00:00",
+  "scope": "small synthetic functional checks for this training code; no standalone numerical audit, optimizer step or settings sweep",
+  "actual_data_accessed_or_hashed": false,
+  "actual_fitting_jobs": 0,
+  "history": [
+    "Initial unfrozen raw-level auxiliary version passed13tests in2.18s.",
+    "Before any actual data/fitting, removed level nuisance with normalized Gaussian contrast density and added proper degrees-of-freedom/density/shift tests.",
+    "Current15tests passed in1.99s; code-only readiness seal helper was added after test run and must be separately reviewed; it does not change model or preprocessing.",
+    "Final15functional tests passed in2.01s after all readiness code/docs existed; no actual data/optimizer or benchmark."
+  ],
+  "receipt_kind": "root-recorded pytest output, not independent attestation"
+}
