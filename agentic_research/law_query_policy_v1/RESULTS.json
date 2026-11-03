@@ -1,0 +1,286 @@
+{
+  "real": [
+    {
+      "case": "C1|2024-04-12_TypeC_sample1/2024-04-15/v1",
+      "compatible": false,
+      "queries": {
+        "rank_first": 0,
+        "random": 0,
+        "boundary": 0,
+        "decision": 0
+      }
+    },
+    {
+      "case": "C1|2024-04-12_TypeC_sample1/2024-04-15/v2",
+      "compatible": false,
+      "queries": {
+        "rank_first": 0,
+        "random": 0,
+        "boundary": 0,
+        "decision": 0
+      }
+    },
+    {
+      "case": "C1|2024-04-12_TypeC_sample1/2024-04-15/v3",
+      "compatible": false,
+      "queries": {
+        "rank_first": 408,
+        "random": 1080,
+        "boundary": 688,
+        "decision": 669
+      }
+    },
+    {
+      "case": "C_T2|2024-06-11_TypeC_T2_sample1/v1",
+      "compatible": false,
+      "queries": {
+        "rank_first": 43,
+        "random": 490,
+        "boundary": 335,
+        "decision": 336
+      }
+    },
+    {
+      "case": "C_T2|2024-06-11_TypeC_T2_sample1/v2",
+      "compatible": false,
+      "queries": {
+        "rank_first": 0,
+        "random": 0,
+        "boundary": 0,
+        "decision": 0
+      }
+    },
+    {
+      "case": "C_T2|2024-06-11_TypeC_T2_sample1/v3",
+      "compatible": false,
+      "queries": {
+        "rank_first": 0,
+        "random": 0,
+        "boundary": 0,
+        "decision": 0
+      }
+    },
+    {
+      "case": "D1|2024-04-15_TypeD_sample1/2024-04-17/v1",
+      "compatible": false,
+      "queries": {
+        "rank_first": 0,
+        "random": 0,
+        "boundary": 0,
+        "decision": 0
+      }
+    },
+    {
+      "case": "D1|2024-04-15_TypeD_sample1/2024-04-17/v2",
+      "compatible": false,
+      "queries": {
+        "rank_first": 0,
+        "random": 0,
+        "boundary": 0,
+        "decision": 0
+      }
+    },
+    {
+      "case": "D1|2024-04-15_TypeD_sample1/2024-04-17/v3",
+      "compatible": false,
+      "queries": {
+        "rank_first": 661,
+        "random": 592,
+        "boundary": 657,
+        "decision": 308
+      }
+    },
+    {
+      "case": "D2|2024-04-26_TypeD_sample2/v1",
+      "compatible": false,
+      "queries": {
+        "rank_first": 0,
+        "random": 0,
+        "boundary": 0,
+        "decision": 0
+      }
+    },
+    {
+      "case": "D2|2024-04-26_TypeD_sample2/v2",
+      "compatible": false,
+      "queries": {
+        "rank_first": 0,
+        "random": 0,
+        "boundary": 0,
+        "decision": 0
+      }
+    },
+    {
+      "case": "D2|2024-04-26_TypeD_sample2/v3",
+      "compatible": false,
+      "queries": {
+        "rank_first": 638,
+        "random": 1100,
+        "boundary": 592,
+        "decision": 303
+      }
+    }
+  ],
+  "synthetic": [
+    {
+      "case": "synthetic_0_True",
+      "compatible": true,
+      "queries": {
+        "rank_first": 78,
+        "random": 138,
+        "boundary": 66,
+        "decision": 66
+      }
+    },
+    {
+      "case": "synthetic_0_False",
+      "compatible": false,
+      "queries": {
+        "rank_first": 102,
+        "random": 138,
+        "boundary": 61,
+        "decision": 62
+      }
+    },
+    {
+      "case": "synthetic_1_True",
+      "compatible": true,
+      "queries": {
+        "rank_first": 66,
+        "random": 134,
+        "boundary": 66,
+        "decision": 66
+      }
+    },
+    {
+      "case": "synthetic_1_False",
+      "compatible": false,
+      "queries": {
+        "rank_first": 90,
+        "random": 110,
+        "boundary": 61,
+        "decision": 39
+      }
+    },
+    {
+      "case": "synthetic_2_True",
+      "compatible": true,
+      "queries": {
+        "rank_first": 78,
+        "random": 130,
+        "boundary": 66,
+        "decision": 66
+      }
+    },
+    {
+      "case": "synthetic_2_False",
+      "compatible": false,
+      "queries": {
+        "rank_first": 102,
+        "random": 121,
+        "boundary": 61,
+        "decision": 62
+      }
+    },
+    {
+      "case": "synthetic_3_True",
+      "compatible": true,
+      "queries": {
+        "rank_first": 78,
+        "random": 138,
+        "boundary": 66,
+        "decision": 66
+      }
+    },
+    {
+      "case": "synthetic_3_False",
+      "compatible": false,
+      "queries": {
+        "rank_first": 102,
+        "random": 138,
+        "boundary": 61,
+        "decision": 62
+      }
+    },
+    {
+      "case": "synthetic_4_True",
+      "compatible": true,
+      "queries": {
+        "rank_first": 72,
+        "random": 124,
+        "boundary": 60,
+        "decision": 60
+      }
+    },
+    {
+      "case": "synthetic_4_False",
+      "compatible": false,
+      "queries": {
+        "rank_first": 90,
+        "random": 116,
+        "boundary": 56,
+        "decision": 58
+      }
+    },
+    {
+      "case": "synthetic_5_True",
+      "compatible": true,
+      "queries": {
+        "rank_first": 72,
+        "random": 136,
+        "boundary": 60,
+        "decision": 60
+      }
+    },
+    {
+      "case": "synthetic_5_False",
+      "compatible": false,
+      "queries": {
+        "rank_first": 90,
+        "random": 127,
+        "boundary": 56,
+        "decision": 58
+      }
+    },
+    {
+      "case": "synthetic_6_True",
+      "compatible": true,
+      "queries": {
+        "rank_first": 66,
+        "random": 142,
+        "boundary": 66,
+        "decision": 66
+      }
+    },
+    {
+      "case": "synthetic_6_False",
+      "compatible": false,
+      "queries": {
+        "rank_first": 90,
+        "random": 142,
+        "boundary": 61,
+        "decision": 39
+      }
+    },
+    {
+      "case": "synthetic_7_True",
+      "compatible": true,
+      "queries": {
+        "rank_first": 78,
+        "random": 135,
+        "boundary": 66,
+        "decision": 66
+      }
+    },
+    {
+      "case": "synthetic_7_False",
+      "compatible": false,
+      "queries": {
+        "rank_first": 102,
+        "random": 107,
+        "boundary": 61,
+        "decision": 62
+      }
+    }
+  ]
+}

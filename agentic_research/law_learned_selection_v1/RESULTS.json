@@ -1,0 +1,969 @@
+{
+  "source_sha256": "85ab696054670f80bc9690873291c39bb119b56670b4513da59bae994a2b0d70",
+  "train_columns": 1080,
+  "evaluation_columns": 480,
+  "hgb_fits": 1,
+  "hgb_fit_seconds": 2.5657167089520954,
+  "runs": [
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v1",
+      "epsilon": 0.2,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.07595654198667035,
+      "methods": {
+        "decision_uniform": {
+          "queries": 0,
+          "seconds": 0.0003034999826923013
+        },
+        "decision_prevalence": {
+          "queries": 0,
+          "seconds": 0.00022829201770946383
+        },
+        "decision_hgb": {
+          "queries": 0,
+          "seconds": 0.00020704098278656602
+        }
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v1",
+      "epsilon": 0.4,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.07595654198667035,
+      "methods": {
+        "decision_uniform": {
+          "queries": 0,
+          "seconds": 0.00022062502102926373
+        },
+        "decision_prevalence": {
+          "queries": 0,
+          "seconds": 0.00020825001411139965
+        },
+        "decision_hgb": {
+          "queries": 0,
+          "seconds": 0.00020354200387373567
+        }
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v1",
+      "epsilon": 0.8,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.07595654198667035,
+      "methods": {
+        "decision_uniform": {
+          "queries": 44,
+          "seconds": 0.02433262497652322
+        },
+        "decision_prevalence": {
+          "queries": 45,
+          "seconds": 0.017933166993316263
+        },
+        "decision_hgb": {
+          "queries": 43,
+          "seconds": 0.017448625003453344
+        }
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v1",
+      "epsilon": 1.6,
+      "compatible": true,
+      "hgb_predict_seconds_shared_across_tolerances": 0.07595654198667035,
+      "methods": {
+        "decision_uniform": {
+          "queries": 540,
+          "seconds": 0.28806562500540167
+        },
+        "decision_prevalence": {
+          "queries": 541,
+          "seconds": 0.21265495900297537
+        },
+        "decision_hgb": {
+          "queries": 519,
+          "seconds": 0.20357895799679682
+        }
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v2",
+      "epsilon": 0.2,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.10893899999791756,
+      "methods": {
+        "decision_uniform": {
+          "queries": 0,
+          "seconds": 0.00039487495087087154
+        },
+        "decision_prevalence": {
+          "queries": 0,
+          "seconds": 0.00031954096630215645
+        },
+        "decision_hgb": {
+          "queries": 0,
+          "seconds": 0.00029504200210794806
+        }
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v2",
+      "epsilon": 0.4,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.10893899999791756,
+      "methods": {
+        "decision_uniform": {
+          "queries": 0,
+          "seconds": 0.00029558397363871336
+        },
+        "decision_prevalence": {
+          "queries": 0,
+          "seconds": 0.00029095803620293736
+        },
+        "decision_hgb": {
+          "queries": 0,
+          "seconds": 0.00029054097831249237
+        }
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v2",
+      "epsilon": 0.8,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.10893899999791756,
+      "methods": {
+        "decision_uniform": {
+          "queries": 42,
+          "seconds": 0.032220875029452145
+        },
+        "decision_prevalence": {
+          "queries": 43,
+          "seconds": 0.024569958040956408
+        },
+        "decision_hgb": {
+          "queries": 37,
+          "seconds": 0.021301790955476463
+        }
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v2",
+      "epsilon": 1.6,
+      "compatible": true,
+      "hgb_predict_seconds_shared_across_tolerances": 0.10893899999791756,
+      "methods": {
+        "decision_uniform": {
+          "queries": 754,
+          "seconds": 0.5883187080034986
+        },
+        "decision_prevalence": {
+          "queries": 762,
+          "seconds": 0.37481912499060854
+        },
+        "decision_hgb": {
+          "queries": 741,
+          "seconds": 0.3654042499838397
+        }
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v3",
+      "epsilon": 0.2,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.09565212501911446,
+      "methods": {
+        "decision_uniform": {
+          "queries": 669,
+          "seconds": 0.7437754590064287
+        },
+        "decision_prevalence": {
+          "queries": 680,
+          "seconds": 0.4052398749627173
+        },
+        "decision_hgb": {
+          "queries": 548,
+          "seconds": 0.28812895802548155
+        }
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v3",
+      "epsilon": 0.4,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.09565212501911446,
+      "methods": {
+        "decision_uniform": {
+          "queries": 752,
+          "seconds": 0.5322423750185408
+        },
+        "decision_prevalence": {
+          "queries": 767,
+          "seconds": 0.45433041598880664
+        },
+        "decision_hgb": {
+          "queries": 772,
+          "seconds": 0.4533403340028599
+        }
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v3",
+      "epsilon": 0.8,
+      "compatible": true,
+      "hgb_predict_seconds_shared_across_tolerances": 0.09565212501911446,
+      "methods": {
+        "decision_uniform": {
+          "queries": 797,
+          "seconds": 0.5798428750131279
+        },
+        "decision_prevalence": {
+          "queries": 807,
+          "seconds": 0.4432615829864517
+        },
+        "decision_hgb": {
+          "queries": 759,
+          "seconds": 0.40494808298535645
+        }
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v3",
+      "epsilon": 1.6,
+      "compatible": true,
+      "hgb_predict_seconds_shared_across_tolerances": 0.09565212501911446,
+      "methods": {
+        "decision_uniform": {
+          "queries": 797,
+          "seconds": 0.6395394169958308
+        },
+        "decision_prevalence": {
+          "queries": 776,
+          "seconds": 0.47823729197261855
+        },
+        "decision_hgb": {
+          "queries": 751,
+          "seconds": 0.5327163750189357
+        }
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v1",
+      "epsilon": 0.2,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.4971991669735871,
+      "methods": {
+        "decision_uniform": {
+          "queries": 336,
+          "seconds": 0.2603994999662973
+        },
+        "decision_prevalence": {
+          "queries": 336,
+          "seconds": 0.14113350003026426
+        },
+        "decision_hgb": {
+          "queries": 204,
+          "seconds": 0.07902333297533914
+        }
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v1",
+      "epsilon": 0.4,
+      "compatible": true,
+      "hgb_predict_seconds_shared_across_tolerances": 0.4971991669735871,
+      "methods": {
+        "decision_uniform": {
+          "queries": 422,
+          "seconds": 0.18770854198373854
+        },
+        "decision_prevalence": {
+          "queries": 427,
+          "seconds": 0.14053116698050871
+        },
+        "decision_hgb": {
+          "queries": 374,
+          "seconds": 0.12305958301294595
+        }
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v1",
+      "epsilon": 0.8,
+      "compatible": true,
+      "hgb_predict_seconds_shared_across_tolerances": 0.4971991669735871,
+      "methods": {
+        "decision_uniform": {
+          "queries": 397,
+          "seconds": 0.17358312499709427
+        },
+        "decision_prevalence": {
+          "queries": 397,
+          "seconds": 0.13123191701015458
+        },
+        "decision_hgb": {
+          "queries": 334,
+          "seconds": 0.10945841699140146
+        }
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v1",
+      "epsilon": 1.6,
+      "compatible": true,
+      "hgb_predict_seconds_shared_across_tolerances": 0.4971991669735871,
+      "methods": {
+        "decision_uniform": {
+          "queries": 379,
+          "seconds": 0.16730833397014067
+        },
+        "decision_prevalence": {
+          "queries": 383,
+          "seconds": 0.12559299997519702
+        },
+        "decision_hgb": {
+          "queries": 330,
+          "seconds": 0.10816279199207202
+        }
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v2",
+      "epsilon": 0.2,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.09416033298475668,
+      "methods": {
+        "decision_uniform": {
+          "queries": 0,
+          "seconds": 0.00035900005605071783
+        },
+        "decision_prevalence": {
+          "queries": 0,
+          "seconds": 0.00028133299201726913
+        },
+        "decision_hgb": {
+          "queries": 0,
+          "seconds": 0.00026716699358075857
+        }
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v2",
+      "epsilon": 0.4,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.09416033298475668,
+      "methods": {
+        "decision_uniform": {
+          "queries": 0,
+          "seconds": 0.0003112090053036809
+        },
+        "decision_prevalence": {
+          "queries": 0,
+          "seconds": 0.0003493750118650496
+        },
+        "decision_hgb": {
+          "queries": 0,
+          "seconds": 0.0002823329996317625
+        }
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v2",
+      "epsilon": 0.8,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.09416033298475668,
+      "methods": {
+        "decision_uniform": {
+          "queries": 45,
+          "seconds": 0.035129666968714446
+        },
+        "decision_prevalence": {
+          "queries": 45,
+          "seconds": 0.03502383298473433
+        },
+        "decision_hgb": {
+          "queries": 36,
+          "seconds": 0.08960004197433591
+        }
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v2",
+      "epsilon": 1.6,
+      "compatible": true,
+      "hgb_predict_seconds_shared_across_tolerances": 0.09416033298475668,
+      "methods": {
+        "decision_uniform": {
+          "queries": 623,
+          "seconds": 0.5717284170095809
+        },
+        "decision_prevalence": {
+          "queries": 623,
+          "seconds": 0.3202437089639716
+        },
+        "decision_hgb": {
+          "queries": 568,
+          "seconds": 0.2806870830245316
+        }
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v3",
+      "epsilon": 0.2,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.0921998749836348,
+      "methods": {
+        "decision_uniform": {
+          "queries": 0,
+          "seconds": 0.00033720897044986486
+        },
+        "decision_prevalence": {
+          "queries": 0,
+          "seconds": 0.000296416983474046
+        },
+        "decision_hgb": {
+          "queries": 0,
+          "seconds": 0.0002661250182427466
+        }
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v3",
+      "epsilon": 0.4,
+      "compatible": true,
+      "hgb_predict_seconds_shared_across_tolerances": 0.0921998749836348,
+      "methods": {
+        "decision_uniform": {
+          "queries": 648,
+          "seconds": 0.5863558330456726
+        },
+        "decision_prevalence": {
+          "queries": 652,
+          "seconds": 0.2995377500192262
+        },
+        "decision_hgb": {
+          "queries": 610,
+          "seconds": 0.26774049998493865
+        }
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v3",
+      "epsilon": 0.8,
+      "compatible": true,
+      "hgb_predict_seconds_shared_across_tolerances": 0.0921998749836348,
+      "methods": {
+        "decision_uniform": {
+          "queries": 656,
+          "seconds": 0.38301958300871775
+        },
+        "decision_prevalence": {
+          "queries": 634,
+          "seconds": 0.27896666602464393
+        },
+        "decision_hgb": {
+          "queries": 598,
+          "seconds": 0.2873717909678817
+        }
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v3",
+      "epsilon": 1.6,
+      "compatible": true,
+      "hgb_predict_seconds_shared_across_tolerances": 0.0921998749836348,
+      "methods": {
+        "decision_uniform": {
+          "queries": 639,
+          "seconds": 0.49631045799469575
+        },
+        "decision_prevalence": {
+          "queries": 619,
+          "seconds": 0.3810955839580856
+        },
+        "decision_hgb": {
+          "queries": 586,
+          "seconds": 0.37925141700543463
+        }
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v1",
+      "epsilon": 0.2,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.0695679999771528,
+      "methods": {
+        "decision_uniform": {
+          "queries": 0,
+          "seconds": 0.00039950001519173384
+        },
+        "decision_prevalence": {
+          "queries": 0,
+          "seconds": 0.00032404199009761214
+        },
+        "decision_hgb": {
+          "queries": 0,
+          "seconds": 0.0003123339847661555
+        }
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v1",
+      "epsilon": 0.4,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.0695679999771528,
+      "methods": {
+        "decision_uniform": {
+          "queries": 0,
+          "seconds": 0.00032179197296500206
+        },
+        "decision_prevalence": {
+          "queries": 0,
+          "seconds": 0.00030999997397884727
+        },
+        "decision_hgb": {
+          "queries": 0,
+          "seconds": 0.00031462498009204865
+        }
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v1",
+      "epsilon": 0.8,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.0695679999771528,
+      "methods": {
+        "decision_uniform": {
+          "queries": 44,
+          "seconds": 0.036437375005334616
+        },
+        "decision_prevalence": {
+          "queries": 44,
+          "seconds": 0.028619707969482988
+        },
+        "decision_hgb": {
+          "queries": 46,
+          "seconds": 0.03632624994497746
+        }
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v1",
+      "epsilon": 1.6,
+      "compatible": true,
+      "hgb_predict_seconds_shared_across_tolerances": 0.0695679999771528,
+      "methods": {
+        "decision_uniform": {
+          "queries": 455,
+          "seconds": 0.3173462499980815
+        },
+        "decision_prevalence": {
+          "queries": 452,
+          "seconds": 0.18064487498486415
+        },
+        "decision_hgb": {
+          "queries": 379,
+          "seconds": 0.13561845797812566
+        }
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v2",
+      "epsilon": 0.2,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.12851449998561293,
+      "methods": {
+        "decision_uniform": {
+          "queries": 0,
+          "seconds": 0.0005599999567493796
+        },
+        "decision_prevalence": {
+          "queries": 0,
+          "seconds": 0.0004934999742545187
+        },
+        "decision_hgb": {
+          "queries": 0,
+          "seconds": 0.00048629200318828225
+        }
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v2",
+      "epsilon": 0.4,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.12851449998561293,
+      "methods": {
+        "decision_uniform": {
+          "queries": 0,
+          "seconds": 0.00046112498966977
+        },
+        "decision_prevalence": {
+          "queries": 0,
+          "seconds": 0.00044370797695592046
+        },
+        "decision_hgb": {
+          "queries": 0,
+          "seconds": 0.00041274999966844916
+        }
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v2",
+      "epsilon": 0.8,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.12851449998561293,
+      "methods": {
+        "decision_uniform": {
+          "queries": 42,
+          "seconds": 0.06298275000881404
+        },
+        "decision_prevalence": {
+          "queries": 43,
+          "seconds": 0.051420832984149456
+        },
+        "decision_hgb": {
+          "queries": 32,
+          "seconds": 0.03983154200250283
+        }
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v2",
+      "epsilon": 1.6,
+      "compatible": true,
+      "hgb_predict_seconds_shared_across_tolerances": 0.12851449998561293,
+      "methods": {
+        "decision_uniform": {
+          "queries": 742,
+          "seconds": 0.6213572499691509
+        },
+        "decision_prevalence": {
+          "queries": 716,
+          "seconds": 0.37683287501567975
+        },
+        "decision_hgb": {
+          "queries": 798,
+          "seconds": 0.4123552499804646
+        }
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v3",
+      "epsilon": 0.2,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.11319766700034961,
+      "methods": {
+        "decision_uniform": {
+          "queries": 308,
+          "seconds": 0.39431016601156443
+        },
+        "decision_prevalence": {
+          "queries": 308,
+          "seconds": 0.1834889999590814
+        },
+        "decision_hgb": {
+          "queries": 449,
+          "seconds": 0.24201791698578745
+        }
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v3",
+      "epsilon": 0.4,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.11319766700034961,
+      "methods": {
+        "decision_uniform": {
+          "queries": 668,
+          "seconds": 0.433346291014459
+        },
+        "decision_prevalence": {
+          "queries": 651,
+          "seconds": 0.3151674160035327
+        },
+        "decision_hgb": {
+          "queries": 636,
+          "seconds": 0.5473111249739304
+        }
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v3",
+      "epsilon": 0.8,
+      "compatible": true,
+      "hgb_predict_seconds_shared_across_tolerances": 0.11319766700034961,
+      "methods": {
+        "decision_uniform": {
+          "queries": 693,
+          "seconds": 0.5011142090079375
+        },
+        "decision_prevalence": {
+          "queries": 693,
+          "seconds": 0.3518575410125777
+        },
+        "decision_hgb": {
+          "queries": 684,
+          "seconds": 0.3471817499957979
+        }
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v3",
+      "epsilon": 1.6,
+      "compatible": true,
+      "hgb_predict_seconds_shared_across_tolerances": 0.11319766700034961,
+      "methods": {
+        "decision_uniform": {
+          "queries": 693,
+          "seconds": 0.4839309579692781
+        },
+        "decision_prevalence": {
+          "queries": 693,
+          "seconds": 0.37357304198667407
+        },
+        "decision_hgb": {
+          "queries": 684,
+          "seconds": 0.44273529102792963
+        }
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v1",
+      "epsilon": 0.2,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.4589502500020899,
+      "methods": {
+        "decision_uniform": {
+          "queries": 0,
+          "seconds": 0.0007003750069998205
+        },
+        "decision_prevalence": {
+          "queries": 0,
+          "seconds": 0.00048354099271818995
+        },
+        "decision_hgb": {
+          "queries": 0,
+          "seconds": 0.0004583330010063946
+        }
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v1",
+      "epsilon": 0.4,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.4589502500020899,
+      "methods": {
+        "decision_uniform": {
+          "queries": 0,
+          "seconds": 0.00046595901949331164
+        },
+        "decision_prevalence": {
+          "queries": 0,
+          "seconds": 0.0011978749535046518
+        },
+        "decision_hgb": {
+          "queries": 0,
+          "seconds": 0.0005729169934056699
+        }
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v1",
+      "epsilon": 0.8,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.4589502500020899,
+      "methods": {
+        "decision_uniform": {
+          "queries": 43,
+          "seconds": 0.058119332999922335
+        },
+        "decision_prevalence": {
+          "queries": 43,
+          "seconds": 0.03903808299219236
+        },
+        "decision_hgb": {
+          "queries": 41,
+          "seconds": 0.03637191699817777
+        }
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v1",
+      "epsilon": 1.6,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.4589502500020899,
+      "methods": {
+        "decision_uniform": {
+          "queries": 710,
+          "seconds": 0.6519439580151811
+        },
+        "decision_prevalence": {
+          "queries": 716,
+          "seconds": 0.4456689999788068
+        },
+        "decision_hgb": {
+          "queries": 623,
+          "seconds": 0.4897822920465842
+        }
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v2",
+      "epsilon": 0.2,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.5966766669880599,
+      "methods": {
+        "decision_uniform": {
+          "queries": 0,
+          "seconds": 0.0005649999948218465
+        },
+        "decision_prevalence": {
+          "queries": 0,
+          "seconds": 0.00041787500958889723
+        },
+        "decision_hgb": {
+          "queries": 0,
+          "seconds": 0.00041441700886934996
+        }
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v2",
+      "epsilon": 0.4,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.5966766669880599,
+      "methods": {
+        "decision_uniform": {
+          "queries": 0,
+          "seconds": 0.0004253750084899366
+        },
+        "decision_prevalence": {
+          "queries": 0,
+          "seconds": 0.0004124579718336463
+        },
+        "decision_hgb": {
+          "queries": 0,
+          "seconds": 0.00040904199704527855
+        }
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v2",
+      "epsilon": 0.8,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.5966766669880599,
+      "methods": {
+        "decision_uniform": {
+          "queries": 844,
+          "seconds": 0.8595101669779979
+        },
+        "decision_prevalence": {
+          "queries": 859,
+          "seconds": 0.6495550419786014
+        },
+        "decision_hgb": {
+          "queries": 868,
+          "seconds": 0.8011352089815773
+        }
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v2",
+      "epsilon": 1.6,
+      "compatible": true,
+      "hgb_predict_seconds_shared_across_tolerances": 0.5966766669880599,
+      "methods": {
+        "decision_uniform": {
+          "queries": 905,
+          "seconds": 0.7089457500260323
+        },
+        "decision_prevalence": {
+          "queries": 956,
+          "seconds": 0.5530718329828233
+        },
+        "decision_hgb": {
+          "queries": 956,
+          "seconds": 0.5558194170007482
+        }
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v3",
+      "epsilon": 0.2,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.10172600002260879,
+      "methods": {
+        "decision_uniform": {
+          "queries": 303,
+          "seconds": 0.3602670000400394
+        },
+        "decision_prevalence": {
+          "queries": 303,
+          "seconds": 0.16659695794805884
+        },
+        "decision_hgb": {
+          "queries": 524,
+          "seconds": 0.2629084169748239
+        }
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v3",
+      "epsilon": 0.4,
+      "compatible": false,
+      "hgb_predict_seconds_shared_across_tolerances": 0.10172600002260879,
+      "methods": {
+        "decision_uniform": {
+          "queries": 609,
+          "seconds": 0.40564820903819054
+        },
+        "decision_prevalence": {
+          "queries": 610,
+          "seconds": 0.2893981250235811
+        },
+        "decision_hgb": {
+          "queries": 571,
+          "seconds": 0.2970813330030069
+        }
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v3",
+      "epsilon": 0.8,
+      "compatible": true,
+      "hgb_predict_seconds_shared_across_tolerances": 0.10172600002260879,
+      "methods": {
+        "decision_uniform": {
+          "queries": 732,
+          "seconds": 0.5313901250483468
+        },
+        "decision_prevalence": {
+          "queries": 734,
+          "seconds": 0.5730999169754796
+        },
+        "decision_hgb": {
+          "queries": 761,
+          "seconds": 0.4784698329749517
+        }
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v3",
+      "epsilon": 1.6,
+      "compatible": true,
+      "hgb_predict_seconds_shared_across_tolerances": 0.10172600002260879,
+      "methods": {
+        "decision_uniform": {
+          "queries": 732,
+          "seconds": 0.6339595839963295
+        },
+        "decision_prevalence": {
+          "queries": 734,
+          "seconds": 0.44634466705610976
+        },
+        "decision_hgb": {
+          "queries": 761,
+          "seconds": 0.5883115420001559
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,680 @@
+{
+  "source_sha256": "85ab696054670f80bc9690873291c39bb119b56670b4513da59bae994a2b0d70",
+  "fit_seconds": 2.801083667029161,
+  "source_columns": 1080,
+  "source_response_classes": 10,
+  "runs": [
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v1",
+      "epsilon": 0.2,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.0003208330017514527
+        },
+        "uniform": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00022379198344424367
+        },
+        "learned": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.000202624942176044
+        }
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v1",
+      "epsilon": 0.4,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00021049997303634882
+        },
+        "uniform": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00020241696620360017
+        },
+        "learned": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00019445898942649364
+        }
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v2",
+      "epsilon": 0.2,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.0004125410341657698
+        },
+        "uniform": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.0003251250018365681
+        },
+        "learned": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00025991699658334255
+        }
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v2",
+      "epsilon": 0.4,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00028433295665308833
+        },
+        "uniform": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00023874995531514287
+        },
+        "learned": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00026129098841920495
+        }
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v3",
+      "epsilon": 0.2,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 448,
+          "rectangles": 118,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.020956749969627708
+        },
+        "uniform": {
+          "queries": 384,
+          "rectangles": 211,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 122,
+          "seconds": 0.3409321670187637
+        },
+        "learned": {
+          "queries": 384,
+          "rectangles": 213,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 123,
+          "seconds": 0.33891766698798165
+        }
+      }
+    },
+    {
+      "group": "C1|2024-04-12_TypeC_sample1/2024-04-15/v3",
+      "epsilon": 0.4,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 640,
+          "rectangles": 325,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.043400334019679576
+        },
+        "uniform": {
+          "queries": 768,
+          "rectangles": 1278,
+          "capped_checks": 1,
+          "anchor_fallback_queries": 32,
+          "seconds": 0.9117268330301158
+        },
+        "learned": {
+          "queries": 768,
+          "rectangles": 1297,
+          "capped_checks": 2,
+          "anchor_fallback_queries": 33,
+          "seconds": 0.919809290964622
+        }
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v1",
+      "epsilon": 0.2,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 64,
+          "rectangles": 2,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.001936791988555342
+        },
+        "uniform": {
+          "queries": 64,
+          "rectangles": 2,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 33,
+          "seconds": 0.03949333296623081
+        },
+        "learned": {
+          "queries": 64,
+          "rectangles": 2,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 33,
+          "seconds": 0.038505666016135365
+        }
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v1",
+      "epsilon": 0.4,
+      "compatible": true,
+      "policies": {
+        "rank_first": {
+          "queries": 768,
+          "rectangles": 490,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.05201145797036588
+        },
+        "uniform": {
+          "queries": 448,
+          "rectangles": 215,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 49,
+          "seconds": 0.56272504205117
+        },
+        "learned": {
+          "queries": 448,
+          "rectangles": 215,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 49,
+          "seconds": 0.8811239170026965
+        }
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v2",
+      "epsilon": 0.2,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.0006544999778270721
+        },
+        "uniform": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.0003783749998547137
+        },
+        "learned": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00036516698310151696
+        }
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v2",
+      "epsilon": 0.4,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00032041699159890413
+        },
+        "uniform": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00041695800609886646
+        },
+        "learned": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.000501624948810786
+        }
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v3",
+      "epsilon": 0.2,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.0006144170183688402
+        },
+        "uniform": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.0005557080148719251
+        },
+        "learned": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.0004694170202128589
+        }
+      }
+    },
+    {
+      "group": "C_T2|2024-06-11_TypeC_T2_sample1/v3",
+      "epsilon": 0.4,
+      "compatible": true,
+      "policies": {
+        "rank_first": {
+          "queries": 1344,
+          "rectangles": 931,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.23913579201325774
+        },
+        "uniform": {
+          "queries": 640,
+          "rectangles": 622,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 6,
+          "seconds": 1.6528506249887869
+        },
+        "learned": {
+          "queries": 640,
+          "rectangles": 622,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 7,
+          "seconds": 0.7012993749813177
+        }
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v1",
+      "epsilon": 0.2,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.0011860000086016953
+        },
+        "uniform": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.0009052079985849559
+        },
+        "learned": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.005810666014440358
+        }
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v1",
+      "epsilon": 0.4,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.0006750840111635625
+        },
+        "uniform": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.001186167006380856
+        },
+        "learned": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.0003137920284643769
+        }
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v2",
+      "epsilon": 0.2,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.0003944589989259839
+        },
+        "uniform": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00029254198307171464
+        },
+        "learned": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00027845799922943115
+        }
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v2",
+      "epsilon": 0.4,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.0002708330284804106
+        },
+        "uniform": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00026879197685047984
+        },
+        "learned": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00026720797177404165
+        }
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v3",
+      "epsilon": 0.2,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 704,
+          "rectangles": 326,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.05457895796280354
+        },
+        "uniform": {
+          "queries": 320,
+          "rectangles": 76,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 42,
+          "seconds": 0.3251331250066869
+        },
+        "learned": {
+          "queries": 320,
+          "rectangles": 76,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 41,
+          "seconds": 0.29489054199075326
+        }
+      }
+    },
+    {
+      "group": "D1|2024-04-15_TypeD_sample1/2024-04-17/v3",
+      "epsilon": 0.4,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 1280,
+          "rectangles": 1227,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.13242933299625292
+        },
+        "uniform": {
+          "queries": 1088,
+          "rectangles": 1413,
+          "capped_checks": 1,
+          "anchor_fallback_queries": 438,
+          "seconds": 0.9164251670008525
+        },
+        "learned": {
+          "queries": 1088,
+          "rectangles": 1413,
+          "capped_checks": 1,
+          "anchor_fallback_queries": 440,
+          "seconds": 1.2328898339765146
+        }
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v1",
+      "epsilon": 0.2,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.000804250012151897
+        },
+        "uniform": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.0005867080180905759
+        },
+        "learned": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.0004902500077150762
+        }
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v1",
+      "epsilon": 0.4,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00043399998685345054
+        },
+        "uniform": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.0005050419713370502
+        },
+        "learned": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.0005110420170240104
+        }
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v2",
+      "epsilon": 0.2,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00036174996057525277
+        },
+        "uniform": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.0002697500167414546
+        },
+        "learned": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00025329203344881535
+        }
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v2",
+      "epsilon": 0.4,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00024729204596951604
+        },
+        "uniform": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.00024458300322294235
+        },
+        "learned": {
+          "queries": 0,
+          "rectangles": 1,
+          "capped_checks": 0,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.000244291964918375
+        }
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v3",
+      "epsilon": 0.2,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 640,
+          "rectangles": 1896,
+          "capped_checks": 9,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.23585033399285749
+        },
+        "uniform": {
+          "queries": 512,
+          "rectangles": 1436,
+          "capped_checks": 7,
+          "anchor_fallback_queries": 173,
+          "seconds": 1.3102531249751337
+        },
+        "learned": {
+          "queries": 448,
+          "rectangles": 1244,
+          "capped_checks": 6,
+          "anchor_fallback_queries": 115,
+          "seconds": 1.2057440420030616
+        }
+      }
+    },
+    {
+      "group": "D2|2024-04-26_TypeD_sample2/v3",
+      "epsilon": 0.4,
+      "compatible": false,
+      "policies": {
+        "rank_first": {
+          "queries": 960,
+          "rectangles": 2710,
+          "capped_checks": 14,
+          "anchor_fallback_queries": 0,
+          "seconds": 0.39594879100332037
+        },
+        "uniform": {
+          "queries": 448,
+          "rectangles": 1316,
+          "capped_checks": 6,
+          "anchor_fallback_queries": 142,
+          "seconds": 0.7718209999729879
+        },
+        "learned": {
+          "queries": 448,
+          "rectangles": 1316,
+          "capped_checks": 6,
+          "anchor_fallback_queries": 146,
+          "seconds": 0.5985118329990655
+        }
+      }
+    }
+  ]
+}

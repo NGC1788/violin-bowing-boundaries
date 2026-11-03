@@ -1,0 +1,82 @@
+{
+  "baseline": {
+    "queries": 303,
+    "first_rule_elimination": 291,
+    "per_rule_elimination": [
+      291,
+      291,
+      299,
+      291,
+      291,
+      299,
+      291,
+      291,
+      303
+    ],
+    "snapshots": {
+      "0": {
+        "live_count": 9,
+        "width_sum": 41.173148381888225
+      },
+      "64": {
+        "live_count": 9,
+        "width_sum": 15.721747669853858
+      },
+      "128": {
+        "live_count": 9,
+        "width_sum": 15.721747669853858
+      },
+      "256": {
+        "live_count": 9,
+        "width_sum": 8.029504633081672
+      },
+      "303": {
+        "live_count": 0,
+        "width_sum": 0.0
+      }
+    },
+    "queries_without_width_change": 287
+  },
+  "counterfactual": {
+    "queries": 339,
+    "first_rule_elimination": 25,
+    "per_rule_elimination": [
+      25,
+      339,
+      202,
+      25,
+      339,
+      202,
+      25,
+      339,
+      202
+    ],
+    "snapshots": {
+      "0": {
+        "live_count": 9,
+        "width_sum": 41.173148381888225
+      },
+      "64": {
+        "live_count": 6,
+        "width_sum": 3.427975807450176
+      },
+      "128": {
+        "live_count": 6,
+        "width_sum": 3.427975807450176
+      },
+      "256": {
+        "live_count": 3,
+        "width_sum": 1.4715621302071815
+      },
+      "303": {
+        "live_count": 3,
+        "width_sum": 1.4715621302071815
+      },
+      "339": {
+        "live_count": 0,
+        "width_sum": 0.0
+      }
+    },
+    "queries_without_width_change": 304
+  }
+}
