@@ -1,5 +1,9 @@
 # 실제 실행 현황 — 2026-10-30
 
+## 2026-11-03 저장 예측의 손실 격차 분해 완료
+
+무작위 대조군 대비 제안법의 손실 차이 +0.00257340은 유효 기록의 음성 사건 손실 증가가 주로 설명한다. Markov 대비 전체 개선 −0.00108071은 판정 불가 기록의 기여에서 나왔고, 유효 기록의 순기여는 +0.00004631이었다. 원래 참가자 가중치로 분해했으며 새 학습과 새 모델 실행은 0회다. [분석](../null_conditioning_postmortem_v1/ANALYSIS.md).
+
 ## 2026-11-03 고정12개 학습·독립 재계산까지 완료 — 추가 학습 예산 소진 STOP
 
 `null_conditioning_learning_v1`을 한 번 실행해12/12fit 완료, ledger54.085116초/결과 기록 직전54.059636초다. Markov0.542081 대 main_only0.541589(+0.0907%),ordinary0.546120(−0.7451%),random0.538427(+0.6741%),null0.541000(+0.1994%)로 고정2% screen 승격0개다. null은 random보다0.4779% 나쁘고 이긴 fold도1개뿐이므로 제안 연산의 추가 이득도 실패했다. Null 보조 step의 query drift는 최대9.80e-16이어서 구현상 보존과 예측 성능을 구분했다. [전체 결과](../null_conditioning_learning_v1/RESULTS.md), [원 점수](../null_conditioning_learning_v1/RESULTS.json).
