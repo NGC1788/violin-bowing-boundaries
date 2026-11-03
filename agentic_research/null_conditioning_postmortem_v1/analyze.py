@@ -10,6 +10,17 @@ HERE = Path(__file__).resolve().parent
 PARENT = HERE.parent / "null_conditioning_learning_v1"
 
 
+def omission_summary(gaps, groups):
+    """Aggregate deletion sensitivity for already fitted predictions."""
+    means = np.array([gaps[~group].mean() for group in groups])
+    return {
+        "minimum_gap": float(means.min()),
+        "maximum_gap": float(means.max()),
+        "positive_gap_count": int((means > 1e-12).sum()),
+        "negative_gap_count": int((means < -1e-12).sum()),
+    }
+
+
 def analyze():
     result_path = PARENT / "RESULTS.json"
     result = json.loads(result_path.read_text())
@@ -59,6 +70,18 @@ def analyze():
         if not np.isclose(weights @ score.mean(1), result["aggregate"][method]["log_loss"], atol=1e-12, rtol=0):
             raise ValueError("Saved macro score mismatch")
 
+    valid_counts = np.bincount(index[guard], minlength=len(counts))
+    if (valid_counts == 0).any():
+        raise ValueError("A participant has no valid recordings")
+    participant_omissions = np.eye(len(counts), dtype=bool)
+    person_fold = np.full(len(counts), -1)
+    for k in range(3):
+        members = np.unique(index[fold == k])
+        if (person_fold[members] != -1).any():
+            raise ValueError("Participant spans folds")
+        person_fold[members] = k
+    if (person_fold == -1).any():
+        raise ValueError("Missing participant fold")
     comparisons = {}
     for baseline in methods[1:]:
         delta = scores["null_conditioned"] - scores[baseline]
@@ -87,7 +110,19 @@ def analyze():
         error = max(abs(float(value) - total) for value in reconstructions)
         if error > 1e-12:
             raise ValueError("Additive decomposition failed")
+        row_delta = delta.mean(1)
+        valid_person = np.bincount(
+            index[guard], weights=row_delta[guard], minlength=len(counts)
+        ) / valid_counts
         comparisons[baseline] = {
+            "omission_sensitivity": {
+                "all_rows_one_participant": omission_summary(per_person, participant_omissions),
+                "all_rows_one_fold": omission_summary(
+                    per_person, [person_fold == k for k in range(3)]
+                ),
+                "valid_rows_macro_gap": float(valid_person.mean()),
+                "valid_rows_one_participant": omission_summary(valid_person, participant_omissions),
+            },
             "gap_null_minus_baseline": total,
             "by_fold": fold_gaps,
             "by_event_label": label_gaps,

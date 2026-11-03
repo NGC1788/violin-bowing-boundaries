@@ -5,6 +5,27 @@
   "rows": 1442,
   "comparisons": {
     "random_matched": {
+      "omission_sensitivity": {
+        "all_rows_one_participant": {
+          "minimum_gap": 0.002048964881176761,
+          "maximum_gap": 0.003309083193227849,
+          "positive_gap_count": 34,
+          "negative_gap_count": 0
+        },
+        "all_rows_one_fold": {
+          "minimum_gap": 0.0005792115203579106,
+          "maximum_gap": 0.004476120064952165,
+          "positive_gap_count": 3,
+          "negative_gap_count": 0
+        },
+        "valid_rows_macro_gap": 0.002556068646130782,
+        "valid_rows_one_participant": {
+          "minimum_gap": 0.00202887359456668,
+          "maximum_gap": 0.00329122475556041,
+          "positive_gap_count": 34,
+          "negative_gap_count": 0
+        }
+      },
       "gap_null_minus_baseline": 0.002573401835631532,
       "by_fold": {
         "0": -0.00032291114757281123,
@@ -110,6 +131,27 @@
       "maximum_reconstruction_error": 1.734723475976807e-18
     },
     "markov": {
+      "omission_sensitivity": {
+        "all_rows_one_participant": {
+          "minimum_gap": -0.008770497996174575,
+          "maximum_gap": 0.002254652193815422,
+          "positive_gap_count": 13,
+          "negative_gap_count": 21
+        },
+        "all_rows_one_fold": {
+          "minimum_gap": -0.023219324289137,
+          "maximum_gap": 0.015789043568103622,
+          "positive_gap_count": 2,
+          "negative_gap_count": 1
+        },
+        "valid_rows_macro_gap": -0.00024311938719151575,
+        "valid_rows_one_participant": {
+          "minimum_gap": -0.007907525607431,
+          "maximum_gap": 0.0031176245825589987,
+          "positive_gap_count": 19,
+          "negative_gap_count": 15
+        }
+      },
       "gap_null_minus_baseline": -0.0010807102350896946,
       "by_fold": {
         "0": 0.013943558422587184,
