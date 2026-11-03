@@ -1,5 +1,11 @@
 # 실제 실행 현황 — 2026-10-30
 
+## 2026-11-03 새 가설 서면 검토 완료 — 다음은 코드 준비만
+
+사용자 재개 요청 뒤 `research_reframe_v1`에서 세 축·직접 선행6개를 검토했다. **함수보존 conditioning B만 CODE PREP ONLY**다. [수식](../research_reframe_v1/METHOD.md), [직접 선행](../research_reframe_v1/PRIOR_REVIEW.md), [결정](../research_reframe_v1/DECISION.md), [독립 검토](../research_reframe_v1/REVIEW.json). 선형 adapter의 실제 추가 step을 nullspace로 제한하면 해당 단계의 coarse 확률이 보존되지만, W는 새 정보/용량을 추가하지 않으며 이후 예측 개선·높은 novelty는 미입증이다. 현재 서면 단위 fit/forward/gradient/실제 자료·가중치 접근/hash/다운로드/추가 수치 감사0, 남은 실제 학습1batch와 종료일은 그대로다. 이전 donor의 부정 결과와 NO_JUSTIFIED 판정은 그 분기의 이력으로 보존한다.
+
+**다음 미완료 한 단위:** [NEXT_PREPARATION_GATE.md](../research_reframe_v1/NEXT_PREPARATION_GATE.md)의 별도 `null_conditioning_learning_v1` 코드·합성 기능시험·독립 검토. 코드 승인 전 실제 source 자료/hash0, 승인 뒤 같은 준비 단위 후반에만 source-only 입력/전체 계약 동결, 이 준비의 실제fit0이다. 네 matched arm×source3fold12job만 후보이며 실제 실행은 준비/전체동결 뒤 별도 단위다. 원래 Markov/HGB 대비2%·최소2fold screen과 matched-arm 추가 이득 기준을 유지한다. 자동화 설정은 [기록](../research_reframe_v1/AUTOMATION_STATUS.json)에 남긴다. 아래 선점·실행 대기·‘최신’은 과거 이력이며 재실행 지시가 아니다.
+
 ## 2026-11-03 저장결과 진단완료: 이번 학습 탐색 일시중지
 
 `donor_postmortem_v1`에서고정사람가중치로5개비교의fold×outcome×event기여를재구성했다. 제안adversarial−ERM의손실+.00092834는음성개선−.00307849와양성악화+.00400683의합이었다. 실제양성event예측확률은평균.5021%p낮아졌다. 삭제시사건확률민감도는34명모두의평균에서줄었지만정답기반삭제risk는+.00002388악화했다. Donor entropy와loss변화상관으로인과기전을확정하지않는다. [진단](../donor_postmortem_v1/CAUSE_ANALYSIS.md), [집계](../donor_postmortem_v1/RESULTS.json), [독립검토](../donor_postmortem_v1/REVIEW.json). 독립재계산불일치0건,새fit/forward/gradient/자료·문헌탐색/다운로드/수치감사0이다.

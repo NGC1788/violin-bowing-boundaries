@@ -1,0 +1,9 @@
+{
+  "automation_id": "ai",
+  "status": "ACTIVE",
+  "rrule": "FREQ=MINUTELY;INTERVAL=30",
+  "saved_prompt_matches": true,
+  "prompt_sha256": "5974a4036ad6b4f3185dcfe504b52e8c672057d9e91ec41209ce587f0f72b90f",
+  "verified_utc": "2026-11-03T01:16:22.368724+00:00",
+  "scope": "New versioned code/functional-test/review preparation, source binding only after separate code approval; actual fitting zero in preparation"
+}

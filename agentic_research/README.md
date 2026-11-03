@@ -1,5 +1,9 @@
 # 활현 AI 연구: 재현 가능한 미래 예측과 에이전트 루프
 
+**현재 상태 — 2026-11-03 새 가설 서면 검토 완료:** 사용자 재개 요청 뒤 세 축과 핵심 직접 선행6개를 검토해 [함수보존 conditioning](research_reframe_v1/METHOD.md) 하나만 **코드 준비 후보**로 남겼다. 고정 readout 앞 adapter의 추가 단계는 현재 사건 확률을 보존하지만, 이후 학습 성능은 미검증이다. 새로운 정보·용량이나 새 투영 원리라고 주장하지 않는다. [결정](research_reframe_v1/DECISION.md), [독립 검토](research_reframe_v1/REVIEW.json), [다음 준비 작업](research_reframe_v1/NEXT_PREPARATION_GATE.md). 이번 서면 단위 새 fit/forward/gradient/실제 자료·가중치 열람/hash/다운로드/추가 수치 감사0이다. 기존 모든 STOP/부정 결과는 그대로이며 마지막 학습1batch·12job은 아직 미사용이다. 다음은 별도 `null_conditioning_learning_v1` 코드·기능시험·독립 검토·전체 계약 준비이며, 이 준비에서는 실제 학습하지 않는다. 자동화의 실제 상태는 [설정 기록](research_reframe_v1/AUTOMATION_STATUS.json)을 확인한다. 아래 ‘최신’ 문구와 실행 대기는 모두 과거 이력이다.
+
+## 과거 작업 이력
+
 **최신(2026-11-03 진단완료·학습루프일시중지):** [저장결과분석](donor_postmortem_v1/CAUSE_ANALYSIS.md)과별도재계산을완료했다. 제안삭제법은donor의존/확률민감도를줄였지만양성손실증가로일반검색보다나빴다. **NO_JUSTIFIED_NEXT_LEARNING**: 마지막1batch는쓰지않고보존한다. 일반검색/queryDRO의작은개선과실패결과는그대로다. 높은novelty/독립성능개선은미확보이며이번분기에추가등록작업은없다. 기존실험/진단을재실행하지않는다. 모든AI연구의불가능성은뜻하지않는다.
 
 **최신(2026-11-03 실제12학습완료):** donor-deletion은STOP이다. 최선queryDRO는Markov대비1.4956%낮은loss지만2%screen미달,제안adversarial은일반검색보다.1736%나빴다. [결과](donor_deletion_learning_v1/RESULTS.md). 다음은[저장산출물진단](donor_deletion_learning_v1/NEXT_POSTMORTEM_GATE.md)이며새fit/forward0이다. 같은batch를재개하지않는다. 마지막학습예산1batch는별도정당화전사용하지않는다.

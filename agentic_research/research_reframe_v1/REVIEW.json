@@ -1,0 +1,78 @@
+{
+  "review_kind": "independent adversarial written-concept and authorization-boundary review",
+  "reviewer": "ai_direction_review",
+  "review_date_kst": "2026-11-03",
+  "verdict": "JUSTIFIED_TO_PREPARE_EXPLORATORY",
+  "scope": "CODE PREP ONLY: a separately versioned implementation, small synthetic functional tests and independent source review. This verdict is not approval to train or evaluate actual models, bind actual inputs before source review, reopen stopped campaigns, increase budget, or claim novelty/performance success.",
+  "blockers": [],
+  "document_sha256": {
+    "AGENTS.md": "44ed5ed6a9ac12d6cc1600accbe6084cf68fa4259dd01a77a67d41c1ddee858f",
+    "PRIOR_REVIEW.md": "714fc5f1e5be932aa693606dccbef39afaaa7666cc4589c5b5788c6e8c72a3cd",
+    "METHOD.md": "000c064c8864524b0db899e115491f0e6ba5048e020da140821d9577b1a5d515",
+    "DECISION.md": "2422ab4d893ed0b92d55fb51418e22f56eb4a756bd72ae21ee17fdfa84f21cda",
+    "NEXT_PREPARATION_GATE.md": "46c5f5127518aac4f822029173792667081df467718360d94ff61f81860ee0ab"
+  },
+  "mathematical_review": {
+    "finite_step_invariance": "With phi, A, b and running state fixed, H = I - 11^T/10, A_c = H A and P = I - A_c^dagger A_c imply A_c P = 0. Applying the actual finite optimizer displacement as W_new = W + P D gives H(z_new - z) = 0 for every x. The logits may change by an input-dependent common scalar; softmax and the fixed nine event probabilities remain unchanged in real arithmetic.",
+    "protected_object": "The protected linear map is H A W, not necessarily A W itself. The corrected METHOD explicitly allows a common-logit-row change in C = A W. The proof protects only the specified auxiliary substep, not subsequent main updates or the full training trajectory.",
+    "common_auxiliary_branch": "The common path/mask generator branches from u, not W u. Freezing phi, generator parameters and running state therefore preserves its outputs during the added auxiliary substep. Fine-head B updates are permitted because B is not part of the coarse inference function.",
+    "finite_precision_scope": "The real-arithmetic identity is correct. A numerical pseudoinverse cutoff may leave a small nonzero A_c P residual, especially near rank changes. Floating-point probe tests must not be described as proof of exact invariance for every unbounded real input. The later contract must fix tolerances, rank conventions and explicit failure handling.",
+    "parameter_conditioning": "For fixed u and simultaneous equal-rate SGD updates of A and W, C = A W and G_C = dL/dC yield delta C = -eta [G_C W^T W + A A^T G_C] + O(eta^2). This supports a conditioning interpretation of the auxiliary reparameterization. It is not an AdamW identity, a complete formula including encoder updates, or a guarantee of improved optimization/generalization.",
+    "capacity_and_gauge": "The coarse linear factors compose into (A W)u, and the fine linear factors into (B W)u. W adds no new input information or coarse function class relative to an unrestricted linear readout of u. The claim is an optimization-path effect of supervised reparameterization, not creation of hidden information or representational capacity.",
+    "fine_fibres": "The seven ordered octile cuts retain the original three quartile values at positions 2, 4 and 6. Under the documented strict-greater bin counting, floor(r_d/2) recovers the corresponding coarse bin. The 64 valid fine cells yield four cells for each of the nine nonzero coarse patterns; the remaining 28 valid cells plus the invalid class map to all-false. Conditional CE over the true coarse fibre is legitimate training supervision, provided the true coarse/fine label is never an inference input.",
+    "conditional_loss_limit": "Conditional fine CE is a standard auxiliary objective. Its finite projected step need not lower that auxiliary loss. Missing or empty fine cells are not to be removed or redefined after examining held outcomes. The probability-preserving identity is independent of whether the fine task is informative."
+  },
+  "control_review": {
+    "four_arms": "main_only, ordinary_matched, random_matched and null_conditioned share architecture, initialization, input/label access, main objective and schedule. All train B; only the added W displacement differs. This is an appropriate bounded mechanism comparison, not a reproduction of all possible auxiliary-learning/OGD/HNC systems.",
+    "norm_matching": "The target norm is each arm's own current ||P D||_F. It is a within-arm counterfactual matching rule, not a promise that divergent arms have equal actual step norms. Zero targets and zero random-projection denominators need deterministic treatment fixed before actual inputs or fitting.",
+    "random_projector": "The random orientation must be independent of labels given its prescribed rank/RNG rule. Matching rank to the learned A_c necessarily makes the rank indirectly depend on training; the entire projector must not be described as unconditionally independent of all learned state. No held outcome may select its seed or orientation.",
+    "negative_controls": "The later synthetic functional tests must deliberately exercise cases in which changing phi/readout or inserting a post-W nonlinearity breaks the claimed proof assumptions. An arbitrary nonlinearity or readout change need not break invariance on every special synthetic input, so positive violation examples must be chosen explicitly rather than requiring a universal converse.",
+    "unidentified_claims": "These four arms do not isolate the necessity of the fine conditional labels themselves, superiority over all optimizers, or general superiority over OGD/HNC. A fifth actual arm/seed is not authorized to address those limitations.",
+    "falsifier": "The null arm must improve the original full primary forecasting score over main_only, ordinary_matched and random_matched, overall and in at least two folds, while retaining the pre-existing Markov/HGB screen. Exact substep preservation or a lower auxiliary loss alone is not success."
+  },
+  "scientific_review": {
+    "distinct_hypothesis": "The proposed operation differs from donor deletion, Gaussian noise-floor repair and calibration rescue. It asks whether auxiliary-supervised, probability-preserving conditioning improves later forecasting relative to norm-matched ordinary/random conditioning. That is a sufficiently concrete hypothesis for bounded code preparation.",
+    "novelty_limit": "Orthogonal projection, linear gauge freedom, auxiliary supervision and function-preserving reparameterization are established principles. The documents explicitly acknowledge the closest six-paper review and do not claim a new theorem, firstness or demonstrated high novelty. The current evidence does not establish an additional contribution beyond a specific controlled mechanism study.",
+    "prior_failure_limit": "The donor postmortem does not establish gradient conflict as the cause of the previous failures, and therefore cannot be used as causal evidence for this new hypothesis.",
+    "data_and_application_limit": "The original source people have been repeatedly exposed during exploratory development. A successful source screen would not be independent confirmation, perceptual musical-quality validation, or a proof about physical bow-force boundaries.",
+    "literature_review_scope": "For this final review, the reviewer read the supplied six-paper comparison and its limitations, but did not open new primary papers or independently re-verify all six full texts. Novelty assessment is correspondingly provisional."
+  },
+  "resolved_blockers": [
+    {
+      "issue": "METHOD originally said that C = A W itself is preserved by the projected auxiliary step.",
+      "resolution": "The document now states that H C/coarse probabilities are preserved and that C may change by a common-logit row. The SGD interpretation is retained within its stated assumptions."
+    },
+    {
+      "issue": "The original poisoning-test wording could imply invariance to changes of the legitimate observed prefix.",
+      "resolution": "NEXT_PREPARATION_GATE now limits invariance to forbidden future fields/held outcomes and explicitly permits legitimate prefix changes to affect predictions. Authorized training fine labels may affect auxiliary loss/gradients."
+    }
+  ],
+  "requirements_before_actual_source_binding": [
+    "Implement only in the new versioned preparation directory; preserve all previous code, seals, negative results and STOP decisions.",
+    "Specify the fine substep optimizer and project its actual finite parameter displacement, including any preconditioner/decay. Do not apply an additional unconstrained W normalization afterwards.",
+    "Freeze phi, A, b, G and all running state throughout the added fine substep. Specify optimizer-state ownership so that main_only does not accidentally modify W through decay or shared auxiliary optimizer state.",
+    "Check finite-step residuals, negative controls, zero norms, ill-conditioning, labels at boundaries/ties and the 65-to-10 map using small synthetic functional tests only. Original coarse-threshold assumptions must be validated; if the fixed pattern bank is incompatible with tied original coarse thresholds, fail explicitly rather than silently alter the historical target definition.",
+    "Fix normalization, RNG, rank cutoff, stability bounds, optimizer/epoch/auxiliary weights and failure rules before actual input inspection or fitting. The stated numerical optimizer settings remain proposals until that separate contract is reviewed.",
+    "Obtain independent source-code review before opening or hashing actual source inputs. Do not access old dev/test outcomes, raw recordings or weights as part of this written review."
+  ],
+  "later_stage_boundary": {
+    "after_source_review": "Only the separately authorized preparation stage may bind allowlisted existing source34/1442 inputs and reused references, preserve invalid records, and freeze code/input/environment/contract. Source binding is not performed or approved as already complete here.",
+    "actual_execution": "Actual fitting requires the subsequent separately queued execution unit after preparation/binding review and full freeze. There is one remaining batch of at most twelve jobs, 180 seconds per job and 1800 seconds per batch; no budget or deadline increase is authorized.",
+    "reporting": "Retain all folds, unfavorable outcomes, Brier/guard/support summaries, step drift/norm/rank/conditioning, costs and first failures. Seal all predictions and required artifacts before held event scoring. Do not rescue the same batch by changing cutoff, bins, weights, epochs or seeds after results."
+  },
+  "review_actions": {
+    "public_documents_and_aggregate_evidence_read": true,
+    "five_public_document_hashes_computed": true,
+    "actual_NPZ_raw_person_record_data_or_weights_access_or_hash": false,
+    "model_forward": false,
+    "gradient_computation": false,
+    "fitting": false,
+    "additional_literature_access_in_final_review": false,
+    "downloads": false,
+    "standalone_numerical_math_audit": false,
+    "old_dev_test_access_or_hash": false,
+    "root_documents_or_frozen_campaigns_modified": false,
+    "git_push": false,
+    "only_written_artifact": "research_reframe_v1/REVIEW.json"
+  }
+}

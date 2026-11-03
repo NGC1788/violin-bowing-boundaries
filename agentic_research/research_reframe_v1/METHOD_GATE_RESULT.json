@@ -1,0 +1,29 @@
+{
+  "status": "JUSTIFIED_TO_PREPARE_EXPLORATORY",
+  "date_kst": "2026-11-03",
+  "candidate_count": 3,
+  "core_primary_paper_count": 6,
+  "selected_candidates": [
+    "B: auxiliary-supervised probability-preserving parameter conditioning"
+  ],
+  "not_selected_as_main_novelty": [
+    "A: within-person future-order auxiliary supervision",
+    "C: fine-label supervision by itself"
+  ],
+  "actual_data_or_weights_access_or_hash": false,
+  "actual_fitting_jobs": 0,
+  "model_forwards": 0,
+  "gradient_computations": 0,
+  "standalone_math_audits": 0,
+  "dataset_model_paper_file_downloads": 0,
+  "old_dev_test_truth_access_or_hash": false,
+  "training_execution_authorized_by_this_written_unit": false,
+  "high_novelty_established": false,
+  "predictive_gain_established": false,
+  "remaining_actual_training_batches": 1,
+  "remaining_standalone_math_audits": 0,
+  "shared_ledger_unchanged_from_HEAD": true,
+  "review_blockers": 0,
+  "review_sha256": "2e8dda370664326df890547d7dcda882fe54b37a96b445f993c686ea995f780e",
+  "next_task": "null_conditioning_learning_v1 separate code/functional-test/review preparation; approved source binding/full contract freeze in preparation later phase; no actual fitting in preparation"
+}
