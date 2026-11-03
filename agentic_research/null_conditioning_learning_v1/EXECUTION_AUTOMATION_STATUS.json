@@ -1,0 +1,9 @@
+{
+  "automation_id": "ai",
+  "status": "PAUSED",
+  "rrule": "FREQ=MINUTELY;INTERVAL=30",
+  "saved_prompt_matches": true,
+  "prompt_sha256": "675d9753095206ca7c94aadad4e94fd4140c37faacc19a3e32255ee6072bafeb",
+  "verified_utc": "2026-11-03T01:50:32.411317+00:00",
+  "reason": "All three additional12job training batches used; final null operator failed fixed screen; saved-output independent review completed"
+}

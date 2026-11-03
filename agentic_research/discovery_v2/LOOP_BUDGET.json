@@ -219,6 +219,111 @@
         }
       ],
       "seconds": 82.4807412920054
+    },
+    {
+      "campaign": "null_conditioning_learning_v1",
+      "status": "COMPLETE_STOP_THIS_BATCH",
+      "freeze_sha256": "68f1b6c42339558f5e607405363cfa24befe93a9bf7ce50334886161d8a6ea11",
+      "started_utc": "2026-11-03T01:42:51.944530+00:00",
+      "jobs": [
+        {
+          "id": "job_0_main_only",
+          "fold": 0,
+          "method": "main_only",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 3.167843874951359
+        },
+        {
+          "id": "job_0_ordinary_matched",
+          "fold": 0,
+          "method": "ordinary_matched",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 3.1115336249931715
+        },
+        {
+          "id": "job_0_random_matched",
+          "fold": 0,
+          "method": "random_matched",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 4.219760499952827
+        },
+        {
+          "id": "job_0_null_conditioned",
+          "fold": 0,
+          "method": "null_conditioned",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 4.125935582967941
+        },
+        {
+          "id": "job_1_main_only",
+          "fold": 1,
+          "method": "main_only",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 4.076354374992661
+        },
+        {
+          "id": "job_1_ordinary_matched",
+          "fold": 1,
+          "method": "ordinary_matched",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 4.357760832994245
+        },
+        {
+          "id": "job_1_random_matched",
+          "fold": 1,
+          "method": "random_matched",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 5.287626792036463
+        },
+        {
+          "id": "job_1_null_conditioned",
+          "fold": 1,
+          "method": "null_conditioned",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 5.148295958002564
+        },
+        {
+          "id": "job_2_main_only",
+          "fold": 2,
+          "method": "main_only",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 5.243204208032694
+        },
+        {
+          "id": "job_2_ordinary_matched",
+          "fold": 2,
+          "method": "ordinary_matched",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 4.920688499987591
+        },
+        {
+          "id": "job_2_random_matched",
+          "fold": 2,
+          "method": "random_matched",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 4.98139725002693
+        },
+        {
+          "id": "job_2_null_conditioned",
+          "fold": 2,
+          "method": "null_conditioned",
+          "limit_seconds": 180,
+          "status": "COMPLETE",
+          "seconds": 4.979629624984227
+        }
+      ],
+      "seconds": 54.085115875001065
     }
   ],
   "math_audits_started": [

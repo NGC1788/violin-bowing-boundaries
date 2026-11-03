@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-11-03T01:47:10.722965+00:00",
+  "reviewer": "independent ai_direction_review agent",
+  "verdict": "INDEPENDENT_REPRODUCTION_PASS_STOP",
+  "blockers": [],
+  "freeze_sha256": "68f1b6c42339558f5e607405363cfa24befe93a9bf7ce50334886161d8a6ea11",
+  "results_sha256": "8d46c5efb3a2911fa7ca1b1f484b5c2188b8f2a0358a4b97247eead305534ceb",
+  "output_seal_sha256": "3ccd23e8eed030e462f5b7f7c86a09120f22716b7c4f019d5ec693f20f1df3b8",
+  "checks": {
+    "frozen_sources": 37,
+    "frozen_source_input_files": 8,
+    "sealed_output_artifacts": 60,
+    "job_receipts": 12,
+    "final_weight_archives_finite_schema_verified": 12,
+    "trace_files_verified": 12,
+    "completed_epochs_each_job": 40,
+    "total_fine_substeps": 7520,
+    "source_rows": 1442,
+    "source_people": 34,
+    "invalid_rows_retained": 15,
+    "before_any_row_truth_read": "runner.check plus complete OUTPUT_SEAL verification; final seal verification repeated after independent recomputation",
+    "train_quantile_thresholds_and_held_binary_events": "independently rebuilt with sorted linear interpolation and scalar comparisons from source targets/guard",
+    "row_order_and_reference_truth_alignment": "PASS after output seal",
+    "independent_scores": "scalar clipped Bernoulli log loss and squared error, per-person averaging then equal-person macro; all folds, maximum-person scores, nine-event vectors, outcome groups and saved private person vectors agree",
+    "independent_coherence": "2D finite differences and all-zero remainder, without production linear-solve metric",
+    "maximum_score_absolute_difference": 3.3306690738754696e-16,
+    "historical_reference_scores_reproduced": [
+      "markov",
+      "summary_hgb",
+      "joint_aux",
+      "mdn_aux",
+      "retrieval_erm",
+      "retrieval_random_delete",
+      "retrieval_adversarial_delete",
+      "retrieval_query_group_dro"
+    ],
+    "matched_initialization_preprocessing_minibatch_and_parameter_count": "PASS; all new arms7583parameters, shared full initial state, per-fold ordering/preprocessing hashes agree",
+    "weights_inspection_scope": "NPZ key/dtype/shape and finite-value validation only; no model loading, forward or gradient",
+    "null_maximum_logged_softmax_drift": 8.881784197001252e-16,
+    "null_maximum_logged_query_drift": 9.795851331701258e-16,
+    "maximum_logged_projector_residual": 2.8369523790432644e-15,
+    "norm_match_trace_summaries_and_stability_sentinels": "PASS; aggregate trace summaries only, not per-step reconstruction"
+  },
+  "reproduced_aggregate": {
+    "main_only": {
+      "log_loss": 0.5415892767265028,
+      "brier": 0.17963675548735078,
+      "maximum_person_loss": 0.8366826617313712,
+      "coherence_rate": 1.0
+    },
+    "ordinary_matched": {
+      "log_loss": 0.5461199814067336,
+      "brier": 0.1815841232022812,
+      "maximum_person_loss": 0.8202915734866326,
+      "coherence_rate": 1.0
+    },
+    "random_matched": {
+      "log_loss": 0.5384268143964324,
+      "brier": 0.17872817709361924,
+      "maximum_person_loss": 0.8355196466487352,
+      "coherence_rate": 1.0
+    },
+    "null_conditioned": {
+      "log_loss": 0.5410002162320638,
+      "brier": 0.17952847157168023,
+      "maximum_person_loss": 0.8358948543519875,
+      "coherence_rate": 1.0
+    },
+    "markov": {
+      "log_loss": 0.5420809264671536,
+      "brier": 0.18194311173340272,
+      "maximum_person_loss": 0.7056687399495652,
+      "coherence_rate": 1.0
+    },
+    "summary_hgb": {
+      "log_loss": 0.5817218347181454,
+      "brier": 0.1900004740550775,
+      "maximum_person_loss": 0.8484162116571008,
+      "coherence_rate": 0.11373092926490985
+    },
+    "joint_aux": {
+      "log_loss": 0.5417632561246704,
+      "brier": 0.18082325392561,
+      "maximum_person_loss": 0.8621046711993617,
+      "coherence_rate": 1.0
+    },
+    "mdn_aux": {
+      "log_loss": 0.5707511888091169,
+      "brier": 0.18386699507803939,
+      "maximum_person_loss": 0.8389734613859141,
+      "coherence_rate": 1.0
+    },
+    "retrieval_erm": {
+      "log_loss": 0.5348383195684011,
+      "brier": 0.1796204585086167,
+      "maximum_person_loss": 0.7635973273986522,
+      "coherence_rate": 1.0
+    },
+    "retrieval_random_delete": {
+      "log_loss": 0.5349644961641158,
+      "brier": 0.17966708682193858,
+      "maximum_person_loss": 0.7659981036211972,
+      "coherence_rate": 1.0
+    },
+    "retrieval_adversarial_delete": {
+      "log_loss": 0.5357666548922082,
+      "brier": 0.18008413611318683,
+      "maximum_person_loss": 0.7418794754088649,
+      "coherence_rate": 1.0
+    },
+    "retrieval_query_group_dro": {
+      "log_loss": 0.5339737947876262,
+      "brier": 0.17913759781868716,
+      "maximum_person_loss": 0.7725016434505451,
+      "coherence_rate": 1.0
+    }
+  },
+  "reproduced_fold_scores": {
+    "0": {
+      "main_only": {
+        "log_loss": 0.583924280677658,
+        "brier": 0.19711224036840702
+      },
+      "ordinary_matched": {
+        "log_loss": 0.5800736551259313,
+        "brier": 0.19576889530524846
+      },
+      "random_matched": {
+        "log_loss": 0.5833789468305922,
+        "brier": 0.1967782701345844
+      },
+      "null_conditioned": {
+        "log_loss": 0.5824640319124693,
+        "brier": 0.196443589449561
+      },
+      "markov": {
+        "log_loss": 0.5429572830484722,
+        "brier": 0.18173632556745045
+      },
+      "summary_hgb": {
+        "log_loss": 0.60094614466246,
+        "brier": 0.1960232149895096
+      },
+      "joint_aux": {
+        "log_loss": 0.5789609239142212,
+        "brier": 0.19574413478642302
+      },
+      "mdn_aux": {
+        "log_loss": 0.5740761694890824,
+        "brier": 0.19034646131709243
+      },
+      "retrieval_erm": {
+        "log_loss": 0.5568179557041548,
+        "brier": 0.18828318854469817
+      },
+      "retrieval_random_delete": {
+        "log_loss": 0.5574501255723884,
+        "brier": 0.18852347706712372
+      },
+      "retrieval_adversarial_delete": {
+        "log_loss": 0.5599301951884289,
+        "brier": 0.18966461342543772
+      },
+      "retrieval_query_group_dro": {
+        "log_loss": 0.5582798752892439,
+        "brier": 0.1886655965388584
+      }
+    },
+    "1": {
+      "main_only": {
+        "log_loss": 0.5832230590976765,
+        "brier": 0.19730573149880495
+      },
+      "ordinary_matched": {
+        "log_loss": 0.585569725020834,
+        "brier": 0.1980984612887619
+      },
+      "random_matched": {
+        "log_loss": 0.5742744458953848,
+        "brier": 0.19422140469958948
+      },
+      "null_conditioned": {
+        "log_loss": 0.5764836135304491,
+        "brier": 0.19507399580567844
+      },
+      "markov": {
+        "log_loss": 0.5865684302851383,
+        "brier": 0.20106396356295395
+      },
+      "summary_hgb": {
+        "log_loss": 0.6488714128414351,
+        "brier": 0.21303468022328262
+      },
+      "joint_aux": {
+        "log_loss": 0.5799187146749354,
+        "brier": 0.19696166705226614
+      },
+      "mdn_aux": {
+        "log_loss": 0.6287532318651736,
+        "brier": 0.2084433466014876
+      },
+      "retrieval_erm": {
+        "log_loss": 0.5778688944025091,
+        "brier": 0.1980586280420928
+      },
+      "retrieval_random_delete": {
+        "log_loss": 0.5775179766028024,
+        "brier": 0.19797377665002414
+      },
+      "retrieval_adversarial_delete": {
+        "log_loss": 0.5771365265957488,
+        "brier": 0.19794436972740834
+      },
+      "retrieval_query_group_dro": {
+        "log_loss": 0.5736822785766181,
+        "brier": 0.19655206334420558
+      }
+    },
+    "2": {
+      "main_only": {
+        "log_loss": 0.45377185368134154,
+        "brier": 0.142903614151108
+      },
+      "ordinary_matched": {
+        "log_loss": 0.4696298664625989,
+        "brier": 0.14959548827619987
+      },
+      "random_matched": {
+        "log_loss": 0.4535404929693055,
+        "brier": 0.14354393889750522
+      },
+      "null_conditioned": {
+        "log_loss": 0.46028356546414545,
+        "brier": 0.14553009147090298
+      },
+      "markov": {
+        "log_loss": 0.49663739728773026,
+        "brier": 0.16304784481216308
+      },
+      "summary_hgb": {
+        "log_loss": 0.49360028211014895,
+        "brier": 0.1603960050493101
+      },
+      "joint_aux": {
+        "log_loss": 0.46302852362216773,
+        "brier": 0.14840751622352144
+      },
+      "mdn_aux": {
+        "log_loss": 0.509121894102189,
+        "brier": 0.15222213493016962
+      },
+      "retrieval_erm": {
+        "log_loss": 0.46782995985892534,
+        "brier": 0.15173203802668808
+      },
+      "retrieval_random_delete": {
+        "log_loss": 0.46788123818913196,
+        "brier": 0.15169888036274196
+      },
+      "retrieval_adversarial_delete": {
+        "log_loss": 0.4680365574109725,
+        "brier": 0.15177247270378258
+      },
+      "retrieval_query_group_dro": {
+        "log_loss": 0.46774958681505097,
+        "brier": 0.1513289518711638
+      }
+    }
+  },
+  "reproduced_null_vs_matched_controls": {
+    "main_only": {
+      "relative_gain": 0.0010876516942864844,
+      "folds_better": 2
+    },
+    "ordinary_matched": {
+      "relative_gain": 0.009374799218080043,
+      "folds_better": 2
+    },
+    "random_matched": {
+      "relative_gain": -0.004779483054751399,
+      "folds_better": 1
+    }
+  },
+  "promoted_exploratory": [],
+  "null_operator_screen_pass": false,
+  "budget": {
+    "registered_batches_used": 3,
+    "registered_batches_allowed": 3,
+    "remaining_training_batches": 0,
+    "this_batch_jobs": 12,
+    "per_job_maximum_seconds": 5.287626792036463,
+    "results_pre_finalization_seconds": 54.05963629100006,
+    "final_ledger_seconds": 54.085115875001065,
+    "worker_limit_seconds": 1800,
+    "all_jobs_within180seconds": true,
+    "deadline_met": true,
+    "additional_execution_authorized": false
+  },
+  "scientific_conclusion": "The finite auxiliary null-step preservation check passed, but the predeclared empirical operator screen failed. Null conditioning improves log loss by about0.199percent versus Markov and0.109percent versus matched main-only, but is about0.478percent worse than the matched random projection and wins only one of three folds against it. No learned-method improvement or novelty claim is established by this batch.",
+  "limitations": [
+    "This is an independent reproduction of stored calculations, not an independent replication dataset or retraining run. All34people/1442source recordings were historically exposed.",
+    "One fixed seed per method across three participant folds does not quantify training-seed variability; folds are not three independent datasets.",
+    "Logged near-machine-precision drift supports the frozen substep implementation. It does not guarantee subsequent optimization, population generalization, arbitrary-input floating-point preservation or superiority.",
+    "Outcome-group metrics reweight participants within each group and are conditional summaries, not additive contributions to the overall participant-macro score.",
+    "All matched new arms have the same parameter count and fine supervision, but four arms do not isolate fine-label necessity; historical reference resource differences remain.",
+    "Final weights were checked for finite values and declared schema only. No prohibited model forward was performed to regenerate predictions.",
+    "All three allowed additional training batches are exhausted. Stop this branch; do not rescue it through new seeds, settings, training or budget changes."
+  ],
+  "constraints": {
+    "new_actual_fits": 0,
+    "model_forwards": 0,
+    "gradients": 0,
+    "configuration_searches": 0,
+    "standalone_numerical_audits": 0,
+    "old_dev_test_accessed_or_hashed": false,
+    "raw_audio_accessed": false,
+    "code_or_contract_or_input_modified": false,
+    "saved_result_recalculation_only": true,
+    "new_files": [
+      "agentic_research/null_conditioning_learning_v1/EXECUTION_REVIEW.json"
+    ]
+  }
+}

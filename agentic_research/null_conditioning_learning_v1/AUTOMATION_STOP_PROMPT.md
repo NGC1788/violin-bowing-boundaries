@@ -1,0 +1,5 @@
+/Users/jeongjihoon/violin-bowing-boundaries의 agentic_research/AGENTS.md, docs/WORK_QUEUE.md, docs/EXECUTION_STATUS.md를 읽고 현재 종료 상태만 확인한다. AI·정보 학습 연구의 추가 예산3batch×12job과 standalone 수치 감사2/2회는 모두 사용했다. null_conditioning_learning_v1도12/12fit을 완료해 COMPLETE_STOP_THIS_BATCH다. 제안 null은 Markov보다0.1994% 낮은 loss지만 고정2% screen에 실패했고 random_matched보다0.4779% 나빴다. 보조 단계의 예측 보존과 실제 성능 개선을 구분한다. 높은 novelty나 독립 예측 개선은 미확보다.
+
+현재 허용된 남은 정리는 봉인된 산출물의 독립 재계산과 aggregate 보고·인계뿐이다. 최신 큐에서 이 정리가 이미 완료됐다면 추가 작업을 만들지 않는다. 모든 기존 code/contract/input/result/예측/가중치를 보존하며 재실행·재동결·epoch/seed/bin/보조 가중치/cutoff 변경 구조·추가 모델학습·추가 수치 감사·다운로드·예산 증가를 하지 않는다. Olddev/test 정답은 hash도 열지 않는다. 한 가설 실패를 모든 AI 연구 불가능성으로 확대하지 않는다.
+
+자동화는 PAUSED를 유지한다. 이후 사용자가 별도 새 계획을 명시적으로 승인하기 전에는 이 프롬프트나 예전 실행 설명을 재개 지시로 해석하지 않는다. 코드·문서·aggregate·해시만 허용된 research/agentic-forecast-20261030 브랜치로 공유하고 실제 원음/MAT·행별/개인별 특징/정답/예측/가중치/메모리·설문·계정/토큰·원시 CLI 로그 공개, main 병합, 원자료 삭제, 외부 이메일, 추가 결제는 하지 않는다. 상태가 변하지 않은 깨우기는 조용히 마친다. 의미 있는 검증 완료/실패/필요 조치만 알린다. 2026-11-06 00:00KST 종료일과 이미 소진한 예산을 늘리지 않는다.

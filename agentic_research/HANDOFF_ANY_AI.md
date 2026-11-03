@@ -1,5 +1,7 @@
 # 공동연구 인계 프롬프트 — Claude·Codex·기타 AI 공통
 
+**현재 상태 — 2026-11-03 고정12학습·독립 재계산 완료, 이번 탐색 STOP:** [null 결과](null_conditioning_learning_v1/RESULTS.md)까지 완료했다. 제안 null loss0.541000 대 Markov0.542081로0.1994% 개선에 그쳐2% screen 실패, random0.538427보다0.4779% 나빴다. 보조 단계의 확률 보존은 확인됐으나 성능 성공이 아니다. 독립 재계산 오차 최대3.33e-16, 승격0개다. [종료 기록](null_conditioning_learning_v1/CLOSURE.md), [독립 검토](null_conditioning_learning_v1/EXECUTION_REVIEW.json). 추가 학습3/3batch·수치 감사2/2회 소진으로 자동화는 **PAUSED**이며 현재 예산의 미완료 실험은 없다. 높은 novelty와 독립 예측 개선은 미확보다. 모든 원결과/가중치를 보존하며 아래 준비·run 명령이나 과거 자료 수를 현재 작업으로 해석하지 않는다.
+
 **2026-11-02 최종 상태:** 공개 바이올린 원음 51명/2168녹음의 고정 12개 비교와 시험 1회 평가까지 완료·STOP이다. Markov 0.552413 대비 offset 0.664192로 손실이 20.23% 높아 개선은 미입증이다. `violin_raw_v1/RESULTS.md`, `FINAL_AUDIT.json`, `docs/WORK_QUEUE.md` 최상단을 읽는다. 자동화 `ai`는 PAUSED다. 아래 원음 준비/실행기 대기 지시는 이전 이력이다. 완료한 train/evaluate/prepare를 반복하거나 동결 파일·점수·test를 변경하지 않는다.
 
 **2026-10-30 추가 인계:** 현재 다음 행동과 로컬 미커밋 작업은 [CLAUDE_NEXT.md](CLAUDE_NEXT.md)에 갱신했다. projection 보완 v2는 이미 완료/종료했고, 저장 MAT 대신 raw WAV에서 시간 지지가 명확한 입력을 만드는 준비 단계다. 아래의 보완 검증 대기·MAT 후속 계획을 그대로 실행하지 않는다. v3 결과와 기존 금지 사항은 유지한다.

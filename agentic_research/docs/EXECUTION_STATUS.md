@@ -1,5 +1,13 @@
 # 실제 실행 현황 — 2026-10-30
 
+## 2026-11-03 고정12개 학습·독립 재계산까지 완료 — 추가 학습 예산 소진 STOP
+
+`null_conditioning_learning_v1`을 한 번 실행해12/12fit 완료, ledger54.085116초/결과 기록 직전54.059636초다. Markov0.542081 대 main_only0.541589(+0.0907%),ordinary0.546120(−0.7451%),random0.538427(+0.6741%),null0.541000(+0.1994%)로 고정2% screen 승격0개다. null은 random보다0.4779% 나쁘고 이긴 fold도1개뿐이므로 제안 연산의 추가 이득도 실패했다. Null 보조 step의 query drift는 최대9.80e-16이어서 구현상 보존과 예측 성능을 구분했다. [전체 결과](../null_conditioning_learning_v1/RESULTS.md), [원 점수](../null_conditioning_learning_v1/RESULTS.json).
+
+독립 검토가37소스/8입력/60봉인 산출물/12receipt·weights·trace와7520fine substep을 확인했다. Source targets/guard에서 scalar event·log loss·Brier·person macro·fold·coherence·reference를 독립 재계산해 최대 차이3.33e-16이었다. [검토](../null_conditioning_learning_v1/EXECUTION_REVIEW.json). Invalid15개 유지, olddev/test 정답 read/hash0, 새 reference fit/다운로드/추가 수치 감사0이다. 함수 수준 train/prefix 분리이며 source는 역사적으로 노출된 탐색이다. 조건별 macro는 조건 내 재가중이므로 전체 loss의 가산분해가 아니다.
+
+추가 학습3/3batch·standalone 수치 감사2/2회를 사용했다. **자동화 PAUSED**, 저장 프롬프트 일치까지 확인했다. [설정 기록](../null_conditioning_learning_v1/EXECUTION_AUTOMATION_STATUS.json). 마지막 batch와 독립 검토·종료 정리까지 마쳤으므로 현재 예산의 다음 미완료 실험은 없다. [이번 AI 탐색 종료 기록](../null_conditioning_learning_v1/CLOSURE.md). 높은 novelty/독립 성능 개선은 아직 확보하지 못했다. 같은 batch의 epoch/seed/bin/보조 가중치/cutoff 변경 구조·재실행·재동결·조용한 예산 증가를 하지 않는다. 이것은 모든 AI/후속 연구의 불가능성 판정이 아니다. 아래 선점과 실행 대기는 완료 이력이다.
+
 ## 2026-11-03 함수보존 conditioning 준비·전체동결·독립 검토 완료
 
 `null_conditioning_learning_v1`의30개 합성 기능시험과 독립 소스 검토 뒤8개 source-only 입력/37소스/전체계약을 동결했다. 원train34명1442개·invalid15개/행정렬/참가자 분리/미래 support와 SD 재구성,3fold train-only 통계·fine/coarse 라벨·가중치·73prefix 변환의 독립 재계산이 모두 일치했다. [준비 결과](../null_conditioning_learning_v1/PREPARATION_RESULT.json), [동결](../null_conditioning_learning_v1/FREEZE.json), [동결 검토](../null_conditioning_learning_v1/FREEZE_REVIEW.json). 실제 model fit/실제자료 forward/새 score/참조 refit/다운로드/추가 standalone 수치 감사0이다. Olddev/test 정답은 hash도 열지 않았다. Synthetic gradient/유한 step 기능시험은 수행했으며 실제 성능 증거로 해석하지 않는다.

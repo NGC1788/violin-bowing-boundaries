@@ -1,5 +1,7 @@
 # 함수보존 conditioning: 실행 전 준비
 
+**실행 완료 — STOP:** 아래 준비를 마친 뒤 고정12개 실제 학습과 독립 재계산까지 완료했다. null은 Markov보다0.1994% 낮은 loss지만2% screen 미달이며 random보다0.4779% 나빴다. 추가 step 예측 보존만 확인됐고 제안 성능 가설은 기각이다. [결과](RESULTS.md), [독립 검토](EXECUTION_REVIEW.json), [이번 탐색 종료 기록](CLOSURE.md). 마지막 학습 batch까지 사용했으므로 아래 준비·실행 명령은 이력이며 재실행하지 않는다.
+
 AI 학습 방법 후보의 반증 실험이다. 미래 변동량을 prefix에서 예측하며 바이올린은 적용 자료다. [서면 가설/직접 선행/한계](../research_reframe_v1/README.md)를 먼저 읽는다. 선형 null-space 투영은 기존 원리이며 높은 novelty나 실제 성능 개선은 아직 없다.
 
 ## 같은 모델에서 추가 step만 비교
