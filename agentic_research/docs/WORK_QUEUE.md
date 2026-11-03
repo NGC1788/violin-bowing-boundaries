@@ -1,5 +1,17 @@
 # 유한 연구 작업 큐 — 2026-10-30
 
+## 2026-11-03 함수보존 conditioning 준비·전체동결·독립 검토 완료
+
+`null_conditioning_learning_v1`의30개 합성 기능시험과 독립 소스 검토 뒤8개 source-only 입력/37소스/전체계약을 동결했다. 원train34명1442개·invalid15개/행정렬/참가자 분리/미래 support와 SD 재구성,3fold train-only 통계·fine/coarse 라벨·가중치·73prefix 변환의 독립 재계산이 모두 일치했다. [준비 결과](../null_conditioning_learning_v1/PREPARATION_RESULT.json), [동결](../null_conditioning_learning_v1/FREEZE.json), [동결 검토](../null_conditioning_learning_v1/FREEZE_REVIEW.json). 실제 model fit/실제자료 forward/새 score/참조 refit/다운로드/추가 standalone 수치 감사0이다. Olddev/test 정답은 hash도 열지 않았다. Synthetic gradient/유한 step 기능시험은 수행했으며 실제 성능 증거로 해석하지 않는다.
+
+**다음 미완료 한 단위는 [고정12개 실제 학습](../null_conditioning_learning_v1/NEXT_EXECUTION_GATE.md)**이다. `.venv-mac/bin/python -m agentic_research.null_conditioning_learning_v1.runner check` 뒤 full-freeze review·state·실제 process/lock을 확인해 한 번만 `...runner run`한다. 같은 모델7583parameter의 main_only/ordinary_matched/random_matched/null_conditioned×3fold,40epoch/batch64/seed0/CPUfloat64,job180초/worker1800초다. 기존 reference 예측은 재사용하고 새fit0. Parent가12개 산출물60개를 봉인한 뒤 held 사건을 채점한다. 첫 실패/timeout은 전체 STOP이며 마지막1batch를 atomic ledger에서 소비한다. 재시드/epoch/bin/보조 가중치/cutoff 변경 구조는 하지 않는다. 같은 캠페인의 state가 이미 있으면 재실행하지 않는다.
+
+기존 Markov/HGB 대비2%·최소2fold screen과 null의 세 matched arm 각각 대비 전체/최소2fold 이득을 유지한다. 보존 성공은 예측 성공이 아니고 source는 반복 노출 탐색이다. 새 정보/용량·고전 null-space 원리·최초·높은 novelty를 주장하지 않는다. Worker는 source 전체 라벨을 검증하므로 train/prefix 분리는 함수 수준이며 OS 보안 격리가 아니다. 자동화 상태는 [설정 기록](../null_conditioning_learning_v1/AUTOMATION_STATUS.json)에 남긴다. 아래의 준비 선점/‘최신’/실행 대기는 과거 이력이다.
+
+## 2026-11-03 현재 선점: 함수보존 conditioning 코드·계약 준비
+
+`/root`가 `null_conditioning_learning_v1`의 실제 planning.lock을 보유한다. 새 model/label/loader/controller/실행기·합성 기능시험을 구현하고 별도 검토한다. 코드 승인 전 실제 NPZ·행별 자료·가중치 접근/hash0, 승인 뒤 같은 준비 단위 후반의 source-only binding·전체 계약 동결까지 진행한다. 이번 단위 실제fit0이며 다른 작업자는 중복 준비/worker를 시작하지 않는다. 이전 STOP은 그대로다.
+
 ## 2026-11-03 새 가설 서면 검토 완료 — 다음은 코드 준비만
 
 사용자 재개 요청 뒤 `research_reframe_v1`에서 세 축·직접 선행6개를 검토했다. **함수보존 conditioning B만 CODE PREP ONLY**다. [수식](../research_reframe_v1/METHOD.md), [직접 선행](../research_reframe_v1/PRIOR_REVIEW.md), [결정](../research_reframe_v1/DECISION.md), [독립 검토](../research_reframe_v1/REVIEW.json). 선형 adapter의 실제 추가 step을 nullspace로 제한하면 해당 단계의 coarse 확률이 보존되지만, W는 새 정보/용량을 추가하지 않으며 이후 예측 개선·높은 novelty는 미입증이다. 현재 서면 단위 fit/forward/gradient/실제 자료·가중치 접근/hash/다운로드/추가 수치 감사0, 남은 실제 학습1batch와 종료일은 그대로다. 이전 donor의 부정 결과와 NO_JUSTIFIED 판정은 그 분기의 이력으로 보존한다.

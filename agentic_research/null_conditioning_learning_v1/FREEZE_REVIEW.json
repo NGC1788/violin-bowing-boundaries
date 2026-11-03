@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-11-03T01:37:38.080577+00:00",
+  "reviewer": "independent ai_direction_review agent",
+  "verdict": "APPROVE_FIXED_EXECUTION",
+  "blockers": [],
+  "freeze_sha256": "68f1b6c42339558f5e607405363cfa24befe93a9bf7ce50334886161d8a6ea11",
+  "authorization_scope": "Only the frozen four-arm by three-fold 12-job batch and its prescribed post-OUTPUT_SEAL evaluation in the next separately queued execution unit; maximum180seconds/job,1800seconds/batch, deadline2026-11-06T00:00:00+09:00. No run was invoked by this reviewer. No source/contract/input changes, retries, old dev/test use, pre-seal or off-contract scoring, or budget extension are authorized.",
+  "checks": {
+    "frozen_chain_sources_versions_review_tests_and_receipt": "PASS",
+    "source_files_bound": 37,
+    "approved_input_files_independently_hashed": 8,
+    "source_rows": 1442,
+    "source_people": 34,
+    "invalid_rows_retained": 15,
+    "row_ids_unique_and_order_digest_matches": true,
+    "fold_assignment_independently_rebuilt": true,
+    "future_support_guard_and_continuous_targets_independently_reconstructed": true,
+    "train_only_statistic_quantile_fine_label_prefix_auxiliary_and_weight_reconstruction": [
+      {
+        "fold": 0,
+        "train_rows": 932,
+        "held_rows": 510,
+        "people_disjoint": true,
+        "train_only_statistics_and_labels_match": true,
+        "held_prefix_transform_matches": true,
+        "receipt_bindings_match": true
+      },
+      {
+        "fold": 1,
+        "train_rows": 977,
+        "held_rows": 465,
+        "people_disjoint": true,
+        "train_only_statistics_and_labels_match": true,
+        "held_prefix_transform_matches": true,
+        "receipt_bindings_match": true
+      },
+      {
+        "fold": 2,
+        "train_rows": 975,
+        "held_rows": 467,
+        "people_disjoint": true,
+        "train_only_statistics_and_labels_match": true,
+        "held_prefix_transform_matches": true,
+        "receipt_bindings_match": true
+      }
+    ],
+    "reference_predictions_checked": "Schema, probability range/shape, shared-reference equality and HGB fold row order only; no reference truth array was loaded, no scores were computed.",
+    "historical_reference_truth_read": false,
+    "unstarted_batch_and_one_remaining_registered_budget": true,
+    "execution_review_required_before_runner_or_child_start": true,
+    "exact_fixed_job_order": [
+      {
+        "fold": 0,
+        "method": "main_only"
+      },
+      {
+        "fold": 0,
+        "method": "ordinary_matched"
+      },
+      {
+        "fold": 0,
+        "method": "random_matched"
+      },
+      {
+        "fold": 0,
+        "method": "null_conditioned"
+      },
+      {
+        "fold": 1,
+        "method": "main_only"
+      },
+      {
+        "fold": 1,
+        "method": "ordinary_matched"
+      },
+      {
+        "fold": 1,
+        "method": "random_matched"
+      },
+      {
+        "fold": 1,
+        "method": "null_conditioned"
+      },
+      {
+        "fold": 2,
+        "method": "main_only"
+      },
+      {
+        "fold": 2,
+        "method": "ordinary_matched"
+      },
+      {
+        "fold": 2,
+        "method": "random_matched"
+      },
+      {
+        "fold": 2,
+        "method": "null_conditioned"
+      }
+    ]
+  },
+  "limitations": [
+    "This review verifies input and execution binding, not real training runtime or scientific effectiveness. There were zero actual model forwards, gradients or fits in this review.",
+    "Source34/1442 data are historically exposed exploratory material. The three source folds are participant-disjoint but do not constitute a newly untouched test set.",
+    "The loader validates the full authorized source arrays; train-only statistic slicing and prefix-only prediction arguments are functional leakage controls, not an OS sandbox.",
+    "Historical reference truth and scores were deliberately not evaluated in preparation. Their truth alignment and score reproduction remain mandatory after all twelve parent-pinned outputs are sealed.",
+    "Classical exact-arithmetic null-step preservation and a matched exploratory comparison do not establish novelty, later-step invariance or improved generalization.",
+    "The campaign must stop on first integrity/numerical/timeout failure, preserve partial artifacts and report all arms; passing source binding creates no permission to tune or rescue the frozen contract."
+  ],
+  "constraints": {
+    "actual_fitting_jobs": 0,
+    "actual_model_forwards": 0,
+    "actual_gradients": 0,
+    "new_scores_computed": 0,
+    "reference_truth_arrays_read": false,
+    "old_dev_test_read_or_hashed": false,
+    "raw_audio_read": false,
+    "freeze_modified": false,
+    "code_contract_or_inputs_modified": false,
+    "runner_run_invoked": false
+  }
+}

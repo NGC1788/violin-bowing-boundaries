@@ -1,0 +1,176 @@
+{
+  "status": "REQUIRES_INDEPENDENT_REVIEW_THEN_SOURCE_BINDING",
+  "model_config": {
+    "status": "PROPOSED_NOT_EXECUTION_APPROVED",
+    "scope_now": "synthetic preparation, no actual fits",
+    "methods": [
+      "main_only",
+      "ordinary_matched",
+      "random_matched",
+      "null_conditioned"
+    ],
+    "future_blocks": [
+      23,
+      23
+    ],
+    "future_frames": 46,
+    "minimum_voiced": 23,
+    "input_dimension": 73,
+    "prefix_features": "60 clipped normalized summaries + 11 inner-train-threshold prefix-state indicators + 2 unclipped normalized log1p prefix moments",
+    "hidden_width": 32,
+    "hidden_layers": 2,
+    "activation": "GELU",
+    "regimes": 2,
+    "generator": "shared latent mixture; separately predicted future initial-mask logits; per-block binary transition rows; per-channel zero-sum block contrast; per-channel scale; future level integrated out in projected contrast likelihood",
+    "scale_range_normalized_units": [
+      0.05,
+      3.0
+    ],
+    "contrast_bound_normalized_units": 3.0,
+    "mask_probability_epsilon": 0.0001,
+    "mdn_log_std_location_bound": 5.0,
+    "mdn_log_std_scale_range": [
+      0.05,
+      3.0
+    ],
+    "loss": "unchanged nine-query BCE +0.1 common path/mask auxiliary, then separate weighted conditional-fine SGD substep",
+    "auxiliary_weight": 0.1,
+    "probability_clipping": 1e-06,
+    "optimizer": {
+      "name": "AdamW",
+      "learning_rate": 0.001,
+      "weight_decay": 0.001,
+      "gradient_norm_clip": 5.0
+    },
+    "epochs": 40,
+    "batch_size": 64,
+    "seed": 0,
+    "dtype": "CPUfloat64",
+    "stopping": "fixed40epochs, checkpoint final; no held stopping; first numerical/timeout/integrity failure stops batch",
+    "source_folds": "existing source34 people/1442 recordings,3folds; historically exposed exploratory",
+    "maximum_actual_jobs_if_later_frozen": 12,
+    "max_seconds_per_job": 180,
+    "max_seconds_per_batch": 1800,
+    "deadline_kst": "2026-11-06T00:00:00+09:00",
+    "primary_score": "participant-macro mean9query clipped log loss, include invalid15rows; same source folds/threshold provenance as prior baseline",
+    "promotion_screen": "at least2percent lower primary score than strongest Markov/HGB baseline and improvement in at least2of3folds; exploratory only; all controls/failures reported",
+    "baseline_recheck": "future runner must match saved source Markov/HGB evaluation with inner-train preprocessing before new comparative claims",
+    "new_training_allowed_now": false,
+    "new_math_audits_allowed": false,
+    "old_dev_test_truth_access_allowed": false,
+    "path_label_normalization": "inner-train pooled within-record contrast scale; no between-note level variance; future centering is labels only, never inference input",
+    "invariance_scope": "auxiliary target likelihood conditional on fixed future mask is invariant to per-record per-channel constant shifts; not a claim of raw audio or network-input invariance",
+    "fine_classes": 65,
+    "fine_auxiliary_weight": 0.1,
+    "fine_learning_rate": 0.001,
+    "fine_optimizer": "plain SGD, no momentum/decay/clipping; project actual displacement, fine head ordinary SGD",
+    "projection_rtol": 1e-10,
+    "projection_relative_residual_limit": 1e-08,
+    "preservation_probability_atol": 1e-10,
+    "maximum_adapter_frobenius_norm": 10000.0,
+    "maximum_adapter_condition": 100000000.0,
+    "random_basis_seed_offset": 9173,
+    "norm_matching": "each arm own current null proposal norm; denominator or target exactly zero gives zero applied step",
+    "fine_bins": "innertrain-valid octiles, quantile method linear, existing quartiles inserted at positions2/4/6, > counts, invalid64",
+    "fine_objective": "conditional CE within true coarse fibre, no coarse/fine truth inference input",
+    "architecture": "same encoder/generator/free_head initialization; identity bias-free linear32x32 adapter, fine linear32to65; common generator branches from encoder u"
+  },
+  "expected_rows": 1442,
+  "expected_people": 34,
+  "expected_invalid": 15,
+  "fold_rows": [
+    510,
+    465,
+    467
+  ],
+  "fold_people": [
+    12,
+    11,
+    11
+  ],
+  "pinned_path_results_sha256": "1ecbdc1b0b97168594e2ae0c64d27a43748c2a7b8f7af677a32c14e8ba0a9451",
+  "pinned_discovery_results_sha256": "dfc38a89b0e077eaaf9ec60aa47e2afd4660db7ce82fc5b2d8fe8d1590929f3f",
+  "max_jobs": 12,
+  "max_job_seconds": 180,
+  "max_worker_seconds": 1800,
+  "deadline_kst": "2026-11-06T00:00:00+09:00",
+  "log_every_epochs": 10,
+  "eval_chunk_size": 64,
+  "job_order": [
+    {
+      "fold": 0,
+      "method": "main_only"
+    },
+    {
+      "fold": 0,
+      "method": "ordinary_matched"
+    },
+    {
+      "fold": 0,
+      "method": "random_matched"
+    },
+    {
+      "fold": 0,
+      "method": "null_conditioned"
+    },
+    {
+      "fold": 1,
+      "method": "main_only"
+    },
+    {
+      "fold": 1,
+      "method": "ordinary_matched"
+    },
+    {
+      "fold": 1,
+      "method": "random_matched"
+    },
+    {
+      "fold": 1,
+      "method": "null_conditioned"
+    },
+    {
+      "fold": 2,
+      "method": "main_only"
+    },
+    {
+      "fold": 2,
+      "method": "ordinary_matched"
+    },
+    {
+      "fold": 2,
+      "method": "random_matched"
+    },
+    {
+      "fold": 2,
+      "method": "null_conditioned"
+    }
+  ],
+  "baseline_policy": {
+    "markov": "reuse sealed source all_predictions, new fits0",
+    "hgb": "reuse sealed source all_predictions, new fits0",
+    "joint_aux_and_mdn_aux": "reuse same sealed source all_predictions, historical controls not newly refitted",
+    "expected_score_tolerance": 1e-12,
+    "representation": "all new arms73derived and7583 parameters; historical parametric4414 joint/MDN, raw60clip8 HGB; no inference memory; new fine supervision matched across new arms only",
+    "retrieval": "reuse sealed four donor-arm source predictions, no refit"
+  },
+  "failure_policy": "first job failure/timeout stops entire batch; preserve partialweights/predictions/receipts; no promotion of incomplete batch",
+  "evaluation": "parent seals all12 predictions/weights/traces/stats/receipts before held event scoring; no in-training held scoring",
+  "refitting_or_external_weights": false,
+  "new_math_audits": false,
+  "old_dev_test_truth_access": false,
+  "public_outputs": "aggregates/code/hashes only; row/people predictions/weights/traces private",
+  "fitting_authority": "FREEZE.json execution_authorized=true plus active atomic job registration; embedded model_config false flags retain preparation provenance",
+  "budget_clock": "parent child-process per-job watchdog and whole-worker SIGALRM; teardown grace2s is charged and cannot produce successful overbudget job",
+  "pinned_parent_results_sha256": "66dbf1b1cc109a6de53a10938d55bee57a403df4b3300d06e30dfbb3f2ea7bd0",
+  "prospective_choices": {
+    "retain_main": "same40epoch/batch64/seed0/AdamW1e-3/decay1e-3/clip5/commonaux0.1 settings",
+    "fine_sgd": "proposal1e-3/weight0.1 retained; no optimizer-state mixing; not tuned on source input or scores",
+    "projection": "relative SVD cutoff1e-10, residual1e-8, finite float64 probability drift1e-10; no step correction/rescue",
+    "stability": "adapter norm1e4 and condition1e8 are failure sentinels, not post-update regularizers"
+  },
+  "null_operator_screen": "Markov/HGB2percent and2fold screen, plus strictly better overall and>=2folds than each of the three matched arms",
+  "fine_label_identification_limit": "four arms do not isolate fine-label necessity; no fifth arm",
+  "new_training_allowed_in_preparation": false,
+  "pinned_donor_results_sha256": "df1fa0114e0163277cb595c61cfc83c9616bceb445a1ded47fe6e557e399aae1"
+}

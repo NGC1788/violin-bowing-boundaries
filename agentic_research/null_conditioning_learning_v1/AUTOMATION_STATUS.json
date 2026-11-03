@@ -1,0 +1,9 @@
+{
+  "automation_id": "ai",
+  "status": "ACTIVE",
+  "rrule": "FREQ=MINUTELY;INTERVAL=30",
+  "saved_prompt_matches": true,
+  "prompt_sha256": "d80844103770eab9f93653412ae9edee85dce3006e60f71015431083ddcbc948",
+  "verified_utc": "2026-11-03T01:40:25.069819+00:00",
+  "scope": "Next separate unit: full-freeze check and fixed12 run once, or saved-output review if already attempted; no re-preparation/rescue"
+}

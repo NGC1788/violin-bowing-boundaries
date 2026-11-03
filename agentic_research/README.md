@@ -1,5 +1,7 @@
 # 활현 AI 연구: 재현 가능한 미래 예측과 에이전트 루프
 
+**현재 상태 — 2026-11-03 구현·누수 검증·전체동결 완료:** [null conditioning](null_conditioning_learning_v1/README.md)의 합성 기능시험30개와 별도 소스 검토를 통과했다. 원train34명1442개·invalid15개,8입력/37소스/전체계약을 동결했고 별도 검토자가 행정렬·사람분할·3fold의 train-only 통계/label/73prefix를 독립 재계산해 일치했다. [준비 결과](null_conditioning_learning_v1/PREPARATION_RESULT.json), [동결 검토](null_conditioning_learning_v1/FREEZE_REVIEW.json). 실제 모델 학습/실제자료 model forward/새 채점은0이다. 다음은 **[고정12개 실제 학습의 한 번 실행](null_conditioning_learning_v1/NEXT_EXECUTION_GATE.md)**이다. `.venv-mac/bin/python -m agentic_research.null_conditioning_learning_v1.runner check` 후 state·다른 worker가 없을 때만 같은 module의 `run`을 한 번 실행한다. 준비를 반복하거나 기존 STOP을 재개하지 않는다. 높은 novelty/예측 개선은 아직 미입증이며 마지막 학습1batch·12job/1800초/개별180초를 넘기지 않는다. 아래 ‘최신’·선점·대기 문구는 과거 이력이다.
+
 **현재 상태 — 2026-11-03 새 가설 서면 검토 완료:** 사용자 재개 요청 뒤 세 축과 핵심 직접 선행6개를 검토해 [함수보존 conditioning](research_reframe_v1/METHOD.md) 하나만 **코드 준비 후보**로 남겼다. 고정 readout 앞 adapter의 추가 단계는 현재 사건 확률을 보존하지만, 이후 학습 성능은 미검증이다. 새로운 정보·용량이나 새 투영 원리라고 주장하지 않는다. [결정](research_reframe_v1/DECISION.md), [독립 검토](research_reframe_v1/REVIEW.json), [다음 준비 작업](research_reframe_v1/NEXT_PREPARATION_GATE.md). 이번 서면 단위 새 fit/forward/gradient/실제 자료·가중치 열람/hash/다운로드/추가 수치 감사0이다. 기존 모든 STOP/부정 결과는 그대로이며 마지막 학습1batch·12job은 아직 미사용이다. 다음은 별도 `null_conditioning_learning_v1` 코드·기능시험·독립 검토·전체 계약 준비이며, 이 준비에서는 실제 학습하지 않는다. 자동화의 실제 상태는 [설정 기록](research_reframe_v1/AUTOMATION_STATUS.json)을 확인한다. 아래 ‘최신’ 문구와 실행 대기는 모두 과거 이력이다.
 
 ## 과거 작업 이력

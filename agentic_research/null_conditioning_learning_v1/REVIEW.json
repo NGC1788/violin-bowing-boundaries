@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-11-03T01:33:35.973483+00:00",
+  "reviewer": "independent ai_direction_review agent",
+  "verdict": "APPROVE_TO_FREEZE_SOURCE_INPUTS",
+  "blockers": [],
+  "authorization_scope": "Source/contract review, approved source-input binding and preparation freeze() sealing only. No actual fitting or training execution, old dev/test access, extra numerical audit or budget increase is authorized by this review. A separately approved FREEZE_REVIEW.json and the next execution unit are required before actual fitting.",
+  "source_sha256": {
+    "agentic_research/exact_count_runner_v1/AGENTS.md": "6c8cc3cba4135194cfb22c91592f651d6c4947a029c6a75add94c60e3fa8b711",
+    "agentic_research/exact_count_runner_v1/CONTRACT.json": "734d254b2c9728a384322db266d825e94c54f59065f9e165f196764c81e3b02c",
+    "agentic_research/exact_count_runner_v1/data.py": "c1792d15db470d64aa2d2cf3db0bf257839cf624eb59972526961b6abdcfcfce",
+    "agentic_research/exact_count_runner_v1/control.py": "9771f87238dbbb5c1244ba82bce76d182f9335d6193284585b530f6dc6b8f1af",
+    "agentic_research/exact_count_runner_v1/job.py": "36703428f468c39bdaaa93561cce547a8d55297be2db8c1fd3dfd011d4ff2fdc",
+    "agentic_research/exact_count_runner_v1/runner.py": "9858fd5a6a55c8ef992e0ebee5496c93b6b5bfa2bef5f3bbab08f1d46aa083d1",
+    "agentic_research/exact_count_runner_v1/test_runner.py": "1367de1effe300ef2a7e9ec2c025f3faa5c2f883e282a4db1b9c9dd49223f0a2",
+    "agentic_research/exact_count_learning_v1/AGENTS.md": "d4726c59eb35c511dcd6f6272cb5ab5550a45b1bf44afd26ee947ec9f2b66637",
+    "agentic_research/exact_count_learning_v1/CONTRACT_PROPOSAL.json": "0c02133a9385b3ef91fd2acdb7597931abf0d2b7ff0128d88f348648cb360d51",
+    "agentic_research/exact_count_learning_v1/model.py": "0edb31a422d5987bb47a02036b837a009447281469ec8a2cc3cb05484f3cf5a1",
+    "agentic_research/exact_count_learning_v1/preprocess.py": "9c131ddc96bb8150f454b452b97edc91519e0dc98c274c47468545cd554d26f3",
+    "agentic_research/exact_count_learning_v1/test_model.py": "3516d9b9c1094d87d3ade0f0f4c913d4b532da4dfde9f298cdbdbcfa38b9ad34",
+    "agentic_research/exact_count_learning_v1/INVARIANT_OBJECTIVE.md": "c0ce9fd38bc4a20f3c2032dbed2f77d0064550257271babb6ebde0ba7fb66a31",
+    "agentic_research/exact_count_learning_v1/readiness.py": "7fd80e7b60ea91906344c45b30f1dd79cf49e9552807a0a1a7974515b69c88e8",
+    "agentic_research/discovery_v3_math/decoder.py": "8383d9b8ce68203800fc730eb5bf8a0f1a1908f874eff12054369e9a2f957824",
+    "agentic_research/violin_raw_v1/data.py": "79b3d1c997741d82fe560f9ec12842f3889441be24fde7434833c8b6ccbf3c3d",
+    "agentic_research/violin_raw_v1/models.py": "1ef41dbf750541c8073fd497113363d1d27ae4e5b8b9f6b2564b7e26bffa3325",
+    "agentic_research/violin_raw_v1/metrics.py": "7e2e0d394562ad45a83ce14ee3def71e70f10e679f006855cee25295162e6369",
+    "agentic_research/donor_deletion_learning_v1/.gitignore": "04e59f5cc75e578a7492cd2c14ddf16487d1af09e188a7cc01224a61b1b3855f",
+    "agentic_research/donor_deletion_learning_v1/AGENTS.md": "35da687bdecd5cfe2e408faff936e3945075dd4ae99d3068a8063d5208a35f47",
+    "agentic_research/donor_deletion_learning_v1/CONTRACT.json": "13b7e26d1bd7c49c736cdf699e30b8dcc3dd32ce95cda6bb624d0b7bf83a7370",
+    "agentic_research/donor_deletion_learning_v1/model.py": "b9efe8ea4cd91b93e61cfc9277f99a62fdc22ae695f51b07c6545888dddc2e52",
+    "agentic_research/donor_deletion_learning_v1/data.py": "74bf5bb1a61638d57911a4fca445b581391d8ae3c716320e23a295a4e05414fa",
+    "agentic_research/donor_deletion_learning_v1/control.py": "2d46f5107e642948be754eb1baeb2ec2da0de05d33c4ff062d84166aae41765b",
+    "agentic_research/donor_deletion_learning_v1/job.py": "4ade3b0e3ac2bc8dade8b4fe7c134bb6f4edfdd603f570de220aa59454aa9203",
+    "agentic_research/donor_deletion_learning_v1/runner.py": "50bb90aaa76cee1050e4cb62963c358c7895afe2ff43e7e2f3f62beb73ffae49",
+    "agentic_research/donor_deletion_learning_v1/test_runner.py": "7317541e68098469559e7b8b4bd9260f26e16116b75ce0719d24d8b5a82a4152",
+    "agentic_research/null_conditioning_learning_v1/.gitignore": "7fe900632e902dce612cbd13a9bc389da711fdf2f341d9edc6fff158b76e8486",
+    "agentic_research/null_conditioning_learning_v1/AGENTS.md": "58d19d22bec3da8ddb4e9465e1004db10b4d9b77d14f91007b9f108d2554ff7c",
+    "agentic_research/null_conditioning_learning_v1/CONTRACT.json": "0a206042c84818a10d5760905f3c4f38256b92b6a07b646216ea83edcc9fb970",
+    "agentic_research/null_conditioning_learning_v1/model.py": "fa082e77fabf505a98f2d978c28459d4bead081258cb817e46337c5959663021",
+    "agentic_research/null_conditioning_learning_v1/data.py": "6aa38dc3f70f9ee9368ded5a7088cc9a4706a9b121fc624e9ea8a6e9c48948c8",
+    "agentic_research/null_conditioning_learning_v1/control.py": "03ae030d92452eecae9a20cdbf99c4b6ad8ef9c76d2fa58d1752955e243875f7",
+    "agentic_research/null_conditioning_learning_v1/job.py": "bb280dc10bb312e315c720e5fe6783aa0e6b140a313bf77cd333487f8fad5feb",
+    "agentic_research/null_conditioning_learning_v1/runner.py": "a0781bf64d526fd58808c141d101ede31925e70ee2207755e6d4b52eecfa5520",
+    "agentic_research/null_conditioning_learning_v1/test_runner.py": "c20388a8e4658d548b1c570ef77a78808678b727c5a1015430e4e4de5a5468b1",
+    "agentic_research/null_conditioning_learning_v1/test_model.py": "97b9deff1f880c9d7041a3f05be699bf671cac7fc2ff230fed6768348d6c64e1"
+  },
+  "independent_functional_tests": {
+    "command": ".venv-mac/bin/python -m pytest --import-mode=importlib agentic_research/null_conditioning_learning_v1/test_model.py agentic_research/null_conditioning_learning_v1/test_runner.py -q -p no:cacheprovider",
+    "exit_code": 0,
+    "passed": 30,
+    "failed": 0,
+    "reported_seconds": 1.6,
+    "scope": "Synthetic arrays/models, temporary synthetic artifacts and mocked refusal/timeout paths only; no actual data training or standalone numerical audit."
+  },
+  "public_metadata_validation": {
+    "passed": true,
+    "source_files": 37,
+    "input_allowlist_entries": 8,
+    "public_metadata_entries": 27,
+    "unit_test_record_matches_sources": true,
+    "actual_input_hashes_computed": false
+  },
+  "findings": [
+    {
+      "id": "finite_step_projection",
+      "status": "PASS",
+      "detail": "Fine optimizer is explicit plain SGD without momentum, decay or clipping. The proposed actual finite adapter displacement is projected on the left with I-pinv(H A) H A. Encoder output is detached, readout and common generator are untouched, no post-adapter activation or corrective normalization occurs. In exact arithmetic H A W and coarse probabilities are preserved by this one null auxiliary step; A W itself can change by a common logit row."
+    },
+    {
+      "id": "common_generator_and_parameter_partition",
+      "status": "PASS",
+      "detail": "The common path/mask generator branches from encoder u, not W u. The fine head is excluded from main optimizer parameters; the auxiliary substep updates only W and the fine head. Synthetic tests verify all other state tensors and common-generator outputs remain unchanged."
+    },
+    {
+      "id": "matched_controls",
+      "status": "PASS",
+      "detail": "All four arms share 7583 trainable parameters, initial state, main objective, fine targets, schedule and minibatch generator. Ordinary and random arms use their own current null-proposal norm, not another arm state. Random basis is independently seeded and dimension 32-rank(H A). Zero target or zero projected denominator yields zero. Main-only still trains its fine head but applies zero auxiliary adapter displacement."
+    },
+    {
+      "id": "fine_fibre_and_train_only_statistics",
+      "status": "PASS",
+      "detail": "Inner-train valid future SD octiles are fitted after train slicing, with original strict quartiles inserted. The greater-than bin convention maps 64 valid cells plus invalid class to the original ten patterns, including a 29-class all-zero fibre. Fine conditional CE restricts to the known training coarse fibre, never an inference input. Repeated fine cuts, boundary ties and all-zero/invalid fibres are covered by synthetic tests."
+    },
+    {
+      "id": "leakage_contract",
+      "status": "PASS_WITH_LIMIT",
+      "detail": "Trainer arguments contain train labels plus held prefix only; prediction_inputs reads no held future values. Poisoning held future arrays leaves training tensors, preprocessing, fine statistics and prefix predictions unchanged in synthetic tests. Authorized prefix changes may change forecasts and authorized training fine-label changes affect the fine loss/gradient. The worker does load and validate all source arrays before slicing, so this is audited functional separation rather than operating-system capability isolation."
+    },
+    {
+      "id": "historical_correspondence",
+      "status": "PASS",
+      "detail": "Constructor creation order preserves historical encoder/generator/free_head initialization; identity W reproduces historical joint_aux forecasts and common auxiliary output in a synthetic equality test. Actual execution checks sealed preprocessing, shared-initialization and minibatch-order digests. Markov, HGB, joint_aux, mdn_aux and four retrieval references are reused with zero new reference fits. Historical references have different parameter/supervision/representation resources, disclosed in CONTRACT; operator attribution is primarily among matched new arms."
+    },
+    {
+      "id": "execution_and_budget",
+      "status": "PASS",
+      "detail": "Stale code review blocks input binding. A matching APPROVE_FIXED_EXECUTION freeze review is required before run input checks/ledger START and again in the child. Atomic ledger registration consumes attempted batches/jobs, rejects duplicates and concurrent workers, and stops on first failure. Parent launch/watchdog/pinning and whole-worker alarms enforce the fixed 12-job, 180-second/job, 1800-second/batch and deadline limits; teardown grace is charged and cannot yield successful overbudget completion. Synthetic tests cover refusal, pending alarms, termination/kill/reaping and private output paths."
+    },
+    {
+      "id": "sealed_evaluation",
+      "status": "PASS",
+      "detail": "Parent pins twelve ordered predictions, weights, traces, stats and receipts before held event scoring; evaluate_complete first validates the full batch seal. Reference truth alignment and original reference scores are checked only after the seal. Mutation and incomplete-seal rejection are tested. Invalid rows are retained and scores are participant-macro; source outcomes are historically exposed exploratory evidence."
+    },
+    {
+      "id": "publication_and_scope",
+      "status": "PASS",
+      "detail": "Actual arrays, predictions, weights, row/person losses, traces and logs remain under private local/. Review itself accessed public source/metadata only. Existing STOPs and frozen predecessors were read-only; no actual source binding, training, Git action, literature expansion or budget modification was performed."
+    }
+  ],
+  "scientific_limits": [
+    "The projector identity is classical and the conditioning hypothesis is exploratory, not an established novel method or improvement.",
+    "Exact finite-step preservation applies with fixed encoder/readout in ideal arithmetic. SVD truncation, residual checks and observed-batch drift tests do not prove a uniform finite-precision error bound for arbitrary unbounded inputs.",
+    "No guarantee extends to subsequent primary AdamW steps, whole-training risk or generalization. This is function-preserving parameter conditioning, not added coarse function capacity or newly acquired information.",
+    "Four arms do not isolate the necessity of correct fine labels. Their own-state norm matching controls current auxiliary step magnitude without forcing equal magnitudes across diverged arms.",
+    "The exploratory screen requires improvement over Markov/HGB and all matched new controls, but does not by itself require beating every historical neural/retrieval reference. Report those comparisons and resource differences regardless of screen outcome.",
+    "Actual input validity, runtime feasibility and output integrity have not been independently audited here; source binding and the subsequent execution review remain necessary."
+  ],
+  "constraints": {
+    "actual_npz_or_row_person_arrays_read": false,
+    "actual_predictions_or_weights_read": false,
+    "actual_inputs_hashed": false,
+    "old_dev_test_accessed_or_hashed": false,
+    "actual_training_jobs": 0,
+    "additional_numerical_audits": 0,
+    "additional_literature_accesses": 0,
+    "freeze_or_run_invoked": false,
+    "changed_files": [
+      "agentic_research/null_conditioning_learning_v1/REVIEW.json"
+    ]
+  }
+}

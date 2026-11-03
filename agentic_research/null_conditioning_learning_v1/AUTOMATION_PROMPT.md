@@ -1,0 +1,17 @@
+/Users/jeongjihoon/violin-bowing-boundaries에서 agentic_research/AGENTS.md, docs/WORK_QUEUE.md, docs/EXECUTION_STATUS.md, discovery_v2/LOOP_BUDGET.json을 읽고 최신 큐의 다음 미완료 한 단위를 수행한다. AI·정보의 새 학습 방법과 공정한 미래 예측이 주 목표이며 바이올린은 적용 자료다. 실제 process·planning/worker lock·선점·Git·local/state를 확인해 중복하지 않는다. 최신 완료 기록이 아래 설명보다 우선하며 완료한 준비를 반복하지 않는다.
+
+기존 query/forecast/projection/raw/correction/discovery/math/beam/exact_count_runner_v1/donor_deletion_learning_v1/donor_postmortem_v1은 완료·STOP이다. 기존 code/contract/input/result를 변경·재실행·재동결·구조하지 않는다. Donor 최선 queryDRO의 Markov 대비1.4956% 개선은 고정2% screen 미달이고 제안 adversarial은 ERM보다.1736% 나빴다. 확률 민감도가 줄었다는 것으로 주 예측 성공을 주장하지 않는다. Standalone 수치 감사2/2는 소진했으며 추가 감사/설정 탐색을 하지 않는다.
+
+research_reframe_v1의3축·직접 선행6개·독립 검토에서 B만 코드 준비 대상으로 남겼다. null_conditioning_learning_v1의 최신 PREPARATION_RESULT.json, FREEZE.json, FREEZE_REVIEW.json, NEXT_EXECUTION_GATE.md를 확인한다. 준비·전체동결·별도 동결 검토가 완료됐을 때 현재 다음은 **고정12개 실제 학습**이다. 준비가 미완료라면 최신 큐의 blocker만 처리하고 실행으로 건너뛰지 않는다. 코드/입력을 재동결하지 않는다.
+
+전체 준비가 완료된 뒤 `.venv-mac/bin/python -m agentic_research.null_conditioning_learning_v1.runner check`로 소스/환경/8개 입력/계약/검토 봉인을 확인한다. FREEZE_REVIEW의 APPROVE_FIXED_EXECUTION·blocker0·freeze hash도 맞아야 한다. 새 state/결과가 없고 다른 worker가 없을 때만 같은 module의 `run`을 한 번 실행한다. 이미 state가 있으면 같은 batch를 재실행하지 않는다. RUNNING은 실제 process/lock을 확인해 기존 실행만 관찰한다. Orphan/중단도 소비된 시도이며 초기화하지 않는다. 완료/실패면 저장 산출물 독립 검토·기록으로 넘어간다.
+
+네 arm main_only/ordinary_matched/random_matched/null_conditioned×source3fold12job,40epoch/batch64/seed0/CPUfloat64를 고정했다. 같은73prefix/encoder/identity W/coarse10head/u 분기 common aux/65finehead와 초기값/label/minibatch/주 손실을 사용한다. 추가 plain SGD step은 φ/A/G를 고정하고 실제 변화량을 투영하며 각 arm 자신의 null 제안 norm에 맞춘다. 일반/무작위 arm과 실제 norm이 항상 같다는 주장은 하지 않는다. Fine label은 train-only octile이고 future guard/mask/center/target은 추론 입력이 아니다. Invalid15개를 유지하고 모든 문턱/scaler/priors/label bin은 innertrain만 사용한다. Olddev/test 정답은 hash도 열지 않는다. Worker의 전체 source 파일 열람/검증은 함수 수준의 train/prefix 분리이며 OS 보안 격리라는 주장은 하지 않는다.
+
+공유 ledger의 마지막 실제 학습1batch만 남았으며 최대12job/1800초/개별180초다. 시작/실패도 atomic budget ledger에 먼저 소비한다. 첫 실패/timeout은 batch STOP이며 불완전 비교를 승격하지 않는다. Epoch/seed/bin/보조 가중치/learning rate/cutoff/안정성 한도를 바꿔 같은 batch를 구조하거나 예산을 늘리지 않는다. Parent가 모든12개 prediction/weight/trace/stat/receipt60개를 고정한 뒤에만 held 사건을 채점한다. Markov/HGB/joint_aux/MDN/retrieval은 sealed reference 예측만 재사용하고 새 refit0이다. 과거 head의 추가 감독/구조/표현/parameter 차이와 계산비도 공개한다.
+
+주 평가는 사람 macro9query log loss다. Markov/HGB 대비2%·최소2fold screen과 null의 세 matched arm 각각 대비 전체/최소2fold 이득을 완화하지 않는다. 보존 시험만 성공하거나 다른 arm이 좋아진 것을 null 방법 성공으로 바꾸지 않는다. Fine label 필요성·일반 OGD/HNC 우월성은 이4arm으로 식별되지 않는다. 고전 null-space/선형 factorization/auxiliary 원리를 새 발명으로 주장하지 않는다. 현재 확률 보존은 해당 추가 단계에만 해당하며 새 정보/용량이나 이후 학습 위험 보장이 아니다. Source는 역사적으로 노출된 탐색이고 독립 확증이 아니다.
+
+완료/실패 후 원예측·가중치·영수증·봉인·점수/강한 기준선 재현을 독립 검토하고, 최악 사람·fold·Brier·outcome/사건별·step drift/norm/rank/conditioning·비용·실패를 보존한다. 마지막 batch가 사용되면 학습 예산 소진으로 자동화를 일시중지한다. 저장 산출물 검토는 가능하지만 새 fitting/standalone 수치 감사는 없다. 결과가 좋지 않다고 새 설정이나 모델을 추가하지 않는다.
+
+추가 결제/유료API/계정 변경/새 다운로드는 하지 않는다. Claude가 꼭 필요하면 한 번 가용성을 확인하고429 실패 및 Codex/manual 전환을 기록한다. 코드·문서·합성/aggregate·해시만 research/agentic-forecast-20261030 브랜치로 공유한다. 실제 원음/MAT·행별/개인별 특징/정답/예측/가중치/메모리·설문·계정/토큰·원시 CLI 로그 공개, main 병합, 원자료 삭제, 외부 이메일은 금지다. 근거·실패·판정·다음 한 작업을 EXECUTION_STATUS/WORK_QUEUE에 남긴다. 변화 없는 healthy/RUNNING 깨우기는 조용히 끝내고 의미 있는 완료/실패/필요 조치만 알린다. 2026-11-06 00:00KST, 예산 소진, 정당한 후속 부재 또는 사용자 중단 시 자동화를 일시중지하고 성과와 한계를 정리한다. 높은 novelty나 성능을 보장하지 않는다.
