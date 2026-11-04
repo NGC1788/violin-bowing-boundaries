@@ -92,3 +92,32 @@ abl3_share	2238	751	1487	1448	0.84
 abl3_joint_share_noloose	2296	774	1522	1498	0.7
 abl3_noloose_noski	2467	808	1659	1602	0.85
 abl3_cover_only	2441	802	1639	1615	0.92
+v26_open	2382	857	1525	1460	0.69
+v26_open_k8	2404	870	1534	1455	0.69
+b3_ski0.632	2237	766	1471	1447	0.72
+b3_ski0.75	2220	750	1470	1430	0.69
+b3_dual0.25	2263	761	1502	1449	0.71
+b3_dual0.4	2258	748	1510	1447	0.87
+b3_dual0.5	2220	697	1523	1405	0.83
+b3_dual0.6	2243	697	1546	1399	0.75
+v27_adapt	2236	751	1485	1448	0.74
+v28_bsweep	2980	933	2047	1447	0.72
+v28_bsweep2	2456	848	1608	1449	0.78
+v29_gate	2829	1062	1767	1463	0.9
+v29b_gate2x	2374	766	1608	1447	0.85
+v29c_gate4x	2238	751	1487	1448	0.82
+v29d_gate1.5x	2976	1039	1937	1460	0.9
+v29e_gate3x	2327	760	1567	1537	0.91
+v30_gate_top	ERROR	/evolve_v4/colab_eval.py", line 70, in main     raise RuntimeError(f"case {index}: {results[index]['error']}") RuntimeError: case 4: UnboundLocalError: cannot access local variable 'cbv' where it is not associated with a value [candidate line 266: tb = np.where(blocked, ca + cbv[:, None], 10 ** 6)] 
+v30b_gate2x_top	ERROR	/evolve_v4/colab_eval.py", line 70, in main     raise RuntimeError(f"case {index}: {results[index]['error']}") RuntimeError: case 4: UnboundLocalError: cannot access local variable 'cbv' where it is not associated with a value [candidate line 266: tb = np.where(blocked, ca + cbv[:, None], 10 ** 6)] 
+v30_gate_top	2907	1246	1661	1484	0.86
+v30b_gate2x_top	2261	732	1529	1465	0.82
+v31_adapt	2364	727	1637	1525	0.78
+v32_adapt_mono	2349	749	1600	1502	0.69
+general	2349	749	1600	1502	0.78
+gab_noadapt	2829	1062	1767	1463	0.89
+gab_nogate	2238	751	1487	1448	0.73
+gab_nocover	4360	1755	2605	1430	0.97
+gab_noloose	2449	789	1660	1544	0.79
+gab_noski	2508	759	1749	1661	1.04
+gab_noseed	2492	763	1729	1474	0.76
