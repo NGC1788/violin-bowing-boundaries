@@ -768,6 +768,8 @@ def run_instance(inst, T, cfg, checks=False):
     g = greedy_eval(T, tabs) if cfg.get("greedy", True) else dict(reads=None, overflow=True,
                                                                   skipped=True)
     row["lb_greedy"] = dict(g, seconds=time.time() - t)
+    if g["overflow"]:  # an overflowed walk returns a meaningless partial sum: never report it
+        row["lb_greedy"]["reads"] = None
     row.update(optimum(T, tabs, cfg, None if g["overflow"] else g["reads"]))
     if "dense" in row:
         assert abs(row["dense"]["optimal"] - row["optimal"]) < 1e-9, (row["dense"], row["optimal"])
@@ -818,6 +820,7 @@ def instances(R, K, n, pool, start=0, part=(0, 1)):
         if (got - 1) % part[1] != part[0]:
             continue
         yield inst, T, skipped
+        del inst, T  # release this instance's tables before building the next (R=12: ~2.5 GB each)
 
 
 def _reads(row, name):
@@ -828,7 +831,15 @@ def _reads(row, name):
 
 
 def summarise(rows, names):
-    avg = dict(n=len(rows), n_optimal_exact=sum(bool(r.get("optimal_exact")) for r in rows))
+    """Averages over instances whose optimum was solved or bounded; instances where even the
+    truncated search overflowed are counted in n_bounds_failed and left out of the averages."""
+    failed = [r["i"] for r in rows if not np.isfinite(r.get("optimal_hi", np.nan))]
+    all_n = len(rows)
+    rows = [r for r in rows if r["i"] not in failed]
+    if not rows:
+        return dict(n=0, n_total=all_n, n_bounds_failed=len(failed), failed_instances=failed)
+    avg = dict(n=len(rows), n_total=all_n, n_bounds_failed=len(failed), failed_instances=failed,
+               n_optimal_exact=sum(bool(r.get("optimal_exact")) for r in rows))
     for key in ("optimal", "optimal_lo", "optimal_hi", "minimax", "hindsight"):
         vals = [r[key] for r in rows if r.get(key) is not None]
         if len(vals) == len(rows):
@@ -881,6 +892,10 @@ def merge(keys=None):
     for key, ps in sorted(groups.items()):
         if len(ps) == 1:
             data[key] = ps[0]
+            st = ps[0]["settings"]
+            if "config" in st:  # recompute with the current summarise()
+                names = policy_variants(st["config"].get("policies", list(POLICIES)))
+                data[key]["average"] = summarise(ps[0]["instances"], names)
             continue
         rows = sorted((r for p in ps for r in p["instances"]), key=lambda r: r["i"])
         st = dict(ps[0]["settings"])
@@ -947,6 +962,7 @@ def run_size(R, K, n, cfg, start=0, tag=None, part=(0, 1)):
     names_v = policy_variants(cfg.get("policies", list(POLICIES)))
     for inst, T, skipped in instances(R, K, n, pool, start, part):
         row = run_instance(inst, T, cfg, checks=not rows)
+        del T
         rows.append(row)
         pol = " ".join(f"{k}={_reads(row, k).get('reads', float('nan')):.3f}" for k in row["policies"])
         print(f"[R{R}K{K} {inst['i']:3d}] {inst['kind']:14s} opt=[{row.get('optimal_lo', float('nan')):.4f},"
@@ -1061,10 +1077,14 @@ def report(path=OUT):
         st = data[k]["settings"]
         return (st["K"], st["R"], "check" in k)
 
-    for key in sorted((k for k in data if not k.endswith("_check") or k == "R5_K2_check"), key=order):
+    for key in sorted((k for k in data if (not k.endswith("_check") or k == "R5_K2_check")
+                       and not k.startswith("split_") and "attempt" not in k), key=order):
         d = data[key]
         st, av = d["settings"], d["average"]
         n = av["n"]
+        if n == 0:
+            lines.append(f"| 2×{st['R']}×{st['K']} | 0/{av['n_total']} | 실패 | - |" + " - |" * (len(cols) + 1))
+            continue
         exact = av.get("n_optimal_exact") == n
         if exact:
             opt = f"{av['optimal']:.3f}"
@@ -1091,9 +1111,10 @@ def report(path=OUT):
               f"{g / av['optimal_hi']:.3f}~{g / av['optimal_lo']:.3f}" if g and "optimal_lo" in av
               else "-") if g else "-"
         tag = " (재현)" if "check" in key else ""
-        lines.append(f"| 2×{st['R']}×{st['K']}{tag} | {n} | {opt}{'' if exact else ' (구간)'} | {hs} | "
+        ns = f"{n}" if not av.get("n_bounds_failed") else f"{n}/{av['n_total']} (실패 {av['n_bounds_failed']})"
+        lines.append(f"| 2×{st['R']}×{st['K']}{tag} | {ns} | {opt}{'' if exact else ' (구간)'} | {hs} | "
                      + " | ".join(cells) + f" | {gs} |")
-    lines += ["", paired(data), "", validation(data)]
+    lines += ["", paired(data), "", split_table(data), "", validation(data)]
     return "\n".join(lines)
 
 
@@ -1101,11 +1122,13 @@ def paired(data):
     """Per size: evolved (+k0) vs seed on the same instances (wins / losses / undecided) and the
     mean per-instance ratio; intervals count as a win only if they do not overlap."""
     names = ["distilled+shim", "p25_t21+shim+k0", "p12_t9+shim+k0"]
-    lines = ["| 크기 | " + " | ".join(f"{n} vs seed (이김/짐/미정, 평균 비)" for n in names) + " |",
-             "|---|" + "---|" * len(names)]
-    for key in sorted((k for k in data if not k.endswith("_check")),
+    lines = ["| 크기 | seed/최적 (사례별 비 평균 ± 표준오차) | "
+             + " | ".join(f"{n} vs seed (이김/짐/미정, 평균 비)" for n in names) + " |",
+             "|---|---|" + "---|" * len(names)]
+    for key in sorted((k for k in data if not k.endswith("_check") and not k.startswith("split_")
+                       and "attempt" not in k),
                       key=lambda k: (data[k]["settings"]["K"], data[k]["settings"]["R"])):
-        rows = data[key]["instances"]
+        rows = [r for r in data[key]["instances"] if np.isfinite(r.get("optimal_hi", np.nan))]
         st = data[key]["settings"]
         cells = []
         for n in names:
@@ -1123,7 +1146,29 @@ def paired(data):
                     u += 1
                 rat.append(a["reads"] / b["reads"])
             cells.append(f"{w}/{l}/{u}, {np.mean(rat):.3f}" if rat else "-")
-        lines.append(f"| 2×{st['R']}×{st['K']} | " + " | ".join(cells) + " |")
+        sr = [_reads(r, "seed+shim")["reads"] / r["optimal"] for r in rows
+              if "reads" in _reads(r, "seed+shim") and r.get("optimal")]
+        se = f"{np.mean(sr):.3f} ± {np.std(sr, ddof=1) / np.sqrt(len(sr)):.3f}" if len(sr) > 1 else "-"
+        lines.append(f"| 2×{st['R']}×{st['K']} | {se} | " + " | ".join(cells) + " |")
+    return "\n".join(lines)
+
+
+def split_table(data):
+    """Expected reads given the final certificate decision (True = some rule passes)."""
+    keys = sorted((k for k in data if k.startswith("split_")),
+                  key=lambda k: (data[k]["settings"]["K"], data[k]["settings"]["R"]))
+    if not keys:
+        return ""
+    who = ["optimal", "seed", "distilled", "p25_t21", "p12_t9"]
+    lines = ["| 크기 | 사례 | P(참) | " + " | ".join(f"{w} 참/거짓" for w in who) + " |",
+             "|---|---|---|" + "---|" * len(who)]
+    for k in keys:
+        d = data[k]
+        av, st = d["average"], d["settings"]
+        cells = [f"{av[w]['reads_given_true']:.2f}/{av[w]['reads_given_false']:.2f}" if w in av else "-"
+                 for w in who]
+        lines.append(f"| 2×{st['R']}×{st['K']} | {st['n']} | {av['optimal']['p_true']:.3f} | "
+                     + " | ".join(cells) + " |")
     return "\n".join(lines)
 
 
