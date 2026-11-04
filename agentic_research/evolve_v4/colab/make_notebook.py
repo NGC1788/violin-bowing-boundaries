@@ -16,7 +16,10 @@ CELLS = [
 - 계정마다 `RUN_ID`와 `SEED`를 다르게 주세요(예: acct1/1, acct2/2, acct3/3).
 - 끝나면 드라이브의 `ledger.sqlite`를 내려받아 맥으로 가져오면 됩니다.
 
-런타임 → 런타임 유형 변경 → **GPU(A100 또는 H100 권장)** 로 설정한 뒤 위에서부터 차례로 실행하세요."""),
+**사용법:** 런타임 → 런타임 유형 변경 → **GPU(A100 또는 H100 권장)** → 아래 설정 칸의 `RUN_ID`·`SEED`만 바꾸고 → **런타임 → 모두 실행**.
+- 드라이브 연결 창이 뜨면 허용을 눌러야 다음 칸으로 넘어갑니다.
+- 설치 뒤 "세션 다시 시작" 안내가 떠도 **누르지 마세요**(모델은 별도 프로세스라 필요 없음).
+- 진화는 백그라운드로 `HOURS` 동안 돕니다. 진행 상황 칸은 아무 때나 다시 실행해서 볼 수 있고, 탭은 가능하면 열어 두세요."""),
     ("code", """# ===== 설정 (계정마다 바꾸기) =====
 RUN_ID = "acct1"      # acct1 / acct2 / acct3
 SEED = 1              # 1 / 2 / 3
@@ -115,9 +118,13 @@ for row in db.execute("SELECT id, island, score, totals, substr(idea,1,110) FROM
     print(" ", row)
 print(subprocess.run(["tail", "-n", "8", f"{RUN_DIR}/engine.log"], capture_output=True, text=True).stdout)
 print("engine running:", ENGINE.poll() is None)"""),
-    ("code", """# 끝내기: 진행 중인 작업만 마치고 멈춤 (원장은 드라이브에 그대로 남음)
-open(f"{RUN_DIR}/STOP", "w").close()  # engine also backs up the ledger to Drive when it stops
-print("STOP 파일 생성 — 몇 분 안에 멈춥니다. 다시 시작하려면 STOP 파일을 지우고 엔진 칸을 실행하세요.")"""),
+    ("code", """# 끝내기: 멈추고 싶을 때만 아래 False를 True로 바꾸고 이 칸만 실행 ('모두 실행' 때는 아무 일도 안 함)
+STOP_NOW = False
+if STOP_NOW:
+    open(f"{RUN_DIR}/STOP", "w").close()  # engine finishes jobs in flight, backs up the ledger, then exits
+    print("STOP 파일 생성 — 몇 분 안에 멈춥니다.")
+else:
+    print("진화 진행 중. 멈추려면 STOP_NOW = True 로 바꾸고 이 칸을 실행하세요.")"""),
 ]
 
 
