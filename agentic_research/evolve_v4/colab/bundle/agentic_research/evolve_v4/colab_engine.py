@@ -196,7 +196,49 @@ def context_length(base_url, model):
         return None
 
 
+# Claude API mutator (official Anthropic SDK). Per 1M tokens: input, output, cache write (5 min), cache read;
+# Anthropic list prices as of 2026-10-06. Unknown claude-* ids are refused so spend always has a known bound.
+CLAUDE_PRICES = {"claude-opus-5-5": (4.0, 20.0, 5.0, 0.20), "claude-sonnet-5-5": (2.0, 10.0, 2.5, 0.20),
+                 "claude-haiku-5-5": (0.10, 0.50, 0.125, 0.01)}
+FALLBACK_PRICE = (5.0, 25.0, 6.25, 0.50)  # conservative rate if a declined request was rerun on another model
+SPEND = dict(usd=0.0, calls=0, path=None, lock=threading.Lock())
+
+
+def claude_cost(model, usage, fell_back):
+    p_in, p_out, p_cw, p_cr = FALLBACK_PRICE if fell_back else CLAUDE_PRICES[model]
+    return (usage.input_tokens * p_in + usage.output_tokens * p_out
+            + (usage.cache_creation_input_tokens or 0) * p_cw + (usage.cache_read_input_tokens or 0) * p_cr) / 1e6
+
+
+def post_claude(model, prompt, max_tokens, effort, timeout):
+    import anthropic
+    split = prompt.find("\n## Parent p")  # task text + library source are identical across calls: cache them
+    kwargs = dict(model=model, max_tokens=max_tokens, output_config={"effort": effort},
+                  messages=[{"role": "user", "content": prompt[split:] if split > 0 else prompt}],
+                  betas=["server-side-fallback-2026-07-01"], fallbacks="default")
+    if split > 0:
+        kwargs["system"] = [{"type": "text", "text": prompt[:split], "cache_control": {"type": "ephemeral"}}]
+    client = anthropic.Anthropic(timeout=timeout, max_retries=3)
+    with client.beta.messages.stream(**kwargs) as stream:
+        message = stream.get_final_message()
+    usage = message.usage
+    fell_back = any(getattr(i, "type", "") == "fallback_message" for i in (getattr(usage, "iterations", None) or []))
+    with SPEND["lock"]:
+        SPEND["usd"] += claude_cost(model, usage, fell_back)
+        SPEND["calls"] += 1
+        if SPEND["path"]:
+            Path(SPEND["path"]).write_text(json.dumps(dict(usd=round(SPEND["usd"], 4), calls=SPEND["calls"],
+                                                           model=model)))
+    if message.stop_reason == "refusal":
+        raise RuntimeError(f"refusal: {message.stop_details}")
+    text = "".join(b.text for b in message.content if b.type == "text")
+    tin = usage.input_tokens + (usage.cache_read_input_tokens or 0) + (usage.cache_creation_input_tokens or 0)
+    return text, tin, usage.output_tokens
+
+
 def post_chat(base_url, model, prompt, max_tokens, effort, timeout=1800, context=None):
+    if model.startswith("claude-"):
+        return post_claude(model, prompt, max_tokens, effort, timeout)
     if context:  # use the whole window: reasoning models need room to think AND to write the code
         max_tokens = max(4096, min(max_tokens, context - int(len(prompt) / 2.5) - 1024))
     body = dict(model=model, messages=[{"role": "user", "content": prompt}],
@@ -271,7 +313,18 @@ class Engine:
         except OSError:
             raise SystemExit("another engine is already running in this run dir")
         self.log = open(self.dir / "engine.log", "a")
-        self.context = context_length(a.base_url, a.model)
+        self.reserve = 0.0
+        if a.model.startswith("claude-"):
+            if a.model not in CLAUDE_PRICES or not a.budget_usd:
+                raise SystemExit("claude models need a known price and --budget-usd")
+            SPEND["path"] = self.dir / "claude_spend.json"
+            if SPEND["path"].exists():  # the budget is cumulative over restarts of this run dir
+                old = json.loads(SPEND["path"].read_text())
+                SPEND["usd"], SPEND["calls"] = old["usd"], old["calls"]
+            self.reserve = a.max_tokens * CLAUDE_PRICES[a.model][1] / 1e6 + .1  # worst case of one call in flight
+            self.context = None
+        else:
+            self.context = context_length(a.base_url, a.model)
         self.say(f"start model={a.model} effort={a.effort} context={self.context}")
         self.load_population()  # loads only the starting programs not yet in the ledger (safe to resume)
 
@@ -457,6 +510,10 @@ class Engine:
             while True:
                 stop = any((Path(d) / "STOP").exists() for d in (self.dir, self.a.backup_dir) if d) \
                     or time.time() > deadline
+                if self.a.budget_usd and SPEND["usd"] + (len(inflight) + 2) * self.reserve > self.a.budget_usd:  # +1 new job, +1 scientist
+                    if not stop:
+                        self.say(f"budget stop: spent ${SPEND['usd']:.2f} of ${self.a.budget_usd:.2f}")
+                    stop = True
                 if time.time() - last_backup > 300:
                     self.backup()
                     last_backup = time.time()
@@ -491,4 +548,5 @@ if __name__ == "__main__":
     ap.add_argument("--effort", default="medium")
     ap.add_argument("--diagnose-every", type=int, default=40)
     ap.add_argument("--migrate-every", type=int, default=60)
+    ap.add_argument("--budget-usd", type=float, default=0, help="hard spend cap for claude-* models")
     Engine(ap.parse_args()).run()
