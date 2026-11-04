@@ -21,3 +21,16 @@
   - (2) 연속 문턱 버전(law_continuous_v1, 현재 기록 1,216)에서도 같은 원리가 통하는지 본다.
   - (3) 이분 탐색 때문에 줄어드는 양을 간단한 상한으로 설명한다.
   - (4) 문헌을 더 넓게 찾는다. 이번에는 검색 1회만 했다.
+
+## 2차 조사 (2026-11-04 밤, 작업자 1명 웹검색; [기억]은 검색으로 확인 안 된 항목)
+- **가장 가까운 연구 3개**
+  1. 결정영역 판정(Decision Region Determination, DRD). Javdani et al. https://arxiv.org/abs/1402.5886 · DIRECT(Chen et al., AAAI 2015) https://ojs.aaai.org/index.php/AAAI/article/view/9694 · Adaptive Submodular Ranking https://arxiv.org/pdf/1606.01530 . 우리 인증서("어떤 규칙의 구간이 겹치는가")는 가설 공간 위 영역들의 합집합으로 볼 수 있다. 규칙이 중첩돼 있으면 영역이 크게 겹치고, 바로 이 경우에 DRD 보장이 약해진다. 우리 주장이 들어갈 틈이 여기다.
+  2. SBFE: 선형 문턱식 3-근사와 CDNF O(log kd), Adaptive Dual Greedy(Deshpande–Hellerstein–Kletenik). https://arxiv.org/abs/1303.0726 · k-DNF 평가는 k=2에서도 NP-hard(Allen et al.) https://www.sci.brooklyn.cuny.edu/~kletenik/publications/soda.pdf
+  3. 적응 부분모듈성 탐욕법(Golovin–Krause) https://arxiv.org/abs/1003.3967 · EC2(Golovin–Krause–Ray) https://arxiv.org/abs/1010.3091 · 상호작용 부분모듈 덮개(Guillory–Bilmes) https://arxiv.org/abs/1002.3345 . 우리 seed(한 단계 VOI)는 이 계열의 약한 임시 버전이다.
+- 이분 탐색·2배씩 넓히는 탐색 부분은 새롭지 않다. 잡음이 없는 탐색이며, 잡음 이진탐색(Ben-Or–Hassidim https://arxiv.org/abs/quant-ph/0703231)보다도 쉬운 경우다.
+- LLM 프로그램 진화: FunSearch [기억], AlphaEvolve, OpenEvolve, CodeEvolve https://arxiv.org/pdf/2510.14150v4 , ShinkaEvolve·ReEvo·EoH [기억]. 모두 최적화 휴리스틱(빈 패킹, TSP, 구성 문제)이 대상이다. **인증 문제의 적응 질의 정책을 진화시킨 연구는 찾지 못했다.** 다만 이번 검색은 얕았으므로 "없다"가 아니라 "못 찾음"이다.
+- **정직하게 주장할 수 있는 범위:** 새 알고리즘 부류나 보장을 주장하지 않는다. "중첩 문턱 라벨을 한꺼번에 공개하는 정확 인증 문제에서는 일반 부분모듈·VOI 탐욕법이 약하다(영역이 크게 겹치기 때문). LLM으로 진화시킨 구조적 정책(규칙마다 분리 증인을 약속하고 뒤집힘 위치를 이분 탐색)이 이 벤치마크에서 한 단계 VOI 대비 읽기를 60% 줄인다." 이 문제군에 국한된 경험적 결과이고, 해석 가능한 발견된 정책이다. **하한, 또는 증인 구조가 최적에 가깝다는 증명이 붙으면 진짜 결과가 된다.** → OPTIMALITY_PLAN.md 1절.
+- **꼭 구현할 기준선:**
+  1. DRD/EC2 계열 적응 부분모듈 탐욕(DIRECT의 edge cutting, 합성 가설 사전분포 사용)
+  2. SBFE 평가기(Adaptive Dual Greedy 또는 비용/확률 순서 DNF·문턱 평가기). 작은 C에서는 증명수/반복심화 탐색을 최적 근사 기준으로 둔다.
+  - 함께 보고할 것: 증인 약속을 뺀 진화 정책, 열마다 순수 이분 탐색.
