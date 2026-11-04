@@ -4,6 +4,7 @@
 writes agentic_research/evolve_v4/colab/bundle/ (committed; the notebook sparse-clones only
 this folder). The sealed C/D holdout is never exported, so a Colab run cannot score or see it.
 """
+import ast
 import gzip
 import hashlib
 import inspect
@@ -64,7 +65,14 @@ counterfactual_choose, response_patterns, UNIFORM10; source below). No file, net
 introspection access (an AST guard rejects open/exec/eval/getattr/__dict__/np.load etc.). Keep each
 case under ~3 s. A wrong or repeated query is an error and scores nothing. Do not hard-code folder
 names or per-case constants: the program must generalise to unseen folders."""
-POPULATION = {"seed": None, "p25_t21": 25, "p12_t9": 12, "p10_t6": 10, "p5_t2": 5, "p9_t5": 9, "p7_t4": 7, "p8_t1": 8}
+POPULATION = {"seed": None, "p25_t21": 25, "p12_t9": 12, "p10_t6": 10, "p5_t2": 5, "p9_t5": 9, "p7_t4": 7, "p8_t1": 8,
+              # 2026-11-05 cloud improvement session (files, not ledger rows): violin search 2238 / 2349
+              "c1_best": "improved/best_policy.py", "c2_general": "improved/general_policy.py"}
+
+
+def uses_revealed(code):
+    return any(isinstance(n, ast.Attribute) and n.attr == "revealed" or isinstance(n, ast.Name) and n.id == "revealed"
+               for n in ast.walk(ast.parse(code)))
 
 
 def core_source():
@@ -119,9 +127,13 @@ if __name__ == "__main__":
                                                             indent=1))
     db = sqlite3.connect(EVOLVE / "runs" / "a1" / "ledger.sqlite")
     for name, pid in POPULATION.items():
-        code = (EVOLVE / "seed_a.py").read_text() if pid is None else \
-            db.execute("SELECT code FROM programs WHERE id=?", (pid,)).fetchone()[0]
-        assert "revealed" not in code, name
+        if pid is None:
+            code = (EVOLVE / "seed_a.py").read_text()
+        elif isinstance(pid, str):
+            code = (EVOLVE / pid).read_text()
+        else:
+            code = db.execute("SELECT code FROM programs WHERE id=?", (pid,)).fetchone()[0]
+        assert not uses_revealed(code), name  # labels-only track (comments may mention the word)
         (OUT / "population" / f"{name}.py").write_text(code)
     files = [p for p in OUT.rglob("*") if p.is_file()]
     print(OUT, len(files), "files", sum(p.stat().st_size for p in files), "bytes")
