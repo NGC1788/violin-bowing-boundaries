@@ -96,7 +96,8 @@ DIRECTIONS = [
 
 def post_chat(base_url, model, prompt, max_tokens, effort, timeout=1800):
     body = dict(model=model, messages=[{"role": "user", "content": prompt}],
-                temperature=1.0, top_p=1.0, max_tokens=max_tokens)
+                temperature=1.0, top_p=1.0, max_tokens=max_tokens,
+                seed=random.SystemRandom().randrange(2 ** 31))  # vLLM's default seed is fixed: force variety
     if "gpt-oss" in model:
         body["reasoning_effort"] = effort
     request = urllib.request.Request(base_url + "/chat/completions", data=json.dumps(body).encode(),
@@ -150,7 +151,8 @@ class Engine:
           response TEXT, direction TEXT);
         CREATE TABLE IF NOT EXISTS notes(id INTEGER PRIMARY KEY, created REAL, text TEXT);""")
         self.eval_slots = threading.Semaphore(max(1, (os.cpu_count() or 2) // 2))
-        self.rng = random.Random(a.seed)
+        self.rng = random.Random(f"{a.seed}|{Path(a.run_dir).name}")  # accounts diverge even with equal SEED
+        self.offset = self.rng.randrange(len(DIRECTIONS))
         self.log = open(self.dir / "engine.log", "a")
         if not self.q("SELECT COUNT(*) FROM programs")[0][0]:
             self.load_population()
@@ -222,7 +224,7 @@ class Engine:
 
     def job(self, number):
         island = number % ISLANDS
-        direction = DIRECTIONS[(number // ISLANDS + self.a.seed) % len(DIRECTIONS)]
+        direction = DIRECTIONS[(number // ISLANDS + self.offset) % len(DIRECTIONS)]
         parent, prompt = self.prompt(island, direction)
         started = time.time()
         try:
