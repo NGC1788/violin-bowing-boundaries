@@ -1,0 +1,124 @@
+method	label	budget_no	knobs	search_total	eps0.2	eps0.4	max_case_s	time_flag
+bisect_each	default	no (original file)	original baselines/bisect_each.py	12556	5049	7507	0.36	
+proof_number	default	no (original file)	original baselines/proof_number.py	6800	2567	4233	15.25	OVER 3s
+adaptive_greedy	default	no (original file)	original baselines/adaptive_greedy.py	6017	2247	3770	6.65	OVER 3s
+direct_ec	default	no (original file)	original baselines/direct_ec.py	14154	5265	8889	70.10	OVER 3s
+bisect_each	t01_copy_default	1		12556	5049	7507	0.39	
+bisect_each	t02_live	2	LIVE_ONLY=True	12437	5016	7421	0.52	
+bisect_each	t03_live_fewest	3	LIVE_ONLY=True ORDER="fewest"	12437	5016	7421	1.49	
+bisect_each	t04_live_most	4	LIVE_ONLY=True ORDER="most"	18636	8213	10423	1.58	
+bisect_each	t05_live_round	5	LIVE_ONLY=True ORDER="round"	14655	6537	8118	1.47	
+bisect_each	t06_fewest	6	ORDER="fewest"	12556	5049	7507	1.08	
+bisect_each	t_live_frac0.3	7	LIVE_ONLY=True FRAC=0.3	12231	4934	7297	0.57	
+bisect_each	t_live_frac0.4	8	LIVE_ONLY=True FRAC=0.4	12478	5024	7454	0.56	
+bisect_each	t_live_frac0.6	9	LIVE_ONLY=True FRAC=0.6	12461	5025	7436	0.56	
+bisect_each	t_live_frac0.7	10	LIVE_ONLY=True FRAC=0.7	12593	5082	7511	0.59	
+bisect_each	t11_live_frac0.2	11	LIVE_ONLY=True FRAC=0.2	11761	4744	7017	0.45	
+bisect_each	t12_live_frac0.3_widest	12	LIVE_ONLY=True FRAC=0.3 SPAN="widest"	12223	4930	7293	0.60	
+bisect_each	t13_live_frac0.3_bound	13	LIVE_ONLY=True FRAC=0.3 ORDER="bound"	10268	3710	6558	3.20	OVER 3s
+bisect_each	t14_live_frac0.2_bound	14	LIVE_ONLY=True FRAC=0.2 ORDER="bound"	9805	3540	6265	1.21	
+bisect_each	t15_live_frac0.1_bound	15	LIVE_ONLY=True FRAC=0.1 ORDER="bound"	8781	3164	5617	1.15	
+bisect_each	t16_live_frac0.0_bound	16	LIVE_ONLY=True FRAC=0.0 ORDER="bound"	10434	3782	6652	1.58	
+bisect_each	t17_live_frac0.05_bound	17	LIVE_ONLY=True FRAC=0.05 ORDER="bound"	7258	2619	4639	1.19	
+bisect_each	t18_frac0.1_bound	18	FRAC=0.1 ORDER="bound"	9191	3321	5870	1.16	
+bisect_each	t19_live_bound_step1	19	LIVE_ONLY=True ORDER="bound" STEP=1	5909	2108	3801	0.66	
+bisect_each	t20_live_bound_step2	20	LIVE_ONLY=True ORDER="bound" STEP=2	7651	2750	4901	0.86	
+bisect_each	t21_live_bound_step3	21	LIVE_ONLY=True ORDER="bound" STEP=3	8833	3193	5640	1.17	
+bisect_each	t22_live_index_step1	22	LIVE_ONLY=True STEP=1	7169	2865	4304	0.30	
+bisect_each	t23_live_bound_step1_widest	23	LIVE_ONLY=True ORDER="bound" STEP=1 SPAN="widest"	5909	2108	3801	1.02	
+bisect_each	t24_live_fewest_step1	24	LIVE_ONLY=True ORDER="fewest" STEP=1	7169	2865	4304	0.69	
+bisect_each	t25_bound_step1_all	25	ORDER="bound" STEP=1	6484	2333	4151	0.89	
+bisect_each	t26_step1_bound_sum	26	LIVE_ONLY=True ORDER="bound" STEP=1 BOUND="sum"	5909	2108	3801	0.72	
+bisect_each	t27_step1_bound_left	27	LIVE_ONLY=True ORDER="bound" STEP=1 BOUND="left"	5550	1789	3761	0.72	
+bisect_each	t28_step1_bound_tieindex	28	LIVE_ONLY=True ORDER="bound" STEP=1 TIE="index"	5909	2108	3801	0.65	
+bisect_each	t29_step1_bound_right	29	LIVE_ONLY=True ORDER="bound" STEP=1 BOUND="right"	7194	2873	4321	0.78	
+bisect_each	t30_frac0.05_bound_left	30	LIVE_ONLY=True ORDER="bound" FRAC=0.05 BOUND="left"	6823	2223	4600	0.88	
+adaptive_greedy	t01_copy_default	1		6017	2247	3770	2.36	
+adaptive_greedy	t_kill0	2	KILL=0	6755	2502	4253	2.30	
+adaptive_greedy	t_kill2	3	KILL=2	6016	2246	3770	2.23	
+adaptive_greedy	t_kill32	4	KILL=32	6025	2251	3774	2.20	
+adaptive_greedy	t_nb0	5	NEIGHBOUR=0	6392	2391	4001	2.50	
+adaptive_greedy	t_nb0.3	6	NEIGHBOUR=0.3	6012	2244	3768	2.09	
+adaptive_greedy	t_nb0.9	7	NEIGHBOUR=0.9	6018	2248	3770	2.40	
+adaptive_greedy	t_colprior	8	PRIOR="column"	7060	2820	4240	2.62	
+adaptive_greedy	t_frac	9	ELIM="frac"	7285	2939	4346	2.51	
+adaptive_greedy	t10_geo4	10	GEO=4	5138	1924	3214	2.28	
+adaptive_greedy	t11_geo16	11	GEO=16	4959	1931	3028	2.27	
+adaptive_greedy	t12_passw2	12	PASSW=2	11558	4845	6713	3.55	OVER 3s
+adaptive_greedy	t13_passw8	13	PASSW=8	12277	5104	7173	3.38	OVER 3s
+adaptive_greedy	t14_geo64	14	GEO=64	4975	1934	3041	2.09	
+adaptive_greedy	t15_geo16_cap0.3	15	GEO=16 GEO_CAP=0.3	4829	1807	3022	2.31	
+adaptive_greedy	t16_geo16_cap3	16	GEO=16 GEO_CAP=3.0	5148	2087	3061	2.11	
+adaptive_greedy	t17_geo16_cap0.1	17	GEO=16 GEO_CAP=0.1	4774	1804	2970	2.12	
+adaptive_greedy	t18_geo48_cap0.3	18	GEO=48 GEO_CAP=0.3	4843	1811	3032	1.98	
+adaptive_greedy	t19_geo16_cap0.3_offall	19	GEO=16 GEO_CAP=0.3 OFFSETS=None	4524	1787	2737	2.32	
+adaptive_greedy	t20_geo16_cap0.1_offall	20	GEO=16 GEO_CAP=0.1 OFFSETS=None	4593	1783	2810	2.28	
+adaptive_greedy	t21_geo16_cap0.1_offall_kill0	21	GEO=16 GEO_CAP=0.1 OFFSETS=None KILL=0	4733	1848	2885	2.30	
+adaptive_greedy	t22_geo16_cap0.1_offall_nb0	22	GEO=16 GEO_CAP=0.1 OFFSETS=None NEIGHBOUR=0	4561	1791	2770	2.21	
+adaptive_greedy	t23_best_nb0	23	GEO=16 GEO_CAP=0.3 OFFSETS=None NEIGHBOUR=0	4574	1869	2705	2.08	
+adaptive_greedy	t24_best_frac	24	GEO=16 GEO_CAP=0.3 OFFSETS=None ELIM="frac"	5738	1866	3872	3.06	OVER 3s
+adaptive_greedy	t25_best_rulesall	25	GEO=16 GEO_CAP=0.3 OFFSETS=None RULES="all"	5661	1826	3835	3.45	OVER 3s
+adaptive_greedy	t26_best_kill32	26	GEO=16 GEO_CAP=0.3 OFFSETS=None KILL=32	4559	1788	2771	2.59	
+adaptive_greedy	t27_geo16_cap0.5_offall	27	GEO=16 GEO_CAP=0.5 OFFSETS=None	4542	1758	2784	2.53	
+adaptive_greedy	t28_geo8_cap0.3_offall	28	GEO=8 GEO_CAP=0.3 OFFSETS=None	4898	1858	3040	2.47	
+adaptive_greedy	t29_best_smooth3	29	GEO=16 GEO_CAP=0.3 OFFSETS=None SMOOTH=3.0	4513	1782	2731	2.31	
+proof_number	t01_stable_default	1		6800	2567	4233	2.33	
+proof_number	t02_quicksort_default	2	SORT="quicksort"	6800	2567	4233	2.55	
+proof_number	t03_route_sum	3	ROUTE="sum"	6691	2576	4115	1.73	
+proof_number	t04_route_pns	4	ROUTE="pns"	6720	2585	4135	2.88	
+proof_number	t05_ncol8	5	NCOL=8	7183	2530	4653	2.50	
+proof_number	t06_npair5	6	NPAIR=5	8764	3634	5130	2.13	
+proof_number	t07_ntheta9	7	NTHETA=9	6793	2567	4226	2.95	
+proof_number	t08_ncol2	8	NCOL=2	7863	2969	4894	2.64	
+proof_number	t09_npair2	9	NPAIR=2	6054	2106	3948	1.90	
+proof_number	t10_npair1	10	NPAIR=1	5851	1940	3911	2.05	
+proof_number	t11_ntheta3	11	NTHETA=3	6819	2567	4252	1.99	
+proof_number	t12_np1_bias0.5	12	NPAIR=1 PASS_BIAS=0.5	5851	1940	3911	2.23	
+proof_number	t13_np1_bias2	13	NPAIR=1 PASS_BIAS=2.0	5851	1940	3911	2.16	
+proof_number	t14_np1_voteflat	14	NPAIR=1 VOTE="flat"	5843	1940	3903	1.56	
+proof_number	t15_np1_votenone	15	NPAIR=1 VOTE="none"	5640	1879	3761	1.25	
+proof_number	t16_np1_late	16	NPAIR=1 EARLY=False	10838	4158	6680	2.39	
+proof_number	t17_np1_vn_ncol6	17	NPAIR=1 VOTE="none" NCOL=6	5909	1898	4011	1.20	
+proof_number	t18_np1_vn_ncol3	18	NPAIR=1 VOTE="none" NCOL=3	5386	1724	3662	1.22	
+proof_number	t19_np1_vn_sum	19	NPAIR=1 VOTE="none" ROUTE="sum"	5581	1869	3712	1.27	
+proof_number	t20_np1_vn_pns	20	NPAIR=1 VOTE="none" ROUTE="pns"	5651	1879	3772	1.19	
+proof_number	t21_np0_vn	21	NPAIR=0 VOTE="none"	6414	2168	4246	1.30	
+proof_number	t22_np1_vn_ncol3_sum	22	NPAIR=1 VOTE="none" NCOL=3 ROUTE="sum"	5551	1724	3827	1.18	
+proof_number	t23_np1_vn_ncol2	23	NPAIR=1 VOTE="none" NCOL=2	5617	2009	3608	1.12	
+proof_number	t24_np1_vn_ncol1	24	NPAIR=1 VOTE="none" NCOL=1	6654	2344	4310	1.25	
+proof_number	t25_np1_vn_ncol3_th9	25	NPAIR=1 VOTE="none" NCOL=3 NTHETA=9	5386	1724	3662	2.01	
+proof_number	t26_np2_vn_ncol3	26	NPAIR=2 VOTE="none" NCOL=3	5855	2110	3745	1.23	
+proof_number	t27_best_pickzero	27	NPAIR=1 VOTE="none" NCOL=3 PICK="zero"	5779	1699	4080	1.14	
+proof_number	t28_best_pickone	28	NPAIR=1 VOTE="none" NCOL=3 PICK="one"	6566	2644	3922	1.66	
+direct_ec	t01_persist_default	1	PERSIST=True	14173	5265	8908	2.20	
+direct_ec	t02_vectorised_fresh_default	2		14136	5265	8871	8.12	OVER 3s
+direct_ec	t03_rules	3	PERSIST=True REGION="rules"	14155	5265	8890	2.20	
+direct_ec	t04_split	4	PERSIST=True EMPTY="split"	9522	3719	5803	1.69	
+direct_ec	t05_copy0.7	5	PERSIST=True COPY=0.7	14059	5265	8794	2.29	
+direct_ec	t06_copy0.97	6	PERSIST=True COPY=0.97	14217	5265	8952	2.21	
+direct_ec	t07_split_gap	7	PERSIST=True EMPTY="split" FLIP="gap"	10386	4544	5842	1.62	
+direct_ec	t08_split_top12	8	PERSIST=True EMPTY="split" TOP=12	10397	4065	6332	1.67	
+direct_ec	t09_split_top24	9	PERSIST=True EMPTY="split" TOP=24	11257	4686	6571	1.67	
+direct_ec	t10_split_s192	10	PERSIST=True EMPTY="split" SAMPLES=192	9092	3895	5197	2.14	
+direct_ec	t11_split_s384	11	PERSIST=True EMPTY="split" SAMPLES=384	9291	3565	5726	3.08	OVER 3s
+direct_ec	t12_split_s192_copy0.7	12	PERSIST=True EMPTY="split" SAMPLES=192 COPY=0.7	10260	4107	6153	2.33	
+direct_ec	t13_split_s192_copy0.97	13	PERSIST=True EMPTY="split" SAMPLES=192 COPY=0.97	9021	3329	5692	2.07	
+direct_ec	t14_split_s192_top4	14	PERSIST=True EMPTY="split" SAMPLES=192 TOP=4	9335	3691	5644	1.96	
+direct_ec	t15_split_s192_copy0.995	15	PERSIST=True EMPTY="split" SAMPLES=192 COPY=0.995	9782	4423	5359	2.02	
+direct_ec	t16_split_s192_copy1	16	PERSIST=True EMPTY="split" SAMPLES=192 COPY=1.0	12938	6001	6937	2.22	
+direct_ec	t17_rulevar_s192_copy0.97	17	PERSIST=True EMPTY="rulevar" SAMPLES=192 COPY=0.97	10109	4300	5809	2.31	
+direct_ec	t18_split_s192_c97_borrow	18	PERSIST=True EMPTY="split" SAMPLES=192 COPY=0.97 EMPTYCOL="borrow"	8981	3630	5351	2.69	
+direct_ec	t19_best_rules	19	PERSIST=True EMPTY="split" SAMPLES=192 COPY=0.97 EMPTYCOL="borrow" REGION="rules"	8945	3630	5315	2.66	
+direct_ec	t20_best_copy0.95	20	PERSIST=True EMPTY="split" SAMPLES=192 COPY=0.95 EMPTYCOL="borrow"	10356	4157	6199	2.46	
+direct_ec	t21_best_rules_s256	21	PERSIST=True EMPTY="split" SAMPLES=256 COPY=0.97 EMPTYCOL="borrow" REGION="rules"	10599	4575	6024	2.98	
+direct_ec	t27_best_seed7	22	PERSIST=True EMPTY="split" SAMPLES=192 COPY=0.97 EMPTYCOL="borrow" REGION="rules" SEED=7	11516	4716	6800	3.09	OVER 3s
+direct_ec	t211_best_seed11	23	PERSIST=True EMPTY="split" SAMPLES=192 COPY=0.97 EMPTYCOL="borrow" REGION="rules" SEED=11	10344	3923	6421	2.58	
+ref	seed	no (reference)		9158	3858	5300	0.98	
+ref	distilled_a	no (reference)		3453	1077	2376	0.44	
+ref	t21	no (reference)		3072	972	2100	0.39	
+bisect_each	final_check	31	saved tuned file (final check)	5550	1789	3761	0.74	
+adaptive_greedy	final_check	30	saved tuned file (final check)	4513	1782	2731	2.31	
+proof_number	final_check	29	saved tuned file (final check)	5386	1724	3662	1.17	
+direct_ec	final_check	24	tuned file as first saved (before exact speed-ups)	8945	3630	5315	3.04	OVER 3s
+direct_ec	final_check2_speedup	25	tuned file, exact speed-up 1 (borrowed starts copied)	8945	3630	5315	2.77	
+direct_ec	final_check3_mask	26	tuned file, exact speed-ups 2-3 (pattern lookup, masked bounds) = committed file	8945	3630	5315	2.78	
