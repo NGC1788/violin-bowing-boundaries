@@ -29,6 +29,7 @@ Colab population programs p25_t21, p12_t9 (decision-tree walk under the same pri
 Only the SEARCH split is touched (for real geometry sub-sampling); the holdout is never loaded.
 """
 import ctypes
+import gc
 import hashlib
 import importlib.util
 import itertools
@@ -963,6 +964,9 @@ def run_size(R, K, n, cfg, start=0, tag=None, part=(0, 1)):
     for inst, T, skipped in instances(R, K, n, pool, start, part):
         row = run_instance(inst, T, cfg, checks=not rows)
         del T
+        # eval_policy's recursive closures form reference cycles that keep the tables (R=12:
+        # several GB) alive until the cyclic GC runs; collect before building the next instance.
+        gc.collect()
         rows.append(row)
         pol = " ".join(f"{k}={_reads(row, k).get('reads', float('nan')):.3f}" for k in row["policies"])
         print(f"[R{R}K{K} {inst['i']:3d}] {inst['kind']:14s} opt=[{row.get('optimal_lo', float('nan')):.4f},"
@@ -1044,8 +1048,21 @@ def run_split(R, K, n, names=("seed",), tag=None):
         D = decision_table(T)
         row = dict(i=inst["i"], optimal=split_optimal(T, D), policies={})
         for nm in names:
-            ch = load_policy(POLICIES[nm], nm, True, nm != "seed" and "KSEED" in POLICIES[nm].read_text(),
-                             inst["rules"])
+            base, _, flag = nm.partition("@")
+            if flag:  # e.g. p25_t21@dead: runtime DEAD_ON=True (file untouched)
+                spec = importlib.util.spec_from_file_location(f"pol_{base}_dead", POLICIES[base])
+                mod = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(mod)
+                from agentic_research.evolve_v4 import helpers
+                n = len(helpers.response_patterns(inst["rules"]))
+                mod.UNIFORM10 = np.full(n, 1.0 / n)
+                mod.KSEED = 0
+                assert flag == "dead"
+                mod.DEAD_ON = True
+                ch = mod.choose
+            else:
+                ch = load_policy(POLICIES[nm], nm, True,
+                                 nm != "seed" and "KSEED" in POLICIES[nm].read_text(), inst["rules"])
             row["policies"][nm] = split_policy(inst, T, D, ch)
         rows.append(row)
         print(R, K, inst["i"], row, flush=True)
@@ -1057,7 +1074,7 @@ def run_split(R, K, n, names=("seed",), tag=None):
                         reads=float(np.mean([get(r)["reads"] for r in rows])),
                         reads_given_true=float(np.mean([get(r)["reads_true"] for r in rows]) / pt),
                         reads_given_false=float(np.mean([get(r)["reads_false"] for r in rows]) / (1 - pt)))
-    save(tag or f"split_R{R}_K{K}", dict(settings=dict(C=C, R=R, K=K, n=len(rows), policies=list(names),
+    save(tag or f"split_R{R}_K{K}" + ("_dead" if any("@" in x for x in names) else ""), dict(settings=dict(C=C, R=R, K=K, n=len(rows), policies=list(names),
                                                         note="policies with KSEED use +shim+k0"),
                                          average=agg, instances=rows))
     return agg
@@ -1155,7 +1172,7 @@ def paired(data):
 
 def split_table(data):
     """Expected reads given the final certificate decision (True = some rule passes)."""
-    keys = sorted((k for k in data if k.startswith("split_")),
+    keys = sorted((k for k in data if k.startswith("split_") and not k.endswith("_dead")),
                   key=lambda k: (data[k]["settings"]["K"], data[k]["settings"]["R"]))
     if not keys:
         return ""
@@ -1169,6 +1186,14 @@ def split_table(data):
                  for w in who]
         lines.append(f"| 2×{st['R']}×{st['K']} | {st['n']} | {av['optimal']['p_true']:.3f} | "
                      + " | ".join(cells) + " |")
+    for k in sorted(x for x in data if x.startswith("split_") and x.endswith("_dead")):
+        d = data[k]
+        st = d["settings"]
+        av = d["average"]
+        cells = ", ".join(f"{w} {v['reads_given_true']:.2f}/{v['reads_given_false']:.2f} (전체 {v['reads']:.3f})"
+                          for w, v in av.items() if w != "optimal")
+        lines.append(f"\n- 2×{st['R']}×{st['K']} ({st['n']}사례), 실행 중 DEAD_ON=True(+shim+k0): {cells}; "
+                     f"최적 {av['optimal']['reads_given_true']:.2f}/{av['optimal']['reads_given_false']:.2f}")
     return "\n".join(lines)
 
 
