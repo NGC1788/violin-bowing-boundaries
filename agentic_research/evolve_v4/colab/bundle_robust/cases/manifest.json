@@ -1,0 +1,6 @@
+{
+ "split": "robust search (digit groups 0-1; groups 2-3 sealed on the Mac)",
+ "cases": 40,
+ "source_sha256": "340a7a3f6df932c1498b42dec6fad8e751f7e05b9422513498fd41f14f44bd05",
+ "cases_sha256": "4ba289d33535dc8167ae5bb422858c403eeeab4d8c5292df2afc6ef53eeb5710"
+}

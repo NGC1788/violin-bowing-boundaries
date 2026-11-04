@@ -72,6 +72,8 @@ counterfactual_choose, response_patterns, UNIFORM10; source below). No file, net
 introspection access (an AST guard rejects open/exec/eval/getattr/__dict__/np.load etc.). Keep each
 case under ~3 s. A wrong or repeated query is an error and scores nothing. Do not hard-code folder
 names or per-case constants: the program must generalise to unseen folders."""
+if (DATA / "task.txt").exists():  # another benchmark on the same interface (e.g. the robustness audit)
+    TASK = (DATA / "task.txt").read_text()
 
 FORMAT = """Reply with exactly three parts and nothing else:
 IDEA: one sentence describing the mechanism you are testing.

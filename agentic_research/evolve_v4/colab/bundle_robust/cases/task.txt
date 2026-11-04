@@ -1,0 +1,43 @@
+THE PROBLEM. You are evolving a QUERY POLICY for an exact certification problem (AI robustness audit).
+
+A folder is a group of C correctly classified MNIST test images (one column each) and a trained CNN.
+Each column has 50 Gaussian-noise levels sigma (shared grid, sorted ascending; view.force). Reading one
+cell (column, rank) runs the network on 64 noisy copies at that sigma and reveals its label under 9
+nested failure rules at once (rules = (fail-rate floor u, true-class-probability ceiling v);
+label = fail_rate>=u AND mean true-class probability<v, i.e. "broken"). For each rule and column the
+"boundary" (break point) is the first adjacent pair of positive labels along the noise rank. A fixed
+exact certificate (you cannot change it) asks whether SOME rule has break points that all agree with
+the local-linear robustness law sigma* = C * margin/||grad margin|| within a factor exp(epsilon):
+view.log_beta = -0.5*log(margin/grad) per image, so the intercept log sigma + 2*log_beta must share a
+common point across all columns ([lower, upper] per possible start, tolerance epsilon). It stops as
+soon as every completion of the unread labels gives the same answer. Unknown labels make several
+first-run starts possible; possible marks them (last slot = "no break point in this column").
+
+choose(view) must return (column, rank) of an UNREAD cell so the certificate stops after as FEW reads
+as possible. Score = total reads over 40 search cases (20 folders x epsilon 0.2/0.4), lower is
+better. Reading every cell costs 48000. The one-step counterfactual lookahead (seed) scores 11182;
+bisecting every image's break point scores 9914. A policy evolved on a different benchmark with the
+same interface (violin playability law) already scores about 3560-3700 here unchanged. Hindsight
+pruning of the seed's reads shows certificates exist with about 1842 reads in total.
+37 of 40 cases are INCOMPATIBLE (answer "the law fails under every rule"): proving that needs, for
+every one of the 9 rules, either a column with no valid start or two columns whose intervals cannot
+overlap. Labels are monotone in the thresholds, and neighbouring ranks are correlated (labels are
+noisy, not strictly monotone in sigma). NOTE: one read reveals all 9 labels of that cell at once, so
+cross-rule monotonicity can NEVER infer labels of an unread cell; use it only to reason about which
+rules can still pass.
+
+What is known (ablation of the best programs on the violin benchmark): the gain comes from COMMITTING
+to a separating column pair per rule and VERIFYING it (zero-sweep of the high column's early starts +
+one forced positive pair in the low column), with bisection-style probing of where labels flip, and
+a small exact lookahead at the start and the end.
+
+view fields (numpy copies): partial (C,9,50) int8 -1 unknown/0/1; possible (C,9,51) bool;
+lower, upper (C,1,50) float, NaN = invalid start; force (C,50) = sigma; log_beta (C,); rules (9,2);
+epsilon; queries_so_far. (LABELS ONLY: view.revealed exists but is forbidden; the guard rejects it.)
+Each case runs in a fresh process: no memory between cases.
+Allowed imports: numpy, math, itertools, functools, heapq, collections,
+agentic_research.evolve_v4.helpers (exports possible_starts, certificates, outer, shortlist,
+counterfactual_choose, response_patterns, UNIFORM10; source below). No file, network, process or
+introspection access (an AST guard rejects open/exec/eval/getattr/__dict__/np.load etc.). Keep each
+case under ~3 s. A wrong or repeated query is an error and scores nothing. Do not hard-code folder
+names or per-case constants: the program must generalise to unseen folders.
