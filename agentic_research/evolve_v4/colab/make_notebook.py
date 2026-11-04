@@ -25,7 +25,7 @@ RUN_ID = "acct1"      # acct1 / acct2 / acct3
 SEED = 1              # 1 / 2 / 3
 HOURS = 10            # 진화 시간 (Pro+ 최대 연속 실행 24시간)
 MODEL = "auto"        # auto = GPU 메모리에 맞춰 선택
-EFFORT = "high"       # gpt-oss 추론 강도: high(질) / medium(속도)"""),
+EFFORT = "medium"     # gpt-oss 추론 강도: medium 권장 (high는 생각만 하다 답이 잘림)"""),
     ("code", """import subprocess, json
 out = subprocess.run(["nvidia-smi", "--query-gpu=name,memory.total", "--format=csv,noheader,nounits"],
                      capture_output=True, text=True).stdout.strip()
@@ -118,6 +118,31 @@ for row in db.execute("SELECT id, island, score, totals, substr(idea,1,110) FROM
     print(" ", row)
 print(subprocess.run(["tail", "-n", "8", f"{RUN_DIR}/engine.log"], capture_output=True, text=True).stdout)
 print("engine running:", ENGINE.poll() is None)"""),
+    ("code", """# 코드 교체: 돌고 있는 중에 새 코드를 받을 때만 True로 바꾸고 이 칸만 실행 (모델 서버·기록은 그대로, 1분)
+UPDATE_NOW = False
+if UPDATE_NOW:
+    import subprocess, time
+    EFFORT = "medium"
+    subprocess.run(["pkill", "-f", "agentic_research.evolve_v4.colab_engine"])
+    while subprocess.run(["pgrep", "-f", "agentic_research.evolve_v4.colab_engine"], capture_output=True).returncode == 0:
+        time.sleep(1)
+    subprocess.run(\"\"\"set -e
+rm -rf /content/repo /content/evolve
+git clone -q --depth 1 --filter=blob:none --sparse -b __BRANCH__ __REPO__ /content/repo
+git -C /content/repo sparse-checkout set __BUNDLE__
+cp -r /content/repo/__BUNDLE__ /content/evolve && rm -rf /content/repo\"\"\", shell=True, check=True, executable="/bin/bash")
+    cmd = ["python", "-m", "agentic_research.evolve_v4.colab_engine", "--run-dir", RUN_DIR, "--model", MODEL_NAME,
+           "--hours", str(HOURS), "--seed", str(SEED), "--concurrency", str(CONCURRENCY), "--backup-dir", DRIVE_DIR,
+           "--effort", EFFORT]
+    if "gpt-oss" not in MODEL_NAME:
+        cmd += ["--max-tokens", "12000"]
+    ENGINE = subprocess.Popen(cmd, cwd="/content/evolve", stdout=open(f"{DRIVE_DIR}/stdout.log", "a"),
+                              stderr=subprocess.STDOUT)
+    time.sleep(8)
+    print(open(f"{RUN_DIR}/engine.log").read().splitlines()[-1])
+    print("새 코드로 재시작 완료, pid", ENGINE.pid)
+else:
+    print("코드 교체 안 함 (UPDATE_NOW = False)")""".replace("__BRANCH__", BRANCH).replace("__REPO__", REPO).replace("__BUNDLE__", BUNDLE)),
     ("code", """# 끝내기: 멈추고 싶을 때만 아래 False를 True로 바꾸고 이 칸만 실행 ('모두 실행' 때는 아무 일도 안 함)
 STOP_NOW = False
 if STOP_NOW:

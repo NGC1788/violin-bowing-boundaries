@@ -94,7 +94,19 @@ DIRECTIONS = [
 ]
 
 
-def post_chat(base_url, model, prompt, max_tokens, effort, timeout=1800):
+def context_length(base_url, model):
+    """max_model_len the vLLM server was started with (None if unknown)."""
+    try:
+        with urllib.request.urlopen(base_url + "/models", timeout=30) as response:
+            cards = json.loads(response.read())["data"]
+        return next((c.get("max_model_len") for c in cards if c.get("id") == model), None)
+    except Exception:
+        return None
+
+
+def post_chat(base_url, model, prompt, max_tokens, effort, timeout=1800, context=None):
+    if context:  # use the whole window: reasoning models need room to think AND to write the code
+        max_tokens = max(4096, min(max_tokens, context - int(len(prompt) / 2.5) - 1024))
     body = dict(model=model, messages=[{"role": "user", "content": prompt}],
                 temperature=1.0, top_p=1.0, max_tokens=max_tokens,
                 seed=random.SystemRandom().randrange(2 ** 31))  # vLLM's default seed is fixed: force variety
@@ -106,7 +118,13 @@ def post_chat(base_url, model, prompt, max_tokens, effort, timeout=1800):
         payload = json.loads(response.read())
     message = payload["choices"][0]["message"]
     usage = payload.get("usage") or {}
-    return message.get("content") or "", usage.get("prompt_tokens", 0), usage.get("completion_tokens", 0)
+    text = message.get("content") or ""
+    reasoning = message.get("reasoning_content") or message.get("reasoning") or ""
+    if "```" not in text and "```" in reasoning:  # cut off before the final answer: salvage the last draft
+        drafts = re.findall(r"```(?:python)?\s*\n(.*?)```", reasoning, re.S)
+        if drafts:
+            text += "\n[code salvaged from reasoning]\n```python\n" + drafts[-1] + "```"
+    return text, usage.get("prompt_tokens", 0), usage.get("completion_tokens", 0)
 
 
 def extract(text):
@@ -154,8 +172,9 @@ class Engine:
         self.rng = random.Random(f"{a.seed}|{Path(a.run_dir).name}")  # accounts diverge even with equal SEED
         self.offset = self.rng.randrange(len(DIRECTIONS))
         self.log = open(self.dir / "engine.log", "a")
-        if not self.q("SELECT COUNT(*) FROM programs")[0][0]:
-            self.load_population()
+        self.context = context_length(a.base_url, a.model)
+        self.say(f"start model={a.model} effort={a.effort} context={self.context}")
+        self.load_population()  # loads only the starting programs not yet in the ledger (safe to resume)
 
     def q(self, sql, args=()):
         with self.lock:
@@ -171,7 +190,10 @@ class Engine:
 
     def load_population(self):
         files = sorted((BUNDLE / "population").glob("*.py"))
+        loaded = {row[0] for row in self.q("SELECT DISTINCT model FROM programs WHERE model LIKE 'init:%'")}
         for k, path in enumerate(files):
+            if "init:" + path.stem in loaded:
+                continue
             code = path.read_text()
             score, metrics, error = evaluate(code, self.dir / "programs" / f"init_{path.stem}.py")
             idea = (re.search(r"#\s*IDEA:\s*(.*)", code) or [None, path.stem])[1].strip()[:400]
@@ -228,7 +250,8 @@ class Engine:
         parent, prompt = self.prompt(island, direction)
         started = time.time()
         try:
-            text, tin, tout = post_chat(self.a.base_url, self.a.model, prompt, self.a.max_tokens, self.a.effort)
+            text, tin, tout = post_chat(self.a.base_url, self.a.model, prompt, self.a.max_tokens, self.a.effort,
+                                        context=self.context)
         except Exception as exc:
             self.q("INSERT INTO programs(parent,island,status,error,created,model,direction) VALUES(?,?,?,?,?,?,?)",
                    (parent, island, "llm_error", str(exc)[:400], time.time(), self.a.model, direction))
@@ -267,7 +290,8 @@ class Engine:
                   + "\n".join(f"p{i} {st} {s} | {(d or '')[:150]} | {(e or '')[:80]}" for i, st, s, d, e in recent)
                   + f"\n\nBEST PROGRAM:\n```python\n{best}\n```")
         try:
-            text, _, _ = post_chat(self.a.base_url, self.a.model, prompt, self.a.max_tokens, "high")
+            text, _, _ = post_chat(self.a.base_url, self.a.model, prompt, self.a.max_tokens, self.a.effort,
+                                   context=self.context)
             self.q("INSERT INTO notes(created,text) VALUES(?,?)", (time.time(), text))
             self.say("SCIENTIST: " + text[:300].replace("\n", " "))
         except Exception as exc:
@@ -336,8 +360,8 @@ if __name__ == "__main__":
     ap.add_argument("--hours", type=float, default=10)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--concurrency", type=int, default=16)
-    ap.add_argument("--max-tokens", type=int, default=24000)
-    ap.add_argument("--effort", default="high")
+    ap.add_argument("--max-tokens", type=int, default=45000)
+    ap.add_argument("--effort", default="medium")
     ap.add_argument("--diagnose-every", type=int, default=40)
     ap.add_argument("--migrate-every", type=int, default=60)
     Engine(ap.parse_args()).run()
