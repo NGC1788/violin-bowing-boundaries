@@ -77,6 +77,63 @@ uncertainty sampling / greedy information gain.
 <the complete new program file defining choose(view)>
 ```"""
 
+FORMAT_DIFF = """Reply with exactly this and nothing else:
+IDEA: one sentence describing the mechanism you are testing.
+NOVELTY: one sentence on how it differs from the parent.
+Then one or more edit blocks that change the PARENT program. Each block is:
+<<<<<<< SEARCH
+lines copied EXACTLY from the parent (enough lines to be unique)
+=======
+the new lines
+>>>>>>> REPLACE
+Make ONE focused change to the parent's mechanism. Keep everything else (verification, bisection,
+array shapes) as it is. Do not rewrite the whole file."""
+
+REPAIR = """The program below raised an error during evaluation. Fix the bug with minimal edits and keep the
+idea. Check array shapes against the view fields: partial (C,9,50), possible (C,9,51), lower/upper (C,1,50),
+force (C,50), log_beta (C,), rules (9,2); C differs between folders. choose must return a (column, rank)
+pair of plain ints that is still unread (partial[column, 0, rank] == -1).
+Reply ONLY with edit blocks:
+<<<<<<< SEARCH
+exact lines from the program
+=======
+fixed lines
+>>>>>>> REPLACE
+
+Error: {error}
+
+```python
+{code}
+```"""
+
+EDIT = re.compile(r"<{5,}\s*SEARCH[^\n]*\n(.*?)\n?={5,}[^\n]*\n(.*?)\n?>{5,}\s*REPLACE", re.S)
+
+
+def apply_edits(code, text):
+    """Apply SEARCH/REPLACE blocks; tolerant to trailing whitespace. Returns (code, error)."""
+    edits = EDIT.findall(text)
+    if not edits:
+        return None, "no edit blocks"
+    for k, (old, new) in enumerate(edits):
+        if old and code.count(old) == 1:
+            code = code.replace(old, new)
+            continue
+        lines, pattern = code.split("\n"), [x.rstrip() for x in old.split("\n")]
+        hits = [i for i in range(len(lines) - len(pattern) + 1)
+                if [x.rstrip() for x in lines[i:i + len(pattern)]] == pattern] if old.strip() else []
+        if len(hits) != 1:
+            return None, f"edit {k + 1}: SEARCH text {'not unique' if hits else 'not found'} in the program"
+        lines[hits[0]:hits[0] + len(pattern)] = new.split("\n")
+        code = "\n".join(lines)
+    return code, None
+
+
+def headed(code, idea, novelty):
+    body = "\n".join(x for x in code.split("\n")[:3] if not x.startswith(("# IDEA", "# NOVELTY"))) + \
+        ("\n" + "\n".join(code.split("\n")[3:]) if code.count("\n") >= 3 else "")
+    return f"# IDEA: {idea}\n# NOVELTY: {novelty}\n" + body.lstrip("\n")
+
+
 DIRECTIONS = [
     "Joint multi-rule witness planning: exploit nested rules so one zero-sweep or one forced pair serves "
     "several rules; choose one shared set of witness pairs at minimum total predicted reads.",
@@ -240,14 +297,18 @@ class Engine:
                          + "\n".join(f"- {s if s is None else round(s)}: {i[:160]}" for s, i in tried))
         if fails:
             parts.append("\n## Recent failures\n" + "\n".join(f"- {i[:120]}: {e}" for i, e in fails))
-        parts.append("\nWrite a program that scores clearly LOWER than the parent by a real mechanism, not a "
-                     "constant tweak.\n" + FORMAT)
-        return parent[0], "\n".join(parts)
+        mode = "diff" if self.rng.random() < .8 else "full"
+        if mode == "diff":
+            parts.append("\nImprove the parent so it scores LOWER, by editing it.\n" + FORMAT_DIFF)
+        else:
+            parts.append("\nWrite a program that scores clearly LOWER than the parent by a real mechanism, not a "
+                         "constant tweak.\n" + FORMAT)
+        return parent[0], "\n".join(parts), parent[1], mode
 
     def job(self, number):
         island = number % ISLANDS
         direction = DIRECTIONS[(number // ISLANDS + self.offset) % len(DIRECTIONS)]
-        parent, prompt = self.prompt(island, direction)
+        parent, prompt, parent_code, mode = self.prompt(island, direction)
         started = time.time()
         try:
             text, tin, tout = post_chat(self.a.base_url, self.a.model, prompt, self.a.max_tokens, self.a.effort,
@@ -257,10 +318,14 @@ class Engine:
                    (parent, island, "llm_error", str(exc)[:400], time.time(), self.a.model, direction))
             return "llm_error"
         code, idea, novelty = extract(text)
+        edit_error = None
+        if mode == "diff" and EDIT.search(text):
+            code, edit_error = apply_edits(parent_code, text)
+            code = code and headed(code, idea, novelty)
         row = dict(parent=parent, island=island, idea=idea, novelty=novelty, model=self.a.model,
                    prompt_tokens=tin, completion_tokens=tout, response=text[-20000:], direction=direction)
         if not code:
-            status, score, metrics, error, digest = "no_code", None, None, "no python block", None
+            status, score, metrics, error, digest = "no_code", None, None, edit_error or "no python block", None
         else:
             digest = hashlib.sha256(code.encode()).hexdigest()
             if self.q("SELECT id FROM programs WHERE code_hash=?", (digest,)):
@@ -268,13 +333,33 @@ class Engine:
             else:
                 with self.eval_slots:
                     score, metrics, error = evaluate(code, self.dir / "programs" / f"job{number}.py")
+                if error is not None and not error.startswith("timeout"):  # one repair round
+                    try:
+                        fix, tin2, tout2 = post_chat(self.a.base_url, self.a.model,
+                                                     REPAIR.format(error=error, code=code), self.a.max_tokens,
+                                                     self.a.effort, context=self.context)
+                        tin, tout = tin + tin2, tout + tout2
+                        fixed, _ = apply_edits(code, fix)
+                        if fixed and fixed != code:
+                            digest2 = hashlib.sha256(fixed.encode()).hexdigest()
+                            if not self.q("SELECT id FROM programs WHERE code_hash=?", (digest2,)):
+                                with self.eval_slots:
+                                    score2, metrics2, error2 = evaluate(fixed, self.dir / "programs" / f"job{number}r.py")
+                                row["response"] += f"\n[repair of: {error[:200]}]\n" + fix[-4000:]
+                                code, digest, score, metrics = fixed, digest2, score2, metrics2
+                                error = error2 if error2 is None else f"after repair: {error2}"
+                    except Exception as exc:
+                        error = f"{error} (repair failed: {str(exc)[:80]})"
                 status = "ok" if error is None else "eval_error"
+                if status == "ok" and self.q("SELECT id FROM programs WHERE status='ok' AND per_case=?",
+                                             (json.dumps(metrics["per_case"]),)):
+                    status = "same_behavior"  # identical reads on all 54 cases: keep out of the parent pool
         self.q("INSERT INTO programs(parent,island,code,code_hash,idea,novelty,status,score,totals,per_case,created,"
                "model,prompt_tokens,completion_tokens,seconds,error,response,direction)"
                " VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
                (parent, island, code, digest, idea, novelty, status, score, json.dumps(metrics and metrics["totals"]),
                 json.dumps(metrics and metrics["per_case"]), time.time(), self.a.model, tin, tout,
-                time.time() - started, error, row["response"], direction))
+                time.time() - started, error, row["response"][-20000:], f"[{mode}] {direction}"))
         self.say(f"job{number} island{island} parent p{parent} {status} score={score} tokens={tin}/{tout} "
                  f"| {idea[:110]}" + (f" | ERR {error[:100]}" if error else ""))
         return status

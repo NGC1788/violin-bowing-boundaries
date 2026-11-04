@@ -27,7 +27,10 @@ def run_child(path, case, write_fd):
         started = time.perf_counter()
         result = dict(queries=replay(case, module.choose), seconds=time.perf_counter() - started)
     except BaseException as exc:  # report every failure, including assertion errors
-        result = dict(error=f"{type(exc).__name__}: {exc}"[:400])
+        import traceback
+        frames = [f for f in traceback.extract_tb(exc.__traceback__) if f.filename == str(path)]
+        where = f" [candidate line {frames[-1].lineno}: {(frames[-1].line or '').strip()[:120]}]" if frames else ""
+        result = dict(error=(f"{type(exc).__name__}: {exc}"[:400] + where))
     os.write(write_fd, pickle.dumps(result))
     os.close(write_fd)
     os._exit(0)
