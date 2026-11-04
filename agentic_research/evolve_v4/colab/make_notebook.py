@@ -66,7 +66,14 @@ ls population"""),
 pip install -q vllm threadpoolctl 2>&1 | tail -3
 python -c "import vllm; print('vllm', vllm.__version__)\""""),
     ("code", """import subprocess, time, urllib.request, json
+def serving():
+    try:
+        return json.loads(urllib.request.urlopen("http://127.0.0.1:8000/v1/models", timeout=5).read())["data"][0]["id"]
+    except Exception:
+        return None
+
 def start(model, max_len):
+    subprocess.run(["pkill", "-f", "vllm serve"]); time.sleep(5)   # never two servers on port 8000
     log = open("/content/vllm.log", "w")
     proc = subprocess.Popen(["vllm", "serve", model, "--host", "127.0.0.1", "--port", "8000",
                              "--max-model-len", str(max_len), "--gpu-memory-utilization", "0.90",
@@ -84,7 +91,17 @@ def start(model, max_len):
     return None
 
 SERVER = None
-for model, max_len, conc in CANDIDATES:
+# re-running this cell while an earlier server is still loading: wait for it and reuse it
+for _ in range(120):
+    if serving() or subprocess.run(["pgrep", "-f", "vllm serve"], capture_output=True).returncode != 0:
+        break
+    time.sleep(10)
+if serving():
+    MODEL_NAME = serving()
+    CONCURRENCY = next((c for m, _, c in CANDIDATES if m == MODEL_NAME), 8)
+    SERVER = True
+    print("already running:", MODEL_NAME)
+for model, max_len, conc in ([] if SERVER else CANDIDATES):
     print("loading", model, "...")
     SERVER = start(model, max_len)
     if SERVER:
