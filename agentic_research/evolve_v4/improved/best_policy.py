@@ -1,20 +1,22 @@
-# IDEA: Witness commit-and-verify (from t21) with three structural changes: (1) an A column is ruled out only
-#   by a confirmed positive pair below the threshold, and its cost is a greedy zero-cover count that steps over
-#   isolated positives; (2) the (A, B) witness pair is chosen jointly from a prefix-cover table; (3) a pass-proof
-#   mode that pins every column inside a common window, entered by a ski-rental rule (reads spent so far >=
-#   optimistic remaining pass cost of the cheapest alive rule).
+# IDEA: Witness commit-and-verify (from t21) with four structural changes: (1) an A column is ruled out only by a
+#   confirmed positive pair below the threshold, and its cost is a greedy zero-cover count that steps over isolated
+#   positives; (2) rules are attacked loosest first (a rule that dominates more rules in the threshold order goes
+#   first: its zero sweeps are zeros for every stricter rule); (3) a pass-proof mode that pins every column inside a
+#   common window; (4) the switch to it follows a ski-rental rule (reads spent so far >= optimistic remaining pass
+#   cost of the cheapest alive rule).
 # NOVELTY: t21 judged A feasibility from the first "real" positive, so one isolated positive vetoed a column for
-#   the whole run; it fixed B to the single lowest attainable ceiling; and it proved passes with the same bottom-up
-#   sweeps as refutations. Labels only (view.revealed is never read); no per-case constants.
+#   the whole run; it ordered witnesses by cost only; and it proved passes with the same bottom-up sweeps as
+#   refutations. Labels only (view.revealed is never read); no per-case constants.
 import numpy as np
 from agentic_research.evolve_v4.helpers import UNIFORM10, counterfactual_choose, response_patterns
 
 KSEED = 8        # opening reads taken by the published one-step counterfactual lookahead
 COVER = True     # A feasibility = no confirmed pair below the threshold; cost = greedy zero cover
-JOINT = True     # choose the (A, B) witness pair jointly instead of fixing B to the lowest ceiling
+JOINT = False    # True: choose the (A, B) pair jointly over all B candidates (no gain once LOOSE is on)
 SKI = 1.0        # pass-proof switch: reads so far >= SKI * remaining pass cost (None disables the mode)
 FAILFIRST = True  # with a B pair still to complete, open the side with the larger start domain first
-SHARE = True     # amortise a witness column over the rules that would use it
+LOOSE = True     # attack the loosest alive rule first (dominance count in the (u, v) threshold order)
+SHARE = False    # True: amortise a witness column over the rules that would use it (no gain once LOOSE is on)
 
 
 def _fallback(view):
@@ -255,6 +257,10 @@ def _choose(view):
         share[key] = share.get(key, 0) + 1
     ver2 = sorted((cost / float(share[("B", b) if cb else ("A", a)] if SHARE else 1), cost, r, a, b, cb)
                   for cost, r, a, b, cb in ver)
+    if LOOSE:
+        u, v = view.rules[:, 0], view.rules[:, 1]
+        dom = ((u[None, :] >= u[:, None]) & (v[None, :] <= v[:, None])).sum(1)  # rules at least as strict
+        ver2.sort(key=lambda t: (-dom[t[2]], t[0]))
     for _, _, r, a, b, cb in ver2:
         if cb:
             if FAILFIRST and int(cand[a, r].sum()) > int(cand[b, r].sum()):
