@@ -20,7 +20,7 @@ from agentic_research.law_decision_pilot_v1 import pilot
 HERE = Path(__file__).resolve().parent
 EVOLVE = HERE.parent
 OUT = HERE / "bundle"
-POPULATION = {"seed": None, "p12_t9": 12, "p10_t6": 10, "p5_t2": 5, "p9_t5": 9, "p7_t4": 7, "p8_t1": 8}
+POPULATION = {"seed": None, "p25_t21": 25, "p12_t9": 12, "p10_t6": 10, "p5_t2": 5, "p9_t5": 9, "p7_t4": 7, "p8_t1": 8}
 
 
 def core_source():
