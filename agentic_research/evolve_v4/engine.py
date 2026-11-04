@@ -108,10 +108,13 @@ def evaluate(code, path, timeout=400):
         return None, None, f"{type(exc).__name__}: {exc}"[:400]
 
 
-def brief(db, folder, task_id, island, direction):
-    rows = db.execute("SELECT id,code,idea,score,metrics FROM programs WHERE island=? AND status='ok'"
-                      " ORDER BY score LIMIT 8", (island,)).fetchall()
-    parent = min(random.sample(rows, min(3, len(rows))), key=lambda r: r[3])
+def brief(db, folder, task_id, island, direction, parent_id=None, max_scorings=6, labels_only=False):
+    if parent_id:
+        parent = db.execute("SELECT id,code,idea,score,metrics FROM programs WHERE id=?", (parent_id,)).fetchone()
+    else:
+        rows = db.execute("SELECT id,code,idea,score,metrics FROM programs WHERE island=? AND status='ok'"
+                          " ORDER BY score LIMIT 8", (island,)).fetchall()
+        parent = min(random.sample(rows, min(3, len(rows))), key=lambda r: r[3])
     others = db.execute("SELECT id,code,idea,score FROM programs WHERE island!=? AND status='ok'"
                         " AND task IS NOT NULL ORDER BY score LIMIT 6", (island,)).fetchall()
     inspirations = random.sample(others, min(2, len(others)))
@@ -150,7 +153,8 @@ def brief(db, folder, task_id, island, direction):
 ## How to work (strict)
 1. Write drafts only under {work}/ . Score a draft with (from {REPO}):
    .venv-mac/bin/python -m agentic_research.evolve_v4.try_a {work}/draft.py
-   It reports the SEARCH split only. Use at most 6 scorings. Debug errors it prints.
+   It reports the SEARCH split only. Use at most {{max_scorings}} scorings. Debug errors it prints.
+   Budget is tight: do NOT write separate analysis, trace or oracle scripts; reason from the brief.{{labels_note}}
 2. Do NOT read or run anything that touches the holdout (it is sealed), do not read data files
    (*.json.gz, *.npz), other runs, ledgers, or git history. Do not edit any file outside {work}/
    and {inbox}. Do not hard-code folder names or per-case constants: the program must generalise to
@@ -163,11 +167,15 @@ def brief(db, folder, task_id, island, direction):
 4. Final reply: ONE line only: "t{task_id} score=<your best search total> idea=<short>".
 """)
     path = folder / "tasks" / f"t{task_id}.md"
+    if labels_only:
+        out[-1] = out[-1].replace("{labels_note}", "\n   LABELS ONLY: do not use view.revealed (raw periodicity/ratio/fixed/guard); use only\n"
+                                  "   partial labels, possible, lower/upper, force, log_beta, rules, epsilon.")
+    out[-1] = out[-1].replace("{labels_note}", "").replace("{max_scorings}", str(max_scorings))
     path.write_text("\n".join(out))
     return parent[0], path
 
 
-def dispatch(campaign, n, direction):
+def dispatch(campaign, n, direction, parent_id=None, max_scorings=6, labels_only=False):
     folder, db = connect(campaign)
     island_counts = dict(db.execute("SELECT island, COUNT(*) FROM tasks GROUP BY island").fetchall())
     for _ in range(n):
@@ -175,7 +183,7 @@ def dispatch(campaign, n, direction):
         island_counts[island] = island_counts.get(island, 0) + 1
         cur = db.execute("INSERT INTO tasks(island,parent,direction,created) VALUES(?,?,?,?)",
                          (island, None, direction, time.time()))
-        parent, path = brief(db, folder, cur.lastrowid, island, direction)
+        parent, path = brief(db, folder, cur.lastrowid, island, direction, parent_id, max_scorings, labels_only)
         db.execute("UPDATE tasks SET parent=? WHERE id=?", (parent, cur.lastrowid))
         db.commit()
         print(f"t{cur.lastrowid} island{island} parent p{parent}: {path}")
@@ -220,9 +228,12 @@ if __name__ == "__main__":
     ap.add_argument("--direction", default="")
     ap.add_argument("--file")
     ap.add_argument("--task", type=int, nargs="*")
+    ap.add_argument("--parent", type=int)
+    ap.add_argument("--max-scorings", type=int, default=6)
+    ap.add_argument("--labels-only", action="store_true")
     a = ap.parse_args()
     if a.mode == "dispatch":
-        dispatch(a.campaign, a.n, a.direction)
+        dispatch(a.campaign, a.n, a.direction, a.parent, a.max_scorings, a.labels_only)
     elif a.mode == "ingest":
         ingest(a.campaign, a.task)
     elif a.mode == "note":
