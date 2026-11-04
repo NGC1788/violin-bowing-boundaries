@@ -1,0 +1,2104 @@
+{
+ "settings": {
+  "C": 2,
+  "R": 5,
+  "K": 2,
+  "seed": 20261104,
+  "n_instances": 24,
+  "skipped_trivial_seeds_offsets": [
+   3,
+   17
+  ],
+  "geometry": "odd i: sub-sampled real SEARCH-split columns/ranks (forces, log_beta); even i: synthetic; intervals mirror pilot.intervals (slope -2, eps)",
+  "prior": "per column latent onset + positive level + per-cell noise q; independent columns"
+ },
+ "average": {
+  "optimal": 3.5284485762865927,
+  "minimax": 9.791666666666666,
+  "hindsight": 3.02049356731073,
+  "policies": {
+   "seed": {
+    "n_ok": 0,
+    "n_crash": 24,
+    "first_error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+   },
+   "seed+shim": {
+    "n_ok": 24,
+    "n_crash": 0,
+    "first_error": null,
+    "reads": 4.28702991560066,
+    "optimal_same_instances": 3.5284485762865927,
+    "ratio_to_optimal": 1.2149900509850742,
+    "mean_of_ratios": 1.2037478129178207
+   },
+   "t2": {
+    "n_ok": 0,
+    "n_crash": 24,
+    "first_error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+   },
+   "t2+shim": {
+    "n_ok": 24,
+    "n_crash": 0,
+    "first_error": null,
+    "reads": 4.287041031236661,
+    "optimal_same_instances": 3.5284485762865927,
+    "ratio_to_optimal": 1.2149932012749993,
+    "mean_of_ratios": 1.2037525550015453
+   },
+   "t2+shim+k0": {
+    "n_ok": 24,
+    "n_crash": 0,
+    "first_error": null,
+    "reads": 4.597628328636945,
+    "optimal_same_instances": 3.5284485762865927,
+    "ratio_to_optimal": 1.3030169575194934,
+    "mean_of_ratios": 1.3150635466269538
+   },
+   "t6": {
+    "n_ok": 0,
+    "n_crash": 24,
+    "first_error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+   },
+   "t6+shim": {
+    "n_ok": 24,
+    "n_crash": 0,
+    "first_error": null,
+    "reads": 4.287041031236661,
+    "optimal_same_instances": 3.5284485762865927,
+    "ratio_to_optimal": 1.2149932012749993,
+    "mean_of_ratios": 1.2037525550015453
+   },
+   "t6+shim+k0": {
+    "n_ok": 24,
+    "n_crash": 0,
+    "first_error": null,
+    "reads": 4.82085945364982,
+    "optimal_same_instances": 3.5284485762865927,
+    "ratio_to_optimal": 1.3662830418017273,
+    "mean_of_ratios": 1.3658382226649037
+   },
+   "t9": {
+    "n_ok": 0,
+    "n_crash": 24,
+    "first_error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+   },
+   "t9+shim": {
+    "n_ok": 24,
+    "n_crash": 0,
+    "first_error": null,
+    "reads": 4.287041031236661,
+    "optimal_same_instances": 3.5284485762865927,
+    "ratio_to_optimal": 1.2149932012749993,
+    "mean_of_ratios": 1.2037525550015453
+   },
+   "t9+shim+k0": {
+    "n_ok": 24,
+    "n_crash": 0,
+    "first_error": null,
+    "reads": 4.844353992960452,
+    "optimal_same_instances": 3.5284485762865927,
+    "ratio_to_optimal": 1.372941645095121,
+    "mean_of_ratios": 1.3717384528094818
+   }
+  }
+ },
+ "instances": [
+  {
+   "i": 0,
+   "kind": "synthetic",
+   "eps": 0.4,
+   "states": 404937,
+   "optimal": 4.393568843528199,
+   "minimax": 10,
+   "hindsight": 4.0687461734707515,
+   "hindsight_worst": 6,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 5.514696231573458,
+     "ratio": 1.2551746491230467
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 5.514709675840711,
+     "ratio": 1.2551777091108909
+    },
+    "t2+shim+k0": {
+     "reads": 5.6592866720304675,
+     "ratio": 1.2880842143549638
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 5.514709675840711,
+     "ratio": 1.2551777091108909
+    },
+    "t6+shim+k0": {
+     "reads": 6.641301266941069,
+     "ratio": 1.5115960403633635
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 5.514709675840711,
+     "ratio": 1.2551777091108909
+    },
+    "t9+shim+k0": {
+     "reads": 6.641301266941069,
+     "ratio": 1.5115960403633635
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.215,
+      0.046,
+      0.157,
+      0.404,
+      0.178
+     ],
+     "level_p": [
+      0.466,
+      0.534
+     ],
+     "q": 0.05
+    },
+    {
+     "onset": [
+      0.087,
+      0.146,
+      0.349,
+      0.321,
+      0.097
+     ],
+     "level_p": [
+      0.304,
+      0.696
+     ],
+     "q": 0.02
+    }
+   ],
+   "brute_check": [
+    {
+     "code": 758707,
+     "dp": 1.0,
+     "brute": 1.0
+    },
+    {
+     "code": 543268,
+     "dp": 2.436626929479021,
+     "brute": 2.436626929479021
+    },
+    {
+     "code": 697120,
+     "dp": 2.252237323823264,
+     "brute": 2.252237323823264
+    },
+    {
+     "code": 847931,
+     "dp": 1.6327922407778441,
+     "brute": 1.6327922407778441
+    },
+    {
+     "code": 926412,
+     "dp": 1.2416613047493297,
+     "brute": 1.2416613047493297
+    }
+   ],
+   "replay_matches_tree_eval": true
+  },
+  {
+   "i": 1,
+   "kind": "real_subsample",
+   "eps": 0.2,
+   "states": 370138,
+   "optimal": 4.2444127205102085,
+   "minimax": 10,
+   "hindsight": 3.478017939832628,
+   "hindsight_worst": 8,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 4.950134138846018,
+     "ratio": 1.1662706868551125
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 4.950183278829308,
+     "ratio": 1.16628226442462
+    },
+    "t2+shim+k0": {
+     "reads": 5.315174661233994,
+     "ratio": 1.2522756412328988
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 4.950183278829308,
+     "ratio": 1.16628226442462
+    },
+    "t6+shim+k0": {
+     "reads": 5.286853927797941,
+     "ratio": 1.2456031672533543
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 4.950183278829308,
+     "ratio": 1.16628226442462
+    },
+    "t9+shim+k0": {
+     "reads": 5.286853927797941,
+     "ratio": 1.2456031672533543
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.022,
+      0.408,
+      0.05,
+      0.268,
+      0.252
+     ],
+     "level_p": [
+      0.302,
+      0.698
+     ],
+     "q": 0.1
+    },
+    {
+     "onset": [
+      0.224,
+      0.062,
+      0.233,
+      0.288,
+      0.193
+     ],
+     "level_p": [
+      0.75,
+      0.25
+     ],
+     "q": 0.1
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "kind": "synthetic",
+   "eps": 0.2,
+   "states": 364071,
+   "optimal": 3.098144734363716,
+   "minimax": 10,
+   "hindsight": 2.7448586296272737,
+   "hindsight_worst": 8,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 4.1449882016684025,
+     "ratio": 1.3378936612267995
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 4.145651119088213,
+     "ratio": 1.3381076336124205
+    },
+    "t2+shim+k0": {
+     "reads": 4.511203065929925,
+     "ratio": 1.4560982306258898
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 4.145651119088213,
+     "ratio": 1.3381076336124205
+    },
+    "t6+shim+k0": {
+     "reads": 4.814024787686719,
+     "ratio": 1.553841153478391
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 4.145651119088213,
+     "ratio": 1.3381076336124205
+    },
+    "t9+shim+k0": {
+     "reads": 4.814024787686719,
+     "ratio": 1.553841153478391
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.123,
+      0.144,
+      0.182,
+      0.034,
+      0.518
+     ],
+     "level_p": [
+      0.229,
+      0.771
+     ],
+     "q": 0.02
+    },
+    {
+     "onset": [
+      0.086,
+      0.355,
+      0.117,
+      0.14,
+      0.302
+     ],
+     "level_p": [
+      0.361,
+      0.639
+     ],
+     "q": 0.1
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "kind": "synthetic",
+   "eps": 0.4,
+   "states": 404937,
+   "optimal": 4.535515917667764,
+   "minimax": 10,
+   "hindsight": 4.196559365553516,
+   "hindsight_worst": 6,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 5.359289955183114,
+     "ratio": 1.1816274162563072
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 5.359296256764794,
+     "ratio": 1.1816288056421662
+    },
+    "t2+shim+k0": {
+     "reads": 5.621082320089403,
+     "ratio": 1.2393479423570968
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 5.359296256764794,
+     "ratio": 1.1816288056421662
+    },
+    "t6+shim+k0": {
+     "reads": 6.808661294686493,
+     "ratio": 1.5011878291869423
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 5.359296256764794,
+     "ratio": 1.1816288056421662
+    },
+    "t9+shim+k0": {
+     "reads": 6.808661294686493,
+     "ratio": 1.5011878291869423
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.099,
+      0.199,
+      0.22,
+      0.251,
+      0.231
+     ],
+     "level_p": [
+      0.289,
+      0.711
+     ],
+     "q": 0.05
+    },
+    {
+     "onset": [
+      0.087,
+      0.065,
+      0.436,
+      0.308,
+      0.103
+     ],
+     "level_p": [
+      0.478,
+      0.522
+     ],
+     "q": 0.02
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "kind": "real_subsample",
+   "eps": 0.4,
+   "states": 386763,
+   "optimal": 4.255407753016246,
+   "minimax": 10,
+   "hindsight": 3.633645351699167,
+   "hindsight_worst": 7,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 5.788338128412969,
+     "ratio": 1.36023113750032
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 5.788380280385786,
+     "ratio": 1.36024104300768
+    },
+    "t2+shim+k0": {
+     "reads": 4.735618049947039,
+     "ratio": 1.1128470700816906
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 5.788380280385786,
+     "ratio": 1.36024104300768
+    },
+    "t6+shim+k0": {
+     "reads": 4.810224120509235,
+     "ratio": 1.1303791316119434
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 5.788380280385786,
+     "ratio": 1.36024104300768
+    },
+    "t9+shim+k0": {
+     "reads": 5.161234529860501,
+     "ratio": 1.2128648602950451
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.351,
+      0.474,
+      0.076,
+      0.044,
+      0.055
+     ],
+     "level_p": [
+      0.641,
+      0.359
+     ],
+     "q": 0.05
+    },
+    {
+     "onset": [
+      0.111,
+      0.207,
+      0.172,
+      0.417,
+      0.093
+     ],
+     "level_p": [
+      0.114,
+      0.886
+     ],
+     "q": 0.05
+    }
+   ]
+  },
+  {
+   "i": 6,
+   "kind": "synthetic",
+   "eps": 0.2,
+   "states": 331401,
+   "optimal": 3.0993349368552385,
+   "minimax": 10,
+   "hindsight": 2.4700383086836695,
+   "hindsight_worst": 7,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 4.147923738478674,
+     "ratio": 1.3383270356341008
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 4.147742413003948,
+     "ratio": 1.338268530994099
+    },
+    "t2+shim+k0": {
+     "reads": 4.269868689764264,
+     "ratio": 1.3776725577445061
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 4.147742413003948,
+     "ratio": 1.338268530994099
+    },
+    "t6+shim+k0": {
+     "reads": 4.4445627764626305,
+     "ratio": 1.4340375812923067
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 4.147742413003948,
+     "ratio": 1.338268530994099
+    },
+    "t9+shim+k0": {
+     "reads": 4.4445627764626305,
+     "ratio": 1.4340375812923067
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.283,
+      0.152,
+      0.176,
+      0.106,
+      0.284
+     ],
+     "level_p": [
+      0.286,
+      0.714
+     ],
+     "q": 0.05
+    },
+    {
+     "onset": [
+      0.463,
+      0.024,
+      0.111,
+      0.278,
+      0.124
+     ],
+     "level_p": [
+      0.145,
+      0.855
+     ],
+     "q": 0.02
+    }
+   ]
+  },
+  {
+   "i": 7,
+   "kind": "real_subsample",
+   "eps": 0.2,
+   "states": 257340,
+   "optimal": 3.7486141673245106,
+   "minimax": 9,
+   "hindsight": 3.118386390559108,
+   "hindsight_worst": 7,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 4.309812378267757,
+     "ratio": 1.1497081817155348
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 4.309812378267757,
+     "ratio": 1.1497081817155348
+    },
+    "t2+shim+k0": {
+     "reads": 4.4041931700817285,
+     "ratio": 1.1748856973522892
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 4.309812378267757,
+     "ratio": 1.1497081817155348
+    },
+    "t6+shim+k0": {
+     "reads": 4.440412496308566,
+     "ratio": 1.1845477550115036
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 4.309812378267757,
+     "ratio": 1.1497081817155348
+    },
+    "t9+shim+k0": {
+     "reads": 4.440412496308566,
+     "ratio": 1.1845477550115036
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.161,
+      0.157,
+      0.508,
+      0.119,
+      0.055
+     ],
+     "level_p": [
+      0.278,
+      0.722
+     ],
+     "q": 0.05
+    },
+    {
+     "onset": [
+      0.281,
+      0.259,
+      0.192,
+      0.217,
+      0.05
+     ],
+     "level_p": [
+      0.852,
+      0.148
+     ],
+     "q": 0.1
+    }
+   ]
+  },
+  {
+   "i": 8,
+   "kind": "synthetic",
+   "eps": 0.2,
+   "states": 364071,
+   "optimal": 4.351349473649982,
+   "minimax": 10,
+   "hindsight": 3.5497376235395537,
+   "hindsight_worst": 8,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 4.76702595276204,
+     "ratio": 1.0955281761736737
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 4.767107007533203,
+     "ratio": 1.0955468036757057
+    },
+    "t2+shim+k0": {
+     "reads": 5.296203706154105,
+     "ratio": 1.2171405073818546
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 4.767107007533203,
+     "ratio": 1.0955468036757057
+    },
+    "t6+shim+k0": {
+     "reads": 5.364809267007771,
+     "ratio": 1.2329070095369017
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 4.767107007533203,
+     "ratio": 1.0955468036757057
+    },
+    "t9+shim+k0": {
+     "reads": 5.364809267007771,
+     "ratio": 1.2329070095369017
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.208,
+      0.291,
+      0.176,
+      0.16,
+      0.164
+     ],
+     "level_p": [
+      0.663,
+      0.337
+     ],
+     "q": 0.1
+    },
+    {
+     "onset": [
+      0.159,
+      0.325,
+      0.17,
+      0.168,
+      0.177
+     ],
+     "level_p": [
+      0.364,
+      0.636
+     ],
+     "q": 0.05
+    }
+   ]
+  },
+  {
+   "i": 9,
+   "kind": "real_subsample",
+   "eps": 0.2,
+   "states": 171947,
+   "optimal": 2.6838148107889537,
+   "minimax": 10,
+   "hindsight": 2.127487163026228,
+   "hindsight_worst": 7,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 2.941418922516695,
+     "ratio": 1.0959843096074182
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 2.941624923489226,
+     "ratio": 1.0960610663835202
+    },
+    "t2+shim+k0": {
+     "reads": 3.9287405595965095,
+     "ratio": 1.463864251662576
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 2.941624923489226,
+     "ratio": 1.0960610663835202
+    },
+    "t6+shim+k0": {
+     "reads": 4.158582876123287,
+     "ratio": 1.54950440671456
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 2.941624923489226,
+     "ratio": 1.0960610663835202
+    },
+    "t9+shim+k0": {
+     "reads": 4.158582876123287,
+     "ratio": 1.54950440671456
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.147,
+      0.132,
+      0.094,
+      0.346,
+      0.281
+     ],
+     "level_p": [
+      0.28,
+      0.72
+     ],
+     "q": 0.1
+    },
+    {
+     "onset": [
+      0.067,
+      0.289,
+      0.091,
+      0.27,
+      0.283
+     ],
+     "level_p": [
+      0.139,
+      0.861
+     ],
+     "q": 0.02
+    }
+   ]
+  },
+  {
+   "i": 10,
+   "kind": "synthetic",
+   "eps": 0.4,
+   "states": 138520,
+   "optimal": 1.6996019951904473,
+   "minimax": 9,
+   "hindsight": 1.1840313222524879,
+   "hindsight_worst": 7,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 1.726717186367736,
+     "ratio": 1.0159538475796213
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 1.726717186367736,
+     "ratio": 1.0159538475796213
+    },
+    "t2+shim+k0": {
+     "reads": 2.02664187273089,
+     "ratio": 1.1924214483543227
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 1.726717186367736,
+     "ratio": 1.0159538475796213
+    },
+    "t6+shim+k0": {
+     "reads": 2.0650735267024833,
+     "ratio": 1.21503359759888
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 1.726717186367736,
+     "ratio": 1.0159538475796213
+    },
+    "t9+shim+k0": {
+     "reads": 2.0650735267024833,
+     "ratio": 1.21503359759888
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.197,
+      0.084,
+      0.084,
+      0.3,
+      0.334
+     ],
+     "level_p": [
+      0.38,
+      0.62
+     ],
+     "q": 0.1
+    },
+    {
+     "onset": [
+      0.221,
+      0.112,
+      0.285,
+      0.086,
+      0.296
+     ],
+     "level_p": [
+      0.157,
+      0.843
+     ],
+     "q": 0.05
+    }
+   ]
+  },
+  {
+   "i": 11,
+   "kind": "real_subsample",
+   "eps": 0.2,
+   "states": 279810,
+   "optimal": 4.37671330114104,
+   "minimax": 10,
+   "hindsight": 3.744828907100844,
+   "hindsight_worst": 8,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 4.986089000265593,
+     "ratio": 1.1392313494616346
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 4.98609812016832,
+     "ratio": 1.1392334331948153
+    },
+    "t2+shim+k0": {
+     "reads": 4.9795428605760845,
+     "ratio": 1.1377356746849019
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 4.98609812016832,
+     "ratio": 1.1392334331948153
+    },
+    "t6+shim+k0": {
+     "reads": 5.077451505222056,
+     "ratio": 1.1601060329673247
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 4.98609812016832,
+     "ratio": 1.1392334331948153
+    },
+    "t9+shim+k0": {
+     "reads": 5.077451505222056,
+     "ratio": 1.1601060329673247
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.226,
+      0.123,
+      0.127,
+      0.372,
+      0.151
+     ],
+     "level_p": [
+      0.815,
+      0.185
+     ],
+     "q": 0.05
+    },
+    {
+     "onset": [
+      0.232,
+      0.108,
+      0.182,
+      0.466,
+      0.011
+     ],
+     "level_p": [
+      0.459,
+      0.541
+     ],
+     "q": 0.02
+    }
+   ]
+  },
+  {
+   "i": 12,
+   "kind": "synthetic",
+   "eps": 0.2,
+   "states": 330557,
+   "optimal": 3.277001976423528,
+   "minimax": 10,
+   "hindsight": 2.7482093205978333,
+   "hindsight_worst": 7,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 3.995422706651136,
+     "ratio": 1.219231094578613
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 3.9951976537294853,
+     "ratio": 1.2191624181105272
+    },
+    "t2+shim+k0": {
+     "reads": 4.540829237133599,
+     "ratio": 1.3856656998691816
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 3.9951976537294853,
+     "ratio": 1.2191624181105272
+    },
+    "t6+shim+k0": {
+     "reads": 4.692715308768481,
+     "ratio": 1.432014793561413
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 3.9951976537294853,
+     "ratio": 1.2191624181105272
+    },
+    "t9+shim+k0": {
+     "reads": 4.692715308768481,
+     "ratio": 1.432014793561413
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.235,
+      0.025,
+      0.091,
+      0.395,
+      0.254
+     ],
+     "level_p": [
+      0.865,
+      0.135
+     ],
+     "q": 0.05
+    },
+    {
+     "onset": [
+      0.136,
+      0.261,
+      0.125,
+      0.152,
+      0.326
+     ],
+     "level_p": [
+      0.513,
+      0.487
+     ],
+     "q": 0.02
+    }
+   ]
+  },
+  {
+   "i": 13,
+   "kind": "real_subsample",
+   "eps": 0.2,
+   "states": 404937,
+   "optimal": 4.027534973568314,
+   "minimax": 10,
+   "hindsight": 3.475578153037227,
+   "hindsight_worst": 6,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 5.051037215282937,
+     "ratio": 1.254126220735911
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 5.0510972436186075,
+     "ratio": 1.2541411252211767
+    },
+    "t2+shim+k0": {
+     "reads": 5.130649490977356,
+     "ratio": 1.2738932187177767
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 5.0510972436186075,
+     "ratio": 1.2541411252211767
+    },
+    "t6+shim+k0": {
+     "reads": 6.364488988280625,
+     "ratio": 1.5802442511484431
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 5.0510972436186075,
+     "ratio": 1.2541411252211767
+    },
+    "t9+shim+k0": {
+     "reads": 6.364488988280625,
+     "ratio": 1.5802442511484431
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.31,
+      0.017,
+      0.246,
+      0.241,
+      0.186
+     ],
+     "level_p": [
+      0.52,
+      0.48
+     ],
+     "q": 0.1
+    },
+    {
+     "onset": [
+      0.19,
+      0.127,
+      0.351,
+      0.165,
+      0.167
+     ],
+     "level_p": [
+      0.291,
+      0.709
+     ],
+     "q": 0.1
+    }
+   ]
+  },
+  {
+   "i": 14,
+   "kind": "synthetic",
+   "eps": 0.4,
+   "states": 404937,
+   "optimal": 3.8415861473370776,
+   "minimax": 10,
+   "hindsight": 3.371997281227698,
+   "hindsight_worst": 6,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 5.084268114297308,
+     "ratio": 1.323481478561046
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 5.084279146345358,
+     "ratio": 1.323484350304026
+    },
+    "t2+shim+k0": {
+     "reads": 5.553997482063178,
+     "ratio": 1.445756327998297
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 5.084279146345358,
+     "ratio": 1.323484350304026
+    },
+    "t6+shim+k0": {
+     "reads": 6.628810000840419,
+     "ratio": 1.7255398542696738
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 5.084279146345358,
+     "ratio": 1.323484350304026
+    },
+    "t9+shim+k0": {
+     "reads": 6.628810000840419,
+     "ratio": 1.7255398542696738
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.065,
+      0.239,
+      0.072,
+      0.332,
+      0.293
+     ],
+     "level_p": [
+      0.155,
+      0.845
+     ],
+     "q": 0.02
+    },
+    {
+     "onset": [
+      0.306,
+      0.096,
+      0.199,
+      0.195,
+      0.205
+     ],
+     "level_p": [
+      0.433,
+      0.567
+     ],
+     "q": 0.05
+    }
+   ]
+  },
+  {
+   "i": 15,
+   "kind": "real_subsample",
+   "eps": 0.4,
+   "states": 138520,
+   "optimal": 1.822699451050359,
+   "minimax": 9,
+   "hindsight": 1.298020359789345,
+   "hindsight_worst": 7,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 1.8871042330334857,
+     "ratio": 1.0353348336973562
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 1.8871042330334857,
+     "ratio": 1.0353348336973562
+    },
+    "t2+shim+k0": {
+     "reads": 2.36327060364858,
+     "ratio": 1.2965772290580921
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 1.8871042330334857,
+     "ratio": 1.0353348336973562
+    },
+    "t6+shim+k0": {
+     "reads": 2.286348365908113,
+     "ratio": 1.2543748584499597
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 1.8871042330334857,
+     "ratio": 1.0353348336973562
+    },
+    "t9+shim+k0": {
+     "reads": 2.286348365908113,
+     "ratio": 1.2543748584499597
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.234,
+      0.056,
+      0.2,
+      0.364,
+      0.147
+     ],
+     "level_p": [
+      0.405,
+      0.595
+     ],
+     "q": 0.05
+    },
+    {
+     "onset": [
+      0.249,
+      0.132,
+      0.315,
+      0.066,
+      0.238
+     ],
+     "level_p": [
+      0.47,
+      0.53
+     ],
+     "q": 0.02
+    }
+   ]
+  },
+  {
+   "i": 16,
+   "kind": "synthetic",
+   "eps": 0.2,
+   "states": 388652,
+   "optimal": 3.4538134383156978,
+   "minimax": 10,
+   "hindsight": 3.15268664233707,
+   "hindsight_worst": 7,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 4.496203270978886,
+     "ratio": 1.3018083782694194
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 4.4962080032487775,
+     "ratio": 1.3018097484273552
+    },
+    "t2+shim+k0": {
+     "reads": 4.219502269216005,
+     "ratio": 1.2216937436185629
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 4.4962080032487775,
+     "ratio": 1.3018097484273552
+    },
+    "t6+shim+k0": {
+     "reads": 4.384737538515068,
+     "ratio": 1.2695351433496505
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 4.4962080032487775,
+     "ratio": 1.3018097484273552
+    },
+    "t9+shim+k0": {
+     "reads": 4.384737538515068,
+     "ratio": 1.2695351433496505
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.272,
+      0.113,
+      0.097,
+      0.175,
+      0.344
+     ],
+     "level_p": [
+      0.214,
+      0.786
+     ],
+     "q": 0.02
+    },
+    {
+     "onset": [
+      0.238,
+      0.346,
+      0.225,
+      0.139,
+      0.052
+     ],
+     "level_p": [
+      0.436,
+      0.564
+     ],
+     "q": 0.02
+    }
+   ]
+  },
+  {
+   "i": 18,
+   "kind": "synthetic",
+   "eps": 0.4,
+   "states": 330557,
+   "optimal": 4.345806113168299,
+   "minimax": 10,
+   "hindsight": 3.702605292936824,
+   "hindsight_worst": 7,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 5.09921763552911,
+     "ratio": 1.173365194567214
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 5.099176000615986,
+     "ratio": 1.1733556140861618
+    },
+    "t2+shim+k0": {
+     "reads": 5.318785187930996,
+     "ratio": 1.2238892047701937
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 5.099176000615986,
+     "ratio": 1.1733556140861618
+    },
+    "t6+shim+k0": {
+     "reads": 5.401209684802728,
+     "ratio": 1.2428556507471498
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 5.099176000615986,
+     "ratio": 1.1733556140861618
+    },
+    "t9+shim+k0": {
+     "reads": 5.439955464645104,
+     "ratio": 1.2517713222781395
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.147,
+      0.171,
+      0.314,
+      0.241,
+      0.127
+     ],
+     "level_p": [
+      0.625,
+      0.375
+     ],
+     "q": 0.02
+    },
+    {
+     "onset": [
+      0.106,
+      0.327,
+      0.181,
+      0.151,
+      0.235
+     ],
+     "level_p": [
+      0.298,
+      0.702
+     ],
+     "q": 0.02
+    }
+   ]
+  },
+  {
+   "i": 19,
+   "kind": "real_subsample",
+   "eps": 0.4,
+   "states": 82032,
+   "optimal": 1.7768788290591178,
+   "minimax": 8,
+   "hindsight": 1.351069558362725,
+   "hindsight_worst": 7,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 2.053742134734586,
+     "ratio": 1.1558143983414284
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 2.053742134734586,
+     "ratio": 1.1558143983414284
+    },
+    "t2+shim+k0": {
+     "reads": 2.4370073378941726,
+     "ratio": 1.371510143538939
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 2.053742134734586,
+     "ratio": 1.1558143983414284
+    },
+    "t6+shim+k0": {
+     "reads": 2.6029124300968194,
+     "ratio": 1.4648789706583978
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 2.053742134734586,
+     "ratio": 1.1558143983414284
+    },
+    "t9+shim+k0": {
+     "reads": 2.6029124300968194,
+     "ratio": 1.4648789706583978
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.324,
+      0.109,
+      0.109,
+      0.268,
+      0.19
+     ],
+     "level_p": [
+      0.404,
+      0.596
+     ],
+     "q": 0.02
+    },
+    {
+     "onset": [
+      0.117,
+      0.005,
+      0.231,
+      0.413,
+      0.234
+     ],
+     "level_p": [
+      0.566,
+      0.434
+     ],
+     "q": 0.1
+    }
+   ]
+  },
+  {
+   "i": 20,
+   "kind": "synthetic",
+   "eps": 0.2,
+   "states": 330557,
+   "optimal": 3.639074269838299,
+   "minimax": 10,
+   "hindsight": 3.0036170845490022,
+   "hindsight_worst": 7,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 4.040470257851765,
+     "ratio": 1.1103016751651242
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 4.040349670647899,
+     "ratio": 1.110268538385019
+    },
+    "t2+shim+k0": {
+     "reads": 4.975454262849405,
+     "ratio": 1.367230755383975
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 4.040349670647899,
+     "ratio": 1.110268538385019
+    },
+    "t6+shim+k0": {
+     "reads": 5.013888485995029,
+     "ratio": 1.3777922939225473
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 4.040349670647899,
+     "ratio": 1.110268538385019
+    },
+    "t9+shim+k0": {
+     "reads": 5.013888485995029,
+     "ratio": 1.3777922939225473
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.058,
+      0.061,
+      0.108,
+      0.388,
+      0.385
+     ],
+     "level_p": [
+      0.424,
+      0.576
+     ],
+     "q": 0.02
+    },
+    {
+     "onset": [
+      0.211,
+      0.178,
+      0.217,
+      0.263,
+      0.13
+     ],
+     "level_p": [
+      0.357,
+      0.643
+     ],
+     "q": 0.1
+    }
+   ]
+  },
+  {
+   "i": 21,
+   "kind": "real_subsample",
+   "eps": 0.4,
+   "states": 404937,
+   "optimal": 4.383873723375419,
+   "minimax": 10,
+   "hindsight": 4.007472716007848,
+   "hindsight_worst": 6,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 5.73044648990985,
+     "ratio": 1.3071650443201226
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 5.730493393904205,
+     "ratio": 1.3071757435321243
+    },
+    "t2+shim+k0": {
+     "reads": 5.6256273107616845,
+     "ratio": 1.2832548713173613
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 5.730493393904205,
+     "ratio": 1.3071757435321243
+    },
+    "t6+shim+k0": {
+     "reads": 6.659715040377238,
+     "ratio": 1.519139341278632
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 5.730493393904205,
+     "ratio": 1.3071757435321243
+    },
+    "t9+shim+k0": {
+     "reads": 6.659715040377238,
+     "ratio": 1.519139341278632
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.208,
+      0.099,
+      0.142,
+      0.379,
+      0.172
+     ],
+     "level_p": [
+      0.528,
+      0.472
+     ],
+     "q": 0.02
+    },
+    {
+     "onset": [
+      0.091,
+      0.27,
+      0.369,
+      0.147,
+      0.123
+     ],
+     "level_p": [
+      0.273,
+      0.727
+     ],
+     "q": 0.1
+    }
+   ]
+  },
+  {
+   "i": 22,
+   "kind": "synthetic",
+   "eps": 0.4,
+   "states": 386763,
+   "optimal": 3.316023796954218,
+   "minimax": 10,
+   "hindsight": 2.926319399645643,
+   "hindsight_worst": 7,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 3.7847048045580785,
+     "ratio": 1.1413382521664488
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 3.784728500912583,
+     "ratio": 1.1413453981810602
+    },
+    "t2+shim+k0": {
+     "reads": 5.187485240799458,
+     "ratio": 1.5643691235159969
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 3.784728500912583,
+     "ratio": 1.1413453981810602
+    },
+    "t6+shim+k0": {
+     "reads": 3.873629472231627,
+     "ratio": 1.1681549076305098
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 3.784728500912583,
+     "ratio": 1.1413453981810602
+    },
+    "t9+shim+k0": {
+     "reads": 3.901306337718119,
+     "ratio": 1.176501308977784
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.126,
+      0.267,
+      0.192,
+      0.138,
+      0.277
+     ],
+     "level_p": [
+      0.866,
+      0.134
+     ],
+     "q": 0.1
+    },
+    {
+     "onset": [
+      0.047,
+      0.098,
+      0.138,
+      0.129,
+      0.588
+     ],
+     "level_p": [
+      0.604,
+      0.396
+     ],
+     "q": 0.05
+    }
+   ]
+  },
+  {
+   "i": 23,
+   "kind": "real_subsample",
+   "eps": 0.4,
+   "states": 386763,
+   "optimal": 3.498419935397548,
+   "minimax": 10,
+   "hindsight": 3.1545254093525372,
+   "hindsight_worst": 7,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 4.613225692593065,
+     "ratio": 1.3186597886422213
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 4.6132499271858824,
+     "ratio": 1.3186667159389054
+    },
+    "t2+shim+k0": {
+     "reads": 5.543880585602141,
+     "ratio": 1.5846812812573783
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 4.6132499271858824,
+     "ratio": 1.3186667159389054
+    },
+    "t6+shim+k0": {
+     "reads": 5.723462206649383,
+     "ratio": 1.6360134896152738
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 4.6132499271858824,
+     "ratio": 1.3186667159389054
+    },
+    "t9+shim+k0": {
+     "reads": 5.869898095424422,
+     "ratio": 1.6778712115237784
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.177,
+      0.165,
+      0.378,
+      0.177,
+      0.104
+     ],
+     "level_p": [
+      0.474,
+      0.526
+     ],
+     "q": 0.1
+    },
+    {
+     "onset": [
+      0.18,
+      0.204,
+      0.099,
+      0.092,
+      0.424
+     ],
+     "level_p": [
+      0.134,
+      0.866
+     ],
+     "q": 0.02
+    }
+   ]
+  },
+  {
+   "i": 24,
+   "kind": "synthetic",
+   "eps": 0.2,
+   "states": 331401,
+   "optimal": 4.136577918033899,
+   "minimax": 10,
+   "hindsight": 3.5272311389285758,
+   "hindsight_worst": 7,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 5.54291214469926,
+     "ratio": 1.3399752777614273
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 5.542503604740289,
+     "ratio": 1.3398765149756013
+    },
+    "t2+shim+k0": {
+     "reads": 4.695645447592474,
+     "ratio": 1.135152181497961
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 5.542503604740289,
+     "ratio": 1.3398765149756013
+    },
+    "t6+shim+k0": {
+     "reads": 4.978092059233029,
+     "ratio": 1.203432440503647
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 5.542503604740289,
+     "ratio": 1.3398765149756013
+    },
+    "t9+shim+k0": {
+     "reads": 4.978092059233029,
+     "ratio": 1.203432440503647
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.171,
+      0.389,
+      0.156,
+      0.15,
+      0.133
+     ],
+     "level_p": [
+      0.23,
+      0.77
+     ],
+     "q": 0.02
+    },
+    {
+     "onset": [
+      0.227,
+      0.33,
+      0.28,
+      0.034,
+      0.129
+     ],
+     "level_p": [
+      0.489,
+      0.511
+     ],
+     "q": 0.05
+    }
+   ]
+  },
+  {
+   "i": 25,
+   "kind": "real_subsample",
+   "eps": 0.2,
+   "states": 172358,
+   "optimal": 2.676996604320152,
+   "minimax": 10,
+   "hindsight": 2.4561760833399666,
+   "hindsight_worst": 8,
+   "policies": {
+    "seed": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "seed+shim": {
+     "reads": 2.873529439953903,
+     "ratio": 1.0734154220877925
+    },
+    "t2": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t2+shim": {
+     "reads": 2.8735325972237193,
+     "ratio": 1.0734166014952713
+    },
+    "t2+shim+k0": {
+     "reads": 4.00338980268323,
+     "ratio": 1.4954781026701855
+    },
+    "t6": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t6+shim": {
+     "reads": 2.8735325972237193,
+     "ratio": 1.0734166014952713
+    },
+    "t6+shim+k0": {
+     "reads": 3.1786594604488845,
+     "ratio": 1.1873976438069238
+    },
+    "t9": {
+     "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
+    },
+    "t9+shim": {
+     "reads": 2.8735325972237193,
+     "ratio": 1.0734166014952713
+    },
+    "t9+shim+k0": {
+     "reads": 3.1786594604488845,
+     "ratio": 1.1873976438069238
+    }
+   },
+   "prior": [
+    {
+     "onset": [
+      0.165,
+      0.108,
+      0.511,
+      0.061,
+      0.155
+     ],
+     "level_p": [
+      0.151,
+      0.849
+     ],
+     "q": 0.02
+    },
+    {
+     "onset": [
+      0.212,
+      0.381,
+      0.129,
+      0.227,
+      0.051
+     ],
+     "level_p": [
+      0.638,
+      0.362
+     ],
+     "q": 0.02
+    }
+   ]
+  }
+ ],
+ "seconds": 326.1513638496399
+}
