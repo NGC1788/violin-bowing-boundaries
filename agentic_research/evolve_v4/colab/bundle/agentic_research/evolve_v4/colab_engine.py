@@ -9,6 +9,7 @@ are scored by colab_eval.py on the shipped SEARCH folders, and the ledger lives 
 Touch DIR/STOP to finish after the jobs in flight.
 """
 import argparse
+import fcntl
 import hashlib
 import json
 import os
@@ -50,7 +51,10 @@ shows certificates exist with about 1554 reads in total, so there is still a lot
 50 of 54 cases are INCOMPATIBLE (answer "no rule fits"): proving that needs, for every one of the 9
 rules, either a column with no valid start or two columns whose intervals cannot overlap. Labels are
 monotone in the thresholds (positive for a strict rule => positive for every looser rule; zero for a
-loose rule => zero for every stricter rule), and neighbouring ranks are correlated.
+loose rule => zero for every stricter rule), and neighbouring ranks are correlated. NOTE: one read
+reveals all 9 labels of that waveform at once, so cross-rule monotonicity can NEVER infer labels of an
+unread waveform (this has been tried many times and changes nothing); use it only to reason about which
+rules can still pass.
 
 What is known so far (ablation of the best programs): the gain comes from COMMITTING to a separating
 column pair per rule and VERIFYING it (zero-sweep of the high column's early starts + one forced
@@ -109,21 +113,50 @@ Error: {error}
 EDIT = re.compile(r"<{5,}\s*SEARCH[^\n]*\n(.*?)\n?={5,}[^\n]*\n(.*?)\n?>{5,}\s*REPLACE", re.S)
 
 
+def _indent(line):
+    return len(line) - len(line.lstrip())
+
+
+def locate(lines, pattern):
+    """Unique match of pattern in lines: exact (trailing spaces ignored), then ignoring indentation and
+    blank lines. Returns (first, last, indent_delta) or an error string."""
+    n = len(pattern)
+    if n and any(x.strip() for x in pattern):
+        hits = [i for i in range(len(lines) - n + 1)
+                if [x.rstrip() for x in lines[i:i + n]] == [x.rstrip() for x in pattern]]
+        if len(hits) == 1:
+            return hits[0], hits[0] + n - 1, 0
+        if len(hits) > 1:
+            return "not unique"
+    want = [x for x in pattern if x.strip()]
+    if not want:
+        return "empty"
+    body = [i for i, x in enumerate(lines) if x.strip()]
+    hits = [k for k in range(len(body) - len(want) + 1)
+            if [lines[i].strip() for i in body[k:k + len(want)]] == [x.strip() for x in want]]
+    if len(hits) != 1:
+        return "not unique" if hits else "not found"
+    first, last = body[hits[0]], body[hits[0] + len(want) - 1]
+    return first, last, _indent(lines[first]) - _indent(want[0])
+
+
 def apply_edits(code, text):
-    """Apply SEARCH/REPLACE blocks; tolerant to trailing whitespace. Returns (code, error)."""
+    """Apply SEARCH/REPLACE blocks, tolerant to whitespace, indentation shifts and dropped blank lines."""
     edits = EDIT.findall(text)
     if not edits:
         return None, "no edit blocks"
     for k, (old, new) in enumerate(edits):
-        if old and code.count(old) == 1:
+        if old.strip() and code.count(old) == 1:
             code = code.replace(old, new)
             continue
-        lines, pattern = code.split("\n"), [x.rstrip() for x in old.split("\n")]
-        hits = [i for i in range(len(lines) - len(pattern) + 1)
-                if [x.rstrip() for x in lines[i:i + len(pattern)]] == pattern] if old.strip() else []
-        if len(hits) != 1:
-            return None, f"edit {k + 1}: SEARCH text {'not unique' if hits else 'not found'} in the program"
-        lines[hits[0]:hits[0] + len(pattern)] = new.split("\n")
+        lines = code.split("\n")
+        found = locate(lines, old.split("\n"))
+        if isinstance(found, str):
+            return None, f"edit {k + 1}: SEARCH text {found} in the program"
+        first, last, delta = found
+        repl = [(" " * delta + x if delta > 0 else x[min(-delta, _indent(x)):]) if x.strip() else x
+                for x in new.split("\n")]
+        lines[first:last + 1] = repl
         code = "\n".join(lines)
     return code, None
 
@@ -144,8 +177,8 @@ DIRECTIONS = [
     "intercept window early and pin every column's first run inside it by bisection.",
     "Robustness: find the cases where the parent is much worse than the hindsight minimum and add a cheap "
     "guard (re-plan, switch witness, or fall back) without hurting the other cases.",
-    "Exploit label monotonicity across rules to infer unread labels exactly (implied zeros/ones) and "
-    "never spend a read whose outcome is already implied for every live rule.",
+    "Endgame: when few rules or few possible starts remain, pick the read that ends the certificate in the "
+    "fewest reads in the WORST case (small exact lookahead over the remaining candidate starts only).",
     "Order reads fail-first: read the element of the chosen proof most likely to break it first, so a "
     "wrong commitment is discovered after one or two reads.",
 ]
@@ -228,6 +261,11 @@ class Engine:
         self.eval_slots = threading.Semaphore(max(1, (os.cpu_count() or 2) // 2))
         self.rng = random.Random(f"{a.seed}|{Path(a.run_dir).name}")  # accounts diverge even with equal SEED
         self.offset = self.rng.randrange(len(DIRECTIONS))
+        self.lockfile = open(self.dir / "engine.lock", "w")
+        try:  # exactly one engine per run dir (two engines would interleave job files and ledger rows)
+            fcntl.flock(self.lockfile, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except OSError:
+            raise SystemExit("another engine is already running in this run dir")
         self.log = open(self.dir / "engine.log", "a")
         self.context = context_length(a.base_url, a.model)
         self.say(f"start model={a.model} effort={a.effort} context={self.context}")
