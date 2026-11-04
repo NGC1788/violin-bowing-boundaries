@@ -202,6 +202,8 @@ def post_chat(base_url, model, prompt, max_tokens, effort, timeout=1800, context
                 seed=random.SystemRandom().randrange(2 ** 31))  # vLLM's default seed is fixed: force variety
     if "gpt-oss" in model:
         body["reasoning_effort"] = effort
+    elif "qwen3" in model.lower():  # model card, thinking mode: temperature 1.0, top_p 0.95, top_k 20
+        body.update(top_p=0.95, top_k=20)
     request = urllib.request.Request(base_url + "/chat/completions", data=json.dumps(body).encode(),
                                      headers={"Content-Type": "application/json"})
     with urllib.request.urlopen(request, timeout=timeout) as response:

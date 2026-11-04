@@ -53,7 +53,7 @@ if __name__ == "__main__":
         '"load", "loadtxt"', '"revealed", "load", "loadtxt"')  # labels-only track
     assert '"revealed"' in source
     (pkg / "guard.py").write_text(source)
-    for name in ("colab_task.py", "colab_eval.py", "colab_engine.py"):
+    for name in ("colab_task.py", "colab_eval.py", "colab_engine.py", "colab_serve.py"):
         shutil.copy(HERE / "src" / name, pkg / name)
     blob = gzip.compress(pickle.dumps(task_a.load_cases("search"), protocol=4), mtime=0)
     (OUT / "cases" / "cases_search.pkl.gz").write_bytes(blob)

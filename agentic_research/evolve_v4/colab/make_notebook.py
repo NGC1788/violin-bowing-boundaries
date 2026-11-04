@@ -16,7 +16,7 @@ CELLS = [
 - 계정마다 `RUN_ID`와 `SEED`를 다르게 주세요(예: acct1/1, acct2/2, acct3/3).
 - 끝나면 드라이브의 `ledger.sqlite`를 내려받아 맥으로 가져오면 됩니다.
 
-**사용법:** 런타임 → 런타임 유형 변경 → **GPU(A100 또는 H100 권장)** → 아래 설정 칸의 `RUN_ID`·`SEED`만 바꾸고 → **런타임 → 모두 실행**.
+**사용법:** 런타임 → 런타임 유형 변경 → **GPU(G4·H100·A100, 메모리 70GB 이상 권장)** → 아래 설정 칸의 `RUN_ID`·`SEED`만 바꾸고 → **런타임 → 모두 실행**.
 - 드라이브 연결 창이 뜨면 허용을 눌러야 다음 칸으로 넘어갑니다.
 - 설치 뒤 "세션 다시 시작" 안내가 떠도 **누르지 마세요**(모델은 별도 프로세스라 필요 없음).
 - 진화는 백그라운드로 `HOURS` 동안 돕니다. 진행 상황 칸은 아무 때나 다시 실행해서 볼 수 있고, 탭은 가능하면 열어 두세요."""),
@@ -24,22 +24,14 @@ CELLS = [
 RUN_ID = "acct1"      # acct1 / acct2 / acct3
 SEED = 1              # 1 / 2 / 3
 HOURS = 10            # 진화 시간 (Pro+ 최대 연속 실행 24시간)
-MODEL = "auto"        # auto = GPU 메모리에 맞춰 선택
+MODEL = "auto"        # auto = Qwen3.8-27B(2026-08), 안 되면 gpt-oss-120b
 EFFORT = "medium"     # gpt-oss 추론 강도: medium 권장 (high는 생각만 하다 답이 잘림)"""),
-    ("code", """import subprocess, json
+    ("code", """import subprocess
 out = subprocess.run(["nvidia-smi", "--query-gpu=name,memory.total", "--format=csv,noheader,nounits"],
                      capture_output=True, text=True).stdout.strip()
 print(out)
-gpu_name, vram_mib = out.split(",")[0], int(out.split(",")[1])
-if vram_mib >= 70000:
-    CANDIDATES = [("openai/gpt-oss-120b", 49152, 8), ("openai/gpt-oss-20b", 49152, 24)]
-elif vram_mib >= 20000:
-    CANDIDATES = [("openai/gpt-oss-20b", 49152, 24), ("Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8", 32768, 8)]
-else:
-    raise SystemExit("GPU 메모리가 20GB 미만입니다. A100/H100/L4 런타임을 선택하세요.")
-if MODEL != "auto":
-    CANDIDATES = [(MODEL, 32768, 8)]
-print("후보 모델:", [c[0] for c in CANDIDATES])"""),
+if int(out.split(",")[1]) < 20000:
+    raise SystemExit("GPU 메모리가 20GB 미만입니다. G4/H100/A100 런타임을 선택하세요.")"""),
     ("code", """from google.colab import drive
 drive.mount("/content/drive")
 import os, shutil
@@ -65,66 +57,20 @@ ls population"""),
     ("code", """%%bash
 pip install -q vllm threadpoolctl 2>&1 | tail -3
 python -c "import vllm; print('vllm', vllm.__version__)\""""),
-    ("code", """import subprocess, time, urllib.request, json
-def serving():
-    try:
-        return json.loads(urllib.request.urlopen("http://127.0.0.1:8000/v1/models", timeout=5).read())["data"][0]["id"]
-    except Exception:
-        return None
-
-def start(model, max_len):
-    subprocess.run(["pkill", "-f", "vllm serve"]); time.sleep(5)   # never two servers on port 8000
-    log = open("/content/vllm.log", "w")
-    proc = subprocess.Popen(["vllm", "serve", model, "--host", "127.0.0.1", "--port", "8000",
-                             "--max-model-len", str(max_len), "--gpu-memory-utilization", "0.90",
-                             "--max-num-seqs", "32"], stdout=log, stderr=subprocess.STDOUT)
-    for _ in range(180):                      # up to 30 min for download + load
-        time.sleep(10)
-        if proc.poll() is not None:
-            return None
-        try:
-            urllib.request.urlopen("http://127.0.0.1:8000/v1/models", timeout=5)
-            return proc
-        except Exception:
-            pass
-    proc.kill()
-    return None
-
-SERVER = None
-# re-running this cell while an earlier server is still loading: wait for it and reuse it
-for _ in range(120):
-    if serving() or subprocess.run(["pgrep", "-f", "vllm serve"], capture_output=True).returncode != 0:
-        break
-    time.sleep(10)
-if serving():
-    MODEL_NAME = serving()
-    CONCURRENCY = next((c for m, _, c in CANDIDATES if m == MODEL_NAME), 8)
-    SERVER = True
-    print("already running:", MODEL_NAME)
-for model, max_len, conc in ([] if SERVER else CANDIDATES):
-    print("loading", model, "...")
-    SERVER = start(model, max_len)
-    if SERVER:
-        MODEL_NAME, CONCURRENCY = model, conc
-        print("ready:", model)
-        break
-    print("failed:", model); print(open("/content/vllm.log").read()[-1500:])
-assert SERVER, "모든 후보 모델 로드 실패 — 위 로그를 Claude에게 보여주세요."
-"""),
+    ("code", """# 모델 서버: Qwen3.8-27B FP8(+MTP) -> FP8 -> BF16(G4) -> gpt-oss-120b 순으로 시도, 이미 떠 있으면 재사용
+import sys
+sys.path.insert(0, "/content/evolve")
+from agentic_research.evolve_v4 import colab_serve
+CHOSEN = colab_serve.serve(MODEL)
+MODEL_NAME, CONCURRENCY = CHOSEN[0], CHOSEN[3]"""),
     ("code", """%%bash
 # 점검: 번들 안 채점기가 맥과 같은 점수를 내는지 (seed 9158, p10_t6 3300)
 cd /content/evolve
 for f in population/seed.py population/p10_t6.py; do
   echo -n "$f "; python -m agentic_research.evolve_v4.colab_eval $f | python -c "import json,sys; d=json.load(sys.stdin); print(d['total'], d['totals'])"
 done"""),
-    ("code", """import subprocess
-cmd = ["python", "-m", "agentic_research.evolve_v4.colab_engine", "--run-dir", RUN_DIR, "--model", MODEL_NAME,
-       "--hours", str(HOURS), "--seed", str(SEED), "--concurrency", str(CONCURRENCY), "--backup-dir", DRIVE_DIR, "--effort", EFFORT]
-if "gpt-oss" not in MODEL_NAME:
-    cmd += ["--max-tokens", "12000"]
-ENGINE = subprocess.Popen(cmd, cwd="/content/evolve", stdout=open(f"{DRIVE_DIR}/stdout.log", "a"),
-                          stderr=subprocess.STDOUT)
-print("engine started, pid", ENGINE.pid, "- 아래 칸으로 진행 상황을 보세요")"""),
+    ("code", """ENGINE = colab_serve.launch(RUN_DIR, DRIVE_DIR, CHOSEN, HOURS, SEED, EFFORT)
+print("- 아래 칸으로 진행 상황을 보세요")"""),
     ("code", """# 진행 상황 (여러 번 실행해도 됨)
 import sqlite3, subprocess
 db = sqlite3.connect(f"{RUN_DIR}/ledger.sqlite")
@@ -135,11 +81,11 @@ for row in db.execute("SELECT id, island, score, totals, substr(idea,1,110) FROM
     print(" ", row)
 print(subprocess.run(["tail", "-n", "8", f"{RUN_DIR}/engine.log"], capture_output=True, text=True).stdout)
 print("engine running:", ENGINE.poll() is None)"""),
-    ("code", """# 코드 교체: 돌고 있는 중에 새 코드를 받을 때만 True로 바꾸고 이 칸만 실행 (모델 서버·기록은 그대로, 1분)
+    ("code", """# 코드 교체: 돌고 있는 중에 새 코드를 받을 때만 True로 바꾸고 이 칸만 실행.
+# 기록은 그대로 이어가고, 더 좋은 모델이 정해져 있으면 모델 서버도 바꿉니다(같으면 1분, 바꾸면 10~30분).
 UPDATE_NOW = False
 if UPDATE_NOW:
-    import subprocess, time
-    EFFORT = "medium"
+    import subprocess, sys, time, importlib
     subprocess.run(["pkill", "-f", "agentic_research.evolve_v4.colab_engine"])
     while subprocess.run(["pgrep", "-f", "agentic_research.evolve_v4.colab_engine"], capture_output=True).returncode == 0:
         time.sleep(1)
@@ -148,16 +94,12 @@ rm -rf /content/repo /content/evolve
 git clone -q --depth 1 --filter=blob:none --sparse -b __BRANCH__ __REPO__ /content/repo
 git -C /content/repo sparse-checkout set __BUNDLE__
 cp -r /content/repo/__BUNDLE__ /content/evolve && rm -rf /content/repo\"\"\", shell=True, check=True, executable="/bin/bash")
-    cmd = ["python", "-m", "agentic_research.evolve_v4.colab_engine", "--run-dir", RUN_DIR, "--model", MODEL_NAME,
-           "--hours", str(HOURS), "--seed", str(SEED), "--concurrency", str(CONCURRENCY), "--backup-dir", DRIVE_DIR,
-           "--effort", EFFORT]
-    if "gpt-oss" not in MODEL_NAME:
-        cmd += ["--max-tokens", "12000"]
-    ENGINE = subprocess.Popen(cmd, cwd="/content/evolve", stdout=open(f"{DRIVE_DIR}/stdout.log", "a"),
-                              stderr=subprocess.STDOUT)
-    time.sleep(8)
-    print(open(f"{RUN_DIR}/engine.log").read().splitlines()[-1])
-    print("새 코드로 재시작 완료, pid", ENGINE.pid)
+    sys.path.insert(0, "/content/evolve")
+    from agentic_research.evolve_v4 import colab_serve
+    importlib.reload(colab_serve)
+    CHOSEN = colab_serve.serve(MODEL)
+    MODEL_NAME, CONCURRENCY = CHOSEN[0], CHOSEN[3]
+    ENGINE = colab_serve.launch(RUN_DIR, DRIVE_DIR, CHOSEN, HOURS, SEED, EFFORT)
 else:
     print("코드 교체 안 함 (UPDATE_NOW = False)")""".replace("__BRANCH__", BRANCH).replace("__REPO__", REPO).replace("__BUNDLE__", BUNDLE)),
     ("code", """# 끝내기: 멈추고 싶을 때만 아래 False를 True로 바꾸고 이 칸만 실행 ('모두 실행' 때는 아무 일도 안 함)
