@@ -2985,12 +2985,8 @@
    "R": 12,
    "K": 2,
    "seed": 20261104,
-   "n_instances": 2,
+   "n_instances": 4,
    "start": 0,
-   "part": [
-    0,
-    1
-   ],
    "skipped_trivial": [],
    "config": {
     "exact": false,
@@ -3005,99 +3001,111 @@
     "hindsight_sample": 2000,
     "max_classes": 8,
     "greedy": false
-   }
+   },
+   "parts": [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     1
+    ]
+   ]
   },
   "average": {
-   "n": 2,
-   "n_total": 2,
-   "n_bounds_failed": 0,
-   "failed_instances": [],
+   "n": 3,
+   "n_total": 4,
+   "n_bounds_failed": 1,
+   "failed_instances": [
+    2
+   ],
    "n_optimal_exact": 0,
-   "optimal": 5.827139200041145,
-   "optimal_lo": 5.760807013790929,
-   "optimal_hi": 5.893471386291362,
-   "hindsight": 4.914382499999963,
-   "hindsight_over_optimal": 0.8433610956067881,
+   "optimal": 5.69039163794037,
+   "optimal_lo": 5.645427869054203,
+   "optimal_hi": 5.73535540682654,
+   "hindsight": 4.8117423333333,
+   "hindsight_over_optimal": 0.8455907149257137,
    "policies": {
     "seed": {
      "n_ok": 0,
-     "n_crash": 2,
+     "n_crash": 3,
      "first_error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
     },
     "seed+shim": {
-     "n_ok": 2,
+     "n_ok": 3,
      "n_crash": 0,
      "first_error": null,
-     "reads": 8.433901867378363,
-     "reads_lo": 8.424129142650294,
-     "reads_hi": 8.443674592106435,
-     "ratio_lo": 1.4294001939579148,
-     "ratio_hi": 1.4657103721567009
+     "reads": 8.253923610898632,
+     "reads_lo": 8.245936694175366,
+     "reads_hi": 8.261910527621897,
+     "ratio_lo": 1.4377377005024994,
+     "ratio_hi": 1.4634693276146742
     },
     "distilled": {
      "n_ok": 0,
-     "n_crash": 2,
+     "n_crash": 3,
      "first_error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
     },
     "distilled+shim": {
-     "n_ok": 2,
+     "n_ok": 3,
      "n_crash": 0,
      "first_error": null,
-     "reads": 8.202393847470574,
-     "reads_lo": 8.193357374879996,
-     "reads_hi": 8.211430320061151,
-     "ratio_lo": 1.390243005834954,
-     "ratio_hi": 1.4253958343689725
+     "reads": 8.004890978963331,
+     "reads_lo": 7.996993846196965,
+     "reads_hi": 8.012788111729696,
+     "ratio_lo": 1.3943327446941642,
+     "ratio_hi": 1.4193411549286352
     },
     "p25_t21": {
      "n_ok": 0,
-     "n_crash": 2,
+     "n_crash": 3,
      "first_error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
     },
     "p25_t21+shim": {
-     "n_ok": 2,
+     "n_ok": 3,
      "n_crash": 0,
      "first_error": null,
-     "reads": 8.48945863462799,
-     "reads_lo": 8.478361885158716,
-     "reads_hi": 8.500555384097266,
-     "ratio_lo": 1.4386023668291652,
-     "ratio_hi": 1.4755841262773757
+     "reads": 8.289050103808151,
+     "reads_lo": 8.279944829090285,
+     "reads_hi": 8.298155378526017,
+     "ratio_lo": 1.443667260660958,
+     "ratio_hi": 1.4698895408819093
     },
     "p25_t21+shim+k0": {
-     "n_ok": 2,
+     "n_ok": 3,
      "n_crash": 0,
      "first_error": null,
-     "reads": 8.083947062337643,
-     "reads_lo": 8.076224849810432,
-     "reads_hi": 8.091669274864856,
-     "ratio_lo": 1.3703680429494085,
-     "ratio_hi": 1.4046068989108682
+     "reads": 7.935274540684807,
+     "reads_lo": 7.928200216119038,
+     "reads_hi": 7.942348865250575,
+     "ratio_lo": 1.382338086090088,
+     "ratio_hi": 1.40686393475809
     },
     "p12_t9": {
      "n_ok": 0,
-     "n_crash": 2,
+     "n_crash": 3,
      "first_error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is"
     },
     "p12_t9+shim": {
-     "n_ok": 2,
+     "n_ok": 3,
      "n_crash": 0,
      "first_error": null,
-     "reads": 8.363450661707642,
-     "reads_lo": 8.35270062709395,
-     "reads_hi": 8.374200696321331,
-     "ratio_lo": 1.4172802546429482,
-     "ratio_hi": 1.4536506215664122
+     "reads": 8.197112923013782,
+     "reads_lo": 8.188330137631867,
+     "reads_hi": 8.205895708395696,
+     "ratio_lo": 1.4276935877218107,
+     "ratio_hi": 1.4535471710438232
     },
     "p12_t9+shim+k0": {
-     "n_ok": 2,
+     "n_ok": 3,
      "n_crash": 0,
      "first_error": null,
-     "reads": 8.175612590035685,
-     "reads_lo": 8.166979511332936,
-     "reads_hi": 8.184245668738434,
-     "ratio_lo": 1.3857672288576675,
-     "ratio_hi": 1.4206769379960098
+     "reads": 7.927955583624808,
+     "reads_lo": 7.920436798106736,
+     "reads_hi": 7.93547436914288,
+     "ratio_lo": 1.3809844789530201,
+     "ratio_hi": 1.405646224379506
     }
    }
   },
@@ -3461,9 +3469,345 @@
      }
     },
     "seconds": 897.5782432556152
+   },
+   {
+    "i": 2,
+    "kind": "synthetic",
+    "eps": 0.2,
+    "prior": [
+     {
+      "onset": [
+       0.22,
+       0.044,
+       0.045,
+       0.072,
+       0.037,
+       0.085,
+       0.079,
+       0.122,
+       0.015,
+       0.111,
+       0.132,
+       0.037
+      ],
+      "level_p": [
+       0.707,
+       0.293
+      ],
+      "q": 0.1
+     },
+     {
+      "onset": [
+       0.086,
+       0.102,
+       0.026,
+       0.15,
+       0.103,
+       0.137,
+       0.005,
+       0.083,
+       0.038,
+       0.063,
+       0.102,
+       0.104
+      ],
+      "level_p": [
+       0.663,
+       0.337
+      ],
+      "q": 0.05
+     }
+    ],
+    "labels_per_column": [
+     5024,
+     5024
+    ],
+    "stop_table_matches_certificates": true,
+    "lb_tables": {
+     "classes": [
+      8,
+      8
+     ],
+     "merged": true,
+     "seconds": 21.293230056762695
+    },
+    "lb_greedy": {
+     "reads": null,
+     "overflow": true,
+     "skipped": true,
+     "seconds": 2.86102294921875e-06
+    },
+    "optimal_exact": false,
+    "bounds_failed": [
+     {
+      "tau": 0.001,
+      "run": "lo",
+      "expanded": 111385265,
+      "seconds": 556.649311542511
+     }
+    ],
+    "optimal_lo": 4.636351002679288,
+    "hindsight": 6.5352119999999765,
+    "hindsight_se": 0.018168742902763352,
+    "hindsight_worst_sampled": 16,
+    "method": "sampled 2000x2000 pairs in 4 batches",
+    "hindsight_seconds": 5.923716068267822,
+    "policies": {
+     "seed": {
+      "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is",
+      "seconds": 0.007086992263793945
+     },
+     "seed+shim": {
+      "reads": 10.44928416257412,
+      "reads_lo": 10.433644927370345,
+      "reads_hi": 10.464923397777893,
+      "states": 110708,
+      "exact": false,
+      "seconds": 48.136016607284546
+     },
+     "distilled": {
+      "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is",
+      "seconds": 1.8618278503417969
+     },
+     "distilled+shim": {
+      "reads": 10.509384587297513,
+      "reads_lo": 10.489573662684748,
+      "reads_hi": 10.529195511910277,
+      "states": 133317,
+      "exact": false,
+      "seconds": 45.36105132102966
+     },
+     "p25_t21": {
+      "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is",
+      "seconds": 0.0014758110046386719
+     },
+     "p25_t21+shim": {
+      "reads": 10.058892131559498,
+      "reads_lo": 10.042133210337308,
+      "reads_hi": 10.075651052781687,
+      "states": 121459,
+      "exact": false,
+      "seconds": 45.23670721054077
+     },
+     "p25_t21+shim+k0": {
+      "reads": 10.537683897558129,
+      "reads_lo": 10.517367809084375,
+      "reads_hi": 10.557999986031884,
+      "states": 136441,
+      "exact": false,
+      "seconds": 51.57894706726074
+     },
+     "p12_t9": {
+      "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is",
+      "seconds": 0.0014944076538085938
+     },
+     "p12_t9+shim": {
+      "reads": 10.093535459757586,
+      "reads_lo": 10.076970307872438,
+      "reads_hi": 10.110100611642732,
+      "states": 119073,
+      "exact": false,
+      "seconds": 60.67745852470398
+     },
+     "p12_t9+shim+k0": {
+      "reads": 10.562575030895381,
+      "reads_lo": 10.542963443214044,
+      "reads_hi": 10.582186618576717,
+      "states": 133552,
+      "exact": false,
+      "seconds": 67.50812244415283
+     }
+    },
+    "replay_matches_tree_eval": true,
+    "seconds": 904.9163179397583
+   },
+   {
+    "i": 3,
+    "kind": "real_subsample",
+    "eps": 0.2,
+    "prior": [
+     {
+      "onset": [
+       0.045,
+       0.178,
+       0.206,
+       0.131,
+       0.128,
+       0.03,
+       0.033,
+       0.031,
+       0.028,
+       0.057,
+       0.079,
+       0.052
+      ],
+      "level_p": [
+       0.773,
+       0.227
+      ],
+      "q": 0.05
+     },
+     {
+      "onset": [
+       0.02,
+       0.126,
+       0.155,
+       0.061,
+       0.075,
+       0.118,
+       0.11,
+       0.052,
+       0.056,
+       0.099,
+       0.072,
+       0.058
+      ],
+      "level_p": [
+       0.828,
+       0.172
+      ],
+      "q": 0.1
+     }
+    ],
+    "labels_per_column": [
+     5024,
+     5024
+    ],
+    "lb_tables": {
+     "classes": [
+      8,
+      8
+     ],
+     "merged": true,
+     "seconds": 17.01897883415222
+    },
+    "lb_greedy": {
+     "reads": null,
+     "overflow": true,
+     "skipped": true,
+     "seconds": 3.0994415283203125e-06
+    },
+    "optimal_exact": false,
+    "optimal_lo": 5.4146695795807505,
+    "optimal_hi": 5.419123447896894,
+    "bounds_runs": [
+     {
+      "tau": 0.001,
+      "lo": 5.388667007360844,
+      "expanded_lo": 732119,
+      "lo_solved": true,
+      "policy_ub": 5.515255323459265,
+      "policy_states": 202,
+      "greedy_memo_lo": 9627,
+      "seconds_lo": 2.4524476528167725
+     },
+     {
+      "tau": 0.0001,
+      "lo": 5.4100110424120285,
+      "expanded_lo": 4680955,
+      "lo_solved": true,
+      "policy_ub": 5.431392525612373,
+      "policy_states": 805,
+      "greedy_memo_lo": 18176,
+      "seconds_lo": 16.55647087097168
+     },
+     {
+      "tau": 1e-05,
+      "lo": 5.4146695795807505,
+      "expanded_lo": 31982758,
+      "lo_solved": true,
+      "policy_ub": 5.419123447896894,
+      "policy_states": 2372,
+      "greedy_memo_lo": 36175,
+      "seconds_lo": 141.1651532649994
+     }
+    ],
+    "bounds": {
+     "tau": 1e-05,
+     "lo": 5.4146695795807505,
+     "expanded_lo": 31982758,
+     "lo_solved": true,
+     "policy_ub": 5.419123447896894,
+     "policy_states": 2372,
+     "greedy_memo_lo": 36175,
+     "seconds_lo": 141.1651532649994
+    },
+    "optimal": 5.416896513738822,
+    "hindsight": 4.6064619999999765,
+    "hindsight_se": 0.010756560850632242,
+    "hindsight_worst_sampled": 11,
+    "method": "sampled 2000x2000 pairs in 4 batches",
+    "hindsight_seconds": 4.970774173736572,
+    "policies": {
+     "seed": {
+      "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is",
+      "seconds": 0.0014634132385253906
+     },
+     "seed+shim": {
+      "reads": 7.893967097939166,
+      "reads_lo": 7.8895517972255105,
+      "reads_hi": 7.898382398652822,
+      "states": 36568,
+      "exact": false,
+      "seconds": 18.513175010681152
+     },
+     "distilled": {
+      "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is",
+      "seconds": 0.7971920967102051
+     },
+     "distilled+shim": {
+      "reads": 7.609885241948845,
+      "reads_lo": 7.604266788830902,
+      "reads_hi": 7.6155036950667885,
+      "states": 46821,
+      "exact": false,
+      "seconds": 17.920092344284058
+     },
+     "p25_t21": {
+      "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is",
+      "seconds": 0.0009255409240722656
+     },
+     "p25_t21+shim": {
+      "reads": 7.888233042168469,
+      "reads_lo": 7.883110716953421,
+      "reads_hi": 7.893355367383517,
+      "states": 41480,
+      "exact": false,
+      "seconds": 15.936396598815918
+     },
+     "p25_t21+shim+k0": {
+      "reads": 7.637929497379131,
+      "reads_lo": 7.63215094873625,
+      "reads_hi": 7.643708046022013,
+      "states": 48120,
+      "exact": false,
+      "seconds": 18.309687614440918
+     },
+     "p12_t9": {
+      "error": "ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 10 is",
+      "seconds": 0.001062154769897461
+     },
+     "p12_t9+shim": {
+      "reads": 7.864437445626063,
+      "reads_lo": 7.859589158707702,
+      "reads_hi": 7.869285732544423,
+      "states": 39754,
+      "exact": false,
+      "seconds": 19.7336163520813
+     },
+     "p12_t9+shim+k0": {
+      "reads": 7.432641570803053,
+      "reads_lo": 7.4273513716543365,
+      "reads_hi": 7.437931769951771,
+      "states": 44809,
+      "exact": false,
+      "seconds": 23.67905569076538
+     }
+    },
+    "seconds": 297.0572760105133
    }
   ],
-  "seconds": 1149.6264295578003
+  "seconds": 2419.277543067932
  },
  "R12_K2_attempt1": {
   "settings": {
