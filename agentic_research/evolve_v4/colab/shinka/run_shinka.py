@@ -96,6 +96,7 @@ def main():
     os.environ["EVOLVE_BUNDLE"] = str(bundle)
     os.environ.setdefault("SHINKA_PRICING_MODE", "offline")
     os.environ.setdefault("LOCAL_OPENAI_API_KEY", "local")
+    os.environ.setdefault("SHINKA_LLM_TIMEOUT", "1800")  # same per-request limit as colab_engine.post_chat
     if not port_open(a.embed_port):
         subprocess.Popen([a.embed_python, str(HERE / "embed_server.py"), str(a.embed_port)],
                          stdout=open(run / "embed.log", "a"), stderr=subprocess.STDOUT)
@@ -137,7 +138,9 @@ def main():
         num_islands=4, archive_size=40, elite_selection_ratio=0.3,
         num_archive_inspirations=1, num_top_k_inspirations=1, migration_interval=10, migration_rate=0.1,
         island_elitism=True, parent_selection_strategy="weighted", parent_selection_lambda=10)
-    job = LocalJobConfig(eval_program_path=str(HERE / "evaluate.py"), time="00:10:00",
+    # Shinka starts this clock when the PROPOSAL starts (AsyncRunningJob.start_time = proposal_started_at), so a
+    # 10-minute limit killed every proposal that took longer to write. evaluate.py caps scoring at 300 s itself.
+    job = LocalJobConfig(eval_program_path=str(HERE / "evaluate.py"), time="08:00:00",
                          python_executable=a.eval_python)
     src, dst = run / "results" / "programs.sqlite", Path(a.backup_dir or run) / "programs.sqlite"
     if a.backup_dir:
