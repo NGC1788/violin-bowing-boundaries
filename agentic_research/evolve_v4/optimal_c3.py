@@ -950,18 +950,20 @@ def paired(blocks):
     lines = ["| 크기 | " + " | ".join(f"{c} (사례별 비 평균±표준오차; seed 대비 이김/짐/같음)" for c, _ in COLS)
              + " |", "|---|" + "---|" * len(COLS)]
     for key, blk, nc in sorted(blocks, key=lambda x: (x[2], x[1]["settings"]["R"])):
-        rows = [r for r in blk["instances"] if r.get("optimal_exact")]
+        # certified intervals (R=6): ratio of interval midpoints; a win/loss needs disjoint intervals
+        rows = [r for r in blk["instances"] if np.isfinite(r.get("optimal_hi", np.nan))]
         cells = []
         for n in names:
             rat, w, l, u = [], 0, 0, 0
             for r in rows:
                 a, b = _reads(r, n), _reads(r, "seed+shim")
-                if "reads" not in a or a.get("reads_lo") != a.get("reads_hi"):
+                if "reads" not in a:
                     continue
                 rat.append(a["reads"] / r["optimal"])
                 if n != "seed+shim" and "reads" in b:
-                    d = a["reads"] - b["reads"]
-                    w, l, u = w + (d < -1e-9), l + (d > 1e-9), u + (abs(d) <= 1e-9)
+                    w += a["reads_hi"] < b["reads_lo"] - 1e-9
+                    l += a["reads_lo"] > b["reads_hi"] + 1e-9
+                    u += not (a["reads_hi"] < b["reads_lo"] - 1e-9 or a["reads_lo"] > b["reads_hi"] + 1e-9)
             if len(rat) < 2:
                 cells.append("-")
                 continue
