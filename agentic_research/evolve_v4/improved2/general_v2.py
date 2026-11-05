@@ -3,8 +3,8 @@
 #   (1) barrier: while no violation has been seen, a single known positive bars an A column (monotone labels imply
 #       the pair above it), so sweeps certain to fail under monotone labels are not started;
 #   (2) probe: a sweep held back by the gate is tested with ONE read at the top of its region when that read is at
-#       least as likely to be zero as positive, taking the boundary uniform over the column's open gap
-#       (highest known zero, lowest known positive]. A zero is the evidence the gate waits for (the sweep then
+#       least as likely to be zero as positive, taking the column's start uniform over its candidate starts in the
+#       open gap (highest known zero, lowest known positive]. A zero is the evidence the gate waits for (the sweep then
 #       cannot fail under monotone labels); a positive bars the column. Otherwise t21's witness bisection runs;
 #   (3) when no witness, probe or bisection target is left (no alive rule can be separated under monotone
 #       potentials), the read goes to the cheapest pass proof instead of the generic one-step lookahead.
@@ -32,6 +32,7 @@ PROBE = True     # monotone mode: probe the top of the cheapest held-back sweep 
 ODDS = 1.0       # probe only when P(zero)/P(positive) >= ODDS under that prior (1: more likely than not)
 FBPIN = True     # monotone mode: with nothing left to refute or bisect, read for the cheapest pass proof
 PSEPB = True     # monotone mode: B of the bisected pair = most likely below A under that prior
+PCONS = True     # probe prior = uniform over the candidate starts in the open gap (as in the bisection)
 SHARE = False    # True: amortise a witness column over the rules that would use it (no gain once LOOSE is on)
 
 
@@ -293,7 +294,11 @@ def _choose(view):
                     s = int(last[pb, pa])
                     # monotone labels, boundary uniform over the column's open gap (highest zero, lowest positive]
                     z, p = int(last_zero[pa, r]), int(first_one[pa, r])
-                    psucc = (p - s) / float(max(p - z, 1))
+                    if PCONS:  # the same prior as the bisection: uniform over the candidate starts in the gap
+                        g = cand[pa, r] & (idx > z) & (idx <= min(p, N - 2))
+                        psucc = float((g & (idx > s)).sum()) / max(int(g.sum()), 1)
+                    else:
+                        psucc = (p - s) / float(max(p - z, 1))
                     if psucc >= ODDS * (1.0 - psucc):
                         probes.append((int(tb[pb, pa]), r, pa, s))
             feas = feas & ok

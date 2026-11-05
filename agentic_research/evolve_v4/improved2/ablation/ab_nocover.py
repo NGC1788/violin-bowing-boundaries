@@ -1,13 +1,17 @@
-# IDEA: improved/general_policy.py with three monotone-mode changes (noisy mode, after a monotonicity violation, is
+# IDEA: improved/general_policy.py with four monotone-mode changes (noisy mode, after a monotonicity violation, is
 #   unchanged = improved/best_policy.py):
 #   (1) barrier: while no violation has been seen, a single known positive bars an A column (monotone labels imply
 #       the pair above it), so sweeps certain to fail under monotone labels are not started;
 #   (2) probe: a sweep held back by the gate is tested with ONE read at the top of its region when that read is at
-#       least as likely to be zero as positive, taking the boundary uniform over the column's open gap
-#       (highest known zero, lowest known positive]. A zero is the evidence the gate waits for (the sweep then
+#       least as likely to be zero as positive, taking the column's start uniform over its candidate starts in the
+#       open gap (highest known zero, lowest known positive]. A zero is the evidence the gate waits for (the sweep then
 #       cannot fail under monotone labels); a positive bars the column. Otherwise t21's witness bisection runs;
 #   (3) when no witness, probe or bisection target is left (no alive rule can be separated under monotone
 #       potentials), the read goes to the cheapest pass proof instead of the generic one-step lookahead.
+#   (4) in t21's witness bisection the B column of each pair is the one most likely to lie below the A column,
+#       P(lower end of A's start > upper end of B's start) with both starts uniform over their open gaps; the A
+#       column is chosen as before (largest potential floor).
+#   fail-first ordering (inherited from t16) is switched off: it changed nothing on either benchmark.
 # BASE (improved/general_policy.py): best_policy.py plus a label-regime switch. While every column read so far is
 #   monotone along force (no zero above a positive in the same column and rule), a long A sweep (greedy cover
 #   dearer than bisecting its region, ceil(log2(n+1))) must wait for evidence that the column's boundary is above
@@ -19,7 +23,7 @@ KSEED = 8        # opening reads taken by the published one-step counterfactual 
 COVER = False     # A feasibility = no confirmed pair below the threshold; cost = greedy zero cover
 JOINT = False    # True: choose the (A, B) pair jointly over all B candidates (no gain once LOOSE is on)
 SKI = 1.0        # pass-proof switch: reads so far >= SKI * remaining pass cost (None disables the mode)
-FAILFIRST = True  # with a B pair still to complete, open the side with the larger start domain first
+FAILFIRST = False  # True: with a B pair still to complete, open the larger start domain first (no effect here)
 LOOSE = True     # attack the loosest alive rule first (dominance count in the (u, v) threshold order)
 GATE = True      # long sweeps wait for bisection evidence while labels look monotone
 ADAPT = True     # the gate is lifted for good once a zero is read above a positive (noisy labels)
@@ -27,6 +31,8 @@ MONOBAR = True   # monotone mode: the first known positive (not only a confirmed
 PROBE = True     # monotone mode: probe the top of the cheapest held-back sweep before bisecting
 ODDS = 1.0       # probe only when P(zero)/P(positive) >= ODDS under that prior (1: more likely than not)
 FBPIN = True     # monotone mode: with nothing left to refute or bisect, read for the cheapest pass proof
+PSEPB = True     # monotone mode: B of the bisected pair = most likely below A under that prior
+PCONS = True     # probe prior = uniform over the candidate starts in the open gap (as in the bisection)
 SHARE = False    # True: amortise a witness column over the rules that would use it (no gain once LOOSE is on)
 
 
@@ -288,7 +294,11 @@ def _choose(view):
                     s = int(last[pb, pa])
                     # monotone labels, boundary uniform over the column's open gap (highest zero, lowest positive]
                     z, p = int(last_zero[pa, r]), int(first_one[pa, r])
-                    psucc = (p - s) / float(max(p - z, 1))
+                    if PCONS:  # the same prior as the bisection: uniform over the candidate starts in the gap
+                        g = cand[pa, r] & (idx > z) & (idx <= min(p, N - 2))
+                        psucc = float((g & (idx > s)).sum()) / max(int(g.sum()), 1)
+                    else:
+                        psucc = (p - s) / float(max(p - z, 1))
                     if psucc >= ODDS * (1.0 - psucc):
                         probes.append((int(tb[pb, pa]), r, pa, s))
             feas = feas & ok
@@ -336,6 +346,21 @@ def _choose(view):
         cap = Hc[:, N - 2]
         refs = []
         for r in alive_rules:
+            if PSEPB:
+                # A as before (largest potential floor); B = the column most likely to lie below it, with each
+                # column's start uniform over its open gap (highest zero, lowest positive] under monotone labels
+                a = int(np.argsort(-Lpot[:, r], kind="stable")[0])
+                gm = cand[:, r, :] & (idx[None, :] > last_zero[:, r, None]) & (idx[None, :] <= np.minimum(first_one[:, r], N - 2)[:, None])
+                ng = gm.sum(1)
+                if ng[a] == 0:
+                    continue
+                la = Lc[a][gm[a]]
+                ps = np.array([(np.searchsorted(np.sort(Hc[bb][gm[bb]]), la).sum() / float(ng[a] * ng[bb])) if ng[bb] and bb != a else 0.0
+                               for bb in range(C)])
+                b = int(ps.argmax())
+                if ps[b] > 0:
+                    refs.append((-ps[b], r, a, b))
+                continue
             oa = np.argsort(-Lpot[:, r], kind="stable")
             ob = np.argsort(Hpot[:, r], kind="stable")
             a, b = int(oa[0]), int(ob[0])
