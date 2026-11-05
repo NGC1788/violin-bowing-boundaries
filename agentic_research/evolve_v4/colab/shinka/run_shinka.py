@@ -17,6 +17,7 @@ Shinka keeps its database at <run-dir>/results/programs.sqlite; failed proposals
 """
 import argparse
 import ast
+import fcntl
 import json
 import os
 import socket
@@ -85,6 +86,13 @@ def main():
 
     bundle, run = Path(a.bundle), Path(a.run_dir)
     run.mkdir(parents=True, exist_ok=True)
+    lock = open(run / "run.lock", "w")  # one Shinka per run dir: a second launch would share the DB
+    try:
+        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError:
+        raise SystemExit(f"already running in {run} (stop it first: pkill -f run_shinka.py)")
+    lock.write(str(os.getpid()))
+    lock.flush()
     os.environ["EVOLVE_BUNDLE"] = str(bundle)
     os.environ.setdefault("SHINKA_PRICING_MODE", "offline")
     os.environ.setdefault("LOCAL_OPENAI_API_KEY", "local")
