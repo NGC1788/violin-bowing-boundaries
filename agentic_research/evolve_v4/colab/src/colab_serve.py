@@ -120,9 +120,11 @@ def serve(model="auto"):
         if served() or not alive("vllm serve"):
             break
         time.sleep(10)
-    if served() == cands[0][0]:
-        print("already running:", cands[0][0])
-        return cands[0]
+    now = served()
+    for c in cands:  # a re-run keeps whatever candidate already loaded (no 10-30 min reload or retry)
+        if now == c[0]:
+            print("already running:", now)
+            return c
     if cands[0][0].startswith("Qwen/Qwen3.8"):
         ensure_packages()
     for c in cands:
