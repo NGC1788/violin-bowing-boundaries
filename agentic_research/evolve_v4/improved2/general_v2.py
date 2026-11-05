@@ -1,7 +1,11 @@
-# IDEA: improved/general_policy.py plus a monotone-mode barrier. While no monotonicity violation has been seen, a
-#   single known positive in an A column already bars it (monotone labels imply the pair above it), so sweeps that
-#   are certain to fail under monotone labels are no longer started. Once a violation is seen, the policy is
-#   exactly improved/general_policy.py in its noisy mode (= improved/best_policy.py).
+# IDEA: improved/general_policy.py with two monotone-mode changes (noisy mode, after a monotonicity violation, is
+#   unchanged = improved/best_policy.py):
+#   (1) barrier: while no violation has been seen, a single known positive bars an A column (monotone labels imply
+#       the pair above it), so sweeps certain to fail under monotone labels are not started;
+#   (2) probe: a sweep held back by the gate is tested with ONE read at the top of its region when that read is at
+#       least as likely to be zero as positive, taking the boundary uniform over the column's open gap
+#       (highest known zero, lowest known positive]. A zero is the evidence the gate waits for (the sweep then
+#       cannot fail under monotone labels); a positive bars the column. Otherwise t21's witness bisection runs.
 # BASE (improved/general_policy.py): best_policy.py plus a label-regime switch. While every column read so far is
 #   monotone along force (no zero above a positive in the same column and rule), a long A sweep (greedy cover
 #   dearer than bisecting its region, ceil(log2(n+1))) must wait for evidence that the column's boundary is above
@@ -18,6 +22,8 @@ LOOSE = True     # attack the loosest alive rule first (dominance count in the (
 GATE = True      # long sweeps wait for bisection evidence while labels look monotone
 ADAPT = True     # the gate is lifted for good once a zero is read above a positive (noisy labels)
 MONOBAR = True   # monotone mode: the first known positive (not only a confirmed pair) bars an A column
+PROBE = True     # monotone mode: probe the top of the cheapest held-back sweep before bisecting
+ODDS = 1.0       # probe only when P(zero)/P(positive) >= ODDS under that prior (1: more likely than not)
 SHARE = False    # True: amortise a witness column over the rules that would use it (no gain once LOOSE is on)
 
 
@@ -247,6 +253,7 @@ def _choose(view):
     first_one = np.where(P == 1, idx, N).min(-1)
     last_zero = np.where(P == 0, idx, -1).max(-1)
     noisy = bool((last_zero > first_one).any()) if ADAPT else False  # a zero read above a positive
+    probes = []
     Lfo = np.where(first_one < N, at(Lc, np.minimum(first_one, N - 1)), np.inf)  # start at the first positive
 
     # ---- refutation witnesses -----------------------------------------------------------------------
@@ -270,7 +277,18 @@ def _choose(view):
             # lies above the threshold; otherwise locate boundaries by bisection first
             nreg = m.sum(-1)
             short = ca <= np.ceil(np.log2(nreg + 1.0))
-            feas = feas & (short | (Lh[None, :, r] > th[:, None]))
+            ok = short | (Lh[None, :, r] > th[:, None])
+            if PROBE:
+                tb = np.where(feas & ~ok, ca, 10 ** 6)
+                pb, pa = divmod(int(tb.argmin()), C)
+                if tb[pb, pa] < 10 ** 6:
+                    s = int(last[pb, pa])
+                    # monotone labels, boundary uniform over the column's open gap (highest zero, lowest positive]
+                    z, p = int(last_zero[pa, r]), int(first_one[pa, r])
+                    psucc = (p - s) / float(max(p - z, 1))
+                    if psucc >= ODDS * (1.0 - psucc):
+                        probes.append((int(tb[pb, pa]), r, pa, s))
+            feas = feas & ok
         cbv = np.where(right[:, r] <= th + 1e-9, 0, 1)
         tot = np.where(feas, ca + cbv[:, None], 10 ** 6)
         b, a = divmod(int(tot.argmin()), C)
@@ -301,6 +319,15 @@ def _choose(view):
             rd = sweep_read(a, r)
         if rd is not None:
             return rd
+    if PROBE and probes:
+        # one read at the top of a held-back sweep's region decides it if labels are monotone: a zero there
+        # is the evidence the gate waits for, a positive bars the column
+        if LOOSE:
+            probes.sort(key=lambda t: (-dom[t[1]], t[0]))
+        for _, r, a, s in probes:
+            for q in (s, s + 1):
+                if 0 <= q < N and unread[a, q]:
+                    return a, int(q)
     if GATE and not noisy:
         Hh2 = np.where(fo < N, at(Hc, hib), np.inf)
         cap = Hc[:, N - 2]
