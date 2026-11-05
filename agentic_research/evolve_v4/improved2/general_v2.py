@@ -1,11 +1,13 @@
-# IDEA: improved/general_policy.py with two monotone-mode changes (noisy mode, after a monotonicity violation, is
+# IDEA: improved/general_policy.py with three monotone-mode changes (noisy mode, after a monotonicity violation, is
 #   unchanged = improved/best_policy.py):
 #   (1) barrier: while no violation has been seen, a single known positive bars an A column (monotone labels imply
 #       the pair above it), so sweeps certain to fail under monotone labels are not started;
 #   (2) probe: a sweep held back by the gate is tested with ONE read at the top of its region when that read is at
 #       least as likely to be zero as positive, taking the boundary uniform over the column's open gap
 #       (highest known zero, lowest known positive]. A zero is the evidence the gate waits for (the sweep then
-#       cannot fail under monotone labels); a positive bars the column. Otherwise t21's witness bisection runs.
+#       cannot fail under monotone labels); a positive bars the column. Otherwise t21's witness bisection runs;
+#   (3) when no witness, probe or bisection target is left (no alive rule can be separated under monotone
+#       potentials), the read goes to the cheapest pass proof instead of the generic one-step lookahead.
 # BASE (improved/general_policy.py): best_policy.py plus a label-regime switch. While every column read so far is
 #   monotone along force (no zero above a positive in the same column and rule), a long A sweep (greedy cover
 #   dearer than bisecting its region, ceil(log2(n+1))) must wait for evidence that the column's boundary is above
@@ -24,6 +26,7 @@ ADAPT = True     # the gate is lifted for good once a zero is read above a posit
 MONOBAR = True   # monotone mode: the first known positive (not only a confirmed pair) bars an A column
 PROBE = True     # monotone mode: probe the top of the cheapest held-back sweep before bisecting
 ODDS = 1.0       # probe only when P(zero)/P(positive) >= ODDS under that prior (1: more likely than not)
+FBPIN = True     # monotone mode: with nothing left to refute or bisect, read for the cheapest pass proof
 SHARE = False    # True: amortise a witness column over the rules that would use it (no gain once LOOSE is on)
 
 
@@ -365,4 +368,10 @@ def _choose(view):
                 ranks = np.flatnonzero(unread[col] & (idx > lz[col, r]) & (idx < fo[col, r]))
                 if len(ranks):
                     return col, int(ranks[np.abs(ranks - q).argmin()])
+        if FBPIN and SKI is not None:
+            # no witness, no probe and no bisection target: under monotone potentials no alive rule can be
+            # separated any more, so the read goes to the cheapest pass proof instead of the generic lookahead
+            rd = _pin_read(best, P, poss, fin, Lc, Hc, unread, N)
+            if rd is not None:
+                return rd
     return _fallback(view)
