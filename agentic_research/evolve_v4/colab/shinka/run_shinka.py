@@ -17,6 +17,7 @@ Shinka keeps its database at <run-dir>/results/programs.sqlite; failed proposals
 """
 import argparse
 import ast
+import json
 import os
 import socket
 import sqlite3
@@ -77,6 +78,9 @@ def main():
     ap.add_argument("--initial", default="c1_best")
     ap.add_argument("--patch-probs", default="0.6,0.3,0.1", help="diff,full,cross")
     ap.add_argument("--backup-every", type=int, default=300)
+    ap.add_argument("--eval-python", default=sys.executable,
+                    help="interpreter for evaluate.py; on Colab the system one, where the bundle scorer was checked")
+    ap.add_argument("--embed-python", default=sys.executable)
     a = ap.parse_args()
 
     bundle, run = Path(a.bundle), Path(a.run_dir)
@@ -85,7 +89,7 @@ def main():
     os.environ.setdefault("SHINKA_PRICING_MODE", "offline")
     os.environ.setdefault("LOCAL_OPENAI_API_KEY", "local")
     if not port_open(a.embed_port):
-        subprocess.Popen([sys.executable, str(HERE / "embed_server.py"), str(a.embed_port)],
+        subprocess.Popen([a.embed_python, str(HERE / "embed_server.py"), str(a.embed_port)],
                          stdout=open(run / "embed.log", "a"), stderr=subprocess.STDOUT)
         for _ in range(120):
             if port_open(a.embed_port):
@@ -95,6 +99,14 @@ def main():
     if not initial.exists():
         code = (bundle / "population" / f"{a.initial}.py").read_text()
         initial.write_text("# EVOLVE-BLOCK-START\n" + code.rstrip() + "\n# EVOLVE-BLOCK-END\n")
+
+    pre = run / "preflight"  # score the initial program once with the eval interpreter before any LLM call
+    subprocess.run([a.eval_python, str(HERE / "evaluate.py"), "--program_path", str(initial), "--results_dir", str(pre)],
+                   check=False)
+    check = json.loads((pre / "metrics.json").read_text()) if (pre / "metrics.json").exists() else {}
+    if check.get("public", {}).get("total_reads") is None:
+        raise SystemExit(f"preflight failed: {check.get('text_feedback', 'no metrics written')}")
+    print("preflight: initial program", check["public"]["total_reads"], "reads", flush=True)
 
     from shinka.core import EvolutionConfig, ShinkaEvolveRunner
     from shinka.database import DatabaseConfig
@@ -118,7 +130,7 @@ def main():
         num_archive_inspirations=1, num_top_k_inspirations=1, migration_interval=10, migration_rate=0.1,
         island_elitism=True, parent_selection_strategy="weighted", parent_selection_lambda=10)
     job = LocalJobConfig(eval_program_path=str(HERE / "evaluate.py"), time="00:10:00",
-                         python_executable=sys.executable)
+                         python_executable=a.eval_python)
     src, dst = run / "results" / "programs.sqlite", Path(a.backup_dir or run) / "programs.sqlite"
     if a.backup_dir:
         dst.parent.mkdir(parents=True, exist_ok=True)
