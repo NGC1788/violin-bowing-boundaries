@@ -1,8 +1,8 @@
 """Minimal OpenAI-compatible /v1/embeddings server on CPU for ShinkaEvolve's code-novelty filter.
 
   python embed_server.py [port]        (default 8001; the GPU stays with the vLLM proposal model)
-Uses sentence-transformers all-MiniLM-L6-v2 when it is installed, else a hashed character-trigram
-embedding (deterministic, no download). The chosen backend is printed at start and served as the model id.
+Uses sentence-transformers all-MiniLM-L6-v2 when it is installed (averaged over 240-token windows so the
+whole program counts), else a hashed character-trigram embedding (deterministic, no download). The chosen backend is printed at start and served as the model id.
 """
 import hashlib
 import json
@@ -17,7 +17,16 @@ try:
     BACKEND = "all-MiniLM-L6-v2"
 
     def embed(texts):
-        return MODEL.encode(texts, normalize_embeddings=True).tolist()
+        """Mean of window embeddings over the whole text: MiniLM reads only 256 word pieces, and a policy is
+        ~12k characters, so one call would see the docstring alone and every program would look identical."""
+        tok = MODEL.tokenizer
+        out = []
+        for text in texts:
+            ids = tok(text, add_special_tokens=False)["input_ids"] or [tok.unk_token_id]
+            windows = [tok.decode(ids[i:i + 240]) for i in range(0, len(ids), 200)]  # 40-token overlap
+            v = MODEL.encode(windows, normalize_embeddings=True).mean(axis=0)
+            out.append((v / (np.linalg.norm(v) or 1)).tolist())
+        return out
 except Exception:  # no sentence-transformers or no network: hashed trigrams
     BACKEND = "hashed-trigram-1024"
 
