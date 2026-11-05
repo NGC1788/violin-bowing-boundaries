@@ -65,14 +65,37 @@ counterfactual_choose, response_patterns, UNIFORM10; source below). No file, net
 introspection access (an AST guard rejects open/exec/eval/getattr/__dict__/np.load etc.). Keep each
 case under ~3 s. A wrong or repeated query is an error and scores nothing. Do not hard-code folder
 names or per-case constants: the program must generalise to unseen folders."""
+NOEPS_NOTE = """
+
+THIS TRACK (no epsilon). The two epsilon values (0.2, 0.4) are the same in the search and the sealed
+holdout, so a branch on epsilon is a hand-set constant in disguise; earlier records that switched on
+epsilon >= 0.3 got better when the switch was removed. Here the policy cannot read epsilon at all. Do
+not reconstruct it from interval widths either: decide from the labels read so far and the geometry.
+The current best (about 2238) uses no epsilon: (1) an A column is ruled out only by a CONFIRMED
+positive pair below the threshold, its cost is a greedy zero-cover count that steps over isolated
+positives; (2) rules are attacked loosest first; (3) a pass-proof mode pins every column inside a
+common window, switched on by a ski-rental rule (reads so far >= optimistic remaining pass cost).
+A variant (about 2349) switches from sweeps to witness bisection while every column read so far is
+monotone along force (no zero above a positive), which generalises to clean monotone labels."""
 POPULATION = {"seed": None, "p25_t21": 25, "p12_t9": 12, "p10_t6": 10, "p5_t2": 5, "p9_t5": 9, "p7_t4": 7, "p8_t1": 8,
               # 2026-11-05 cloud improvement session (files, not ledger rows): violin search 2238 / 2349
               "c1_best": "improved/best_policy.py", "c2_general": "improved/general_policy.py"}
 
 
-def uses_revealed(code):
-    return any(isinstance(n, ast.Attribute) and n.attr == "revealed" or isinstance(n, ast.Name) and n.id == "revealed"
+def uses(code, name="revealed"):
+    return any(isinstance(n, ast.Attribute) and n.attr == name or isinstance(n, ast.Name) and n.id == name
                for n in ast.walk(ast.parse(code)))
+
+
+def noeps_task():
+    """The violin task text with epsilon removed from the view (bundle_noeps, a generalisation track)."""
+    tree = ast.parse((HERE / "src" / "colab_engine.py").read_text())
+    task = next(n.value.value for n in tree.body if isinstance(n, ast.Assign) and n.targets[0].id == "TASK")
+    old = "epsilon; queries_so_far. (LABELS ONLY: view.revealed exists but is forbidden; the guard rejects it.)"
+    assert old in task
+    task = task.replace(old, "queries_so_far. (LABELS ONLY: view.revealed exists but is forbidden; the guard rejects it.\n"
+                             "NO-EPSILON TRACK: view.epsilon is forbidden too and the guard rejects it.)")
+    return task + NOEPS_NOTE
 
 
 def core_source():
@@ -89,8 +112,11 @@ def core_source():
 if __name__ == "__main__":
     import sys
     robust = sys.argv[1:] == ["robust"]  # bundle_robust: the AI-robustness audit transfer benchmark
+    noeps = sys.argv[1:] == ["noeps"]    # bundle_noeps: violin search, view.epsilon forbidden
     if robust:
         OUT = HERE / "bundle_robust"
+    if noeps:
+        OUT = HERE / "bundle_noeps"
     if OUT.exists():
         shutil.rmtree(OUT)
     pkg = OUT / "agentic_research" / "evolve_v4"
@@ -106,8 +132,8 @@ if __name__ == "__main__":
         "    certificates, counterfactual_choose, outer, possible_starts, response_patterns, shortlist,\n)\n\n"
         "UNIFORM10 = np.full(10, .1)\n")
     source = inspect.getsource(guard).replace(
-        '"load", "loadtxt"', '"revealed", "load", "loadtxt"')  # labels-only track
-    assert '"revealed"' in source
+        '"load", "loadtxt"', '"revealed", "epsilon", "load", "loadtxt"' if noeps else '"revealed", "load", "loadtxt"')
+    assert '"revealed"' in source and (not noeps or '"epsilon"' in source)  # labels-only (and no-epsilon) track
     (pkg / "guard.py").write_text(source)
     for name in ("colab_task.py", "colab_eval.py", "colab_engine.py", "colab_serve.py"):
         shutil.copy(HERE / "src" / name, pkg / name)
@@ -122,6 +148,9 @@ if __name__ == "__main__":
         shutil.copy(EVOLVE / "prune_search.json", OUT / "cases" / "prune_search.json")
         info = dict(split="search (A/B folders only; C/D holdout not included)", cases=54,
                     source_sha256=pilot.DIGEST)
+        if noeps:
+            (OUT / "cases" / "task.txt").write_text(noeps_task())
+            info["track"] = "no-epsilon (guard rejects view.epsilon)"
     (OUT / "cases" / "cases_search.pkl.gz").write_bytes(blob)
     (OUT / "cases" / "manifest.json").write_text(json.dumps(dict(info, cases_sha256=hashlib.sha256(blob).hexdigest()),
                                                             indent=1))
@@ -133,7 +162,9 @@ if __name__ == "__main__":
             code = (EVOLVE / pid).read_text()
         else:
             code = db.execute("SELECT code FROM programs WHERE id=?", (pid,)).fetchone()[0]
-        assert not uses_revealed(code), name  # labels-only track (comments may mention the word)
+        assert not uses(code), name  # labels-only track (comments may mention the word)
+        if noeps and uses(code, "epsilon"):
+            continue  # would fail this track's guard
         (OUT / "population" / f"{name}.py").write_text(code)
     files = [p for p in OUT.rglob("*") if p.is_file()]
     print(OUT, len(files), "files", sum(p.stat().st_size for p in files), "bytes")

@@ -1,0 +1,52 @@
+THE PROBLEM. You are evolving a QUERY POLICY for an exact certification problem.
+
+A folder has C columns (bow positions beta). Each column has 50 waveforms sorted by measured bow
+force. Reading one waveform reveals its label under 9 threshold rules at once (rules = (periodicity
+floor u, ratio ceiling v); label = fixed OR (guard AND periodicity>=u AND ratio<v)). For each rule and
+column the "boundary" is the first adjacent pair of positive labels along force rank. A fixed exact
+certificate (you cannot change it) asks whether SOME rule has boundaries whose intercept intervals
+[lower, upper] (slope -2 law in log force, tolerance epsilon; one interval per possible start) share a
+common point across all columns. It stops as soon as every completion of the unread labels gives the
+same answer. Unknown labels make several first-run starts possible; possible marks them (last slot =
+"no run in this column").
+
+choose(view) must return (column, rank) of an UNREAD waveform so the certificate stops after as FEW
+reads as possible. Score = total reads over 54 search cases (27 folders x epsilon 0.2/0.4), lower is
+better. The published one-step counterfactual lookahead scores 9158. Hindsight pruning of its reads
+shows certificates exist with about 1554 reads in total, so there is still a lot of room.
+50 of 54 cases are INCOMPATIBLE (answer "no rule fits"): proving that needs, for every one of the 9
+rules, either a column with no valid start or two columns whose intervals cannot overlap. Labels are
+monotone in the thresholds (positive for a strict rule => positive for every looser rule; zero for a
+loose rule => zero for every stricter rule), and neighbouring ranks are correlated. NOTE: one read
+reveals all 9 labels of that waveform at once, so cross-rule monotonicity can NEVER infer labels of an
+unread waveform (this has been tried many times and changes nothing); use it only to reason about which
+rules can still pass.
+
+What is known so far (ablation of the best programs): the gain comes from COMMITTING to a separating
+column pair per rule and VERIFYING it (zero-sweep of the high column's early starts + one forced
+positive pair in the low column), with bisection-style probing of where labels flip. Replacing
+bisection by a linear scan more than doubles the reads; dropping the verification phase is worse than
+the published baseline.
+
+view fields (numpy copies): partial (C,9,50) int8 -1 unknown/0/1; possible (C,9,51) bool;
+lower, upper (C,1,50) float, NaN = invalid start; force (C,50); log_beta (C,); rules (9,2);
+queries_so_far. (LABELS ONLY: view.revealed exists but is forbidden; the guard rejects it.
+NO-EPSILON TRACK: view.epsilon is forbidden too and the guard rejects it.)
+Each case runs in a fresh process: no memory between cases.
+Allowed imports: numpy, math, itertools, functools, heapq, collections,
+agentic_research.evolve_v4.helpers (exports possible_starts, certificates, outer, shortlist,
+counterfactual_choose, response_patterns, UNIFORM10; source below). No file, network, process or
+introspection access (an AST guard rejects open/exec/eval/getattr/__dict__/np.load etc.). Keep each
+case under ~3 s. A wrong or repeated query is an error and scores nothing. Do not hard-code folder
+names or per-case constants: the program must generalise to unseen folders.
+
+THIS TRACK (no epsilon). The two epsilon values (0.2, 0.4) are the same in the search and the sealed
+holdout, so a branch on epsilon is a hand-set constant in disguise; earlier records that switched on
+epsilon >= 0.3 got better when the switch was removed. Here the policy cannot read epsilon at all. Do
+not reconstruct it from interval widths either: decide from the labels read so far and the geometry.
+The current best (about 2238) uses no epsilon: (1) an A column is ruled out only by a CONFIRMED
+positive pair below the threshold, its cost is a greedy zero-cover count that steps over isolated
+positives; (2) rules are attacked loosest first; (3) a pass-proof mode pins every column inside a
+common window, switched on by a ski-rental rule (reads so far >= optimistic remaining pass cost).
+A variant (about 2349) switches from sweeps to witness bisection while every column read so far is
+monotone along force (no zero above a positive), which generalises to clean monotone labels.
